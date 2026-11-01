@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-f750674b7944bd36",
+  "sha256": "315f86f41f35101c9279e5bdf723c10b68d8adb5b2863b8f02fe3dc377ec8145",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik droog mijn kin af.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.26,
+      "text": " Ik droog mijn kin af.",
+      "temperature": 0,
+      "avg_logprob": -0.12869629859924317,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.72102001589092e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.92724609375
+        },
+        {
+          "word": " droog",
+          "start": 0.14,
+          "end": 0.46,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " mijn",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kin",
+          "start": 0.62,
+          "end": 0.9,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " af.",
+          "start": 0.9,
+          "end": 1.26,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

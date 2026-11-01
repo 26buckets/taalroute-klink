@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-075",
+  "sha256": "d260bcb708f030c31ed4cc57b8ce87fc351ccfa320e98864e2245cd72b67b783",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Toen ik klaar was heb ik de klant gebeld.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.72,
+      "text": " Toen ik klaar was heb ik de klant gebeld.",
+      "temperature": 0,
+      "avg_logprob": -0.11264806323581272,
+      "compression_ratio": 0.9318181818181818,
+      "no_speech_prob": 3.8282198591699235e-12,
+      "words": [
+        {
+          "word": " Toen",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9921875
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 1.0
+        },
+        {
+          "word": " klaar",
+          "start": 0.3,
+          "end": 0.62,
+          "probability": 1.0
+        },
+        {
+          "word": " was",
+          "start": 0.62,
+          "end": 0.82,
+          "probability": 1.0
+        },
+        {
+          "word": " heb",
+          "start": 0.82,
+          "end": 0.96,
+          "probability": 0.61328125
+        },
+        {
+          "word": " ik",
+          "start": 0.96,
+          "end": 1.04,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.04,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klant",
+          "start": 1.14,
+          "end": 1.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gebeld.",
+          "start": 1.34,
+          "end": 1.72,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

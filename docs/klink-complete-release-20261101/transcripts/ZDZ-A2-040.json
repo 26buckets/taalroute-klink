@@ -1,0 +1,120 @@
+{
+  "id": "ZDZ-A2-040",
+  "sha256": "de43d6d9b41f09763d8ffefc9ebedc480a0e1fb63a87142174b786d454d566c2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik weet niet welke opdracht ik eerst moet doen. Kunt u mij helpen kiezen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.86,
+      "text": " Ik weet niet welke opdracht ik eerst moet doen.",
+      "temperature": 0,
+      "avg_logprob": -0.04035528774919181,
+      "compression_ratio": 0.9864864864864865,
+      "no_speech_prob": 4.208431780144961e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.96484375
+        },
+        {
+          "word": " weet",
+          "start": 0.12,
+          "end": 0.32,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 1.0
+        },
+        {
+          "word": " welke",
+          "start": 0.46,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opdracht",
+          "start": 0.76,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ik",
+          "start": 1.12,
+          "end": 1.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerst",
+          "start": 1.26,
+          "end": 1.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 1.5,
+          "end": 1.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doen.",
+          "start": 1.64,
+          "end": 1.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.04,
+      "end": 3.22,
+      "text": " Kunt u mij helpen kiezen?",
+      "temperature": 0,
+      "avg_logprob": -0.04035528774919181,
+      "compression_ratio": 0.9864864864864865,
+      "no_speech_prob": 4.208431780144961e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 2.04,
+          "end": 2.34,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " u",
+          "start": 2.34,
+          "end": 2.42,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " mij",
+          "start": 2.42,
+          "end": 2.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " helpen",
+          "start": 2.58,
+          "end": 2.9,
+          "probability": 1.0
+        },
+        {
+          "word": " kiezen?",
+          "start": 2.9,
+          "end": 3.22,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

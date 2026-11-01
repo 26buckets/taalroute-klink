@@ -1,0 +1,77 @@
+{
+  "id": "klink-sentence-6804bc8cd5e65611",
+  "sha256": "6f11d66896ff7a95ce08c1f5c1b372f7024610c4cb4b6b02a7c7c6dc26f4be3f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Jamal leest een verhaal over iemand die rijk is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.7,
+      "text": " Jamal leest een verhaal over iemand die rijk is.",
+      "temperature": 0,
+      "avg_logprob": -0.07231871287027995,
+      "compression_ratio": 0.9056603773584906,
+      "no_speech_prob": 5.86054902523836e-12,
+      "words": [
+        {
+          "word": " Jamal",
+          "start": 0.0,
+          "end": 0.44,
+          "probability": 0.978515625
+        },
+        {
+          "word": " leest",
+          "start": 0.44,
+          "end": 0.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.76,
+          "end": 0.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " verhaal",
+          "start": 0.86,
+          "end": 1.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " over",
+          "start": 1.36,
+          "end": 1.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " iemand",
+          "start": 1.6,
+          "end": 1.88,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " die",
+          "start": 1.88,
+          "end": 2.06,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " rijk",
+          "start": 2.06,
+          "end": 2.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " is.",
+          "start": 2.44,
+          "end": 2.7,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

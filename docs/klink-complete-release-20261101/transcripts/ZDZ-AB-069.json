@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-069",
+  "sha256": "9cd277dbcadfdaaf630829666dc02bc4eddc23ac18489c23d66c10309c8cc3ce",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik neem de appel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Ik neem de appel.",
+      "temperature": 0,
+      "avg_logprob": -0.1299674775865343,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.090571631421014e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.94921875
+        },
+        {
+          "word": " neem",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.3,
+          "end": 0.42,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " appel.",
+          "start": 0.42,
+          "end": 0.62,
+          "probability": 0.9462890625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-076",
+  "sha256": "a220974a57fd5cbec309ea48c95ef42ce1c19787091c1bf49d22cca86db27014",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dan ga ik naar buiten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Dan ga ik naar buiten.",
+      "temperature": 0,
+      "avg_logprob": -0.10127820968627929,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.070529503741316e-12,
+      "words": [
+        {
+          "word": " Dan",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9404296875
+        },
+        {
+          "word": " ga",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 0.28,
+          "end": 0.38,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 0.38,
+          "end": 0.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buiten.",
+          "start": 0.48,
+          "end": 0.9,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

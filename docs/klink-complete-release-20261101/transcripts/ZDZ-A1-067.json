@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-067",
+  "sha256": "899f37f3f1661f25ef5e89432b93efa569c64088db2d002ce96d705d24d80996",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kies de warme jas, want het is koud.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.92,
+      "text": " Ik kies de warme jas, want het is koud.",
+      "temperature": 0,
+      "avg_logprob": -0.051879326502482094,
+      "compression_ratio": 0.8666666666666667,
+      "no_speech_prob": 3.264619260687218e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " kies",
+          "start": 0.18,
+          "end": 0.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.36,
+          "end": 0.46,
+          "probability": 0.962890625
+        },
+        {
+          "word": " warme",
+          "start": 0.46,
+          "end": 0.76,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " jas,",
+          "start": 0.76,
+          "end": 1.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " want",
+          "start": 1.18,
+          "end": 1.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.36,
+          "end": 1.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 1.5,
+          "end": 1.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " koud.",
+          "start": 1.62,
+          "end": 1.92,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-23cd8bc8b19b7db3",
+  "sha256": "c5762cff93aed030f766bc02d9104340790e82ab55a2e6506c79d5d7c2e33b55",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik stap in de bus.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Ik stap in de bus.",
+      "temperature": 0,
+      "avg_logprob": -0.15148666169908312,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 2.80270875951949e-11,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.962890625
+        },
+        {
+          "word": " stap",
+          "start": 0.18,
+          "end": 0.46,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " in",
+          "start": 0.46,
+          "end": 0.66,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 0.66,
+          "end": 0.76,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " bus.",
+          "start": 0.76,
+          "end": 1.04,
+          "probability": 0.96826171875
+        }
+      ]
+    }
+  ]
+}

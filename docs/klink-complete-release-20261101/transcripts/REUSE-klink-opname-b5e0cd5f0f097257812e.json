@@ -1,0 +1,41 @@
+{
+  "id": "REUSE-klink-opname-b5e0cd5f0f097257812e",
+  "sha256": "dfe8018fcedaf9425a2c197070cda1aa5fc509fb2b1b0551141ee38d35d74fbe",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ja, dat klopt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ja, dat klopt.",
+      "temperature": 0,
+      "avg_logprob": -0.07802677154541016,
+      "compression_ratio": 0.6363636363636364,
+      "no_speech_prob": 4.837601239732203e-12,
+      "words": [
+        {
+          "word": " Ja,",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9443359375
+        },
+        {
+          "word": " dat",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " klopt.",
+          "start": 0.6,
+          "end": 0.92,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

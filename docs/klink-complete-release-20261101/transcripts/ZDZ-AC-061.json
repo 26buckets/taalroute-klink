@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-AC-061",
+  "sha256": "2f02aa1e279d868d9d30c2b2b755d90ef8164ebdd005eed1049a501030bfd600",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben boos, want mijn fiets is weg.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.88,
+      "text": " Ik ben boos, want mijn fiets is weg.",
+      "temperature": 0,
+      "avg_logprob": -0.0430966059366862,
+      "compression_ratio": 0.8181818181818182,
+      "no_speech_prob": 4.544213096091543e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.92529296875
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " boos,",
+          "start": 0.3,
+          "end": 0.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " want",
+          "start": 0.88,
+          "end": 1.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " mijn",
+          "start": 1.06,
+          "end": 1.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " fiets",
+          "start": 1.2,
+          "end": 1.46,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 1.46,
+          "end": 1.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " weg.",
+          "start": 1.62,
+          "end": 1.88,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

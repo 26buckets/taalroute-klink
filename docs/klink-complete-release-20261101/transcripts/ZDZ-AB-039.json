@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-039",
+  "sha256": "a1cc219b67a817fb859b07c4f8dffeca77ee7230fc6919b153a9d44bb394ab37",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is niet mijn huis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.86,
+      "text": " Dit is niet mijn huis.",
+      "temperature": 0,
+      "avg_logprob": -0.1863727569580078,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 7.200988503403005e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8642578125
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " niet",
+          "start": 0.3,
+          "end": 0.4,
+          "probability": 0.958984375
+        },
+        {
+          "word": " mijn",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " huis.",
+          "start": 0.56,
+          "end": 0.86,
+          "probability": 0.99560546875
+        }
+      ]
+    }
+  ]
+}

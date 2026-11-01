@@ -1,0 +1,575 @@
+{
+  "id": "A2-T17",
+  "sha256": "07fa00d009188368bbb7b9606267a1e6e4fbc1d17a6ddea2ea940edaf9050052",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursist volgt op donderdag een online les over solliciteren. Voor de les krijgt de groep een e-mail met een link en een korte tekst. De cursist leest de tekst, maar de link werkt niet. Hij belt vijf minuten voor de les naar de school. De medewerker stuurt een nieuwe link. De cursist doet op tijd mee aan de les en geeft zijn antwoord via de chat. Na de les bewaart hij de tekst om opnieuw te oefenen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.66,
+      "text": " Een cursist volgt op donderdag een online les over solliciteren.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " cursist",
+          "start": 0.14,
+          "end": 0.58,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " volgt",
+          "start": 0.58,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " donderdag",
+          "start": 1.08,
+          "end": 1.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 1.56,
+          "end": 1.76,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " online",
+          "start": 1.76,
+          "end": 2.18,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " les",
+          "start": 2.18,
+          "end": 2.48,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " over",
+          "start": 2.48,
+          "end": 2.8,
+          "probability": 0.99609375
+        },
+        {
+          "word": " solliciteren.",
+          "start": 2.8,
+          "end": 3.66,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.76,
+      "end": 7.28,
+      "text": " Voor de les krijgt de groep een e-mail met een link en een korte tekst.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 3.76,
+          "end": 3.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 3.88,
+          "end": 4.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " les",
+          "start": 4.02,
+          "end": 4.28,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " krijgt",
+          "start": 4.28,
+          "end": 4.64,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 4.64,
+          "end": 4.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " groep",
+          "start": 4.72,
+          "end": 4.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 4.94,
+          "end": 5.08,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " e",
+          "start": 5.08,
+          "end": 5.3,
+          "probability": 0.94091796875
+        },
+        {
+          "word": "-mail",
+          "start": 5.3,
+          "end": 5.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " met",
+          "start": 5.5,
+          "end": 5.68,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 5.68,
+          "end": 5.84,
+          "probability": 0.998046875
+        },
+        {
+          "word": " link",
+          "start": 5.84,
+          "end": 6.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 6.14,
+          "end": 6.36,
+          "probability": 0.99609375
+        },
+        {
+          "word": " een",
+          "start": 6.36,
+          "end": 6.48,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " korte",
+          "start": 6.48,
+          "end": 6.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tekst.",
+          "start": 6.78,
+          "end": 7.28,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.38,
+      "end": 9.86,
+      "text": " De cursist leest de tekst, maar de link werkt niet.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.38,
+          "end": 7.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cursist",
+          "start": 7.48,
+          "end": 7.98,
+          "probability": 1.0
+        },
+        {
+          "word": " leest",
+          "start": 7.98,
+          "end": 8.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.24,
+          "end": 8.36,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " tekst,",
+          "start": 8.36,
+          "end": 8.76,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 8.84,
+          "end": 8.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.98,
+          "end": 9.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " link",
+          "start": 9.12,
+          "end": 9.36,
+          "probability": 1.0
+        },
+        {
+          "word": " werkt",
+          "start": 9.36,
+          "end": 9.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet.",
+          "start": 9.68,
+          "end": 9.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.1,
+      "end": 12.22,
+      "text": " Hij belt vijf minuten voor de les naar de school.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 10.1,
+          "end": 10.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " belt",
+          "start": 10.28,
+          "end": 10.52,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " vijf",
+          "start": 10.52,
+          "end": 10.86,
+          "probability": 0.89453125
+        },
+        {
+          "word": " minuten",
+          "start": 10.86,
+          "end": 11.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 11.16,
+          "end": 11.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 11.3,
+          "end": 11.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " les",
+          "start": 11.44,
+          "end": 11.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naar",
+          "start": 11.68,
+          "end": 11.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 11.8,
+          "end": 11.92,
+          "probability": 0.98828125
+        },
+        {
+          "word": " school.",
+          "start": 11.92,
+          "end": 12.22,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.44,
+      "end": 14.12,
+      "text": " De medewerker stuurt een nieuwe link.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 12.56,
+          "end": 13.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stuurt",
+          "start": 13.16,
+          "end": 13.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 13.46,
+          "end": 13.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nieuwe",
+          "start": 13.58,
+          "end": 13.82,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " link.",
+          "start": 13.82,
+          "end": 14.12,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.32,
+      "end": 17.86,
+      "text": " De cursist doet op tijd mee aan de les en geeft zijn antwoord via de chat.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 14.32,
+          "end": 14.44,
+          "probability": 1.0
+        },
+        {
+          "word": " cursist",
+          "start": 14.44,
+          "end": 14.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doet",
+          "start": 14.88,
+          "end": 15.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 15.02,
+          "end": 15.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tijd",
+          "start": 15.16,
+          "end": 15.38,
+          "probability": 1.0
+        },
+        {
+          "word": " mee",
+          "start": 15.38,
+          "end": 15.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 15.62,
+          "end": 15.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 15.78,
+          "end": 15.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 15.9,
+          "end": 16.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 16.18,
+          "end": 16.36,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " geeft",
+          "start": 16.36,
+          "end": 16.6,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 16.6,
+          "end": 16.74,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " antwoord",
+          "start": 16.74,
+          "end": 17.22,
+          "probability": 1.0
+        },
+        {
+          "word": " via",
+          "start": 17.22,
+          "end": 17.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 17.44,
+          "end": 17.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " chat.",
+          "start": 17.62,
+          "end": 17.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.04,
+      "end": 20.54,
+      "text": " Na de les bewaart hij de tekst om opnieuw te oefenen.",
+      "temperature": 0,
+      "avg_logprob": -0.05370613432278598,
+      "compression_ratio": 1.7161016949152543,
+      "no_speech_prob": 9.515308679874934e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 18.04,
+          "end": 18.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 18.2,
+          "end": 18.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 18.36,
+          "end": 18.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bewaart",
+          "start": 18.6,
+          "end": 19.0,
+          "probability": 0.99609375
+        },
+        {
+          "word": " hij",
+          "start": 19.0,
+          "end": 19.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 19.12,
+          "end": 19.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tekst",
+          "start": 19.26,
+          "end": 19.56,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 19.56,
+          "end": 19.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " opnieuw",
+          "start": 19.7,
+          "end": 20.02,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 20.02,
+          "end": 20.14,
+          "probability": 1.0
+        },
+        {
+          "word": " oefenen.",
+          "start": 20.14,
+          "end": 20.54,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

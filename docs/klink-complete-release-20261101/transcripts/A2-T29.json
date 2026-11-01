@@ -1,0 +1,607 @@
+{
+  "id": "A2-T29",
+  "sha256": "a1a866185cae16b794fc461bfffabc2658c16a2f97ea0784d1e0fba339bc362e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bericht voor medewerkers. Vanaf maandag staan er twee bakken in de kantine. Papier hoort in de blauwe bak. Etensresten gaan in de groene bak. Eerst stond er één bak voor alles. De schoonmaker leegt de blauwe bak iedere middag en de groene bak iedere avond. Op dinsdag ziet een medewerker een papieren doos in de groene bak. De medewerker haalt de doos eruit en legt hem in de blauwe bak. Daarna leest de medewerker de nieuwe instructie nog een keer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": " Bericht voor medewerkers.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Bericht",
+          "start": 0.0,
+          "end": 0.42,
+          "probability": 0.986328125
+        },
+        {
+          "word": " voor",
+          "start": 0.42,
+          "end": 0.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerkers.",
+          "start": 0.58,
+          "end": 1.36,
+          "probability": 0.99560546875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 1.48,
+      "end": 4.06,
+      "text": " Vanaf maandag staan er twee bakken in de kantine.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Vanaf",
+          "start": 1.48,
+          "end": 1.92,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " maandag",
+          "start": 1.92,
+          "end": 2.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staan",
+          "start": 2.46,
+          "end": 2.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 2.68,
+          "end": 2.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 2.84,
+          "end": 3.08,
+          "probability": 0.9150390625
+        },
+        {
+          "word": " bakken",
+          "start": 3.08,
+          "end": 3.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 3.46,
+          "end": 3.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.58,
+          "end": 3.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kantine.",
+          "start": 3.66,
+          "end": 4.06,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.28,
+      "end": 5.78,
+      "text": " Papier hoort in de blauwe bak.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Papier",
+          "start": 4.28,
+          "end": 4.7,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " hoort",
+          "start": 4.7,
+          "end": 5.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 5.02,
+          "end": 5.12,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.12,
+          "end": 5.2,
+          "probability": 1.0
+        },
+        {
+          "word": " blauwe",
+          "start": 5.2,
+          "end": 5.52,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bak.",
+          "start": 5.52,
+          "end": 5.78,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 6.26,
+      "end": 7.6,
+      "text": " Etensresten gaan in de groene bak.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Etensresten",
+          "start": 6.26,
+          "end": 6.74,
+          "probability": 0.943359375
+        },
+        {
+          "word": " gaan",
+          "start": 6.74,
+          "end": 6.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 6.86,
+          "end": 7.02,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.02,
+          "end": 7.12,
+          "probability": 1.0
+        },
+        {
+          "word": " groene",
+          "start": 7.12,
+          "end": 7.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bak.",
+          "start": 7.38,
+          "end": 7.6,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 7.8,
+      "end": 9.64,
+      "text": " Eerst stond er één bak voor alles.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Eerst",
+          "start": 7.8,
+          "end": 8.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stond",
+          "start": 8.24,
+          "end": 8.62,
+          "probability": 1.0
+        },
+        {
+          "word": " er",
+          "start": 8.62,
+          "end": 8.74,
+          "probability": 1.0
+        },
+        {
+          "word": " één",
+          "start": 8.74,
+          "end": 8.94,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " bak",
+          "start": 8.94,
+          "end": 9.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 9.16,
+          "end": 9.34,
+          "probability": 1.0
+        },
+        {
+          "word": " alles.",
+          "start": 9.34,
+          "end": 9.64,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 9.9,
+      "end": 14.28,
+      "text": " De schoonmaker leegt de blauwe bak iedere middag en de groene bak iedere avond.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.9,
+          "end": 10.08,
+          "probability": 1.0
+        },
+        {
+          "word": " schoonmaker",
+          "start": 10.08,
+          "end": 10.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " leegt",
+          "start": 10.64,
+          "end": 10.94,
+          "probability": 0.77587890625
+        },
+        {
+          "word": " de",
+          "start": 10.94,
+          "end": 11.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " blauwe",
+          "start": 11.04,
+          "end": 11.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bak",
+          "start": 11.36,
+          "end": 11.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iedere",
+          "start": 11.58,
+          "end": 11.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " middag",
+          "start": 11.94,
+          "end": 12.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 12.38,
+          "end": 12.7,
+          "probability": 0.8583984375
+        },
+        {
+          "word": " de",
+          "start": 12.7,
+          "end": 12.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groene",
+          "start": 12.82,
+          "end": 13.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bak",
+          "start": 13.1,
+          "end": 13.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iedere",
+          "start": 13.32,
+          "end": 13.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " avond.",
+          "start": 13.72,
+          "end": 14.28,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 14.44,
+      "end": 17.9,
+      "text": " Op dinsdag ziet een medewerker een papieren doos in de groene bak.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Op",
+          "start": 14.44,
+          "end": 14.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 14.66,
+          "end": 15.14,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 15.14,
+          "end": 15.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 15.4,
+          "end": 15.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 15.54,
+          "end": 16.16,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 16.16,
+          "end": 16.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " papieren",
+          "start": 16.34,
+          "end": 16.74,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " doos",
+          "start": 16.74,
+          "end": 17.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 17.16,
+          "end": 17.3,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 17.3,
+          "end": 17.4,
+          "probability": 1.0
+        },
+        {
+          "word": " groene",
+          "start": 17.4,
+          "end": 17.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bak.",
+          "start": 17.66,
+          "end": 17.9,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 18.1,
+      "end": 21.22,
+      "text": " De medewerker haalt de doos eruit en legt hem in de blauwe bak.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.1,
+          "end": 18.26,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 18.26,
+          "end": 18.82,
+          "probability": 1.0
+        },
+        {
+          "word": " haalt",
+          "start": 18.82,
+          "end": 19.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 19.08,
+          "end": 19.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doos",
+          "start": 19.2,
+          "end": 19.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eruit",
+          "start": 19.5,
+          "end": 19.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " en",
+          "start": 19.82,
+          "end": 20.0,
+          "probability": 1.0
+        },
+        {
+          "word": " legt",
+          "start": 20.0,
+          "end": 20.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hem",
+          "start": 20.26,
+          "end": 20.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 20.38,
+          "end": 20.52,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.52,
+          "end": 20.62,
+          "probability": 1.0
+        },
+        {
+          "word": " blauwe",
+          "start": 20.62,
+          "end": 20.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bak.",
+          "start": 20.96,
+          "end": 21.22,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 21.46,
+      "end": 24.34,
+      "text": " Daarna leest de medewerker de nieuwe instructie nog een keer.",
+      "temperature": 0,
+      "avg_logprob": -0.0701396065469114,
+      "compression_ratio": 1.8791666666666667,
+      "no_speech_prob": 1.0571469914733012e-11,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 21.46,
+          "end": 21.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leest",
+          "start": 21.78,
+          "end": 22.24,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 22.24,
+          "end": 22.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 22.34,
+          "end": 22.9,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 22.9,
+          "end": 23.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuwe",
+          "start": 23.02,
+          "end": 23.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " instructie",
+          "start": 23.26,
+          "end": 23.82,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 23.82,
+          "end": 24.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 24.0,
+          "end": 24.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " keer.",
+          "start": 24.12,
+          "end": 24.34,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-048",
+  "sha256": "36348c742b8d51fbc63a926acdbc55e736e5e4bbb0f4801b2a053b4bca5e3c96",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb soep gegeten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Ik heb soep gegeten.",
+      "temperature": 0,
+      "avg_logprob": -0.09828935969959605,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 3.5564910391694404e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96337890625
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " soep",
+          "start": 0.26,
+          "end": 0.52,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " gegeten.",
+          "start": 0.52,
+          "end": 1.08,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

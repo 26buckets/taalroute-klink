@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-071",
+  "sha256": "434316a71c8d2d77b36f11652f60e0edad7fd42dd6c90516fd431f28efa3aa6e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De afspraak is vrijdag om 2 uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.94,
+      "text": " De afspraak is vrijdag om 2 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.09980800747871399,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 3.907631596772321e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " afspraak",
+          "start": 0.16,
+          "end": 0.64,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.64,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 0.8,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 1.22,
+          "end": 1.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " 2",
+          "start": 1.4,
+          "end": 1.58,
+          "probability": 0.59326171875
+        },
+        {
+          "word": " uur.",
+          "start": 1.58,
+          "end": 1.94,
+          "probability": 0.97119140625
+        }
+      ]
+    }
+  ]
+}

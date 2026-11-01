@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-008",
+  "sha256": "8edf34eb383b97050f66ae00db9cd04570b19c863d1ad38db78fce13935ebcbf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik woon hier.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.56,
+      "text": " Ik woon hier.",
+      "temperature": 0,
+      "avg_logprob": -0.10727035999298096,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 4.180550437077324e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.94970703125
+        },
+        {
+          "word": " woon",
+          "start": 0.14,
+          "end": 0.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hier.",
+          "start": 0.38,
+          "end": 0.56,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

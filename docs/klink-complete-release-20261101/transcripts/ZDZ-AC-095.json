@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-AC-095",
+  "sha256": "09fc7d7483858b76985c4c38030f1a45a2d2f1d87ca7c107e988870685954eb3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De lamp doet het niet. Kunt u me helpen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": " De lamp doet het niet. Kunt u me helpen?",
+      "temperature": 0,
+      "avg_logprob": -0.11709517240524292,
+      "compression_ratio": 0.8888888888888888,
+      "no_speech_prob": 4.304391912346439e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9462890625
+        },
+        {
+          "word": " lamp",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " doet",
+          "start": 0.36,
+          "end": 0.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.5,
+          "end": 0.66,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " niet.",
+          "start": 0.66,
+          "end": 0.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Kunt",
+          "start": 1.04,
+          "end": 1.26,
+          "probability": 0.99609375
+        },
+        {
+          "word": " u",
+          "start": 1.26,
+          "end": 1.34,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " me",
+          "start": 1.34,
+          "end": 1.44,
+          "probability": 0.93212890625
+        },
+        {
+          "word": " helpen?",
+          "start": 1.44,
+          "end": 1.8,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

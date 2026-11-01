@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-094",
+  "sha256": "379b184b2b8658eb6800e280b1e715a21dd1aca5e936fd82ee3e6749f91c88eb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze doos is zwaar.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Deze doos is zwaar.",
+      "temperature": 0,
+      "avg_logprob": -0.12139050165812175,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 3.665882267883669e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " doos",
+          "start": 0.32,
+          "end": 0.58,
+          "probability": 0.974609375
+        },
+        {
+          "word": " is",
+          "start": 0.58,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zwaar.",
+          "start": 0.72,
+          "end": 1.04,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-065",
+  "sha256": "91a8ae12ae78dd97737a7e5b4fae9054e4c5d066c888a6d2d292af4d3ca1188e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik bedoel de deur links van het raam.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " Ik bedoel de deur links van het raam.",
+      "temperature": 0,
+      "avg_logprob": -0.04172414541244507,
+      "compression_ratio": 0.8604651162790697,
+      "no_speech_prob": 3.874999279784852e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.96728515625
+        },
+        {
+          "word": " bedoel",
+          "start": 0.12,
+          "end": 0.4,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.4,
+          "end": 0.52,
+          "probability": 0.99609375
+        },
+        {
+          "word": " deur",
+          "start": 0.52,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " links",
+          "start": 0.74,
+          "end": 0.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " van",
+          "start": 0.98,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.14,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " raam.",
+          "start": 1.28,
+          "end": 1.58,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

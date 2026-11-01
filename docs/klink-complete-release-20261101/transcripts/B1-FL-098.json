@@ -1,0 +1,569 @@
+{
+  "id": "B1-FL-098",
+  "sha256": "014389c3a0ccf0967b28da1940fb6014d9ceb007c01327bb739fd2a0eed3f247",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op het parkeerterrein van een bedrijf ziet technicus Iris een waarschuwing op een laadpaal. Een medewerker wil zijn auto toch aansluiten, omdat hij snel moet vertrekken. Iris vraagt hem een andere laadpaal te gebruiken. Ze schakelt de laadpaal uit en registreert de melding volgens de instructie. Daarna belt ze de onderhoudsdienst. In het systeem zet ze dat de paal voorlopig niet beschikbaar is. Zo zien collega's dat er eerst een controle moet plaatsvinden voordat iemand hem opnieuw gebruikt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.78,
+      "text": " Op het parkeerterrein van een bedrijf ziet technicus Iris een waarschuwing op een laadpaal.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " het",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " parkeerterrein",
+          "start": 0.24,
+          "end": 0.96,
+          "probability": 0.998046875
+        },
+        {
+          "word": " van",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 1.08,
+          "end": 1.22,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " bedrijf",
+          "start": 1.22,
+          "end": 1.78,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 1.78,
+          "end": 2.12,
+          "probability": 0.935546875
+        },
+        {
+          "word": " technicus",
+          "start": 2.12,
+          "end": 2.76,
+          "probability": 0.923828125
+        },
+        {
+          "word": " Iris",
+          "start": 2.76,
+          "end": 3.08,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " een",
+          "start": 3.08,
+          "end": 3.38,
+          "probability": 0.990234375
+        },
+        {
+          "word": " waarschuwing",
+          "start": 3.38,
+          "end": 3.98,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " op",
+          "start": 3.98,
+          "end": 4.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 4.12,
+          "end": 4.24,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " laadpaal.",
+          "start": 4.24,
+          "end": 4.78,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.9,
+      "end": 8.84,
+      "text": " Een medewerker wil zijn auto toch aansluiten, omdat hij snel moet vertrekken.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 4.9,
+          "end": 5.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerker",
+          "start": 5.06,
+          "end": 5.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 5.72,
+          "end": 5.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 5.9,
+          "end": 6.06,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " auto",
+          "start": 6.06,
+          "end": 6.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " toch",
+          "start": 6.38,
+          "end": 6.66,
+          "probability": 0.984375
+        },
+        {
+          "word": " aansluiten,",
+          "start": 6.66,
+          "end": 7.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " omdat",
+          "start": 7.44,
+          "end": 7.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hij",
+          "start": 7.68,
+          "end": 7.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " snel",
+          "start": 7.86,
+          "end": 8.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 8.14,
+          "end": 8.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vertrekken.",
+          "start": 8.34,
+          "end": 8.84,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.98,
+      "end": 11.48,
+      "text": " Iris vraagt hem een andere laadpaal te gebruiken.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " Iris",
+          "start": 8.98,
+          "end": 9.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 9.36,
+          "end": 9.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hem",
+          "start": 9.74,
+          "end": 9.88,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 9.88,
+          "end": 10.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " andere",
+          "start": 10.02,
+          "end": 10.38,
+          "probability": 0.994140625
+        },
+        {
+          "word": " laadpaal",
+          "start": 10.38,
+          "end": 10.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 10.86,
+          "end": 10.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gebruiken.",
+          "start": 10.98,
+          "end": 11.48,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.62,
+      "end": 15.54,
+      "text": " Ze schakelt de laadpaal uit en registreert de melding volgens de instructie.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 11.62,
+          "end": 11.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " schakelt",
+          "start": 11.82,
+          "end": 12.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.28,
+          "end": 12.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " laadpaal",
+          "start": 12.38,
+          "end": 12.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uit",
+          "start": 12.86,
+          "end": 13.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 13.18,
+          "end": 13.42,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " registreert",
+          "start": 13.42,
+          "end": 14.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 14.0,
+          "end": 14.12,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " melding",
+          "start": 14.12,
+          "end": 14.5,
+          "probability": 1.0
+        },
+        {
+          "word": " volgens",
+          "start": 14.5,
+          "end": 14.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 14.9,
+          "end": 14.98,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " instructie.",
+          "start": 14.98,
+          "end": 15.54,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.68,
+      "end": 17.36,
+      "text": " Daarna belt ze de onderhoudsdienst.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 15.68,
+          "end": 16.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " belt",
+          "start": 16.04,
+          "end": 16.34,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " ze",
+          "start": 16.34,
+          "end": 16.46,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 16.46,
+          "end": 16.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " onderhoudsdienst.",
+          "start": 16.6,
+          "end": 17.36,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.52,
+      "end": 20.56,
+      "text": " In het systeem zet ze dat de paal voorlopig niet beschikbaar is.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 17.52,
+          "end": 17.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 17.64,
+          "end": 17.76,
+          "probability": 1.0
+        },
+        {
+          "word": " systeem",
+          "start": 17.76,
+          "end": 18.22,
+          "probability": 1.0
+        },
+        {
+          "word": " zet",
+          "start": 18.22,
+          "end": 18.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 18.46,
+          "end": 18.58,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " dat",
+          "start": 18.58,
+          "end": 18.7,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 18.7,
+          "end": 18.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " paal",
+          "start": 18.84,
+          "end": 19.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voorlopig",
+          "start": 19.08,
+          "end": 19.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 19.64,
+          "end": 19.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beschikbaar",
+          "start": 19.8,
+          "end": 20.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 20.34,
+          "end": 20.56,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.76,
+      "end": 25.2,
+      "text": " Zo zien collega's dat er eerst een controle moet plaatsvinden voordat iemand hem opnieuw gebruikt.",
+      "temperature": 0,
+      "avg_logprob": -0.0434612158573035,
+      "compression_ratio": 1.6588628762541806,
+      "no_speech_prob": 7.15194830441801e-12,
+      "words": [
+        {
+          "word": " Zo",
+          "start": 20.76,
+          "end": 20.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zien",
+          "start": 20.9,
+          "end": 21.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega's",
+          "start": 21.08,
+          "end": 21.68,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 21.68,
+          "end": 21.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " er",
+          "start": 21.82,
+          "end": 21.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerst",
+          "start": 21.94,
+          "end": 22.22,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 22.22,
+          "end": 22.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " controle",
+          "start": 22.34,
+          "end": 22.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 22.8,
+          "end": 23.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " plaatsvinden",
+          "start": 23.0,
+          "end": 23.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voordat",
+          "start": 23.6,
+          "end": 24.02,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " iemand",
+          "start": 24.02,
+          "end": 24.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hem",
+          "start": 24.24,
+          "end": 24.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opnieuw",
+          "start": 24.44,
+          "end": 24.78,
+          "probability": 1.0
+        },
+        {
+          "word": " gebruikt.",
+          "start": 24.78,
+          "end": 25.2,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

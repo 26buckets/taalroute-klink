@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-f5474e0c4e6700c3",
+  "sha256": "fe78f2c653602b8be917c4b065abd6f1f775c3e93b20889dbf387a539ecc8cfe",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De druiven liggen in een schaal.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " De druiven liggen in een schaal.",
+      "temperature": 0,
+      "avg_logprob": -0.058915871840256914,
+      "compression_ratio": 0.8648648648648649,
+      "no_speech_prob": 4.6365992642516396e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.93994140625
+        },
+        {
+          "word": " druiven",
+          "start": 0.18,
+          "end": 0.66,
+          "probability": 0.9921875
+        },
+        {
+          "word": " liggen",
+          "start": 0.66,
+          "end": 1.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 1.06,
+          "end": 1.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.18,
+          "end": 1.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " schaal.",
+          "start": 1.36,
+          "end": 1.68,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

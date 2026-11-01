@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-26da25105f8c4879",
+  "sha256": "01948124a98ebc6f6670820f73e370337ce285d47f705dd688311ffb089b75ed",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kok snijdt de groenten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " De kok snijdt de groenten.",
+      "temperature": 0,
+      "avg_logprob": -0.19024988321157602,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 3.9015210333281924e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.91162109375
+        },
+        {
+          "word": " kok",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " snijdt",
+          "start": 0.44,
+          "end": 1.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.04,
+          "end": 1.1,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " groenten.",
+          "start": 1.1,
+          "end": 1.58,
+          "probability": 0.93994140625
+        }
+      ]
+    }
+  ]
+}

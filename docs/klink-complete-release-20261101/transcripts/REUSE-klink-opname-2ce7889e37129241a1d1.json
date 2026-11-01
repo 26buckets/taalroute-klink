@@ -1,0 +1,59 @@
+{
+  "id": "REUSE-klink-opname-2ce7889e37129241a1d1",
+  "sha256": "a5424fd22fb18fdcdeb8bab22973b2ffba885cf01dc9b03c9b2e5215bdd72b52",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er ligt water op de vloer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Er ligt water op de vloer.",
+      "temperature": 0,
+      "avg_logprob": -0.07304308964655949,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.3011423415950656e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9296875
+        },
+        {
+          "word": " ligt",
+          "start": 0.18,
+          "end": 0.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water",
+          "start": 0.38,
+          "end": 0.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.74,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.96,
+          "end": 1.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vloer.",
+          "start": 1.06,
+          "end": 1.38,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

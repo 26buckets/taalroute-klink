@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-093",
+  "sha256": "3830687b5d31339178136a811afeed90a8910ef017460a7eca6e6137dbe657f9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb nog even tijd nodig.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Ik heb nog even tijd nodig.",
+      "temperature": 0,
+      "avg_logprob": -0.09504585266113282,
+      "compression_ratio": 0.8181818181818182,
+      "no_speech_prob": 3.770459638952062e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 0.24,
+          "end": 0.34,
+          "probability": 1.0
+        },
+        {
+          "word": " even",
+          "start": 0.34,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tijd",
+          "start": 0.52,
+          "end": 0.72,
+          "probability": 1.0
+        },
+        {
+          "word": " nodig.",
+          "start": 0.72,
+          "end": 1.08,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

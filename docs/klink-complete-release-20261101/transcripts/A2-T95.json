@@ -1,0 +1,581 @@
+{
+  "id": "A2-T95",
+  "sha256": "70b22ad6686961b3f286e257c5b6cb6edd0ccbd70441432b82747c9606ff21f7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De praktijk van de huisarts stuurt een bericht aan bezoekers. Op dinsdag wordt de lift in het gebouw gecontroleerd. Wie de trap kan gebruiken, mag naar de tweede verdieping lopen. Wie niet met de trap kan, kan vooraf bellen met de balie. Een medewerker zoekt dan samen met de bezoeker naar een andere ruimte op de begane grond. De controle begint om 9 uur en duurt naar verwachting 2 uur. De praktijk vraagt bezoekers rekening te houden met mogelijke wachttijd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.96,
+      "text": " De praktijk van de huisarts stuurt een bericht aan bezoekers.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " praktijk",
+          "start": 0.14,
+          "end": 0.6,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " van",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.74,
+          "end": 0.86,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " huisarts",
+          "start": 0.86,
+          "end": 1.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " stuurt",
+          "start": 1.34,
+          "end": 1.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 1.8,
+          "end": 1.92,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bericht",
+          "start": 1.92,
+          "end": 2.26,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 2.26,
+          "end": 2.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bezoekers.",
+          "start": 2.4,
+          "end": 2.96,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.14,
+      "end": 5.64,
+      "text": " Op dinsdag wordt de lift in het gebouw gecontroleerd.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.14,
+          "end": 3.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dinsdag",
+          "start": 3.3,
+          "end": 3.72,
+          "probability": 1.0
+        },
+        {
+          "word": " wordt",
+          "start": 3.72,
+          "end": 3.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 3.92,
+          "end": 4.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lift",
+          "start": 4.06,
+          "end": 4.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 4.26,
+          "end": 4.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 4.4,
+          "end": 4.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gebouw",
+          "start": 4.52,
+          "end": 4.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gecontroleerd.",
+          "start": 4.92,
+          "end": 5.64,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.76,
+      "end": 8.64,
+      "text": " Wie de trap kan gebruiken, mag naar de tweede verdieping lopen.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 5.76,
+          "end": 5.92,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 5.92,
+          "end": 6.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " trap",
+          "start": 6.06,
+          "end": 6.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 6.26,
+          "end": 6.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gebruiken,",
+          "start": 6.42,
+          "end": 6.98,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 7.06,
+          "end": 7.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 7.28,
+          "end": 7.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.42,
+          "end": 7.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tweede",
+          "start": 7.56,
+          "end": 7.88,
+          "probability": 0.98291015625
+        },
+        {
+          "word": " verdieping",
+          "start": 7.88,
+          "end": 8.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lopen.",
+          "start": 8.3,
+          "end": 8.64,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.78,
+      "end": 11.56,
+      "text": " Wie niet met de trap kan, kan vooraf bellen met de balie.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 8.78,
+          "end": 8.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " niet",
+          "start": 8.98,
+          "end": 9.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 9.22,
+          "end": 9.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.36,
+          "end": 9.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trap",
+          "start": 9.5,
+          "end": 9.7,
+          "probability": 1.0
+        },
+        {
+          "word": " kan,",
+          "start": 9.7,
+          "end": 9.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 10.08,
+          "end": 10.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vooraf",
+          "start": 10.24,
+          "end": 10.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bellen",
+          "start": 10.62,
+          "end": 10.92,
+          "probability": 0.796875
+        },
+        {
+          "word": " met",
+          "start": 10.92,
+          "end": 11.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 11.06,
+          "end": 11.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " balie.",
+          "start": 11.18,
+          "end": 11.56,
+          "probability": 0.9765625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.7,
+      "end": 16.44,
+      "text": " Een medewerker zoekt dan samen met de bezoeker naar een andere ruimte op de begane grond.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 11.7,
+          "end": 11.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 11.88,
+          "end": 12.52,
+          "probability": 1.0
+        },
+        {
+          "word": " zoekt",
+          "start": 12.52,
+          "end": 12.78,
+          "probability": 1.0
+        },
+        {
+          "word": " dan",
+          "start": 12.78,
+          "end": 12.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " samen",
+          "start": 12.92,
+          "end": 13.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 13.32,
+          "end": 13.52,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 13.52,
+          "end": 13.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bezoeker",
+          "start": 13.62,
+          "end": 14.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 14.06,
+          "end": 14.32,
+          "probability": 0.94580078125
+        },
+        {
+          "word": " een",
+          "start": 14.32,
+          "end": 14.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 14.48,
+          "end": 14.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ruimte",
+          "start": 14.78,
+          "end": 15.26,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 15.26,
+          "end": 15.56,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " de",
+          "start": 15.56,
+          "end": 15.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begane",
+          "start": 15.7,
+          "end": 16.14,
+          "probability": 0.8232421875
+        },
+        {
+          "word": " grond.",
+          "start": 16.14,
+          "end": 16.44,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.58,
+      "end": 20.02,
+      "text": " De controle begint om 9 uur en duurt naar verwachting 2 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 16.58,
+          "end": 16.72,
+          "probability": 1.0
+        },
+        {
+          "word": " controle",
+          "start": 16.72,
+          "end": 17.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begint",
+          "start": 17.1,
+          "end": 17.52,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 17.52,
+          "end": 17.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 9",
+          "start": 17.66,
+          "end": 17.92,
+          "probability": 0.826171875
+        },
+        {
+          "word": " uur",
+          "start": 17.92,
+          "end": 18.3,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " en",
+          "start": 18.3,
+          "end": 18.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " duurt",
+          "start": 18.5,
+          "end": 18.76,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 18.76,
+          "end": 18.86,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " verwachting",
+          "start": 18.86,
+          "end": 19.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 2",
+          "start": 19.42,
+          "end": 19.66,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " uur.",
+          "start": 19.66,
+          "end": 20.02,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.14,
+      "end": 23.5,
+      "text": " De praktijk vraagt bezoekers rekening te houden met mogelijke wachttijd.",
+      "temperature": 0,
+      "avg_logprob": -0.05522498106345152,
+      "compression_ratio": 1.752851711026616,
+      "no_speech_prob": 7.768321576284709e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.14,
+          "end": 20.28,
+          "probability": 1.0
+        },
+        {
+          "word": " praktijk",
+          "start": 20.28,
+          "end": 20.74,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 20.74,
+          "end": 21.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bezoekers",
+          "start": 21.06,
+          "end": 21.5,
+          "probability": 1.0
+        },
+        {
+          "word": " rekening",
+          "start": 21.5,
+          "end": 21.94,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 21.94,
+          "end": 22.04,
+          "probability": 1.0
+        },
+        {
+          "word": " houden",
+          "start": 22.04,
+          "end": 22.36,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 22.36,
+          "end": 22.52,
+          "probability": 1.0
+        },
+        {
+          "word": " mogelijke",
+          "start": 22.52,
+          "end": 23.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wachttijd.",
+          "start": 23.0,
+          "end": 23.5,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

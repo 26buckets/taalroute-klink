@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-091",
+  "sha256": "9aa93377b0ff6d3539b6aa3163b768df45da62df842e8d0d136d879253d32406",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil dit niet doen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.86,
+      "text": " Ik wil dit niet doen.",
+      "temperature": 0,
+      "avg_logprob": -0.11799849404229058,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 5.361624772631801e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.90478515625
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " dit",
+          "start": 0.34,
+          "end": 0.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " niet",
+          "start": 0.5,
+          "end": 0.64,
+          "probability": 1.0
+        },
+        {
+          "word": " doen.",
+          "start": 0.64,
+          "end": 0.86,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

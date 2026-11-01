@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-a304f2f7a198c418",
+  "sha256": "37d0d34ac40acd4ca3f10fe0defdfc3db93d57b244151fa600fe81ef1643c6a3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kook de rijst.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Ik kook de rijst.",
+      "temperature": 0,
+      "avg_logprob": -0.0642857551574707,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 5.628027991561035e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.892578125
+        },
+        {
+          "word": " kook",
+          "start": 0.2,
+          "end": 0.5,
+          "probability": 0.994140625
+        },
+        {
+          "word": " de",
+          "start": 0.5,
+          "end": 0.68,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " rijst.",
+          "start": 0.68,
+          "end": 1.14,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

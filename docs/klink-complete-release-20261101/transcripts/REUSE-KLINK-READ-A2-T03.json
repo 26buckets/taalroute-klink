@@ -1,0 +1,539 @@
+{
+  "id": "REUSE-KLINK-READ-A2-T03",
+  "sha256": "12e78cfa0ab45fe65efaee31c942b82120bba9cb74404878bd1298a1a201327a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Yara wil beter Nederlands leren. Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen. Op de deur staat dat de bibliotheek op zaterdag tot 4 uur open is. Yara komt om half 4 binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt, zonder pas mag je het boek niet meenemen. Yara mag het boek vandaag wel in de bibliotheek lezen. Zij besluit maandag met haar pas terug te komen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.86,
+      "text": " Yara wil beter Nederlands leren.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " Yara",
+          "start": 0.0,
+          "end": 0.4,
+          "probability": 0.9482421875
+        },
+        {
+          "word": " wil",
+          "start": 0.4,
+          "end": 0.64,
+          "probability": 0.9677734375
+        },
+        {
+          "word": " beter",
+          "start": 0.64,
+          "end": 1.0,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " Nederlands",
+          "start": 1.0,
+          "end": 1.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " leren.",
+          "start": 1.52,
+          "end": 1.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.34,
+      "end": 6.0,
+      "text": " Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 2.34,
+          "end": 2.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gaat",
+          "start": 2.9,
+          "end": 3.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zij",
+          "start": 3.08,
+          "end": 3.24,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " zaterdag",
+          "start": 3.24,
+          "end": 3.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 3.74,
+          "end": 3.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 3.86,
+          "end": 3.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bibliotheek",
+          "start": 3.98,
+          "end": 4.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 4.64,
+          "end": 4.86,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " een",
+          "start": 4.86,
+          "end": 4.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " makkelijk",
+          "start": 4.98,
+          "end": 5.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " boek",
+          "start": 5.34,
+          "end": 5.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 5.58,
+          "end": 5.7,
+          "probability": 1.0
+        },
+        {
+          "word": " lenen.",
+          "start": 5.7,
+          "end": 6.0,
+          "probability": 0.99755859375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.36,
+      "end": 10.48,
+      "text": " Op de deur staat dat de bibliotheek op zaterdag tot 4 uur open is.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 6.36,
+          "end": 6.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 6.8,
+          "end": 6.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur",
+          "start": 6.9,
+          "end": 7.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " staat",
+          "start": 7.18,
+          "end": 7.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 7.46,
+          "end": 7.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 7.66,
+          "end": 7.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bibliotheek",
+          "start": 7.76,
+          "end": 8.4,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 8.4,
+          "end": 8.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zaterdag",
+          "start": 8.56,
+          "end": 9.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tot",
+          "start": 9.1,
+          "end": 9.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 4",
+          "start": 9.28,
+          "end": 9.6,
+          "probability": 0.65576171875
+        },
+        {
+          "word": " uur",
+          "start": 9.6,
+          "end": 9.92,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " open",
+          "start": 9.92,
+          "end": 10.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is.",
+          "start": 10.22,
+          "end": 10.48,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.16,
+      "end": 14.9,
+      "text": " Yara komt om half 4 binnen, maar haar bibliotheekpas ligt thuis.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " Yara",
+          "start": 11.16,
+          "end": 11.5,
+          "probability": 1.0
+        },
+        {
+          "word": " komt",
+          "start": 11.5,
+          "end": 11.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 11.74,
+          "end": 11.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " half",
+          "start": 11.9,
+          "end": 12.18,
+          "probability": 0.98828125
+        },
+        {
+          "word": " 4",
+          "start": 12.18,
+          "end": 12.4,
+          "probability": 0.93798828125
+        },
+        {
+          "word": " binnen,",
+          "start": 12.4,
+          "end": 12.7,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " maar",
+          "start": 12.92,
+          "end": 13.26,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 13.26,
+          "end": 13.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bibliotheekpas",
+          "start": 13.44,
+          "end": 14.28,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ligt",
+          "start": 14.28,
+          "end": 14.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " thuis.",
+          "start": 14.52,
+          "end": 14.9,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.26,
+      "end": 19.02,
+      "text": " De medewerker zegt, zonder pas mag je het boek niet meenemen.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 15.26,
+          "end": 15.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 15.68,
+          "end": 16.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zegt,",
+          "start": 16.14,
+          "end": 16.46,
+          "probability": 1.0
+        },
+        {
+          "word": " zonder",
+          "start": 16.66,
+          "end": 17.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " pas",
+          "start": 17.26,
+          "end": 17.58,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " mag",
+          "start": 17.58,
+          "end": 17.82,
+          "probability": 1.0
+        },
+        {
+          "word": " je",
+          "start": 17.82,
+          "end": 17.92,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 17.92,
+          "end": 18.04,
+          "probability": 1.0
+        },
+        {
+          "word": " boek",
+          "start": 18.04,
+          "end": 18.22,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 18.22,
+          "end": 18.44,
+          "probability": 1.0
+        },
+        {
+          "word": " meenemen.",
+          "start": 18.44,
+          "end": 19.02,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 19.52,
+      "end": 22.38,
+      "text": " Yara mag het boek vandaag wel in de bibliotheek lezen.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " Yara",
+          "start": 19.52,
+          "end": 20.08,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 20.08,
+          "end": 20.26,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 20.26,
+          "end": 20.38,
+          "probability": 1.0
+        },
+        {
+          "word": " boek",
+          "start": 20.38,
+          "end": 20.56,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 20.56,
+          "end": 20.8,
+          "probability": 1.0
+        },
+        {
+          "word": " wel",
+          "start": 20.8,
+          "end": 21.16,
+          "probability": 0.978515625
+        },
+        {
+          "word": " in",
+          "start": 21.16,
+          "end": 21.36,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.36,
+          "end": 21.44,
+          "probability": 1.0
+        },
+        {
+          "word": " bibliotheek",
+          "start": 21.44,
+          "end": 22.02,
+          "probability": 1.0
+        },
+        {
+          "word": " lezen.",
+          "start": 22.02,
+          "end": 22.38,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 22.66,
+      "end": 25.12,
+      "text": " Zij besluit maandag met haar pas terug te komen.",
+      "temperature": 0,
+      "avg_logprob": -0.04793777256986521,
+      "compression_ratio": 1.702928870292887,
+      "no_speech_prob": 7.159742416995574e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 22.66,
+          "end": 23.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " besluit",
+          "start": 23.06,
+          "end": 23.4,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 23.4,
+          "end": 23.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 23.92,
+          "end": 24.08,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 24.08,
+          "end": 24.2,
+          "probability": 1.0
+        },
+        {
+          "word": " pas",
+          "start": 24.2,
+          "end": 24.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " terug",
+          "start": 24.46,
+          "end": 24.68,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 24.68,
+          "end": 24.82,
+          "probability": 1.0
+        },
+        {
+          "word": " komen.",
+          "start": 24.82,
+          "end": 25.12,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

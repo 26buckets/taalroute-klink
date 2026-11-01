@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-015",
+  "sha256": "de2db8d93854d29aa16e588766be336ba5119bc77471cb93512634dc817454da",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn arm doet veel pijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Mijn arm doet veel pijn.",
+      "temperature": 0,
+      "avg_logprob": -0.16061323339288885,
+      "compression_ratio": 0.7741935483870968,
+      "no_speech_prob": 4.977531407879265e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.93994140625
+        },
+        {
+          "word": " arm",
+          "start": 0.24,
+          "end": 0.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " doet",
+          "start": 0.44,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " veel",
+          "start": 0.62,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " pijn.",
+          "start": 0.86,
+          "end": 1.14,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

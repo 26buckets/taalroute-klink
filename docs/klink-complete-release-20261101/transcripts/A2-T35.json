@@ -1,0 +1,582 @@
+{
+  "id": "A2-T35",
+  "sha256": "fd464b2cf67e33429e5c72b4936f2e270c1eaeadaff4214ec77f7bf3ed154497",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op maandag wil een medewerker een verslag voor een vergadering afdrukken. De printer op zijn afdeling geeft een foutmelding en stopt. De vergadering is dinsdag om 10 uur. Daarom vraagt hij een collega of hij de printer op een andere verdieping mag gebruiken. Dat kan vanaf 3 uur. Hij drukt het verslag maandagmiddag af en legt het bij de vergaderstukken. De technische dienst komt woensdag kijken naar de kapotte printer. Tot die tijd gebruiken medewerkers de andere printer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.4,
+      "text": " Op maandag wil een medewerker een verslag voor een vergadering afdrukken.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " maandag",
+          "start": 0.14,
+          "end": 0.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 0.5,
+          "end": 0.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.66,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 0.8,
+          "end": 1.38,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 1.38,
+          "end": 1.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " verslag",
+          "start": 1.54,
+          "end": 1.94,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 1.94,
+          "end": 2.1,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " een",
+          "start": 2.1,
+          "end": 2.22,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " vergadering",
+          "start": 2.22,
+          "end": 2.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " afdrukken.",
+          "start": 2.84,
+          "end": 3.4,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.5,
+      "end": 6.54,
+      "text": " De printer op zijn afdeling geeft een foutmelding en stopt.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.5,
+          "end": 3.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " printer",
+          "start": 3.64,
+          "end": 3.92,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 3.92,
+          "end": 4.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 4.14,
+          "end": 4.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " afdeling",
+          "start": 4.3,
+          "end": 4.8,
+          "probability": 1.0
+        },
+        {
+          "word": " geeft",
+          "start": 4.8,
+          "end": 5.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 5.1,
+          "end": 5.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " foutmelding",
+          "start": 5.22,
+          "end": 5.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 5.88,
+          "end": 6.08,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " stopt.",
+          "start": 6.08,
+          "end": 6.54,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.62,
+      "end": 8.62,
+      "text": " De vergadering is dinsdag om 10 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.62,
+          "end": 6.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vergadering",
+          "start": 6.78,
+          "end": 7.3,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 7.3,
+          "end": 7.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 7.46,
+          "end": 7.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 7.94,
+          "end": 8.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 10",
+          "start": 8.12,
+          "end": 8.28,
+          "probability": 0.8076171875
+        },
+        {
+          "word": " uur.",
+          "start": 8.28,
+          "end": 8.62,
+          "probability": 0.99365234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.78,
+      "end": 12.84,
+      "text": " Daarom vraagt hij een collega of hij de printer op een andere verdieping mag gebruiken.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 8.78,
+          "end": 9.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 9.06,
+          "end": 9.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 9.36,
+          "end": 9.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 9.48,
+          "end": 9.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega",
+          "start": 9.62,
+          "end": 10.14,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 10.14,
+          "end": 10.44,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " hij",
+          "start": 10.44,
+          "end": 10.58,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.58,
+          "end": 10.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " printer",
+          "start": 10.72,
+          "end": 11.0,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 11.0,
+          "end": 11.24,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 11.24,
+          "end": 11.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 11.36,
+          "end": 11.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verdieping",
+          "start": 11.66,
+          "end": 12.12,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 12.12,
+          "end": 12.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gebruiken.",
+          "start": 12.3,
+          "end": 12.84,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.96,
+      "end": 14.26,
+      "text": " Dat kan vanaf 3 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " Dat",
+          "start": 12.96,
+          "end": 13.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 13.16,
+          "end": 13.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vanaf",
+          "start": 13.34,
+          "end": 13.66,
+          "probability": 1.0
+        },
+        {
+          "word": " 3",
+          "start": 13.66,
+          "end": 13.86,
+          "probability": 0.8212890625
+        },
+        {
+          "word": " uur.",
+          "start": 13.86,
+          "end": 14.26,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.4,
+      "end": 18.04,
+      "text": " Hij drukt het verslag maandagmiddag af en legt het bij de vergaderstukken.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 14.4,
+          "end": 14.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " drukt",
+          "start": 14.6,
+          "end": 14.84,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " het",
+          "start": 14.84,
+          "end": 14.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verslag",
+          "start": 14.98,
+          "end": 15.38,
+          "probability": 1.0
+        },
+        {
+          "word": " maandagmiddag",
+          "start": 15.38,
+          "end": 16.12,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " af",
+          "start": 16.12,
+          "end": 16.36,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 16.36,
+          "end": 16.64,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " legt",
+          "start": 16.64,
+          "end": 16.9,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 16.9,
+          "end": 16.98,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 16.98,
+          "end": 17.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.1,
+          "end": 17.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vergaderstukken.",
+          "start": 17.22,
+          "end": 18.04,
+          "probability": 0.99462890625
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.18,
+      "end": 21.14,
+      "text": " De technische dienst komt woensdag kijken naar de kapotte printer.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.18,
+          "end": 18.36,
+          "probability": 1.0
+        },
+        {
+          "word": " technische",
+          "start": 18.36,
+          "end": 18.8,
+          "probability": 0.97509765625
+        },
+        {
+          "word": " dienst",
+          "start": 18.8,
+          "end": 19.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 19.12,
+          "end": 19.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 19.34,
+          "end": 19.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kijken",
+          "start": 19.8,
+          "end": 20.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naar",
+          "start": 20.06,
+          "end": 20.26,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.26,
+          "end": 20.38,
+          "probability": 1.0
+        },
+        {
+          "word": " kapotte",
+          "start": 20.38,
+          "end": 20.76,
+          "probability": 0.9921875
+        },
+        {
+          "word": " printer.",
+          "start": 20.76,
+          "end": 21.14,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 21.44,
+      "end": 23.92,
+      "text": " Tot die tijd gebruiken medewerkers de andere printer.",
+      "temperature": 0,
+      "avg_logprob": -0.051808613997239336,
+      "compression_ratio": 1.8627450980392157,
+      "no_speech_prob": 7.760881347296245e-12,
+      "words": [
+        {
+          "word": " Tot",
+          "start": 21.44,
+          "end": 21.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 21.62,
+          "end": 21.78,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd",
+          "start": 21.78,
+          "end": 22.0,
+          "probability": 1.0
+        },
+        {
+          "word": " gebruiken",
+          "start": 22.0,
+          "end": 22.44,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerkers",
+          "start": 22.44,
+          "end": 23.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 23.12,
+          "end": 23.24,
+          "probability": 1.0
+        },
+        {
+          "word": " andere",
+          "start": 23.24,
+          "end": 23.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " printer.",
+          "start": 23.52,
+          "end": 23.92,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

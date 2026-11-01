@@ -1,0 +1,631 @@
+{
+  "id": "A2-T79",
+  "sha256": "3391ef226f0f2101efea954855a3bdc3f6a3139b8de3d3d91f6dd6722e780936",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " E-mail aan de medewerkers van een bakkerij. Vanaf volgende week begint de ochtenddienst een half uur eerder. De winkel gaat nog steeds om acht uur open. Wie normaal om zeven uur begint, moet nu om half zeven aanwezig zijn. De middagdienst verandert niet. De leidinggevende vraagt iedereen voor vrijdag te laten weten of het nieuwe rooster is gelezen. Een medewerker laat donderdag weten dat hij het bericht heeft ontvangen, maar vraagt ook wanneer zijn pauze begint. Daarover heeft hij nog geen antwoord gekregen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.08,
+      "text": " E-mail aan de medewerkers van een bakkerij.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " E",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.7001953125
+        },
+        {
+          "word": "-mail",
+          "start": 0.14,
+          "end": 0.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " aan",
+          "start": 0.36,
+          "end": 0.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 0.62,
+          "end": 0.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerkers",
+          "start": 0.72,
+          "end": 1.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " van",
+          "start": 1.32,
+          "end": 1.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 1.46,
+          "end": 1.58,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bakkerij.",
+          "start": 1.58,
+          "end": 2.08,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.24,
+      "end": 5.42,
+      "text": " Vanaf volgende week begint de ochtenddienst een half uur eerder.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " Vanaf",
+          "start": 2.24,
+          "end": 2.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 2.72,
+          "end": 3.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " week",
+          "start": 3.14,
+          "end": 3.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begint",
+          "start": 3.36,
+          "end": 3.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 3.72,
+          "end": 3.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ochtenddienst",
+          "start": 3.82,
+          "end": 4.42,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 4.42,
+          "end": 4.6,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " half",
+          "start": 4.6,
+          "end": 4.84,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " uur",
+          "start": 4.84,
+          "end": 5.1,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " eerder.",
+          "start": 5.1,
+          "end": 5.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.6,
+      "end": 7.8,
+      "text": " De winkel gaat nog steeds om acht uur open.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.6,
+          "end": 5.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " winkel",
+          "start": 5.86,
+          "end": 6.18,
+          "probability": 1.0
+        },
+        {
+          "word": " gaat",
+          "start": 6.18,
+          "end": 6.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 6.42,
+          "end": 6.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " steeds",
+          "start": 6.56,
+          "end": 6.84,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 6.84,
+          "end": 7.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " acht",
+          "start": 7.06,
+          "end": 7.28,
+          "probability": 0.62109375
+        },
+        {
+          "word": " uur",
+          "start": 7.28,
+          "end": 7.5,
+          "probability": 1.0
+        },
+        {
+          "word": " open.",
+          "start": 7.5,
+          "end": 7.8,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.08,
+      "end": 11.82,
+      "text": " Wie normaal om zeven uur begint, moet nu om half zeven aanwezig zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 8.08,
+          "end": 8.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " normaal",
+          "start": 8.28,
+          "end": 8.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 8.7,
+          "end": 8.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zeven",
+          "start": 8.88,
+          "end": 9.2,
+          "probability": 0.96923828125
+        },
+        {
+          "word": " uur",
+          "start": 9.2,
+          "end": 9.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint,",
+          "start": 9.38,
+          "end": 9.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 9.86,
+          "end": 10.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nu",
+          "start": 10.12,
+          "end": 10.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 10.32,
+          "end": 10.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " half",
+          "start": 10.58,
+          "end": 10.82,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zeven",
+          "start": 10.82,
+          "end": 11.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " aanwezig",
+          "start": 11.14,
+          "end": 11.62,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn.",
+          "start": 11.62,
+          "end": 11.82,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.06,
+      "end": 13.5,
+      "text": " De middagdienst verandert niet.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.06,
+          "end": 12.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " middagdienst",
+          "start": 12.28,
+          "end": 12.86,
+          "probability": 0.986328125
+        },
+        {
+          "word": " verandert",
+          "start": 12.86,
+          "end": 13.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet.",
+          "start": 13.32,
+          "end": 13.5,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 13.74,
+      "end": 18.74,
+      "text": " De leidinggevende vraagt iedereen voor vrijdag te laten weten of het nieuwe rooster is gelezen.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 13.74,
+          "end": 13.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leidinggevende",
+          "start": 13.96,
+          "end": 14.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vraagt",
+          "start": 14.7,
+          "end": 15.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iedereen",
+          "start": 15.04,
+          "end": 15.48,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 15.48,
+          "end": 15.82,
+          "probability": 0.921875
+        },
+        {
+          "word": " vrijdag",
+          "start": 15.82,
+          "end": 16.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 16.32,
+          "end": 16.46,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " laten",
+          "start": 16.46,
+          "end": 16.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weten",
+          "start": 16.64,
+          "end": 17.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " of",
+          "start": 17.02,
+          "end": 17.36,
+          "probability": 0.98095703125
+        },
+        {
+          "word": " het",
+          "start": 17.36,
+          "end": 17.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuwe",
+          "start": 17.52,
+          "end": 17.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rooster",
+          "start": 17.74,
+          "end": 18.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 18.1,
+          "end": 18.3,
+          "probability": 1.0
+        },
+        {
+          "word": " gelezen.",
+          "start": 18.3,
+          "end": 18.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.96,
+      "end": 22.24,
+      "text": " Een medewerker laat donderdag weten dat hij het bericht heeft ontvangen,",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " Een",
+          "start": 18.96,
+          "end": 19.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 19.14,
+          "end": 19.72,
+          "probability": 1.0
+        },
+        {
+          "word": " laat",
+          "start": 19.72,
+          "end": 19.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " donderdag",
+          "start": 19.94,
+          "end": 20.42,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " weten",
+          "start": 20.42,
+          "end": 20.74,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 20.74,
+          "end": 20.94,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 20.94,
+          "end": 21.1,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 21.1,
+          "end": 21.26,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht",
+          "start": 21.26,
+          "end": 21.6,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 21.6,
+          "end": 21.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangen,",
+          "start": 21.76,
+          "end": 22.24,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 22.38,
+      "end": 24.36,
+      "text": " maar vraagt ook wanneer zijn pauze begint.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " maar",
+          "start": 22.38,
+          "end": 22.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vraagt",
+          "start": 22.56,
+          "end": 22.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ook",
+          "start": 22.88,
+          "end": 23.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wanneer",
+          "start": 23.1,
+          "end": 23.44,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 23.44,
+          "end": 23.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pauze",
+          "start": 23.62,
+          "end": 23.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begint.",
+          "start": 23.96,
+          "end": 24.36,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 24.74,
+      "end": 26.82,
+      "text": " Daarover heeft hij nog geen antwoord gekregen.",
+      "temperature": 0,
+      "avg_logprob": -0.05979964013635759,
+      "compression_ratio": 1.721476510067114,
+      "no_speech_prob": 1.0159981363166981e-11,
+      "words": [
+        {
+          "word": " Daarover",
+          "start": 24.74,
+          "end": 25.1,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " heeft",
+          "start": 25.1,
+          "end": 25.34,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 25.34,
+          "end": 25.46,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 25.46,
+          "end": 25.6,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 25.6,
+          "end": 25.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " antwoord",
+          "start": 25.86,
+          "end": 26.3,
+          "probability": 1.0
+        },
+        {
+          "word": " gekregen.",
+          "start": 26.3,
+          "end": 26.82,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

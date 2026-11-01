@@ -1,0 +1,35 @@
+{
+  "id": "ZDZ-AB-034",
+  "sha256": "2cb67f0461de67349951116973db44a36f9a02e55ee6028ccd2ac057be71f071",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hoe laat?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.52,
+      "text": " Hoe laat?",
+      "temperature": 0,
+      "avg_logprob": -0.1957852840423584,
+      "compression_ratio": 0.5294117647058824,
+      "no_speech_prob": 7.068677240762433e-12,
+      "words": [
+        {
+          "word": " Hoe",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.935546875
+        },
+        {
+          "word": " laat?",
+          "start": 0.14,
+          "end": 0.52,
+          "probability": 0.98486328125
+        }
+      ]
+    }
+  ]
+}

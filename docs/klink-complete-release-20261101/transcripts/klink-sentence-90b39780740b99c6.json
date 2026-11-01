@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-90b39780740b99c6",
+  "sha256": "d5d73359a0623c4dd85a23e71740800e73a501d55026ce27fedef9ddd0dbbd65",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vertel waar ik jeuk heb.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " Ik vertel waar ik jeuk heb.",
+      "temperature": 0,
+      "avg_logprob": -0.06188499927520752,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.1248779565628e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.935546875
+        },
+        {
+          "word": " vertel",
+          "start": 0.14,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " waar",
+          "start": 0.62,
+          "end": 0.84,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " ik",
+          "start": 0.84,
+          "end": 1.0,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " jeuk",
+          "start": 1.0,
+          "end": 1.34,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " heb.",
+          "start": 1.34,
+          "end": 1.54,
+          "probability": 0.99658203125
+        }
+      ]
+    }
+  ]
+}

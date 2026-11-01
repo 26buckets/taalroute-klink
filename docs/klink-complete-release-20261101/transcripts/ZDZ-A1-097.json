@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-A1-097",
+  "sha256": "2740deec1d2327b474f35ddfa75aece782e96a8b87c8aff9a773b15159b9d8ba",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil het opnieuw proberen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Ik wil het opnieuw proberen.",
+      "temperature": 0,
+      "avg_logprob": -0.07779191090510441,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.3136789753113183e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.958984375
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " opnieuw",
+          "start": 0.36,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " proberen.",
+          "start": 0.62,
+          "end": 1.04,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

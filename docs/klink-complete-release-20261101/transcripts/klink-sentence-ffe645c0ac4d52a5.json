@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-ffe645c0ac4d52a5",
+  "sha256": "2f5ac0243d8f8265b4d2b62f8c2b6ea2806de13bd7a89be726ae73965433edf0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik draai de dop van de fles.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.42,
+      "text": " Ik draai de dop van de fles.",
+      "temperature": 0,
+      "avg_logprob": -0.08348795083852914,
+      "compression_ratio": 0.8484848484848485,
+      "no_speech_prob": 4.0195429450162745e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " draai",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.58,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " dop",
+          "start": 0.58,
+          "end": 0.82,
+          "probability": 0.9775390625
+        },
+        {
+          "word": " van",
+          "start": 0.82,
+          "end": 0.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " fles.",
+          "start": 1.1,
+          "end": 1.42,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

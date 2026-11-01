@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-058",
+  "sha256": "3c5315f48b674054823c24c2ee00ce822369d20598c1a35938e49e531b0adb85",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben blij met mijn nieuwe kamer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Ik ben blij met mijn nieuwe kamer.",
+      "temperature": 0,
+      "avg_logprob": -0.08270895481109619,
+      "compression_ratio": 0.8095238095238095,
+      "no_speech_prob": 4.145184195891716e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.939453125
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blij",
+          "start": 0.24,
+          "end": 0.42,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 0.42,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.6,
+          "end": 0.7,
+          "probability": 0.99609375
+        },
+        {
+          "word": " nieuwe",
+          "start": 0.7,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kamer.",
+          "start": 0.88,
+          "end": 1.32,
+          "probability": 0.98046875
+        }
+      ]
+    }
+  ]
+}

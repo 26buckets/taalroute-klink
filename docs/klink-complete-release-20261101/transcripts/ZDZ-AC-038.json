@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-038",
+  "sha256": "3dbb8c96ebf76d9689298f91a1f350786275cc4110e9f709796acaf9c7477e73",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb niet genoeg geld.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Ik heb niet genoeg geld.",
+      "temperature": 0,
+      "avg_logprob": -0.09446230801669034,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.616596167850151e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8642578125
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " genoeg",
+          "start": 0.38,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geld.",
+          "start": 0.66,
+          "end": 0.94,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-201a426768c66e53",
+  "sha256": "cee105219ce24b6172383c350bd085d7678fe13bafd2f1c8f2d28dd81f22bb21",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De slager staat achter de toonbank.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": " De slager staat achter de toonbank.",
+      "temperature": 0,
+      "avg_logprob": -0.10202800310575046,
+      "compression_ratio": 0.8536585365853658,
+      "no_speech_prob": 3.902816871764747e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.97216796875
+        },
+        {
+          "word": " slager",
+          "start": 0.18,
+          "end": 0.6,
+          "probability": 0.96826171875
+        },
+        {
+          "word": " staat",
+          "start": 0.6,
+          "end": 0.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " achter",
+          "start": 0.94,
+          "end": 1.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.32,
+          "end": 1.5,
+          "probability": 0.61328125
+        },
+        {
+          "word": " toonbank.",
+          "start": 1.5,
+          "end": 2.0,
+          "probability": 0.990234375
+        }
+      ]
+    }
+  ]
+}

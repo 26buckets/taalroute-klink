@@ -1,0 +1,258 @@
+{
+  "id": "A1-T96",
+  "sha256": "703a106cdd250076279a4cc6bfd477a497b939f2cc63db65684105077e13d07a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de bus zit een man, zijn telefoon gaat. Hij kan niet goed horen wat zijn collega zegt. Bij de volgende halte stapt hij uit. Dan belt hij zijn collega terug. De collega wacht op zijn antwoord.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.54,
+      "text": " In de bus zit een man, zijn telefoon gaat. Hij kan niet goed horen wat zijn collega zegt.",
+      "temperature": 0,
+      "avg_logprob": -0.06422855854034423,
+      "compression_ratio": 1.4477611940298507,
+      "no_speech_prob": 6.518172286640311e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " de",
+          "start": 0.12,
+          "end": 0.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 0.2,
+          "end": 0.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zit",
+          "start": 0.38,
+          "end": 0.58,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 0.58,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man,",
+          "start": 0.72,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 1.22,
+          "end": 1.36,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " telefoon",
+          "start": 1.36,
+          "end": 1.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gaat.",
+          "start": 1.9,
+          "end": 2.18,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " Hij",
+          "start": 2.36,
+          "end": 2.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kan",
+          "start": 2.54,
+          "end": 2.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 2.72,
+          "end": 2.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goed",
+          "start": 2.92,
+          "end": 3.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " horen",
+          "start": 3.1,
+          "end": 3.38,
+          "probability": 1.0
+        },
+        {
+          "word": " wat",
+          "start": 3.38,
+          "end": 3.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 3.52,
+          "end": 3.72,
+          "probability": 0.998046875
+        },
+        {
+          "word": " collega",
+          "start": 3.72,
+          "end": 4.14,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt.",
+          "start": 4.14,
+          "end": 4.54,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.72,
+      "end": 9.78,
+      "text": " Bij de volgende halte stapt hij uit. Dan belt hij zijn collega terug. De collega wacht op zijn antwoord.",
+      "temperature": 0,
+      "avg_logprob": -0.06422855854034423,
+      "compression_ratio": 1.4477611940298507,
+      "no_speech_prob": 6.518172286640311e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 4.72,
+          "end": 4.82,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 4.82,
+          "end": 4.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 4.94,
+          "end": 5.34,
+          "probability": 1.0
+        },
+        {
+          "word": " halte",
+          "start": 5.34,
+          "end": 5.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " stapt",
+          "start": 5.68,
+          "end": 5.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 5.96,
+          "end": 6.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uit.",
+          "start": 6.1,
+          "end": 6.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Dan",
+          "start": 6.6,
+          "end": 6.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " belt",
+          "start": 6.72,
+          "end": 6.94,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " hij",
+          "start": 6.94,
+          "end": 7.08,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 7.08,
+          "end": 7.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega",
+          "start": 7.26,
+          "end": 7.68,
+          "probability": 1.0
+        },
+        {
+          "word": " terug.",
+          "start": 7.68,
+          "end": 7.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 8.2,
+          "end": 8.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega",
+          "start": 8.3,
+          "end": 8.7,
+          "probability": 1.0
+        },
+        {
+          "word": " wacht",
+          "start": 8.7,
+          "end": 8.96,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 8.96,
+          "end": 9.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 9.1,
+          "end": 9.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " antwoord.",
+          "start": 9.26,
+          "end": 9.78,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

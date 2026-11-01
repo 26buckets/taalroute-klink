@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-041",
+  "sha256": "ab955b09697c4caf0970dca9b4c96ab2093784e6ce0613637bfb672d702f6218",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wil je morgen met mij naar de bibliotheek gaan?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " Wil je morgen met mij naar de bibliotheek gaan?",
+      "temperature": 0,
+      "avg_logprob": -0.09263734817504883,
+      "compression_ratio": 0.8867924528301887,
+      "no_speech_prob": 4.372073449804281e-12,
+      "words": [
+        {
+          "word": " Wil",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " je",
+          "start": 0.18,
+          "end": 0.28,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " morgen",
+          "start": 0.28,
+          "end": 0.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 0.5,
+          "end": 0.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " mij",
+          "start": 0.68,
+          "end": 0.82,
+          "probability": 0.99609375
+        },
+        {
+          "word": " naar",
+          "start": 0.82,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.94,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bibliotheek",
+          "start": 1.04,
+          "end": 1.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaan?",
+          "start": 1.6,
+          "end": 1.78,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

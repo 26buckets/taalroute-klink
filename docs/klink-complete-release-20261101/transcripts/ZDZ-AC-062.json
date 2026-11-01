@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-062",
+  "sha256": "e0c86d798bf74d8eea7d35f7a3afb1cf548c9d01c1b039ea8781214505de98d7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u dat wat langzamer zeggen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Kunt u dat wat langzamer zeggen?",
+      "temperature": 0,
+      "avg_logprob": -0.05015431917630709,
+      "compression_ratio": 0.8421052631578947,
+      "no_speech_prob": 4.4392237281976055e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.96630859375
+        },
+        {
+          "word": " u",
+          "start": 0.2,
+          "end": 0.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " dat",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wat",
+          "start": 0.36,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " langzamer",
+          "start": 0.52,
+          "end": 0.96,
+          "probability": 1.0
+        },
+        {
+          "word": " zeggen?",
+          "start": 0.96,
+          "end": 1.2,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

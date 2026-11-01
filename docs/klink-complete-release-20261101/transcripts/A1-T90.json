@@ -1,0 +1,308 @@
+{
+  "id": "A1-T90",
+  "sha256": "c52c1592046659cd617716fb1e9b6a3463e678b0d4256b9e9eaf9cd90fe71687",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hallo buren, vrijdag komt er een auto met een grote kast naar ons huis. De auto komt om 10 uur. Wilt u uw fiets voor 9 uur binnenzetten? Dan heeft de auto ruimte. Zaterdag zetten wij de kast in de kamer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.3,
+      "text": " Hallo buren, vrijdag komt er een auto met een grote kast naar ons huis.",
+      "temperature": 0,
+      "avg_logprob": -0.09345714139266753,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 9.405295119113699e-12,
+      "words": [
+        {
+          "word": " Hallo",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " buren,",
+          "start": 0.22,
+          "end": 0.56,
+          "probability": 0.8193359375
+        },
+        {
+          "word": " vrijdag",
+          "start": 0.8,
+          "end": 1.12,
+          "probability": 0.994140625
+        },
+        {
+          "word": " komt",
+          "start": 1.12,
+          "end": 1.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " er",
+          "start": 1.32,
+          "end": 1.44,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " een",
+          "start": 1.44,
+          "end": 1.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " auto",
+          "start": 1.56,
+          "end": 1.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 1.84,
+          "end": 2.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 2.0,
+          "end": 2.14,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " grote",
+          "start": 2.14,
+          "end": 2.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kast",
+          "start": 2.44,
+          "end": 2.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 2.76,
+          "end": 2.86,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ons",
+          "start": 2.86,
+          "end": 3.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " huis.",
+          "start": 3.04,
+          "end": 3.3,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.52,
+      "end": 4.8,
+      "text": " De auto komt om 10 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.09345714139266753,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 9.405295119113699e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.52,
+          "end": 3.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " auto",
+          "start": 3.66,
+          "end": 3.92,
+          "probability": 1.0
+        },
+        {
+          "word": " komt",
+          "start": 3.92,
+          "end": 4.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 4.16,
+          "end": 4.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 10",
+          "start": 4.32,
+          "end": 4.46,
+          "probability": 0.7919921875
+        },
+        {
+          "word": " uur.",
+          "start": 4.46,
+          "end": 4.8,
+          "probability": 0.9853515625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.98,
+      "end": 8.38,
+      "text": " Wilt u uw fiets voor 9 uur binnenzetten? Dan heeft de auto ruimte.",
+      "temperature": 0,
+      "avg_logprob": -0.09345714139266753,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 9.405295119113699e-12,
+      "words": [
+        {
+          "word": " Wilt",
+          "start": 4.98,
+          "end": 5.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " u",
+          "start": 5.18,
+          "end": 5.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uw",
+          "start": 5.28,
+          "end": 5.44,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " fiets",
+          "start": 5.44,
+          "end": 5.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 5.66,
+          "end": 5.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 9",
+          "start": 5.86,
+          "end": 6.14,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " uur",
+          "start": 6.14,
+          "end": 6.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " binnenzetten?",
+          "start": 6.44,
+          "end": 6.98,
+          "probability": 0.8349609375
+        },
+        {
+          "word": " Dan",
+          "start": 7.14,
+          "end": 7.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " heeft",
+          "start": 7.34,
+          "end": 7.54,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.54,
+          "end": 7.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " auto",
+          "start": 7.66,
+          "end": 7.9,
+          "probability": 0.9521484375
+        },
+        {
+          "word": " ruimte.",
+          "start": 7.9,
+          "end": 8.38,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.72,
+      "end": 10.48,
+      "text": " Zaterdag zetten wij de kast in de kamer.",
+      "temperature": 0,
+      "avg_logprob": -0.09345714139266753,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 9.405295119113699e-12,
+      "words": [
+        {
+          "word": " Zaterdag",
+          "start": 8.72,
+          "end": 9.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zetten",
+          "start": 9.12,
+          "end": 9.38,
+          "probability": 1.0
+        },
+        {
+          "word": " wij",
+          "start": 9.38,
+          "end": 9.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 9.5,
+          "end": 9.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kast",
+          "start": 9.62,
+          "end": 9.86,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 9.86,
+          "end": 9.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.98,
+          "end": 10.06,
+          "probability": 1.0
+        },
+        {
+          "word": " kamer.",
+          "start": 10.06,
+          "end": 10.48,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "klink-sentence-00226a8a7b209afd",
+  "sha256": "195e0da742d03ff5ede68f0f82be291fc98198cd4598058b8bf6e6b14a2c4944",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik drink water.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Ik drink water.",
+      "temperature": 0,
+      "avg_logprob": -0.223644529070173,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 4.330708968519614e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.90478515625
+        },
+        {
+          "word": " drink",
+          "start": 0.22,
+          "end": 0.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " water.",
+          "start": 0.5,
+          "end": 0.9,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

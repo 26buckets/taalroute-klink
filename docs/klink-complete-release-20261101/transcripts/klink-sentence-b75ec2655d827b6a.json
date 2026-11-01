@@ -1,0 +1,77 @@
+{
+  "id": "klink-sentence-b75ec2655d827b6a",
+  "sha256": "c7b1f931c2a135e36e744ada3768ae0765b5482d8a683fe5f6000b925eecf0bd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Waar zit je tong als je die klank zegt?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.06,
+      "text": " Waar zit je tong als je die klank zegt?",
+      "temperature": 0,
+      "avg_logprob": -0.11036043167114258,
+      "compression_ratio": 0.8863636363636364,
+      "no_speech_prob": 4.6103563675070625e-12,
+      "words": [
+        {
+          "word": " Waar",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9267578125
+        },
+        {
+          "word": " zit",
+          "start": 0.26,
+          "end": 0.48,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " je",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " tong",
+          "start": 0.6,
+          "end": 0.92,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " als",
+          "start": 0.92,
+          "end": 1.24,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " je",
+          "start": 1.24,
+          "end": 1.34,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " die",
+          "start": 1.34,
+          "end": 1.44,
+          "probability": 0.98291015625
+        },
+        {
+          "word": " klank",
+          "start": 1.44,
+          "end": 1.74,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " zegt?",
+          "start": 1.74,
+          "end": 2.06,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

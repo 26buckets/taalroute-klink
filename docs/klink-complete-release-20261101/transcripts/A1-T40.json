@@ -1,0 +1,315 @@
+{
+  "id": "A1-T40",
+  "sha256": "1be1dbdac0d2c3212d3dbc9eae2812c3678eda11cba2e29c8f058eadd6ab5776",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een ouder maakt de lunch voor een kind klaar. De ouder doet een appel en een boterham in de tas. Het kind wil ook water. De ouder geeft een fles water mee. Om acht uur gaat het kind naar school.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.26,
+      "text": " Een ouder maakt de lunch voor een kind klaar.",
+      "temperature": 0,
+      "avg_logprob": -0.10320848407167377,
+      "compression_ratio": 1.4809160305343512,
+      "no_speech_prob": 5.774776924011293e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " ouder",
+          "start": 0.18,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maakt",
+          "start": 0.56,
+          "end": 0.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.84,
+          "end": 0.94,
+          "probability": 0.998046875
+        },
+        {
+          "word": " lunch",
+          "start": 0.94,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 1.22,
+          "end": 1.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.44,
+          "end": 1.56,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " kind",
+          "start": 1.56,
+          "end": 1.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klaar.",
+          "start": 1.8,
+          "end": 2.26,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.4,
+      "end": 5.0,
+      "text": " De ouder doet een appel en een boterham in de tas.",
+      "temperature": 0,
+      "avg_logprob": -0.10320848407167377,
+      "compression_ratio": 1.4809160305343512,
+      "no_speech_prob": 5.774776924011293e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 2.4,
+          "end": 2.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ouder",
+          "start": 2.64,
+          "end": 2.98,
+          "probability": 1.0
+        },
+        {
+          "word": " doet",
+          "start": 2.98,
+          "end": 3.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 3.14,
+          "end": 3.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " appel",
+          "start": 3.28,
+          "end": 3.64,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " en",
+          "start": 3.64,
+          "end": 3.86,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " een",
+          "start": 3.86,
+          "end": 3.98,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " boterham",
+          "start": 3.98,
+          "end": 4.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 4.48,
+          "end": 4.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 4.6,
+          "end": 4.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tas.",
+          "start": 4.72,
+          "end": 5.0,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.24,
+      "end": 6.62,
+      "text": " Het kind wil ook water.",
+      "temperature": 0,
+      "avg_logprob": -0.10320848407167377,
+      "compression_ratio": 1.4809160305343512,
+      "no_speech_prob": 5.774776924011293e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 5.24,
+          "end": 5.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kind",
+          "start": 5.52,
+          "end": 5.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 5.74,
+          "end": 6.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ook",
+          "start": 6.0,
+          "end": 6.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water.",
+          "start": 6.24,
+          "end": 6.62,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 6.88,
+      "end": 8.68,
+      "text": " De ouder geeft een fles water mee.",
+      "temperature": 0,
+      "avg_logprob": -0.10320848407167377,
+      "compression_ratio": 1.4809160305343512,
+      "no_speech_prob": 5.774776924011293e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.88,
+          "end": 7.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ouder",
+          "start": 7.1,
+          "end": 7.42,
+          "probability": 1.0
+        },
+        {
+          "word": " geeft",
+          "start": 7.42,
+          "end": 7.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 7.7,
+          "end": 7.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fles",
+          "start": 7.84,
+          "end": 8.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water",
+          "start": 8.12,
+          "end": 8.46,
+          "probability": 0.994140625
+        },
+        {
+          "word": " mee.",
+          "start": 8.46,
+          "end": 8.68,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 8.9,
+      "end": 10.78,
+      "text": " Om acht uur gaat het kind naar school.",
+      "temperature": 0,
+      "avg_logprob": -0.10320848407167377,
+      "compression_ratio": 1.4809160305343512,
+      "no_speech_prob": 5.774776924011293e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 8.9,
+          "end": 9.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " acht",
+          "start": 9.2,
+          "end": 9.46,
+          "probability": 0.486572265625
+        },
+        {
+          "word": " uur",
+          "start": 9.46,
+          "end": 9.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaat",
+          "start": 9.72,
+          "end": 9.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 9.9,
+          "end": 10.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kind",
+          "start": 10.06,
+          "end": 10.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 10.28,
+          "end": 10.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school.",
+          "start": 10.46,
+          "end": 10.78,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

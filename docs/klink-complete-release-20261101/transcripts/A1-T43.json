@@ -1,0 +1,283 @@
+{
+  "id": "A1-T43",
+  "sha256": "96ab72b0c5435d3d3df599a29144d55223bd1d94b0bd036b2a55ac803e383bad",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw heeft een zware kast. Zij wil de kast naar een andere kamer brengen. Haar buur helpt haar. Samen zetten ze de kast bij het raam. Daarna drinken ze thee. De vrouw bedankt haar buur voor de hulp.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.84,
+      "text": " Een vrouw heeft een zware kast. Zij wil de kast naar een andere kamer brengen.",
+      "temperature": 0,
+      "avg_logprob": -0.0410984942787572,
+      "compression_ratio": 1.4710144927536233,
+      "no_speech_prob": 5.2345957429755785e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97509765625
+        },
+        {
+          "word": " vrouw",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 0.48,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.66,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zware",
+          "start": 0.78,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kast.",
+          "start": 1.12,
+          "end": 1.52,
+          "probability": 1.0
+        },
+        {
+          "word": " Zij",
+          "start": 1.84,
+          "end": 2.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wil",
+          "start": 2.28,
+          "end": 2.4,
+          "probability": 0.97265625
+        },
+        {
+          "word": " de",
+          "start": 2.4,
+          "end": 2.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kast",
+          "start": 2.5,
+          "end": 2.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naar",
+          "start": 2.68,
+          "end": 2.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 2.8,
+          "end": 2.92,
+          "probability": 1.0
+        },
+        {
+          "word": " andere",
+          "start": 2.92,
+          "end": 3.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kamer",
+          "start": 3.14,
+          "end": 3.5,
+          "probability": 1.0
+        },
+        {
+          "word": " brengen.",
+          "start": 3.5,
+          "end": 3.84,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.14,
+      "end": 7.32,
+      "text": " Haar buur helpt haar. Samen zetten ze de kast bij het raam.",
+      "temperature": 0,
+      "avg_logprob": -0.0410984942787572,
+      "compression_ratio": 1.4710144927536233,
+      "no_speech_prob": 5.2345957429755785e-12,
+      "words": [
+        {
+          "word": " Haar",
+          "start": 4.14,
+          "end": 4.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " buur",
+          "start": 4.58,
+          "end": 4.76,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " helpt",
+          "start": 4.76,
+          "end": 5.02,
+          "probability": 1.0
+        },
+        {
+          "word": " haar.",
+          "start": 5.02,
+          "end": 5.2,
+          "probability": 1.0
+        },
+        {
+          "word": " Samen",
+          "start": 5.78,
+          "end": 6.16,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zetten",
+          "start": 6.16,
+          "end": 6.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 6.34,
+          "end": 6.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 6.46,
+          "end": 6.56,
+          "probability": 1.0
+        },
+        {
+          "word": " kast",
+          "start": 6.56,
+          "end": 6.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 6.76,
+          "end": 6.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.88,
+          "end": 7.02,
+          "probability": 1.0
+        },
+        {
+          "word": " raam.",
+          "start": 7.02,
+          "end": 7.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.94,
+      "end": 11.12,
+      "text": " Daarna drinken ze thee. De vrouw bedankt haar buur voor de hulp.",
+      "temperature": 0,
+      "avg_logprob": -0.0410984942787572,
+      "compression_ratio": 1.4710144927536233,
+      "no_speech_prob": 5.2345957429755785e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 7.94,
+          "end": 8.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " drinken",
+          "start": 8.24,
+          "end": 8.6,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 8.6,
+          "end": 8.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " thee.",
+          "start": 8.68,
+          "end": 8.9,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " De",
+          "start": 9.26,
+          "end": 9.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 9.68,
+          "end": 10.0,
+          "probability": 1.0
+        },
+        {
+          "word": " bedankt",
+          "start": 10.0,
+          "end": 10.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 10.3,
+          "end": 10.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buur",
+          "start": 10.4,
+          "end": 10.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 10.66,
+          "end": 10.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.78,
+          "end": 10.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hulp.",
+          "start": 10.88,
+          "end": 11.12,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

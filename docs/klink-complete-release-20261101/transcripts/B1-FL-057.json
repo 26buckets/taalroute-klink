@@ -1,0 +1,617 @@
+{
+  "id": "B1-FL-057",
+  "sha256": "ef09f670a4cae0bef06415bf54522c7bd56309934ddbcf4c97f47259425ad421",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Tijdens een cursus vertelt een gastspreker over werken in de zorg. Nora verwacht vooral informatie over opleidingen, maar de spreker geeft veel voorbeelden uit de praktijk. Aan het einde mogen deelnemers vragen stellen. Nora vraagt welke vaardigheden je nodig hebt voordat je aan een opleiding begint. De spreker legt uit dat de eisen per opleiding kunnen verschillen en verwijst naar de websites van de scholen. Nora schrijft de links op. Ze is blij met de voorbeelden, maar wil de voorwaarden zelf rustig vergelijken voordat ze kiest.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.06,
+      "text": " Tijdens een cursus vertelt een gastspreker over werken in de zorg.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " Tijdens",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.32,
+          "end": 0.42,
+          "probability": 0.97900390625
+        },
+        {
+          "word": " cursus",
+          "start": 0.42,
+          "end": 0.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertelt",
+          "start": 0.92,
+          "end": 1.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.28,
+          "end": 1.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gastspreker",
+          "start": 1.4,
+          "end": 2.08,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " over",
+          "start": 2.08,
+          "end": 2.26,
+          "probability": 0.99609375
+        },
+        {
+          "word": " werken",
+          "start": 2.26,
+          "end": 2.56,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " in",
+          "start": 2.56,
+          "end": 2.68,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 2.68,
+          "end": 2.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zorg.",
+          "start": 2.74,
+          "end": 3.06,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.84,
+      "end": 8.86,
+      "text": " Nora verwacht vooral informatie over opleidingen, maar de spreker geeft veel voorbeelden uit de praktijk.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " Nora",
+          "start": 3.84,
+          "end": 4.1,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " verwacht",
+          "start": 4.1,
+          "end": 4.44,
+          "probability": 1.0
+        },
+        {
+          "word": " vooral",
+          "start": 4.44,
+          "end": 4.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " informatie",
+          "start": 4.72,
+          "end": 5.28,
+          "probability": 1.0
+        },
+        {
+          "word": " over",
+          "start": 5.28,
+          "end": 5.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opleidingen,",
+          "start": 5.46,
+          "end": 6.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 6.22,
+          "end": 6.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 6.68,
+          "end": 6.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " spreker",
+          "start": 6.8,
+          "end": 7.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " geeft",
+          "start": 7.2,
+          "end": 7.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " veel",
+          "start": 7.44,
+          "end": 7.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voorbeelden",
+          "start": 7.64,
+          "end": 8.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uit",
+          "start": 8.16,
+          "end": 8.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.3,
+          "end": 8.4,
+          "probability": 1.0
+        },
+        {
+          "word": " praktijk.",
+          "start": 8.4,
+          "end": 8.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.34,
+      "end": 11.46,
+      "text": " Aan het einde mogen deelnemers vragen stellen.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " Aan",
+          "start": 9.34,
+          "end": 9.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 9.72,
+          "end": 9.84,
+          "probability": 1.0
+        },
+        {
+          "word": " einde",
+          "start": 9.84,
+          "end": 10.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mogen",
+          "start": 10.06,
+          "end": 10.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deelnemers",
+          "start": 10.32,
+          "end": 10.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vragen",
+          "start": 10.8,
+          "end": 11.14,
+          "probability": 1.0
+        },
+        {
+          "word": " stellen.",
+          "start": 11.14,
+          "end": 11.46,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.1,
+      "end": 15.54,
+      "text": " Nora vraagt welke vaardigheden je nodig hebt voordat je aan een opleiding begint.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " Nora",
+          "start": 12.1,
+          "end": 12.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 12.38,
+          "end": 12.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " welke",
+          "start": 12.72,
+          "end": 13.02,
+          "probability": 1.0
+        },
+        {
+          "word": " vaardigheden",
+          "start": 13.02,
+          "end": 13.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " je",
+          "start": 13.56,
+          "end": 13.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nodig",
+          "start": 13.68,
+          "end": 13.96,
+          "probability": 1.0
+        },
+        {
+          "word": " hebt",
+          "start": 13.96,
+          "end": 14.18,
+          "probability": 1.0
+        },
+        {
+          "word": " voordat",
+          "start": 14.18,
+          "end": 14.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " je",
+          "start": 14.44,
+          "end": 14.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 14.54,
+          "end": 14.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 14.66,
+          "end": 14.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " opleiding",
+          "start": 14.78,
+          "end": 15.18,
+          "probability": 1.0
+        },
+        {
+          "word": " begint.",
+          "start": 15.18,
+          "end": 15.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 16.1,
+      "end": 21.34,
+      "text": " De spreker legt uit dat de eisen per opleiding kunnen verschillen en verwijst naar de websites van de scholen.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 16.1,
+          "end": 16.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " spreker",
+          "start": 16.54,
+          "end": 16.9,
+          "probability": 1.0
+        },
+        {
+          "word": " legt",
+          "start": 16.9,
+          "end": 17.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uit",
+          "start": 17.12,
+          "end": 17.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 17.28,
+          "end": 17.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.44,
+          "end": 17.56,
+          "probability": 1.0
+        },
+        {
+          "word": " eisen",
+          "start": 17.56,
+          "end": 17.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " per",
+          "start": 17.84,
+          "end": 18.06,
+          "probability": 1.0
+        },
+        {
+          "word": " opleiding",
+          "start": 18.06,
+          "end": 18.46,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 18.46,
+          "end": 18.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verschillen",
+          "start": 18.64,
+          "end": 19.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 19.14,
+          "end": 19.7,
+          "probability": 0.8642578125
+        },
+        {
+          "word": " verwijst",
+          "start": 19.7,
+          "end": 20.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 20.08,
+          "end": 20.18,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.18,
+          "end": 20.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " websites",
+          "start": 20.28,
+          "end": 20.66,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " van",
+          "start": 20.66,
+          "end": 20.84,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.84,
+          "end": 20.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " scholen.",
+          "start": 20.94,
+          "end": 21.34,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 21.9,
+      "end": 23.32,
+      "text": " Nora schrijft de links op.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " Nora",
+          "start": 21.9,
+          "end": 22.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schrijft",
+          "start": 22.46,
+          "end": 22.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 22.8,
+          "end": 22.88,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " links",
+          "start": 22.88,
+          "end": 23.08,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " op.",
+          "start": 23.08,
+          "end": 23.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.78,
+      "end": 28.38,
+      "text": " Ze is blij met de voorbeelden, maar wil de voorwaarden zelf rustig vergelijken voordat ze kiest.",
+      "temperature": 0,
+      "avg_logprob": -0.06382393282513286,
+      "compression_ratio": 1.7986577181208054,
+      "no_speech_prob": 5.576244761079652e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 23.78,
+          "end": 24.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 24.12,
+          "end": 24.24,
+          "probability": 1.0
+        },
+        {
+          "word": " blij",
+          "start": 24.24,
+          "end": 24.44,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 24.44,
+          "end": 24.62,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 24.62,
+          "end": 24.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voorbeelden,",
+          "start": 24.72,
+          "end": 25.3,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 25.44,
+          "end": 25.76,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 25.76,
+          "end": 25.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 25.96,
+          "end": 26.08,
+          "probability": 1.0
+        },
+        {
+          "word": " voorwaarden",
+          "start": 26.08,
+          "end": 26.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zelf",
+          "start": 26.54,
+          "end": 26.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rustig",
+          "start": 26.82,
+          "end": 27.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vergelijken",
+          "start": 27.2,
+          "end": 27.66,
+          "probability": 1.0
+        },
+        {
+          "word": " voordat",
+          "start": 27.66,
+          "end": 27.96,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 27.96,
+          "end": 28.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kiest.",
+          "start": 28.08,
+          "end": 28.38,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

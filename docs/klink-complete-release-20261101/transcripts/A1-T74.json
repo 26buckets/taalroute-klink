@@ -1,0 +1,296 @@
+{
+  "id": "A1-T74",
+  "sha256": "c6f94ee21b2cb867077cdcf0f4e115a5b82bbbdeb97ca55e89c22723f4c5ef38",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De klas heeft les. Het raam staat open en het is koud. Een cursist vraagt aan de docent of het raam dicht mag. De docent zegt ja. De cursist doet het raam dicht. Daarna leest de klas een tekst.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.22,
+      "text": " De klas heeft les. Het raam staat open en het is koud.",
+      "temperature": 0,
+      "avg_logprob": -0.07005932711172795,
+      "compression_ratio": 1.5078125,
+      "no_speech_prob": 6.330364617918027e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97021484375
+        },
+        {
+          "word": " klas",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " heeft",
+          "start": 0.46,
+          "end": 0.68,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " les.",
+          "start": 0.68,
+          "end": 0.98,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Het",
+          "start": 1.18,
+          "end": 1.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " raam",
+          "start": 1.42,
+          "end": 1.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat",
+          "start": 1.7,
+          "end": 1.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " open",
+          "start": 1.9,
+          "end": 2.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " en",
+          "start": 2.32,
+          "end": 2.6,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " het",
+          "start": 2.6,
+          "end": 2.74,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " is",
+          "start": 2.74,
+          "end": 2.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " koud.",
+          "start": 2.86,
+          "end": 3.22,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.42,
+      "end": 6.22,
+      "text": " Een cursist vraagt aan de docent of het raam dicht mag.",
+      "temperature": 0,
+      "avg_logprob": -0.07005932711172795,
+      "compression_ratio": 1.5078125,
+      "no_speech_prob": 6.330364617918027e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 3.42,
+          "end": 3.66,
+          "probability": 0.99609375
+        },
+        {
+          "word": " cursist",
+          "start": 3.66,
+          "end": 4.12,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vraagt",
+          "start": 4.12,
+          "end": 4.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 4.46,
+          "end": 4.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 4.58,
+          "end": 4.7,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " docent",
+          "start": 4.7,
+          "end": 5.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 5.12,
+          "end": 5.34,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " het",
+          "start": 5.34,
+          "end": 5.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " raam",
+          "start": 5.48,
+          "end": 5.7,
+          "probability": 1.0
+        },
+        {
+          "word": " dicht",
+          "start": 5.7,
+          "end": 5.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mag.",
+          "start": 5.9,
+          "end": 6.22,
+          "probability": 0.98583984375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.44,
+      "end": 9.32,
+      "text": " De docent zegt ja. De cursist doet het raam dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.07005932711172795,
+      "compression_ratio": 1.5078125,
+      "no_speech_prob": 6.330364617918027e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.44,
+          "end": 6.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " docent",
+          "start": 6.68,
+          "end": 7.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zegt",
+          "start": 7.02,
+          "end": 7.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ja.",
+          "start": 7.3,
+          "end": 7.52,
+          "probability": 0.9091796875
+        },
+        {
+          "word": " De",
+          "start": 7.8,
+          "end": 8.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cursist",
+          "start": 8.04,
+          "end": 8.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doet",
+          "start": 8.5,
+          "end": 8.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 8.62,
+          "end": 8.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " raam",
+          "start": 8.78,
+          "end": 9.06,
+          "probability": 1.0
+        },
+        {
+          "word": " dicht.",
+          "start": 9.06,
+          "end": 9.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.7,
+      "end": 11.26,
+      "text": " Daarna leest de klas een tekst.",
+      "temperature": 0,
+      "avg_logprob": -0.07005932711172795,
+      "compression_ratio": 1.5078125,
+      "no_speech_prob": 6.330364617918027e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 9.7,
+          "end": 10.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " leest",
+          "start": 10.02,
+          "end": 10.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 10.36,
+          "end": 10.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klas",
+          "start": 10.48,
+          "end": 10.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 10.7,
+          "end": 10.84,
+          "probability": 0.998046875
+        },
+        {
+          "word": " tekst.",
+          "start": 10.84,
+          "end": 11.26,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

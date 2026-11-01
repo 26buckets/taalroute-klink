@@ -34,7 +34,8 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
       setSelected(option.id);
       const isCorrect = answer.correctOptionIds?.includes(option.id) === true;
-      const feedback = synonyms || wordUse || exercise.readingRoundId ? String(isCorrect ? exercise.correctFeedback : exercise.feedback)
+      const optionFeedback = (exercise.optionFeedback as Record<string, unknown> | undefined)?.[option.id];
+      const feedback = typeof optionFeedback === 'string' ? optionFeedback : synonyms || wordUse || exercise.readingRoundId ? String(isCorrect ? exercise.correctFeedback : exercise.feedback)
         : isCorrect ? typeof exercise.evidence === 'string' ? `In de tekst: ${exercise.evidence}` : 'Goed. Kijk ook naar het voorbeeld.'
         : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.';
       onFinish(option.id, isCorrect, feedback);

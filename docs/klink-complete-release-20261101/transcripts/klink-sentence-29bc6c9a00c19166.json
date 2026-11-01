@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-29bc6c9a00c19166",
+  "sha256": "cba2d7a680c5205e2af833f12e84f60bba6bd6a284caebe39b22b97a37b783d5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wil je mijn haar knippen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.1,
+      "text": " Wil je mijn haar knippen?",
+      "temperature": 0,
+      "avg_logprob": -0.24787321957674893,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 3.347578507797988e-12,
+      "words": [
+        {
+          "word": " Wil",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.880859375
+        },
+        {
+          "word": " je",
+          "start": 0.2,
+          "end": 0.28,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " mijn",
+          "start": 0.28,
+          "end": 0.44,
+          "probability": 0.99609375
+        },
+        {
+          "word": " haar",
+          "start": 0.44,
+          "end": 0.68,
+          "probability": 0.966796875
+        },
+        {
+          "word": " knippen?",
+          "start": 0.68,
+          "end": 1.1,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

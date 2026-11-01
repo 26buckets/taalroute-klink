@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-f99bda78bdcab3ba",
+  "sha256": "1cddb6167dfbe74c25e26c30f7f308617479fbf54a5ff6f88e137b18c3b5cb3a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe de schil in de afvalbak.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.66,
+      "text": " Ik doe de schil in de afvalbak.",
+      "temperature": 0,
+      "avg_logprob": -0.15526587622506277,
+      "compression_ratio": 0.8611111111111112,
+      "no_speech_prob": 4.232721378255588e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " doe",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.42,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " schil",
+          "start": 0.42,
+          "end": 0.74,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " in",
+          "start": 0.74,
+          "end": 1.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.0,
+          "end": 1.08,
+          "probability": 0.99609375
+        },
+        {
+          "word": " afvalbak.",
+          "start": 1.08,
+          "end": 1.66,
+          "probability": 0.990234375
+        }
+      ]
+    }
+  ]
+}

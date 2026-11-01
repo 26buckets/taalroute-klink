@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-029",
+  "sha256": "2c86add87f9bbb7b479f42e7464ce520a744ec457116343bb9121e951d1236c8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag de deur open?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.76,
+      "text": " Mag de deur open?",
+      "temperature": 0,
+      "avg_logprob": -0.14477623833550346,
+      "compression_ratio": 0.7391304347826086,
+      "no_speech_prob": 4.296220931093719e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.94580078125
+        },
+        {
+          "word": " de",
+          "start": 0.18,
+          "end": 0.32,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " deur",
+          "start": 0.32,
+          "end": 0.52,
+          "probability": 0.98828125
+        },
+        {
+          "word": " open?",
+          "start": 0.52,
+          "end": 0.76,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

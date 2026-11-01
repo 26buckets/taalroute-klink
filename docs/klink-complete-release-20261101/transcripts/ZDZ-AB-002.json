@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-002",
+  "sha256": "96bde4c981a0e82157499022d050256de9a68acc2e046c456a0c59cca25b11ab",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil brood.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.72,
+      "text": " Ik wil brood.",
+      "temperature": 0,
+      "avg_logprob": -0.1871843934059143,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 3.83799199019097e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.80908203125
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " brood.",
+          "start": 0.32,
+          "end": 0.72,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

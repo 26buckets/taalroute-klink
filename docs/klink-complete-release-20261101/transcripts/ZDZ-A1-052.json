@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-052",
+  "sha256": "d5cbbde0b7b72f6b49739318b55e528c1835e20b96480e20c5388d83efc1b867",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vind de blauwe fiets mooi.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Ik vind de blauwe fiets mooi.",
+      "temperature": 0,
+      "avg_logprob": -0.0883185680095966,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 3.4828927936159104e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.93408203125
+        },
+        {
+          "word": " vind",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " blauwe",
+          "start": 0.36,
+          "end": 0.66,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " fiets",
+          "start": 0.66,
+          "end": 0.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " mooi.",
+          "start": 0.86,
+          "end": 1.08,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

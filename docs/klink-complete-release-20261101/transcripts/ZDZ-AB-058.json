@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-058",
+  "sha256": "dadef3436f1ddff4b595f86a6cfecb11c8f079994fb323ae5ba59d363060f7f8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben blij!",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.58,
+      "text": " Ik ben blij!",
+      "temperature": 0,
+      "avg_logprob": -0.24109295436314174,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 4.1307634396359205e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.984375
+        },
+        {
+          "word": " ben",
+          "start": 0.12,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blij!",
+          "start": 0.28,
+          "end": 0.58,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

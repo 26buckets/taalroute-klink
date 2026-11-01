@@ -1,0 +1,33 @@
+{
+  "application": "Klink",
+  "date": "2026-11-01",
+  "activeNewRecordings": 807,
+  "female": 405,
+  "male": 402,
+  "instructionVoice": {
+    "name": "Roland",
+    "id": "h6uBOiAjLKklte8hdYio"
+  },
+  "freeTargetVoices": [
+    {
+      "name": "Roos",
+      "id": "7qdUFMklKPaaAVMsBTBt",
+      "gender": "female"
+    },
+    {
+      "name": "Remko",
+      "id": "0qLmDzgqulxcvv0yf3kg",
+      "gender": "male"
+    }
+  ],
+  "fixedExistingCharacterVoices": "preserved; previously published media are unchanged",
+  "nextFreeNarrationPreference": "female; continuity of fixed characters takes precedence",
+  "oneGenericLearnerModelChangedBeforeFirstPublication": {
+    "id": "ZDZ-A2-085",
+    "from": "Remko",
+    "to": "Roos",
+    "reason": "repair of audible extra syllables; final unprompted transcript matches the canonical source"
+  },
+  "generationRetakes": 10,
+  "buyExtraCredits": false
+}

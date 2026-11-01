@@ -1,0 +1,642 @@
+{
+  "id": "B1-FL-094",
+  "sha256": "b8d78bac795be50b3aefc07457f2a32224decf81a0defdb879c8e81bc402a011",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In het magazijn krijgt medewerker Vadime een korte training voor een nieuwe verpakkingsmachine. Op het scherm staat dezelfde knop als op het oude apparaat, maar de functie is anders. Een collega wil meteen beginnen omdat er veel bestellingen klaarstaan. Vadime wijst op de instructie van de leidinggevende. Eerst een proef uitvoeren, daarna pas de echte dozen verwerken. Tijdens de proef merkt ze dat een instelling verkeerd staat. De trainer past die aan en laat het team opnieuw oefenen. Pas wanneer de proef goed gaat, begint de gewone productie.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.44,
+      "text": " In het magazijn krijgt medewerker Vadime een korte training voor een nieuwe verpakkingsmachine.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " het",
+          "start": 0.12,
+          "end": 0.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " magazijn",
+          "start": 0.24,
+          "end": 0.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " krijgt",
+          "start": 0.72,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 1.06,
+          "end": 1.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Vadime",
+          "start": 1.58,
+          "end": 2.0,
+          "probability": 0.763671875
+        },
+        {
+          "word": " een",
+          "start": 2.0,
+          "end": 2.34,
+          "probability": 0.984375
+        },
+        {
+          "word": " korte",
+          "start": 2.34,
+          "end": 2.66,
+          "probability": 1.0
+        },
+        {
+          "word": " training",
+          "start": 2.66,
+          "end": 2.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 2.98,
+          "end": 3.24,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " een",
+          "start": 3.24,
+          "end": 3.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " nieuwe",
+          "start": 3.38,
+          "end": 3.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verpakkingsmachine.",
+          "start": 3.62,
+          "end": 4.44,
+          "probability": 0.99072265625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.7,
+      "end": 8.74,
+      "text": " Op het scherm staat dezelfde knop als op het oude apparaat, maar de functie is anders.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 4.7,
+          "end": 4.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 4.98,
+          "end": 5.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " scherm",
+          "start": 5.1,
+          "end": 5.4,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 5.4,
+          "end": 5.64,
+          "probability": 1.0
+        },
+        {
+          "word": " dezelfde",
+          "start": 5.64,
+          "end": 6.14,
+          "probability": 1.0
+        },
+        {
+          "word": " knop",
+          "start": 6.14,
+          "end": 6.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " als",
+          "start": 6.42,
+          "end": 6.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 6.62,
+          "end": 6.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.74,
+          "end": 6.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 6.86,
+          "end": 7.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " apparaat,",
+          "start": 7.18,
+          "end": 7.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 7.76,
+          "end": 7.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.86,
+          "end": 7.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " functie",
+          "start": 7.98,
+          "end": 8.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 8.32,
+          "end": 8.44,
+          "probability": 1.0
+        },
+        {
+          "word": " anders.",
+          "start": 8.44,
+          "end": 8.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.04,
+      "end": 12.48,
+      "text": " Een collega wil meteen beginnen omdat er veel bestellingen klaarstaan.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 9.04,
+          "end": 9.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega",
+          "start": 9.26,
+          "end": 9.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 9.66,
+          "end": 9.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " meteen",
+          "start": 9.84,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " beginnen",
+          "start": 10.18,
+          "end": 10.56,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 10.56,
+          "end": 10.94,
+          "probability": 0.5576171875
+        },
+        {
+          "word": " er",
+          "start": 10.94,
+          "end": 11.14,
+          "probability": 1.0
+        },
+        {
+          "word": " veel",
+          "start": 11.14,
+          "end": 11.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bestellingen",
+          "start": 11.36,
+          "end": 11.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klaarstaan.",
+          "start": 11.88,
+          "end": 12.48,
+          "probability": 0.98974609375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.74,
+      "end": 15.26,
+      "text": " Vadime wijst op de instructie van de leidinggevende.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " Vadime",
+          "start": 12.74,
+          "end": 13.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wijst",
+          "start": 13.16,
+          "end": 13.5,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 13.5,
+          "end": 13.6,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 13.6,
+          "end": 13.72,
+          "probability": 1.0
+        },
+        {
+          "word": " instructie",
+          "start": 13.72,
+          "end": 14.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 14.22,
+          "end": 14.36,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 14.36,
+          "end": 14.48,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende.",
+          "start": 14.48,
+          "end": 15.26,
+          "probability": 0.98876953125
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.52,
+      "end": 18.74,
+      "text": " Eerst een proef uitvoeren, daarna pas de echte dozen verwerken.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " Eerst",
+          "start": 15.52,
+          "end": 15.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 15.86,
+          "end": 15.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " proef",
+          "start": 15.98,
+          "end": 16.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uitvoeren,",
+          "start": 16.32,
+          "end": 16.82,
+          "probability": 1.0
+        },
+        {
+          "word": " daarna",
+          "start": 17.0,
+          "end": 17.3,
+          "probability": 1.0
+        },
+        {
+          "word": " pas",
+          "start": 17.3,
+          "end": 17.52,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " de",
+          "start": 17.52,
+          "end": 17.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " echte",
+          "start": 17.66,
+          "end": 17.9,
+          "probability": 1.0
+        },
+        {
+          "word": " dozen",
+          "start": 17.9,
+          "end": 18.2,
+          "probability": 0.919921875
+        },
+        {
+          "word": " verwerken.",
+          "start": 18.2,
+          "end": 18.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 19.0,
+      "end": 21.68,
+      "text": " Tijdens de proef merkt ze dat een instelling verkeerd staat.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " Tijdens",
+          "start": 19.0,
+          "end": 19.38,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 19.38,
+          "end": 19.5,
+          "probability": 1.0
+        },
+        {
+          "word": " proef",
+          "start": 19.5,
+          "end": 19.82,
+          "probability": 1.0
+        },
+        {
+          "word": " merkt",
+          "start": 19.82,
+          "end": 20.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ze",
+          "start": 20.18,
+          "end": 20.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dat",
+          "start": 20.28,
+          "end": 20.42,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 20.42,
+          "end": 20.56,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " instelling",
+          "start": 20.56,
+          "end": 21.0,
+          "probability": 1.0
+        },
+        {
+          "word": " verkeerd",
+          "start": 21.0,
+          "end": 21.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat.",
+          "start": 21.42,
+          "end": 21.68,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.92,
+      "end": 24.66,
+      "text": " De trainer past die aan en laat het team opnieuw oefenen.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 21.92,
+          "end": 22.12,
+          "probability": 1.0
+        },
+        {
+          "word": " trainer",
+          "start": 22.12,
+          "end": 22.44,
+          "probability": 1.0
+        },
+        {
+          "word": " past",
+          "start": 22.44,
+          "end": 22.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 22.72,
+          "end": 22.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " aan",
+          "start": 22.86,
+          "end": 23.12,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 23.12,
+          "end": 23.38,
+          "probability": 1.0
+        },
+        {
+          "word": " laat",
+          "start": 23.38,
+          "end": 23.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 23.58,
+          "end": 23.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " team",
+          "start": 23.74,
+          "end": 23.94,
+          "probability": 1.0
+        },
+        {
+          "word": " opnieuw",
+          "start": 23.94,
+          "end": 24.3,
+          "probability": 1.0
+        },
+        {
+          "word": " oefenen.",
+          "start": 24.3,
+          "end": 24.66,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 24.94,
+      "end": 28.02,
+      "text": " Pas wanneer de proef goed gaat, begint de gewone productie.",
+      "temperature": 0,
+      "avg_logprob": -0.05482334681919643,
+      "compression_ratio": 1.6996904024767803,
+      "no_speech_prob": 5.9101443357356676e-12,
+      "words": [
+        {
+          "word": " Pas",
+          "start": 24.94,
+          "end": 25.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wanneer",
+          "start": 25.22,
+          "end": 25.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 25.5,
+          "end": 25.62,
+          "probability": 1.0
+        },
+        {
+          "word": " proef",
+          "start": 25.62,
+          "end": 25.86,
+          "probability": 1.0
+        },
+        {
+          "word": " goed",
+          "start": 25.86,
+          "end": 26.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gaat,",
+          "start": 26.08,
+          "end": 26.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 26.54,
+          "end": 26.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 26.98,
+          "end": 27.1,
+          "probability": 1.0
+        },
+        {
+          "word": " gewone",
+          "start": 27.1,
+          "end": 27.48,
+          "probability": 1.0
+        },
+        {
+          "word": " productie.",
+          "start": 27.48,
+          "end": 28.02,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

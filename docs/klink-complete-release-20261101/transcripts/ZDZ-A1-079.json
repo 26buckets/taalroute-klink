@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-079",
+  "sha256": "717054f4c3a696485799a4ab33083e174cab562bd98cd8ef7c736cbf26f74358",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " U heeft gelijk. Ik was te laat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.62,
+      "text": " U heeft gelijk. Ik was te laat.",
+      "temperature": 0,
+      "avg_logprob": -0.053834768442007214,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.357264115489867e-12,
+      "words": [
+        {
+          "word": " U",
+          "start": 0.0,
+          "end": 0.1,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " heeft",
+          "start": 0.1,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gelijk.",
+          "start": 0.28,
+          "end": 0.68,
+          "probability": 1.0
+        },
+        {
+          "word": " Ik",
+          "start": 0.88,
+          "end": 1.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " was",
+          "start": 1.12,
+          "end": 1.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 1.3,
+          "end": 1.42,
+          "probability": 1.0
+        },
+        {
+          "word": " laat.",
+          "start": 1.42,
+          "end": 1.62,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

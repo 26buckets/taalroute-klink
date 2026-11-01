@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-009",
+  "sha256": "a2875cd44e23db9c4ed1ddd7461dfe9b8644c9ff3b1c1ffbd5aa64b070587b4b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is mijn kamer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Dit is mijn kamer.",
+      "temperature": 0,
+      "avg_logprob": -0.2128048472934299,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.898773227346442e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9150390625
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.32,
+          "end": 0.48,
+          "probability": 0.92333984375
+        },
+        {
+          "word": " kamer.",
+          "start": 0.48,
+          "end": 0.92,
+          "probability": 0.97119140625
+        }
+      ]
+    }
+  ]
+}

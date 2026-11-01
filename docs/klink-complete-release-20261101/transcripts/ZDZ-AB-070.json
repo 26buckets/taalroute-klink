@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-070",
+  "sha256": "a5790a778504209ff72b73e841c12693df619a355d65afe39a8456f60a2ae0d3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De les is morgen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.78,
+      "text": " De les is morgen.",
+      "temperature": 0,
+      "avg_logprob": -0.13782382011413574,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.1065380262939044e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " les",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " is",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 1.0
+        },
+        {
+          "word": " morgen.",
+          "start": 0.46,
+          "end": 0.78,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-b9aaa13571562318",
+  "sha256": "890f4130e9e00106d33c929d828d4a084d50499841d7e746322ae38a29078de1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Welke bussen stoppen hier?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.42,
+      "text": " Welke bussen stoppen hier?",
+      "temperature": 0,
+      "avg_logprob": -0.12774978984485974,
+      "compression_ratio": 0.8125,
+      "no_speech_prob": 3.763726309780058e-12,
+      "words": [
+        {
+          "word": " Welke",
+          "start": 0.0,
+          "end": 0.42,
+          "probability": 0.966796875
+        },
+        {
+          "word": " bussen",
+          "start": 0.42,
+          "end": 0.84,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " stoppen",
+          "start": 0.84,
+          "end": 1.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hier?",
+          "start": 1.22,
+          "end": 1.42,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

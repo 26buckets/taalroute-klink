@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-073",
+  "sha256": "aba37048195fadae838c1974b631844485b874e680358731b9b49d11471963cb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bus rijdt vandaag niet.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.12,
+      "text": " De bus rijdt vandaag niet.",
+      "temperature": 0,
+      "avg_logprob": -0.1559527570551092,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.202979977940835e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.953125
+        },
+        {
+          "word": " bus",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.994140625
+        },
+        {
+          "word": " rijdt",
+          "start": 0.32,
+          "end": 0.64,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " vandaag",
+          "start": 0.64,
+          "end": 0.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet.",
+          "start": 0.84,
+          "end": 1.12,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

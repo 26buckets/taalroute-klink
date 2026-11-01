@@ -1,0 +1,575 @@
+{
+  "id": "A2-T39",
+  "sha256": "64718b05a6a92d2624539f0d45dd67a364f07453db31ea64da87cd370375b2d8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursusleider stuurt dinsdag een formulier voor een bezoek aan de bibliotheek. Op het formulier staat donderdag, maar in de e-mail staat vrijdag. Een cursist vraagt welke dag klopt. De cursusleider antwoordt dat het bezoek vrijdag om twee uur is en stuurt een verbeterd formulier. Wie het oude formulier al heeft ingevuld, hoeft niet opnieuw te beginnen. Alleen de datum moet worden veranderd. De cursist bewaart de nieuwe e-mail om de juiste dag later te kunnen teruglezen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.76,
+      "text": " Een cursusleider stuurt dinsdag een formulier voor een bezoek aan de bibliotheek.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.994140625
+        },
+        {
+          "word": " cursusleider",
+          "start": 0.28,
+          "end": 0.92,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " stuurt",
+          "start": 0.92,
+          "end": 1.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 1.2,
+          "end": 1.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.62,
+          "end": 1.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " formulier",
+          "start": 1.76,
+          "end": 2.2,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 2.2,
+          "end": 2.38,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " een",
+          "start": 2.38,
+          "end": 2.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bezoek",
+          "start": 2.5,
+          "end": 2.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 2.86,
+          "end": 2.98,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 2.98,
+          "end": 3.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bibliotheek.",
+          "start": 3.1,
+          "end": 3.76,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.9,
+      "end": 7.14,
+      "text": " Op het formulier staat donderdag, maar in de e-mail staat vrijdag.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.9,
+          "end": 4.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 4.14,
+          "end": 4.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " formulier",
+          "start": 4.26,
+          "end": 4.7,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 4.7,
+          "end": 4.96,
+          "probability": 1.0
+        },
+        {
+          "word": " donderdag,",
+          "start": 4.96,
+          "end": 5.58,
+          "probability": 0.90966796875
+        },
+        {
+          "word": " maar",
+          "start": 5.72,
+          "end": 5.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 5.86,
+          "end": 6.02,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 6.02,
+          "end": 6.12,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 6.12,
+          "end": 6.26,
+          "probability": 0.99560546875
+        },
+        {
+          "word": "-mail",
+          "start": 6.26,
+          "end": 6.44,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 6.44,
+          "end": 6.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag.",
+          "start": 6.68,
+          "end": 7.14,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.3,
+      "end": 9.08,
+      "text": " Een cursist vraagt welke dag klopt.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 7.3,
+          "end": 7.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cursist",
+          "start": 7.54,
+          "end": 8.0,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " vraagt",
+          "start": 8.0,
+          "end": 8.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " welke",
+          "start": 8.32,
+          "end": 8.6,
+          "probability": 1.0
+        },
+        {
+          "word": " dag",
+          "start": 8.6,
+          "end": 8.74,
+          "probability": 1.0
+        },
+        {
+          "word": " klopt.",
+          "start": 8.74,
+          "end": 9.08,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.3,
+      "end": 14.18,
+      "text": " De cursusleider antwoordt dat het bezoek vrijdag om twee uur is en stuurt een verbeterd formulier.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.3,
+          "end": 9.5,
+          "probability": 1.0
+        },
+        {
+          "word": " cursusleider",
+          "start": 9.5,
+          "end": 10.14,
+          "probability": 1.0
+        },
+        {
+          "word": " antwoordt",
+          "start": 10.14,
+          "end": 10.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dat",
+          "start": 10.66,
+          "end": 10.78,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 10.78,
+          "end": 10.92,
+          "probability": 1.0
+        },
+        {
+          "word": " bezoek",
+          "start": 10.92,
+          "end": 11.24,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijdag",
+          "start": 11.24,
+          "end": 11.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 11.64,
+          "end": 11.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 11.8,
+          "end": 12.02,
+          "probability": 0.53857421875
+        },
+        {
+          "word": " uur",
+          "start": 12.02,
+          "end": 12.34,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 12.34,
+          "end": 12.52,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 12.52,
+          "end": 12.74,
+          "probability": 0.9599609375
+        },
+        {
+          "word": " stuurt",
+          "start": 12.74,
+          "end": 13.04,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 13.04,
+          "end": 13.16,
+          "probability": 1.0
+        },
+        {
+          "word": " verbeterd",
+          "start": 13.16,
+          "end": 13.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " formulier.",
+          "start": 13.68,
+          "end": 14.18,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.36,
+      "end": 17.8,
+      "text": " Wie het oude formulier al heeft ingevuld, hoeft niet opnieuw te beginnen.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 14.36,
+          "end": 14.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 14.56,
+          "end": 14.74,
+          "probability": 1.0
+        },
+        {
+          "word": " oude",
+          "start": 14.74,
+          "end": 15.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " formulier",
+          "start": 15.0,
+          "end": 15.5,
+          "probability": 1.0
+        },
+        {
+          "word": " al",
+          "start": 15.5,
+          "end": 15.66,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 15.66,
+          "end": 15.9,
+          "probability": 1.0
+        },
+        {
+          "word": " ingevuld,",
+          "start": 15.9,
+          "end": 16.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoeft",
+          "start": 16.54,
+          "end": 16.8,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 16.8,
+          "end": 16.96,
+          "probability": 1.0
+        },
+        {
+          "word": " opnieuw",
+          "start": 16.96,
+          "end": 17.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 17.34,
+          "end": 17.44,
+          "probability": 1.0
+        },
+        {
+          "word": " beginnen.",
+          "start": 17.44,
+          "end": 17.8,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.0,
+      "end": 19.82,
+      "text": " Alleen de datum moet worden veranderd.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " Alleen",
+          "start": 18.0,
+          "end": 18.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 18.3,
+          "end": 18.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " datum",
+          "start": 18.44,
+          "end": 18.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 18.84,
+          "end": 19.02,
+          "probability": 1.0
+        },
+        {
+          "word": " worden",
+          "start": 19.02,
+          "end": 19.26,
+          "probability": 1.0
+        },
+        {
+          "word": " veranderd.",
+          "start": 19.26,
+          "end": 19.82,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.94,
+      "end": 24.06,
+      "text": " De cursist bewaart de nieuwe e-mail om de juiste dag later te kunnen teruglezen.",
+      "temperature": 0,
+      "avg_logprob": -0.04258435243254254,
+      "compression_ratio": 1.7732342007434945,
+      "no_speech_prob": 7.182696278029699e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 19.94,
+          "end": 20.12,
+          "probability": 1.0
+        },
+        {
+          "word": " cursist",
+          "start": 20.12,
+          "end": 20.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bewaart",
+          "start": 20.62,
+          "end": 21.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 21.02,
+          "end": 21.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuwe",
+          "start": 21.12,
+          "end": 21.32,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 21.32,
+          "end": 21.56,
+          "probability": 1.0
+        },
+        {
+          "word": "-mail",
+          "start": 21.56,
+          "end": 21.78,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 21.78,
+          "end": 21.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 21.96,
+          "end": 22.08,
+          "probability": 1.0
+        },
+        {
+          "word": " juiste",
+          "start": 22.08,
+          "end": 22.44,
+          "probability": 1.0
+        },
+        {
+          "word": " dag",
+          "start": 22.44,
+          "end": 22.7,
+          "probability": 1.0
+        },
+        {
+          "word": " later",
+          "start": 22.7,
+          "end": 23.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 23.04,
+          "end": 23.2,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 23.2,
+          "end": 23.4,
+          "probability": 1.0
+        },
+        {
+          "word": " teruglezen.",
+          "start": 23.4,
+          "end": 24.06,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "klink-sentence-9d26f97e127eda53",
+  "sha256": "ec886f649bf18372c33be95b6cc9bdce869f1da238e252090bcdcb92c0df612c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De keuken is aan het eind van de gang.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.86,
+      "text": " De keuken is aan het eind van de gang.",
+      "temperature": 0,
+      "avg_logprob": -0.0996328592300415,
+      "compression_ratio": 0.8636363636363636,
+      "no_speech_prob": 4.59088973434052e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " keuken",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " is",
+          "start": 0.62,
+          "end": 0.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aan",
+          "start": 0.84,
+          "end": 0.96,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " het",
+          "start": 0.96,
+          "end": 1.1,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " eind",
+          "start": 1.1,
+          "end": 1.42,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " van",
+          "start": 1.42,
+          "end": 1.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.56,
+          "end": 1.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gang.",
+          "start": 1.68,
+          "end": 1.86,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

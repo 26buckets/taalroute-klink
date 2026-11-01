@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-060",
+  "sha256": "175dfb72adf359ddb78a47af5f5ef741551eac5e6179b442c300f4838cbb00f3",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben moe na mijn werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.86,
+      "text": " Ik ben moe na mijn werk.",
+      "temperature": 0,
+      "avg_logprob": -0.12493703582070091,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 0.02607419528067112,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.904296875
+        },
+        {
+          "word": " ben",
+          "start": 0.12,
+          "end": 0.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moe",
+          "start": 0.2,
+          "end": 0.44,
+          "probability": 0.9775390625
+        },
+        {
+          "word": " na",
+          "start": 0.44,
+          "end": 0.5,
+          "probability": 0.8974609375
+        },
+        {
+          "word": " mijn",
+          "start": 0.5,
+          "end": 0.62,
+          "probability": 0.9033203125
+        },
+        {
+          "word": " werk.",
+          "start": 0.62,
+          "end": 0.86,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

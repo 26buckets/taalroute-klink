@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-592d4501bb56fc99",
+  "sha256": "be9318636a6589f6acdb53d608f3ae773d5ad0814b09822c927852d15eff9fcf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Heb je al een taxi besteld?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Heb je al een taxi besteld?",
+      "temperature": 0,
+      "avg_logprob": -0.11421316320245917,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 3.921062693285071e-12,
+      "words": [
+        {
+          "word": " Heb",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.83544921875
+        },
+        {
+          "word": " je",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.986328125
+        },
+        {
+          "word": " al",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " taxi",
+          "start": 0.52,
+          "end": 0.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " besteld?",
+          "start": 0.74,
+          "end": 1.2,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

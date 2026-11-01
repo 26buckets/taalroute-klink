@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-B1-002",
+  "sha256": "16e227ff56fa2b96bbe1afb5aa4cb8f9fbb39ef0e5f85306fc7315f22c7e2bdf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u mij vertellen welk brood het langst vers blijft?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.5,
+      "text": " Kunt u mij vertellen welk brood het langst vers blijft?",
+      "temperature": 0,
+      "avg_logprob": -0.05828738212585449,
+      "compression_ratio": 0.9016393442622951,
+      "no_speech_prob": 4.496171230466972e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.93359375
+        },
+        {
+          "word": " u",
+          "start": 0.24,
+          "end": 0.32,
+          "probability": 0.94921875
+        },
+        {
+          "word": " mij",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " vertellen",
+          "start": 0.46,
+          "end": 0.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " welk",
+          "start": 0.84,
+          "end": 1.16,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " brood",
+          "start": 1.16,
+          "end": 1.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 1.42,
+          "end": 1.54,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " langst",
+          "start": 1.54,
+          "end": 1.84,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vers",
+          "start": 1.84,
+          "end": 2.06,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " blijft?",
+          "start": 2.06,
+          "end": 2.5,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

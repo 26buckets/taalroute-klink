@@ -1,0 +1,631 @@
+{
+  "id": "B1-FL-109",
+  "sha256": "e7d9da3e83108ecccd6cf33b349c8ee788292d64090c95bf90ecaf753221c073",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In een fietsenwerkplaats liggen twee reparaties klaar. De eerste fiets heeft een kapot achterlicht. De tweede heeft remmen die niet goed werken. Beide klanten willen hun fiets dezelfde middag terug. Medewerker Joris heeft maar tijd voor één reparatie voor de lunch. Hij vraagt zijn leidinggevende welke opdracht voorrang krijgt. Zij kiest de fiets met de slechte remmen, omdat die niet veilig gebruikt kan worden. Joris belt de andere klant en spreekt een later ophaalmoment af. Zo weet iedereen wanneer de fiets klaar zal zijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.62,
+      "text": " In een fietsenwerkplaats liggen twee reparaties klaar.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " een",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " fietsenwerkplaats",
+          "start": 0.28,
+          "end": 1.2,
+          "probability": 0.994140625
+        },
+        {
+          "word": " liggen",
+          "start": 1.2,
+          "end": 1.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 1.46,
+          "end": 1.64,
+          "probability": 0.93798828125
+        },
+        {
+          "word": " reparaties",
+          "start": 1.64,
+          "end": 2.26,
+          "probability": 0.94287109375
+        },
+        {
+          "word": " klaar.",
+          "start": 2.26,
+          "end": 2.62,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.92,
+      "end": 5.28,
+      "text": " De eerste fiets heeft een kapot achterlicht.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 2.92,
+          "end": 3.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " eerste",
+          "start": 3.44,
+          "end": 3.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " fiets",
+          "start": 3.7,
+          "end": 3.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " heeft",
+          "start": 3.98,
+          "end": 4.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 4.16,
+          "end": 4.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " kapot",
+          "start": 4.26,
+          "end": 4.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " achterlicht.",
+          "start": 4.72,
+          "end": 5.28,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.52,
+      "end": 7.68,
+      "text": " De tweede heeft remmen die niet goed werken.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.52,
+          "end": 6.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tweede",
+          "start": 6.04,
+          "end": 6.4,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 6.4,
+          "end": 6.62,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " remmen",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " die",
+          "start": 6.92,
+          "end": 7.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 7.0,
+          "end": 7.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goed",
+          "start": 7.16,
+          "end": 7.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werken.",
+          "start": 7.32,
+          "end": 7.68,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.28,
+      "end": 10.32,
+      "text": " Beide klanten willen hun fiets dezelfde middag terug.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " Beide",
+          "start": 8.28,
+          "end": 8.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " klanten",
+          "start": 8.54,
+          "end": 8.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " willen",
+          "start": 8.88,
+          "end": 9.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hun",
+          "start": 9.1,
+          "end": 9.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fiets",
+          "start": 9.24,
+          "end": 9.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dezelfde",
+          "start": 9.48,
+          "end": 9.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " middag",
+          "start": 9.88,
+          "end": 10.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " terug.",
+          "start": 10.08,
+          "end": 10.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.26,
+      "end": 14.4,
+      "text": " Medewerker Joris heeft maar tijd voor één reparatie voor de lunch.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " Medewerker",
+          "start": 11.26,
+          "end": 11.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Joris",
+          "start": 11.78,
+          "end": 12.2,
+          "probability": 0.99609375
+        },
+        {
+          "word": " heeft",
+          "start": 12.2,
+          "end": 12.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tijd",
+          "start": 12.56,
+          "end": 12.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " voor",
+          "start": 12.82,
+          "end": 13.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " één",
+          "start": 13.1,
+          "end": 13.38,
+          "probability": 0.96875
+        },
+        {
+          "word": " reparatie",
+          "start": 13.38,
+          "end": 13.94,
+          "probability": 0.9921875
+        },
+        {
+          "word": " voor",
+          "start": 13.94,
+          "end": 14.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 14.08,
+          "end": 14.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lunch.",
+          "start": 14.18,
+          "end": 14.4,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.86,
+      "end": 17.74,
+      "text": " Hij vraagt zijn leidinggevende welke opdracht voorrang krijgt.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 14.86,
+          "end": 15.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 15.34,
+          "end": 15.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 15.64,
+          "end": 15.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " leidinggevende",
+          "start": 15.78,
+          "end": 16.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " welke",
+          "start": 16.38,
+          "end": 16.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opdracht",
+          "start": 16.66,
+          "end": 17.02,
+          "probability": 1.0
+        },
+        {
+          "word": " voorrang",
+          "start": 17.02,
+          "end": 17.38,
+          "probability": 0.9921875
+        },
+        {
+          "word": " krijgt.",
+          "start": 17.38,
+          "end": 17.74,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.04,
+      "end": 21.86,
+      "text": " Zij kiest de fiets met de slechte remmen, omdat die niet veilig gebruikt kan worden.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 18.04,
+          "end": 18.56,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kiest",
+          "start": 18.56,
+          "end": 18.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 18.76,
+          "end": 18.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " fiets",
+          "start": 18.88,
+          "end": 19.1,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 19.1,
+          "end": 19.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 19.22,
+          "end": 19.34,
+          "probability": 0.9921875
+        },
+        {
+          "word": " slechte",
+          "start": 19.34,
+          "end": 19.6,
+          "probability": 1.0
+        },
+        {
+          "word": " remmen,",
+          "start": 19.6,
+          "end": 20.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " omdat",
+          "start": 20.1,
+          "end": 20.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " die",
+          "start": 20.54,
+          "end": 20.68,
+          "probability": 0.95947265625
+        },
+        {
+          "word": " niet",
+          "start": 20.68,
+          "end": 20.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " veilig",
+          "start": 20.84,
+          "end": 21.16,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " gebruikt",
+          "start": 21.16,
+          "end": 21.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 21.5,
+          "end": 21.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " worden.",
+          "start": 21.62,
+          "end": 21.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 22.58,
+      "end": 25.66,
+      "text": " Joris belt de andere klant en spreekt een later ophaalmoment af.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " Joris",
+          "start": 22.58,
+          "end": 22.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " belt",
+          "start": 22.98,
+          "end": 23.18,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 23.18,
+          "end": 23.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " andere",
+          "start": 23.32,
+          "end": 23.56,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " klant",
+          "start": 23.56,
+          "end": 23.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 23.92,
+          "end": 24.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " spreekt",
+          "start": 24.08,
+          "end": 24.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 24.4,
+          "end": 24.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " later",
+          "start": 24.52,
+          "end": 24.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ophaalmoment",
+          "start": 24.82,
+          "end": 25.44,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " af.",
+          "start": 25.44,
+          "end": 25.66,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 26.02,
+      "end": 28.0,
+      "text": " Zo weet iedereen wanneer de fiets klaar zal zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.07986551239376977,
+      "compression_ratio": 1.7041800643086817,
+      "no_speech_prob": 6.49418626513798e-12,
+      "words": [
+        {
+          "word": " Zo",
+          "start": 26.02,
+          "end": 26.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " weet",
+          "start": 26.38,
+          "end": 26.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " iedereen",
+          "start": 26.6,
+          "end": 26.88,
+          "probability": 1.0
+        },
+        {
+          "word": " wanneer",
+          "start": 26.88,
+          "end": 27.12,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 27.12,
+          "end": 27.2,
+          "probability": 1.0
+        },
+        {
+          "word": " fiets",
+          "start": 27.2,
+          "end": 27.38,
+          "probability": 1.0
+        },
+        {
+          "word": " klaar",
+          "start": 27.38,
+          "end": 27.64,
+          "probability": 1.0
+        },
+        {
+          "word": " zal",
+          "start": 27.64,
+          "end": 27.72,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zijn.",
+          "start": 27.72,
+          "end": 28.0,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

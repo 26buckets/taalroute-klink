@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A2-024",
+  "sha256": "ea1ecf0fb8a8aabd3253d034db1c3cc56a64cb9b6e4c60152cacf26c525994e6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De printer werkt niet. Kun je me helpen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.88,
+      "text": " De printer werkt niet. Kun je me helpen?",
+      "temperature": 0,
+      "avg_logprob": -0.10564705530802408,
+      "compression_ratio": 0.8333333333333334,
+      "no_speech_prob": 3.5281924951058308e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.978515625
+        },
+        {
+          "word": " printer",
+          "start": 0.14,
+          "end": 0.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werkt",
+          "start": 0.42,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet.",
+          "start": 0.78,
+          "end": 0.96,
+          "probability": 1.0
+        },
+        {
+          "word": " Kun",
+          "start": 1.12,
+          "end": 1.28,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " je",
+          "start": 1.28,
+          "end": 1.4,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " me",
+          "start": 1.4,
+          "end": 1.5,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " helpen?",
+          "start": 1.5,
+          "end": 1.88,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

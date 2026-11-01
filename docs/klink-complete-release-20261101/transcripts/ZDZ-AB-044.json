@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-044",
+  "sha256": "b7ea0630bc8e08384271e52614c8d6354deae11bf39be839661153d457dbbefd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Neem de trap.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Neem de trap.",
+      "temperature": 0,
+      "avg_logprob": -0.12966477870941162,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 2.201641820243072e-11,
+      "words": [
+        {
+          "word": " Neem",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.91796875
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " trap.",
+          "start": 0.36,
+          "end": 0.66,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

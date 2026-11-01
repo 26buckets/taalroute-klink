@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-9a2e0606889b51ec",
+  "sha256": "a6f1024c0d1432984263e12dc2128dffbdca0881201f2f329edc4292c346f489",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik loop door de gang.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ik loop door de gang.",
+      "temperature": 0,
+      "avg_logprob": -0.14101791381835938,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 5.287564223271923e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.94921875
+        },
+        {
+          "word": " loop",
+          "start": 0.14,
+          "end": 0.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " door",
+          "start": 0.38,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gang.",
+          "start": 0.68,
+          "end": 0.92,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

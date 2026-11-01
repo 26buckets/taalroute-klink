@@ -1,0 +1,25 @@
+✔ All source texts, answers, feedback, goals and legacy records reach their real collections (1253.529208ms)
+✔ All six changed collections retain the original progress key, including pre-existing audio aliases (46.482375ms)
+✔ A wrong answer key is rejected even when counts still match (330.696042ms)
+✔ Missing choice-specific feedback is rejected (217.935875ms)
+✔ A fabricated evidence segment is rejected (250.254167ms)
+✔ A lost second source fragment is rejected (195.4015ms)
+✔ successful import returns the original module and resets only the recovery marker (0.894542ms)
+✔ missing old module reloads once, preserves the route and stored lesson/progress, and avoids an error flash (12.724791ms)
+✔ recognises browser load failure: error loading dynamically imported module: /old.js (3.882042ms)
+✔ recognises browser load failure: Importing a module script failed. (0.412834ms)
+✔ recognises browser load failure: Unable to preload CSS for /old.css (2.58575ms)
+✔ recognises browser load failure: Loading chunk teacher-12 failed. (0.799958ms)
+✔ does not reload with {"online":false} (1.660459ms)
+✔ does not reload with {"blocked":true} (0.65975ms)
+✔ real application errors remain errors without reloading (0.87425ms)
+✔ server failure remains an error without browser access (0.157792ms)
+✔ all 58 lessons have eight unnumbered phase titles in all three rounds without changing source content (763.89875ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2684.609375

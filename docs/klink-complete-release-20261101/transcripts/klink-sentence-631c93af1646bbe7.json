@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-631c93af1646bbe7",
+  "sha256": "71091f218db9493e0781fc7284340ff0c47f5270ae2216498abaf25bdfe3e7b4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kijk op de klok.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Ik kijk op de klok.",
+      "temperature": 0,
+      "avg_logprob": -0.06630819494074042,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 5.383749435844409e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.90185546875
+        },
+        {
+          "word": " kijk",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.42,
+          "end": 0.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.54,
+          "end": 0.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " klok.",
+          "start": 0.62,
+          "end": 0.96,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

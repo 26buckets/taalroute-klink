@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-6f5d77247fbf995a",
+  "sha256": "4fb6d58c2efe41eb0e7f6a7895ef32cbf8aa75c2794f6ac37c6bbad7bb573f96",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wil je kijken waar de kat is?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Wil je kijken waar de kat is?",
+      "temperature": 0,
+      "avg_logprob": -0.12817495519464667,
+      "compression_ratio": 0.8285714285714286,
+      "no_speech_prob": 3.5015163511731284e-12,
+      "words": [
+        {
+          "word": " Wil",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " je",
+          "start": 0.2,
+          "end": 0.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kijken",
+          "start": 0.28,
+          "end": 0.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " waar",
+          "start": 0.5,
+          "end": 0.68,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.68,
+          "end": 0.78,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kat",
+          "start": 0.78,
+          "end": 0.96,
+          "probability": 0.96630859375
+        },
+        {
+          "word": " is?",
+          "start": 0.96,
+          "end": 1.2,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

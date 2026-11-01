@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-093",
+  "sha256": "9ea7d425c51b3641498d8fe1666800e63e3c506bc912681fcd0aec51fb702c72",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb meer tijd nodig.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik heb meer tijd nodig.",
+      "temperature": 0,
+      "avg_logprob": -0.17818975448608398,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 4.119719756306983e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.91064453125
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " meer",
+          "start": 0.26,
+          "end": 0.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tijd",
+          "start": 0.46,
+          "end": 0.66,
+          "probability": 1.0
+        },
+        {
+          "word": " nodig.",
+          "start": 0.66,
+          "end": 0.98,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

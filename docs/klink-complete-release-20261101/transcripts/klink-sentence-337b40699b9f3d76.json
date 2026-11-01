@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-337b40699b9f3d76",
+  "sha256": "44e0cb3edb8f00662c1ce7241aef7e34458ab31183b3df50f2d21a003c048c26",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er zit zand op de laars.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Er zit zand op de laars.",
+      "temperature": 0,
+      "avg_logprob": -0.08253788948059082,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.992874169662542e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94482421875
+        },
+        {
+          "word": " zit",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zand",
+          "start": 0.34,
+          "end": 0.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.72,
+          "end": 0.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.84,
+          "end": 0.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " laars.",
+          "start": 0.96,
+          "end": 1.32,
+          "probability": 0.9892578125
+        }
+      ]
+    }
+  ]
+}

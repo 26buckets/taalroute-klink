@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-089",
+  "sha256": "5765505d589d9c148302e73ab156fe0f238d7bc365e931836ed23df761359869",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil een afspraak maken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.12,
+      "text": " Ik wil een afspraak maken.",
+      "temperature": 0,
+      "avg_logprob": -0.08525339762369792,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.288382583067518e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.884765625
+        },
+        {
+          "word": " wil",
+          "start": 0.12,
+          "end": 0.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " afspraak",
+          "start": 0.38,
+          "end": 0.84,
+          "probability": 1.0
+        },
+        {
+          "word": " maken.",
+          "start": 0.84,
+          "end": 1.12,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

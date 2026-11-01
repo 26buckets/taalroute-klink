@@ -1,0 +1,278 @@
+{
+  "id": "A1-T18",
+  "sha256": "0fd990bf6cb997ea0185bf394d31f97f2ba6ffdd949ad286ecc902d899d9bc85",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een man krijgt een brief van de gemeente. In de brief staat, kom dinsdag om 2 uur, neem uw paspoort mee. Op dinsdag pakt de man zijn paspoort en de brief. Hij gaat naar de gemeente.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.02,
+      "text": " Een man krijgt een brief van de gemeente.",
+      "temperature": 0,
+      "avg_logprob": -0.07516669493455153,
+      "compression_ratio": 1.448,
+      "no_speech_prob": 6.4904917378150184e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.96728515625
+        },
+        {
+          "word": " man",
+          "start": 0.26,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " krijgt",
+          "start": 0.52,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.88,
+          "end": 0.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " brief",
+          "start": 0.98,
+          "end": 1.22,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " van",
+          "start": 1.22,
+          "end": 1.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.4,
+          "end": 1.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gemeente.",
+          "start": 1.52,
+          "end": 2.02,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.24,
+      "end": 5.94,
+      "text": " In de brief staat, kom dinsdag om 2 uur, neem uw paspoort mee.",
+      "temperature": 0,
+      "avg_logprob": -0.07516669493455153,
+      "compression_ratio": 1.448,
+      "no_speech_prob": 6.4904917378150184e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 2.24,
+          "end": 2.44,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 2.44,
+          "end": 2.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " brief",
+          "start": 2.54,
+          "end": 2.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat,",
+          "start": 2.78,
+          "end": 3.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kom",
+          "start": 3.34,
+          "end": 3.58,
+          "probability": 0.91015625
+        },
+        {
+          "word": " dinsdag",
+          "start": 3.58,
+          "end": 4.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 4.06,
+          "end": 4.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 2",
+          "start": 4.22,
+          "end": 4.42,
+          "probability": 0.62548828125
+        },
+        {
+          "word": " uur,",
+          "start": 4.42,
+          "end": 4.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " neem",
+          "start": 4.94,
+          "end": 5.14,
+          "probability": 1.0
+        },
+        {
+          "word": " uw",
+          "start": 5.14,
+          "end": 5.26,
+          "probability": 0.99609375
+        },
+        {
+          "word": " paspoort",
+          "start": 5.26,
+          "end": 5.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " mee.",
+          "start": 5.76,
+          "end": 5.94,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.18,
+      "end": 8.96,
+      "text": " Op dinsdag pakt de man zijn paspoort en de brief.",
+      "temperature": 0,
+      "avg_logprob": -0.07516669493455153,
+      "compression_ratio": 1.448,
+      "no_speech_prob": 6.4904917378150184e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 6.18,
+          "end": 6.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 6.44,
+          "end": 6.96,
+          "probability": 1.0
+        },
+        {
+          "word": " pakt",
+          "start": 6.96,
+          "end": 7.28,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " de",
+          "start": 7.28,
+          "end": 7.38,
+          "probability": 1.0
+        },
+        {
+          "word": " man",
+          "start": 7.38,
+          "end": 7.54,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 7.54,
+          "end": 7.74,
+          "probability": 1.0
+        },
+        {
+          "word": " paspoort",
+          "start": 7.74,
+          "end": 8.3,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 8.3,
+          "end": 8.52,
+          "probability": 0.97900390625
+        },
+        {
+          "word": " de",
+          "start": 8.52,
+          "end": 8.66,
+          "probability": 1.0
+        },
+        {
+          "word": " brief.",
+          "start": 8.66,
+          "end": 8.96,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.14,
+      "end": 10.28,
+      "text": " Hij gaat naar de gemeente.",
+      "temperature": 0,
+      "avg_logprob": -0.07516669493455153,
+      "compression_ratio": 1.448,
+      "no_speech_prob": 6.4904917378150184e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 9.14,
+          "end": 9.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gaat",
+          "start": 9.32,
+          "end": 9.56,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 9.56,
+          "end": 9.7,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 9.7,
+          "end": 9.82,
+          "probability": 1.0
+        },
+        {
+          "word": " gemeente.",
+          "start": 9.82,
+          "end": 10.28,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-73bcfa2780a8dc67",
+  "sha256": "d7c3ffad1ee3b94f2ebffd7627228df95ae18e17ab05ffbf76ebeb2abeb8460e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze ring is van goud.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.44,
+      "text": " Deze ring is van goud.",
+      "temperature": 0,
+      "avg_logprob": -0.0936167456886985,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.219072140265734e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.36,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " ring",
+          "start": 0.36,
+          "end": 0.64,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " is",
+          "start": 0.64,
+          "end": 0.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " van",
+          "start": 0.9,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " goud.",
+          "start": 1.04,
+          "end": 1.44,
+          "probability": 0.9951171875
+        }
+      ]
+    }
+  ]
+}

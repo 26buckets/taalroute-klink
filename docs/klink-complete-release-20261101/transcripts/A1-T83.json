@@ -1,0 +1,271 @@
+{
+  "id": "A1-T83",
+  "sha256": "ae94c83b65f89798745875a8b69beef0488027c9aa7ed063148cefe64fba8193",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In een winkel moet een medewerker drie dozen vullen. De eerste doos is al vol, de tweede doos is leeg en de derde doos is kapot. De medewerker vult de tweede doos en zet de derde apart.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.16,
+      "text": " In een winkel moet een medewerker drie dozen vullen.",
+      "temperature": 0,
+      "avg_logprob": -0.0675197769613827,
+      "compression_ratio": 1.608695652173913,
+      "no_speech_prob": 3.599532564374508e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " een",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " winkel",
+          "start": 0.26,
+          "end": 0.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 0.58,
+          "end": 0.74,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " een",
+          "start": 0.74,
+          "end": 0.86,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " medewerker",
+          "start": 0.86,
+          "end": 1.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " drie",
+          "start": 1.42,
+          "end": 1.6,
+          "probability": 0.8037109375
+        },
+        {
+          "word": " dozen",
+          "start": 1.6,
+          "end": 1.84,
+          "probability": 0.97265625
+        },
+        {
+          "word": " vullen.",
+          "start": 1.84,
+          "end": 2.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.48,
+      "end": 6.92,
+      "text": " De eerste doos is al vol, de tweede doos is leeg en de derde doos is kapot.",
+      "temperature": 0,
+      "avg_logprob": -0.0675197769613827,
+      "compression_ratio": 1.608695652173913,
+      "no_speech_prob": 3.599532564374508e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 2.48,
+          "end": 2.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " eerste",
+          "start": 2.96,
+          "end": 3.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " doos",
+          "start": 3.22,
+          "end": 3.5,
+          "probability": 0.97412109375
+        },
+        {
+          "word": " is",
+          "start": 3.5,
+          "end": 3.58,
+          "probability": 0.99609375
+        },
+        {
+          "word": " al",
+          "start": 3.58,
+          "end": 3.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vol,",
+          "start": 3.7,
+          "end": 3.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 4.4,
+          "end": 4.8,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " tweede",
+          "start": 4.8,
+          "end": 5.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " doos",
+          "start": 5.1,
+          "end": 5.32,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " is",
+          "start": 5.32,
+          "end": 5.42,
+          "probability": 0.94384765625
+        },
+        {
+          "word": " leeg",
+          "start": 5.42,
+          "end": 5.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " en",
+          "start": 5.78,
+          "end": 5.92,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " de",
+          "start": 5.92,
+          "end": 6.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " derde",
+          "start": 6.04,
+          "end": 6.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doos",
+          "start": 6.28,
+          "end": 6.5,
+          "probability": 0.984375
+        },
+        {
+          "word": " is",
+          "start": 6.5,
+          "end": 6.58,
+          "probability": 0.82568359375
+        },
+        {
+          "word": " kapot.",
+          "start": 6.58,
+          "end": 6.92,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.28,
+      "end": 9.96,
+      "text": " De medewerker vult de tweede doos en zet de derde apart.",
+      "temperature": 0,
+      "avg_logprob": -0.0675197769613827,
+      "compression_ratio": 1.608695652173913,
+      "no_speech_prob": 3.599532564374508e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.28,
+          "end": 7.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 7.68,
+          "end": 8.24,
+          "probability": 1.0
+        },
+        {
+          "word": " vult",
+          "start": 8.24,
+          "end": 8.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.46,
+          "end": 8.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " tweede",
+          "start": 8.58,
+          "end": 8.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " doos",
+          "start": 8.9,
+          "end": 9.16,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " en",
+          "start": 9.16,
+          "end": 9.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zet",
+          "start": 9.28,
+          "end": 9.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 9.46,
+          "end": 9.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " derde",
+          "start": 9.54,
+          "end": 9.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " apart.",
+          "start": 9.78,
+          "end": 9.96,
+          "probability": 0.99658203125
+        }
+      ]
+    }
+  ]
+}

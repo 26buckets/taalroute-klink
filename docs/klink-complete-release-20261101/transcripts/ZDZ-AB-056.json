@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-056",
+  "sha256": "8842355f082a0123e1bf0864d4dfeec7c058f174aa66ce40da78e02b72979213",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan morgen niet.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Ik kan morgen niet.",
+      "temperature": 0,
+      "avg_logprob": -0.12586313486099243,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 5.055040587509385e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.7861328125
+        },
+        {
+          "word": " kan",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " morgen",
+          "start": 0.3,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet.",
+          "start": 0.62,
+          "end": 0.9,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "id": "A1-T84",
+  "sha256": "5edf60e86fb1b5dae92a26a8b11b24a82331f89b2f356665f06dd6a3a54ae17d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw is verhuisd. Ze schrijft haar nieuwe adres op een kaart. Op maandag geeft ze de kaart aan een medewerker op school. De medewerker leest het adres en legt de kaart in een map. Dinsdag krijgt ze ook een bericht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.36,
+      "text": " Een vrouw is verhuisd. Ze schrijft haar nieuwe adres op een kaart.",
+      "temperature": 0,
+      "avg_logprob": -0.04739675870755824,
+      "compression_ratio": 1.5422535211267605,
+      "no_speech_prob": 6.191504340474774e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " vrouw",
+          "start": 0.12,
+          "end": 0.42,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.42,
+          "end": 0.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verhuisd.",
+          "start": 0.54,
+          "end": 1.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Ze",
+          "start": 1.24,
+          "end": 1.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " schrijft",
+          "start": 1.46,
+          "end": 1.86,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 1.86,
+          "end": 2.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 2.0,
+          "end": 2.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " adres",
+          "start": 2.22,
+          "end": 2.68,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 2.68,
+          "end": 2.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 2.84,
+          "end": 2.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kaart.",
+          "start": 2.96,
+          "end": 3.36,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.56,
+      "end": 6.36,
+      "text": " Op maandag geeft ze de kaart aan een medewerker op school.",
+      "temperature": 0,
+      "avg_logprob": -0.04739675870755824,
+      "compression_ratio": 1.5422535211267605,
+      "no_speech_prob": 6.191504340474774e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.56,
+          "end": 3.72,
+          "probability": 0.998046875
+        },
+        {
+          "word": " maandag",
+          "start": 3.72,
+          "end": 4.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geeft",
+          "start": 4.22,
+          "end": 4.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 4.54,
+          "end": 4.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 4.66,
+          "end": 4.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaart",
+          "start": 4.76,
+          "end": 5.04,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 5.04,
+          "end": 5.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 5.18,
+          "end": 5.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " medewerker",
+          "start": 5.34,
+          "end": 5.92,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 5.92,
+          "end": 6.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " school.",
+          "start": 6.06,
+          "end": 6.36,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.6,
+      "end": 9.52,
+      "text": " De medewerker leest het adres en legt de kaart in een map.",
+      "temperature": 0,
+      "avg_logprob": -0.04739675870755824,
+      "compression_ratio": 1.5422535211267605,
+      "no_speech_prob": 6.191504340474774e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.6,
+          "end": 6.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 6.78,
+          "end": 7.36,
+          "probability": 1.0
+        },
+        {
+          "word": " leest",
+          "start": 7.36,
+          "end": 7.68,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 7.68,
+          "end": 7.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " adres",
+          "start": 7.84,
+          "end": 8.2,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 8.2,
+          "end": 8.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " legt",
+          "start": 8.42,
+          "end": 8.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.66,
+          "end": 8.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kaart",
+          "start": 8.74,
+          "end": 9.02,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 9.02,
+          "end": 9.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 9.14,
+          "end": 9.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " map.",
+          "start": 9.26,
+          "end": 9.52,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.94,
+      "end": 11.66,
+      "text": " Dinsdag krijgt ze ook een bericht.",
+      "temperature": 0,
+      "avg_logprob": -0.04739675870755824,
+      "compression_ratio": 1.5422535211267605,
+      "no_speech_prob": 6.191504340474774e-12,
+      "words": [
+        {
+          "word": " Dinsdag",
+          "start": 9.94,
+          "end": 10.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " krijgt",
+          "start": 10.38,
+          "end": 10.82,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 10.82,
+          "end": 10.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ook",
+          "start": 10.92,
+          "end": 11.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 11.12,
+          "end": 11.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht.",
+          "start": 11.24,
+          "end": 11.66,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

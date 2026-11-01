@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-085",
+  "sha256": "18720f0e4a61114db4ed8c5641ae07cd75d95c95be899a7608a1b7ec6005cafa",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil volgende maand een nieuwe fiets kopen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.92,
+      "text": " Ik wil volgende maand een nieuwe fiets kopen.",
+      "temperature": 0,
+      "avg_logprob": -0.06028833985328674,
+      "compression_ratio": 0.8490566037735849,
+      "no_speech_prob": 3.831494583411699e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 0.28,
+          "end": 0.64,
+          "probability": 1.0
+        },
+        {
+          "word": " maand",
+          "start": 0.64,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.9,
+          "end": 1.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nieuwe",
+          "start": 1.04,
+          "end": 1.28,
+          "probability": 1.0
+        },
+        {
+          "word": " fiets",
+          "start": 1.28,
+          "end": 1.54,
+          "probability": 1.0
+        },
+        {
+          "word": " kopen.",
+          "start": 1.54,
+          "end": 1.92,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

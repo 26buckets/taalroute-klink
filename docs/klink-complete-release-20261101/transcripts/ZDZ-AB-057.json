@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-057",
+  "sha256": "50a0eae09c25d5aec12111028392fb576fc9bd4b2651adf9579ca8b6ad675132",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kan ik vrijdag komen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.86,
+      "text": " Kan ik vrijdag komen?",
+      "temperature": 0,
+      "avg_logprob": -0.07852008607652453,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.593175232520119e-12,
+      "words": [
+        {
+          "word": " Kan",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94970703125
+        },
+        {
+          "word": " ik",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 0.26,
+          "end": 0.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komen?",
+          "start": 0.58,
+          "end": 0.86,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-049",
+  "sha256": "333a51d9fc9514b74f7ef3ac1d6057f37af4325ecdc40cf0307605402b74b923",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb gewerkt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Ik heb gewerkt.",
+      "temperature": 0,
+      "avg_logprob": -0.1645190715789795,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 4.264525798464147e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.88037109375
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " gewerkt.",
+          "start": 0.26,
+          "end": 0.66,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

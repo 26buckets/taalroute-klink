@@ -1,0 +1,259 @@
+{
+  "id": "A1-T10",
+  "sha256": "3ce86aaa7d24b7eb5b3b91c2ed2723b6a8a0afb15731389c91bab55ebb9cb955",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de kledingwinkel past een klant een blauwe jas. De jas is te klein. De verkoper geeft haar een grotere jas. Die past goed. De klant koopt de grotere jas en betaalt met haar betaalpas.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.6,
+      "text": " In de kledingwinkel past een klant een blauwe jas.",
+      "temperature": 0,
+      "avg_logprob": -0.06524163398189821,
+      "compression_ratio": 1.5630252100840336,
+      "no_speech_prob": 5.189776126207635e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.986328125
+        },
+        {
+          "word": " de",
+          "start": 0.12,
+          "end": 0.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kledingwinkel",
+          "start": 0.2,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " past",
+          "start": 0.9,
+          "end": 1.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 1.2,
+          "end": 1.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " klant",
+          "start": 1.36,
+          "end": 1.72,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 1.72,
+          "end": 1.92,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " blauwe",
+          "start": 1.92,
+          "end": 2.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas.",
+          "start": 2.3,
+          "end": 2.6,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.78,
+      "end": 7.16,
+      "text": " De jas is te klein. De verkoper geeft haar een grotere jas. Die past goed.",
+      "temperature": 0,
+      "avg_logprob": -0.06524163398189821,
+      "compression_ratio": 1.5630252100840336,
+      "no_speech_prob": 5.189776126207635e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 2.78,
+          "end": 3.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " jas",
+          "start": 3.04,
+          "end": 3.32,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 3.32,
+          "end": 3.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 3.52,
+          "end": 3.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klein.",
+          "start": 3.66,
+          "end": 3.96,
+          "probability": 1.0
+        },
+        {
+          "word": " De",
+          "start": 4.2,
+          "end": 4.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkoper",
+          "start": 4.34,
+          "end": 4.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " geeft",
+          "start": 4.9,
+          "end": 5.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 5.2,
+          "end": 5.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 5.32,
+          "end": 5.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " grotere",
+          "start": 5.48,
+          "end": 5.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas.",
+          "start": 5.96,
+          "end": 6.32,
+          "probability": 1.0
+        },
+        {
+          "word": " Die",
+          "start": 6.44,
+          "end": 6.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " past",
+          "start": 6.64,
+          "end": 6.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " goed.",
+          "start": 6.88,
+          "end": 7.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.36,
+      "end": 10.52,
+      "text": " De klant koopt de grotere jas en betaalt met haar betaalpas.",
+      "temperature": 0,
+      "avg_logprob": -0.06524163398189821,
+      "compression_ratio": 1.5630252100840336,
+      "no_speech_prob": 5.189776126207635e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.36,
+          "end": 7.52,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 7.52,
+          "end": 7.82,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt",
+          "start": 7.82,
+          "end": 8.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 8.12,
+          "end": 8.22,
+          "probability": 0.994140625
+        },
+        {
+          "word": " grotere",
+          "start": 8.22,
+          "end": 8.62,
+          "probability": 1.0
+        },
+        {
+          "word": " jas",
+          "start": 8.62,
+          "end": 8.92,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 8.92,
+          "end": 9.12,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " betaalt",
+          "start": 9.12,
+          "end": 9.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 9.52,
+          "end": 9.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 9.68,
+          "end": 9.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " betaalpas.",
+          "start": 9.9,
+          "end": 10.52,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

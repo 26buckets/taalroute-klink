@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-070",
+  "sha256": "ae20bd4da117dc279ea4ab236c7880f5989be0e44462dcabe266fc431714c7a6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De les begint morgen om 9 uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.52,
+      "text": " De les begint morgen om 9 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.10254540810218224,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.8442925058557176e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " les",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " begint",
+          "start": 0.3,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " morgen",
+          "start": 0.56,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 0.8,
+          "end": 1.0,
+          "probability": 0.95361328125
+        },
+        {
+          "word": " 9",
+          "start": 1.0,
+          "end": 1.22,
+          "probability": 0.87109375
+        },
+        {
+          "word": " uur.",
+          "start": 1.22,
+          "end": 1.52,
+          "probability": 0.9912109375
+        }
+      ]
+    }
+  ]
+}

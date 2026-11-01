@@ -1,0 +1,635 @@
+{
+  "id": "B1-FL-045",
+  "sha256": "9a778f3fc568eef9fdb8d709f338ef2d1da9edaa55865ec0683027cd2a9a269d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de wasserij maakt Joel schone handdoeken klaar voor verschillende hotels. Op een ochtend merkt hij dat op twee stapels de verkeerde labels zitten. De handdoeken zijn nog niet verzonden. Hij meldt de fout bij zijn collega en samen controleren ze de bestellingen opnieuw. Daarna stelt Joel voor om de naam van het hotel al te controleren voordat de handdoeken worden ingepakt. De teamleider wil deze werkwijze een week testen. Aan het einde van die week blijkt dat het team minder tijd kwijt is aan het herstellen van fouten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.26,
+      "text": " In de wasserij maakt Joel schone handdoeken klaar voor verschillende hotels.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wasserij",
+          "start": 0.24,
+          "end": 0.68,
+          "probability": 0.986328125
+        },
+        {
+          "word": " maakt",
+          "start": 0.68,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Joel",
+          "start": 0.94,
+          "end": 1.16,
+          "probability": 0.84033203125
+        },
+        {
+          "word": " schone",
+          "start": 1.16,
+          "end": 1.66,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " handdoeken",
+          "start": 1.66,
+          "end": 2.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klaar",
+          "start": 2.06,
+          "end": 2.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 2.34,
+          "end": 2.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verschillende",
+          "start": 2.48,
+          "end": 2.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hotels.",
+          "start": 2.94,
+          "end": 3.26,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.8200000000000007,
+      "end": 7.34,
+      "text": " Op een ochtend merkt hij dat op twee stapels de verkeerde labels zitten.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.8200000000000007,
+          "end": 4.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 4.38,
+          "end": 4.5,
+          "probability": 1.0
+        },
+        {
+          "word": " ochtend",
+          "start": 4.5,
+          "end": 4.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " merkt",
+          "start": 4.94,
+          "end": 5.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " hij",
+          "start": 5.26,
+          "end": 5.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 5.38,
+          "end": 5.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 5.54,
+          "end": 5.68,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " twee",
+          "start": 5.68,
+          "end": 5.88,
+          "probability": 0.94580078125
+        },
+        {
+          "word": " stapels",
+          "start": 5.88,
+          "end": 6.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 6.32,
+          "end": 6.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkeerde",
+          "start": 6.44,
+          "end": 6.76,
+          "probability": 1.0
+        },
+        {
+          "word": " labels",
+          "start": 6.76,
+          "end": 7.04,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " zitten.",
+          "start": 7.04,
+          "end": 7.34,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.74,
+      "end": 9.4,
+      "text": " De handdoeken zijn nog niet verzonden.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.74,
+          "end": 8.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " handdoeken",
+          "start": 8.16,
+          "end": 8.58,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 8.58,
+          "end": 8.72,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 8.72,
+          "end": 8.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 8.88,
+          "end": 9.02,
+          "probability": 1.0
+        },
+        {
+          "word": " verzonden.",
+          "start": 9.02,
+          "end": 9.4,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.96,
+      "end": 14.36,
+      "text": " Hij meldt de fout bij zijn collega en samen controleren ze de bestellingen opnieuw.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 9.96,
+          "end": 10.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " meldt",
+          "start": 10.4,
+          "end": 10.64,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 10.64,
+          "end": 10.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fout",
+          "start": 10.74,
+          "end": 10.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 10.96,
+          "end": 11.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 11.14,
+          "end": 11.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega",
+          "start": 11.3,
+          "end": 11.76,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 11.76,
+          "end": 12.42,
+          "probability": 0.951171875
+        },
+        {
+          "word": " samen",
+          "start": 12.42,
+          "end": 12.8,
+          "probability": 1.0
+        },
+        {
+          "word": " controleren",
+          "start": 12.8,
+          "end": 13.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ze",
+          "start": 13.4,
+          "end": 13.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 13.48,
+          "end": 13.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bestellingen",
+          "start": 13.6,
+          "end": 14.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opnieuw.",
+          "start": 14.06,
+          "end": 14.36,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.16,
+      "end": 19.48,
+      "text": " Daarna stelt Joel voor om de naam van het hotel al te controleren voordat de handdoeken worden ingepakt.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 15.16,
+          "end": 15.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stelt",
+          "start": 15.42,
+          "end": 15.76,
+          "probability": 0.95166015625
+        },
+        {
+          "word": " Joel",
+          "start": 15.76,
+          "end": 16.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 16.04,
+          "end": 16.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 16.32,
+          "end": 16.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 16.5,
+          "end": 16.58,
+          "probability": 1.0
+        },
+        {
+          "word": " naam",
+          "start": 16.58,
+          "end": 16.78,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 16.78,
+          "end": 16.88,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 16.88,
+          "end": 17.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hotel",
+          "start": 17.0,
+          "end": 17.28,
+          "probability": 1.0
+        },
+        {
+          "word": " al",
+          "start": 17.28,
+          "end": 17.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 17.46,
+          "end": 17.56,
+          "probability": 1.0
+        },
+        {
+          "word": " controleren",
+          "start": 17.56,
+          "end": 18.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voordat",
+          "start": 18.12,
+          "end": 18.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 18.42,
+          "end": 18.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " handdoeken",
+          "start": 18.5,
+          "end": 18.84,
+          "probability": 1.0
+        },
+        {
+          "word": " worden",
+          "start": 18.84,
+          "end": 19.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ingepakt.",
+          "start": 19.0,
+          "end": 19.48,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 20.12,
+      "end": 22.66,
+      "text": " De teamleider wil deze werkwijze een week testen.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.12,
+          "end": 20.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " teamleider",
+          "start": 20.54,
+          "end": 21.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 21.02,
+          "end": 21.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " deze",
+          "start": 21.18,
+          "end": 21.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werkwijze",
+          "start": 21.42,
+          "end": 21.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 21.92,
+          "end": 22.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " week",
+          "start": 22.04,
+          "end": 22.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " testen.",
+          "start": 22.24,
+          "end": 22.66,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.12,
+      "end": 27.32,
+      "text": " Aan het einde van die week blijkt dat het team minder tijd kwijt is aan het herstellen van fouten.",
+      "temperature": 0,
+      "avg_logprob": -0.0884945259331176,
+      "compression_ratio": 1.7891156462585034,
+      "no_speech_prob": 4.8630821591899576e-12,
+      "words": [
+        {
+          "word": " Aan",
+          "start": 23.12,
+          "end": 23.6,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 23.6,
+          "end": 23.7,
+          "probability": 1.0
+        },
+        {
+          "word": " einde",
+          "start": 23.7,
+          "end": 23.98,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 23.98,
+          "end": 24.1,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 24.1,
+          "end": 24.22,
+          "probability": 0.9921875
+        },
+        {
+          "word": " week",
+          "start": 24.22,
+          "end": 24.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blijkt",
+          "start": 24.48,
+          "end": 24.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 24.78,
+          "end": 24.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 24.88,
+          "end": 25.0,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " team",
+          "start": 25.0,
+          "end": 25.2,
+          "probability": 1.0
+        },
+        {
+          "word": " minder",
+          "start": 25.2,
+          "end": 25.48,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd",
+          "start": 25.48,
+          "end": 25.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kwijt",
+          "start": 25.76,
+          "end": 26.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 26.12,
+          "end": 26.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 26.2,
+          "end": 26.32,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 26.32,
+          "end": 26.42,
+          "probability": 1.0
+        },
+        {
+          "word": " herstellen",
+          "start": 26.42,
+          "end": 26.76,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 26.76,
+          "end": 26.96,
+          "probability": 1.0
+        },
+        {
+          "word": " fouten.",
+          "start": 26.96,
+          "end": 27.32,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

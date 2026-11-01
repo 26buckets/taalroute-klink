@@ -1,0 +1,89 @@
+{
+  "id": "klink-sentence-46ac46f482044838",
+  "sha256": "d8f966ceac188348ebea796943328cf4798ae72e075e89d19276dc93c545d1e0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Is er op de stoep genoeg ruimte om langs te lopen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.44,
+      "text": " Is er op de stoep genoeg ruimte om langs te lopen?",
+      "temperature": 0,
+      "avg_logprob": -0.04645474751790365,
+      "compression_ratio": 0.8928571428571429,
+      "no_speech_prob": 5.2742376438486005e-12,
+      "words": [
+        {
+          "word": " Is",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.93798828125
+        },
+        {
+          "word": " er",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " op",
+          "start": 0.3,
+          "end": 0.38,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " de",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " stoep",
+          "start": 0.52,
+          "end": 0.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " genoeg",
+          "start": 0.82,
+          "end": 1.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ruimte",
+          "start": 1.2,
+          "end": 1.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " om",
+          "start": 1.62,
+          "end": 1.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " langs",
+          "start": 1.78,
+          "end": 2.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " te",
+          "start": 2.06,
+          "end": 2.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lopen?",
+          "start": 2.14,
+          "end": 2.44,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

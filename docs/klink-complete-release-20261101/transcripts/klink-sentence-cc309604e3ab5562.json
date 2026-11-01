@@ -1,0 +1,71 @@
+{
+  "id": "klink-sentence-cc309604e3ab5562",
+  "sha256": "2fe0ed6e59ee18a59fad782dce6ead57d79b1dc6ec52abba1c558c43192d507d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wil je stop zeggen als ik moet ophouden?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.9,
+      "text": " Wil je stop zeggen als ik moet ophouden?",
+      "temperature": 0,
+      "avg_logprob": -0.06300617853800455,
+      "compression_ratio": 0.8333333333333334,
+      "no_speech_prob": 3.9041348279256205e-12,
+      "words": [
+        {
+          "word": " Wil",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.904296875
+        },
+        {
+          "word": " je",
+          "start": 0.18,
+          "end": 0.28,
+          "probability": 0.99609375
+        },
+        {
+          "word": " stop",
+          "start": 0.28,
+          "end": 0.64,
+          "probability": 0.7890625
+        },
+        {
+          "word": " zeggen",
+          "start": 0.64,
+          "end": 0.96,
+          "probability": 0.92724609375
+        },
+        {
+          "word": " als",
+          "start": 0.96,
+          "end": 1.24,
+          "probability": 0.95849609375
+        },
+        {
+          "word": " ik",
+          "start": 1.24,
+          "end": 1.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " moet",
+          "start": 1.34,
+          "end": 1.48,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ophouden?",
+          "start": 1.48,
+          "end": 1.9,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

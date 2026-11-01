@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-460b48691f29d062",
+  "sha256": "68d30b6d7c4c1ba80a9bfdfcf1252909314a879227d63adaaccf3d79a8305e6c",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kok werkt in de keuken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " De kok werkt in de keuken.",
+      "temperature": 0,
+      "avg_logprob": -0.16815746747530425,
+      "compression_ratio": 0.8125,
+      "no_speech_prob": 0.006221354939043522,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.919921875
+        },
+        {
+          "word": " kok",
+          "start": 0.12,
+          "end": 0.32,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " werkt",
+          "start": 0.32,
+          "end": 0.82,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " in",
+          "start": 0.82,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.94,
+          "end": 1.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " keuken.",
+          "start": 1.0,
+          "end": 1.48,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

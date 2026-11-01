@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-b1cbd09a92356491",
+  "sha256": "9c9ef4f89198338a6ac09ab107e50d651c984ef2f0f6c0a8ff745088ac6cebc8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Eline doet de voordeur open.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " Eline doet de voordeur open.",
+      "temperature": 0,
+      "avg_logprob": -0.12476555506388347,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.043909304640714e-12,
+      "words": [
+        {
+          "word": " Eline",
+          "start": 0.0,
+          "end": 0.36,
+          "probability": 0.939453125
+        },
+        {
+          "word": " doet",
+          "start": 0.36,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voordeur",
+          "start": 0.74,
+          "end": 1.16,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " open.",
+          "start": 1.16,
+          "end": 1.5,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

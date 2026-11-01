@@ -1,0 +1,630 @@
+{
+  "id": "A2-T96",
+  "sha256": "13c172b7e1e0e2a19bc5f6d36977b5600c4ebf1d5f8e18b4a710e022977e0a8f",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De wijkraad organiseert donderdagavond een bijeenkomst over huren. Inwoners kunnen vragen stellen over servicekosten en onderhoud. De avond begint om half acht in de grote zaal van het buurthuis. Bij de ingang geeft een vrijwilliger bezoekers kaartjes om hun vragen op te schrijven. Wie niet aanwezig kan zijn, mag uiterlijk woensdagmiddag een vraag mailen. De organisator verzamelt de gemailde vragen op woensdagmiddag, maar belooft niet dat elke vraag tijdens de bijeenkomst wordt besproken. Na afloop komt er een korte samenvatting op de website van de wijkraad.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.92,
+      "text": " De wijkraad organiseert donderdagavond een bijeenkomst over huren.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.1,
+          "probability": 0.99609375
+        },
+        {
+          "word": " wijkraad",
+          "start": 0.1,
+          "end": 0.6,
+          "probability": 0.98046875
+        },
+        {
+          "word": " organiseert",
+          "start": 0.6,
+          "end": 1.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " donderdagavond",
+          "start": 1.14,
+          "end": 1.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.84,
+          "end": 1.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bijeenkomst",
+          "start": 1.94,
+          "end": 2.4,
+          "probability": 1.0
+        },
+        {
+          "word": " over",
+          "start": 2.4,
+          "end": 2.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " huren.",
+          "start": 2.54,
+          "end": 2.92,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.5,
+      "end": 6.48,
+      "text": " Inwoners kunnen vragen stellen over servicekosten en onderhoud.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " Inwoners",
+          "start": 3.5,
+          "end": 4.02,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 4.02,
+          "end": 4.16,
+          "probability": 1.0
+        },
+        {
+          "word": " vragen",
+          "start": 4.16,
+          "end": 4.58,
+          "probability": 1.0
+        },
+        {
+          "word": " stellen",
+          "start": 4.58,
+          "end": 4.76,
+          "probability": 1.0
+        },
+        {
+          "word": " over",
+          "start": 4.76,
+          "end": 5.04,
+          "probability": 1.0
+        },
+        {
+          "word": " servicekosten",
+          "start": 5.04,
+          "end": 5.72,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " en",
+          "start": 5.72,
+          "end": 6.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " onderhoud.",
+          "start": 6.02,
+          "end": 6.48,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.86,
+      "end": 9.9,
+      "text": " De avond begint om half acht in de grote zaal van het buurthuis.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.86,
+          "end": 7.38,
+          "probability": 1.0
+        },
+        {
+          "word": " avond",
+          "start": 7.38,
+          "end": 7.76,
+          "probability": 1.0
+        },
+        {
+          "word": " begint",
+          "start": 7.76,
+          "end": 8.02,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 8.02,
+          "end": 8.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " half",
+          "start": 8.14,
+          "end": 8.26,
+          "probability": 0.99609375
+        },
+        {
+          "word": " acht",
+          "start": 8.26,
+          "end": 8.5,
+          "probability": 0.7919921875
+        },
+        {
+          "word": " in",
+          "start": 8.5,
+          "end": 8.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.72,
+          "end": 8.76,
+          "probability": 1.0
+        },
+        {
+          "word": " grote",
+          "start": 8.76,
+          "end": 8.98,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " zaal",
+          "start": 8.98,
+          "end": 9.28,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 9.28,
+          "end": 9.36,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 9.36,
+          "end": 9.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buurthuis.",
+          "start": 9.46,
+          "end": 9.9,
+          "probability": 0.994140625
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.34,
+      "end": 14.2,
+      "text": " Bij de ingang geeft een vrijwilliger bezoekers kaartjes om hun vragen op te schrijven.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 10.34,
+          "end": 10.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.86,
+          "end": 10.94,
+          "probability": 1.0
+        },
+        {
+          "word": " ingang",
+          "start": 10.94,
+          "end": 11.32,
+          "probability": 1.0
+        },
+        {
+          "word": " geeft",
+          "start": 11.32,
+          "end": 11.56,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 11.56,
+          "end": 11.66,
+          "probability": 0.8896484375
+        },
+        {
+          "word": " vrijwilliger",
+          "start": 11.66,
+          "end": 12.12,
+          "probability": 0.861328125
+        },
+        {
+          "word": " bezoekers",
+          "start": 12.12,
+          "end": 12.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kaartjes",
+          "start": 12.54,
+          "end": 12.96,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 12.96,
+          "end": 13.08,
+          "probability": 0.9921875
+        },
+        {
+          "word": " hun",
+          "start": 13.08,
+          "end": 13.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vragen",
+          "start": 13.2,
+          "end": 13.56,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 13.56,
+          "end": 13.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 13.68,
+          "end": 13.78,
+          "probability": 1.0
+        },
+        {
+          "word": " schrijven.",
+          "start": 13.78,
+          "end": 14.2,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.54,
+      "end": 18.12,
+      "text": " Wie niet aanwezig kan zijn, mag uiterlijk woensdagmiddag een vraag mailen.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 14.54,
+          "end": 15.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 15.06,
+          "end": 15.2,
+          "probability": 1.0
+        },
+        {
+          "word": " aanwezig",
+          "start": 15.2,
+          "end": 15.66,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 15.66,
+          "end": 15.8,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn,",
+          "start": 15.8,
+          "end": 16.08,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 16.14,
+          "end": 16.4,
+          "probability": 1.0
+        },
+        {
+          "word": " uiterlijk",
+          "start": 16.4,
+          "end": 16.86,
+          "probability": 1.0
+        },
+        {
+          "word": " woensdagmiddag",
+          "start": 16.86,
+          "end": 17.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 17.42,
+          "end": 17.52,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " vraag",
+          "start": 17.52,
+          "end": 17.72,
+          "probability": 1.0
+        },
+        {
+          "word": " mailen.",
+          "start": 17.72,
+          "end": 18.12,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.44,
+      "end": 21.66,
+      "text": " De organisator verzamelt de gemailde vragen op woensdagmiddag,",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.44,
+          "end": 18.96,
+          "probability": 1.0
+        },
+        {
+          "word": " organisator",
+          "start": 18.96,
+          "end": 19.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verzamelt",
+          "start": 19.64,
+          "end": 20.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 20.14,
+          "end": 20.2,
+          "probability": 1.0
+        },
+        {
+          "word": " gemailde",
+          "start": 20.2,
+          "end": 20.52,
+          "probability": 0.91552734375
+        },
+        {
+          "word": " vragen",
+          "start": 20.52,
+          "end": 20.92,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 20.92,
+          "end": 21.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdagmiddag,",
+          "start": 21.04,
+          "end": 21.66,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.74,
+      "end": 25.48,
+      "text": " maar belooft niet dat elke vraag tijdens de bijeenkomst wordt besproken.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " maar",
+          "start": 21.74,
+          "end": 22.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " belooft",
+          "start": 22.32,
+          "end": 22.74,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " niet",
+          "start": 22.74,
+          "end": 22.92,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 22.92,
+          "end": 23.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " elke",
+          "start": 23.24,
+          "end": 23.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraag",
+          "start": 23.58,
+          "end": 23.82,
+          "probability": 1.0
+        },
+        {
+          "word": " tijdens",
+          "start": 23.82,
+          "end": 24.22,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 24.22,
+          "end": 24.3,
+          "probability": 1.0
+        },
+        {
+          "word": " bijeenkomst",
+          "start": 24.3,
+          "end": 24.84,
+          "probability": 1.0
+        },
+        {
+          "word": " wordt",
+          "start": 24.84,
+          "end": 24.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " besproken.",
+          "start": 24.96,
+          "end": 25.48,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 25.86,
+      "end": 29.12,
+      "text": " Na afloop komt er een korte samenvatting op de website van de wijkraad.",
+      "temperature": 0,
+      "avg_logprob": -0.059425157049427864,
+      "compression_ratio": 1.7384615384615385,
+      "no_speech_prob": 0.0008038715459406376,
+      "words": [
+        {
+          "word": " Na",
+          "start": 25.86,
+          "end": 26.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afloop",
+          "start": 26.16,
+          "end": 26.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 26.56,
+          "end": 26.78,
+          "probability": 1.0
+        },
+        {
+          "word": " er",
+          "start": 26.78,
+          "end": 26.92,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 26.92,
+          "end": 27.04,
+          "probability": 1.0
+        },
+        {
+          "word": " korte",
+          "start": 27.04,
+          "end": 27.3,
+          "probability": 1.0
+        },
+        {
+          "word": " samenvatting",
+          "start": 27.3,
+          "end": 27.9,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 27.9,
+          "end": 28.0,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 28.0,
+          "end": 28.08,
+          "probability": 1.0
+        },
+        {
+          "word": " website",
+          "start": 28.08,
+          "end": 28.34,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 28.34,
+          "end": 28.56,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 28.56,
+          "end": 28.66,
+          "probability": 1.0
+        },
+        {
+          "word": " wijkraad.",
+          "start": 28.66,
+          "end": 29.12,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

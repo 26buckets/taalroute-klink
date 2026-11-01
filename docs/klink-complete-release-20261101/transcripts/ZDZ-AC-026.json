@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-026",
+  "sha256": "e5143a6771a9580656771478d762325517128bc36abeaa8bd1c12eaea5daee1a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik hier bij u zitten?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Mag ik hier bij u zitten?",
+      "temperature": 0,
+      "avg_logprob": -0.12668414115905763,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.4831235078424125e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9375
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hier",
+          "start": 0.3,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 0.44,
+          "end": 0.58,
+          "probability": 0.982421875
+        },
+        {
+          "word": " u",
+          "start": 0.58,
+          "end": 0.76,
+          "probability": 0.990234375
+        },
+        {
+          "word": " zitten?",
+          "start": 0.76,
+          "end": 0.94,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

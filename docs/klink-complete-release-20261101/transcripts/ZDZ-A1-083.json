@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-083",
+  "sha256": "694f1103530d17f1d43680da5c961b780129d33263b8f87e460aad9bae4eb893",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Morgen ga ik naar mijn zus.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Morgen ga ik naar mijn zus.",
+      "temperature": 0,
+      "avg_logprob": -0.10063309669494629,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.664229506096129e-12,
+      "words": [
+        {
+          "word": " Morgen",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.91552734375
+        },
+        {
+          "word": " ga",
+          "start": 0.32,
+          "end": 0.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ik",
+          "start": 0.54,
+          "end": 0.62,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 0.62,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.72,
+          "end": 0.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zus.",
+          "start": 0.9,
+          "end": 1.14,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

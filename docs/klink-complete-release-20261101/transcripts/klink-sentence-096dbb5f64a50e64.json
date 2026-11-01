@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-096dbb5f64a50e64",
+  "sha256": "c66234caa9622d3c6ce56e24953c0bb8f059ea95a30274a47d3e83bbeee181fd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik veeg de tafel met de doek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.7,
+      "text": " Ik veeg de tafel met de doek.",
+      "temperature": 0,
+      "avg_logprob": -0.07900582041059222,
+      "compression_ratio": 0.8529411764705882,
+      "no_speech_prob": 5.0310766837313725e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " veeg",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 0.48,
+          "end": 0.64,
+          "probability": 0.99609375
+        },
+        {
+          "word": " tafel",
+          "start": 0.64,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 1.1,
+          "end": 1.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.32,
+          "end": 1.42,
+          "probability": 0.630859375
+        },
+        {
+          "word": " doek.",
+          "start": 1.42,
+          "end": 1.7,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,611 @@
+{
+  "id": "B1-FL-100",
+  "sha256": "c08c6bf7be94adf3d0efee2dd5e7aa4c51f878e344ef859ca6ea7d503a1a6fad",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bij een re-integratiebedrijf schrijft coach Robin een kort verslag van een gesprek met een deelnemer. De deelnemer heeft verteld dat hij moeite heeft met een taak op het werk. Robin wil de werkgever laten weten welke begeleiding kan helpen, maar niet alle persoonlijke informatie delen. Hij vraagt de deelnemer eerst welke punten in het bericht mogen staan. Samen kiezen ze twee praktische afspraken voor de volgende werkweek. Robin stuurt alleen die afspraken naar de werkgever. Het volledige gespreksverslag bewaart hij in het eigen dossier.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.92,
+      "text": " Bij een re-integratiebedrijf schrijft coach Robin een kort verslag van een gesprek met een deelnemer.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " een",
+          "start": 0.24,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " re",
+          "start": 0.4,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": "-integratiebedrijf",
+          "start": 0.62,
+          "end": 1.56,
+          "probability": 0.90234375
+        },
+        {
+          "word": " schrijft",
+          "start": 1.56,
+          "end": 1.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " coach",
+          "start": 1.9,
+          "end": 2.16,
+          "probability": 0.927734375
+        },
+        {
+          "word": " Robin",
+          "start": 2.16,
+          "end": 2.5,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " een",
+          "start": 2.5,
+          "end": 2.76,
+          "probability": 0.98828125
+        },
+        {
+          "word": " kort",
+          "start": 2.76,
+          "end": 3.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verslag",
+          "start": 3.0,
+          "end": 3.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " van",
+          "start": 3.42,
+          "end": 3.58,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " een",
+          "start": 3.58,
+          "end": 3.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gesprek",
+          "start": 3.72,
+          "end": 4.12,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 4.12,
+          "end": 4.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 4.26,
+          "end": 4.38,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " deelnemer.",
+          "start": 4.38,
+          "end": 4.92,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.1,
+      "end": 8.58,
+      "text": " De deelnemer heeft verteld dat hij moeite heeft met een taak op het werk.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.1,
+          "end": 5.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deelnemer",
+          "start": 5.28,
+          "end": 5.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 5.82,
+          "end": 6.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verteld",
+          "start": 6.04,
+          "end": 6.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 6.48,
+          "end": 6.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 6.7,
+          "end": 6.84,
+          "probability": 1.0
+        },
+        {
+          "word": " moeite",
+          "start": 6.84,
+          "end": 7.18,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 7.18,
+          "end": 7.48,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 7.48,
+          "end": 7.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 7.66,
+          "end": 7.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " taak",
+          "start": 7.8,
+          "end": 8.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 8.1,
+          "end": 8.24,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 8.24,
+          "end": 8.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk.",
+          "start": 8.36,
+          "end": 8.58,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.94,
+      "end": 14.54,
+      "text": " Robin wil de werkgever laten weten welke begeleiding kan helpen, maar niet alle persoonlijke informatie delen.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " Robin",
+          "start": 8.94,
+          "end": 9.3,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 9.3,
+          "end": 9.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 9.48,
+          "end": 9.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werkgever",
+          "start": 9.6,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " laten",
+          "start": 10.18,
+          "end": 10.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weten",
+          "start": 10.4,
+          "end": 10.76,
+          "probability": 1.0
+        },
+        {
+          "word": " welke",
+          "start": 10.76,
+          "end": 11.16,
+          "probability": 1.0
+        },
+        {
+          "word": " begeleiding",
+          "start": 11.16,
+          "end": 11.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 11.66,
+          "end": 11.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " helpen,",
+          "start": 11.82,
+          "end": 12.26,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 12.36,
+          "end": 12.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " niet",
+          "start": 12.54,
+          "end": 12.76,
+          "probability": 1.0
+        },
+        {
+          "word": " alle",
+          "start": 12.76,
+          "end": 13.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " persoonlijke",
+          "start": 13.04,
+          "end": 13.6,
+          "probability": 1.0
+        },
+        {
+          "word": " informatie",
+          "start": 13.6,
+          "end": 14.2,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " delen.",
+          "start": 14.2,
+          "end": 14.54,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 14.64,
+      "end": 17.92,
+      "text": " Hij vraagt de deelnemer eerst welke punten in het bericht mogen staan.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 14.64,
+          "end": 14.82,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 14.82,
+          "end": 15.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 15.18,
+          "end": 15.28,
+          "probability": 1.0
+        },
+        {
+          "word": " deelnemer",
+          "start": 15.28,
+          "end": 15.78,
+          "probability": 1.0
+        },
+        {
+          "word": " eerst",
+          "start": 15.78,
+          "end": 16.14,
+          "probability": 1.0
+        },
+        {
+          "word": " welke",
+          "start": 16.14,
+          "end": 16.46,
+          "probability": 1.0
+        },
+        {
+          "word": " punten",
+          "start": 16.46,
+          "end": 16.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 16.8,
+          "end": 16.94,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 16.94,
+          "end": 17.06,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht",
+          "start": 17.06,
+          "end": 17.36,
+          "probability": 1.0
+        },
+        {
+          "word": " mogen",
+          "start": 17.36,
+          "end": 17.64,
+          "probability": 1.0
+        },
+        {
+          "word": " staan.",
+          "start": 17.64,
+          "end": 17.92,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 18.18,
+      "end": 21.5,
+      "text": " Samen kiezen ze twee praktische afspraken voor de volgende werkweek.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " Samen",
+          "start": 18.18,
+          "end": 18.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kiezen",
+          "start": 18.6,
+          "end": 18.92,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 18.92,
+          "end": 19.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " twee",
+          "start": 19.08,
+          "end": 19.28,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " praktische",
+          "start": 19.28,
+          "end": 19.82,
+          "probability": 1.0
+        },
+        {
+          "word": " afspraken",
+          "start": 19.82,
+          "end": 20.36,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 20.36,
+          "end": 20.56,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.56,
+          "end": 20.66,
+          "probability": 1.0
+        },
+        {
+          "word": " volgende",
+          "start": 20.66,
+          "end": 21.06,
+          "probability": 1.0
+        },
+        {
+          "word": " werkweek.",
+          "start": 21.06,
+          "end": 21.5,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 21.7,
+      "end": 24.32,
+      "text": " Robin stuurt alleen die afspraken naar de werkgever.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " Robin",
+          "start": 21.7,
+          "end": 22.04,
+          "probability": 1.0
+        },
+        {
+          "word": " stuurt",
+          "start": 22.04,
+          "end": 22.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alleen",
+          "start": 22.34,
+          "end": 22.62,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 22.62,
+          "end": 22.78,
+          "probability": 0.99609375
+        },
+        {
+          "word": " afspraken",
+          "start": 22.78,
+          "end": 23.36,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 23.36,
+          "end": 23.58,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 23.58,
+          "end": 23.7,
+          "probability": 1.0
+        },
+        {
+          "word": " werkgever.",
+          "start": 23.7,
+          "end": 24.32,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 24.46,
+      "end": 27.56,
+      "text": " Het volledige gespreksverslag bewaart hij in het eigen dossier.",
+      "temperature": 0,
+      "avg_logprob": -0.041891319611493276,
+      "compression_ratio": 1.8221476510067114,
+      "no_speech_prob": 7.242455767053624e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 24.46,
+          "end": 24.62,
+          "probability": 1.0
+        },
+        {
+          "word": " volledige",
+          "start": 24.62,
+          "end": 25.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gespreksverslag",
+          "start": 25.14,
+          "end": 26.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bewaart",
+          "start": 26.02,
+          "end": 26.44,
+          "probability": 0.994140625
+        },
+        {
+          "word": " hij",
+          "start": 26.44,
+          "end": 26.58,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 26.58,
+          "end": 26.76,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 26.76,
+          "end": 26.9,
+          "probability": 1.0
+        },
+        {
+          "word": " eigen",
+          "start": 26.9,
+          "end": 27.14,
+          "probability": 1.0
+        },
+        {
+          "word": " dossier.",
+          "start": 27.14,
+          "end": 27.56,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

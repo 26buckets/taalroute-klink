@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-029",
+  "sha256": "2662062b7366507329fbc890d5f960d16e0c324c8713dd817e8d53b1ad391a73",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik de deur openen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Mag ik de deur openen?",
+      "temperature": 0,
+      "avg_logprob": -0.22951672293923117,
+      "compression_ratio": 0.7857142857142857,
+      "no_speech_prob": 4.163914872623575e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.60205078125
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.3,
+          "end": 0.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " deur",
+          "start": 0.4,
+          "end": 0.64,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " openen?",
+          "start": 0.64,
+          "end": 1.08,
+          "probability": 0.994140625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-62ade70781e2d7d0",
+  "sha256": "a36c02cb2481401c9f0acce0f5b51b4c87aa01d348191393a5883b3abc626ca6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De paarden staan in de wei.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.44,
+      "text": " De paarden staan in de wei.",
+      "temperature": 0,
+      "avg_logprob": -0.10737200578053792,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 3.810578155100108e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92041015625
+        },
+        {
+          "word": " paarden",
+          "start": 0.16,
+          "end": 0.56,
+          "probability": 0.994140625
+        },
+        {
+          "word": " staan",
+          "start": 0.56,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 0.86,
+          "end": 1.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.06,
+          "end": 1.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wei.",
+          "start": 1.14,
+          "end": 1.44,
+          "probability": 0.9912109375
+        }
+      ]
+    }
+  ]
+}

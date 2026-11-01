@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-818e216b65d023dd",
+  "sha256": "ecbc65b97c56a53ccd5d820fb7ac4f0546bdf081f108f945e28eae08f21aa670",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vind dit boek te duur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.24,
+      "text": " Ik vind dit boek te duur.",
+      "temperature": 0,
+      "avg_logprob": -0.11614517370859782,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.5272583425182145e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.873046875
+        },
+        {
+          "word": " vind",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 1.0
+        },
+        {
+          "word": " dit",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.98828125
+        },
+        {
+          "word": " boek",
+          "start": 0.46,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 0.68,
+          "end": 0.84,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " duur.",
+          "start": 0.84,
+          "end": 1.24,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

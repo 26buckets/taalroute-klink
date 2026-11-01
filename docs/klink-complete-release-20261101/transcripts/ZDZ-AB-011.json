@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-011",
+  "sha256": "4218682ecec4f81b842ea24e350c09d88f46f204b3f080283d733b30765515f4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wat kost dit?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Wat kost dit?",
+      "temperature": 0,
+      "avg_logprob": -0.16271277836390904,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 4.215603126994649e-12,
+      "words": [
+        {
+          "word": " Wat",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9765625
+        },
+        {
+          "word": " kost",
+          "start": 0.18,
+          "end": 0.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dit?",
+          "start": 0.42,
+          "end": 0.66,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

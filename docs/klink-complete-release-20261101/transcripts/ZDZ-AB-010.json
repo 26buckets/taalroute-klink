@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-010",
+  "sha256": "3151fab3c50a7968e0f9ab78f016374903d508171ab5309e9ae5d7a459b107da",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil melk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.68,
+      "text": " Ik wil melk.",
+      "temperature": 0,
+      "avg_logprob": -0.34886324405670166,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 3.797191727716864e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.71044921875
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " melk.",
+          "start": 0.3,
+          "end": 0.68,
+          "probability": 0.9892578125
+        }
+      ]
+    }
+  ]
+}

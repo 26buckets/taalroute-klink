@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-063",
+  "sha256": "deaec78ddc9299f9ef1d7f7500170afc5667971ff429ede4660c172ecece3a09",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik hoor u niet.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.58,
+      "text": " Ik hoor u niet.",
+      "temperature": 0,
+      "avg_logprob": -0.17501556873321533,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 4.768575291580479e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.81591796875
+        },
+        {
+          "word": " hoor",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " u",
+          "start": 0.34,
+          "end": 0.42,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " niet.",
+          "start": 0.42,
+          "end": 0.58,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

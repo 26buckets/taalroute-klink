@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-017",
+  "sha256": "b2de142ae7925e5a2c156690d45315c42a9d1c3428d45fe53f9d8659ef155b66",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik werk in een winkel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik werk in een winkel.",
+      "temperature": 0,
+      "avg_logprob": -0.06668586730957031,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.3543250602406935e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.86669921875
+        },
+        {
+          "word": " werk",
+          "start": 0.12,
+          "end": 0.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 0.36,
+          "end": 0.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " winkel.",
+          "start": 0.6,
+          "end": 0.98,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

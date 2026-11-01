@@ -1,0 +1,613 @@
+{
+  "id": "A2-T55",
+  "sha256": "4e0439930103842a650a8dbcaf2c3ea6590ff113165a04c894acc5b29eb4ec37",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " E-mail van de winkel. Uw bestelling met een bureau en twee stoelen zou woensdag komen. Door een probleem met het vervoer kan de winkel pas vrijdag bezorgen. U kunt de hele bestelling vrijdag ontvangen of de twee stoelen donderdag zelf ophalen. Het bureau wordt vrijdag bezorgd. Laat uiterlijk dinsdag weten welke mogelijkheid u kiest. Een klant wil alles tegelijk ontvangen. Hij antwoordt daarom maandag dat bezorging op vrijdag voor hem goed is. De winkel bevestigt de afspraak per e-mail.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " E-mail van de winkel.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " E",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.8125
+        },
+        {
+          "word": "-mail",
+          "start": 0.12,
+          "end": 0.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " van",
+          "start": 0.3,
+          "end": 0.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.5,
+          "end": 0.62,
+          "probability": 0.994140625
+        },
+        {
+          "word": " winkel.",
+          "start": 0.62,
+          "end": 0.98,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 1.12,
+      "end": 4.34,
+      "text": " Uw bestelling met een bureau en twee stoelen zou woensdag komen.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " Uw",
+          "start": 1.12,
+          "end": 1.44,
+          "probability": 0.994140625
+        },
+        {
+          "word": " bestelling",
+          "start": 1.44,
+          "end": 1.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 1.84,
+          "end": 2.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 2.04,
+          "end": 2.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bureau",
+          "start": 2.18,
+          "end": 2.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 2.48,
+          "end": 2.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " twee",
+          "start": 2.74,
+          "end": 2.94,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " stoelen",
+          "start": 2.94,
+          "end": 3.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zou",
+          "start": 3.32,
+          "end": 3.52,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " woensdag",
+          "start": 3.52,
+          "end": 3.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komen.",
+          "start": 3.98,
+          "end": 4.34,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.5,
+      "end": 7.96,
+      "text": " Door een probleem met het vervoer kan de winkel pas vrijdag bezorgen.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " Door",
+          "start": 4.5,
+          "end": 4.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 4.78,
+          "end": 4.92,
+          "probability": 1.0
+        },
+        {
+          "word": " probleem",
+          "start": 4.92,
+          "end": 5.36,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 5.36,
+          "end": 5.52,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 5.52,
+          "end": 5.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vervoer",
+          "start": 5.64,
+          "end": 6.08,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 6.08,
+          "end": 6.36,
+          "probability": 0.92041015625
+        },
+        {
+          "word": " de",
+          "start": 6.36,
+          "end": 6.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " winkel",
+          "start": 6.5,
+          "end": 6.78,
+          "probability": 1.0
+        },
+        {
+          "word": " pas",
+          "start": 6.78,
+          "end": 7.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vrijdag",
+          "start": 7.02,
+          "end": 7.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bezorgen.",
+          "start": 7.42,
+          "end": 7.96,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.12,
+      "end": 12.5,
+      "text": " U kunt de hele bestelling vrijdag ontvangen of de twee stoelen donderdag zelf ophalen.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " U",
+          "start": 8.12,
+          "end": 8.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kunt",
+          "start": 8.28,
+          "end": 8.46,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.46,
+          "end": 8.6,
+          "probability": 1.0
+        },
+        {
+          "word": " hele",
+          "start": 8.6,
+          "end": 8.84,
+          "probability": 1.0
+        },
+        {
+          "word": " bestelling",
+          "start": 8.84,
+          "end": 9.3,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijdag",
+          "start": 9.3,
+          "end": 9.74,
+          "probability": 1.0
+        },
+        {
+          "word": " ontvangen",
+          "start": 9.74,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 10.18,
+          "end": 10.48,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " de",
+          "start": 10.48,
+          "end": 10.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 10.62,
+          "end": 10.82,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " stoelen",
+          "start": 10.82,
+          "end": 11.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " donderdag",
+          "start": 11.2,
+          "end": 11.72,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " zelf",
+          "start": 11.72,
+          "end": 11.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ophalen.",
+          "start": 11.98,
+          "end": 12.5,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.66,
+      "end": 14.32,
+      "text": " Het bureau wordt vrijdag bezorgd.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " Het",
+          "start": 12.66,
+          "end": 12.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bureau",
+          "start": 12.84,
+          "end": 13.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wordt",
+          "start": 13.1,
+          "end": 13.34,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijdag",
+          "start": 13.34,
+          "end": 13.74,
+          "probability": 1.0
+        },
+        {
+          "word": " bezorgd.",
+          "start": 13.74,
+          "end": 14.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.42,
+      "end": 17.18,
+      "text": " Laat uiterlijk dinsdag weten welke mogelijkheid u kiest.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " Laat",
+          "start": 14.42,
+          "end": 14.7,
+          "probability": 1.0
+        },
+        {
+          "word": " uiterlijk",
+          "start": 14.7,
+          "end": 15.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dinsdag",
+          "start": 15.12,
+          "end": 15.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weten",
+          "start": 15.58,
+          "end": 15.86,
+          "probability": 1.0
+        },
+        {
+          "word": " welke",
+          "start": 15.86,
+          "end": 16.18,
+          "probability": 1.0
+        },
+        {
+          "word": " mogelijkheid",
+          "start": 16.18,
+          "end": 16.74,
+          "probability": 1.0
+        },
+        {
+          "word": " u",
+          "start": 16.74,
+          "end": 16.88,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kiest.",
+          "start": 16.88,
+          "end": 17.18,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 17.32,
+      "end": 19.04,
+      "text": " Een klant wil alles tegelijk ontvangen.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " Een",
+          "start": 17.32,
+          "end": 17.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klant",
+          "start": 17.46,
+          "end": 17.74,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 17.74,
+          "end": 17.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alles",
+          "start": 17.9,
+          "end": 18.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tegelijk",
+          "start": 18.18,
+          "end": 18.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangen.",
+          "start": 18.62,
+          "end": 19.04,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 19.18,
+      "end": 22.36,
+      "text": " Hij antwoordt daarom maandag dat bezorging op vrijdag voor hem goed is.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 19.18,
+          "end": 19.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " antwoordt",
+          "start": 19.32,
+          "end": 19.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " daarom",
+          "start": 19.82,
+          "end": 20.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " maandag",
+          "start": 20.12,
+          "end": 20.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 20.52,
+          "end": 20.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bezorging",
+          "start": 20.66,
+          "end": 21.1,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " op",
+          "start": 21.1,
+          "end": 21.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 21.26,
+          "end": 21.62,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 21.62,
+          "end": 21.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hem",
+          "start": 21.78,
+          "end": 21.92,
+          "probability": 1.0
+        },
+        {
+          "word": " goed",
+          "start": 21.92,
+          "end": 22.12,
+          "probability": 1.0
+        },
+        {
+          "word": " is.",
+          "start": 22.12,
+          "end": 22.36,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 22.54,
+      "end": 24.56,
+      "text": " De winkel bevestigt de afspraak per e-mail.",
+      "temperature": 0,
+      "avg_logprob": -0.0508863217902906,
+      "compression_ratio": 1.7689530685920578,
+      "no_speech_prob": 1.0828871653545402e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 22.54,
+          "end": 22.64,
+          "probability": 1.0
+        },
+        {
+          "word": " winkel",
+          "start": 22.64,
+          "end": 22.92,
+          "probability": 1.0
+        },
+        {
+          "word": " bevestigt",
+          "start": 22.92,
+          "end": 23.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 23.44,
+          "end": 23.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 23.56,
+          "end": 24.04,
+          "probability": 1.0
+        },
+        {
+          "word": " per",
+          "start": 24.04,
+          "end": 24.2,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 24.2,
+          "end": 24.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": "-mail.",
+          "start": 24.38,
+          "end": 24.56,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

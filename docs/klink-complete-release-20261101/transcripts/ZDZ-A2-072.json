@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-072",
+  "sha256": "094f8bd2407b3b0dac4e7292bcf8195d2a246b7956d041929ee0a48b52eb99bf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De afspraak is verplaatst naar dinsdag om half drie.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.56,
+      "text": " De afspraak is verplaatst naar dinsdag om half drie.",
+      "temperature": 0,
+      "avg_logprob": -0.04889538174583798,
+      "compression_ratio": 0.896551724137931,
+      "no_speech_prob": 3.877535011825861e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98828125
+        },
+        {
+          "word": " afspraak",
+          "start": 0.16,
+          "end": 0.64,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.64,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verplaatst",
+          "start": 0.8,
+          "end": 1.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 1.32,
+          "end": 1.42,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " dinsdag",
+          "start": 1.42,
+          "end": 1.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 1.94,
+          "end": 2.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " half",
+          "start": 2.14,
+          "end": 2.38,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " drie.",
+          "start": 2.38,
+          "end": 2.56,
+          "probability": 0.72119140625
+        }
+      ]
+    }
+  ]
+}

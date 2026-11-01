@@ -1,0 +1,617 @@
+{
+  "id": "B1-FL-081",
+  "sha256": "2477449cc254c6e62c21a0037c0e96e4520d4fcc58165bac211ebf7b2dcb504a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Voor een webwinkel maakt Eva foto's van een nieuwe serie tassen. Wanneer ze de foto's op de website bekijkt, merkt ze dat een blauwe tas bijna groen lijkt. De productbeschrijving noemt wel de juiste kleur. Eva wil voorkomen dat klanten een verkeerde verwachting krijgen. Ze laat daarom een nieuwe foto maken bij Beter Licht. De verkoper vraagt of de oude foto voorlopig kan blijven staan, omdat de tas vandaag in de aanbieding komt. Eva stelt voor de aanbieding wel te starten, maar zonder die misleidende foto.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.82,
+      "text": " Voor een webwinkel maakt Eva foto's van een nieuwe serie tassen.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " een",
+          "start": 0.18,
+          "end": 0.3,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " webwinkel",
+          "start": 0.3,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maakt",
+          "start": 0.8,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Eva",
+          "start": 1.06,
+          "end": 1.28,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " foto's",
+          "start": 1.28,
+          "end": 1.7,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " van",
+          "start": 1.7,
+          "end": 1.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.82,
+          "end": 1.94,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " nieuwe",
+          "start": 1.94,
+          "end": 2.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " serie",
+          "start": 2.16,
+          "end": 2.46,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " tassen.",
+          "start": 2.46,
+          "end": 2.82,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.3,
+      "end": 7.8,
+      "text": " Wanneer ze de foto's op de website bekijkt, merkt ze dat een blauwe tas bijna groen lijkt.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " Wanneer",
+          "start": 3.3,
+          "end": 3.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 3.84,
+          "end": 3.92,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 3.92,
+          "end": 4.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " foto's",
+          "start": 4.02,
+          "end": 4.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 4.38,
+          "end": 4.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.48,
+          "end": 4.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " website",
+          "start": 4.56,
+          "end": 4.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bekijkt,",
+          "start": 4.9,
+          "end": 5.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " merkt",
+          "start": 5.56,
+          "end": 6.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ze",
+          "start": 6.0,
+          "end": 6.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dat",
+          "start": 6.1,
+          "end": 6.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 6.22,
+          "end": 6.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " blauwe",
+          "start": 6.36,
+          "end": 6.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tas",
+          "start": 6.72,
+          "end": 6.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bijna",
+          "start": 6.9,
+          "end": 7.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " groen",
+          "start": 7.24,
+          "end": 7.48,
+          "probability": 1.0
+        },
+        {
+          "word": " lijkt.",
+          "start": 7.48,
+          "end": 7.8,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.26,
+      "end": 10.74,
+      "text": " De productbeschrijving noemt wel de juiste kleur.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.26,
+          "end": 8.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " productbeschrijving",
+          "start": 8.8,
+          "end": 9.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " noemt",
+          "start": 9.6,
+          "end": 9.86,
+          "probability": 1.0
+        },
+        {
+          "word": " wel",
+          "start": 9.86,
+          "end": 9.98,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 9.98,
+          "end": 10.14,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " juiste",
+          "start": 10.14,
+          "end": 10.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kleur.",
+          "start": 10.4,
+          "end": 10.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.14,
+      "end": 14.16,
+      "text": " Eva wil voorkomen dat klanten een verkeerde verwachting krijgen.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " Eva",
+          "start": 11.14,
+          "end": 11.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 11.68,
+          "end": 11.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voorkomen",
+          "start": 11.86,
+          "end": 12.36,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 12.36,
+          "end": 12.5,
+          "probability": 1.0
+        },
+        {
+          "word": " klanten",
+          "start": 12.5,
+          "end": 12.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 12.84,
+          "end": 12.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verkeerde",
+          "start": 12.98,
+          "end": 13.38,
+          "probability": 1.0
+        },
+        {
+          "word": " verwachting",
+          "start": 13.38,
+          "end": 13.8,
+          "probability": 1.0
+        },
+        {
+          "word": " krijgen.",
+          "start": 13.8,
+          "end": 14.16,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.48,
+      "end": 17.0,
+      "text": " Ze laat daarom een nieuwe foto maken bij Beter Licht.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 14.48,
+          "end": 14.92,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " laat",
+          "start": 14.92,
+          "end": 15.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " daarom",
+          "start": 15.1,
+          "end": 15.42,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 15.42,
+          "end": 15.52,
+          "probability": 1.0
+        },
+        {
+          "word": " nieuwe",
+          "start": 15.52,
+          "end": 15.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " foto",
+          "start": 15.74,
+          "end": 16.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " maken",
+          "start": 16.06,
+          "end": 16.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 16.34,
+          "end": 16.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Beter",
+          "start": 16.5,
+          "end": 16.78,
+          "probability": 0.84375
+        },
+        {
+          "word": " Licht.",
+          "start": 16.78,
+          "end": 17.0,
+          "probability": 0.8115234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.48,
+      "end": 22.94,
+      "text": " De verkoper vraagt of de oude foto voorlopig kan blijven staan, omdat de tas vandaag in de aanbieding komt.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 17.48,
+          "end": 17.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkoper",
+          "start": 17.84,
+          "end": 18.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vraagt",
+          "start": 18.36,
+          "end": 18.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 18.7,
+          "end": 18.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 18.8,
+          "end": 18.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 18.9,
+          "end": 19.12,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " foto",
+          "start": 19.12,
+          "end": 19.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voorlopig",
+          "start": 19.36,
+          "end": 19.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 19.8,
+          "end": 19.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blijven",
+          "start": 19.92,
+          "end": 20.24,
+          "probability": 1.0
+        },
+        {
+          "word": " staan,",
+          "start": 20.24,
+          "end": 20.56,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 20.8,
+          "end": 21.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 21.34,
+          "end": 21.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tas",
+          "start": 21.52,
+          "end": 21.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vandaag",
+          "start": 21.76,
+          "end": 22.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 22.08,
+          "end": 22.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.24,
+          "end": 22.3,
+          "probability": 1.0
+        },
+        {
+          "word": " aanbieding",
+          "start": 22.3,
+          "end": 22.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komt.",
+          "start": 22.7,
+          "end": 22.94,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.36,
+      "end": 27.36,
+      "text": " Eva stelt voor de aanbieding wel te starten, maar zonder die misleidende foto.",
+      "temperature": 0,
+      "avg_logprob": -0.0777769263197736,
+      "compression_ratio": 1.6920529801324504,
+      "no_speech_prob": 5.753584674667023e-12,
+      "words": [
+        {
+          "word": " Eva",
+          "start": 23.36,
+          "end": 23.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stelt",
+          "start": 23.9,
+          "end": 24.16,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 24.16,
+          "end": 24.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 24.3,
+          "end": 24.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aanbieding",
+          "start": 24.4,
+          "end": 24.78,
+          "probability": 1.0
+        },
+        {
+          "word": " wel",
+          "start": 24.78,
+          "end": 24.92,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " te",
+          "start": 24.92,
+          "end": 25.06,
+          "probability": 1.0
+        },
+        {
+          "word": " starten,",
+          "start": 25.06,
+          "end": 25.44,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 25.66,
+          "end": 26.12,
+          "probability": 1.0
+        },
+        {
+          "word": " zonder",
+          "start": 26.12,
+          "end": 26.42,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 26.42,
+          "end": 26.56,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " misleidende",
+          "start": 26.56,
+          "end": 27.06,
+          "probability": 1.0
+        },
+        {
+          "word": " foto.",
+          "start": 27.06,
+          "end": 27.36,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

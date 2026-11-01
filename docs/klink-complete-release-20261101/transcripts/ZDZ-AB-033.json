@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-033",
+  "sha256": "088b95760c72c07d834ed066017ff06369dc0e96ce16815423c873c6524cd136",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Waar moet dit?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.84,
+      "text": " Waar moet dit?",
+      "temperature": 0,
+      "avg_logprob": -0.27549770900181364,
+      "compression_ratio": 0.6363636363636364,
+      "no_speech_prob": 6.010544058993039e-12,
+      "words": [
+        {
+          "word": " Waar",
+          "start": 0.0,
+          "end": 0.48,
+          "probability": 0.88134765625
+        },
+        {
+          "word": " moet",
+          "start": 0.48,
+          "end": 0.68,
+          "probability": 0.99609375
+        },
+        {
+          "word": " dit?",
+          "start": 0.68,
+          "end": 0.84,
+          "probability": 0.9873046875
+        }
+      ]
+    }
+  ]
+}

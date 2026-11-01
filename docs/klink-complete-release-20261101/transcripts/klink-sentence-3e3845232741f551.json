@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-3e3845232741f551",
+  "sha256": "5570d1d453af0270d9718ed7fedb2a7eda455c1e6232a90aa749225cae148280",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik schenk thee in de kop.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Ik schenk thee in de kop.",
+      "temperature": 0,
+      "avg_logprob": -0.08430485291914507,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 5.089280559478215e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.869140625
+        },
+        {
+          "word": " schenk",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " thee",
+          "start": 0.46,
+          "end": 0.72,
+          "probability": 0.98046875
+        },
+        {
+          "word": " in",
+          "start": 0.72,
+          "end": 1.02,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 1.02,
+          "end": 1.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kop.",
+          "start": 1.12,
+          "end": 1.38,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

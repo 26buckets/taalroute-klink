@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-A1-086",
+  "sha256": "7d7297a054f8af5d1e6b15f091d507e6e31186f58cbdd469fecb3d8c0dd3578b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil mijn telefoonnummer doorgeven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Ik wil mijn telefoonnummer doorgeven.",
+      "temperature": 0,
+      "avg_logprob": -0.04338836669921875,
+      "compression_ratio": 0.8222222222222222,
+      "no_speech_prob": 4.803260653801766e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9482421875
+        },
+        {
+          "word": " wil",
+          "start": 0.12,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.24,
+          "end": 0.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " telefoonnummer",
+          "start": 0.38,
+          "end": 0.94,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " doorgeven.",
+          "start": 0.94,
+          "end": 1.48,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

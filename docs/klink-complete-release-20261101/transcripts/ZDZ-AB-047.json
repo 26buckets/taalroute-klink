@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-047",
+  "sha256": "42d9af1e1edb9eead5d6598aa65d47b31ede2abd789fe6c54b4fb15b3dbb0d0c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik was op school.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Ik was op school.",
+      "temperature": 0,
+      "avg_logprob": -0.0780724287033081,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.656137021080697e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97265625
+        },
+        {
+          "word": " was",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 0.3,
+          "end": 0.38,
+          "probability": 1.0
+        },
+        {
+          "word": " school.",
+          "start": 0.38,
+          "end": 0.66,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

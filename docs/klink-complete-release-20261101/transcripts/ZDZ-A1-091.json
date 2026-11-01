@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-091",
+  "sha256": "eb2af6747966796ba6207bb9df654d8178c4f66d15707aa4fa83fe6e9e28a2fd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil mijn adres hier niet geven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.3,
+      "text": " Ik wil mijn adres hier niet geven.",
+      "temperature": 0,
+      "avg_logprob": -0.10925046602884929,
+      "compression_ratio": 0.8095238095238095,
+      "no_speech_prob": 4.894705300795277e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.77685546875
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " adres",
+          "start": 0.4,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hier",
+          "start": 0.72,
+          "end": 0.88,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " niet",
+          "start": 0.88,
+          "end": 0.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geven.",
+          "start": 0.98,
+          "end": 1.3,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

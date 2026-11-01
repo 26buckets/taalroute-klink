@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-3113116a45df325b",
+  "sha256": "3aa578b3e97a1b4ac28f41216354191960f58a06ba9891e33a8f6584c50f4217",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vul de fles.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ik vul de fles.",
+      "temperature": 0,
+      "avg_logprob": -0.20270983378092447,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 7.352499685475689e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.962890625
+        },
+        {
+          "word": " vul",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 0.38,
+          "end": 0.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " fles.",
+          "start": 0.54,
+          "end": 0.92,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

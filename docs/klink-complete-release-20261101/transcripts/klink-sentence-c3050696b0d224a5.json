@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-c3050696b0d224a5",
+  "sha256": "23af7c114731bcedae7ecc64765ba7427fa2b24c0a4eb3f2392f2598bd567acb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij lezen vanaf het begin.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Wij lezen vanaf het begin.",
+      "temperature": 0,
+      "avg_logprob": -0.09563167889912923,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 5.441673153749882e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " lezen",
+          "start": 0.18,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vanaf",
+          "start": 0.52,
+          "end": 0.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 0.88,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begin.",
+          "start": 0.96,
+          "end": 1.2,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

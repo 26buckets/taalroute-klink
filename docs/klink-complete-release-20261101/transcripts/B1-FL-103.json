@@ -1,0 +1,623 @@
+{
+  "id": "B1-FL-103",
+  "sha256": "579662ac42cc2ad561335f0c0847387de026e41ad3fff3b9fd9efb6cc9473a4d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Voor een rondleiding door de haven verwacht gids Eva 19 deelnemers. Bij het vertrekpunt telt ze 18 mensen, terwijl op haar lijst 19 namen staan. Ze wil niet zomaar aannemen dat iemand te laat is. Eva belt daarom de organisator en vraagt of er een wijziging is. Die vertelt dat één deelnemer gisteren heeft afgezegd, maar dat de lijst niet is aangepast. Eva schrijft de verandering op en vertelt de groep dat de rondleiding op tijd kan beginnen. Zo hoeft niemand op een afwezige deelnemer te wachten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.64,
+      "text": " Voor een rondleiding door de haven verwacht gids Eva 19 deelnemers.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " een",
+          "start": 0.18,
+          "end": 0.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " rondleiding",
+          "start": 0.32,
+          "end": 0.82,
+          "probability": 1.0
+        },
+        {
+          "word": " door",
+          "start": 0.82,
+          "end": 0.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.986328125
+        },
+        {
+          "word": " haven",
+          "start": 1.08,
+          "end": 1.36,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " verwacht",
+          "start": 1.36,
+          "end": 1.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gids",
+          "start": 1.74,
+          "end": 2.02,
+          "probability": 0.98828125
+        },
+        {
+          "word": " Eva",
+          "start": 2.02,
+          "end": 2.38,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " 19",
+          "start": 2.38,
+          "end": 2.94,
+          "probability": 0.96044921875
+        },
+        {
+          "word": " deelnemers.",
+          "start": 2.94,
+          "end": 3.64,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.06,
+      "end": 8.64,
+      "text": " Bij het vertrekpunt telt ze 18 mensen, terwijl op haar lijst 19 namen staan.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 4.06,
+          "end": 4.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 4.58,
+          "end": 4.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertrekpunt",
+          "start": 4.7,
+          "end": 5.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " telt",
+          "start": 5.3,
+          "end": 5.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ze",
+          "start": 5.5,
+          "end": 5.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " 18",
+          "start": 5.64,
+          "end": 5.9,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " mensen,",
+          "start": 5.9,
+          "end": 6.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " terwijl",
+          "start": 6.62,
+          "end": 7.16,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 7.16,
+          "end": 7.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 7.28,
+          "end": 7.44,
+          "probability": 1.0
+        },
+        {
+          "word": " lijst",
+          "start": 7.44,
+          "end": 7.74,
+          "probability": 1.0
+        },
+        {
+          "word": " 19",
+          "start": 7.74,
+          "end": 8.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " namen",
+          "start": 8.02,
+          "end": 8.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " staan.",
+          "start": 8.44,
+          "end": 8.64,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.06,
+      "end": 11.58,
+      "text": " Ze wil niet zomaar aannemen dat iemand te laat is.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 9.06,
+          "end": 9.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 9.58,
+          "end": 9.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " niet",
+          "start": 9.74,
+          "end": 9.9,
+          "probability": 1.0
+        },
+        {
+          "word": " zomaar",
+          "start": 9.9,
+          "end": 10.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aannemen",
+          "start": 10.24,
+          "end": 10.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 10.62,
+          "end": 10.78,
+          "probability": 1.0
+        },
+        {
+          "word": " iemand",
+          "start": 10.78,
+          "end": 10.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 10.98,
+          "end": 11.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " laat",
+          "start": 11.12,
+          "end": 11.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 11.34,
+          "end": 11.58,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.36,
+      "end": 15.4,
+      "text": " Eva belt daarom de organisator en vraagt of er een wijziging is.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Eva",
+          "start": 12.36,
+          "end": 12.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " belt",
+          "start": 12.66,
+          "end": 12.9,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " daarom",
+          "start": 12.9,
+          "end": 13.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 13.2,
+          "end": 13.3,
+          "probability": 1.0
+        },
+        {
+          "word": " organisator",
+          "start": 13.3,
+          "end": 13.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 13.94,
+          "end": 14.1,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 14.1,
+          "end": 14.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " of",
+          "start": 14.44,
+          "end": 14.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 14.56,
+          "end": 14.64,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 14.64,
+          "end": 14.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wijziging",
+          "start": 14.72,
+          "end": 15.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 15.18,
+          "end": 15.4,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.84,
+      "end": 20.68,
+      "text": " Die vertelt dat één deelnemer gisteren heeft afgezegd, maar dat de lijst niet is aangepast.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 15.84,
+          "end": 16.36,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vertelt",
+          "start": 16.36,
+          "end": 16.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 16.7,
+          "end": 16.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " één",
+          "start": 16.84,
+          "end": 17.04,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " deelnemer",
+          "start": 17.04,
+          "end": 17.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gisteren",
+          "start": 17.5,
+          "end": 17.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 17.9,
+          "end": 18.06,
+          "probability": 1.0
+        },
+        {
+          "word": " afgezegd,",
+          "start": 18.06,
+          "end": 18.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " maar",
+          "start": 18.9,
+          "end": 19.36,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 19.36,
+          "end": 19.48,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 19.48,
+          "end": 19.6,
+          "probability": 1.0
+        },
+        {
+          "word": " lijst",
+          "start": 19.6,
+          "end": 19.88,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 19.88,
+          "end": 20.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 20.0,
+          "end": 20.16,
+          "probability": 1.0
+        },
+        {
+          "word": " aangepast.",
+          "start": 20.16,
+          "end": 20.68,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 21.36,
+      "end": 25.52,
+      "text": " Eva schrijft de verandering op en vertelt de groep dat de rondleiding op tijd kan beginnen.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Eva",
+          "start": 21.36,
+          "end": 21.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schrijft",
+          "start": 21.88,
+          "end": 22.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.22,
+          "end": 22.3,
+          "probability": 1.0
+        },
+        {
+          "word": " verandering",
+          "start": 22.3,
+          "end": 22.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 22.74,
+          "end": 22.98,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 22.98,
+          "end": 23.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vertelt",
+          "start": 23.34,
+          "end": 23.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 23.64,
+          "end": 23.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groep",
+          "start": 23.74,
+          "end": 23.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 23.98,
+          "end": 24.12,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 24.12,
+          "end": 24.24,
+          "probability": 1.0
+        },
+        {
+          "word": " rondleiding",
+          "start": 24.24,
+          "end": 24.7,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 24.7,
+          "end": 24.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tijd",
+          "start": 24.82,
+          "end": 25.04,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 25.04,
+          "end": 25.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beginnen.",
+          "start": 25.2,
+          "end": 25.52,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 26.02,
+      "end": 28.58,
+      "text": " Zo hoeft niemand op een afwezige deelnemer te wachten.",
+      "temperature": 0,
+      "avg_logprob": -0.05380403704759551,
+      "compression_ratio": 1.6925675675675675,
+      "no_speech_prob": 5.799094277697536e-12,
+      "words": [
+        {
+          "word": " Zo",
+          "start": 26.02,
+          "end": 26.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoeft",
+          "start": 26.54,
+          "end": 26.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niemand",
+          "start": 26.76,
+          "end": 27.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 27.02,
+          "end": 27.26,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 27.26,
+          "end": 27.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " afwezige",
+          "start": 27.36,
+          "end": 27.78,
+          "probability": 0.998046875
+        },
+        {
+          "word": " deelnemer",
+          "start": 27.78,
+          "end": 28.2,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 28.2,
+          "end": 28.3,
+          "probability": 1.0
+        },
+        {
+          "word": " wachten.",
+          "start": 28.3,
+          "end": 28.58,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

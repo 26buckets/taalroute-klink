@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-039",
+  "sha256": "7124966ae74d5fe70eadaf0abc00c4feee6be70c57e1fd8c26f5a34e50b53d76",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is niet het goede adres.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Dit is niet het goede adres.",
+      "temperature": 0,
+      "avg_logprob": -0.06607615947723389,
+      "compression_ratio": 0.8235294117647058,
+      "no_speech_prob": 4.375179038507149e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94580078125
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 0.3,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " goede",
+          "start": 0.56,
+          "end": 0.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " adres.",
+          "start": 0.82,
+          "end": 1.18,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

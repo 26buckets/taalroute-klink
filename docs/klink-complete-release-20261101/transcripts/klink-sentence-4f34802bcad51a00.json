@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-4f34802bcad51a00",
+  "sha256": "0586a12e6f8fa95bda8e926b4188de35e1c979a034a9fc6658224a32103e58f9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De fiets staat bij het raam.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.56,
+      "text": " De fiets staat bij het raam.",
+      "temperature": 0,
+      "avg_logprob": -0.08457489808400472,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.78509463355714e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.89111328125
+        },
+        {
+          "word": " fiets",
+          "start": 0.18,
+          "end": 0.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " staat",
+          "start": 0.5,
+          "end": 0.84,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " bij",
+          "start": 0.84,
+          "end": 1.08,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " het",
+          "start": 1.08,
+          "end": 1.22,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " raam.",
+          "start": 1.22,
+          "end": 1.56,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

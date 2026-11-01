@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-079",
+  "sha256": "ad222f8f72659accd9034e738dbc88f592eb6cb9bd12a6a8308c26f0fa2f31da",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nee, nog niet.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.84,
+      "text": " Nee, nog niet.",
+      "temperature": 0,
+      "avg_logprob": -0.19782763719558716,
+      "compression_ratio": 0.6363636363636364,
+      "no_speech_prob": 4.964519680766832e-12,
+      "words": [
+        {
+          "word": " Nee,",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.92138671875
+        },
+        {
+          "word": " nog",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " niet.",
+          "start": 0.62,
+          "end": 0.84,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

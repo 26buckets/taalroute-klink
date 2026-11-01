@@ -1,0 +1,62 @@
+{
+  "application": "Klink",
+  "date": "2026-11-01",
+  "authorization": "owner-instruction.json",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "settings": {
+    "stability": 0.8,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+  },
+  "roles": "Existing character recordings and voice bindings are unchanged. New voices are external narrators or learner models, not recast characters.",
+  "freeVoiceAlternation": "female/male, continued across new clips; existing good audio reused",
+  "maximumIncludedCredits": 300000,
+  "buyExtraCredits": false,
+  "phase": "repair3",
+  "seed": 23,
+  "textNormalization": "off",
+  "clips": [
+    {
+      "id": "ZDZ-A2-085-R3",
+      "text": "Ik wil vaker met collega's spreken, zodat ik beter Nederlands leer.",
+      "title": "Ik wil vaker met collega's spreken, zodat ik beter Nederlands leer.",
+      "role": "learner-model-utterance",
+      "gender": "female",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "voiceName": "Roos",
+      "src": "/package-audio/complete-20261101/zdz-a2-085.mp3",
+      "textSha256": "a5f7053da4f45d672e9bfc7330773d45072bf34e4c2efcba7a14784edd986343",
+      "sourceId": "ZDZ-A2-085",
+      "sourceText": "Ik wil vaker met collega's spreken, zodat ik beter Nederlands leer.",
+      "voiceChoiceReason": "Free learner model, no fixed character: switch this new unpublished example to the other approved Dutch voice after two unclear candidates."
+    },
+    {
+      "id": "B1-FL-111-R3",
+      "text": "In de flat delen enkele buren een kist met gereedschap. Fatima wil zaterdag een boormachine lenen om een plank op te hangen. Op de lijst bij de kist ziet ze dat buurman Erik de machine voor hetzelfde weekend heeft gereserveerd. Fatima vraagt hem wanneer hij de machine nodig heeft. Erik wil alleen zaterdagochtend twee gaten boren en kan de machine daarna terugleggen. Ze spreken af dat Fatima de boormachine zaterdagmiddag ophaalt. Fatima schrijft dé nieuwe afspraak op de lijst, zodat andere buren weten wanneer de machine beschikbaar is.",
+      "title": "Een boormachine voor het weekend",
+      "role": "external-narrator",
+      "gender": "male",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko",
+      "src": "/package-audio/complete-20261101/b1-fl-111.mp3",
+      "textSha256": "4ae636bca5ef17eb04e06196121b77f1c314e43150088fb248e1c5f5005308ac",
+      "sourceId": "B1-FL-111",
+      "sourceText": "In de flat delen enkele buren een kist met gereedschap. Fatima wil zaterdag een boormachine lenen om een plank op te hangen. Op de lijst bij de kist ziet ze dat buurman Erik de machine voor hetzelfde weekend heeft gereserveerd. Fatima vraagt hem wanneer hij de machine nodig heeft. Erik wil alleen zaterdagochtend twee gaten boren en kan de machine daarna terugleggen. Ze spreken af dat Fatima de boormachine zaterdagmiddag ophaalt. Fatima schrijft de nieuwe afspraak op de lijst, zodat andere buren weten wanneer de machine beschikbaar is."
+    }
+  ],
+  "characters": 607,
+  "bindings": {
+    "ZDZ-A2-085": {
+      "src": "/package-audio/complete-20261101/zdz-a2-085.mp3",
+      "recordingId": "ZDZ-A2-085-R3"
+    },
+    "B1-FL-111": {
+      "src": "/package-audio/complete-20261101/b1-fl-111.mp3",
+      "recordingId": "B1-FL-111-R3"
+    }
+  }
+}

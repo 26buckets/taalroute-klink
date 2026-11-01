@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-777c20956566a4f9",
+  "sha256": "bf13c31e6583a20be536475120865bcb64e4414729d98235944faed46949d392",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er staan zes koppen op tafel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.76,
+      "text": " Er staan zes koppen op tafel.",
+      "temperature": 0,
+      "avg_logprob": -0.05557548082791842,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 4.153303135440156e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " staan",
+          "start": 0.14,
+          "end": 0.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zes",
+          "start": 0.38,
+          "end": 0.82,
+          "probability": 0.853515625
+        },
+        {
+          "word": " koppen",
+          "start": 0.82,
+          "end": 1.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 1.2,
+          "end": 1.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tafel.",
+          "start": 1.34,
+          "end": 1.76,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

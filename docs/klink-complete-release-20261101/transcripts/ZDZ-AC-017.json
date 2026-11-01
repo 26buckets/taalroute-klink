@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-017",
+  "sha256": "baac7f0b06c85f69690342c41624c11749d0698f0fee055a46c45fe1ecc6d59b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik werk op maandag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Ik werk op maandag.",
+      "temperature": 0,
+      "avg_logprob": -0.08682794570922851,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 4.317958750971185e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.96337890625
+        },
+        {
+          "word": " werk",
+          "start": 0.12,
+          "end": 0.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 0.34,
+          "end": 0.5,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " maandag.",
+          "start": 0.5,
+          "end": 0.94,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

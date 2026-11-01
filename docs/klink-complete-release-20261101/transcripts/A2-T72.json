@@ -1,0 +1,575 @@
+{
+  "id": "A2-T72",
+  "sha256": "7a4599d1b6ad00227ccb57e30bbf7efe2a1c50d283e6844b4aa48359d9d7e258",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De gemeente stuurt een bericht over een gesprek op dinsdag. Het gesprek blijft om twee uur, maar vindt niet meer in kamer vier plaats. De nieuwe plek is kamer zes op de eerste verdieping. Wie de trap niet kan gebruiken mag de lift naast de ingang nemen. De ontvanger moet uiterlijk maandag laten weten of het bericht is aangekomen. Maandagochtend stuurt een bewoner antwoord. Daarin bevestigt hij alleen de ontvangst, niet dat hij al op dinsdag aanwezig zal zijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.44,
+      "text": " De gemeente stuurt een bericht over een gesprek op dinsdag.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " gemeente",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stuurt",
+          "start": 0.48,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.76,
+          "end": 0.88,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bericht",
+          "start": 0.88,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " over",
+          "start": 1.22,
+          "end": 1.4,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 1.4,
+          "end": 1.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " gesprek",
+          "start": 1.54,
+          "end": 1.9,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 1.9,
+          "end": 2.02,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " dinsdag.",
+          "start": 2.02,
+          "end": 2.44,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.78,
+      "end": 6.96,
+      "text": " Het gesprek blijft om twee uur, maar vindt niet meer in kamer vier plaats.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 2.78,
+          "end": 3.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gesprek",
+          "start": 3.22,
+          "end": 3.62,
+          "probability": 1.0
+        },
+        {
+          "word": " blijft",
+          "start": 3.62,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 3.96,
+          "end": 4.08,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " twee",
+          "start": 4.08,
+          "end": 4.28,
+          "probability": 0.6396484375
+        },
+        {
+          "word": " uur,",
+          "start": 4.28,
+          "end": 4.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 4.8,
+          "end": 5.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vindt",
+          "start": 5.24,
+          "end": 5.6,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " niet",
+          "start": 5.6,
+          "end": 5.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meer",
+          "start": 5.68,
+          "end": 5.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 5.86,
+          "end": 6.0,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kamer",
+          "start": 6.0,
+          "end": 6.3,
+          "probability": 0.76953125
+        },
+        {
+          "word": " vier",
+          "start": 6.3,
+          "end": 6.5,
+          "probability": 0.65380859375
+        },
+        {
+          "word": " plaats.",
+          "start": 6.5,
+          "end": 6.96,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.3,
+      "end": 9.76,
+      "text": " De nieuwe plek is kamer zes op de eerste verdieping.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.3,
+          "end": 7.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nieuwe",
+          "start": 7.74,
+          "end": 7.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " plek",
+          "start": 7.9,
+          "end": 8.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 8.2,
+          "end": 8.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kamer",
+          "start": 8.34,
+          "end": 8.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zes",
+          "start": 8.68,
+          "end": 8.92,
+          "probability": 0.84765625
+        },
+        {
+          "word": " op",
+          "start": 8.92,
+          "end": 9.04,
+          "probability": 0.9775390625
+        },
+        {
+          "word": " de",
+          "start": 9.04,
+          "end": 9.12,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " eerste",
+          "start": 9.12,
+          "end": 9.32,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " verdieping.",
+          "start": 9.32,
+          "end": 9.76,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.24,
+      "end": 13.28,
+      "text": " Wie de trap niet kan gebruiken mag de lift naast de ingang nemen.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 10.24,
+          "end": 10.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 10.66,
+          "end": 10.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " trap",
+          "start": 10.78,
+          "end": 10.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 10.98,
+          "end": 11.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 11.14,
+          "end": 11.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gebruiken",
+          "start": 11.3,
+          "end": 11.8,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 11.8,
+          "end": 11.98,
+          "probability": 0.580078125
+        },
+        {
+          "word": " de",
+          "start": 11.98,
+          "end": 12.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lift",
+          "start": 12.12,
+          "end": 12.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naast",
+          "start": 12.3,
+          "end": 12.58,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 12.58,
+          "end": 12.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ingang",
+          "start": 12.66,
+          "end": 12.96,
+          "probability": 1.0
+        },
+        {
+          "word": " nemen.",
+          "start": 12.96,
+          "end": 13.28,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.62,
+      "end": 17.28,
+      "text": " De ontvanger moet uiterlijk maandag laten weten of het bericht is aangekomen.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 13.62,
+          "end": 14.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ontvanger",
+          "start": 14.02,
+          "end": 14.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 14.42,
+          "end": 14.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uiterlijk",
+          "start": 14.62,
+          "end": 15.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maandag",
+          "start": 15.04,
+          "end": 15.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " laten",
+          "start": 15.42,
+          "end": 15.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " weten",
+          "start": 15.58,
+          "end": 15.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " of",
+          "start": 15.96,
+          "end": 16.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 16.18,
+          "end": 16.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bericht",
+          "start": 16.28,
+          "end": 16.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 16.58,
+          "end": 16.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aangekomen.",
+          "start": 16.7,
+          "end": 17.28,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.3,
+      "end": 19.96,
+      "text": " Maandagochtend stuurt een bewoner antwoord.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " Maandagochtend",
+          "start": 18.3,
+          "end": 18.82,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " stuurt",
+          "start": 18.82,
+          "end": 19.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 19.08,
+          "end": 19.2,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " bewoner",
+          "start": 19.2,
+          "end": 19.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " antwoord.",
+          "start": 19.54,
+          "end": 19.96,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.64,
+      "end": 24.6,
+      "text": " Daarin bevestigt hij alleen de ontvangst, niet dat hij al op dinsdag aanwezig zal zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.06219907626984226,
+      "compression_ratio": 1.7340823970037453,
+      "no_speech_prob": 6.673335061629926e-12,
+      "words": [
+        {
+          "word": " Daarin",
+          "start": 20.64,
+          "end": 20.86,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " bevestigt",
+          "start": 20.86,
+          "end": 21.32,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " hij",
+          "start": 21.32,
+          "end": 21.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " alleen",
+          "start": 21.44,
+          "end": 21.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 21.7,
+          "end": 21.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangst,",
+          "start": 21.86,
+          "end": 22.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 22.54,
+          "end": 22.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 22.98,
+          "end": 23.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 23.1,
+          "end": 23.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " al",
+          "start": 23.24,
+          "end": 23.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 23.36,
+          "end": 23.48,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " dinsdag",
+          "start": 23.48,
+          "end": 23.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aanwezig",
+          "start": 23.8,
+          "end": 24.2,
+          "probability": 1.0
+        },
+        {
+          "word": " zal",
+          "start": 24.2,
+          "end": 24.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zijn.",
+          "start": 24.34,
+          "end": 24.6,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

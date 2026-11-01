@@ -1,0 +1,273 @@
+{
+  "id": "REUSE-KLINK-READ-A1-T03",
+  "sha256": "ca492c65c2aae4c196e6fa1b1df318c9b3348933a7d15ec76331d2a883622477",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Fatima is vandaag ziek. Zij gaat niet naar haar werk. Om acht uur belt zij haar baas. Zij zegt, ik ben ziek. Haar baas zegt, blijf thuis. Morgen gaat Fatima naar de dokter.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.32,
+      "text": " Fatima is vandaag ziek. Zij gaat niet naar haar werk.",
+      "temperature": 0,
+      "avg_logprob": -0.07037551367460791,
+      "compression_ratio": 1.3870967741935485,
+      "no_speech_prob": 8.398434725442883e-12,
+      "words": [
+        {
+          "word": " Fatima",
+          "start": 0.0,
+          "end": 0.52,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " is",
+          "start": 0.52,
+          "end": 0.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vandaag",
+          "start": 0.76,
+          "end": 1.08,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ziek.",
+          "start": 1.08,
+          "end": 1.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Zij",
+          "start": 1.8,
+          "end": 2.18,
+          "probability": 0.99609375
+        },
+        {
+          "word": " gaat",
+          "start": 2.18,
+          "end": 2.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 2.36,
+          "end": 2.58,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " naar",
+          "start": 2.58,
+          "end": 2.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 2.82,
+          "end": 2.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werk.",
+          "start": 2.98,
+          "end": 3.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.64,
+      "end": 5.66,
+      "text": " Om acht uur belt zij haar baas.",
+      "temperature": 0,
+      "avg_logprob": -0.07037551367460791,
+      "compression_ratio": 1.3870967741935485,
+      "no_speech_prob": 8.398434725442883e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 3.64,
+          "end": 4.04,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " acht",
+          "start": 4.04,
+          "end": 4.28,
+          "probability": 0.469970703125
+        },
+        {
+          "word": " uur",
+          "start": 4.28,
+          "end": 4.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " belt",
+          "start": 4.6,
+          "end": 4.84,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " zij",
+          "start": 4.84,
+          "end": 5.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " haar",
+          "start": 5.02,
+          "end": 5.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " baas.",
+          "start": 5.2,
+          "end": 5.66,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.92,
+      "end": 7.76,
+      "text": " Zij zegt, ik ben ziek.",
+      "temperature": 0,
+      "avg_logprob": -0.07037551367460791,
+      "compression_ratio": 1.3870967741935485,
+      "no_speech_prob": 8.398434725442883e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 5.92,
+          "end": 6.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zegt,",
+          "start": 6.32,
+          "end": 6.66,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 6.82,
+          "end": 7.2,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " ben",
+          "start": 7.2,
+          "end": 7.36,
+          "probability": 1.0
+        },
+        {
+          "word": " ziek.",
+          "start": 7.36,
+          "end": 7.76,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.04,
+      "end": 10.18,
+      "text": " Haar baas zegt, blijf thuis.",
+      "temperature": 0,
+      "avg_logprob": -0.07037551367460791,
+      "compression_ratio": 1.3870967741935485,
+      "no_speech_prob": 8.398434725442883e-12,
+      "words": [
+        {
+          "word": " Haar",
+          "start": 8.04,
+          "end": 8.46,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " baas",
+          "start": 8.46,
+          "end": 8.74,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt,",
+          "start": 8.74,
+          "end": 9.12,
+          "probability": 1.0
+        },
+        {
+          "word": " blijf",
+          "start": 9.54,
+          "end": 9.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " thuis.",
+          "start": 9.82,
+          "end": 10.18,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 10.5,
+      "end": 12.58,
+      "text": " Morgen gaat Fatima naar de dokter.",
+      "temperature": 0,
+      "avg_logprob": -0.07037551367460791,
+      "compression_ratio": 1.3870967741935485,
+      "no_speech_prob": 8.398434725442883e-12,
+      "words": [
+        {
+          "word": " Morgen",
+          "start": 10.5,
+          "end": 11.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaat",
+          "start": 11.14,
+          "end": 11.42,
+          "probability": 1.0
+        },
+        {
+          "word": " Fatima",
+          "start": 11.42,
+          "end": 11.9,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 11.9,
+          "end": 12.08,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 12.08,
+          "end": 12.2,
+          "probability": 1.0
+        },
+        {
+          "word": " dokter.",
+          "start": 12.2,
+          "end": 12.58,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-082",
+  "sha256": "141419660cb037150e449c0eefea1e32256ad61d77947fb04c71d03c8721b92e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Volgende week begin ik met mijn nieuwe baan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Volgende week begin ik met mijn nieuwe baan.",
+      "temperature": 0,
+      "avg_logprob": -0.05807910646711077,
+      "compression_ratio": 0.8627450980392157,
+      "no_speech_prob": 4.407037668824332e-12,
+      "words": [
+        {
+          "word": " Volgende",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.9921875
+        },
+        {
+          "word": " week",
+          "start": 0.34,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begin",
+          "start": 0.56,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 0.76,
+          "end": 0.86,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 0.86,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.98,
+          "end": 1.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " nieuwe",
+          "start": 1.08,
+          "end": 1.26,
+          "probability": 1.0
+        },
+        {
+          "word": " baan.",
+          "start": 1.26,
+          "end": 1.6,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

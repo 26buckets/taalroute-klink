@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-c037a7f9cf19e921",
+  "sha256": "c09ce3e27b2e268d106b2c522e0c182d2a28ac15c12c2b341641b5c13c0819f4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn ogen zijn op het boek gericht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": " Mijn ogen zijn op het boek gericht.",
+      "temperature": 0,
+      "avg_logprob": -0.06560500462849934,
+      "compression_ratio": 0.8974358974358975,
+      "no_speech_prob": 5.107732813092181e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9443359375
+        },
+        {
+          "word": " ogen",
+          "start": 0.22,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 0.62,
+          "end": 0.86,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.86,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 1.04,
+          "end": 1.14,
+          "probability": 0.99609375
+        },
+        {
+          "word": " boek",
+          "start": 1.14,
+          "end": 1.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " gericht.",
+          "start": 1.36,
+          "end": 1.8,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

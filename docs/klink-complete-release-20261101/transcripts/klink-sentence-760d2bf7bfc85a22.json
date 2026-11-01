@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-760d2bf7bfc85a22",
+  "sha256": "ba66ef63ca4c5e6109c140fb42bbe64235bf965bd5da240bf24ebaafbf0457e1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik betaal 5 euro.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.26,
+      "text": " Ik betaal 5 euro.",
+      "temperature": 0,
+      "avg_logprob": -0.1784534454345703,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.2387699253354505e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.962890625
+        },
+        {
+          "word": " betaal",
+          "start": 0.14,
+          "end": 0.54,
+          "probability": 1.0
+        },
+        {
+          "word": " 5",
+          "start": 0.54,
+          "end": 0.9,
+          "probability": 0.81494140625
+        },
+        {
+          "word": " euro.",
+          "start": 0.9,
+          "end": 1.26,
+          "probability": 0.99267578125
+        }
+      ]
+    }
+  ]
+}

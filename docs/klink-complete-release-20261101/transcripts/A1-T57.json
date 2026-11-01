@@ -1,0 +1,264 @@
+{
+  "id": "A1-T57",
+  "sha256": "2ab15c492fc8d54a3af27549f5c8f405d14c8bcd3c8608acd7d3d37cbbb78303",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een man wil de bus nemen. Bij de halte zoekt hij zijn kaartje. Het ligt niet in zijn tas. Hij zoekt in zijn jas. Daar zit het kaartje. De bus komt om acht uur. De man stapt in.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.52,
+      "text": " Een man wil de bus nemen. Bij de halte zoekt hij zijn kaartje. Het ligt niet in zijn tas.",
+      "temperature": 0,
+      "avg_logprob": -0.05832412165980185,
+      "compression_ratio": 1.4308943089430894,
+      "no_speech_prob": 5.619034751380703e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9619140625
+        },
+        {
+          "word": " man",
+          "start": 0.14,
+          "end": 0.36,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 0.36,
+          "end": 0.54,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 0.54,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 0.66,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nemen.",
+          "start": 0.88,
+          "end": 1.3,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Bij",
+          "start": 1.42,
+          "end": 1.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.86,
+          "end": 1.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " halte",
+          "start": 1.98,
+          "end": 2.24,
+          "probability": 0.994140625
+        },
+        {
+          "word": " zoekt",
+          "start": 2.24,
+          "end": 2.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 2.46,
+          "end": 2.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 2.56,
+          "end": 2.7,
+          "probability": 0.994140625
+        },
+        {
+          "word": " kaartje.",
+          "start": 2.7,
+          "end": 3.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Het",
+          "start": 3.34,
+          "end": 3.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ligt",
+          "start": 3.64,
+          "end": 3.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 3.84,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 3.96,
+          "end": 4.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 4.12,
+          "end": 4.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tas.",
+          "start": 4.24,
+          "end": 4.52,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.86,
+      "end": 10.34,
+      "text": " Hij zoekt in zijn jas. Daar zit het kaartje. De bus komt om acht uur. De man stapt in.",
+      "temperature": 0,
+      "avg_logprob": -0.05832412165980185,
+      "compression_ratio": 1.4308943089430894,
+      "no_speech_prob": 5.619034751380703e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 4.86,
+          "end": 5.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zoekt",
+          "start": 5.3,
+          "end": 5.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 5.52,
+          "end": 5.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 5.64,
+          "end": 5.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas.",
+          "start": 5.78,
+          "end": 6.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Daar",
+          "start": 6.38,
+          "end": 6.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zit",
+          "start": 6.66,
+          "end": 6.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.8,
+          "end": 6.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartje.",
+          "start": 6.94,
+          "end": 7.38,
+          "probability": 1.0
+        },
+        {
+          "word": " De",
+          "start": 7.66,
+          "end": 8.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 8.1,
+          "end": 8.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 8.26,
+          "end": 8.44,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 8.44,
+          "end": 8.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " acht",
+          "start": 8.58,
+          "end": 8.8,
+          "probability": 0.462890625
+        },
+        {
+          "word": " uur.",
+          "start": 8.8,
+          "end": 9.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " De",
+          "start": 9.4,
+          "end": 9.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man",
+          "start": 9.68,
+          "end": 9.82,
+          "probability": 1.0
+        },
+        {
+          "word": " stapt",
+          "start": 9.82,
+          "end": 10.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in.",
+          "start": 10.12,
+          "end": 10.34,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,635 @@
+{
+  "id": "B1-FL-091",
+  "sha256": "b5a3ea389bb2b7150b8853654f2ccfd6d125f7a423999daa2833326bdab3c966",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de bloemenwinkel ziet medewerker Eline dat een klant bloemen heeft besteld voor zijn moeder. Op de bestelling staat zijn eigen adres bovenaan, maar verderop staat een ander afleveradres. De bezorger vraagt welke plek hij moet gebruiken, omdat hij over 10 minuten vertrekt. Eline wil de bloemen niet naar het verkeerde huis sturen. Ze belt de klant en vraagt waar de bos heen moet. De klant bevestigt dat zijn moeder de bloemen op het tweede adres moet krijgen. Eline past de bezorgkaart aan en geeft die aan de bezorger.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.82,
+      "text": " In de bloemenwinkel ziet medewerker Eline dat een klant bloemen heeft besteld voor zijn moeder.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bloemenwinkel",
+          "start": 0.24,
+          "end": 0.82,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " ziet",
+          "start": 0.82,
+          "end": 1.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " medewerker",
+          "start": 1.02,
+          "end": 1.54,
+          "probability": 1.0
+        },
+        {
+          "word": " Eline",
+          "start": 1.54,
+          "end": 1.84,
+          "probability": 0.96875
+        },
+        {
+          "word": " dat",
+          "start": 1.84,
+          "end": 2.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 2.02,
+          "end": 2.14,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 2.14,
+          "end": 2.46,
+          "probability": 1.0
+        },
+        {
+          "word": " bloemen",
+          "start": 2.46,
+          "end": 2.76,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 2.76,
+          "end": 2.96,
+          "probability": 1.0
+        },
+        {
+          "word": " besteld",
+          "start": 2.96,
+          "end": 3.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 3.28,
+          "end": 3.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 3.44,
+          "end": 3.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moeder.",
+          "start": 3.58,
+          "end": 3.82,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.32,
+      "end": 9.24,
+      "text": " Op de bestelling staat zijn eigen adres bovenaan, maar verderop staat een ander afleveradres.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 4.32,
+          "end": 4.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.78,
+          "end": 4.9,
+          "probability": 1.0
+        },
+        {
+          "word": " bestelling",
+          "start": 4.9,
+          "end": 5.3,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 5.3,
+          "end": 5.54,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 5.54,
+          "end": 5.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eigen",
+          "start": 5.7,
+          "end": 5.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " adres",
+          "start": 5.98,
+          "end": 6.3,
+          "probability": 1.0
+        },
+        {
+          "word": " bovenaan,",
+          "start": 6.3,
+          "end": 6.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 7.08,
+          "end": 7.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verderop",
+          "start": 7.5,
+          "end": 7.94,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 7.94,
+          "end": 8.12,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 8.12,
+          "end": 8.28,
+          "probability": 1.0
+        },
+        {
+          "word": " ander",
+          "start": 8.28,
+          "end": 8.5,
+          "probability": 0.982421875
+        },
+        {
+          "word": " afleveradres.",
+          "start": 8.5,
+          "end": 9.24,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.7,
+      "end": 14.32,
+      "text": " De bezorger vraagt welke plek hij moet gebruiken, omdat hij over 10 minuten vertrekt.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.7,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " bezorger",
+          "start": 10.18,
+          "end": 10.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 10.6,
+          "end": 10.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " welke",
+          "start": 10.96,
+          "end": 11.24,
+          "probability": 1.0
+        },
+        {
+          "word": " plek",
+          "start": 11.24,
+          "end": 11.5,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 11.5,
+          "end": 11.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 11.62,
+          "end": 11.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gebruiken,",
+          "start": 11.8,
+          "end": 12.38,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 12.62,
+          "end": 13.02,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 13.02,
+          "end": 13.18,
+          "probability": 1.0
+        },
+        {
+          "word": " over",
+          "start": 13.18,
+          "end": 13.4,
+          "probability": 1.0
+        },
+        {
+          "word": " 10",
+          "start": 13.4,
+          "end": 13.6,
+          "probability": 0.77587890625
+        },
+        {
+          "word": " minuten",
+          "start": 13.6,
+          "end": 13.92,
+          "probability": 1.0
+        },
+        {
+          "word": " vertrekt.",
+          "start": 13.92,
+          "end": 14.32,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 15.08,
+      "end": 17.48,
+      "text": " Eline wil de bloemen niet naar het verkeerde huis sturen.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " Eline",
+          "start": 15.08,
+          "end": 15.56,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 15.56,
+          "end": 15.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 15.74,
+          "end": 15.86,
+          "probability": 1.0
+        },
+        {
+          "word": " bloemen",
+          "start": 15.86,
+          "end": 16.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 16.1,
+          "end": 16.32,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 16.32,
+          "end": 16.46,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 16.46,
+          "end": 16.58,
+          "probability": 1.0
+        },
+        {
+          "word": " verkeerde",
+          "start": 16.58,
+          "end": 16.92,
+          "probability": 1.0
+        },
+        {
+          "word": " huis",
+          "start": 16.92,
+          "end": 17.1,
+          "probability": 1.0
+        },
+        {
+          "word": " sturen.",
+          "start": 17.1,
+          "end": 17.48,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 17.98,
+      "end": 20.42,
+      "text": " Ze belt de klant en vraagt waar de bos heen moet.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 17.98,
+          "end": 18.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " belt",
+          "start": 18.42,
+          "end": 18.64,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " de",
+          "start": 18.64,
+          "end": 18.78,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 18.78,
+          "end": 19.1,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 19.1,
+          "end": 19.34,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 19.34,
+          "end": 19.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " waar",
+          "start": 19.64,
+          "end": 19.76,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 19.76,
+          "end": 19.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bos",
+          "start": 19.86,
+          "end": 20.04,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " heen",
+          "start": 20.04,
+          "end": 20.26,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " moet.",
+          "start": 20.26,
+          "end": 20.42,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 20.94,
+      "end": 24.56,
+      "text": " De klant bevestigt dat zijn moeder de bloemen op het tweede adres moet krijgen.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.94,
+          "end": 21.42,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 21.42,
+          "end": 21.72,
+          "probability": 1.0
+        },
+        {
+          "word": " bevestigt",
+          "start": 21.72,
+          "end": 22.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 22.2,
+          "end": 22.34,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 22.34,
+          "end": 22.48,
+          "probability": 1.0
+        },
+        {
+          "word": " moeder",
+          "start": 22.48,
+          "end": 22.78,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 22.78,
+          "end": 22.98,
+          "probability": 1.0
+        },
+        {
+          "word": " bloemen",
+          "start": 22.98,
+          "end": 23.2,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 23.2,
+          "end": 23.36,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 23.36,
+          "end": 23.46,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " tweede",
+          "start": 23.46,
+          "end": 23.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " adres",
+          "start": 23.74,
+          "end": 24.04,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 24.04,
+          "end": 24.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " krijgen.",
+          "start": 24.2,
+          "end": 24.56,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 25.34,
+      "end": 28.3,
+      "text": " Eline past de bezorgkaart aan en geeft die aan de bezorger.",
+      "temperature": 0,
+      "avg_logprob": -0.06559255646496284,
+      "compression_ratio": 1.803448275862069,
+      "no_speech_prob": 4.940993794666504e-12,
+      "words": [
+        {
+          "word": " Eline",
+          "start": 25.34,
+          "end": 25.82,
+          "probability": 1.0
+        },
+        {
+          "word": " past",
+          "start": 25.82,
+          "end": 26.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 26.08,
+          "end": 26.2,
+          "probability": 1.0
+        },
+        {
+          "word": " bezorgkaart",
+          "start": 26.2,
+          "end": 26.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aan",
+          "start": 26.82,
+          "end": 27.06,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 27.06,
+          "end": 27.3,
+          "probability": 1.0
+        },
+        {
+          "word": " geeft",
+          "start": 27.3,
+          "end": 27.54,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 27.54,
+          "end": 27.64,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " aan",
+          "start": 27.64,
+          "end": 27.74,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 27.74,
+          "end": 27.84,
+          "probability": 1.0
+        },
+        {
+          "word": " bezorger.",
+          "start": 27.84,
+          "end": 28.3,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

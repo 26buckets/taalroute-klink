@@ -1,0 +1,606 @@
+{
+  "id": "A2-T80",
+  "sha256": "8483fefe85982d4e9bb6ef8cf86b3b6776d28ba86a8e690666dd731d407af0a1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een bezoeker leent maandag een boek bij de bibliotheek. Thuis ziet hij dat er een bladzijde los zit. Hij stuurt een foto naar de bibliotheek en vraagt wat hij moet doen. Een medewerker antwoordt dat hij het boek voorlopig mag houden. De bibliotheek wil eerst bekijken hoe groot de schade is. Donderdag kan de bezoeker met het boek naar de balie komen. Hij hoeft het boek niet zelf te repareren. Hij schrijft op dat hij donderdag langskomt en de e-mail meeneemt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.48,
+      "text": " Een bezoeker leent maandag een boek bij de bibliotheek.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " bezoeker",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leent",
+          "start": 0.56,
+          "end": 0.86,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 0.86,
+          "end": 1.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.24,
+          "end": 1.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " boek",
+          "start": 1.36,
+          "end": 1.58,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 1.58,
+          "end": 1.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.72,
+          "end": 1.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bibliotheek.",
+          "start": 1.84,
+          "end": 2.48,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.96,
+      "end": 4.96,
+      "text": " Thuis ziet hij dat er een bladzijde los zit.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Thuis",
+          "start": 2.96,
+          "end": 3.38,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ziet",
+          "start": 3.38,
+          "end": 3.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 3.58,
+          "end": 3.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 3.7,
+          "end": 3.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 3.84,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.96,
+          "end": 4.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bladzijde",
+          "start": 4.04,
+          "end": 4.56,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " los",
+          "start": 4.56,
+          "end": 4.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zit.",
+          "start": 4.74,
+          "end": 4.96,
+          "probability": 0.95654296875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.4,
+      "end": 8.46,
+      "text": " Hij stuurt een foto naar de bibliotheek en vraagt wat hij moet doen.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 5.4,
+          "end": 5.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stuurt",
+          "start": 5.78,
+          "end": 6.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 6.04,
+          "end": 6.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " foto",
+          "start": 6.18,
+          "end": 6.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 6.56,
+          "end": 6.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.72,
+          "end": 6.82,
+          "probability": 1.0
+        },
+        {
+          "word": " bibliotheek",
+          "start": 6.82,
+          "end": 7.4,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 7.4,
+          "end": 7.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " vraagt",
+          "start": 7.54,
+          "end": 7.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wat",
+          "start": 7.88,
+          "end": 7.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 7.98,
+          "end": 8.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 8.12,
+          "end": 8.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doen.",
+          "start": 8.26,
+          "end": 8.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.14,
+      "end": 11.88,
+      "text": " Een medewerker antwoordt dat hij het boek voorlopig mag houden.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 9.14,
+          "end": 9.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 9.56,
+          "end": 9.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " antwoordt",
+          "start": 9.98,
+          "end": 10.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dat",
+          "start": 10.42,
+          "end": 10.52,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 10.52,
+          "end": 10.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 10.64,
+          "end": 10.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " boek",
+          "start": 10.76,
+          "end": 10.94,
+          "probability": 1.0
+        },
+        {
+          "word": " voorlopig",
+          "start": 10.94,
+          "end": 11.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mag",
+          "start": 11.42,
+          "end": 11.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " houden.",
+          "start": 11.56,
+          "end": 11.88,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.28,
+      "end": 15.16,
+      "text": " De bibliotheek wil eerst bekijken hoe groot de schade is.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.28,
+          "end": 12.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bibliotheek",
+          "start": 12.68,
+          "end": 13.24,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 13.24,
+          "end": 13.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerst",
+          "start": 13.38,
+          "end": 13.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bekijken",
+          "start": 13.64,
+          "end": 14.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoe",
+          "start": 14.08,
+          "end": 14.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groot",
+          "start": 14.2,
+          "end": 14.46,
+          "probability": 0.8125
+        },
+        {
+          "word": " de",
+          "start": 14.46,
+          "end": 14.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schade",
+          "start": 14.54,
+          "end": 14.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 14.9,
+          "end": 15.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.96,
+      "end": 18.2,
+      "text": " Donderdag kan de bezoeker met het boek naar de balie komen.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Donderdag",
+          "start": 15.96,
+          "end": 16.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kan",
+          "start": 16.38,
+          "end": 16.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 16.52,
+          "end": 16.64,
+          "probability": 1.0
+        },
+        {
+          "word": " bezoeker",
+          "start": 16.64,
+          "end": 16.96,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 16.96,
+          "end": 17.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 17.1,
+          "end": 17.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " boek",
+          "start": 17.2,
+          "end": 17.36,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 17.36,
+          "end": 17.46,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 17.46,
+          "end": 17.58,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " balie",
+          "start": 17.58,
+          "end": 17.92,
+          "probability": 0.8720703125
+        },
+        {
+          "word": " komen.",
+          "start": 17.92,
+          "end": 18.2,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.52,
+      "end": 20.54,
+      "text": " Hij hoeft het boek niet zelf te repareren.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 18.52,
+          "end": 18.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoeft",
+          "start": 18.94,
+          "end": 19.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 19.16,
+          "end": 19.28,
+          "probability": 1.0
+        },
+        {
+          "word": " boek",
+          "start": 19.28,
+          "end": 19.46,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 19.46,
+          "end": 19.6,
+          "probability": 1.0
+        },
+        {
+          "word": " zelf",
+          "start": 19.6,
+          "end": 19.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 19.84,
+          "end": 19.98,
+          "probability": 1.0
+        },
+        {
+          "word": " repareren.",
+          "start": 19.98,
+          "end": 20.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.86,
+      "end": 24.0,
+      "text": " Hij schrijft op dat hij donderdag langskomt en de e-mail meeneemt.",
+      "temperature": 0,
+      "avg_logprob": -0.04979642037233692,
+      "compression_ratio": 1.81496062992126,
+      "no_speech_prob": 6.100293447469651e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 20.86,
+          "end": 21.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schrijft",
+          "start": 21.24,
+          "end": 21.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 21.58,
+          "end": 21.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 21.72,
+          "end": 21.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 21.88,
+          "end": 22.02,
+          "probability": 1.0
+        },
+        {
+          "word": " donderdag",
+          "start": 22.02,
+          "end": 22.46,
+          "probability": 0.994140625
+        },
+        {
+          "word": " langskomt",
+          "start": 22.46,
+          "end": 23.04,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " en",
+          "start": 23.04,
+          "end": 23.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 23.14,
+          "end": 23.24,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 23.24,
+          "end": 23.36,
+          "probability": 0.9921875
+        },
+        {
+          "word": "-mail",
+          "start": 23.36,
+          "end": 23.48,
+          "probability": 1.0
+        },
+        {
+          "word": " meeneemt.",
+          "start": 23.48,
+          "end": 24.0,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

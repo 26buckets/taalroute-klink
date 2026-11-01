@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-460cab1c4045b252",
+  "sha256": "c519ed66a0b4d9c83c3e6fc641da6789e0aa90f309169181648249c40aba85f6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De keuken is beneden.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.3,
+      "text": " De keuken is beneden.",
+      "temperature": 0,
+      "avg_logprob": -0.12952024286443536,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 3.700832175435043e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96142578125
+        },
+        {
+          "word": " keuken",
+          "start": 0.16,
+          "end": 0.66,
+          "probability": 0.990234375
+        },
+        {
+          "word": " is",
+          "start": 0.66,
+          "end": 0.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " beneden.",
+          "start": 0.88,
+          "end": 1.3,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

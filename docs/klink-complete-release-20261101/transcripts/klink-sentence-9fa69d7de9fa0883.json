@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-9fa69d7de9fa0883",
+  "sha256": "c98eec835d0aa5f361529b63a2792784867fc567b3bab2007caad683731ba72c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De rijst zit in een pan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.34,
+      "text": " De rijst zit in een pan.",
+      "temperature": 0,
+      "avg_logprob": -0.2363692196932706,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.266695937532594e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.93017578125
+        },
+        {
+          "word": " rijst",
+          "start": 0.2,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zit",
+          "start": 0.6,
+          "end": 0.84,
+          "probability": 0.99609375
+        },
+        {
+          "word": " in",
+          "start": 0.84,
+          "end": 0.98,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 0.98,
+          "end": 1.12,
+          "probability": 0.994140625
+        },
+        {
+          "word": " pan.",
+          "start": 1.12,
+          "end": 1.34,
+          "probability": 0.96728515625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-4420426523dd9fd5",
+  "sha256": "8a05ab012f1eb775c95a3f50802300d05a8bd519376dd696cfb394461f68210f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Boris schildert de muren.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Boris schildert de muren.",
+      "temperature": 0,
+      "avg_logprob": -0.1157326264814897,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.046585982964146e-12,
+      "words": [
+        {
+          "word": " Boris",
+          "start": 0.0,
+          "end": 0.5,
+          "probability": 0.96142578125
+        },
+        {
+          "word": " schildert",
+          "start": 0.5,
+          "end": 1.02,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " de",
+          "start": 1.02,
+          "end": 1.16,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " muren.",
+          "start": 1.16,
+          "end": 1.48,
+          "probability": 0.99560546875
+        }
+      ]
+    }
+  ]
+}

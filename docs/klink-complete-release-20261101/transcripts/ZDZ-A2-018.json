@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-018",
+  "sha256": "ad517a96bf5ef0b713781e723caeeaef5371fb403f41b6f2b3952fbd5ea82a77",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Maak eerst de tafel schoon en zet daarna de stoelen klaar.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.64,
+      "text": " Maak eerst de tafel schoon en zet daarna de stoelen klaar.",
+      "temperature": 0,
+      "avg_logprob": -0.052190697711447014,
+      "compression_ratio": 0.9666666666666667,
+      "no_speech_prob": 3.1883501915019874e-12,
+      "words": [
+        {
+          "word": " Maak",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " eerst",
+          "start": 0.26,
+          "end": 0.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.48,
+          "end": 0.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tafel",
+          "start": 0.58,
+          "end": 0.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " schoon",
+          "start": 0.9,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 1.22,
+          "end": 1.42,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zet",
+          "start": 1.42,
+          "end": 1.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " daarna",
+          "start": 1.64,
+          "end": 1.88,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.88,
+          "end": 2.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stoelen",
+          "start": 2.04,
+          "end": 2.3,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " klaar.",
+          "start": 2.3,
+          "end": 2.64,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

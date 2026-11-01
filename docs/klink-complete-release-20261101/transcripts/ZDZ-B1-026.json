@@ -1,0 +1,156 @@
+{
+  "id": "ZDZ-B1-026",
+  "sha256": "0ffd576a6ac4ca94d652189b874a185387bcfaa690d1dec2e475257e0f379ff5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Zou ik vandaag een half uur eerder mogen vertrekken? Ik moet mijn kind van school halen, omdat het ziek is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.54,
+      "text": " Zou ik vandaag een half uur eerder mogen vertrekken?",
+      "temperature": 0,
+      "avg_logprob": -0.07399867032025312,
+      "compression_ratio": 1.1263157894736842,
+      "no_speech_prob": 5.1762600282445614e-12,
+      "words": [
+        {
+          "word": " Zou",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.86669921875
+        },
+        {
+          "word": " ik",
+          "start": 0.24,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vandaag",
+          "start": 0.36,
+          "end": 0.74,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " een",
+          "start": 0.74,
+          "end": 0.92,
+          "probability": 0.998046875
+        },
+        {
+          "word": " half",
+          "start": 0.92,
+          "end": 1.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uur",
+          "start": 1.18,
+          "end": 1.48,
+          "probability": 0.990234375
+        },
+        {
+          "word": " eerder",
+          "start": 1.48,
+          "end": 1.8,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " mogen",
+          "start": 1.8,
+          "end": 2.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertrekken?",
+          "start": 2.06,
+          "end": 2.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.68,
+      "end": 5.18,
+      "text": " Ik moet mijn kind van school halen, omdat het ziek is.",
+      "temperature": 0,
+      "avg_logprob": -0.07399867032025312,
+      "compression_ratio": 1.1263157894736842,
+      "no_speech_prob": 5.1762600282445614e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 2.68,
+          "end": 2.9,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " moet",
+          "start": 2.9,
+          "end": 3.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 3.06,
+          "end": 3.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kind",
+          "start": 3.18,
+          "end": 3.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " van",
+          "start": 3.42,
+          "end": 3.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school",
+          "start": 3.56,
+          "end": 3.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " halen,",
+          "start": 3.86,
+          "end": 4.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " omdat",
+          "start": 4.3,
+          "end": 4.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 4.58,
+          "end": 4.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ziek",
+          "start": 4.74,
+          "end": 5.0,
+          "probability": 1.0
+        },
+        {
+          "word": " is.",
+          "start": 5.0,
+          "end": 5.18,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

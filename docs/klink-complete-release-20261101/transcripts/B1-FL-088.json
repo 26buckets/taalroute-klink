@@ -1,0 +1,629 @@
+{
+  "id": "B1-FL-088",
+  "sha256": "242b8378fca4570cde73357088d4b1e7480293b79ad175c88ca46f6e364bbdbe",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de kapsalon heeft Dario voor een klant 30 minuten gereserveerd om haar haar te knippen. Bij aankomst vraagt de klant ook om een kleurbehandeling. Die duurt veel langer en daarna staat al een andere afspraak gepland. Dario legt uit dat beide behandelingen vandaag niet binnen de beschikbare tijd passen. Hij biedt aan het knippen nu te doen en voor het kleuren een nieuwe afspraak te maken. De klant kiest daarvoor. Dario noteert haar wensen, zodat ze die bij het volgende bezoek niet opnieuw hoeft uit te leggen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.54,
+      "text": " In de kapsalon heeft Dario voor een klant 30 minuten gereserveerd om haar haar te knippen.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.12,
+          "end": 0.2,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " kapsalon",
+          "start": 0.2,
+          "end": 0.68,
+          "probability": 0.93017578125
+        },
+        {
+          "word": " heeft",
+          "start": 0.68,
+          "end": 0.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Dario",
+          "start": 0.98,
+          "end": 1.32,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " voor",
+          "start": 1.32,
+          "end": 1.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.54,
+          "end": 1.64,
+          "probability": 0.9921875
+        },
+        {
+          "word": " klant",
+          "start": 1.64,
+          "end": 1.96,
+          "probability": 1.0
+        },
+        {
+          "word": " 30",
+          "start": 1.96,
+          "end": 2.34,
+          "probability": 0.8173828125
+        },
+        {
+          "word": " minuten",
+          "start": 2.34,
+          "end": 2.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gereserveerd",
+          "start": 2.8,
+          "end": 3.48,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " om",
+          "start": 3.48,
+          "end": 3.68,
+          "probability": 0.98095703125
+        },
+        {
+          "word": " haar",
+          "start": 3.68,
+          "end": 3.84,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 3.84,
+          "end": 4.0,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " te",
+          "start": 4.0,
+          "end": 4.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " knippen.",
+          "start": 4.16,
+          "end": 4.54,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.64,
+      "end": 7.28,
+      "text": " Bij aankomst vraagt de klant ook om een kleurbehandeling.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 4.64,
+          "end": 4.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aankomst",
+          "start": 4.84,
+          "end": 5.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 5.36,
+          "end": 5.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 5.64,
+          "end": 5.74,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 5.74,
+          "end": 5.98,
+          "probability": 1.0
+        },
+        {
+          "word": " ook",
+          "start": 5.98,
+          "end": 6.2,
+          "probability": 0.998046875
+        },
+        {
+          "word": " om",
+          "start": 6.2,
+          "end": 6.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 6.42,
+          "end": 6.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kleurbehandeling.",
+          "start": 6.54,
+          "end": 7.28,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.4,
+      "end": 10.64,
+      "text": " Die duurt veel langer en daarna staat al een andere afspraak gepland.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 7.4,
+          "end": 7.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " duurt",
+          "start": 7.6,
+          "end": 7.8,
+          "probability": 1.0
+        },
+        {
+          "word": " veel",
+          "start": 7.8,
+          "end": 8.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " langer",
+          "start": 8.02,
+          "end": 8.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 8.36,
+          "end": 8.58,
+          "probability": 0.990234375
+        },
+        {
+          "word": " daarna",
+          "start": 8.58,
+          "end": 8.88,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 8.88,
+          "end": 9.18,
+          "probability": 0.9921875
+        },
+        {
+          "word": " al",
+          "start": 9.18,
+          "end": 9.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 9.4,
+          "end": 9.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 9.52,
+          "end": 9.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 9.76,
+          "end": 10.26,
+          "probability": 1.0
+        },
+        {
+          "word": " gepland.",
+          "start": 10.26,
+          "end": 10.64,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.84,
+      "end": 15.4,
+      "text": " Dario legt uit dat beide behandelingen vandaag niet binnen de beschikbare tijd passen.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " Dario",
+          "start": 10.84,
+          "end": 11.32,
+          "probability": 1.0
+        },
+        {
+          "word": " legt",
+          "start": 11.32,
+          "end": 11.62,
+          "probability": 1.0
+        },
+        {
+          "word": " uit",
+          "start": 11.62,
+          "end": 11.84,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 11.84,
+          "end": 12.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beide",
+          "start": 12.08,
+          "end": 12.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " behandelingen",
+          "start": 12.38,
+          "end": 13.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vandaag",
+          "start": 13.06,
+          "end": 13.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 13.36,
+          "end": 13.82,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " binnen",
+          "start": 13.82,
+          "end": 14.1,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 14.1,
+          "end": 14.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beschikbare",
+          "start": 14.24,
+          "end": 14.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tijd",
+          "start": 14.74,
+          "end": 14.98,
+          "probability": 1.0
+        },
+        {
+          "word": " passen.",
+          "start": 14.98,
+          "end": 15.4,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.54,
+      "end": 19.42,
+      "text": " Hij biedt aan het knippen nu te doen en voor het kleuren een nieuwe afspraak te maken.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 15.54,
+          "end": 15.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " biedt",
+          "start": 15.78,
+          "end": 16.06,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 16.06,
+          "end": 16.12,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 16.12,
+          "end": 16.24,
+          "probability": 1.0
+        },
+        {
+          "word": " knippen",
+          "start": 16.24,
+          "end": 16.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nu",
+          "start": 16.58,
+          "end": 16.76,
+          "probability": 0.98828125
+        },
+        {
+          "word": " te",
+          "start": 16.76,
+          "end": 16.92,
+          "probability": 1.0
+        },
+        {
+          "word": " doen",
+          "start": 16.92,
+          "end": 17.14,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 17.14,
+          "end": 17.44,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " voor",
+          "start": 17.44,
+          "end": 17.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 17.62,
+          "end": 17.74,
+          "probability": 1.0
+        },
+        {
+          "word": " kleuren",
+          "start": 17.74,
+          "end": 18.08,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 18.08,
+          "end": 18.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 18.3,
+          "end": 18.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 18.54,
+          "end": 19.02,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 19.02,
+          "end": 19.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maken.",
+          "start": 19.14,
+          "end": 19.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 19.64,
+      "end": 20.82,
+      "text": " De klant kiest daarvoor.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 19.64,
+          "end": 19.86,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 19.86,
+          "end": 20.16,
+          "probability": 1.0
+        },
+        {
+          "word": " kiest",
+          "start": 20.16,
+          "end": 20.44,
+          "probability": 1.0
+        },
+        {
+          "word": " daarvoor.",
+          "start": 20.44,
+          "end": 20.82,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.12,
+      "end": 25.88,
+      "text": " Dario noteert haar wensen, zodat ze die bij het volgende bezoek niet opnieuw hoeft uit te leggen.",
+      "temperature": 0,
+      "avg_logprob": -0.05093396923499193,
+      "compression_ratio": 1.739864864864865,
+      "no_speech_prob": 6.028724394702145e-12,
+      "words": [
+        {
+          "word": " Dario",
+          "start": 21.12,
+          "end": 21.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " noteert",
+          "start": 21.6,
+          "end": 22.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " haar",
+          "start": 22.02,
+          "end": 22.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wensen,",
+          "start": 22.16,
+          "end": 22.58,
+          "probability": 1.0
+        },
+        {
+          "word": " zodat",
+          "start": 22.68,
+          "end": 23.02,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 23.02,
+          "end": 23.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 23.16,
+          "end": 23.26,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 23.26,
+          "end": 23.44,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 23.44,
+          "end": 23.6,
+          "probability": 1.0
+        },
+        {
+          "word": " volgende",
+          "start": 23.6,
+          "end": 23.98,
+          "probability": 1.0
+        },
+        {
+          "word": " bezoek",
+          "start": 23.98,
+          "end": 24.34,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 24.34,
+          "end": 24.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opnieuw",
+          "start": 24.58,
+          "end": 24.96,
+          "probability": 1.0
+        },
+        {
+          "word": " hoeft",
+          "start": 24.96,
+          "end": 25.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " uit",
+          "start": 25.18,
+          "end": 25.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 25.4,
+          "end": 25.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leggen.",
+          "start": 25.54,
+          "end": 25.88,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

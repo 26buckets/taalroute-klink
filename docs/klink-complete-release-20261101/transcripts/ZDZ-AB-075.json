@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AB-075",
+  "sha256": "f89432c3f6efac7280e48ee33135568af72ca994ddd78684a71db21c1aa4ee83",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dan doe ik mijn jas aan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": " Dan doe ik mijn jas aan.",
+      "temperature": 0,
+      "avg_logprob": -0.10414812781594017,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.521331226081671e-12,
+      "words": [
+        {
+          "word": " Dan",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.7060546875
+        },
+        {
+          "word": " doe",
+          "start": 0.18,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ik",
+          "start": 0.3,
+          "end": 0.42,
+          "probability": 1.0
+        },
+        {
+          "word": " mijn",
+          "start": 0.42,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " jas",
+          "start": 0.56,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan.",
+          "start": 0.8,
+          "end": 1.0,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

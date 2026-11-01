@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-054",
+  "sha256": "80c93133d30d0da4d596ecf3afae50a2122933aa497674478d38790bef76b237",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb dinsdag een afspraak.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Ik heb dinsdag een afspraak.",
+      "temperature": 0,
+      "avg_logprob": -0.07468189511980329,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.492066874722811e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.88427734375
+        },
+        {
+          "word": " heb",
+          "start": 0.12,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 0.24,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " afspraak.",
+          "start": 0.68,
+          "end": 1.2,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

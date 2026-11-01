@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-63854986b1501c92",
+  "sha256": "843fe034fe639c5a6dbedc53439b9ef782185fa20b2a6679869945f02a137f23",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is een fles.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Dit is een fles.",
+      "temperature": 0,
+      "avg_logprob": -0.1468132866753472,
+      "compression_ratio": 0.6666666666666666,
+      "no_speech_prob": 4.584673786445226e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.921875
+        },
+        {
+          "word": " is",
+          "start": 0.24,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.56,
+          "end": 0.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " fles.",
+          "start": 0.7,
+          "end": 1.08,
+          "probability": 0.9873046875
+        }
+      ]
+    }
+  ]
+}

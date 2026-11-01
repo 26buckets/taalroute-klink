@@ -1,0 +1,264 @@
+{
+  "id": "A1-T13",
+  "sha256": "33931472b0bcd8470d32364fc7554b1a4f0fb42386a77e0932c826b0166c57aa",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursist maakt een foto van het bord. De docent vraagt om de foto. De cursist stuurt de foto op maandag. Op dinsdag opent de docent de foto op haar computer. Daarna praat de klas over de foto.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 6.44,
+      "text": " Een cursist maakt een foto van het bord. De docent vraagt om de foto. De cursist stuurt de foto op maandag.",
+      "temperature": 0,
+      "avg_logprob": -0.06986603885889053,
+      "compression_ratio": 1.56,
+      "no_speech_prob": 5.115489629115011e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9765625
+        },
+        {
+          "word": " cursist",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " maakt",
+          "start": 0.62,
+          "end": 0.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.84,
+          "end": 0.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " foto",
+          "start": 0.96,
+          "end": 1.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 1.26,
+          "end": 1.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.4,
+          "end": 1.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " bord.",
+          "start": 1.54,
+          "end": 1.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " De",
+          "start": 2.14,
+          "end": 2.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " docent",
+          "start": 2.64,
+          "end": 2.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 2.96,
+          "end": 3.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 3.36,
+          "end": 3.46,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 3.46,
+          "end": 3.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " foto.",
+          "start": 3.54,
+          "end": 3.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 4.28,
+          "end": 4.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cursist",
+          "start": 4.78,
+          "end": 5.18,
+          "probability": 1.0
+        },
+        {
+          "word": " stuurt",
+          "start": 5.18,
+          "end": 5.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 5.44,
+          "end": 5.54,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " foto",
+          "start": 5.54,
+          "end": 5.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 5.78,
+          "end": 5.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " maandag.",
+          "start": 5.96,
+          "end": 6.44,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 6.86,
+      "end": 11.96,
+      "text": " Op dinsdag opent de docent de foto op haar computer. Daarna praat de klas over de foto.",
+      "temperature": 0,
+      "avg_logprob": -0.06986603885889053,
+      "compression_ratio": 1.56,
+      "no_speech_prob": 5.115489629115011e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 6.86,
+          "end": 7.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dinsdag",
+          "start": 7.36,
+          "end": 7.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opent",
+          "start": 7.88,
+          "end": 8.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 8.22,
+          "end": 8.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 8.32,
+          "end": 8.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 8.6,
+          "end": 8.72,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " foto",
+          "start": 8.72,
+          "end": 8.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 8.94,
+          "end": 9.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 9.1,
+          "end": 9.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " computer.",
+          "start": 9.22,
+          "end": 9.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Daarna",
+          "start": 10.52,
+          "end": 10.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " praat",
+          "start": 10.82,
+          "end": 11.14,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 11.14,
+          "end": 11.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klas",
+          "start": 11.22,
+          "end": 11.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " over",
+          "start": 11.42,
+          "end": 11.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 11.58,
+          "end": 11.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " foto.",
+          "start": 11.66,
+          "end": 11.96,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

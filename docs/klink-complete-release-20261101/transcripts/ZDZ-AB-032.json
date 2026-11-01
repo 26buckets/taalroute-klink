@@ -1,0 +1,35 @@
+{
+  "id": "ZDZ-AB-032",
+  "sha256": "38e1fd7ce6b13be30edcf16bc8ff7ba4907a0674ef4764695b2df593684ae247",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze doos.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.68,
+      "text": " Deze doos.",
+      "temperature": 0,
+      "avg_logprob": -0.2557868957519531,
+      "compression_ratio": 0.5555555555555556,
+      "no_speech_prob": 5.255069383119926e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.91455078125
+        },
+        {
+          "word": " doos.",
+          "start": 0.3,
+          "end": 0.68,
+          "probability": 0.994140625
+        }
+      ]
+    }
+  ]
+}

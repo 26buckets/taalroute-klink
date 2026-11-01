@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-004",
+  "sha256": "247e47112ac8309dfe7b0f460dfba38ab66f0f87dd34e361bfdf425b1a72688c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er ligt water op de vloer bij de deur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.56,
+      "text": " Er ligt water op de vloer bij de deur.",
+      "temperature": 0,
+      "avg_logprob": -0.07139144224279068,
+      "compression_ratio": 0.9047619047619048,
+      "no_speech_prob": 4.598442720354923e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " ligt",
+          "start": 0.18,
+          "end": 0.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " water",
+          "start": 0.36,
+          "end": 0.62,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.62,
+          "end": 0.8,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.8,
+          "end": 0.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vloer",
+          "start": 0.88,
+          "end": 1.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 1.12,
+          "end": 1.22,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 1.22,
+          "end": 1.32,
+          "probability": 1.0
+        },
+        {
+          "word": " deur.",
+          "start": 1.32,
+          "end": 1.56,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

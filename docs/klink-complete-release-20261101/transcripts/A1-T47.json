@@ -1,0 +1,283 @@
+{
+  "id": "A1-T47",
+  "sha256": "8085efc45f9fc55f855389b820210a889bec0dfaf656148e28d795b37815ce23",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Na het werk komt een man thuis. Zijn jas is nat door de regen. Hij hangt de jas bij de deur. Zijn schoenen zet hij in de gang. Daarna maakt hij thee. De volgende ochtend is de jas droog.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.42,
+      "text": " Na het werk komt een man thuis. Zijn jas is nat door de regen.",
+      "temperature": 0,
+      "avg_logprob": -0.059949183809584465,
+      "compression_ratio": 1.3984962406015038,
+      "no_speech_prob": 5.55416476699655e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " het",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " werk",
+          "start": 0.3,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 0.52,
+          "end": 0.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.74,
+          "end": 0.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man",
+          "start": 0.88,
+          "end": 1.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " thuis.",
+          "start": 1.12,
+          "end": 1.54,
+          "probability": 1.0
+        },
+        {
+          "word": " Zijn",
+          "start": 1.9,
+          "end": 2.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas",
+          "start": 2.34,
+          "end": 2.54,
+          "probability": 0.998046875
+        },
+        {
+          "word": " is",
+          "start": 2.54,
+          "end": 2.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nat",
+          "start": 2.68,
+          "end": 2.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " door",
+          "start": 2.84,
+          "end": 2.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 2.98,
+          "end": 3.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " regen.",
+          "start": 3.08,
+          "end": 3.42,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.84,
+      "end": 7.1,
+      "text": " Hij hangt de jas bij de deur. Zijn schoenen zet hij in de gang.",
+      "temperature": 0,
+      "avg_logprob": -0.059949183809584465,
+      "compression_ratio": 1.3984962406015038,
+      "no_speech_prob": 5.55416476699655e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 3.84,
+          "end": 4.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hangt",
+          "start": 4.28,
+          "end": 4.52,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 4.52,
+          "end": 4.6,
+          "probability": 1.0
+        },
+        {
+          "word": " jas",
+          "start": 4.6,
+          "end": 4.78,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 4.78,
+          "end": 4.92,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 4.92,
+          "end": 5.06,
+          "probability": 1.0
+        },
+        {
+          "word": " deur.",
+          "start": 5.06,
+          "end": 5.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zijn",
+          "start": 5.68,
+          "end": 6.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schoenen",
+          "start": 6.12,
+          "end": 6.42,
+          "probability": 1.0
+        },
+        {
+          "word": " zet",
+          "start": 6.42,
+          "end": 6.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hij",
+          "start": 6.64,
+          "end": 6.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 6.72,
+          "end": 6.82,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 6.82,
+          "end": 6.88,
+          "probability": 1.0
+        },
+        {
+          "word": " gang.",
+          "start": 6.88,
+          "end": 7.1,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.66,
+      "end": 11.12,
+      "text": " Daarna maakt hij thee. De volgende ochtend is de jas droog.",
+      "temperature": 0,
+      "avg_logprob": -0.059949183809584465,
+      "compression_ratio": 1.3984962406015038,
+      "no_speech_prob": 5.55416476699655e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 7.66,
+          "end": 8.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maakt",
+          "start": 8.1,
+          "end": 8.46,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 8.46,
+          "end": 8.56,
+          "probability": 1.0
+        },
+        {
+          "word": " thee.",
+          "start": 8.56,
+          "end": 8.76,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " De",
+          "start": 9.32,
+          "end": 9.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 9.7,
+          "end": 10.04,
+          "probability": 1.0
+        },
+        {
+          "word": " ochtend",
+          "start": 10.04,
+          "end": 10.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 10.34,
+          "end": 10.46,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.46,
+          "end": 10.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas",
+          "start": 10.56,
+          "end": 10.76,
+          "probability": 1.0
+        },
+        {
+          "word": " droog.",
+          "start": 10.76,
+          "end": 11.12,
+          "probability": 0.9951171875
+        }
+      ]
+    }
+  ]
+}

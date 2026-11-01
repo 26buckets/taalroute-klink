@@ -1,0 +1,629 @@
+{
+  "id": "B1-FL-015",
+  "sha256": "e9be7c039a34a948f46858232a3b7955871f71fbe3e843e78f6cbd8cd5eab8ed",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op dinsdag ontvangt Bilal een e-mail die van zijn bank lijkt te komen. Volgens het bericht wordt zijn rekening geblokkeerd als hij niet binnen een uur op een link klikt. Bilal schrikt, maar merkt dat de afzender een vreemd e-mailadres gebruikt. In plaats van op de link te klikken, opent hij zelf de bankapp. Daar staat geen waarschuwing. Hij verwijdert de e-mail niet meteen, maar meldt het bericht eerst via de officiële website van de bank. Daarna vertelt hij zijn moeder waarom hij voorzichtig was.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.18,
+      "text": " Op dinsdag ontvangt Bilal een e-mail die van zijn bank lijkt te komen.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dinsdag",
+          "start": 0.18,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangt",
+          "start": 0.68,
+          "end": 1.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Bilal",
+          "start": 1.12,
+          "end": 1.42,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " een",
+          "start": 1.42,
+          "end": 1.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " e",
+          "start": 1.56,
+          "end": 1.74,
+          "probability": 0.98583984375
+        },
+        {
+          "word": "-mail",
+          "start": 1.74,
+          "end": 1.9,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 1.9,
+          "end": 2.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 2.04,
+          "end": 2.18,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 2.18,
+          "end": 2.32,
+          "probability": 1.0
+        },
+        {
+          "word": " bank",
+          "start": 2.32,
+          "end": 2.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lijkt",
+          "start": 2.56,
+          "end": 2.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 2.78,
+          "end": 2.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komen.",
+          "start": 2.88,
+          "end": 3.18,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.960000000000001,
+      "end": 8.02,
+      "text": " Volgens het bericht wordt zijn rekening geblokkeerd als hij niet binnen een uur op een link klikt.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 3.960000000000001,
+          "end": 4.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 4.4,
+          "end": 4.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 4.52,
+          "end": 4.86,
+          "probability": 1.0
+        },
+        {
+          "word": " wordt",
+          "start": 4.86,
+          "end": 5.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 5.02,
+          "end": 5.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rekening",
+          "start": 5.18,
+          "end": 5.58,
+          "probability": 1.0
+        },
+        {
+          "word": " geblokkeerd",
+          "start": 5.58,
+          "end": 6.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " als",
+          "start": 6.18,
+          "end": 6.32,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " hij",
+          "start": 6.32,
+          "end": 6.44,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 6.44,
+          "end": 6.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " binnen",
+          "start": 6.66,
+          "end": 6.88,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 6.88,
+          "end": 7.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " uur",
+          "start": 7.06,
+          "end": 7.28,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 7.28,
+          "end": 7.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 7.4,
+          "end": 7.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " link",
+          "start": 7.5,
+          "end": 7.68,
+          "probability": 1.0
+        },
+        {
+          "word": " klikt.",
+          "start": 7.68,
+          "end": 8.02,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.74,
+      "end": 12.5,
+      "text": " Bilal schrikt, maar merkt dat de afzender een vreemd e-mailadres gebruikt.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " Bilal",
+          "start": 8.74,
+          "end": 9.18,
+          "probability": 1.0
+        },
+        {
+          "word": " schrikt,",
+          "start": 9.18,
+          "end": 9.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 9.74,
+          "end": 10.22,
+          "probability": 1.0
+        },
+        {
+          "word": " merkt",
+          "start": 10.22,
+          "end": 10.48,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 10.48,
+          "end": 10.6,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.6,
+          "end": 10.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afzender",
+          "start": 10.7,
+          "end": 11.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 11.1,
+          "end": 11.24,
+          "probability": 1.0
+        },
+        {
+          "word": " vreemd",
+          "start": 11.24,
+          "end": 11.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " e",
+          "start": 11.54,
+          "end": 11.68,
+          "probability": 0.99267578125
+        },
+        {
+          "word": "-mailadres",
+          "start": 11.68,
+          "end": 12.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gebruikt.",
+          "start": 12.06,
+          "end": 12.5,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.86,
+      "end": 15.9,
+      "text": " In plaats van op de link te klikken, opent hij zelf de bankapp.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 12.86,
+          "end": 13.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " plaats",
+          "start": 13.3,
+          "end": 13.6,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 13.6,
+          "end": 13.7,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 13.7,
+          "end": 13.82,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 13.82,
+          "end": 13.92,
+          "probability": 1.0
+        },
+        {
+          "word": " link",
+          "start": 13.92,
+          "end": 14.08,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 14.08,
+          "end": 14.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klikken,",
+          "start": 14.22,
+          "end": 14.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opent",
+          "start": 14.88,
+          "end": 15.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 15.08,
+          "end": 15.2,
+          "probability": 1.0
+        },
+        {
+          "word": " zelf",
+          "start": 15.2,
+          "end": 15.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 15.4,
+          "end": 15.52,
+          "probability": 1.0
+        },
+        {
+          "word": " bankapp.",
+          "start": 15.52,
+          "end": 15.9,
+          "probability": 0.87451171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 16.38,
+      "end": 17.68,
+      "text": " Daar staat geen waarschuwing.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " Daar",
+          "start": 16.38,
+          "end": 16.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " staat",
+          "start": 16.7,
+          "end": 16.92,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 16.92,
+          "end": 17.1,
+          "probability": 1.0
+        },
+        {
+          "word": " waarschuwing.",
+          "start": 17.1,
+          "end": 17.68,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.240000000000002,
+      "end": 23.16,
+      "text": " Hij verwijdert de e-mail niet meteen, maar meldt het bericht eerst via de officiële website van de bank.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 18.240000000000002,
+          "end": 18.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verwijdert",
+          "start": 18.68,
+          "end": 19.08,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 19.08,
+          "end": 19.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " e",
+          "start": 19.18,
+          "end": 19.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": "-mail",
+          "start": 19.28,
+          "end": 19.42,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 19.42,
+          "end": 19.56,
+          "probability": 1.0
+        },
+        {
+          "word": " meteen,",
+          "start": 19.56,
+          "end": 19.98,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 20.2,
+          "end": 20.6,
+          "probability": 1.0
+        },
+        {
+          "word": " meldt",
+          "start": 20.6,
+          "end": 20.88,
+          "probability": 0.984375
+        },
+        {
+          "word": " het",
+          "start": 20.88,
+          "end": 20.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 20.98,
+          "end": 21.28,
+          "probability": 1.0
+        },
+        {
+          "word": " eerst",
+          "start": 21.28,
+          "end": 21.58,
+          "probability": 1.0
+        },
+        {
+          "word": " via",
+          "start": 21.58,
+          "end": 21.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 21.76,
+          "end": 21.9,
+          "probability": 1.0
+        },
+        {
+          "word": " officiële",
+          "start": 21.9,
+          "end": 22.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " website",
+          "start": 22.32,
+          "end": 22.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 22.68,
+          "end": 22.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 22.82,
+          "end": 22.94,
+          "probability": 1.0
+        },
+        {
+          "word": " bank.",
+          "start": 22.94,
+          "end": 23.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.76,
+      "end": 26.32,
+      "text": " Daarna vertelt hij zijn moeder waarom hij voorzichtig was.",
+      "temperature": 0,
+      "avg_logprob": -0.06367236091977074,
+      "compression_ratio": 1.6710963455149501,
+      "no_speech_prob": 5.363309622807844e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 23.76,
+          "end": 24.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vertelt",
+          "start": 24.2,
+          "end": 24.6,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 24.6,
+          "end": 24.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 24.7,
+          "end": 24.84,
+          "probability": 1.0
+        },
+        {
+          "word": " moeder",
+          "start": 24.84,
+          "end": 25.12,
+          "probability": 1.0
+        },
+        {
+          "word": " waarom",
+          "start": 25.12,
+          "end": 25.56,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 25.56,
+          "end": 25.64,
+          "probability": 1.0
+        },
+        {
+          "word": " voorzichtig",
+          "start": 25.64,
+          "end": 26.06,
+          "probability": 1.0
+        },
+        {
+          "word": " was.",
+          "start": 26.06,
+          "end": 26.32,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

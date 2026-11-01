@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-13c5028d516f19db",
+  "sha256": "c402c572b5e0c6205be7d33f617a6382bc0bdf886f590fbaa5f914462b67bf83",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kok snijdt het vlees.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " De kok snijdt het vlees.",
+      "temperature": 0,
+      "avg_logprob": -0.18217259186964768,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 3.7630675485400555e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.86083984375
+        },
+        {
+          "word": " kok",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.95703125
+        },
+        {
+          "word": " snijdt",
+          "start": 0.44,
+          "end": 0.98,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " het",
+          "start": 0.98,
+          "end": 1.06,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " vlees.",
+          "start": 1.06,
+          "end": 1.54,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,580 @@
+{
+  "id": "B1-FL-011",
+  "sha256": "9b558e116a7bf51cda20c41e974601f9129afe041c26b73b324d90411a8f4b55",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De basisschool organiseert op vrijdag de jaarlijkse sportdag en zoekt ouders die willen helpen. Karim wil zich aanmelden, maar hij kan vanwege zijn werk niet de hele ochtend aanwezig zijn. In een bericht aan de school biedt hij aan om de middagactiviteiten klaar te zetten. De coördinator antwoordt dat deze hulp welkom is, maar dat de materialen al op donderdag worden gebracht. Karim spreekt daarom af om donderdag na zijn werk te helpen. Zo kan hij toch bijdragen zonder vrij te nemen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.52,
+      "text": " De basisschool organiseert op vrijdag de jaarlijkse sportdag en zoekt ouders die willen helpen.",
+      "temperature": 0,
+      "avg_logprob": -0.04810578130906628,
+      "compression_ratio": 1.6689419795221843,
+      "no_speech_prob": 4.751823934334709e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " basisschool",
+          "start": 0.16,
+          "end": 0.72,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " organiseert",
+          "start": 0.72,
+          "end": 1.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " op",
+          "start": 1.26,
+          "end": 1.36,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijdag",
+          "start": 1.36,
+          "end": 1.74,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.74,
+          "end": 1.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " jaarlijkse",
+          "start": 1.86,
+          "end": 2.22,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " sportdag",
+          "start": 2.22,
+          "end": 2.72,
+          "probability": 0.99609375
+        },
+        {
+          "word": " en",
+          "start": 2.72,
+          "end": 3.38,
+          "probability": 0.9306640625
+        },
+        {
+          "word": " zoekt",
+          "start": 3.38,
+          "end": 3.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ouders",
+          "start": 3.6,
+          "end": 3.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 3.9,
+          "end": 4.0,
+          "probability": 1.0
+        },
+        {
+          "word": " willen",
+          "start": 4.0,
+          "end": 4.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " helpen.",
+          "start": 4.18,
+          "end": 4.52,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.26,
+      "end": 9.34,
+      "text": " Karim wil zich aanmelden, maar hij kan vanwege zijn werk niet de hele ochtend aanwezig zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.04810578130906628,
+      "compression_ratio": 1.6689419795221843,
+      "no_speech_prob": 4.751823934334709e-12,
+      "words": [
+        {
+          "word": " Karim",
+          "start": 5.26,
+          "end": 5.52,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " wil",
+          "start": 5.52,
+          "end": 5.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zich",
+          "start": 5.66,
+          "end": 5.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aanmelden,",
+          "start": 5.84,
+          "end": 6.36,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 6.58,
+          "end": 6.98,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 6.98,
+          "end": 7.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 7.12,
+          "end": 7.28,
+          "probability": 1.0
+        },
+        {
+          "word": " vanwege",
+          "start": 7.28,
+          "end": 7.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 7.6,
+          "end": 7.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk",
+          "start": 7.74,
+          "end": 7.98,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 7.98,
+          "end": 8.12,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.12,
+          "end": 8.26,
+          "probability": 1.0
+        },
+        {
+          "word": " hele",
+          "start": 8.26,
+          "end": 8.44,
+          "probability": 1.0
+        },
+        {
+          "word": " ochtend",
+          "start": 8.44,
+          "end": 8.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aanwezig",
+          "start": 8.74,
+          "end": 9.12,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn.",
+          "start": 9.12,
+          "end": 9.34,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.98,
+      "end": 13.8,
+      "text": " In een bericht aan de school biedt hij aan om de middagactiviteiten klaar te zetten.",
+      "temperature": 0,
+      "avg_logprob": -0.04810578130906628,
+      "compression_ratio": 1.6689419795221843,
+      "no_speech_prob": 4.751823934334709e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 9.98,
+          "end": 10.5,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 10.5,
+          "end": 10.6,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht",
+          "start": 10.6,
+          "end": 10.92,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 10.92,
+          "end": 11.04,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 11.04,
+          "end": 11.14,
+          "probability": 1.0
+        },
+        {
+          "word": " school",
+          "start": 11.14,
+          "end": 11.4,
+          "probability": 1.0
+        },
+        {
+          "word": " biedt",
+          "start": 11.4,
+          "end": 11.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 11.68,
+          "end": 11.76,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 11.76,
+          "end": 12.04,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 12.04,
+          "end": 12.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.2,
+          "end": 12.32,
+          "probability": 1.0
+        },
+        {
+          "word": " middagactiviteiten",
+          "start": 12.32,
+          "end": 13.1,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " klaar",
+          "start": 13.1,
+          "end": 13.44,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 13.44,
+          "end": 13.52,
+          "probability": 1.0
+        },
+        {
+          "word": " zetten.",
+          "start": 13.52,
+          "end": 13.8,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 14.26,
+      "end": 19.74,
+      "text": " De coördinator antwoordt dat deze hulp welkom is, maar dat de materialen al op donderdag worden gebracht.",
+      "temperature": 0,
+      "avg_logprob": -0.04810578130906628,
+      "compression_ratio": 1.6689419795221843,
+      "no_speech_prob": 4.751823934334709e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 14.26,
+          "end": 14.78,
+          "probability": 1.0
+        },
+        {
+          "word": " coördinator",
+          "start": 14.78,
+          "end": 15.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " antwoordt",
+          "start": 15.38,
+          "end": 15.78,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " dat",
+          "start": 15.78,
+          "end": 15.88,
+          "probability": 1.0
+        },
+        {
+          "word": " deze",
+          "start": 15.88,
+          "end": 16.16,
+          "probability": 1.0
+        },
+        {
+          "word": " hulp",
+          "start": 16.16,
+          "end": 16.4,
+          "probability": 1.0
+        },
+        {
+          "word": " welkom",
+          "start": 16.4,
+          "end": 16.76,
+          "probability": 1.0
+        },
+        {
+          "word": " is,",
+          "start": 16.76,
+          "end": 17.0,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 17.28,
+          "end": 17.74,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 17.74,
+          "end": 17.86,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 17.86,
+          "end": 17.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " materialen",
+          "start": 17.98,
+          "end": 18.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " al",
+          "start": 18.6,
+          "end": 18.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 18.72,
+          "end": 18.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " donderdag",
+          "start": 18.82,
+          "end": 19.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " worden",
+          "start": 19.18,
+          "end": 19.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gebracht.",
+          "start": 19.36,
+          "end": 19.74,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 20.36,
+      "end": 23.04,
+      "text": " Karim spreekt daarom af om donderdag na zijn werk te helpen.",
+      "temperature": 0,
+      "avg_logprob": -0.04810578130906628,
+      "compression_ratio": 1.6689419795221843,
+      "no_speech_prob": 4.751823934334709e-12,
+      "words": [
+        {
+          "word": " Karim",
+          "start": 20.36,
+          "end": 20.88,
+          "probability": 1.0
+        },
+        {
+          "word": " spreekt",
+          "start": 20.88,
+          "end": 21.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " daarom",
+          "start": 21.18,
+          "end": 21.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " af",
+          "start": 21.46,
+          "end": 21.62,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 21.62,
+          "end": 21.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " donderdag",
+          "start": 21.76,
+          "end": 22.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " na",
+          "start": 22.12,
+          "end": 22.24,
+          "probability": 0.939453125
+        },
+        {
+          "word": " zijn",
+          "start": 22.24,
+          "end": 22.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " werk",
+          "start": 22.38,
+          "end": 22.58,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 22.58,
+          "end": 22.7,
+          "probability": 1.0
+        },
+        {
+          "word": " helpen.",
+          "start": 22.7,
+          "end": 23.04,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 23.38,
+      "end": 25.84,
+      "text": " Zo kan hij toch bijdragen zonder vrij te nemen.",
+      "temperature": 0,
+      "avg_logprob": -0.04810578130906628,
+      "compression_ratio": 1.6689419795221843,
+      "no_speech_prob": 4.751823934334709e-12,
+      "words": [
+        {
+          "word": " Zo",
+          "start": 23.38,
+          "end": 23.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 23.82,
+          "end": 23.98,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 23.98,
+          "end": 24.08,
+          "probability": 1.0
+        },
+        {
+          "word": " toch",
+          "start": 24.08,
+          "end": 24.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bijdragen",
+          "start": 24.32,
+          "end": 24.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zonder",
+          "start": 24.88,
+          "end": 25.2,
+          "probability": 1.0
+        },
+        {
+          "word": " vrij",
+          "start": 25.2,
+          "end": 25.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " te",
+          "start": 25.4,
+          "end": 25.54,
+          "probability": 0.99609375
+        },
+        {
+          "word": " nemen.",
+          "start": 25.54,
+          "end": 25.84,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

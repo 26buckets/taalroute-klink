@@ -1,0 +1,95 @@
+{
+  "id": "ZDZ-A2-008",
+  "sha256": "ca9a0947a0c74a92d2314af741f81dd8f898e490da28de976b05d6fcbf777b79",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn nieuwe huis is kleiner, maar het ligt dichter bij mijn werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.78,
+      "text": " Mijn nieuwe huis is kleiner, maar het ligt dichter bij mijn werk.",
+      "temperature": 0,
+      "avg_logprob": -0.06752731800079345,
+      "compression_ratio": 0.9701492537313433,
+      "no_speech_prob": 4.3235940001828954e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " nieuwe",
+          "start": 0.18,
+          "end": 0.34,
+          "probability": 0.99609375
+        },
+        {
+          "word": " huis",
+          "start": 0.34,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 0.62,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kleiner,",
+          "start": 0.8,
+          "end": 1.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " maar",
+          "start": 1.34,
+          "end": 1.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 1.54,
+          "end": 1.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ligt",
+          "start": 1.68,
+          "end": 1.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dichter",
+          "start": 1.9,
+          "end": 2.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 2.22,
+          "end": 2.34,
+          "probability": 0.990234375
+        },
+        {
+          "word": " mijn",
+          "start": 2.34,
+          "end": 2.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werk.",
+          "start": 2.5,
+          "end": 2.78,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

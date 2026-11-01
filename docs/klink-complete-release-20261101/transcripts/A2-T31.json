@@ -1,0 +1,588 @@
+{
+  "id": "A2-T31",
+  "sha256": "ebe01f8f853166015a091d069490165ceb6a7a1c491599013ead86fc58170e60",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een groep heeft kaartjes voor een voorstelling op zaterdagavond. Op vrijdag stuurt het theater een e-mail. De voorstelling begint een half uur later, om half negen. De deuren gaan om acht uur open. De plaatsen op de kaartjes blijven hetzelfde. Een bezoeker kan nog steeds komen, maar wil weten of het oude kaartje geldig blijft. De medewerker antwoordt dat er geen nieuw kaartje nodig is. De bezoeker bewaart daarom het kaartje en vertrekt zaterdag iets later van huis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.12,
+      "text": " Een groep heeft kaartjes voor een voorstelling op zaterdagavond.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " groep",
+          "start": 0.14,
+          "end": 0.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 0.42,
+          "end": 0.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kaartjes",
+          "start": 0.74,
+          "end": 1.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 1.26,
+          "end": 1.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 1.4,
+          "end": 1.54,
+          "probability": 0.912109375
+        },
+        {
+          "word": " voorstelling",
+          "start": 1.54,
+          "end": 2.08,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 2.08,
+          "end": 2.22,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " zaterdagavond.",
+          "start": 2.22,
+          "end": 3.12,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.26,
+      "end": 5.38,
+      "text": " Op vrijdag stuurt het theater een e-mail.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.26,
+          "end": 3.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vrijdag",
+          "start": 3.5,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stuurt",
+          "start": 3.96,
+          "end": 4.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 4.24,
+          "end": 4.34,
+          "probability": 0.83203125
+        },
+        {
+          "word": " theater",
+          "start": 4.34,
+          "end": 4.64,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " een",
+          "start": 4.64,
+          "end": 5.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " e",
+          "start": 5.0,
+          "end": 5.18,
+          "probability": 0.99072265625
+        },
+        {
+          "word": "-mail.",
+          "start": 5.18,
+          "end": 5.38,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.54,
+      "end": 8.46,
+      "text": " De voorstelling begint een half uur later, om half negen.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.54,
+          "end": 5.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voorstelling",
+          "start": 5.76,
+          "end": 6.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begint",
+          "start": 6.28,
+          "end": 6.62,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 6.62,
+          "end": 6.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " half",
+          "start": 6.74,
+          "end": 6.98,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " uur",
+          "start": 6.98,
+          "end": 7.2,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " later,",
+          "start": 7.2,
+          "end": 7.46,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 7.64,
+          "end": 7.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " half",
+          "start": 7.8,
+          "end": 8.04,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " negen.",
+          "start": 8.04,
+          "end": 8.46,
+          "probability": 0.966796875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.62,
+      "end": 10.26,
+      "text": " De deuren gaan om acht uur open.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.62,
+          "end": 8.82,
+          "probability": 1.0
+        },
+        {
+          "word": " deuren",
+          "start": 8.82,
+          "end": 9.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gaan",
+          "start": 9.12,
+          "end": 9.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 9.34,
+          "end": 9.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " acht",
+          "start": 9.5,
+          "end": 9.72,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " uur",
+          "start": 9.72,
+          "end": 9.96,
+          "probability": 1.0
+        },
+        {
+          "word": " open.",
+          "start": 9.96,
+          "end": 10.26,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 10.44,
+      "end": 12.66,
+      "text": " De plaatsen op de kaartjes blijven hetzelfde.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 10.44,
+          "end": 10.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " plaatsen",
+          "start": 10.66,
+          "end": 11.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 11.08,
+          "end": 11.2,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 11.2,
+          "end": 11.3,
+          "probability": 1.0
+        },
+        {
+          "word": " kaartjes",
+          "start": 11.3,
+          "end": 11.72,
+          "probability": 1.0
+        },
+        {
+          "word": " blijven",
+          "start": 11.72,
+          "end": 12.1,
+          "probability": 1.0
+        },
+        {
+          "word": " hetzelfde.",
+          "start": 12.1,
+          "end": 12.66,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 12.8,
+      "end": 16.98,
+      "text": " Een bezoeker kan nog steeds komen, maar wil weten of het oude kaartje geldig blijft.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 12.8,
+          "end": 13.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bezoeker",
+          "start": 13.02,
+          "end": 13.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 13.4,
+          "end": 13.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 13.6,
+          "end": 13.76,
+          "probability": 1.0
+        },
+        {
+          "word": " steeds",
+          "start": 13.76,
+          "end": 14.0,
+          "probability": 1.0
+        },
+        {
+          "word": " komen,",
+          "start": 14.0,
+          "end": 14.44,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 14.56,
+          "end": 14.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 14.74,
+          "end": 14.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weten",
+          "start": 14.92,
+          "end": 15.26,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 15.26,
+          "end": 15.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 15.46,
+          "end": 15.6,
+          "probability": 1.0
+        },
+        {
+          "word": " oude",
+          "start": 15.6,
+          "end": 15.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartje",
+          "start": 15.86,
+          "end": 16.24,
+          "probability": 1.0
+        },
+        {
+          "word": " geldig",
+          "start": 16.24,
+          "end": 16.6,
+          "probability": 1.0
+        },
+        {
+          "word": " blijft.",
+          "start": 16.6,
+          "end": 16.98,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 17.12,
+      "end": 20.06,
+      "text": " De medewerker antwoordt dat er geen nieuw kaartje nodig is.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 17.12,
+          "end": 17.26,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 17.26,
+          "end": 17.84,
+          "probability": 1.0
+        },
+        {
+          "word": " antwoordt",
+          "start": 17.84,
+          "end": 18.38,
+          "probability": 0.99609375
+        },
+        {
+          "word": " dat",
+          "start": 18.38,
+          "end": 18.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 18.52,
+          "end": 18.64,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 18.64,
+          "end": 18.86,
+          "probability": 1.0
+        },
+        {
+          "word": " nieuw",
+          "start": 18.86,
+          "end": 19.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaartje",
+          "start": 19.14,
+          "end": 19.54,
+          "probability": 1.0
+        },
+        {
+          "word": " nodig",
+          "start": 19.54,
+          "end": 19.78,
+          "probability": 1.0
+        },
+        {
+          "word": " is.",
+          "start": 19.78,
+          "end": 20.06,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.22,
+      "end": 24.04,
+      "text": " De bezoeker bewaart daarom het kaartje en vertrekt zaterdag iets later van huis.",
+      "temperature": 0,
+      "avg_logprob": -0.04896877110004425,
+      "compression_ratio": 1.7900763358778626,
+      "no_speech_prob": 8.334068678228501e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.22,
+          "end": 20.32,
+          "probability": 1.0
+        },
+        {
+          "word": " bezoeker",
+          "start": 20.32,
+          "end": 20.68,
+          "probability": 1.0
+        },
+        {
+          "word": " bewaart",
+          "start": 20.68,
+          "end": 21.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " daarom",
+          "start": 21.06,
+          "end": 21.4,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 21.4,
+          "end": 21.52,
+          "probability": 1.0
+        },
+        {
+          "word": " kaartje",
+          "start": 21.52,
+          "end": 21.96,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 21.96,
+          "end": 22.16,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " vertrekt",
+          "start": 22.16,
+          "end": 22.52,
+          "probability": 1.0
+        },
+        {
+          "word": " zaterdag",
+          "start": 22.52,
+          "end": 23.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iets",
+          "start": 23.04,
+          "end": 23.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " later",
+          "start": 23.28,
+          "end": 23.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 23.6,
+          "end": 23.76,
+          "probability": 1.0
+        },
+        {
+          "word": " huis.",
+          "start": 23.76,
+          "end": 24.04,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

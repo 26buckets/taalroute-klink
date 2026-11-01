@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-01fd505c573fae0d",
+  "sha256": "b5f8727acd6cbf459ec9fd09f2d34690a9e02baa4d1a9cff6e6c6f15b5e42057",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Over hoeveel uur begint de les?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.9,
+      "text": " Over hoeveel uur begint de les?",
+      "temperature": 0,
+      "avg_logprob": -0.04880179677690778,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 5.3708795223761374e-12,
+      "words": [
+        {
+          "word": " Over",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.7763671875
+        },
+        {
+          "word": " hoeveel",
+          "start": 0.26,
+          "end": 0.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " uur",
+          "start": 0.8,
+          "end": 1.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " begint",
+          "start": 1.16,
+          "end": 1.56,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.56,
+          "end": 1.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les?",
+          "start": 1.64,
+          "end": 1.9,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

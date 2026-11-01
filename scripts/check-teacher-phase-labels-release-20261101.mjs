@@ -1,5 +1,5 @@
+import {verifyTextQuestionSpacingRelease,readBeforeTextQuestionSpacing} from './check-text-question-spacing-release-20261101.mjs';
 import assert from 'node:assert/strict';
-import {verifyWordUseRelease,readBeforeWordUse} from './check-word-use-release-20261101.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -8,7 +8,7 @@ const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const allowed=sort(['lib/teacher-classroom.ts','scripts/test-teacher-phase-labels-20261101.mjs','scripts/test-teacher-phase-labels-browser-20261101.mjs','scripts/check-teacher-module-recovery-release-20261101.mjs','scripts/check-teacher-phase-labels-release-20261101.mjs','scripts/test-teacher-phase-labels-release-20261101.mjs']);
 export function verifyTeacherPhaseLabelsRelease(read=readFileSync){
- const successor=verifyWordUseRelease(read),currentRead=read;read=file=>readBeforeWordUse(file,successor,currentRead);
+ const successor=verifyTextQuestionSpacingRelease(read),currentRead=read;read=file=>readBeforeTextQuestionSpacing(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-teacher-phase-labels-20261101.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,base);assert(r.userRequest.includes('dubbele opties')&&r.userRequest.includes('hersteld'));
  git('merge-base','--is-ancestor',base,'HEAD');
@@ -24,4 +24,4 @@ export function verifyTeacherPhaseLabelsRelease(read=readFileSync){
  const review=JSON.parse(read(folder+'review.json'));for(const k of ['all58Lessons','all1392Titles','sourcesUnchanged','audioUnchanged','progressPreserved','layoutAndStylesPreserved','keyboard','mobileTouch','localOnly'])assert.equal(review[k],true,k);
  const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);return {...r,successor};
 }
-export function readBeforeTeacherPhaseLabels(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeWordUse(file,r.successor,read);}
+export function readBeforeTeacherPhaseLabels(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeTextQuestionSpacing(file,r.successor,read);}

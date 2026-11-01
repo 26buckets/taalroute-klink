@@ -1,0 +1,285 @@
+{
+  "id": "A1-T15",
+  "sha256": "f9353cf07c6e75d337942861a0c13a32283bcf9fa7bfd0982b7dceed758cfabf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Vrijdag bestelt een vrouw twee broden bij de bakker. Zij haalt het brood op zaterdag. De bakker zegt, kom om 9 uur. Op zaterdag neemt de vrouw een tas mee. Zij betaalt in de winkel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.44,
+      "text": " Vrijdag bestelt een vrouw twee broden bij de bakker.",
+      "temperature": 0,
+      "avg_logprob": -0.11478107853939659,
+      "compression_ratio": 1.3923076923076922,
+      "no_speech_prob": 4.959761334272228e-12,
+      "words": [
+        {
+          "word": " Vrijdag",
+          "start": 0.0,
+          "end": 0.66,
+          "probability": 0.994140625
+        },
+        {
+          "word": " bestelt",
+          "start": 0.66,
+          "end": 0.96,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " een",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 1.08,
+          "end": 1.4,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 1.4,
+          "end": 1.56,
+          "probability": 0.9189453125
+        },
+        {
+          "word": " broden",
+          "start": 1.56,
+          "end": 1.94,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " bij",
+          "start": 1.94,
+          "end": 2.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.04,
+          "end": 2.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bakker.",
+          "start": 2.16,
+          "end": 2.44,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.72,
+      "end": 4.48,
+      "text": " Zij haalt het brood op zaterdag.",
+      "temperature": 0,
+      "avg_logprob": -0.11478107853939659,
+      "compression_ratio": 1.3923076923076922,
+      "no_speech_prob": 4.959761334272228e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 2.72,
+          "end": 3.24,
+          "probability": 0.994140625
+        },
+        {
+          "word": " haalt",
+          "start": 3.24,
+          "end": 3.42,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 3.42,
+          "end": 3.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " brood",
+          "start": 3.54,
+          "end": 3.84,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 3.84,
+          "end": 3.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag.",
+          "start": 3.94,
+          "end": 4.48,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.76,
+      "end": 6.88,
+      "text": " De bakker zegt, kom om 9 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.11478107853939659,
+      "compression_ratio": 1.3923076923076922,
+      "no_speech_prob": 4.959761334272228e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.76,
+          "end": 5.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bakker",
+          "start": 5.16,
+          "end": 5.42,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt,",
+          "start": 5.42,
+          "end": 5.72,
+          "probability": 1.0
+        },
+        {
+          "word": " kom",
+          "start": 5.88,
+          "end": 6.22,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " om",
+          "start": 6.22,
+          "end": 6.38,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " 9",
+          "start": 6.38,
+          "end": 6.56,
+          "probability": 0.7734375
+        },
+        {
+          "word": " uur.",
+          "start": 6.56,
+          "end": 6.88,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.4,
+      "end": 9.5,
+      "text": " Op zaterdag neemt de vrouw een tas mee.",
+      "temperature": 0,
+      "avg_logprob": -0.11478107853939659,
+      "compression_ratio": 1.3923076923076922,
+      "no_speech_prob": 4.959761334272228e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 7.4,
+          "end": 7.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag",
+          "start": 7.92,
+          "end": 8.42,
+          "probability": 1.0
+        },
+        {
+          "word": " neemt",
+          "start": 8.42,
+          "end": 8.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.68,
+          "end": 8.72,
+          "probability": 1.0
+        },
+        {
+          "word": " vrouw",
+          "start": 8.72,
+          "end": 8.96,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 8.96,
+          "end": 9.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tas",
+          "start": 9.06,
+          "end": 9.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mee.",
+          "start": 9.28,
+          "end": 9.5,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.78,
+      "end": 10.86,
+      "text": " Zij betaalt in de winkel.",
+      "temperature": 0,
+      "avg_logprob": -0.11478107853939659,
+      "compression_ratio": 1.3923076923076922,
+      "no_speech_prob": 4.959761334272228e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 9.78,
+          "end": 10.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " betaalt",
+          "start": 10.12,
+          "end": 10.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 10.4,
+          "end": 10.48,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.48,
+          "end": 10.56,
+          "probability": 1.0
+        },
+        {
+          "word": " winkel.",
+          "start": 10.56,
+          "end": 10.86,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

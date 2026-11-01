@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-ff5f38040687b748",
+  "sha256": "535bb28a0dff46c6a4cc3420c753587597866396a64c28cd41cd5a092ed5f221",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wil je de fles doorgeven?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Wil je de fles doorgeven?",
+      "temperature": 0,
+      "avg_logprob": -0.1838576396306356,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.268970593690469e-12,
+      "words": [
+        {
+          "word": " Wil",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.869140625
+        },
+        {
+          "word": " je",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.4,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " fles",
+          "start": 0.4,
+          "end": 0.62,
+          "probability": 0.990234375
+        },
+        {
+          "word": " doorgeven?",
+          "start": 0.62,
+          "end": 1.2,
+          "probability": 0.99169921875
+        }
+      ]
+    }
+  ]
+}

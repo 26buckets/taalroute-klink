@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-fb3b727c0496cbed",
+  "sha256": "6be2ee01784738f8511c5e535f6d3a4f6d1945515197ef26f9aba07f68862181",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kaas ligt op een bord.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": " De kaas ligt op een bord.",
+      "temperature": 0,
+      "avg_logprob": -0.1178133487701416,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.64801678048965e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.87109375
+        },
+        {
+          "word": " kaas",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " ligt",
+          "start": 0.56,
+          "end": 0.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 0.82,
+          "end": 0.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bord.",
+          "start": 1.1,
+          "end": 1.36,
+          "probability": 0.99462890625
+        }
+      ]
+    }
+  ]
+}

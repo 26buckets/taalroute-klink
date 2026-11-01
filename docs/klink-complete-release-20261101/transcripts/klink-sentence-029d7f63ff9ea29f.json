@@ -1,0 +1,71 @@
+{
+  "id": "klink-sentence-029d7f63ff9ea29f",
+  "sha256": "12e1cc1eba6a2fb557d622572e269493560a911facdc5f2c052919121224b718",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Pavel belt als hij bij het station is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.96,
+      "text": " Pavel belt als hij bij het station is.",
+      "temperature": 0,
+      "avg_logprob": -0.04819418833805965,
+      "compression_ratio": 0.8636363636363636,
+      "no_speech_prob": 5.4038574830161945e-12,
+      "words": [
+        {
+          "word": " Pavel",
+          "start": 0.0,
+          "end": 0.38,
+          "probability": 0.984375
+        },
+        {
+          "word": " belt",
+          "start": 0.38,
+          "end": 0.7,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " als",
+          "start": 0.7,
+          "end": 0.98,
+          "probability": 0.990234375
+        },
+        {
+          "word": " hij",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bij",
+          "start": 1.1,
+          "end": 1.24,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 1.24,
+          "end": 1.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " station",
+          "start": 1.4,
+          "end": 1.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 1.62,
+          "end": 1.96,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

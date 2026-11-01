@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-085",
+  "sha256": "289b5928bb18501784dc65208f8f6f76b39ab9b848563886860b141e88bcb33c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil vaker met collega's spreken zodat ik beter Nederlands leer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.66,
+      "text": " Ik wil vaker met collega's spreken zodat ik beter Nederlands leer.",
+      "temperature": 0,
+      "avg_logprob": -0.06162745612008231,
+      "compression_ratio": 0.9428571428571428,
+      "no_speech_prob": 3.3947577821741293e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96923828125
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vaker",
+          "start": 0.32,
+          "end": 0.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 0.7,
+          "end": 0.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " collega's",
+          "start": 0.88,
+          "end": 1.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " spreken",
+          "start": 1.48,
+          "end": 1.94,
+          "probability": 1.0
+        },
+        {
+          "word": " zodat",
+          "start": 1.94,
+          "end": 2.38,
+          "probability": 0.72705078125
+        },
+        {
+          "word": " ik",
+          "start": 2.38,
+          "end": 2.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beter",
+          "start": 2.48,
+          "end": 2.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Nederlands",
+          "start": 2.88,
+          "end": 3.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " leer.",
+          "start": 3.42,
+          "end": 3.66,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

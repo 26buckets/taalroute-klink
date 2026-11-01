@@ -1,0 +1,575 @@
+{
+  "id": "A2-T57",
+  "sha256": "73ba56d8d51599ef6213ea02474575088e88131739a0f9fab07a96a66a08f736",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een medewerker merkt dat een map met formulieren niet op het bureau ligt. Zij vraagt bij twee collega's of zij de map hebben gezien. Een collega vertelt dat hij de map in de kast heeft gelegd om de papieren veilig te bewaren. De medewerker haalt de map uit de kast en controleert of alle formulieren erin zitten. Eén formulier ontbreekt. Zij belt daarom haar leidinggevende en legt uit welk papier zij nog zoekt. De leidinggevende helpt daarna met zoeken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.76,
+      "text": " Een medewerker merkt dat een map met formulieren niet op het bureau ligt.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " medewerker",
+          "start": 0.16,
+          "end": 0.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " merkt",
+          "start": 0.74,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 1.12,
+          "end": 1.36,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " een",
+          "start": 1.36,
+          "end": 1.52,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " map",
+          "start": 1.52,
+          "end": 1.78,
+          "probability": 0.97314453125
+        },
+        {
+          "word": " met",
+          "start": 1.78,
+          "end": 2.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " formulieren",
+          "start": 2.0,
+          "end": 2.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 2.58,
+          "end": 2.84,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " op",
+          "start": 2.84,
+          "end": 3.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 3.02,
+          "end": 3.14,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bureau",
+          "start": 3.14,
+          "end": 3.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ligt.",
+          "start": 3.38,
+          "end": 3.76,
+          "probability": 0.99560546875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.96,
+      "end": 6.76,
+      "text": " Zij vraagt bij twee collega's of zij de map hebben gezien.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 3.96,
+          "end": 4.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vraagt",
+          "start": 4.16,
+          "end": 4.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 4.48,
+          "end": 4.6,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " twee",
+          "start": 4.6,
+          "end": 4.82,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " collega's",
+          "start": 4.82,
+          "end": 5.44,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 5.44,
+          "end": 5.68,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " zij",
+          "start": 5.68,
+          "end": 5.86,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " de",
+          "start": 5.86,
+          "end": 5.98,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " map",
+          "start": 5.98,
+          "end": 6.18,
+          "probability": 1.0
+        },
+        {
+          "word": " hebben",
+          "start": 6.18,
+          "end": 6.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gezien.",
+          "start": 6.38,
+          "end": 6.76,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.9,
+      "end": 11.46,
+      "text": " Een collega vertelt dat hij de map in de kast heeft gelegd om de papieren veilig te bewaren.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 6.9,
+          "end": 7.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " collega",
+          "start": 7.06,
+          "end": 7.46,
+          "probability": 1.0
+        },
+        {
+          "word": " vertelt",
+          "start": 7.46,
+          "end": 7.92,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " dat",
+          "start": 7.92,
+          "end": 8.18,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " hij",
+          "start": 8.18,
+          "end": 8.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 8.32,
+          "end": 8.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " map",
+          "start": 8.44,
+          "end": 8.66,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 8.66,
+          "end": 8.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 8.8,
+          "end": 8.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kast",
+          "start": 8.9,
+          "end": 9.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 9.18,
+          "end": 9.34,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " gelegd",
+          "start": 9.34,
+          "end": 9.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 9.76,
+          "end": 9.9,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " de",
+          "start": 9.9,
+          "end": 10.02,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " papieren",
+          "start": 10.02,
+          "end": 10.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " veilig",
+          "start": 10.44,
+          "end": 10.86,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 10.86,
+          "end": 10.96,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " bewaren.",
+          "start": 10.96,
+          "end": 11.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.54,
+      "end": 15.92,
+      "text": " De medewerker haalt de map uit de kast en controleert of alle formulieren erin zitten.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.54,
+          "end": 11.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 11.7,
+          "end": 12.26,
+          "probability": 1.0
+        },
+        {
+          "word": " haalt",
+          "start": 12.26,
+          "end": 12.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 12.52,
+          "end": 12.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " map",
+          "start": 12.64,
+          "end": 12.82,
+          "probability": 1.0
+        },
+        {
+          "word": " uit",
+          "start": 12.82,
+          "end": 13.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 13.0,
+          "end": 13.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kast",
+          "start": 13.14,
+          "end": 13.46,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 13.46,
+          "end": 13.68,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " controleert",
+          "start": 13.68,
+          "end": 14.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 14.28,
+          "end": 14.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " alle",
+          "start": 14.44,
+          "end": 14.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " formulieren",
+          "start": 14.74,
+          "end": 15.32,
+          "probability": 1.0
+        },
+        {
+          "word": " erin",
+          "start": 15.32,
+          "end": 15.68,
+          "probability": 0.96875
+        },
+        {
+          "word": " zitten.",
+          "start": 15.68,
+          "end": 15.92,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 16.12,
+      "end": 17.36,
+      "text": " Eén formulier ontbreekt.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " Eén",
+          "start": 16.12,
+          "end": 16.34,
+          "probability": 0.9033203125
+        },
+        {
+          "word": " formulier",
+          "start": 16.34,
+          "end": 16.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontbreekt.",
+          "start": 16.82,
+          "end": 17.36,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.5,
+      "end": 21.46,
+      "text": " Zij belt daarom haar leidinggevende en legt uit welk papier zij nog zoekt.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 17.5,
+          "end": 17.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " belt",
+          "start": 17.9,
+          "end": 18.08,
+          "probability": 0.99609375
+        },
+        {
+          "word": " daarom",
+          "start": 18.08,
+          "end": 18.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 18.44,
+          "end": 18.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leidinggevende",
+          "start": 18.6,
+          "end": 19.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " en",
+          "start": 19.4,
+          "end": 19.68,
+          "probability": 0.9921875
+        },
+        {
+          "word": " legt",
+          "start": 19.68,
+          "end": 19.98,
+          "probability": 1.0
+        },
+        {
+          "word": " uit",
+          "start": 19.98,
+          "end": 20.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " welk",
+          "start": 20.12,
+          "end": 20.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " papier",
+          "start": 20.48,
+          "end": 20.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 20.8,
+          "end": 20.98,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " nog",
+          "start": 20.98,
+          "end": 21.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zoekt.",
+          "start": 21.14,
+          "end": 21.46,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.64,
+      "end": 23.74,
+      "text": " De leidinggevende helpt daarna met zoeken.",
+      "temperature": 0,
+      "avg_logprob": -0.03844801266988118,
+      "compression_ratio": 1.824,
+      "no_speech_prob": 7.156376186090441e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 21.64,
+          "end": 21.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leidinggevende",
+          "start": 21.88,
+          "end": 22.6,
+          "probability": 1.0
+        },
+        {
+          "word": " helpt",
+          "start": 22.6,
+          "end": 22.92,
+          "probability": 1.0
+        },
+        {
+          "word": " daarna",
+          "start": 22.92,
+          "end": 23.22,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 23.22,
+          "end": 23.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zoeken.",
+          "start": 23.42,
+          "end": 23.74,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

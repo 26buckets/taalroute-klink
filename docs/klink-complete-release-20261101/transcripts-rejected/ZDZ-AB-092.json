@@ -1,0 +1,35 @@
+{
+  "id": "ZDZ-AB-092",
+  "sha256": "116c8542a7c1eb10f44909b2d8dcdafb30bd544e39db3046cf304db014f803d1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Stop alsjeblieft.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Stop alsjeblieft.",
+      "temperature": 0,
+      "avg_logprob": -0.2634723663330078,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.03379109628621e-12,
+      "words": [
+        {
+          "word": " Stop",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.6435546875
+        },
+        {
+          "word": " alsjeblieft.",
+          "start": 0.32,
+          "end": 0.92,
+          "probability": 0.9208984375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-8af942a56790e1f0",
+  "sha256": "113da83f067e8542b7f38763df2472c357d0fb38187199bd9092f474641fff07",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er staat een stoel op het balkon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " Er staat een stoel op het balkon.",
+      "temperature": 0,
+      "avg_logprob": -0.06528479712350028,
+      "compression_ratio": 0.8461538461538461,
+      "no_speech_prob": 4.152919761551965e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9453125
+        },
+        {
+          "word": " staat",
+          "start": 0.14,
+          "end": 0.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.4,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stoel",
+          "start": 0.62,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 1.04,
+          "end": 1.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 1.26,
+          "end": 1.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " balkon.",
+          "start": 1.36,
+          "end": 1.78,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

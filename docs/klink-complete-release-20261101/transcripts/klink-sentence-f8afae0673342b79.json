@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-f8afae0673342b79",
+  "sha256": "28e5370ffc10dddc47a2e821e67ab2f9726cd9b3e0274539fc7fe2afe94eab14",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De muren van de kamer zijn wit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " De muren van de kamer zijn wit.",
+      "temperature": 0,
+      "avg_logprob": -0.09989588077251728,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.3594134378766025e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " muren",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " van",
+          "start": 0.48,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.64,
+          "end": 0.76,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " kamer",
+          "start": 0.76,
+          "end": 1.2,
+          "probability": 0.8603515625
+        },
+        {
+          "word": " zijn",
+          "start": 1.2,
+          "end": 1.44,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " wit.",
+          "start": 1.44,
+          "end": 1.78,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

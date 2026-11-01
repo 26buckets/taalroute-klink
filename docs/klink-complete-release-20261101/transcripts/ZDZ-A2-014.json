@@ -1,0 +1,95 @@
+{
+  "id": "ZDZ-A2-014",
+  "sha256": "a533686dca1773bd6315a14fdb653559806a6e1152c2e8da7b1699bcc5549caf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil mijn afspraak bij de huisarts verplaatsen omdat ik moet werken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.26,
+      "text": " Ik wil mijn afspraak bij de huisarts verplaatsen omdat ik moet werken.",
+      "temperature": 0,
+      "avg_logprob": -0.04209693272908529,
+      "compression_ratio": 1.0294117647058822,
+      "no_speech_prob": 3.93800877324102e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.3,
+          "end": 0.46,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " afspraak",
+          "start": 0.46,
+          "end": 0.94,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 0.94,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.06,
+          "end": 1.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " huisarts",
+          "start": 1.18,
+          "end": 1.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verplaatsen",
+          "start": 1.56,
+          "end": 2.2,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 2.2,
+          "end": 2.5,
+          "probability": 0.767578125
+        },
+        {
+          "word": " ik",
+          "start": 2.5,
+          "end": 2.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 2.7,
+          "end": 2.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " werken.",
+          "start": 2.86,
+          "end": 3.26,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

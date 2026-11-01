@@ -1,0 +1,71 @@
+{
+  "id": "klink-sentence-4402893778e24f05",
+  "sha256": "9bbfb4d25f962c748a4446d83d470804939ddf372d6aab6a697cff7d03fa24b4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik zeg stop als ik een pauze wil.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.88,
+      "text": " Ik zeg stop als ik een pauze wil.",
+      "temperature": 0,
+      "avg_logprob": -0.04883032578688402,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 3.919195697144051e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " zeg",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stop",
+          "start": 0.34,
+          "end": 0.72,
+          "probability": 0.96337890625
+        },
+        {
+          "word": " als",
+          "start": 0.72,
+          "end": 1.1,
+          "probability": 0.994140625
+        },
+        {
+          "word": " ik",
+          "start": 1.1,
+          "end": 1.22,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 1.22,
+          "end": 1.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pauze",
+          "start": 1.32,
+          "end": 1.68,
+          "probability": 1.0
+        },
+        {
+          "word": " wil.",
+          "start": 1.68,
+          "end": 1.88,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}
