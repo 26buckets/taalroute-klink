@@ -1,0 +1,27 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "publicationApproved": true,
+  "baselineSourceCommit": "834e85e7eb0ebafd0a05e7d8aa5bc33b0ab4ed27",
+  "liveSourceCommit": "834e85e7eb0ebafd0a05e7d8aa5bc33b0ab4ed27",
+  "userRequest": "In het digibordgedeelte van Klink Plus docent, daar heb je onderdelen. Kies onderdeel en dan krijg je dubbele opties: één tekst, één kijken, vijf tekst, vijf lezen. Dus dat klopt niet. En dat geldt voor alle oefeningen. Dat moet hersteld worden.",
+  "scope": "Remove redundant Woord/Zin/Tekst numbered prefixes only from returned phase display titles. Keep all source lessons, prompts, media, worksheet links, phase order, state, routes, layout, typography, icons, buttons and storage unchanged. No new content, media or dependencies.",
+  "displayTextCorrection": true,
+  "layoutAndStylesUnchanged": true,
+  "changedFiles": [
+    "lib/teacher-classroom.ts",
+    "scripts/check-teacher-module-recovery-release-20261101.mjs",
+    "scripts/check-teacher-phase-labels-release-20261101.mjs",
+    "scripts/test-teacher-phase-labels-20261101.mjs",
+    "scripts/test-teacher-phase-labels-browser-20261101.mjs",
+    "scripts/test-teacher-phase-labels-release-20261101.mjs"
+  ],
+  "files": {
+    "lib/teacher-classroom.ts": "8d26cab12749346cd9fe98719240f9c415b1cc3ebff46293540eb21f7ed3059b",
+    "scripts/check-teacher-module-recovery-release-20261101.mjs": "200c9bc595de8306c22895d2bc049f0f57cea6787630c22977b628cd4e13e561",
+    "scripts/check-teacher-phase-labels-release-20261101.mjs": "3ba41b97404fc343c36f91dfaf22aa96dbb2c21fe9273637f97b1c57be680b6e",
+    "scripts/test-teacher-phase-labels-20261101.mjs": "8ab5c1ad149ec4d23ee0c4f314c91cb6271763aee8401a17718ba7e2b67c21a2",
+    "scripts/test-teacher-phase-labels-browser-20261101.mjs": "097314b093ab67bddd0c676cf611e9b196b4a0ac33d2e357962b236ff220c46e",
+    "scripts/test-teacher-phase-labels-release-20261101.mjs": "483f0766863d34df0f8a8a5c193183c0dfa8ac07f7d67d583cca95afd5dd5760"
+  }
+}

@@ -1,0 +1,9 @@
+# Dubbele onderdeeltitels — Klink+docent — 1 november 2026
+
+Tien lessen uit de twintig laatst toegevoegde lessen bevatten de titelvoorvoegsels Woord 1., Zin 1. of Tekst 1. Het bestaande menu zette daar nog een nummer voor. Het gedeelde fase-accessor verwijdert nu uitsluitend deze bronvoorvoegsels uit de teruggegeven weergavetitel. Het menu nummert zoals voorheen. De sectienaam en bestaande footer gebruiken dezelfde korte titel.
+
+Alle 1392 onderdeeltitels in 58 lessen × drie stappen × acht onderdelen zijn gecontroleerd. Precies 240 titels in de tien getroffen lessen worden korter. Bron-JSON en alle overige fasevelden blijven exact behouden. Volgorde, numerieke selectie, oefeningen, audio, werkbladen, antwoorden, voortgang en opslagfuncties zijn ongewijzigd. Geen CSS, componentmarkup, lettertype, kleur, icoon of knop gewijzigd. Op mobiel kunnen de kortere labels minder regels innemen binnen hetzelfde bestaande raster; dat is het bedoelde gevolg van de tekstcorrectie.
+
+27 inhouds-/opslag-/hersteltests en de bestaande werkbladcontrole slagen. 72 lokale browserproeven slagen in Chromium en WebKit op 1366, 390 en 320 pixels: alle drie de stappen bij mat, tas, sok en meer, acht labels per menu, keuze met Enter, aanraken, herladen en behoud van een opgeslagen eigen zin. Zes directe vergelijkingen met de vorige liveversie bevestigen de oorspronkelijke kolombreedtes en knopstijl; de kortere titels mogen minder afbreken. Typecontrole en lint slagen. Geen fysieke telefoon getest. Zware controles lokaal; geen GitHub-workflows of budget gewijzigd.
+
+De oorspronkelijke visuele vloer blijft behouden. Dit is de concreet door Nico gevraagde correctie van dubbele menu-aanduidingen, geen herontwerp. Zie de brongebonden opdracht in docs/klink-owner-release-teacher-phase-labels-20261101.json. Livebasis 834e85e7; de latere dossiercommit 41091ea9 bevat uitsluitend de bevestiging van diezelfde publicatie en blijft behouden.
