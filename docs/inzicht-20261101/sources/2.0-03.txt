@@ -1,0 +1,103 @@
+﻿KLINK 2.0 | 03 Pilotplan Lingua Academy
+Operationeel pilotontwerp v1.5 | 25 oktober 2026
+STATUS: pilotplan opgesteld, GEEN pilot uitgevoerd, geen echte cursistgegevens verwerkt.
+
+
+1. DOEL EN PILOTHYPOTHESE
+Hoofdvraag: kunnen zelfstandige NT2-cursisten, schoolcursisten, docenten en een schoolbeheerder veilig en zonder onevenredige werkdruk dezelfde Klink-app gebruiken, met één centrale identiteit, strikt gescheiden leercontexten en begrijpelijke resultaten?
+Hypothese H1: cursisten kunnen hun eigen context herkennen en binnen het gekozen niveau zelfstandig of begeleid een oefening voltooien.
+Hypothese H2: docent kan een bestaande vrijgegeven Klink-oefening toewijzen, ontvangst controleren en correct rapporteren.
+Hypothese H3: schoolbeheerder kan inschrijving, activatie, groepskoppeling en uitstroom uitvoerbaar beheren.
+Hypothese H4: geen school- of persoonsgegevens zijn buiten de bedoelde context zichtbaar, ook niet via API, export of gedeeld apparaat.
+Hypothese H5: een uitgegeven, gecontroleerd leerbewijs kan na schooluitstroom in het persoonlijke paspoort blijven, zonder kopie van volledig schooldossier.
+
+
+2. PILOTOMVANG
+Advies: 12 volwassen schoolcursisten, waarvan 6 alfa/beginnend en 6 A1/A2/B1, plus 4 zelfstandige volwassen testcursisten. Minimaal 3 docenten waarvan 1 alfa-docent, 1 onderwijscoördinator, 1 schoolbeheerder, 1 Klink-supporttester en 1 technische/securitytester. Waar passend dezelfde medewerker mag meerdere functies vervullen, maar onder gescheiden testaccounts en roltoewijzingen voor autorisatietests.
+Gebruik niet alleen medewerkers als 'cursist'. Selecteer met vrijwillige deelname diverse digitale vaardigheden, taalvaardigheden, mobiele en gedeelde apparaten. Begin met een kleine functionele proef op synthetische accounts en geanonimiseerde scenario's, niet direct live lesgegevens.
+Duur indicatief: voorbereiding 1-2 weken, begeleide proef 2 weken, analyse en herstel 1-2 weken. Dit is een planningsvoorstel afhankelijk van gereedheid, geen toegezegde uitvoering.
+Geen minderjarigen, geen gevoelige extra profielinformatie, geen formele diploma-/inburgeringsclaims en geen HOLD-content in pilot.
+
+
+3. FASES EN OPLEVERINGEN
+G0 Kader: projectowner, verantwoordelijken, deelnemersprotocol, gespecificeerde datastromen, DPIA-screening, contractafspraken en pilotomgeving. Zonder deze onderdelen geen echte deelnemers.
+G1 Technische basis: repo-toegang hersteld; auth, rollen, tenants, licenties, oefeningen en resultaatopslag in staging; testorganisaties A/B met synthetische gegevens; geen schaduwkopie productie met echte persoonsgegevens.
+G2 Interne droge proef: docent, schoolbeheerder, cursist en support spelen kernflows door; securitytests, toegankelijkheidstoets en back-upherstel aangetoond.
+G3 Begeleide gebruikerstest: 6 alfa/beginnende cursisten; daarna overige schoolcursisten en zelfstandige lerenden. Observeer succes, foutmomenten, hulpbehoefte en begrip van privé/school.
+G4 Leerpaspoorttest: uitsluitend fictieve/interne leerbewijzen of correct uitgegeven pilotbewijzen met expliciet duidelijke status; scenario uitstroom, delen, intrekken en bewijsverificatie.
+G5 Eindreview en besluit: problemen rubriceren P0-P3, reparatie en her-test van kernpaden, GO/CONDITIONAL GO/NO GO met eigenaar en datum.
+
+
+4. PILOTSCRIPTS PER GEBRUIKER
+C1 Zelfstandig: open Klink, kies zelfstandige start, activeer account, vind eenvoudige oefening, maak, sluit af en ga op nieuw toestel verder. Meet hulp en verwarring over 'doorgaan'.
+C2 Schoolcursist Alfa: school registreert voorlopig profiel, begeleide activatie op schoolcomputer, maak les mat of andere bestaande vrijgegeven oefening, meld af, volgende cursist meldt aan en ziet niets van vorige gebruiker.
+C3 Schoolcursist A2: accepteer uitnodiging vanuit bestaand persoonlijk account, bekijk schoolopdracht; vergelijk met persoonlijke oefenroute, controleer dat privéresultaten niet aan docent verschijnen.
+C4 Docent: log in, kies Lingua Academy, open groep, zoek vrijgegeven oefening, wijs aan 3 testcursisten toe, bekijk wie gestart/afgerond heeft, geef korte feedback; controleer tijd en missers.
+C5 Schoolbeheerder: importeer 12 testcursisten, koppel 3 groepen en docenten, trek foutieve uitnodiging in, verplaats cursist, verwijder één schoollidmaatschap zonder persoonlijk account te beëindigen.
+C6 Dubbele schooldocent: docent werkt ook bij fictieve Taalschool B; wijs opdrachten toe in A, open tabblad B, controleer dat A-opdracht niet ongemerkt naar B overspringt.
+C7 Rechten: schoolbeheerder probeert school B-cursist te openen en docent buiten eigen groep; beide geweigerd inclusief URL-manipulatie.
+C8 Paspoort: bevoegde beoordelaar geeft intern pilotbewijs uit; cursist accepteert in paspoort, deelt met specifieke testontvanger, trekt inzage in en observeert resultaat.
+C9 Contractverloop: testlicentie van school verloopt, nieuwe oefenrechten stoppen volgens policy terwijl persoonsgegevens niet verdwijnen of aan andere organisatie toegankelijk worden.
+C10 Privacyverzoek: gebruiker vraagt om inzage in privégegevens én schoolresultaten; ontvangende interface vermeldt wie elk verzoek behandelt en status.
+C11 Herstel: alfa-cursist zonder eigen e-mail vergeet toegang; doorloop veilige menselijke herstelroute zonder geheime codes aan docent prijs te geven.
+C12 Verbindingsverlies: oefening wordt onderbroken tijdens opslaan; geen dubbele scores of onbedoelde contextwisselingen, begrijpelijke herstart.
+
+
+5. OBSERVATIEFORMULIER PER DEELNEMER
+Anonieme participantcode, scenario-ID, toestel, context (school/persoonlijk), taal-/digitale ondersteuning gewenst, starttijd, tijd tot taakvoltooiing, fouten, aantal hulpinterventies, afgebroken stappen, privacybegrip (kan cursist uitleggen wie het resultaat ziet?), tevredenheid in eenvoudige antwoordvorm en vrije opmerkingen. Noteer geen onnodige diagnoses, herkomst of bijzondere persoonsgegevens.
+Docent: tijd voor opdrachtwizard, aantal handelingen, foutfrequentie, begrip resultaatlabels, wens bij papieren/digibordroute.
+Schoolbeheer: tijd per 12 uitnodigingen, mislukte activaties, handmatige correcties, duplicaten en licentietoekenningen.
+
+
+6. VOORGESTELDE PILOTNORMEN
+CRITISCH, absoluut: nul aantoonbare gegevenslekken tussen tenants, nul onbevoegde toegang tot resultaten, nul antwoordlekkages uit HOLD-content, nul wachtwoorden zichtbaar voor personeel, nul ongeautoriseerde dossieroverdracht. Eén P0-incident => STOP/NO GO.
+Gebruiksvriendelijkheid, streefwaarden voor evaluatie, niet externe benchmarks: >= 80% van alfa-deelnemers voltooit begeleide activatie en eerste oefening met maximaal één gestandaardiseerde hulpinterventie; >= 90% overige deelnemers voltooit hun kernscenario; >= 90% begrijpt of resultaat privé dan wel schoolgebonden is na eenvoudige toelichting.
+Docent, streefwaarde: >= 90% kan opdracht toewijzen en resultaten vinden zonder helpdesk; geobserveerd tijdsverloop en frustratie worden apart gerapporteerd.
+Beheer, streefwaarde: bulkimport controleerbaar, zonder automatische verkeerde merges; minimaal 95% juiste eerste uitnodigingsstatus en duidelijk herstel voor fouten.
+Leerpaspoort: 100% van geteste bewijzen behoudt uitgever, claimscope en status; revoked share blokkeert nieuwe inzage; exportwaarschuwing door deelnemers begrepen.
+Toegankelijkheid: alle kritieke routes voldoen aan overeengekomen WCAG 2.2 AA toets, inclusief toetsenbord, focusvolgorde, schermlezer en toegankelijke authenticatie; open ernstige barrières blokkeren release.
+Geen statistische representativiteit claimen op basis van deze kleine pilot; gebruik de drempels als praktische beslisregels.
+
+
+7. RISICOMATRIX EN EIGENAARS
+R1  Kritiek: tenant-datalek. Eigenaar tech/security. Maatregel: test A/B school data, API, export, storage en cache. Blokkeert G2/G5.
+R2  Kritiek: fout account gekoppeld. Eigenaar product/security. Maatregel: verified invite, geen naammatching, herstelprocedure. Blokkeert G2.
+R3  Kritiek: schoolresultaten ongewenst in privépaspoort. Eigenaar privacy/product. Maatregel: aparte claim/grondslag en expliciet proces. Blokkeert G4.
+R4  Hoog: alfa-cursist kan niet starten. Eigenaar didactiek/UX. Maatregel: voorleesbare instructie, begeleide start en gebruikerstest. Herontwerp G3.
+R5  Hoog: docent raakt bestaande leerroute kwijt. Eigenaar product/didactiek. Maatregel: regressies op Lessen, Oefenen, Verder, docenthandleiding. Blokkeert G3.
+R6  Hoog: activeringsproblemen veroorzaken werkdruk. Eigenaar schoolbeheer. Maatregel: bulkherstel, auditteams, helpdeskflow. Herstel G3.
+R7  Hoog: verkeerde leerclaim. Eigenaar toetskwaliteit. Maatregel: oefenscore ≠ ERK-certificaat; bevoegd reviewer. Blokkeert G4.
+R8  Middel: verlopen licentie onderbreekt les. Eigenaar contract/product. Maatregel: contractuele waarschuwing en afbouw. Herstel.
+R9  Middel: privacyverzoek zoekraakt. Eigenaar privacy. Maatregel: register, routering en verantwoordelijke contactpersoon.
+R10 Middel: slecht netwerk/gebruikt toestel. Eigenaar tech/UX. Maatregel: sessieherstel, apparaatcache-audit en test met echt leslokaal.
+
+
+8. GO / CONDITIONAL GO / NO GO
+GO: alle P0/P1-defecten gesloten en opnieuw getest, privacy- en security gates gedocumenteerd, gebruikerstests zonder ernstige barrières, leerpaspoortclaim juridisch en didactisch beoordeeld, productie-rollback herhaald, betrokken school en platformowner tekenen af.
+CONDITIONAL GO: alleen niet-essentiële P2/P3-issues open met mitigatie, eigenaar en concrete herbeoordelingsdatum. Geen conditional go op privacy-/security-/accountkoppelings-P0/P1.
+NO GO: geen repo-/runtime-inzicht, cross-tenant-fout, onbewezen veilige gedeelde-apparaat-flow, onduidelijke grondslag voor paspoortdata, onveilige accountrecovery, HOLD-content zichtbaar of ernstige alfa-toegankelijkheidsbarrière.
+Een pilot kan slagen als gebruikerstest, maar betekent nog geen productie-GO zonder afzonderlijk releasebesluit.
+
+
+9. UIT TE VOEREN BESLUITACTIES
+Actie P01: verantwoordelijke voor Klink product, Lingua Academy pilot en privacyzaken benoemen.
+Actie P02: repo-leesrecht 26buckets/taalroute-klink herstellen en actuele main inspecteren.
+Actie P03: bestaand contentcontract/spelers, lokale voortgang, Workers/D1 en eventuele Studio-integratie vastleggen.
+Actie P04: juridische verwerkingsmatrix en DPIA-screening uitvoeren en ondertekenen.
+Actie P05: minimaal vijf kritieke schermflows klikbaar prototype maken, testbaar met alfa-cursisten.
+Actie P06: staging, synthetische organisaties, geautomatiseerde rechten-tests en monitoring gereedmaken.
+Actie P07: pilotdeelnemers vrijwillig werven en scripts met docenten afstemmen.
+Actie P08: meetblad, incidentlog en formeel go/no-go-verslag vastleggen.
+Pilot-registratie: datum, eigenaar, voortgang, bewijslink, blokkade, besluit. Geen echte persoonsgegevens in projectdocumenten.
+
+
+10. PILOTAFBAKENING TEN OPZICHTE VAN BESTAANDE PRODUCTIE
+Geen wijziging van de huidige Klink-website of live accounts door dit document. Geen wijziging aan de zes bestaande spelers. Geen vrijgave van de 44 Alfa B-HOLD-spellingitems. Geen externe leerbewijzen aanbieden als officieel certificaat. Geen echte gebruikerstest of externe audit claimen voordat deze daadwerkelijk heeft plaatsgevonden.
+
+
+11. VERWIJZINGEN
+Functionele bron: https://docs.google.com/document/d/1kOErHC_6ZiaxkwLKQLzg873eXKAfkUPnKhbOY6mth5Q/edit
+Repository-overdracht: https://docs.google.com/document/d/1GvfG94741jdf5n9V_vU2NzCVZd6v9PGq3kL7Qz0_2tY/edit
+AP AVG verantwoordelijkheden: https://autoriteitpersoonsgegevens.nl/themas/basis-avg/avg-algemeen/verantwoordelijke-en-verwerker
+OWASP Authorization: https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+WCAG 2.2: https://www.w3.org/TR/WCAG22/

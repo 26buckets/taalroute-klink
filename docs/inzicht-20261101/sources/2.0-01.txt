@@ -1,0 +1,121 @@
+﻿KLINK 2.0 | 01 Schermarchitectuur en gebruikersprocessen
+Functioneel ontwerp v1.5 | 25 oktober 2026
+STATUS: ontwerp, niet geïmplementeerd. Geldt naast de bestaande Klink-oefeninhoud en docentenhandleiding.
+
+
+1. PRODUCTPRINCIPES
+Klink is één multi-tenant-oefenplatform met een persoonlijke context en zelfstandige schoolcontexten. Eén persoon kan meerdere schoollidmaatschappen en meerdere rollen hebben. Iedere oefenpoging behoort aan precies één context. De huidige Klink-routes Lessen, Oefenen, Verder en Voor begeleiders blijven inhoudelijk herkenbaar. Accounts, resultaten en opdrachten voegen functionaliteit toe zonder bestaande oefen-ID's, media of didactische spelers te herschrijven.
+Vijf hoofddomeinen: Identity, Personal Learning, School Learning, Passport, Content & Licensing. Autorizatie en audit doorkruisen alle domeinen. Alle schoolschermen tonen de actieve school met naam en rol.
+
+
+2. SCHERMKAART EN ROUTES
+PUBLIEK EN ACCOUNT
+A01 Welkom: kies 'Zelf oefenen', 'Ik leer via school', 'Ik ben docent/beheerder'. De keus is een onboardingroute, geen duurzaam accounttype.
+A02 Aanmelden/inloggen: e-mail of toegewezen gebruikersnaam, geschikte authenticatiemethode, zichtbare hulp, geen privacygevoelige onthulling dat een account bestaat.
+A03 Persoonlijk account activeren: gegevens controleren, veilige login instellen, privacyinformatie in begrijpelijke taal en afzonderlijke marketingkeuze.
+A04 Schooluitnodiging accepteren: schoolnaam, eventuele groep, welke gegevens zichtbaar worden, accepteer/weiger en veilige identiteitsverificatie.
+A05 Begeleide schoolstart: voorlopig schoolprofiel, individuele activatiecode met korte geldigheid, docent ziet geen wachtwoord; later geverifieerde koppeling aan persoonlijk account.
+A06 Herstel: door gebruiker verifieerbare herstelmethode; voor schoolgebonden profiel een gecontroleerde schoolprocedure, voor privéaccount geen reset enkel op verzoek van docent.
+A07 Organisatiekiezer: alleen voor leden met meerdere scholen; benoem welke rol actief is. URL en serverrecht bepalen context, niet globale browserkeuze.
+A08 Account/privacy: profiel, sessies, apparaten, export, inzage/correctie/wissing, deelrechten, notificaties, verwijderverzoek en uitleg verantwoordelijkheden.
+
+
+CURSIST: PERSOONLIJK
+P01 Mijn Klink: 'Verder oefenen', 'Mijn leerdoelen', 'Mijn opdrachten', 'Mijn resultaten', 'Leerpaspoort', 'Schoolomgevingen'. Weergave vereenvoudigd voor alfa.
+P02 Oefenbibliotheek: filter niveau en vaardigheid, alleen vrijgegeven content en beschikbare licenties; geen verboden HOLD-items.
+P03 Oefenspeler: bestaande speler en feedback, context expliciet personal; veilige opslag van poging na identificatie; doorgaan op ander toestel waar mogelijk.
+P04 Mijn voortgang: activiteit, oefenscores, docentbeoordeling en ERK-niveau expliciet apart; geen automatische niveauclaim uit oefenscore.
+P05 Mijn leerpaspoort: persoonlijke oefenprestaties versus schooluitgegeven leerbewijs, status, uitgever, datum, beoordelingsmethode.
+P06 Delen: kies bewijs, geverifieerde ontvanger, doel, duur, vooraf duidelijke waarschuwing bij export. Revoke stopt toekomstige inzage, niet reeds gedownloade kopieën.
+P07 Schoolkaart: per school gescheiden 'Mijn opdrachten', 'Mijn resultaten', 'Mijn contactpersoon'. Een school mag andere schoolrelaties niet zien.
+
+
+CURSIST: SCHOOLCONTEXT
+S01 Mijn school: schoolnaam, groep, docent en opgedragen leerroute.
+S02 Mijn opdrachten: open, gestart, ingeleverd, beoordeeld, opnieuw proberen. Dag en einddatum expliciet.
+S03 Schooloefening: voor opslaan verschijnt nooit de privécontext; poging hoort bij assignment, school, groep en oefenversie.
+S04 Feedback: 'wat gaat goed', 'wat oefenen we opnieuw', met voorleesbare duidelijke taal; uitsluitend schoolcontext.
+S05 Afronden: schoollidmaatschap eindigt, onderwijsresultaten volgen schoolbeleid; aangeboden leerbewijzen kunnen pas na rechtmatige uitgifte aan privépaspoort worden toegevoegd.
+
+
+DOCENT
+D01 Dashboard: eigen groepen, huidige opdrachten, aandachtssignalen en snelle actie 'Opdracht klaarzetten'.
+D02 Groepslijst: cursisten met activeringsstatus (zonder geheime tokens), open taken en werkstatus. Geen aanwezigheid van andere scholen.
+D03 Groepsoverzicht: groep, docent(en), voortgangsindicatie; uitval en achterstanden niet interpreteren als diagnose.
+D04 Oefenzoeker: niveau, leerdoel, vaardigheid, oefenvorm, status, mediabeschikbaarheid en licentie. HOLD-items ontbreken.
+D05 Opdrachtwizard: school > groep/individuele cursisten > selectie vrijgegeven oefening > instructie > start/einddatum > voorbeeldweergave > bevestigen.
+D06 Opdrachtenbeheer: status, herinnering, corrigeren, intrekken; geen stille verschuiving van al gemaakte pogingen.
+D07 Resultaten: per opdracht en groep, gemaakt/niet gemaakt, score en meerdere pogingen, 'met hulp' waar docentbeoordeling bestaat; export alleen volgens rol.
+D08 Cursistdetail: alleen toegewezen leerling binnen de huidige schoolcontext; docentnotities gescheiden van persoonlijke resultaten.
+D09 Feedback: beknopt, leerlinggericht, wijzigingen gelogd en alleen voor bevoegde groepen.
+D10 Leerbewijsvoorstel: docent draagt prestatie met criteria en bron aan; een bevoegd beoordelaar geeft eventueel uit.
+D11 Digibord: demonstratie zonder echte cursistidentiteit of resultaatopslag; gast-/demomodus gescheiden van schoolgegevens.
+D12 Docenthulp: behoud toegang tot bestaande Studio-handleiding, leesstappen en bestaande Klink-routes.
+
+
+SCHOOLBEHEER EN ONDERWIJSCOÖRDINATIE
+B01 Schooldashboard: actieve cursistenplaatsen, docentleden, groepen, uitnodigingen, licentieverloop en open beheeracties.
+B02 Instroomwizard: individuele invoer of CSV-import, kolomtoewijzing, validatie, controle op vermoedelijke duplicaten zonder automatische samenvoeging.
+B03 Uitnodigingen: status, heruitnodigen, intrekken en foutafhandeling, zonder wachtwoord/tokens zichtbaar voor derden.
+B04 Accounts/leden: zoeken binnen eigen organisatie, rollen en statussen wijzigen, schorsen/beëindigen, met bevestiging en audit.
+B05 Groepen: aanmaken, cursusperiode, vestiging, groepsleden, docenten en eventuele co-docenten koppelen.
+B06 Overplaatsing: preview van welke opdrachten open blijven, historie blijft gekoppeld aan oorspronkelijke groep/context en expliciete keuze voor toekomstige opdrachten.
+B07 Licentieplaatsen: producten, actieve toekenningen, gebruik en aangekondigde afloop; commerciële toegang los van datarechten.
+B08 Onderwijsrapportage: voor coördinator groepen en leerdoelen; voor gewone schoolbeheerder alleen noodzakelijke administratieve cijfers.
+B09 Uitstroom: groepskoppeling beëindigen, voor alle partijen verklaarbare status, export en bewijzen conform beleid; privémodus blijft bestaan.
+B10 Schoolinstellingen: organisatie en vestigingen, verantwoordelijke contactpersoon, toegestane rollen, bewaarbeleidsetiketten.
+B11 Privacyverzoeken: verzoek ontvangen, indelen naar verwerkingsverantwoordelijke, termijn bewaken en afhandeling registreren.
+
+
+TAALROUTE-PLATFORMBEHEER
+T01 Organisaties: aanmaken, verifiëren, status en klantcontractgegevens.
+T02 Productcatalogus: beschikbaarheid, moduleversies en redactionele release/HOLD; niet publiceerbare content blijft geblokkeerd.
+T03 Licenties: contracttypen, toegang en verval; niet automatisch schoolresultaten zichtbaar maken.
+T04 Systeemrollen: centrale roltemplates en bevoegdheden, geen vrije schoolgebaseerde rechteneditor in v1.
+T05 Audit/security: verdachte mislukte toegang, gevoelige beheerwijzigingen, tenant-isolatietests en incidentproces.
+T06 Support: standaard alleen technische metadata; uitzonderlijke inhoudelijke inzage uitsluitend tijdelijk, op grondslag, gemotiveerd en gelogd.
+T07 Leerbewijsregister: uitgever, status en correcties, zonder publiek doorzoekbaar leerlingregister.
+T08 Operations: content-imports, foutmeldingen, monitoring en gecontroleerde rollback.
+
+
+3. KERNFLOWS MET GEWENST RESULTAAT
+FLOW F01 Zelfstandig starten: bezoeker A01 > A02/A03 > P01 > P02 > P03 > P04. Uitval op accountactivatie wordt zichtbaar als fout, niet als kwijtgeraakte voortgang. Gratis oefenen kan alleen anoniem als expliciet gekozen productbesluit.
+FLOW F02 School start alfa-cursist: B02 import > voorlopige schoolinschrijving > A05 op schoolapparaat > S01 > D05 > S02/S03. Bij uitloggen op gedeeld apparaat verdwijnen persoonlijke gegevens/sessies, maar schoolresultaten blijven veilig op server.
+FLOW F03 Bestaande particuliere cursist gaat naar school: B03 uitnodiging > A04 koppeling verifiëren > P07/S01. Privéresultaten niet zichtbaar voor school.
+FLOW F04 Docent wijst opdracht toe: D01 > D03 > D04 > D05 > bekijk leerlingvoorbeeld > bevestigen > leerling S02 > S03 > docent D07 > D09.
+FLOW F05 Docent bij twee scholen: login > A07 > D01 school A > opdracht A. Navigatie naar tab school B moet school A-opdrachtcontext niet veranderen. Iedere API-aanvraag controleert originele school-ID.
+FLOW F06 Van schoolresultaat naar paspoort: D10 voorstel > bevoegde beoordelaar controleert > uitgifte > cursist ontvangt aanbod > neemt rechtmatig uitgegeven bewijs op > P05 > P06 deelt indien gewenst.
+FLOW F07 Cursist wisselt van school: beëindig schoollidmaatschap A > behoud persoonsaccount > nieuwe school B-uitnodiging > afzonderlijke koppeling > optioneel bewijsdelen; nooit automatisch dossieroverdracht.
+FLOW F08 Schoolabonnement verloopt: aankondiging > beëindig productrechten volgens overeenkomst > contractueel afgesproken export/afbouw > persoonsgegevens conform verantwoordelijkheid en bewaarbeleid.
+FLOW F09 Privacyverzoek: gebruiker A08 > kiest onderwerp en categorie > Taalroute triageert naar verantwoordelijke > controle, besluit en uitvoering > begrijpelijke statusmelding.
+FLOW F10 Accountherstel zonder privé-e-mail: aantoonbare identiteitsverificatie met menselijke procedure > herstel alleen passende accountcontext > vorige sessies/tokens ingetrokken > audit.
+
+
+4. TOEGANKELIJKHEID EN DIDACTIEK
+Doel: aantoonbaar voldoen aan WCAG 2.2 AA waar toepasselijk. Grote klikdoelen, consistent taalgebruik, duidelijke focus, toetsenbordondersteuning, schermlezerlabels, foutmeldingen met oplossingen en geen kleur als enige signaal. Geen ingewikkelde CAPTCHA of verplicht overtypen van codes als er geen toegankelijk alternatief is. Voorlezen van schermtekst waar dit didactisch past; content behoudt volwassen toon. Begeleide start moet op een eenvoudig mobiel toestel en op een gedeelde schoolcomputer werken.
+Voorkom de valkuil dat 'goed' in een oefenspel automatisch 'geleerd/beheerst' betekent. In Klink bestaan minimaal oefenstatus, oefenprestatie en beoordeeld leerbewijs.
+
+
+5. TOESTANDEN EN RANDGEVALLEN
+Uitnodiging: gemaakt, verstuurd, geaccepteerd, verlopen, ingetrokken. Account: voorlopig schoolprofiel, geactiveerd, geschorst, sluiting in behandeling. Opdracht: concept, actief, gestart, ingeleverd, beoordeeld, ingetrokken. Resultaat: poging, feedback, gecorrigeerd. Leerbewijs: concept, uitgegeven, vervangen, ingetrokken, verificatie geëindigd. Lokaal apparaat: demo, ingelogd, offline/verbindingsverlies, gedeelde sessie beëindigd.
+Randgevallen: dubbele naam, ontbrekend e-mailadres, gebruiker verwijdert app, foutieve koppeling, docentrol ingetrokken tijdens open tabblad, parallelle pogingen, verlopen licentie tijdens onafgemaakte oefening, school B probeert school A-resultaat te lezen, bestandsexport met verkeerde tenant-ID.
+
+
+6. ACCEPTATIECRITERIA
+S01: een beginnende alfa-cursist voltooit begeleide instroom zonder dat een docent zijn wachtwoord kent.
+S02: de cursist kan expliciet privé en school van elkaar onderscheiden.
+S03: de docent kan in een beperkte reeks handelingen een toegestane oefening aan een groep toewijzen.
+S04: groepsrapport toont alleen bevoegde leden en context.
+S05: schoolbeheerder kan groepen en uitnodigingen in bulk beheren zonder automatisch accounts samen te voegen.
+S06: school A kan geen API-, bestands- of exportgegevens van school B inzien.
+S07: een gedeelde computer toont na afmelden geen persoonsgegevens of antwoorden van vorige gebruiker.
+S08: HOLD-oefeningen verschijnen nooit in cursistselecties of beoordelingsbewijzen.
+S09: leerling kan een uitgegeven bewijs onderscheiden van oefenscores, delen, delen intrekken, en begrijpt exportbeperkingen.
+S10: docent kan de oude docentenhandleiding en oefenroutes blijven gebruiken.
+
+
+7. BRONNEN EN AFBAKENING
+Bestaande functionele bron: KLINK 001 Complete docentenhandleiding en Studiostructuur, 22 oktober 2026, https://docs.google.com/document/d/1kOErHC_6ZiaxkwLKQLzg873eXKAfkUPnKhbOY6mth5Q/edit
+Technische overdracht: KLINK GitHub mee-push zes standaardspelers en Alfa B 44, 19 oktober 2026, https://docs.google.com/document/d/1GvfG94741jdf5n9V_vU2NzCVZd6v9PGq3kL7Qz0_2tY/edit
+WCAG 2.2: https://www.w3.org/TR/WCAG22/
+OPEN: grafisch klikprototype en testen met echte cursisten/docenten. Dit document is schermspecificatie, geen gevalideerd ontwerp of draaiende applicatie.

@@ -1,0 +1,234 @@
+﻿KLINK INZICHT | 01 Compleet functioneel en UX-bouwdossier
+Versie 1.2, gereviewd op 31 oktober 2026. Basis v1.0 plus normatieve REVIEWPATCH R1 en R2 aan het einde. Status: functioneel ontwerp; nog geen gebouwde of geteste software.
+Eigenaar product: Taalroute. Gebruikers: docenten en bevoegde schoolbeheerders. Eerste pilot: Lingua Academy, alfabetisering.
+Referentie: KLINK 2.0 v1.5 in dezelfde Drive-map, inclusief 01 schermarchitectuur, 02 techniek/juridisch en 03 pilot.
+
+
+1. Doel en afbakening
+Klink Inzicht is de afzonderlijk herkenbare docentomgeving voor klasbeheer, cursisten, observaties, vaardigheden, opdrachten, leerstoftoegang, regelgebaseerde lesadviezen en voortgang. Het product moet zonder AI functioneren. Een docent ziet wat iemand aantoonbaar kan, waarom, en welke didactische actie passend is.
+Klink is de cursistenoefenomgeving. Klink+Docent is uitsluitend digibordlessen, werkbladen, antwoorden en lesmateriaal; bestaande Klink+Docent-functies blijven ongewijzigd. Niets uit dit dossier schrijft wijzigingen aan Klink+Docent voor. In Klink Inzicht mag een leslink naar gepubliceerde Klink+Docent-content openen. Digitale observaties horen NOOIT in Klink+Docent.
+De bestaande KLINK 2.0-documenten beschrijven al docentfuncties D01-D12; neem die niet dubbel over in een nieuwe tweede beheeromgeving. Het hier vastgelegde Inzicht is de expliciete bestemming voor de nieuwe digitale docentfuncties. Behoud bestaande cursistcontexten, rollen, paspoortconcept en releasepoorten. Bij conflicten prevaleren nieuwe expliciete productbesluiten uit dit dossier voor Inzicht, maar niet voor de historische inhoud en bouwstatus van Klink+Docent.
+
+
+2. Productdoelen en niet-doelen
+P01: docent kan zonder systeembeheer een eigen klas aanmaken en bewaren binnen een bevoegde schoolcontext.
+P02: docent kan cursisten toevoegen, uitnodigen, koppelen en aan een klas verbinden zonder accounts op basis van een naam samen te voegen.
+P03: iedere individuele observatie heeft cursist, leerdoel, prestatie, zelfstandigheid, tijd, docent en bron.
+P04: vaardighedenmatrix is het hart van de diagnostiek en toont een bewijslink per cel.
+P05: docent kan per schoolklas of individueel leerstof beschikbaar maken, beperken en opdrachten klaarzetten binnen licenties.
+P06: de knop 'Wat heeft mijn groep morgen nodig?' levert verklarende adviezen volgens vaste regels, zonder AI.
+P07: elke schoolcontext is gescheiden van andere scholen en persoonlijke Klink-data.
+Niet in fase 1: automatisch erkend niveaucertificaat, automatisch ERK-label, AI-chat, automatische spraakbeoordeling, vrije toegang van platformbeheerders tot leerlingdossiers, nieuw digibordsysteem, herschrijven van bestaande werkbladen, onbevestigde publicatie naar productie.
+
+
+3. Schermindeling, navigatie en routes
+Alle routes zijn VOORGESTELDE routecontracten. Work moet de actuele router inspecteren en zo nodig harmoniseren met bestaande paden. Bouw binnen de bestaande Klink-repository, niet als los kopieplatform.
+Globale shell: links Klink Inzicht-logo/woordmerk; hoofdnavigatie; actieve schoolcontext (altijd zichtbaar); bovenaan gebruikersrol en profiel; primaire inhoud; optionele rechter detailkolom op desktop; responsive op tablet en smartphone.
+Hoofdnavigatie in deze volgorde: Vandaag, Mijn klassen, Cursisten, Observaties, Vaardigheden, Opdrachten, Toegang, Lesadvies, Rapportages. Schoolbeheer alleen voor bevoegde rol.
+Routes: /inzicht; /inzicht/klassen; /inzicht/klassen/nieuw; /inzicht/klassen/:classId; /inzicht/klassen/:classId/cursisten; /inzicht/cursisten/:learnerId; /inzicht/cursisten/:learnerId/observaties/nieuw; /inzicht/observaties; /inzicht/klassen/:classId/matrix; /inzicht/opdrachten; /inzicht/opdrachten/nieuw; /inzicht/klassen/:classId/toegang; /inzicht/klassen/:classId/advies; /inzicht/rapportages.
+Navigatiecontext blijft in URL en servercontrole van school en klas. Alleen de route verbergen is geen autorisatie. Niet-geautoriseerd: veilige 403, geen leerlingnaam in foutmelding. Niet-bestaand: 404 zonder gegevenslek. Bij verlopen sessie: herstel-login en behoud van onopgeslagen formulier waar dat veilig kan.
+
+
+4. Vandaag, route /inzicht
+Boven: actieve school, gekozen klas (selector), datum en 'Nieuwe observatie'. KPI-rij: aantal klasinschrijvingen, ontbrekende metingen, aandachtssignalen, open opdrachten. Geen claims over leerbeheersing zonder validiteit.
+Kaart 1: 'Dit vraagt aandacht' met vaardigheid, aantal getroffen cursisten, bewijsrecency en doorklik naar matrix. Kaart 2: 'Nog te meten'. Kaart 3: 'Klaar voor vervolg'. Kaart 4: open opdrachten. Prominente knop 'Wat heeft mijn groep morgen nodig?' opent eerst een preview, nooit automatische toewijzing.
+Zonder klas: leeg scherm 'Maak je eerste klas aan' met knop. Met klas zonder leerlingen: instructie 'Voeg cursisten toe'. Met geen meetbewijs: 'We kunnen nog geen vaardigheidsadvies geven; begin met een controle'. Met serverfout: nette herstelactie.
+Bij meerdere scholen: actieve school zichtbaar en wisseling wist tijdelijke leerlingselectie.
+
+
+5. Mijn klassen, route /inzicht/klassen
+Lijst met kaarten of tabel: klasnaam, startniveau, aantal actieve leerlingen, docenten, status actief/gearchiveerd, laatst aangepast, knop Openen. Zoek op naam, filter niveau en status, sorteer naam/laatste wijziging. Primair 'Nieuwe klas'. Schoolbeheerder ziet bevoegde schoolklassen; docent uitsluitend eigen/toegewezen klassen.
+Formulier Nieuwe klas: naam verplicht (max 100), startniveau verplicht uit Alfa A, Alfa B, Alfa C, A1, A2, B1; cursus-/schoolperiode optioneel; beschrijving optioneel; schoolcontext server-side; docent standaard gekoppeld als class_teacher met manage-rol, tenzij organisatiebeleid dit blokkeert. Opslaan creëert klas binnen transactie, toont detailpagina.
+Klasdetail header: naam, startniveau, periode, status, bevoegde docenten, aantal cursisten, menu Bewerken/Archiveren. Tabs: Overzicht, Cursisten, Vaardigheden, Observaties, Opdrachten, Toegang, Lesadvies. Snelknoppen 'Cursist toevoegen', 'Observeren', 'Oefening klaarzetten'. De startniveaukeuze is informatief, niet automatisch een blokkade voor leerstof.
+Klas wijzigen: naam/niveau/periode met validatie. Archiveren: expliciete bevestiging, stop nieuwe inschrijvingen; oude leerbewijzen, opdrachten en observaties blijven bewaard volgens beleid. Heropenen alleen bevoegd. Niet hard-deleten zolang relaties bestaan.
+Toestanden: nieuw, actief, gearchiveerd. Bij twee docenten tegelijk wijzigen: optimistic concurrency; conflict met 'Gegevens zijn gewijzigd, vernieuw en vergelijk'.
+Max. 30 cursisten als ergonomisch prestatietestscenario, geen productlimiet tenzij organisatiebeleid dat stelt.
+
+
+6. Cursisten koppelen en volgen
+Klasdetail > Cursisten: naam, schoolaccountstatus, laatste activiteit, open opdrachten, aandachtssignalen, knop Profiel.
+Toevoegopties: bestaande schoolgebruiker kiezen binnen bevoegde school, veilige uitnodiging aan bestaande Klink-account, voorlopige schoolinschrijving zonder account. Geen merge op naam, geboortedatum of e-mailadres alleen. Link vergt aantoonbare identiteitscontrole/uitnodigingsacceptatie, audit en opt-in wanneer toepasselijk. De docent ziet geen wachtwoorden of geheime activatietokens.
+Een cursist kan in meerdere klassen zitten; iedere klassenrollment heeft start_at, end_at, status. Uit een klas halen beëindigt lidmaatschap, verwijdert niet het dossier. Tussen scholen vindt geen automatische overdracht plaats. Dubbelnamen worden getoond met bijkomende veilige schoolreferentie indien toegestaan.
+Cursistdetail tabs: Overzicht, Vaardigheden, Leerbewijs, Observaties, Opdrachten, Toegang, Groei. Header toont naam, groep(en) in huidige school, niveau-instelling en koppelstatus. Geen persoonlijke Klink-resultaten in schooldossier zonder rechtmatige, expliciete deling.
+
+
+7. Observaties
+Observatie is uitsluitend een Inzicht-functionaliteit. Start via hoofdmenu, klas of cursist. Vanuit cursusprofiel zijn cursist en klas vooraf ingevuld, maar wijzigbaar binnen bevoegdheden.
+Formulier: cursist verplicht; contextklas verplicht voor klasobservaties; vaardigheidscatalogus verplicht; opdracht/situatie verplicht (korte tekst); waargenomen resultaat uit kan/kan-gedeeltelijk/kan-nog-niet/niet-beoordeeld; zelfstandigheid uit zelfstandig/met-hint/na-voordoen/onbekend; aantal-items/juist optioneel alleen voor echte gecontroleerde items; didactische opmerking optioneel, 0-1000 tekens; observatiedatum standaard nu; docent-ID alleen vanuit sessie; criteria- of rubricversie automatisch.
+Bij bewaren toont het profiel de observatie onmiddellijk met datum, docent, vaardigheid, situatie, resultaat en zelfstandigheid. Wijziging door de auteur of bevoegd reviewer maakt gecorrigeerde versie en auditspoor; geen stille overschrijving. Observaties tellen pas als meetbewijs wanneer een passende beoordelingsrubric en beoordeling voor de vaardigheid bestaan. Vrije algemene indruk telt nooit automatisch als 'beheerst'.
+Observatielijst: filter klas, cursist, vaardigheid, periode; sorteer recent; lees/evidencekaart openen; corrigeren met reden. Geen foto's/audio in MVP; bewaar geen diagnoses of gevoelige informatie in vrije tekst. Leeg: 'Nog geen observaties'.
+Validatie: ontbrekende cursist, ongeldige vaardigheid, verlopen klasrecht, datum buiten toestaan venster, duplicaatverzoek, gelijktijdige wijziging.
+
+
+8. Vaardighedenmatrix en leerbewijs
+Route /inzicht/klassen/:classId/matrix. Horizontaal scrollbare, keyboard-accessible tabel: rijen cursisten, kolommen geselecteerde leerdoelen; sticky naamkolom en kopregel desktop; mobiel per domein en leerlingkaart. Filters: alfabetisering/A1/A2/B1, domein (letters, klanken, koppeling, decoderen, woorden, zinnen, teksten, schrijven), status, leerdoel, recentheid en groep.
+Cellen tonen icoon plus tekst/toegankelijke naam: Beheerst, In ontwikkeling, Extra aandacht, Niet gemeten. Aandachtssignaal staat apart in datamodel en kan naast niveau getoond worden. Bij dubbel tegenstrijdig bewijs 'Hercontrole nodig' als signaal, niet wegpoetsen.
+Klik op cel opent detail: vaardigheidsbeschrijving, status inclusief regelversie, meetdagen, zelfstandig/met-hulp, score, oorspronkelijke individuele oefeningen, individuele docentobservaties, ingetrokken metingen, bewijsrecency, knop passende oefening, knop nieuwe observatie.
+Onbekende resultaten niet als 0% weergeven. Eén correcte poging is geen definitieve beheersing. Werkbladen of digibord zonder individuele registratie leveren geen automatische score op.
+Vaardighedencatalogus: vaardigheid-id, label, toelichting, domein, leerlijn, versie, soort meting, criteria, prerequisites, publicatiestatus, lesrelaties. Voor Alfa: schriftbeeldherkenning, klankherkenning, letter-klankkoppeling, klankproductie met docentbeoordeling, decoderen, woordlezen, zinslezen, tekstbegrip, schrijven. Later A1-A2-B1 met apart gevalideerde rubrics.
+De matrix kan op een klas van 30 en 100 geselecteerde vaardigheden met paginering of windowing snel en betrouwbaar werken.
+
+
+9. Opdrachten klaarzetten
+Oefenzoeker: filter op niveau, vaardigheid, oefenvorm, publicatiestatus en licentierechten; alleen Published & toegangsgerechtigde content. HOLD/concept/ingetrokken items niet selecteerbaar. Oefeningpreview toont inhoud en leerlingervaring voordat wordt toegewezen.
+Wizard: stap 1 klas kiezen; stap 2 hele klas of specifieke cursisten; stap 3 oefening/versie; stap 4 startdatum, einddatum optioneel, instructietekst; stap 5 preview toegangscontrole; stap 6 definitief bevestigen. Standaard concept tot bevestiging.
+Statussen concept, gepland, actief, gestart (per ontvanger), afgerond, beoordeeld, ingetrokken, verlopen. Opdrachtafloop wist geen bestaande pogingen. Bij onverenigbaarheid leerstoftoegang laat systeem docent eerst expliciet toegang aanpassen of een andere oefening kiezen.
+Resultaten: gemaakt/niet gemaakt, score indien meetbaar, pogingen, zelfstandigheid indien bekend, onderliggend leerbewijs. 'Afgerond' is niet gelijk aan 'Beheerst'.
+Actie terugtrekken beïnvloedt toekomstige toegang; historische metingen blijven controleerbaar onder beleid.
+
+
+10. Toegang tot leerstof
+Klasbeleid: beschikbare leerroutes Alfa A, Alfa B, Alfa C, A1, A2, B1; oefenmodus 'vrij binnen toegestane routes' of 'alleen toegewezen oefeningen'. Individuele override per cursist, met zichtbaar verschil t.o.v. klasstandaard. Bestands- en versiegebaseerde licentiecontrole op server.
+Beslisvolgorde: actieve schoolmembership en rol, schoolentitlement/licentie, effectieve route-policy (individuele override indien aanwezig, anders klas), content Published, oefenmodus en opdracht. Bij meerdere klassen wordt per schoolwerksessie de expliciet gekozen klascontext gebruikt; nooit per ongeluk toegang verruimen door willekeurige andere klas te combineren.
+De schoolrestrictie verandert de persoonlijke Klink-context niet. Geen toegangsregels baseren op verborgen UI-knoppen. Wijzigingen gelogd met actor, school, doel, oude/nieuwe toestand.
+Instelscherm toont vooraf 'Dit ziet de cursist'. Bij uitzetten van een route waarschuwing bij actieve opdrachten; dwing begeleide keuze af. Als er geen routes zijn, toon duidelijke leegstaat in Klink schoolcontext.
+
+
+11. Lesadvies zonder AI
+Route /inzicht/klassen/:classId/advies. De vaste prominente knop heet exact 'Wat heeft mijn groep morgen nodig?'. Regels evalueren geldige individuele bewijsregels, aandachtssignalen, ontbrekende metingen en leervoorwaarden. Eenzelfde inputsnapshot plus regelsversie plus contentcatalogusversie geeft dezelfde aanbevelingen.
+Elk advies bevat doelgroep, onderliggende leerdoelen, waarom, meetbasis, beslisregel-id, voorgestelde didactische activiteit, gepubliceerd content-ID/versie, duur voor zover gecontroleerd, check na afloop, optie accepteren/aanpassen/overslaan. Geen tekstgeneratie door taalmodel en geen verzonnen content.
+Adviesvolgorde: ontbrekende kritieke meetgegevens, collectieve herhalingsbehoefte, kleine instructiegroepen, verdieping. Prioriteit transparant. Docent kan voorstel bewerken en koppelen aan bestaande Klink-oefening of Klink+Docent-leslink. Pas expliciete goedkeuring maakt de opdracht klaar in Klink. Het openen van een digibordles is navigatie, niet leerlingscore.
+Wanneer geen gepubliceerde match bestaat: 'Geen passende gecontroleerde oefening beschikbaar', eventueel docentobserveer-/meetadvies. Bij onvoldoende bewijs geen hard niveauadvies. Docentbesluiten loggen; optionele afwijsreden om regels te verbeteren.
+
+
+12. Rapportages en leergroei
+Groepsrapport: aantal geldige metingen, per domein beheersing, recente ontwikkeling en openstaande ontbrekende gegevens. Individueel: tijdlijn met resultaten en docentobservaties. Voorkom pseudo-precisie, gemiddelden over ongelijk getoetste leerdoelen en medische/psychologische labels.
+Exports in MVP alleen geautoriseerd met dataminimalisatie, watermark context en logging. Geen openbare leerlinglijsten, geen score-vergelijkingen tussen scholen.
+
+
+13. Rollen en rechten
+Docent: eigen/toegewezen klassen creëren en beheren, eigen klasleerlingschooldossiers zien, observaties toevoegen, opdrachten toewijzen, toegang binnen licentiekaders beheren, advies goedkeuren. Schoolbeheerder: rollen, inschrijving, klasbevoegdheid en schoolinstellingen, geautoriseerd rapport. Cursist: alleen eigen schoolopdrachten en toegestane resultaten. Contentbeheer: vaardigheden en contentmetadata publiceren, geen standaard leerlinginzage. Platformbeheer: technische metadata en geauditeerde incidenttoegang, geen standaard inhoudelijke dossiers. Docent van school A mag school B niet lezen. Mede-docent ziet alleen expliciet toegewezen klas.
+Ontwerp privacy-by-default en aparte juridische verwerkingstoets/DPIA voor livegegevens. Scholing en proefdata in staging zonder echte persoonsgegevens, tenzij privacygate voltooid.
+
+
+14. Interactie-, toegankelijkheids- en kwaliteitsregels
+Vormgeving hergebruik Klink design tokens, woordmerkidentiteit, bestaande componenten, typografie, knoppen, mobiele responsive patronen. Geen nieuwe stylingbibliotheek zonder reden. Minimale kliklast, duidelijke labels en één primaire actie per scherm.
+WCAG 2.2 AA als doel: keyboard, focus, schermlezernamen van matrixcellen, contrast, foutmeldingen, target-grootte, voorleesbare tekst waar relevant. Per scherm bouw loading, empty, validation, success, permission denied, network error en concurrency states.
+Knoppen doen echt iets. Geen decoratieve opslagknoppen. Geen onbetrouwbare successmeldingen voor mislukte API-call.
+Maak echte leerstatus niet zichtbaar als de backend niet gekoppeld is. Voor demo duidelijk label 'fictieve data'.
+
+
+15. Exacte gebruikersreizen
+U01 eerste docent: login -> kies school -> Vandaag leeg -> nieuwe klas -> klasnaam en startniveau -> opslaan -> klaspagina -> cursist uitnodigen -> activatievolgstatus.
+U02 bestaande Klink-cursist: docent start schooluitnodiging -> cursist verifieert/koppelt -> schoolmembership geldig -> klasinschrijving -> persoonlijk account blijft gescheiden.
+U03 observatie: klas -> cursist -> Observeren -> vaardigheid + situatie + resultaat + zelfstandigheid -> bewaren -> profiel/tijdlijn -> evt. matrixherberekening.
+U04 individuele oefening: docent geeft toegang -> opdracht klaarzetten -> cursist opent schoolcontext -> maakt oefening -> poging schoolgebonden -> validatie -> Evidence -> matrixcel.
+U05 groep vooruithelpen: Vandaag -> 'Wat heeft mijn groep morgen nodig?' -> preview -> waarom -> docent wijzigt groepen -> goedkeurt -> opdrachten in Klink; digibordles via bestaande leslink.
+U06 overplaatsing: oude klasenrollment beëindigen -> nieuwe enrollment -> historie in oude klas intact -> nieuwe docent ziet alleen waar bevoegd.
+U07 meerdere scholen: actieve school A -> wissel naar B -> tabel/selectie reset -> API-tenant-isolatie -> geen gegevenslek.
+
+
+16. Ontwerpbijlage: tekstuele wireframes
+OVERZICHT: [Klink Inzicht | actieve school | account] / [Vandaag Mijn klassen Cursisten Observaties Vaardigheden Opdrachten Toegang Lesadvies Rapportages] / [Groepkiezer] / [KPI's] / [Aandacht] [Nog meten] [Verdieping] / [Wat heeft mijn groep morgen nodig?].
+KLASDETAIL: [Terug | klasnaam | niveau | bewerken] / [Overzicht Cursisten Matrix Observaties Opdrachten Toegang Lesadvies] / [Cursistenlijst] / [Toevoegen Observeren Opdracht].
+OBSERVATIE: [Cursist] [Vaardigheid] [Situatie/opdracht] [Waargenomen resultaat] [Zelfstandigheid] [Opmerking] [Bewaren].
+MATRIX: [Groepfilter] [Domeinfilter] [Statusfilter] / [Naam | m | aa | oo | b/d | Woordlezen] / [Klik cel -> bewijsdetail, hercontrole, oefening].
+ADVIES: [Groep | peildatum | regelsversie] / [Herhaling] [Diagnostiek] [Verdieping] / [Evidence + Waarom] [Aanpassen] [Goedkeuren].
+TOEGANG: [Klas of individuele cursist] / [Alfa A/B/C A1/A2/B1] / [Vrij oefenen of alleen opdrachten] / [Dit ziet cursist] [Opslaan].
+OPDRACHTWIZARD: [Klas -> Cursisten -> Oefening -> Tijd -> Preview -> Bevestigen].
+
+
+17. Ontwerpstatus en bevestigingsgrenzen
+Vastgesteld: productgrenzen, functionele modules, navigatie-intentie, docentregie, geen AI, leerbewijsketen, scheiding school/persoonlijk, bestaande leermaterialen niet herschrijven.
+Voorwaardelijk na repositoryinspectie: exacte URL-paden, bestaand componentenpad, authprovider, database-engine, migraties, Worker-routes, content-ID's, werkelijke status Klink+Docent PR, live versus concept, en mogelijke bestaande docentmodules. Work maakt daar eerst een inventaris van, pas daarna nieuwe code.
+Alle tekst hier is bouwspecificatie. Er is nog geen claim dat de beschreven schermen al functioneren.
+
+
+18. Brondocumenten in dezelfde Drive-map
+KLINK 2.0 | 01 Schermarchitectuur: https://docs.google.com/document/d/1Q1seNkkxcvra_ppz6pf2SjaM9R7O-bLAfGZXrF8H4tg/edit
+KLINK 2.0 | 02 Technisch/juridisch: https://docs.google.com/document/d/1_C4KJ9k3rLFhgU0WQYi_bmxVPRCQdPJli5E8FKRLOfM/edit
+KLINK 2.0 | 03 Pilot: https://docs.google.com/document/d/10TrkWpSwiYY9RaOm5n08j_hoxx_TRnB0LYBAixzzP9I/edit
+KLINK+DOCENT huidige index (NIET aanpassen): https://docs.google.com/document/d/1w7x9i1PuKxQ7MnD6U_I8I7BtWKjzkWJ2rcd92cOyGh8/edit
+KLINK INZICHT 02 bevat technische contracten, adviesspecificatie en testmatrix.
+
+
+
+
+REVIEWPATCH R1 | Functioneel, UX en didactisch | 31 oktober 2026
+STATUS: V1.1-NORMATIEVE AANVULLING. Deze reviewbesluiten vervangen oudere passages waar zij preciezer of strenger zijn. De historische tekst hierboven blijft ter vergelijking beschikbaar. Klink+Docent wordt niet gewijzigd.
+
+
+R1-UX-01 | Navigatie en cognitieve belasting
+De negen functionele onderdelen blijven bestaan, maar toon in het primaire desktopmenu maximaal vijf duidelijke hoofdbestemmingen: Vandaag; Mijn klassen; Cursisten; Vaardigheden; Meer. Onder 'Meer' vallen Observaties, Opdrachten, Toegang, Lesadvies, Rapportages. Binnen een geopende klas blijven relevante lokale tabs zichtbaar, maximaal vijf tegelijk plus Meer. Vanaf het profiel is 'Observeren' een vaste primaire actie; vanuit de matrix is 'Bekijk bewijs' leidend. Voor grotere schermen mag de schoolselector permanent zichtbaar zijn, maar nooit vermengd met de persoonlijke Klink-context.
+Toets met docenten welke indeling de kortste vindroute geeft. Dit is een voorgestelde presentatie, geen wijziging van functierechten.
+
+
+R1-UX-02 | Schermspecifieke plaatsing en gedrag
+Vandaag: bovenste rij productnaam, actieve school, klasselector, profiel; daaronder schermtitel en nieuwe observatie; daaronder drie tot vier compacte aandachtssamenvattingen; in de eerste zichtbare schermhoogte de knop 'Wat heeft mijn groep morgen nodig?'; daarna kaarten 'Herhalen', 'Eerst meten', 'Verder oefenen', 'Open opdrachten'. Elke kaart toont naam/vaardigheid, aantal betrokken cursisten, datum laatste meetbewijs en Open matrix/advies.
+Mijn klassen: paginaheader met Nieuwe klas rechts; zoek- en statusfilter; lijst van klasnaam, startniveau, actieve inschrijvingen, status en Open. Een klas openen toont header met naam, klasperiode, docenten, bewerkactie en tabs Cursisten, Matrix, Observaties, Opdrachten, Toegang, Meer: Lesadvies/Rapportages.
+Cursistprofiel: vaste bovenbalk naam, schoolcontext, gekoppeld account, 'Observeren'; direct daaronder samenvatting van bewezen vaardigheden zonder misleidend totaalpercentage; tabs Vaardigheden, Bewijs, Observaties, Opdrachten, Toegang, Groei. Iedere bewijskaart bevat bron, uitvoeringsdatum, score indien valide, zelfstandigheid en versie.
+Observatie: bovenste helft maximaal vijf kernvelden na automatische voorinvulling: vaardigheid, opdracht/situatie, resultaat, zelfstandigheid en Bewaren; opmerking en uitgebreide rubricvelden onder 'Meer details'. Bij expliciete rubric die aanvullende verplichte velden eist, moeten die vóór bewaren zichtbaar worden met reden. Docent ziet na succesvolle save profielkaart met Edit/correctie, niet alleen toast.
+Matrix: default gekozen domein en eerste twintig vaardigheden, klasnaam en selectie van vaardighedendomein vast bovenaan; sticky namen binnen scrollcontainer; legenda met tekst; klik op cel opent rechts detailpaneel op desktop, volledig scherm op mobiel. Geen 100 kolommen tegelijk in één onleesbare tabel. Voeg 'Nog niet gemeten' als tekststatus toe, niet als tekort.
+Opdrachtwizard: concrete voortgang 1 Selectie, 2 Voor wie, 3 Wanneer, 4 Leerlingpreview, 5 Bevestigen. Toon blokkade door contentstatus/licentie/route vóór bevestiging.
+Toegang: wijziging eerst preview met actieve opdrachten, getroffen cursisten en 'Dit ziet de cursist'; opslaan met expliciete bevestiging bij beperkende wijziging.
+Lesadvies: bovenaan gekozen lesdatum, klas, regelsversie en 'laatste geldige meetmoment'; gescheiden panelen herhaling, diagnostiek, verdieping; per voorstel bronnen en knoppen Aanpassen, Overslaan, Goedkeuren. Goedkeuren activeert pas na server-side final validation.
+
+
+R1-UX-03 | Vormgeving, mobiliteit en toegankelijkheid
+Hergebruik bestaande Klink-UI-tokens en componenten in plaats van willekeurig nieuwe fonts, kleuren, icons of kaartstijlen. Ontwerp desktop op 1280-1440 px, tablet op 768-1024 px, smartphone vanaf 360 px als TESTVIEWPORTS, niet als vast frameworkcontract. Voor tablet: inklapbare navigatie; voor mobiel: hoofdactie boven inhoud, kaarten verticaal en matrix per leerdoeldomein met horizontaal scrollbaar inhoudsvak en toegankelijke lijstvariant. Geen horizontale paginaschroldwang voor andere schermen.
+Toets doel WCAG 2.2 AA, onder meer toetsenbord, focusvolgorde, focus niet verborgen, voldoende doelgrootte en contrast. Gebruik 40-44px comfortabele docentbediening als ontwerpdoel en toets minimaal het officiële WCAG-criterium inclusief uitzonderingen. Alle matrixsymbolen krijgen tekst en screenreader-label 'Naam, vaardigheid, status'. Behoud focus bij filterwissel of detail sluiten. Loading/empty/403/404/offline/validatiefout/success/stale/sessieverlopen hebben elk een aparte weergave.
+Alfa-cursistomgeving krijgt eenvoudige, volwassen taal, niet een docentcomplexiteit op de leerlingzijde.
+
+
+R1-DID-01 | Status eerlijk tonen
+'Niet gemeten' is nooit 'onvoldoende'; in KPI's altijd noemer en meetdekking laten zien. Geen totaalpercentage 'beheerst' wanneer de getoetste vaardigheden of tijdsperiodes verschillen. Bij didactische observaties onderscheid maken tussen doel, taak, ondersteuning en zelfstandigheid. Besluiten worden niet alleen op één taak of op activiteitstijd gebaseerd. Laat docent correctie-/reviewpad zien als uitkomst onwaarschijnlijk is.
+
+
+R1-UX-04 | Morgen is niet altijd de volgende lesdag
+De knop heet precies 'Wat heeft mijn groep morgen nodig?' maar opent een lesdatumkiezer met standaard de eerstvolgende bekende geplande lesdatum ALS roosterdata betrouwbaar zijn; anders standaard morgen als voorstel, met expliciete keuze 'Andere lesdatum'. Op zaterdag, vakantie of als een les niet ingepland staat, niet claimen dat er morgen les is. De lesdatum beïnvloedt alleen presentatie en selectie van relevante geplande opdrachten, niet de berekende feitelijke vaardigheidstoestand.
+
+
+R1-UX-05 | Rol en grenzen bij nieuwe klassen
+Docent mag zelf klassen aanmaken binnen expliciet beheersrecht voor de actieve school. Docent mag NIET zelfstandig een willekeurige schoolgebruiker tot leerling van een door zichzelf gemaakte klas verklaren om zo ongeautoriseerde inzage te krijgen. Bestaande schoolrosters vereisen onafhankelijke geautoriseerde toewijzing of uitnodiging + bevestiging conform schoolbeleid. Conceptinschrijving blijft buiten leerbewijsinzage totdat relatie geverifieerd is. Deze regel is strenger dan algemene zinnen 'cursist toevoegen' hierboven en gaat daarop voor.
+
+
+R1-UX-06 | Opdrachten en beleidswissels
+Zorg bij restricties voor 'Bekijk impact' en bevestiging, met concrete waarschuwing voor onafgemaakte opdrachten. Bij meerdere actieve klassen moet een schoolopdracht ondubbelzinnig een class_id dragen; cursist ziet school+klas+opdracht en het platform gebruikt de context van die opdracht voor toegang. Vrij oefenen vereist een expliciete gekozen schoolklascontext, geen willekeurige unie van rechten. Bij ambiguïteit toont Klink een klaskiezer en start geen oefening.
+
+
+R1-UX-07 | Interface-microcopy en privacy
+Vermijd labels als 'zwak', 'achterstand', 'probleemleerling' op het profiel; gebruik 'extra ondersteuning bij [vaardigheid]'. Toon naam en reden in docentweergave alleen aan bevoegden. Groepssignaal telt aantallen alleen bij bekende noemer, zonder leerlingvergelijkingsranglijst. Vrije observatienotitie zegt zichtbaar: 'Beschrijf wat de cursist bij een taak deed. Noteer geen medische of andere gevoelige details.' Er is een correctiepad als een docent dat toch invoert.
+
+
+R1-UX-08 | Uitvoerbare demo en bewijs van ervaring
+Work bouwt per scherm een werkende, testbare route met echte, synthetische stagingdata en een eenvoudige kaart van de schermovergangen. Screenshots alleen naast testlog en keyboard-/screenreadercontrole; geen static mockup als bewijs. Drie docenttaken worden getimed tijdens praktijkreview: klas aanmaken, observatie toevoegen, bewijs in matrix openen. Doelwaarden worden na baseline met docenten vastgesteld, niet als fictieve productiecijfers.
+
+
+HERZIENINGSREGEL: Deze sectie heeft binnen Klink Inzicht v1.1 voorrang op onduidelijke oudere UX-beschrijvingen. Het technische tegenstuk staat in Inzicht 02 onder REVIEWPATCH R1.
+
+
+REVIEWPATCH R2 | Herbeoordeling UX, docentpraktijk en leerrecht | 31 oktober 2026
+STATUS: V1.2-NORMATIEVE AANVULLING na onafhankelijke tweede deskreview vanuit verschillende expertisebrillen. R2 heeft voorrang op R1 en v1.0 waar er een echte afwijking is. Er zijn geen menselijke deelnemers of werkende schermen getest.
+
+
+R2-UX-01 | Snelle klasstart zonder onbevoegde accounttoegang
+De docent mag in zijn toegewezen schoolcontext direct een klas aanmaken en een NIEUWE VOORLOPIGE cursistnaam als schoolprofiel in zijn eigen klas opslaan. Voor dit voorlopige profiel is een eigen tijdelijk school-ID en een zichtbare koppelstatus 'Nog geen Klink-account' verplicht. De docent mag dit eigen voorlopige profiel observeren en die observatie in dezelfde klas terugzien. Een voorlopige schoolleerling kan nog geen automatische resultaten uit een bestaande Klink-account ontvangen en krijgt geen nieuwe persoonsgegevens uit andere schooldossiers.
+Een bestaande schoolleerling aan een klas koppelen blijft afzonderlijk geautoriseerd door schoolbeheer of een bewezen uitnodigings-/inschrijvingsrelatie. Bij latere gecontroleerde accountkoppeling verschijnen voorlopige observaties pas op het gevalideerde profiel na expliciete identiteitcontrole, duplicaatcontrole, bevoegdheid en audit. Foutieve koppeling moet terug te draaien zijn. Dit corrigeert de te strikte lezing van R1-UX-05 dat een docent geen bruikbare voorlopige klas mag aanmaken.
+
+
+R2-UX-02 | Eén hoofddoel per pagina, zichtbare observatieknop
+Hoofdnavigatie bevat bij voorkeur Vandaag, Mijn klassen, Cursisten, Vaardigheden, Meer; maar 'Observatie toevoegen' is ALTIJD direct bereikbaar vanuit Vandaag, klasdetail en cursistprofiel. De docent mag nooit drie menu's openen voor observeren. In klasdetail verschijnt naast 'Cursist toevoegen' een primaire 'Observeren'-actie; vanuit cursistprofiel zijn klas en leerling vooringevuld.
+Het formulier kent twee modi: Snel (vaardigheid, concrete taaksituatie, resultaat, zelfstandigheid, Opslaan) en Uitgebreid (rubricvelden, aanvullende observatie, correctie). Als vereiste rubricvelden ontbreken mag een observatie wel als algemene didactische notitie worden opgeslagen maar niet automatisch 'Beheerst' veroorzaken. Toon expliciet 'Opgeslagen als observatie; geen meetbewijs' waar passend. Bewaarknop pas success na serveracknowledgment.
+Na opslaan automatisch terug naar het cursistprofiel met zojuist gemaakte observatie zichtbaar. In klassenlijst en cursistprofiel blijven namen en historische klassen van andere scholen verborgen.
+
+
+R2-UX-03 | Matrix als dashboard, niet als examenlabel
+Status 'Extra aandacht' is een signaal, niet een definitieve negatieve classificatie. Toon in de cel de basisstatus + aandachtssymbool bij hover/focus/detail; bij onvoldoende bewijs blijft basistoestand 'In ontwikkeling' of 'Niet gemeten' met eventueel aandacht. Eenvoudige visuele vierkleurpresentatie mag niet verbergen dat het om twee assen gaat. In het detailpaneel staat 'Waarom?' met grondregels en bronnen, plus 'Opnieuw controleren' en 'Observeren'. Geen automatische nivellering, labels of rankings.
+Groepskaarten geven altijd AANTAL gemeten / AANTAL actieve cursisten naast aantallen met aandacht. Geen 100%-voortgangsbalk zonder zelfde vaststaande toetsdekking en meetvenster. Toon per vaardigheid de meetdatum en eventueel 'Meting verouderd, hercontrole aanbevolen'.
+
+
+R2-UX-04 | Praktijktest met echte docenthandelingen
+Na bouw moeten minimaal deze routes zonder hulp door twee verschillende docenten kunnen worden doorlopen: nieuwe klas + 3 voorlopige cursisten aanmaken, observatie van een cursist vastleggen en terugvinden, bestaande Klink-account via geautoriseerde uitnodiging koppelen, matrixcel met bewijs openen, beperkt niveau + individuele uitzondering instellen, passende oefening klaarzetten, groepsadvies aanpassen en goedkeuren. Meet aantal klikken, taakduur, fouten en herstel; stel concrete acceptatiewaarden pas vast na gebruikertest-baseline.
+Voeg visuele regressietests toe op desktop, tablet en telefoon met lange namen, dubbelnamen, groot lettertype, zoom 200%, 400% reflow waar vereist, lege groep en 30x100 matrix. Gebruik keyboard en schermlezer bij matrixfilters en modals. Een clickproto geldt niet als echte gebruikerstest.
+
+
+R2-UX-05 | Informeer en stuur niet ongemerkt
+Bij elke automatische suggestie ziet docent: waarom, welke cursisten, welke geldige leerbewijzen en bronperiode, welke gepubliceerde oefening en waarom die passend is. 'Voorstel' verschijnt als label. De docent kan de tekst voor de cursist in eenvoudige, niet-stigmatiserende woorden bekijken vóór uitgifte. Een beperkt aanbod in schoolcontext mag de persoonlijke Klink-omgeving nooit stilzwijgend beperken. Een afwijzing laat de bestaande leerlingstatus ongemoeid.
+
+
+R2-UX-06 | Releasebewijs
+Werk de scherm-acceptatie uit in een klikpadmatrix. Iedere primaire actie krijgt: rol, bronpagina, knoplabel, doelscherm, serveractie, succesmelding, lege toestand, fouttoestand, back/cancel en logging. WorkChat levert deze bij WP0 in een eenvoudige tabel met echte component-/routebestanden na repo-inspectie. Tot die tijd blijven genoemde routes implementatievoorstellen, geen geverifieerde actuele paden.
+
+
+R2-EINDOORDEEL UX-ONTWERP
+Functionele productgrenzen en de belangrijkste flows zijn op documentniveau consistent. Volgende poorten blijven open: bestaande code inspecteren, visuele prototypes en echte docentenpraktijktest, toegankelijkheid met assistieve technologie en proef met cursistaccounts. Geen algemene 'UI is al goedgekeurd'-claim.

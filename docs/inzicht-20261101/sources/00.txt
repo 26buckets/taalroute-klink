@@ -1,0 +1,127 @@
+﻿KLINK INZICHT | 00 START HIER en WorkChat-bouwopdracht
+Versie 1.2 | 31 oktober 2026 | Gereviewd WorkChat-bouwdossier; basis v1.0 + reviewrondes R1 en R2.
+STATUS: REVIEWD ONTWERP V1.2 OP GOOGLE DRIVE. SOFTWARE NIET GEBOUWD OF GEVERIFIEERD. VOOR START WORK: LEES OOK KLINK INZICHT 03 (expertreview en adversarial herreview). NORM: R2 > R1 > v1.0.
+Doel: één eenduidige bron voor WorkChat, ontwikkelaars, productverantwoordelijke, docentreview en pilot. Dit document is leidend voor INZICHT, samen met Inzicht 01 en 02.
+
+
+1. Projectmap, leesvolgorde en bronhiërarchie
+Projectmap: https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF
+NIEUW: KLINK INZICHT 00 START HIER, dit regie- en Workdocument.
+NIEUW: KLINK INZICHT 01 | Compleet functioneel en UX-bouwdossier:
+https://docs.google.com/document/d/1TBPhX1b7tak7nAnxjOuoBki7Kv_7JZqGFV51NmguH0I/edit
+NIEUW: KLINK INZICHT 02 | Technische contracten, beslisregels en acceptatietests:
+https://docs.google.com/document/d/1EPXCSevbH6Um1x7rD2NobU28_F00ybZWCnXNYKySth8/edit
+BESTAAND: KLINK 2.0 01 | Schermarchitectuur en gebruikersprocessen:
+https://docs.google.com/document/d/1Q1seNkkxcvra_ppz6pf2SjaM9R7O-bLAfGZXrF8H4tg/edit
+BESTAAND: KLINK 2.0 02 | Technische en juridische specificatie:
+https://docs.google.com/document/d/1_C4KJ9k3rLFhgU0WQYi_bmxVPRCQdPJli5E8FKRLOfM/edit
+BESTAAND: KLINK 2.0 03 | Lingua Academy pilotplan:
+https://docs.google.com/document/d/10TrkWpSwiYY9RaOm5n08j_hoxx_TRnB0LYBAixzzP9I/edit
+ALLEEN REFERENTIE; NIET AANPASSEN: Klink+Docent actuele productie-index:
+https://docs.google.com/document/d/1w7x9i1PuKxQ7MnD6U_I8I7BtWKjzkWJ2rcd92cOyGh8/edit
+Lees eerst dit 00, daarna Inzicht 01 en 02 volledig, vervolgens KLINK 2.0 01/02/03. Lees Klink+Docent index voor grenzen en werkelijke actuele status. Inspecteer daarna pas repository en code. Een oud document over eerdere docentfuncties is niet automatisch de actuele instructie voor nieuwe Inzicht-functies.
+
+
+2. Vaststaande productbesluiten
+KLINK: cursisten doen individuele oefeningen in persoonlijke of schoolcontext. Resultaten uit beide contexten zijn niet uitwisselbaar zonder geldige grondslag/autoriteit.
+KLINK+DOCENT: 100% digibordlessen, werkbladen, antwoordbladen en lesmateriaal. Er verandert niets aan functionaliteit, bestaande bronnen, media, tests of publicatiestatus. Een papieren observatieblad in een bestaand lespakket blijft slechts een document, geen digitale Inzicht-module.
+KLINK INZICHT: apart herkenbare, beveiligde docentomgeving voor klassen, cursisten, observaties, vaardighedenmatrix, onderliggend leerbewijs, opdrachten, routebeperkingen, voortgang en verklaarbare lesadviezen.
+In Klink Inzicht maakt een docent zelf klassen binnen zijn schoolrecht, voegt cursisten toe via veilige accountkoppeling, bewaart de klas, observeert met een formulier dat in het leerlingprofiel wordt opgeslagen, volgt vaardigheden, zet oefeningen klaar, en bepaalt of een leerling Alfa A/B/C, A1/A2/B1 mag zien in schoolcontext.
+Een vaste knop met label exact 'Wat heeft mijn groep morgen nodig?' geeft advies voor herhaling, diagnostiek en verdieping. Geen AI in het product: geen taalmodellen, machinelearning, spraak-AI, zelfverzonnen oefeninhoud. Alleen deterministische didactische regels en gepubliceerde lesmetadata. Docent beslist zelf over iedere voorgestelde onderwijsactie.
+Eerste pilot bij alfabetisering, opbouwbaar naar A1, A2 en B1. Productgrens en veiligheid zijn blocker bij conflicten.
+
+
+3. Wat een werkende eerste versie moet doen
+De docent kan vanuit de bestaande Klink-login de eigen schoolcontext selecteren en Klink Inzicht openen. Binnen seconden ziet hij zijn klassen of het aanmaakscherm. Hij maakt een klas, voegt cursisten toe en kan later na herinloggen hetzelfde bewaren en volgen.
+Vanuit de klas kan hij 'Observeren' klikken, leerdoel/situatie/resultaat/zelfstandigheid invullen, bewaren en de observatie direct onder het correcte individuele schoolleerprofiel terugzien.
+De docent kan letter/klank/woordvaardigheden per cursist zien in een interactieve matrix en iedere status doorklikken naar de onderliggende geldige individuele resultaten en observaties. 'Niet gemeten' blijft onderscheiden van 'kan niet'.
+Een docent kan per klas Alfa A of Alfa B of Alfa C, of combinaties kiezen; individuele uitzondering en oefenmodus 'alleen opdrachten' versus 'vrij binnen toegestane routes' instellen. Beperkingen worden server-side afgedwongen en hebben geen ongewenst effect op persoonlijke Klink-workspaces.
+Een docent kan een bestaande gepubliceerde Klink-oefening aan cursisten klaarzetten. Zijn groep krijgt een deterministisch, verklaarbaar lesvoorstel. Een link mag naar een bestaande gepubliceerde Klink+Docent-les verwijzen, zonder deze software te wijzigen. De docent keurt acties uitdrukkelijk goed.
+Aanvullend: rechten, audit, privacy, fout- en leegstatussen, responsive UX en WCAG 2.2 AA.
+
+
+4. Werkvolgorde voor WorkChat
+WP0: repo- en productinventaris, exacte mappen en routes, database/identity/contentkoppeling, bestaande D01-D12-functies, branch- en PR-status; verschilrapport; geen code bij ontbrekende rechten.
+WP1: scholen/klassen/cursisten met persistentie, uitnodigingen, accountkoppeling, rolbeveiliging.
+WP2: observatiemodule, rubric en leerprofieltijdlijn, correctiehistorie.
+WP3: vaardighedencatalogus, individuele evidence events, beheersingsstatus en doorklikmatrix.
+WP4: route-/toegangsrestricties, individuele override, contentcatalogus en opdrachtenwizard.
+WP5: regelgebaseerde adviesmotor en knop 'Wat heeft mijn groep morgen nodig?'.
+WP6: beveiliging, toegankelijkheid, prestatie, pilot, regressietest en schriftelijk releasebesluit.
+Per WP eerst tests en bewijs. Bouw niet vooruit met onjuiste bronclaims. Geen live publicatie en geen merge zonder afzonderlijke expliciete toestemming.
+
+
+5. Exacte technische overdrachtsregels
+Repository volgens eerdere documentatie: https://github.com/26buckets/taalroute-klink, standaardbranch vermoedelijk main; status en repo-toegang opnieuw verifiëren. Het KLINK 2.0 technisch ontwerp meldt dat repo-toegang op 25 oktober niet was bevestigd. Work mag bestaande code, storage, authprovider of deploymentstatus dus niet fantaseren.
+Klink+Docent actuele index vermeldt concept-PR #5 en meerdere nog niet inhoudelijk/lokaal geverifieerde les-/mediapoorten. Niet wijzigen of mergen. Bekijk alleen ter context en hergebruik uitsluitend gecontroleerde, gepubliceerde leslinks.
+Technische voorkeur: modulair monoliet in de bestaande codebase; exacte stack pas kiezen na repo-audit. Kernstructuur en suggestiepaden staan in Inzicht 02 §1-3. Verwerk bestaande groepen en memberships waar aanwezig en voorkom dubbele tabellen.
+Service/API: zie Inzicht 02 §6-8. Alle code-/maplocaties worden door Work na inspectie vastgelegd met echte bestandspaden en commitverwijzingen. Onbekende details als OPEN markeren.
+Privacy: schoolcontext geïsoleerd van persoonlijke leeromgeving en andere scholen, rolmachtiging per API, veilige accountactivatie, audit, geen echte persoonsgegevens in ontwikkeltests, juridische DPIA en bewaarbeleid voor pilot.
+Bouwen vereist runnable staging, migraties, testdata, testscripts, branch/PR, gedocumenteerde rollback en heldere regressietest van bestaande Klink en Klink+Docent.
+
+
+6. Resultaatformat dat Work per bouwfase teruglevert
+1. Scope afgerond/ongepland en waarom.
+2. Werkelijke codepaden met oude/nieuwe status.
+3. Nieuwe tabellen/migraties of gemotiveerd hergebruik.
+4. Voorbeeld URL's en routes die lokaal aantoonbaar werken.
+5. Gedraaide commando's/tests en uitslagen met evidence.
+6. Security checks (cross-tenant, class, school, learner, school/personal).
+7. Klink+Docent regressie zonder mutatie.
+8. Bekende beperkingen en P0/P1/P2 fouten.
+9. Links naar commit, PR en stagingpreview indien werkelijk bestaand.
+10. Go/no-go met volgende concrete taak.
+Voeg na iedere WP een 'KLINK INZICHT | Werkrapport WPx | datum' toe in deze Drive-map of werk een nieuw overzichtsregister bij, inclusief bronlinks. Markeer ontwerp niet als gebouwd; gebouwd niet als live.
+
+
+7. HISTORISCHE STARTPROMPT v1.0 (VERVANGEN DOOR GEACTUALISEERDE STARTPROMPT v1.2 ONDERAAN)
+START WORK OPDRACHT.
+Bouw Klink Inzicht binnen de bestaande Klink-codebase. Gebruik als enige leidende ontwerpbron de Google Drive-projectmap:
+https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF
+Lees volledig en in volgorde de documenten KLINK INZICHT 00, KLINK INZICHT 01, KLINK INZICHT 02 en vervolgens de drie bestaande KLINK 2.0-v1.5-documenten. Lees de actuele Klink+Docent-index alleen om de productgrens en werkelijk bekende status vast te stellen.
+VASTSTAANDE PRODUCTGRENS: Klink is de leeromgeving van cursisten. Klink+Docent blijft 100% ongewijzigd voor digibordlessen, werkbladen en docentmaterialen. Alle nieuwe klasmanagement-, observatie-, bewijs-, matrix-, opdracht-, toegangs-, rapportage- en adviesfuncties horen UITSLUITEND bij Klink Inzicht. Ontwerp en bouw GEEN nieuwe functies in Klink+Docent.
+Geen AI in Klink Inzicht, ook geen optionele AI-backend. Automatisch adviseren gebeurt via controleerbare deterministische regels met regelversie en gepubliceerde, gelicentieerde oefen-/les-ID's. Adviezen hebben bewijsverwijzingen en worden nooit zonder goedkeuring van een docent uitgevoerd.
+Begin met een repository- en schema-audit van 26buckets/taalroute-klink. Verifieer rechtmatig toegang, actuele main, lopende PRs, authenticatie, schoolcontext, bestaande klas-/docentfuncties, huidige database en gepubliceerde content-ID's. In bestaande ontwerpen is Cloudflare Workers/D1 genoemd, maar kies pas definitieve implementatiepaden na inspectie. Rapporteer bevindingen en blokkades. Maak GEEN claims over code die je niet hebt gezien.
+Werk daarna sequentieel: WP1 Mijn klassen/cursisten en persistentie, WP2 observatieformulier/profiel, WP3 skillcatalog/evidence/matrix, WP4 leerstoftoegang/opdrachten, WP5 regelgebaseerde groeps- en individuele lesadviezen, WP6 pilot en releasepoorten. Volg in elk WP alle UX-velden, datacontracten, beslisregels, autorisatiematrix, toegangsregels, testcases KI-001 t/m KI-072 en privacy-/securitygates uit Inzicht 01/02.
+Maak echte code met migraties, server-side autorisatie, testdata, componenten en geautomatiseerde regressiechecks. Hergebruik bestaande Klink UI en versieer de implementatie; geen fictieve bestandspaden. Zet iedere wijziging op een reviewbare branch/PR; voer nooit zelfstandig een merge of productiepublicatie uit. De eerste meetbare verticale slice is: schooldocent maakt klas, koppelt testcursist, registreert observatie, ziet onderliggende bewijsstatus bij matrixcel. Pas daarna uitbreiden.
+Hanteer geen externe AI-aanroepen, geen nieuwe certificaatclaim, geen automatische privédatadeling, geen HOLD-content, geen productiegegevens in staging. Bij ontbrekende repo-toegang of privacygoedkeuring blokkeer live-ingrepen en lever een concrete remediation; ga met veilige, onafhankelijke voorbereidingen door waar mogelijk.
+Bij ieder resultaat: noem verifieerbaar wat gebouwd/getest is, geef echte bestandspaden, migraties, testlog, links naar PR en staging, open issues en volgende actie. Sla voortgang en overdrachtsbewijs op in de bestaande Google Drive-map en onderscheid ontwerp, implementatie, test, review en live.
+EINDE WORK OPDRACHT.
+
+
+8. Aanvullende QA- en vrijgaveafspraken
+Het huidige gereviewde acceptatiekader in Inzicht 02 omvat KI001 tot en met KI072; R1 en R2 zijn normatief. Toets daadwerkelijk in code, tests en menselijke pilot. Laat de test suite elke belangrijke deterministische regel, schoolisolatie, inhoudsstatus en docentgoedkeuring bewijzen. Geen screenshots als enige bewijs. Bij afwijkend contentversiebeheer meld dat en laat de mapping reviewen.
+Featureflag standaard uit in productie. Staging met synthetische school A en B, docent met gedeelde rollen, cursist met persoonlijke Klink-account plus schoolcontext, een geactiveerde en een voorlopige leerling, en een groep met 12 fictieve cursisten.
+Privacy-/juridische beoordeling, DPIA-screening, bewaartermijnen en verwerkingsovereenkomsten moeten expliciet door bevoegden zijn afgesloten vóór echte deelnemersdata. Geen juridisch akkoord claimen op basis van dit document.
+De eerste pilot mag met menselijke docenten plaatsvinden na veiligheids- en privacygate. Productielivegang vereist een apart akkoord.
+
+
+9. Ontwerpstatus van deze overdracht
+Google Drive: ontwerpdocumenten opgeschreven. GitHub: nog niet door deze opdracht geïnspecteerd. Implementatie: niet uitgevoerd in deze chat. Automatische adviesmotor: volledig ontworpen, niet actief. Klink+Docent: geheel behouden. WorkChat kan dit dossier gebruiken als een uitvoerbare bouwopdracht, mits toegang tot repository, cloudomgeving en Drive aanwezig is.
+
+
+
+
+REVIEWUPDATE R2 | ACTUEEL STARTPUNT VOOR WORKCHAT | 31 oktober 2026
+Deze sectie VERVOEGT en VERVANGT de historische STARTPROMPT onder §7. Lees het nieuwe reviewregister vóór enig codewerk.
+REVIEWREGISTER KLINK INZICHT 03:
+https://docs.google.com/document/d/16e_SP7lUXP6YeWXFyxkZBGh6xjHJvJi6F3BxTDD1G-g/edit
+Leesvolgorde: 00 (ook deze update) -> 03 REVIEW -> 01 (inclusief R1/R2-eindsecties) -> 02 (inclusief R1/R2-eindsecties) -> KLINK 2.0 01/02/03 -> Klink+Docent actuele index ALLEEN LEZEN -> repository audit.
+Normatieve prioriteit voor Klink Inzicht: nieuwste expliciete R2-vastlegging > R1-correcties > oorspronkelijke v1.0. Klink 2.0 v1.5 geeft bredere school/persoonlijke architectuur; productgrens Klink+Docent wordt niet gewijzigd. De werkelijk bestaande code staat alleen vast na repositoryinspectie. Alle KI001-KI072 gelden.
+
+
+STARTPROMPT v1.2 VOOR WORKCHAT - KOPIEER HELEMAAL:
+Bouw Klink Inzicht als geïntegreerde, afzonderlijk herkenbare module in de bestaande Klink-codebase. Projectmap: https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF .
+Lees de vier KLINK INZICHT-documenten 00, 03, 01 en 02 VOLLEDIG, ook de R1- en R2-reviewpatches achteraan. Lees vervolgens de KLINK 2.0 v1.5 schermarchitectuur, technische/juridische specificatie en pilotplan, en de actuele Klink+Docent-index alleen voor de productgrens en actuele releasebekendheid.
+HARD PRODUCTBESLUIT: Klink is voor individuele cursistenoefeningen; Klink+Docent blijft 100% ongewijzigd voor digibordlessen, werkbladen en materialen. Nieuwe observaties, klassen, vaardighedenmatrix, opdrachten, beperkingen, rapportages en lesadviezen horen uitsluitend bij Klink Inzicht. Gebruik bestaande gepubliceerde Klink/Klink+Docent-lesverwijzingen zonder hun inhoud te veranderen.
+Bouw geen AI in de productruntime, geen LLM, embeddings, machinelearning of generatieve lesinhoud. De knop 'Wat heeft mijn groep morgen nodig?' gebruikt door deskundigen gecontroleerde deterministische regels, geldige individuele leerbewijzen, observaties, context- en contentversies, en vraagt altijd docentgoedkeuring voor acties.
+Begin met WP0: inspecteer actuele repo 26buckets/taalroute-klink, authprovider, school/privécontext, routes, rollen, data, migraties, Workers/D1 of actuele stack, contentmanifest, actuele PR's en deployment. Oude Klink 2.0-documenten vermelden dat de repo mogelijk niet toegankelijk was; claim geen code die je niet werkelijk hebt geopend. Maak een gapmap met concrete bestaand/nieuw/risico/bestandslocatie en check welke D01-D12-functies al bestaan. Geen nieuwe parallelle schooldatabase.
+Implementatieordening: WP1 klassen/provisional schoolleerlingen en gecontroleerde accountkoppeling; WP2 snelle en uitgebreide observatie met provenance; WP3 skillcatalog/train-versus-measure/evidence/mastery/matrix; WP4 effectieve klasrestricties/individuele overrides/opdrachten; WP5 advisering op individueel+groepsniveau met meetdekking, expliciete lesdatum en evidence; WP6 testen, security, toegankelijkheid, privacy en pilot. Implementatie van iedere WP vereist echte code, migraties, geslaagde tests en verifieerbaar bewijs; geen UI-decoratie of documentclaim als bouwresultaat.
+KRITIEKE REVIEWFIXES: docent kan eigen voorlopige cursisten op naam toevoegen en observeren zonder bestaande accountinzage. Bestaande cursistprofielen pas na registrarrechten of bewezen invite koppelen. Multi-class leerstoftoegang is altijd contextueel en server-side; geen unie van permissies. TRAIN is geen individuele beheersing; beoordeel onafhankelijkheid/transfer/rubric. Alle observaties opslaan met traceerbare versie en asynchrone matrixstatus. Groepsadvies toont noemer en meetdekking; hele-klas-herhalingsregel minimaal 3 aandacht en 30% actieve klas plus voorlopige 60% meetdekking; bij minder dekking kleine groep en eerst meten. Geen onterechte ERK/certificeringsclaim. Content alleen Published en licensed. Voorkom data- en privacybugs via class/teacher/organization access checks, test alle high-impact abuse cases.
+Doe tests KI001 t/m KI072 uit Inzicht 02; toets met twee synthetische scholen, gedeelde identiteit, klassen met conflicterende policies, provisional profielen, dubbelen, incomplete meetdata, contentversies/HOLD en stale preview. Gebruik WCAG 2.2 AA als doel en valideer tablet/mobile/desktop met echte docenten. Werk code in reviewbranch/PR, maak niet zelfstandig merge of livepublicatie. Blokkeer verwerking van echte cursistgegevens tot privacy-DPIA/grondslag/retentie en verantwoordelijkheden schriftelijk zijn goedgekeurd.
+Lever per WP werkelijk gewijzigde bestandslocaties, werkende UI-routes, schema/migraties, testcommando's, uitgevoerde KI-tests met resultaat, P0/P1-openpunten, PR/commit, stagingindien echt, regressieresultaat Klink+Docent en go/no-go. Bewaar bewijs in dezelfde Drive-map. Het startpunt is Work WP0, niet productierelease.
+EINDE STARTPROMPT v1.2.
+
+
+STATUS NA TWEE REVIEWRONDEN:
+Review van geschreven specificaties: UITGEVOERD met correcties. Externe menselijke UX/NT2/toets-review: OPEN. Repository-/runtimeaudit: OPEN. DPIA en privacygate: OPEN. Klink Inzicht-code: NIET GEBOUWD in deze documenttaak. Dit zijn nooit impliciete GO-besluiten.

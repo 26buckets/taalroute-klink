@@ -1,0 +1,34 @@
+✔ KI001/002 class persists, rename conflict, archive preserves observations (21.449875ms)
+✔ KI003/004/061/062 provisional names persist separately and can be observed (3.481ms)
+✔ KI006/007/008/045/046 observations have revisions, invalidated provenance and no automatic mastery (3.406042ms)
+✔ KI011/012/013/014: unknown, one measure, independent transfer pair, same day (0.173708ms)
+✔ KI015/016/017: attention, recheck retains prior mastery, revoked event removed (0.096166ms)
+✔ KI010/024/044/066/067: group response, completion, repeated feedback and TRAIN cannot prove mastery (0.078125ms)
+✔ KI018: matrix drill-down contains the exact saved observation event (2.713459ms)
+✔ KI022/023/027/053: HOLD never appears, cannot be assigned, absent measure match is explicit (3.040916ms)
+✔ KI025/026/051/064/065: deterministic 60% coverage gate and honest denominators (0.601875ms)
+✔ KI028/050: stale evidence or role change rejects approval without assignment (7.122666ms)
+✔ KI029: reject and explicit approve never silently issue an assignment (6.620458ms)
+✔ KI030/031/034/040/048: tenant, class, admin, support and revoked teacher denied on reads and writes (3.00125ms)
+✔ KI032: logout revokes server session and all data responses are no-store (1.999833ms)
+✔ KI041: self-created class cannot harvest existing school users (2.488209ms)
+✔ KI042/063: invite is account-bound, single use; unlink preserves source and closes access (4.507209ms)
+✔ KI047: HTTP replay is one observation/event/outbox; different body on same key conflicts (2.271417ms)
+✔ KI049/068: tomorrow without timetable never claims a scheduled lesson (3.325542ms)
+✔ KI052: policy requires current impact preview and explicit confirmation (2.729833ms)
+✔ KI054/070: successful storage is distinct from idempotent mastery processing (3.765625ms)
+✔ KI069: SQL values remain data; spreadsheet formula export escaped (3.069208ms)
+✔ Trust boundary: production disabled, unauthenticated denied, CSRF denied, malformed values rejected (2.744209ms)
+✔ Database itself rejects cross-tenant enrollment and teacher references (1.606292ms)
+30x100 SQLite service: 3.4ms, no network, warm runtime; not a production SLO
+✔ KI035: 30 × 100 computed matrix, documented local synthetic timing (5.624083ms)
+✔ KI002/005/021 school attempts survive reads, reject altered assignment context and revoked policy (10.591083ms)
+✔ KI005/019/020/043: multiple classes, explicit context, individual override, registrar enrollment (6.257916ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 367.189333

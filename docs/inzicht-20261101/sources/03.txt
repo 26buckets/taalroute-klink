@@ -1,0 +1,127 @@
+﻿KLINK INZICHT | 03 Integrale expertreview, advocaat van de duivel en herreview
+Versie 1.2 | 31 oktober 2026 | Reviewregister en besluitlog | STATUS: DOCUMENTREVIEW AFGEROND, IMPLEMENTATIE/EXTERNE TOETSING OPEN.
+
+
+1. Opdracht, bronomvang en eerlijkheidsgrens
+Deze beoordeling betreft het Google Drive-bouwdossier Klink Inzicht 00, 01, 02 v1.0 van 31 oktober 2026 en de bestaande KLINK 2.0 architectuur, techniek en pilot v1.5. Klink+Docent productieregister is geraadpleegd als status- en afbakeningsbron. Er is een DESKREVIEW uitgevoerd vanuit meerdere deskundigheidslenzen, geen afzonderlijk onafhankelijke menselijke panelreview. Er is geen repository, live app, daadwerkelijke UI, toegankelijkheidstool, pentest, DPIA, docentgebruiker of cursist getest. 'PASS' betekent uitsluitend dat de geschreven eisen na verwerking logisch en traceerbaar zijn.
+Gebruikersbesluiten die ongewijzigd blijven: Klink voor cursist, Klink+Docent uitsluitend digibord/werkblad/lesmateriaal zonder wijzigingen, Klink Inzicht voor klassen/observaties/voortgang/toegang/opdrachten/regelgebaseerde adviezen. GEEN AI in productie. Menselijke docent houdt regie.
+
+
+2. Reviewmethodiek en perspectieven
+Ronde A: vakperspectieven (1) docent/taaldocent in echte les, (2) alfadidacticus/NT2, (3) toetsconstructeur en evidence validity, (4) UX interaction designer, (5) WCAG/accessibility specialist, (6) cursist met lage digitale geletterdheid, (7) schoolbeheerder, (8) security engineer/zero trust, (9) privacy- en AVG-perspectief, (10) data-architect, (11) backend/API-engineer, (12) DevOps/SRE, (13) contentredactie en release manager, (14) business/licensing/tenant admin, (15) human factors en verantwoord algoritmegebruik.
+Advocaat van de duivel: aannames systematisch proberen te laten falen door worst-case scenario's en conflicterende rechten/gegevens. Niet veronderstellen dat leerprestatie automatisch betrouwbare meting, dat licentiemenu een beveiligingsgrens, dat een klasnaam een geverifieerd account, dat een geschreven ontwerp een gebouwd product of dat 'geen AI' geen privacyrisico betekent.
+Ronde B: herziene 01/02 opnieuw gelezen op consistente productgrenzen, traceerbaar bewijs, rolbeveiliging, observatiesnelheid, multiklascontext, restricties, deterministische adviezen, foutscenario's, privacy/operaties. Daarop is REVIEWPATCH R2 toegepast. Laatste documentcontrole verifieert opname patches en actualiseert 00.
+Gradering: P0 blokkeert pilot/productie indien onopgelost in code of governance; P1 must fix vóór functionele acceptatie; P2 verbeteren voor of na beperkte pilot volgens risicobesluit. 'Opgelost in ontwerp' betekent niet gebouwd of gevalideerd.
+
+
+3. Ronde A: bevindingen en toegepaste correcties
+F01 P0 | Rechtentoename door een zelf aangemaakte klas. Scenario: docent koppelt willekeurige schoolgebruiker en leest dossier. Correctie R1-UX-05/R1-SEC-01: klasrecht geeft geen recht op willekeurige bestaande cursisten; registrar of verifieerbare invite en enrollment vereist. Ontwerpstatus GECORRIGEERD; API-test OPEN.
+F02 P0 | Leerstoftoegang van cursist met meerdere klassen. Scenario: permissies worden ten onrechte verenigd. Correctie R1-UX-06/R1-SEC-02: opdrachtclass is bepalend; vrij oefenen krijgt expliciete context, anders blokkeren. Ontwerp GECORRIGEERD; integratietest OPEN.
+F03 P1 | Onvoldoende docentwerkflow bij negen hoofdmodes. Correctie R1-UX-01/02: vijf primaire menu's en contextacties; volledige routekaart, panelen, infohiërarchie. Ontwerp GECORRIGEERD; echt UI-onderzoek OPEN.
+F04 P1 | Te veel velden in snelle observatie. Correctie R1-UX-02/R2-UX-02: prefill, snelle kernvelden, uitgebreide rubric conditioneel; status van save helder. Ontwerp GECORRIGEERD; docenttiming OPEN.
+F05 P1 | 'Extra aandacht' gedraagt zich als stigma/definitieve score. Correctie R1-DID-01/R2-UX-03: signaal los van status, neutrale taal, status verklaarbaar. Ontwerp GECORRIGEERD; didactische toets OPEN.
+F06 P1 | Twee meetdagen met dezelfde items leveren valse beheersing. Correctie R1-ASMT-01/R2-ASMT-01: TRAIN versus MEASURE, itemequivalentie, onafhankelijkheid, transfer, rubric review. Ontwerp GECORRIGEERD; instrumentvalidatie OPEN.
+F07 P0 | Dubbele submission/queue race laat matrix verkeerde status zien. Correctie R1-DATA-01 en R2-OPS-02: atomaire write+outbox, idempotente consumer, status processing, bewijs hash. Ontwerp GECORRIGEERD; systeemtest OPEN.
+F08 P0 | Schoolgegevens in exports/caches/background jobs lekken naar andere school. Correctie R1-DATA-02/R2-SEC-02: samengestelde tenantcontroles, brede BOLA/IDOR en threat-modeltests. Ontwerp GECORRIGEERD; pentest OPEN.
+F09 P0 | AVG- en DPIA-procedure vaag. Correctie R1-PRIV-01/R2-OPS-01: datamatrix en formele privacygate met grondslag, controller/processor, retentie, rechten en back-ups. Ontwerp GECORRIGEERD; juridische beoordeling OPEN.
+F10 P1 | Groepsadvies op onvoldoende dekking kan oneerlijk zijn. Correctie R1-RECO-01 en R2-RECO-01: noemers en meetdekking, later minimum dekking voor klassikaal advies. Ontwerp GECORRIGEERD; kalibratie OPEN.
+F11 P1 | 'Morgen' op zaterdag/roostervrije dag. Correctie R1-UX-04/R2-RECO-02: expliciete lesdatum en roosterbron, geen fictieve lesclaim. Ontwerp GECORRIGEERD; roosterintegratie OPEN.
+F12 P0 | Advies kan HOLD, onbestaande of ingetrokken les klaarzetten. Correctie R1-RECO-02/R1-TEST-01: verified published version, entitlement, stale-preview-check. Ontwerp GECORRIGEERD; contentcheck OPEN.
+F13 P1 | Rolconcurrentie tussen docenten/schoolbeheer en bestaande Klink 2.0 D01-D12. Correctie R1-SEC-01 en productgrens 01 §1: geen dubbele beheeromgeving, reuse modules, recheck rights on each request. Ontwerp GECORRIGEERD; repo-audit OPEN.
+F14 P1 | Ontbrekende operationele metrics en herstel. Correctie R1-OPS-01: monitor, alerts, backup restore, rollback, geen ongestaafde SLO. Ontwerp GECORRIGEERD; bewijs OPEN.
+F15 P1 | WCAG in algemene woorden zonder testbare matrix. Correctie R1-UX-03: testviewports, keyboard, focus, responsive matrix, compactere targets. Ontwerp GECORRIGEERD; handmatige/a11y-tooltest OPEN.
+F16 P1 | AVG en observaties kunnen overmatig persoonsgegevens opslaan. Correctie R1-UX-07, R1-PRIV-01: taakgericht noteren, beperk vrije tekst en exports, correctiepad. Ontwerp GECORRIGEERD; privacyverantwoordelijke OPEN.
+
+
+4. Advocaat van de duivel: aanvalsscenario's
+D01 'Ik ben docent, dus ik maak een lege klas, voeg die leerling toe en lees diens dossier.' Blokkeer via onafhankelijke enrollment-authorisatie. Maar sta voorlopig eigen leerlingen met nieuwe ID en geen bestaande dossierinzage toe.
+D02 'Ik zet leerling in twee klassen: Alfa A beperkt, Alfa B vrij; via de andere klas zie ik alles.' Onderdruk onbedoelde unie; bind oefenrequest aan geldige specifieke schoolklas/opdracht.
+D03 'Ik laat dezelfde vijf vragen twee dagen maken en claim beheersing.' Test item-equivalentie, feedback en onafhankelijke transfer; model moet TRAIN en MEASURE scheiden.
+D04 'We hebben slechts vier leerlingen gemeten, drie maken fouten, dus de hele klas is zwak.' Toon 4/12 meetdekking, klein groepje én diagnostiek voor ongemeten anderen; niet stigmatiseren.
+D05 'De docent verwijdert b/d toegang terwijl actieve opdrachten lopen.' Toon impact en expliciete keuze, pas toekomsttoegang gecontroleerd aan, behoud bewijs.
+D06 'Een observatie is opgeslagen, maar status verwerkt pas later; docent denkt dat alles al is bijgewerkt.' Toon opgeslagen versus wachten op nieuwe status, outbox retries.
+D07 'Ik voeg een andere account samen op dezelfde naam, oud bewijs verhuisd naar verkeerde persoon.' Nooit automatisch mergen; peer-review van koppeling, rollback en audit.
+D08 'Ik verander lesversie van gepubliceerd naar HOLD na adviespreview.' Goedkeuring revalideert status/licentie/version; stale preview geweigerd.
+D09 'In vrije notitie staat HTML/CSV formule of medische details.' Encode, sanitize/export escaping, data-minimalization, correctie en privacyprocedure.
+D10 'We hebben geen AI, dus privacy is geregeld.' Onjuist: regelgebaseerde systematische profilering kan nog privacyrisico meebrengen; DPIA juridisch beoordelen vóór pilot.
+D11 'De schermen staan in Drive dus het product bestaat.' Onjuist: onderscheid ontwerp, PR, staging, pilot, live.
+D12 'Het advies is deterministic, dus per definitie didactisch juist.' Onjuist: criteria vragen deskundigenvalidatie en evaluatie van bias, foutpositieven en foutnegatieven.
+
+
+5. Ronde B: herreview van gecorrigeerd ontwerp, nieuwe verbeteringen
+B01 P1 | De regel om willekeurige schoolleerlingkoppeling te blokkeren kan de wens van docent om namen onmiddellijk op te slaan saboteren. Oplossing R2-UX-01/R2-SEC-01: voorlopige schoolleerling op naam maken en observeren binnen eigen klas, zonder toegang bestaande user; later geverifieerde koppeling en audit.
+B02 P1 | Topnavigatie met 'Meer' mag Observeren niet verstoppen. Oplossing R2-UX-02: zichtbare directe knop Vandaag/klas/cursist en voorinvullen.
+B03 P1 | Matrixsignaal 'Extra aandacht' verhult onderliggende onzekerheid. Oplossing R2-UX-03: tweedimensionaal model met toelichtingspaneel, noemer en recheck.
+B04 P1 | Dekking nog onvoldoende expliciet bij drempel drie cursisten én 30%. Oplossing R2-RECO-01: voorlopige minimum 60% recente meetdekking voor HELE-KLAS-aanbeveling; bij lage dekking kleine ondersteuningsgroep en diagnostiek.
+B05 P1 | Voorlopige leerlingobservatie en latere accountkoppeling missen migratie-/rollbackprotocol. Oplossing R2-SEC-01: provenance bewaren, conflict-review, rollback, geen automatische datadeling.
+B06 P0 | Technisch threat model mist XSS, CSV injection, invites/replay en supportmisbruik. Oplossing R2-SEC-02 en 12 nieuwe KI-tests.
+B07 P0 | Verwijderbaarheid van snapshots, exports en backups onvoldoende gespecificeerd. Oplossing R2-OPS-01: per datatype retentiematrix met controller, bewaarbasis, verwijderstrategie en owner; juridisch besluit nog OPEN.
+B08 P1 | 'Prestatie' kan nog per ongeluk ERK-certificeringsclaim worden. Oplossing R2-GOV-01: gewone leerstatus strikt gescheiden van officiële bewijsuitgifte/leerpaspoort.
+B09 P1 | WorkChat-implementatie kan regels overschrijven zonder revisiebeheer. Oplossing R2-GOV-02: change log met besluit, affected schema, owner, PR, reviewgate.
+B10 P1 | Werkelijke UI, schermovergangen en taaktesten zijn nog niet getoetst. Oplossing R2-UX-04/06: klikpadmatrix en echte docentreview met desktop/tablet/mobiel, zoom/screenreader.
+B11 P1 | Onbekende lesson schedule leidt fictieve 'morgenles'. Oplossing R2-RECO-02: target_date + schedule_source enum en docentkiezer.
+B12 P1 | Eventual consistency geeft te optimistische UI. Oplossing R2-OPS-02: state 'Saved, mastery pending', metrics en audit.
+
+
+6. Tweede-ronde uitkomst per view
+Productgrens Klink / Klink+Docent / Inzicht: CONSISTENT OP DOCUMENTNIVEAU; bestaande code en release-status controleren.
+Docentflow en efficiëntie: CONSISTENT na voorlopige-leerlingcorrectie; echte taaktest OPEN.
+Cursist en begrijpelijke interface: CONSISTENT als ontwerp; gebruikerstest alfa OPEN.
+Didactiek Alfa/NT2: VOORWAARDELIJK; taxonomie, validiteit, normen en skill/item mapping moeten vakinhoudelijk bevestigd.
+Toetskwaliteit: VOORWAARDELIJK; twee meetmomenten alleen met onafhankelijke transfer; psychometrische/didactische review OPEN.
+UX/UI: CONSISTENT op tekstniveau, GEEN grafische of echte code-review uitgevoerd.
+WCAG: SPECIFICATIE VERBETERD, niet getest.
+API / datamodel: LOGISCH UITGEWERKT, actuele repository/database-onbekend.
+Security tenant/auth: P0-afdekking in document, implementatie/pentest OPEN.
+Privacy/AVG: PRE-PILOT NO GO zolang DPIA, controller-rollen, grondslagen en retentie niet ondertekend.
+Ops / SRE: incident/backup/metrics ontworpen, herstelproef OPEN.
+Content: published-only, versioning, Klink+Docent onveranderd ontworpen; actuele content-publicatiestatus OPEN.
+Licenties en opdrachten: routepolicy en assignmentcontext ontworpen, stagingcontrole OPEN.
+Adviezen zonder AI: deterministisch ontwerp GO voor implementatie, onderwijskundige kalibratie OPEN.
+Voor alle views geldt: bovenstaande perspectieven zijn analytische toetslenzen, geen door externe deskundigen afgegeven keurmerken.
+
+
+7. Toegepaste wijzigingslocaties
+Google Doc KLINK INZICHT 01: REVIEWPATCH R1 (UX-01 t/m UX-08, DID-01) en REVIEWPATCH R2 (UX-01 t/m UX-06). De nieuwe paragrafen zijn normatief en boven oude abstracte beschrijvingen geplaatst qua besluitrang.
+Google Doc KLINK INZICHT 02: REVIEWPATCH R1 (SEC-01/02/03, ASMT-01/02, DATA-01/02, PRIV-01, OPS-01, RECO-01/02, TEST-01) plus REVIEWPATCH R2 (SEC-01/02, ASMT-01, RECO-01/02, OPS-01/02, GOV-01/02, TEST-01). De testmatrix is uitgebreid van KI001-KI040 naar KI001-KI072.
+Google Doc KLINK INZICHT 00: geactualiseerde leesvolgorde, reviewversie en WorkChat-prompt om uitsluitend v1.2 als normatief te gebruiken.
+Historische v1.0-tekst blijft herkenbaar aanwezig om ontwerpbesluiten te kunnen traceren. Voor nieuwe implementatie gelden per onderwerp R2 > R1 > v1.0. Bestaande Klink 2.0-domeinen blijven leidend tenzij expliciet door dit nieuwe Inzicht-besluit overruled; Klink+Docent-bronnen nooit direct wijzigen.
+
+
+8. Besluitregister (samenvatting)
+B-101: Werk met voorlopige schoolprofielen op naam en scheid koppeling aan bestaand account.
+B-102: Alleen bevestigde bevoegde class-enrollment geeft leesrecht op bestaand dossier.
+B-103: Expliciete klascontext bepaalt opdracht- en vrij-oefenrechten.
+B-104: Observatie heeft een snelle en uitgebreide modaliteit, bewijscriteria los van notities.
+B-105: Matrix toont bewijs, onzekerheid, aandachtssignaal en meetdekking.
+B-106: Volledig zonder AI bij runtime; AI van WorkChat bij het bouwen is een ontwikkelhulpmiddel en verandert producteis niet.
+B-107: Klassikale adviezen vereisen ten minste voorlopig 3 cursisten, 30% actieve klas, én 60% recente meetdekking; onvoldoende dekking -> diagnostiek/small group. Norm nog didactisch valideren.
+B-108: Nooit automatisch opdrachten, toegangsrechten of routewijzigingen uitvoeren na een preview.
+B-109: Cross-tenant, accountlinking, invite tokens, scripts in notities en exports zijn security P0.
+B-110: Geen live persoonsgegevens vóór DPIA/AVG-verwerkingsmatrix en expliciete bevoegd akkoord.
+B-111: Klink+Docent blijft ongewijzigd, alleen gepubliceerde leslinks beschikbaar.
+B-112: Normatieve volgorde voor WorkChat: laatste expliciete Inzicht R2 > R1 > v1.0; huidige repo bepaalt bestaande code.
+B-113: Alle KI001-KI072 vormen het reviewbare acceptatiekader; geen test uitgevoerd door documentreview.
+
+
+9. Open blokkades en eigenaars
+O01 P0 technisch: repo-toegang, authenticatie, migraties, huidige routes en release-status inspecteren. Eigenaar WorkChat/technisch beheer. Geen merge/live zonder.
+O02 P0 privacy: controller/processor/grondslagen, DPIA, retentie, werkelijke data-exports, beroep/bezwaar en bewaarbeleid. Eigenaar schoolcontroller + privacyfunctionaris/juridisch reviewer.
+O03 P0 security: aanvallen op accounts, groepen, cross-tenant API, exports, staged role changes, tokens en cache. Eigenaar security/tech lead.
+O04 P1 didactiek: skills, rubric/meetvaliditeit, 80%/5 pilotnorm en 60% coverage groepsadvies kalibreren. Eigenaar NT2/alfadidacticus + toetsdeskundige.
+O05 P1 UX: echte klikprototypes, keyboard/screenreader, 2 docenten, alfa-cursisttest, praktijkmeting. Eigenaar UX/onderwijsbegeleider.
+O06 P1 engineering: event-outbox, idempotentie, rollback, backups, restoretest, monitoring en versioning. Eigenaar architect/SRE.
+O07 P0 content: alleen werkelijk Published, rechten+media geverifieerd, geen HOLD. Eigenaar Taalroute contentlead.
+O08 P1 governance: voldoende schoollicenties, teacher assignment policy, contentrecht, supportproces. Eigenaar platform-/schoolbeheer.
+Geen van deze open poorten kan door tekstuele expertise worden weggeredeneerd.
+
+
+10. Externe normbronnen, ter toetsing
+W3C WCAG 2.2: https://www.w3.org/TR/WCAG22/
+Autoriteit Persoonsgegevens DPIA: https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/europese-privacywetgeving/data-protection-impact-assessment-dpia
+Europese Commissie DPIA-verplichtingen: https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/obligations_en
+Deze bronnen zijn een kader, geen juridische goedkeuring van Klink Inzicht.
+
+
+11. Eindevaluatie
+Documentreview Ronde A en Ronde B: UITGEVOERD en wijzigingen in v1.2 van Inzicht 01/02/00 opgenomen. Productconcept is intern consistent genoeg voor WorkChat-discovery en implementatievoorbereiding. ONGESCHIKT om nu als productieklaar of juridisch goedgekeurd te bestempelen. De volgende fase is een verifieerbare WP0 repo-/UI-/schema-audit en daarna gefaseerde codebouw met KI001-KI072 als testreferentie.
