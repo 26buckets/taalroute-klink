@@ -504,3 +504,14 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
 .cp-learner-info-tip { padding: 16px; background: var(--canvas); border-left: 3px solid var(--primary); }
 .cp-learner-info-return { min-height: 44px; justify-self: start; padding: 8px 12px; font-size: 16px; font-weight: 400; }
 @media (max-width: 480px) { .cp-learner-info[data-slot="dialog-content"] { padding: 16px; gap: 16px; } }
+
+/* The goal and the instructions share the existing info dialog. */
+.learner-app .cp-exercise-info-heading { display: flex; align-items: center; gap: 12px; }
+.learner-app .cp-content-info-button { flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
+.cp-learner-info[data-slot="dialog-content"] { grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; gap: 16px; }
+.cp-learner-info-body { display: grid; gap: 16px; min-height: 0; overflow-y: auto; }
+.cp-learning-goal-labels { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.cp-learning-goal-labels span { padding: 3px 8px; border-radius: 4px; background: var(--goal-background); color: var(--goal-foreground); font-size: 14px; font-weight: 500; line-height: 1.4; }
+
+.cp-exercise-info-heading > .cp-content-info-button { display: none; }
+.learner-app .cp-exercise-info-heading > .cp-content-info-button { display: inline-flex; }

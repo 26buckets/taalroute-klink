@@ -1,3 +1,4 @@
+import{verifyLearningGoalsRelease,readBeforeLearningGoals}from'./check-learning-goals-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -7,11 +8,12 @@ const folder='docs/opening-loader-20261101/',floor='docs/appearance-floor-202610
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyOpeningLoaderRelease(read=readFileSync){
+ const successor=verifyLearningGoalsRelease(read),currentRead=read;read=file=>readBeforeLearningGoals(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-opening-loader-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceChangeApproved);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);
  assert.equal(r.userRequest,'Ja, deze is goed. Zet deze loader nu in Klink op de plek van ‘Klink wordt geopend…’. Houd de rest van de vormgeving en alle bestaande functies hetzelfde.');
  git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,sort([...r.changedFiles,floor,r.approval]));assert.deepEqual(sort(Object.keys(r.files)),r.changedFiles);
  for(const[f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);
  const runtime=changed.filter(f=>/^(app|components|hooks|data|lib|public|db|drizzle)\//.test(f));
@@ -28,6 +30,6 @@ export function verifyOpeningLoaderRelease(read=readFileSync){
  const proof=json(folder+'verification.json');for(const k of['types','lint','teacherRecovery','teacherPrivacy','approvedAssetsUnchanged','runtimeScopeExact','appearanceCompared','contentMediaAndStorageUnchanged','localOnly'])assert.equal(proof[k],true,k);
  for(const[f,h]of Object.entries(r.evidenceFiles))assert.equal(sha(read(f)),h,f);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return r;
+ return {...r,successor};
 }
-export function readBeforeOpeningLoader(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):read(file);}
+export function readBeforeOpeningLoader(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):readBeforeLearningGoals(file,r.successor,read);}
