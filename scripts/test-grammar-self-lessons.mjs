@@ -22,8 +22,8 @@ void test('Grammar starts independently at its authored levels, with honest read
    }
   }
  }
- // No invented Alfa/B1 content or relabelling of A1 sentences as early reading.
- for(const level of ['alfa-a','alfa-b','alfa-c','b1'])assert.equal(availableChapterActivities('grammar',{level,help:'practice'}).length,0);
+ // New local exercises have explicit placement; existing A1/A2 sources retain their level.
+ for(const level of ['alfa-a','alfa-b','alfa-c','b1'])assert(availableChapterActivities('grammar',{level,help:'practice'}).includes('grammar-path'));
 });
 void test('All 16 existing grammar choices can be checked without teacher preparation; open work stays optional and unscored',()=>{
  const choices=importedItems.filter(i=>i.domain==='grammatica'&&i.mode==='choice');assert.equal(choices.length,16);
@@ -36,7 +36,7 @@ void test('Lesson route filters the exact lesson and selected language; complete
  for(const activity of ['grammar-path','sentence-build','verb-choice']) {
   const settings={...defaultRouteSettings,language:'a2'};
   const c=chapterCollections(activity).find(c=>c.level==='a2' && c.pack.lessons.some(l=>selectUsageExercises(groupExercises(c.pack,activity),c.pack,l,settings,'independent').length));assert(c);
-  const all=groupExercises(c.pack,activity),lesson=c.pack.lessons.find(l=>selectUsageExercises(all,c.pack,l,settings,'independent').length);
+  const all=groupExercises(c.pack,activity).filter(e=>!e.localGrammar),lesson=c.pack.lessons.find(l=>selectUsageExercises(all,c.pack,l,settings,'independent').length);
   const chosen=selectUsageExercises(all,c.pack,lesson,settings,'independent');assert(chosen.length);
   assert(activity === 'grammar-path' ? chosen.some(e=>e.sourceLessonIds.includes(lesson.id)) : chosen.every(e=>e.sourceLessonIds.includes(lesson.id)));
   if(activity === 'grammar-path')for(const id of new Set(chosen.map(e=>e.learningPathId)))assert.deepEqual(chosen.filter(e=>e.learningPathId===id),all.filter(e=>e.learningPathId===id));

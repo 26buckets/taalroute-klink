@@ -14,6 +14,7 @@ export function StandardPracticeSurface(props: Props) {
   const task = props.exercise.standardTask as StandardTask | undefined;
   if (!task || !validStandardTask(task)) return <section className="cp-task-card"><p>Deze oefening werkt nog niet. Kies met je docent een andere oefening.</p></section>;
   return <section className="cp-task-card cp-standard-task" data-standard-player={task.kind}>
+    {task.kind === 'gap' && props.exercise.prompt?.audio?.src && <ExerciseListen label="Luister naar de zin" onClick={() => props.onAudio(props.exercise.prompt?.audio?.src)} />}
     {typeof props.exercise.question === 'string' && task.kind === 'mark' && <h4>{props.exercise.question}</h4>}
     {task.kind === 'sort' && <SortSurface {...props} task={task} />}
     {task.kind === 'mark' && <MarkSurface {...props} task={task} />}
@@ -74,7 +75,7 @@ function MarkSurface({ task, exercise, onAudio, onFinish, onReset, onHelp, canAn
   </>;
 }
 function GapSurface({ task, exercise, onAudio, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: TaskProps<GapTask>) {
-  const [mode, setMode] = useState<'type' | 'choice'>('type');
+  const [mode, setMode] = useState<'type' | 'choice'>(exercise.preferChoice === true ? 'choice' : 'type');
   const [value, setValue] = useState('');
   const [model, setModel] = useState(false);
   const correct = (answer: string) => task.acceptedAnswers.some(allowed => normalizeAnswer(allowed) === normalizeAnswer(answer));

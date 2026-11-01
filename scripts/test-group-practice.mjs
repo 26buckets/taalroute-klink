@@ -1,3 +1,4 @@
+import {localGrammarExercises} from '../lib/local-grammar-lessons.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
@@ -29,7 +30,10 @@ test('Whole word groups feed the exercise library, without changing the curricul
       assert.equal(new Set(exercises.map(e => e.exerciseId)).size, exercises.length, `${pack.id}/${activity.id}: unique IDs`);
       assert.deepEqual(groupExercises(pack, activity.id), exercises, 'Stable order for retry and resume');
       for (const item of exercises) {
-        if (item.componentId === 'KLINK-CONTENT') {
+        if (item.localGrammar === true) {
+          assert.deepEqual(item, localGrammarExercises.find(row=>row.exerciseId===item.exerciseId));
+          assert.equal(item.packId,pack.id);assert.equal(item.localOnly,true);
+        } else if (item.componentId === 'KLINK-CONTENT') {
           const source = importedItems.find(source => `content:${source.id}` === item.exerciseId);
           assert(source && importedMatchesPack(source, pack), 'Imported content must be admitted and linked to this list');
           assert.deepEqual(item, importedExercise(source), 'The reviewed task must remain unchanged');

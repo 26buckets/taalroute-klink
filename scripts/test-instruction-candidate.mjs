@@ -32,3 +32,7 @@ void test('The grammar lesson extension is local-only and rejects altered source
   assert.throws(()=>verifyInstructionCandidate(f=>f===file?Buffer.concat([readFileSync(f),Buffer.from('changed')]):readFileSync(f)));
  }
 });
+void test('Alfa/B1 original local content cannot authorize production or weaken previous source protection',()=>{
+ const proof=verifyInstructionCandidate();assert.equal(proof.alfaExtension.productionBatch,false);assert.equal(proof.alfaExtension.publicationApproved,false);
+ for(const file of ['docs/grammar-alfa-b1-20261101/scope.json','data/klink-grammar-self-local.json','lib/local-grammar-lessons.ts'])assert.throws(()=>verifyInstructionCandidate(f=>f===file?Buffer.concat([readFileSync(f),Buffer.from('changed')]):readFileSync(f)));
+});

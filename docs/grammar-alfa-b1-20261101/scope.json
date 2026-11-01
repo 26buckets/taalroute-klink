@@ -1,0 +1,57 @@
+{
+  "baselineSourceCommit": "6b43af6ba6e42c7d5f50040db2971b127a832c48",
+  "approvedBy": "Nico",
+  "userRequest": "Goed, werk nu ook de zelfstandige grammaticaoefeningen voor Alfa A, B, C en B1 uit en koppel ze aan de lessen. Behoud de opmaak en aanklikbare woordaudio. Test alles lokaal. Nog geen productiebatches maken, importeren of publiceren.",
+  "localOnly": true,
+  "publicationApproved": false,
+  "productionBatch": false,
+  "files": {
+    "components/product/package-experience.tsx": {
+      "before": "92b58e8adae309a2ee427c85891ea32ef25c156284d7ee4ec07ef4575a58ceeb",
+      "after": "58e1f3484cd2f1aa970294a8f76cd9cfb96b6f853c8404d336995bc662d74089"
+    },
+    "components/product/standard-practice-surface.tsx": {
+      "before": "c229de9fbd2ab63bfacffba4aa9965c306125d6c34869d99f3b0f732d242f8fa",
+      "after": "f61c223c9b9f79d87e316813e50e1750a9db89f3026f23ab486610202af7717a"
+    },
+    "data/klink-grammar-self-local.json": {
+      "before": null,
+      "after": "528794bf12aa3890ae5d87edcd0e50ca4c207cfb55a18f9ed3df9454ec530153"
+    },
+    "data/klink-word-library-index.json": {
+      "before": "f8963d179993a74f562fa4be582426cff26740cde2b30b13be6d4ca6beafbe90",
+      "after": "7fced165e547436d253a9829a60cb580d9ca48976e3f992819ac7a7223aa2b9a"
+    },
+    "lib/content-levels.ts": {
+      "before": "c0ea6635962e2334ffdbcf19fcbba3500e451422f937dcc2ebb20f61e82bf50f",
+      "after": "7321b1db89c8f8063cf1a3503b433769b726706106a663ce2f4b649215ddcc1a"
+    },
+    "lib/group-practice.ts": {
+      "before": "e1d3efccf51e789db5e5f2c4fe1f9c3b3535451a812dc1881645e687892de16b",
+      "after": "69f7838cd669cf4552bfe4d9269c09dbac041b2b75cc97bb3d84d79f20f27f77"
+    },
+    "lib/learner-route.ts": {
+      "before": "8ea7644e61f0514be2528cd109f0c2a4f396627c222617b4050403fb744bae5a",
+      "after": "ea057712a30d3bbd83882ba15390de0b2440db89fe70ddfa1a9ce3864b661da4"
+    },
+    "lib/local-grammar-lessons.ts": {
+      "before": null,
+      "after": "fe49ae84ebcd2a7f5aec4c15dce0e890661ddf162831a842184682524a8bfe2e"
+    },
+    "lib/package-content.ts": {
+      "before": "96f708f35244c615246d43a9cf1e3587216d553ec4bdf173eecbc63015876712",
+      "after": "21d60fd7777fb7e07573e55d133f886cad463ee131c1880d7de946af6dc176d7"
+    }
+  },
+  "releaseFiles": [
+    "components/product/package-experience.tsx",
+    "components/product/standard-practice-surface.tsx",
+    "data/klink-grammar-self-local.json",
+    "data/klink-word-library-index.json",
+    "lib/content-levels.ts",
+    "lib/group-practice.ts",
+    "lib/learner-route.ts",
+    "lib/local-grammar-lessons.ts",
+    "lib/package-content.ts"
+  ]
+}

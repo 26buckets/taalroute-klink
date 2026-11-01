@@ -33,9 +33,9 @@ for(const [engineName,engine] of Object.entries({chromium,webkit})){
  if(engineName==='chromium')for(const width of [1366,390])for(const theme of ['light','dark']){
   const shots=[];
   for(const url of [reference,base]){
-   const page=await browser.newPage({viewport:{width,height:950},colorScheme:theme});await configure(page,theme);await page.goto(url+'/#learner/home');await page.locator('.cp-home').waitFor();await page.evaluate(()=>document.fonts.ready);shots.push(await page.screenshot({animations:'disabled'}));await page.close();
+   const page=await browser.newPage({viewport:{width,height:950},colorScheme:theme});await configure(page,theme);await page.goto(url+'/#learner/chapters?level=b1&help=guided');await page.locator('.cp-home').waitFor();await page.waitForFunction(()=>!document.querySelector('.cp-opening-loader'));await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));shots.push(await page.screenshot({animations:'disabled'}));await page.close();
   }
-  const [a,b]=await Promise.all(shots.map(x=>sharp(x).raw().toBuffer()));assert(a.equals(b),`Home changed ${width} ${theme}`);comparisons.push({screen:'Start',width,theme,pixelIdentical:true});
+  const [a,b]=await Promise.all(shots.map(x=>sharp(x).raw().toBuffer()));assert(a.equals(b),`Home changed ${width} ${theme}`);comparisons.push({screen:'Start',level:'b1',help:'guided',width,theme,pixelIdentical:true});
  }
  }finally{await browser.close();writeFileSync(out+'/browser.json',JSON.stringify({results,comparisons},null,2));}
 }

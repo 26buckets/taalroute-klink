@@ -34,7 +34,7 @@ export function lessonWordIds(pack: PackageDefinition, lesson?: PackageLesson) {
   return lesson ? [...new Set([...(lesson.known ?? []), ...(lesson.newWords ?? []), ...(lesson.returning ?? []), ...pack.words.filter(word => lesson.words.includes(word.word)).map(word => word.id)])] : pack.words.map(word => word.id);
 }
 export function lessonContentLevel(pack: PackageDefinition, lesson: PackageLesson): ContentLevel {
-  return wordContentLevel(lessonWordIds(pack, lesson));
+  return pack.status === 'local-proposal' ? exerciseSetLevel(pack.exercises.filter(item => item.lessonId === lesson.id)) : wordContentLevel(lessonWordIds(pack, lesson));
 }
 export function scopeWordExercises(exercises: PackageExercise[], ids?: string[]) {
   if (!ids) return exercises;
@@ -63,12 +63,19 @@ export function selectUsageExercises(exercises: PackageExercise[], pack: Package
     const key = typeof item.learningPathId === 'string' ? `path:${item.learningPathId}` : item.groupActivity === 'word-sentence' ? 'word-sentence' : item.exerciseId;
     const group = groups.get(key) ?? []; group.push(item); groups.set(key, group);
   }
+  const grammarLevel = settings.language !== 'all' ? settings.language : settings.literacy;
   const allowed = new Set([...groups.values()].filter(group => {
+    if (group.every(item => item.localGrammar === true)) {
+      const linked = group.every(item => item.packId === pack.id && (!lesson || item.lessonId === lesson.id));
+      const selected = grammarLevel === 'all' || group.every(item => item.contentLevel === grammarLevel);
+      return linked && readiness === (selected ? 'independent' : 'later');
+    }
     if (group.every(item => item.componentId === 'KLINK-CONTENT')) {
       const linked = !lesson || group.every(item => Array.isArray(item.sourceLessonIds) && item.sourceLessonIds.includes(lesson.id) || Array.isArray(item.targetWordIds) && item.targetWordIds.length > 0 && item.targetWordIds.every(id => lessonWordIds(pack, lesson).includes(String(id))) || Array.isArray(item.sourceContentIds) && item.sourceContentIds.some(id => pack.exercises.some(source => source.contextId === id && source.lessonId === lesson.id)));
       const selected = group.every(item => settings[item.contentAxis as 'literacy'|'language'] === 'all' || settings[item.contentAxis as 'literacy'|'language'] === item.contentLevel);
       return linked && (selected ? readiness === (group.every(item => item.access === 'self-practice') ? 'independent' : 'guided') : readiness === 'later');
     }
+    if (group.every(item => item.learningActivity === 'grammar-path' && item.access === 'self-practice') && grammarLevel !== 'all' && exerciseSetLevel(group) !== grammarLevel) return false;
     const contexts = group.filter(item => typeof item.contextId === 'string');
     if (!contexts.length) return readiness === 'later' && !lesson;
     const linked = (item: PackageExercise) => !lesson || item.lessonId === lesson.id || (Array.isArray(item.sourceLessonIds) && item.sourceLessonIds.includes(lesson.id));

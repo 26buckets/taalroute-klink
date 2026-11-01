@@ -1,3 +1,4 @@
+import { grammarLessonProposal } from './local-grammar-lessons.ts';
 import { taalroutePackages, primaryWordCards } from './taalroute-packages.ts';
 import lexiconWordBuild from '../data/klink-lexicon-wordbuild-20.json' with { type: 'json' };
 import lexiconRest from '../data/klink-lexicon-wordbuild-rest.json' with { type: 'json' };
@@ -163,8 +164,8 @@ const additionalPackages = ([lexiconWordBuild, ...lexiconRest.packs] as PackageD
   const voiced = new Set(words.filter(word => word.audio).map(word => `${word.id}:word-audio`));
   return { ...pack, words, counts: { ...pack.counts, images, audio }, media: { ...pack.media, imageAvailable: images, imageExpected: Math.max(pack.media.imageExpected, images), audioAvailable: audio, missing: pack.media.missing.filter(item => !voiced.has(item)), audioReview: 'Woordaudio beschikbaar; menselijke uitspraakreview staat open.' } };
 });
-export const lessonPackages: PackageDefinition[] = taalroutePackages;
-export const contentPackages: PackageDefinition[] = [...taalroutePackages, ...additionalPackages];
+export const lessonPackages: PackageDefinition[] = [...taalroutePackages, grammarLessonProposal];
+export const contentPackages: PackageDefinition[] = [...taalroutePackages, ...additionalPackages, grammarLessonProposal];
 
 export function getPackage(packageId: PackageId) {
   return contentPackages.find((item) => item.id === packageId || item.aliases?.includes(packageId)) ?? contentPackages[0];

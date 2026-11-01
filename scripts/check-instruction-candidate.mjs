@@ -20,7 +20,19 @@ function grammarBefore(file,scope){
  const record=scope.files[file];
  return record?.before ? git('show',scope.baselineSourceCommit+':'+file) : undefined;
 }
+const alfaScopeFile='docs/grammar-alfa-b1-20261101/scope.json';
+const alfaScopeHash='bfb03db9da8d5c5cb0cd47f32f1fe5083e56fea1fe572e5f3f549f2a2d785bd0';
 export function verifyInstructionCandidate(read=readFileSync){
+ const currentRead=read,alfaBytes=read(alfaScopeFile);
+ assert.equal(sha(alfaBytes),alfaScopeHash,'Only the authorized Alfa/B1 local rehearsal is allowed');
+ const alfa=JSON.parse(alfaBytes);
+ assert.equal(alfa.localOnly,true);assert.equal(alfa.publicationApproved,false);assert.equal(alfa.productionBatch,false);
+ git('merge-base','--is-ancestor',alfa.baselineSourceCommit,'HEAD');
+ for(const[file,record]of Object.entries(alfa.files)){
+  assert.equal(sha(read(file)),record.after,file);
+  if(record.before)assert.equal(sha(grammarBefore(file,alfa)),record.before,file);
+ }
+ read=file=>alfa.files[file]?.before?grammarBefore(file,alfa):currentRead(file);
  const originalRead=read;
  const scopeBytes=read(grammarScopeFile);assert.equal(sha(scopeBytes),grammarScopeHash,'Only the reviewed local grammar integration is allowed');
  const grammar=JSON.parse(scopeBytes);
@@ -37,7 +49,7 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(r.userRequest,'Voeg deze correcties samen met de nieuwste livebasis en los de resterende testafwijkingen en vrijgavepunten veilig op. Behoud deze opmaak, test alles lokaal en publiceer nog niets.');
  git('merge-base','--is-ancestor',base,'HEAD');
  const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
- assert.deepEqual(changed,sort([...new Set([...Object.keys(r.files),...grammar.releaseFiles])]),'Every changed or untracked release file must be accounted for');
+ assert.deepEqual(changed,sort([...new Set([...Object.keys(r.files),...grammar.releaseFiles,...alfa.releaseFiles])]),'Every changed or untracked release file must be accounted for');
  const instructionChanges=Object.keys(r.files);
  for(const [file,hash]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),hash,file);
  const oldScope='docs/instruction-local-20261101/scope.json';
@@ -63,8 +75,8 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(periods,2);
  for(const[file,data]of restored)assert.deepEqual(data,JSON.parse(instructionBaseline(file)),'All other source fields remain unchanged: '+file);
  for(const f of JSON.parse(read('docs/instruction-local-20261101/scope.json')).files.filter(f=>f.path.endsWith('.pdf')))assert.equal(sha(read(f.path)),f.afterSha256);
- return {...r,grammarExtension:grammar};
+ return {...r,grammarExtension:grammar,alfaExtension:alfa};
 }
 export function readBeforeInstructionCandidate(file,proof,read=readFileSync){
- return proof&&Object.hasOwn(proof.files,file)?instructionBaseline(file):proof?.grammarExtension?.files[file]?.before?grammarBefore(file,proof.grammarExtension):read(file);
+ return proof&&Object.hasOwn(proof.files,file)?instructionBaseline(file):proof?.grammarExtension?.files[file]?.before?grammarBefore(file,proof.grammarExtension):proof?.alfaExtension?.files[file]?.before?grammarBefore(file,proof.alfaExtension):read(file);
 }

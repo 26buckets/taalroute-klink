@@ -1,3 +1,4 @@
+import {localGrammarExercises} from '../lib/local-grammar-lessons.ts';
 import test from 'node:test';
 import { importedItems } from '../lib/imported-practice.ts';
 import { importedLevels } from '../lib/imported-practice-contract.ts';
@@ -95,5 +96,5 @@ test('Chapter navigation retains level, help and old supported path links', () =
   const old = parseChapterHash(chapterHash({ chapter: 'sounds', activity: 'sound-path', level: 'support', collection: collection.id }));
   assert.equal(old.collection, collection.id);
   assert.equal(old.level, collection.level);
-  for (const activity of groupActivities) for (const collection of chapterCollections(activity.id).filter(item=>['alfa-c','b1'].includes(item.level))) assert(collection.exercises.every(exercise=>importedItems.some(item=>exercise.exerciseId===`content:${item.id}` && importedLevels[item.level]===collection.level) || (collection.pack.practiceActivities?.includes(activity.id) && exercise.vocabularyLevels?.includes(collection.level))), 'New levels require exact admitted content');
+  for (const activity of groupActivities) for (const collection of chapterCollections(activity.id).filter(item=>['alfa-c','b1'].includes(item.level))) assert(collection.exercises.every(exercise=>localGrammarExercises.some(row=>JSON.stringify(row)===JSON.stringify(exercise) && row.contentLevel===collection.level) || importedItems.some(item=>exercise.exerciseId===`content:${item.id}` && importedLevels[item.level]===collection.level) || (collection.pack.practiceActivities?.includes(activity.id) && exercise.vocabularyLevels?.includes(collection.level))), 'New levels require exact admitted content');
 });

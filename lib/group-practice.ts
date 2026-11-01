@@ -1,3 +1,4 @@
+import { localGrammarExercises } from './local-grammar-lessons.ts';
 import { importedActivities, importedExercisesForPack, type ImportedActivity } from './imported-practice.ts';
 import type { PackageDefinition, PackageExercise, PackageWord } from './package-content';
 import { learningActivities, learningExercises, type LearningActivity } from './learning-paths.ts';
@@ -127,7 +128,7 @@ export function groupExercises(pack: PackageDefinition, activity: GroupActivity,
   if (learningActivities.some(item => item.id === activity)) {
     if (!learningCache.has(pack)) learningCache.set(pack, new Map());
     const cache = learningCache.get(pack)!, key = `${activity}:${seed}`;
-    if (!cache.has(key)) cache.set(key, learningExercises(pack, activity as LearningActivity, id => groupExercises(pack, id as GroupActivity, seed)));
+    if (!cache.has(key)) cache.set(key, [...learningExercises(pack, activity as LearningActivity, id => groupExercises(pack, id as GroupActivity, seed)), ...(activity === 'grammar-path' ? localGrammarExercises.filter(item => item.packId === pack.id) : [])]);
     return cache.get(key)!;
   }
   if (extendedActivities.some(item => item.id === activity)) return extendedExercises(pack, activity as ExtendedActivity, seed);

@@ -54,7 +54,7 @@
     "public/docent-werkbladen/lespakketten-10-15/tand-docentlesplan.pdf": "04a2191eac1a9b34f7793e98d192d457443848c3eafae94b536545b52c8d8900",
     "scripts/check-approved-word-snapshot.mjs": "5407c30f54d96fad5b12efe291ea1046b287fea6b47795d94746ac4675724fed",
     "scripts/check-curriculum-release.mjs": "22fd4739e63f832227cdf5a777c95992cbd1aad02f846143d35f4ebcec4f7bc6",
-    "scripts/check-instruction-candidate.mjs": "07d994211d366275ac997a8f8b3420152f97d67ee9681f5186dc40bcc564263f",
+    "scripts/check-instruction-candidate.mjs": "d80a26f4edd6a9214a68d56e6c93d8fc356dbcb4697e30ecd54261d822b2b9fb",
     "scripts/check-later-content-revisions.mjs": "7ff345e7cbad2b3e88c7e24eb244eb6137d7dc5ce9d3c6f49763b259f777c73b",
     "scripts/check-long-review.mjs": "6a6b1353fadaa23832f44ed4838f2431f1efcd3c1b7db2ccdbabcea911c1439d",
     "scripts/check-opening-loader-duration-release-20261101.mjs": "96cf970163a7ac6dec347b20ed42cfdb23521ec93c96bcb8a0834126234bcdc4",
@@ -74,9 +74,9 @@
     "scripts/test-goal-audit-sheets-20261101.mjs": "d230e66be8e3af88ad68185d7e6592306f2f95ce23b5e8b23061bb3dc3f3ea81",
     "scripts/test-guided-entry.mjs": "fa8ad63f468f2d59a789cf9228d0785ad0a5fd6bb50b77044a60c3f9c348ebb2",
     "scripts/test-image-release.mjs": "466db1274d8db67c381070e793bdbff1ca4e1af0f40ab27469e2c8a29ddaba2d",
-    "scripts/test-instruction-candidate.mjs": "a4e44da43187a3115aac6467f5245496357c119bd36bb0161abfbb4c8aaa73b1",
+    "scripts/test-instruction-candidate.mjs": "c2e35bc37b5fe412be7a60b2a2d6066b8d7438c31db048c058c0296844507512",
     "scripts/test-instruction-example.mjs": "06fca63105436c1f1413aa389209d336426884313e63a8f1bf5f789f3096ab59",
-    "scripts/test-instruction-layout-browser.mjs": "3a8460b37a4a7780f2cdab80d6d8c477fdba1a56cb8704a50fb7d831a9c722f9",
+    "scripts/test-instruction-layout-browser.mjs": "55d7be2bb9a17794ebc5145694f9bc1a04016e9b062048dbc607299410ef27c3",
     "scripts/test-instruction-sections-browser.mjs": "53243b11c44e473b9c025156a8bd1f29ec2b905953cd75c2725d454111f532e1",
     "scripts/test-instruction-simplification.mjs": "c9d3110b898863fd27839107514cc95185e354cf10bc31594c02c7eed63e625e",
     "scripts/test-keyboard-all-forms-browser.mjs": "e2ac276fd9938d88c6c926d3826383f14a731ff576e2b2bf4eeac9f4da08ad23",
@@ -96,10 +96,17 @@
     "scripts/test-word-use-release-20261101.mjs": "9806562cb96aca44e771c509386e300ca66ca697f24011cee73bb9305e922e6e",
     "scripts/test-word-use.mjs": "1b84b1ed5d41fc37bc7e1de55421d738765439c67c74a87aabd3a55f87448290",
     "scripts/test-workflow-order-browser.mjs": "4b4b7640506fadde3532389d92109da6ed0088550814cb855555412280689938",
-    "scripts/test-learning-paths.mjs": "1b3dd366521aa0fe991299b32d5fdc7ebebeb8875dd9ee71ddb9c176c0060b0f",
+    "scripts/test-learning-paths.mjs": "c55514ff37e8bbb3de08972069b0d71f2374887a7d0cb687768af12b79701eac",
     "scripts/test-inline-word-audio.mjs": "bb24396a41ab2f9f361769d36ea40cf81e898167dc1d63df710b2faa2fca1958",
-    "scripts/test-grammar-self-lessons.mjs": "3e2627b896a9f74fc9c70c3978bf06a9e2a47b49ca928a4b17f3ae27f2686f60",
-    "scripts/test-grammar-self-browser.mjs": "7602c282e8688eea28ac35c2d1e0048aab5b26237a89bd0924e0a93bc33f79e4"
+    "scripts/test-grammar-self-lessons.mjs": "0f50790ca912b27440b47111021abe081a1357a7b8e571e7d4a4a7ba64850adc",
+    "scripts/test-grammar-self-browser.mjs": "7602c282e8688eea28ac35c2d1e0048aab5b26237a89bd0924e0a93bc33f79e4",
+    "scripts/test-grammar-alfa-b1.mjs": "09a48eb1823e8796a8943398564aede984fbd33409714b0b2b7ee5d2473ee3d6",
+    "scripts/test-grammar-alfa-b1-browser.mjs": "438f7d044ffe9353ae34500aa9f9f4a0dbc3d44bb34c65b9904bf10a07ceec03",
+    "scripts/test-group-practice.mjs": "cab33b1237ab9566748ec8f74bd6d030c53ba801cf0a0ffd5ea6eac85f7dadad",
+    "scripts/test-level-routes.mjs": "176e302bd383a0c14a231d7ae5273a4ccd789a673e0d5cce42997b38e7834b70",
+    "scripts/inventory-grammar-alfa-b1.mjs": "078a02b19f2d3fda3e22e6b6362e2385b1b172d59dcf80285e0bbb5ed82cd9cd",
+    "scripts/test-grammar-alfa-b1-final.mjs": "ba89326d2939630c52a07925aa10b28c182eab1bfc1cfc45010a3fbf516aec74",
+    "scripts/test-grammar-b1-lesson-browser.mjs": "589324ef0253e50c55c671f3ac94c0bccdcf53a23f30f80135aeba77f86dd5e2"
   },
   "evidenceFiles": {
     "docs/instruction-integration-20261101/README.md": "21969c250598c98053c71f69914000973b3a45b2a19a2a17748ddc23464cc73f",
@@ -109,6 +116,7 @@
     "docs/instruction-integration-20261101/runtime-later-amendments.json.gz": "9061bf9d3ad67824a7bfe0230fc50edc8a3d5cd533bc44fad217a5857de7bce2",
     "docs/instruction-local-20261101/layout-addition.css": "fb22accf4eca581e4bf3576add6b8e6e3f5b5e4f9320b05911d7abf653172cc0",
     "docs/instruction-local-20261101/scope.json": "fb3093a72d3588524cf3f27704ebb58677576a9988e5ffc5f64ee909461d305c",
-    "docs/grammar-self-lessons-20261101/scope.json": "cee00e034ad935352d030763d55766d7227d6f134b82d3db8e9b08f6fb44e005"
+    "docs/grammar-self-lessons-20261101/scope.json": "cee00e034ad935352d030763d55766d7227d6f134b82d3db8e9b08f6fb44e005",
+    "docs/grammar-alfa-b1-20261101/scope.json": "bfb03db9da8d5c5cb0cd47f32f1fe5083e56fea1fe572e5f3f549f2a2d785bd0"
   }
 }

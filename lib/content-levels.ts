@@ -53,7 +53,7 @@ export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
     const levels = exercise.vocabularyLevels;
     return contentLevels.find(level => level.id !== 'all' && levels.includes(level.id))?.id ?? 'support';
   }
-  if (exercise.componentId === 'KLINK-CONTENT' && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
+  if ((exercise.componentId === 'KLINK-CONTENT' || exercise.localGrammar === true) && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
   // A known word inside a sentence does not establish the level of that sentence.
   if (exercise.contextId) {
     const source = typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId) : undefined;

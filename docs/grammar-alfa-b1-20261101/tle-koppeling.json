@@ -1,0 +1,277 @@
+{
+  "source": "Existing P0 grammar curriculum snapshot; TLE GR000/001/002A/002D and TLE 004; no register changes",
+  "sourceSha256": "98b2407e2453c2f8be77646a2771116d4449e6b80c06776c517c19770a8c4311",
+  "revision": "p0-20261101",
+  "status": "editorial-mapping-no-independent-mastery-release",
+  "mappings": {
+    "alfa-a": {
+      "preparation": "AA02",
+      "objects": [
+        "000047",
+        "000048",
+        "000064"
+      ],
+      "limit": "Only recognize the mentioned object; does not test article/adjective control."
+    },
+    "alfa-b": {
+      "objects": [
+        "000069"
+      ],
+      "status": "exposure"
+    },
+    "alfa-c": {
+      "objects": [
+        "000002",
+        "000003",
+        "000055",
+        "000075"
+      ],
+      "status": "preparation-with-choice-and-model"
+    },
+    "b1": {
+      "objects": [
+        "000009",
+        "000019",
+        "000025",
+        "000078",
+        "000018"
+      ],
+      "status": "contextual practice; earlier constructs revisited"
+    }
+  },
+  "objects": [
+    {
+      "id": "TLE.NL.GRA.GO.000002",
+      "alias": "CAND-002",
+      "title": "Onderwerp",
+      "module": "M01",
+      "constructionId": "TLE.NL.GRA.CST.000002",
+      "patternId": "TLE.NL.GRA.PAT.000002",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A3:CR3; Patroonregister!A3:DY3"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000003",
+      "alias": "CAND-003",
+      "title": "Persoonsvorm",
+      "module": "M01",
+      "constructionId": "TLE.NL.GRA.CST.000003",
+      "patternId": "TLE.NL.GRA.PAT.000003",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A4:CR4; Patroonregister!A4:DY4"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000009",
+      "alias": "CAND-009",
+      "title": "Inversie in de hoofdzin",
+      "module": "M03",
+      "constructionId": "TLE.NL.GRA.CST.000009",
+      "patternId": "TLE.NL.GRA.PAT.000009",
+      "exposure": "ALFA C",
+      "bridge": "A0",
+      "instruction": "A1",
+      "controlled": "A1",
+      "independent": "A1",
+      "mastery": "A2",
+      "gpIds": [
+        "TLE.NL.GRA.GP.000001",
+        "TLE.NL.GRA.GP.000002",
+        "TLE.NL.GRA.GP.000013",
+        "TLE.NL.GRA.GP.000014",
+        "TLE.NL.GRA.GP.000015",
+        "TLE.NL.GRA.GP.000074",
+        "TLE.NL.GRA.GP.000075",
+        "TLE.NL.GRA.GP.000076",
+        "TLE.NL.GRA.GP.000077",
+        "TLE.NL.GRA.GP.000078",
+        "TLE.NL.GRA.GP.000079"
+      ],
+      "sourceRange": "GR002A Objectregister!A10:CR10; Patroonregister!A10:DY10"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000018",
+      "alias": "CAND-018",
+      "title": "Nevenschikking",
+      "module": "M06",
+      "constructionId": "TLE.NL.GRA.CST.000018",
+      "patternId": "TLE.NL.GRA.PAT.000018",
+      "exposure": "A0",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A1",
+      "controlled": "A1",
+      "independent": "A2",
+      "mastery": "A2",
+      "gpIds": [
+        "TLE.NL.GRA.GP.000029",
+        "TLE.NL.GRA.GP.000030",
+        "TLE.NL.GRA.GP.000059",
+        "TLE.NL.GRA.GP.000093",
+        "TLE.NL.GRA.GP.000102",
+        "TLE.NL.GRA.GP.000103"
+      ],
+      "sourceRange": "GR002A Objectregister!A19:CR19; Patroonregister!A19:DY19"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000019",
+      "alias": "CAND-019",
+      "title": "Redengevende bijzin met omdat/doordat",
+      "module": "M06",
+      "constructionId": "TLE.NL.GRA.CST.000019",
+      "patternId": "TLE.NL.GRA.PAT.000019",
+      "exposure": "A0",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A1",
+      "controlled": "A1",
+      "independent": "A2",
+      "mastery": "A2",
+      "gpIds": [
+        "TLE.NL.GRA.GP.000006",
+        "TLE.NL.GRA.GP.000026",
+        "TLE.NL.GRA.GP.000027",
+        "TLE.NL.GRA.GP.000028",
+        "TLE.NL.GRA.GP.000031"
+      ],
+      "sourceRange": "GR002A Objectregister!A20:CR20; Patroonregister!A20:DY20"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000025",
+      "alias": "CAND-025",
+      "title": "Inhoudsbijzin met dat",
+      "module": "M06",
+      "constructionId": "TLE.NL.GRA.CST.000025",
+      "patternId": "TLE.NL.GRA.PAT.000025",
+      "exposure": "A0",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A1",
+      "controlled": "A1",
+      "independent": "A2",
+      "mastery": "A2",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A26:CR26; Patroonregister!A26:DY26"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000047",
+      "alias": "CAND-047",
+      "title": "De- en het-woorden",
+      "module": "M02",
+      "constructionId": "TLE.NL.GRA.CST.000047",
+      "patternId": "TLE.NL.GRA.PAT.000047",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A48:CR48; Patroonregister!A48:DY48"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000048",
+      "alias": "CAND-048",
+      "title": "Bepaald en onbepaald lidwoord",
+      "module": "M02",
+      "constructionId": "TLE.NL.GRA.CST.000048",
+      "patternId": "TLE.NL.GRA.PAT.000048",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A49:CR49; Patroonregister!A49:DY49"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000055",
+      "alias": "CAND-055",
+      "title": "Persoonlijke voornaamwoorden als onderwerp",
+      "module": "M01",
+      "constructionId": "TLE.NL.GRA.CST.000055",
+      "patternId": "TLE.NL.GRA.PAT.000055",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A56:CR56; Patroonregister!A56:DY56"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000064",
+      "alias": "CAND-064",
+      "title": "Bijvoeglijk naamwoord vóór zelfstandig naamwoord",
+      "module": "M02",
+      "constructionId": "TLE.NL.GRA.CST.000064",
+      "patternId": "TLE.NL.GRA.PAT.000064",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A65:CR65; Patroonregister!A65:DY65"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000069",
+      "alias": "CAND-069",
+      "title": "Plaatsvoorzetsels",
+      "module": "M03",
+      "constructionId": "TLE.NL.GRA.CST.000069",
+      "patternId": "TLE.NL.GRA.PAT.000069",
+      "exposure": "ALFA B",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A0",
+      "controlled": "A0",
+      "independent": "A1",
+      "mastery": "A1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A70:CR70; Patroonregister!A70:DY70"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000075",
+      "alias": "CAND-075",
+      "title": "Congruentie onderwerp-persoonsvorm",
+      "module": "M01",
+      "constructionId": "TLE.NL.GRA.CST.000075",
+      "patternId": "TLE.NL.GRA.PAT.000075",
+      "exposure": "A0",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A1",
+      "controlled": "A1",
+      "independent": "A2",
+      "mastery": "A2",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A76:CR76; Patroonregister!A76:DY76"
+    },
+    {
+      "id": "TLE.NL.GRA.GO.000078",
+      "alias": "CAND-078",
+      "title": "Voornaamwoordelijke en lexicale referentie",
+      "module": "M06",
+      "constructionId": "TLE.NL.GRA.CST.000078",
+      "patternId": "TLE.NL.GRA.PAT.000078",
+      "exposure": "A1",
+      "bridge": "NOT_APPLICABLE",
+      "instruction": "A2",
+      "controlled": "A2",
+      "independent": "B1",
+      "mastery": "B1",
+      "gpIds": [],
+      "sourceRange": "GR002A Objectregister!A79:CR79; Patroonregister!A79:DY79"
+    }
+  ]
+}

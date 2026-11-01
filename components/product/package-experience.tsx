@@ -120,7 +120,7 @@ export function PackagePlayer({
 }) {
   const pack = getPackage(packageId);
   const { settings } = useRouteSettings();
-  const [tab, setTab] = useState<PackageTab>(initialPosition ? 'lessons' : 'words');
+  const [tab, setTab] = useState<PackageTab>(initialPosition ? 'lessons' : pack.status === 'local-proposal' ? 'use' : 'words');
   const [localSelection, setSelection] = useState<ContentSelection>();
   const selection = localSelection ?? { level: settings.literacy };
   const [lessonId, setLessonId] = useState(initialPosition?.packageId === pack.id ? initialPosition.lessonId : '');
@@ -187,7 +187,7 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio, onPractice }:
     <section className="cp-panel">
       <header className="cp-panel-heading">
         <div><h1 className="sr-only">Alle woorden</h1></div>
-        <button className="primary-button" onClick={onPractice}>Oefenen met deze woorden<ArrowRight /></button>
+        <button className="primary-button" onClick={onPractice}>{pack.status === 'local-proposal' ? 'Zelf oefenen' : 'Oefenen met deze woorden'}<ArrowRight /></button>
       </header>
       <div className="cp-word-grid">
         {pack.words.map((word) => {
@@ -297,7 +297,8 @@ function lessonExercises(pack: PackageDefinition, lesson: PackageLesson) {
 
 function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onOpenLesson, onAttempt, onMixed, selectedLessonId, onSelectLesson: setSelectedLessonId }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onOpenLesson?: (position: LessonPosition) => void; onAttempt?: (attempt: PracticeAttempt) => void; onMixed: () => void; selectedLessonId: string; onSelectLesson: (id: string) => void }) {
   const { settings } = useRouteSettings();
-  const lessons = pack.lessons.filter(item => settings.literacy === 'all' || lessonContentLevel(pack, item) === settings.literacy);
+  const lessonLevel = pack.status === 'local-proposal' ? settings.language : settings.literacy;
+  const lessons = pack.lessons.filter(item => lessonLevel === 'all' || lessonContentLevel(pack, item) === lessonLevel);
   const [playing, setPlaying] = useState(Boolean(initialPosition && initialPosition.lessonId === selectedLessonId));
   const [resumeId, setResumeId] = useState(initialPosition?.exerciseId);
   const selectedLesson = lessons.find((lesson) => lesson.id === selectedLessonId);
@@ -305,7 +306,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
   if (selectedLesson && playing) {
     const exercises = lessonExercises(pack, selectedLesson);
     const lessonNumber = pack.lessons.findIndex((lesson) => lesson.id === selectedLesson.id) + 1;
-    const label = lessonPreviewWords(pack, selectedLesson).map(wordLabel).join(' · ') || `Les ${lessonNumber}`;
+    const label = pack.status === 'local-proposal' ? selectedLesson.title : lessonPreviewWords(pack, selectedLesson).map(wordLabel).join(' · ') || `Les ${lessonNumber}`;
     const following = lessons[lessons.indexOf(selectedLesson) + 1];
     const nextPosition = !following && onOpenLesson ? nextLessonPosition(lessonPackages, pack.id, selectedLesson.id) : undefined;
     const nextPack = lessonPackages.find(item => item.id === nextPosition?.packageId);
@@ -333,7 +334,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
           onAudio={onAudio}
           eyebrow={`Les ${lessonNumber}`}
           title={`Oefen met ${label}`}
-          description="Kijk, luister, kies en bouw het woord."
+          description={pack.status === 'local-proposal' ? 'Maak de opdrachten. Vraag hulp als je die nodig hebt.' : 'Kijk, luister, kies en bouw het woord.'}
         />
       </section>
     );
@@ -343,14 +344,14 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
     <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
         <h1 className="sr-only">Stap voor stap</h1>
-        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Oefenen met deze woorden<ArrowRight aria-hidden="true" /></button>
+        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />{pack.status === 'local-proposal' ? 'Zelf oefenen' : 'Oefenen met deze woorden'}<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
         {!lessons.length && <output>Bij deze route zijn hier nog geen leesstappen ingedeeld. Kies samen met je docent bij Lezen bovenaan.</output>}
         {lessons.map((lesson) => {
           const index = pack.lessons.indexOf(lesson);
           const words = lessonPreviewWords(pack, lesson);
-          const label = words.map(wordLabel).join(' · ') || `Les ${index + 1}`;
+          const label = pack.status === 'local-proposal' ? lesson.title : words.map(wordLabel).join(' · ') || `Les ${index + 1}`;
           return <article key={lesson.id}>
             <span className="cp-lesson-number" aria-label={`Les ${index + 1}`}>{index + 1}</span>
             <div className="cp-lesson-preview">
