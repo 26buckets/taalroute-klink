@@ -385,3 +385,45 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
   .learner-app .cp-exercise-tools > .cp-pace-controls > button { flex: 1; min-width: 0; padding-inline: 8px; white-space: normal; }
   .learner-app .cp-exercise-tools:has(> .cp-pace-controls) > .cp-view-panel { margin-left: auto; }
 }
+
+/* Keep the complete paced writing task in view on phones. */
+@media (max-width: 820px) {
+  .learner-app.consistent-layout:has(.cp-pace-controls):has(.cp-text-entry) {
+    .learner-main { height: calc(var(--klink-app-height) - 68px); padding-bottom: 0; }
+    .cp-chapter-playing { grid-template-rows: auto auto; padding-bottom: 0; }
+    .cp-chapter-playing > .cp-exercise-browser { grid-row: 2; }
+    .cp-context-header { min-height: 56px; padding-block: 4px; }
+    .cp-exercise-menu-bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 8px; padding: 8px; }
+    .cp-exercise-menu-current { grid-column: 1 / -1; }
+    .cp-exercise-menu-bar > button { min-width: 0; padding: 8px; white-space: normal; }
+    .cp-exercise-record-head nav { gap: 4px; }
+    .cp-exercise-record-head nav b { min-width: 28px; }
+    .cp-exercise-stage { padding: 8px 8px 0; }
+    .cp-exercise-stage > .cp-exercise-tools { top: 0; margin-bottom: 8px; }
+    .cp-task-card:has(> .cp-text-entry) { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 4px 8px; padding: 0; margin-block: 0; }
+    .cp-text-entry { grid-column: 1; grid-row: 1; min-width: 0; gap: 4px; }
+    .cp-text-entry input { min-height: 48px; padding: 8px; }
+    .cp-task-card > [data-practice-check] { grid-column: 2; grid-row: 1; padding-inline: 12px; }
+    .cp-paper-model, .cp-task-card:has(> .cp-text-entry) > p { grid-column: 1 / -1; margin: 0; overflow-wrap: anywhere; }
+    .cp-exercise-feedback { height: auto; min-height: 64px; padding: 8px; }
+    .cp-exercise-feedback > button { display: grid; grid-template-columns: minmax(0, 1fr) 20px; gap: 2px 4px; padding: 6px 8px; }
+    .cp-exercise-feedback > button > small { grid-column: 1 / -1; grid-row: 2; }
+    .cp-exercise-feedback > button > svg { grid-column: 2; grid-row: 1; }
+  }
+}
+@media (max-width: 820px) and (max-height: 700px) {
+  body:has(.learner-app.consistent-layout .cp-pace-controls):has(.cp-text-entry) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }
+  body:has(.learner-app.consistent-layout .cp-pace-controls):has(.cp-text-entry) > .taalroute-header,
+  .product-root .learner-app.consistent-layout:has(.cp-pace-controls):has(.cp-text-entry) > .learner-nav { display: none; position: static; }
+  .product-root .consistent-layout .learner-main:has(.cp-pace-controls):has(.cp-text-entry) { height: 100dvh; padding-bottom: 0; }
+}
+@media (min-width: 600px) and (max-width: 820px) and (max-height: 700px) {
+  .learner-app.consistent-layout:has(.cp-pace-controls):has(.cp-text-entry) {
+    .cp-exercise-menu-bar { display: flex; flex-wrap: nowrap; }
+    .cp-exercise-menu-current { flex: 1; }
+    .cp-task-card:has(> .cp-text-entry) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; }
+    .cp-task-card > [data-practice-check] { grid-column: 3; }
+    .cp-paper-model { grid-column: 2; grid-row: 1; }
+    .cp-task-card:has(> .cp-text-entry) > p { grid-column: 2; }
+  }
+}

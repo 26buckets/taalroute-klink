@@ -1,0 +1,28 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "7981740d8fb6a552f8815364dea44a5f0664cff2",
+  "liveSourceCommit": "85191aa8174fb6864e49fa8616d106596443ae50",
+  "userRequest": "Maak dit op mobiel compacter, zodat luisteren, tempo, antwoordveld, Vergelijk en Verder zonder scrollen in beeld staan, ook op kleine schermen. Behoud alle inhoud, audio en voortgang, test het en zet het online.",
+  "approval": "docs/appearance-floor-20261031/approved-updates/mobile-dictation-fit-20261101.json",
+  "scope": "Only mobile paced writing: remove the unused display row, compact existing headers, keep input and Compare/Ready beside each other, retain shortcut under Next. Temporarily show focused task with Back on short screens, restore navigation outside it. Landscape example and input share a row. Preserve all text and font sizes, 48px targets, desktop and reading layouts, all handlers, content, audio and progress.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "scripts/check-mobile-dictation-fit-release-20261101.mjs",
+    "scripts/check-pace-toolbar-release-20261101.mjs",
+    "scripts/test-mobile-dictation-fit-browser-20261101.mjs",
+    "scripts/test-mobile-dictation-fit-release-20261101.mjs",
+    "VORMGEVING-VASTGEZET.md"
+  ],
+  "files": {
+    "app/learner-layout.css": "a0dbea4862bb62b374b5b0266ce18cb2a4097b9a4f7acdf07e0059b6bfedbec5",
+    "scripts/check-mobile-dictation-fit-release-20261101.mjs": "64e739586c4301db28c41d5f98bb7e7156c58cced4cdc4d825755821669291e3",
+    "scripts/check-pace-toolbar-release-20261101.mjs": "dcdc6279619df27eff5d8425906d6e22d27a3754b95d903388ff08aabd11a32c",
+    "scripts/test-mobile-dictation-fit-browser-20261101.mjs": "d4b119c027690480a14852c0aef29677e8750ce8a99980bd505f049a964aa8fa",
+    "scripts/test-mobile-dictation-fit-release-20261101.mjs": "88e789ed4a6ef3fa9626cc4b81bc63c1a8733dd524e24c2f783de258e9896b75",
+    "VORMGEVING-VASTGEZET.md": "2d2bd1269abab061c309dc2e7e91ac3a360d068211fde58ae659fe0b2935d54d"
+  },
+  "cssDeltaSha256": "21026d0116b74df026e4498de4463369c0d71932fd2c0b55bbceccf0ab2b91f8"
+}
