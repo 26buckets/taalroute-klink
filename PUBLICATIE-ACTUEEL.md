@@ -1,3 +1,15 @@
+## Actuele publicatie — korte titels en gelijke kaarten door de hele app — 1 november 2026
+
+Livebron `ded58bb090a90c87f6a5881b35830fa44f3b4de2`, schone canonieke main; Worker `621e3ca8-cbe7-4b36-9f58-a873f8596b24`. Gepubliceerd via de gewone `npm run deploy` als afstammeling van de werkelijk live bevestigde bron `de651b0e95e31d54492af6ae1aa43af9a84ecafc`. De actuele schrijfrondes, bijbehorend voortgangsherstel, loader en Enter-/pijl-/spatiebediening blijven behouden.
+
+Korte consequente titels met ronde, niveau en werkelijk aantal woorden/oefeningen apart. Gelijke kaarthoogtes binnen de bestaande rasters, ook bij grotere tekst. Doorgevoerd in alle 59 oefenvormen, categorieën, pakketten, lessen, woorden, opgeslagen woorden en docentschermen. Oorspronkelijke inhoud, bron- en voortgangs-ID's, media, antwoorden, routes, opslag, kleuren, typografie, knoppen en compositie behouden.
+
+Lokaal en online: 936 lijsten en 152 overige schermen in Chromium/WebKit, desktop/mobiel; 48 gerichte licht-/donker-/320px-/vergrote-tekst-/oefen-/hervatproeven. Online aanvullend acht echte audioflows, twintig pijl-/spatieflows, acht Enterflows en 32 actuele schrijfbankflows met acht interface- en acht sessieherstelproeven. Alle 8134 aangeboden bronmedia volledig teruggelezen en bytegelijk; actuele schone bron en client bevestigd. Lokaal tevens TypeScript, lint, bron-/kaartproeven, 43 vrijgaveproeven, normale publicatiepoort en productieopbouw. Geen fysieke telefoon of menselijke luistercontrole. De volledige historische PDF-inhoudsreeks valt buiten deze presentatieaanpassing; gerichte werkbladlinks en alle dashboardkaarten zijn gecontroleerd. Geen GitHub Actions aanwezig of toegevoegd; zware controles lokaal.
+
+Exact akkoord: `docs/klink-owner-release-card-titles-20261101.json`; goedgekeurde aanvulling op de vaste vloer: `docs/appearance-floor-20261031/approved-updates/card-titles-appwide-20261101.json`. Bewijs en volledig teruggelezen bron-/herstelkopie in `docs/card-titles-appwide-20261101/` (`backup.json`, `publication.json`, `live/`, `final-backup.json`). De app eenmaal vernieuwen om de actuele kaartjes te laden.
+
+---
+
 ## Actuele publicatie — pijlen en spatie na een muisantwoord — 1 november 2026
 
 Livebron `17f9db234295127531719cebb3df45d666d8ccac`, schone canonieke main; Worker `358edad8-fd3d-47b3-8ecd-01066aa287d2`. Gepubliceerd via de gewone `npm run deploy`, als afstammeling van de werkelijk live bevestigde bron `b670d0c1337eea07e96662237de4b9508de9735c` en de complete canonieke opvolger `38b937ebb11005942fc018e603f6658a53882857`. De bestaande openingsduur, officiële logo, leerdoelen, herhaalrondes en vaste vormgevingsvloer blijven behouden.
