@@ -1,0 +1,11 @@
+Klink mobiel: luisterknop en alle antwoordkeuzes zichtbaar
+Opdracht Nico, 1 november 2026; zie brongebonden vrijgave en vloerakkoord.
+Actuele livebasis: 1069f8ac11730d313b4afdf7ccf4b886229c7882. Controlebasis: 6d335687ef7c0fb01b55332935ddcbdde160d6f3. Canoniek: 26buckets/taalroute-klink, main.
+De aanvankelijke basis 22d231b0 is bijgewerkt met de gepubliceerde B1-bronnen 6838c678, de verliesloos verkleinde loader 1069f8ac en de canonieke registerdocumentatie. Geen rollback of alternatieve configuratie.
+Alleen mobiele CSS toegevoegd. Geen gewijzigde inhoud, bronnen, vragen, antwoord-/voortgangs-ID's, media, opslag, audiocode, toetsenhook of routes. De 20 actuele B1-banken, 114 nieuwe opnamen, zes behouden opnamen en voortgangsaliassen blijven staan.
+Lange leesteksten hebben een eigen leesvlak; luisterknop, alle antwoorden en Verder blijven buiten dat schuifvlak. Lange feedback kan in zijn eigen vlak worden teruggelezen. Tekst en antwoorden behouden hun lettergrootte.
+Kleine schermen gebruiken de bestaande compacte oefenstand; bij lezen ook op telefoons tot 900px hoog. Instructies blijven toegankelijk en onder het i'tje. Terug, vorige, teller en informatie blijven in de kop bereikbaar. De gewone navigatie verschijnt weer na Terug. Aanraakdoelen minimaal 44px.
+Desktop en de aparte inhouds-/synoniemspelers behouden hun goedgekeurde compositie. Geen fysieke telefoon, Bluetooth-toetsenbord of menselijke luisterreview uitgevoerd.
+Alle zware controles lokaal. Geen GitHub Actions toegevoegd. Publicatie uitsluitend via npm run deploy vanaf schone canonieke main, met behoud van de volledige normale vrijgaveketen.
+Reproduceer vanaf de canonieke bron: node scripts/test-mobile-choice-visibility-browser-20261101.mjs; overige gerichte controles staan in local/ en gebruiken dezelfde bestaande browserhulpmiddelen. KLINK_TEST_URL en uitvoermappen zijn in de scripts aangegeven.
+Back-up vóór publicatie: backup.json; definitieve online controle en herstelkopie: publication.json en final-backup.json. Behoud de historische vloer en vrijgaven; het nieuwe akkoord staat alleen als aanvulling in floor.json.

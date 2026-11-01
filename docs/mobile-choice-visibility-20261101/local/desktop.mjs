@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';import {writeFileSync}from'node:fs';import{chromium,webkit}from'playwright';
+const checks=[];
+for(const[engine,type]of Object.entries({chromium,webkit})){const b=await type.launch();try{for(const colorScheme of['light','dark'])for(const path of ['words/same-word/groep-4.alfa-a~words-2?level=alfa-a&help=practice','texts/text-question/klink-teksten-zelf-a1-r01-v1?level=a1&help=practice']){
+ const metrics=[];for(const base of ['https://klink.taalroute.nl','http://127.0.0.1:18996']){const p=await b.newPage({viewport:{width:1280,height:800},colorScheme});await p.goto(base+'/#learner/chapters/'+path);await p.locator('[data-exercise-id]').waitFor();await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(120);metrics.push(await p.evaluate(()=>Object.fromEntries(['.cp-context-header','.cp-exercise-stage','.cp-task-card','.cp-choice-grid','.cp-exercise-tools','.cp-exercise-feedback'].map(s=>{const e=document.querySelector(s),r=e.getBoundingClientRect(),c=getComputedStyle(e);return[s,{x:r.x,y:r.y,w:r.width,h:r.height,color:c.color,background:c.backgroundColor,font:c.font,fontSize:c.fontSize}]}))));await p.close();}
+ assert.deepEqual(metrics[0],metrics[1]);checks.push({engine,colorScheme,path,identical:true});
+ }}finally{await b.close();}}
+writeFileSync('outputs/mobile-choice-visibility-20261101/desktop.json',JSON.stringify({checks},null,2));console.log('PASS 8 unchanged desktop geometries and fonts against actual live source.');

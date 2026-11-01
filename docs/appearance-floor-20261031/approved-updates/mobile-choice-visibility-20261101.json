@@ -1,0 +1,14 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "appearanceChangeApproved": true,
+  "publicationApproved": true,
+  "userRequest": "Herstel ook die overlap en de deels verborgen antwoordkeuzes op mobiel. Zorg dat de luisterknop, alle antwoorden en Verder goed zichtbaar blijven. Behoud inhoud, audio en voortgang, test het en zet het online.",
+  "baselineSourceCommit": "6d335687ef7c0fb01b55332935ddcbdde160d6f3",
+  "liveSourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
+  "scope": "Mobile direct answer-choice exercises only: reserve toolbar height, fit complete choices and footer; compact short-screen chrome using the existing focused practice pattern. Long reading sources retain their complete scrollable text; all choices remain outside that scroll. Original desktop and all non-choice layouts retained.",
+  "files": {
+    "app/learner-layout.css": "a4eaa6e9f44e82a746a9406cf7c85213a315172e6e918838032cad4ecb6be4d7"
+  },
+  "checks": "docs/mobile-choice-visibility-20261101/verification.json"
+}
