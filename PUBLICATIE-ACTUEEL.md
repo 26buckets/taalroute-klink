@@ -1,3 +1,19 @@
+## Actuele publicatie — zelfstandige grammatica, instructies en woordaudio — 1 november 2026
+
+Livebron `6b25e83b0bb3b051291df76adac96e48adf0ab8b`, schone canonieke main; Worker `e3f5002b-8b45-477e-84de-985fa5560538`, build `2026-11-01T22:18:43.885Z`. Via de gewone `npm run deploy` gepubliceerd, als afstammeling van livebron `cfeb578a8e2fb29898d5ce994b74793e7630f219` en vastlegging `fb29c5a2698b17871c7c12a8cd46b3a90ccfa889`. De nieuwste Inzichten-menulink, B1-bronnen, mobiele bediening, officiële logo, opslag en voortgang blijven behouden.
+
+Op Nico's expliciete opdracht zijn de lokaal uitgewerkte zelfstandige grammaticaoefeningen Alfa A–B1 en leskoppelingen gepubliceerd; Zelf oefenen is de hoofdroute, docentsteun optioneel. De goedgekeurde rustige stappenopmaak, kortere instructies en aanklikbare woordaudio blijven behouden. Exact 1.377 bestaande aanvullende woordopnamen hebben een brongebonden publicatievrijgave; toekomstige/onbeoordeelde opnamen worden daarmee niet automatisch vrijgegeven. Geen nieuwe productiebatches, contentimport of audiogeneratie.
+
+Alle 110 historische testbestanden afgerond, inclusief vijftig verschillende publicatiebewijsgevallen. Twee verouderde tests hersteld: behoud van exact de oorspronkelijke lessen plus het expliciete B1-lesvoorstel, en een negatieve schrijfreleaseproef die nu haar exacte historische bron daadwerkelijk wijzigt. Geen broninhoud, antwoordcontrole of opgeslagen voortgang voor die testreparaties gewijzigd. De bestaande historische vrijgaven blijven intact.
+
+Lokaal slagen code-/typecontrole, gewone publicatiepoort en productieopbouw; 96 grammatica-browsergevallen, twaalf instructieschermen, vier pixelgelijke startpaginavergelijkingen, 192 mobiele keuzegevallen, vier native audioflows, zestien menugevallen en 80 B1-rondes met 960 vragen/2.880 feedbackkeuzes. Alle 1.377 vrijgegeven woordopnamen hebben gecontroleerde Taalroute-merkmetadata; de bestaande media- en 1.979 gekoppelde-audiocontroles slagen. Online opnieuw 96 grammatica- en zestien menugevallen plus twee echte woordaudioflows in Chromium/WebKit, waaronder de goedgekeurde volledige opname ‘we’. Alle 1.544 betrokken openbare bestanden volledig bytegelijk teruggelezen, broncommit vóór en na gelijk.
+
+Eerlijk open: negentien eerder geïnventariseerde A1/A2-woordvormen en ‘oefencursus’ missen een afzonderlijke opname; dit is geen volledige methodebrede telling. Het B1-lesblok blijft een voorstel waar geen rooster bestaat. Geen nieuwe onafhankelijke NT2-/volledige menselijke luisterreview, fysieke telefoon- of schermlezertest. Geen claim dat de gehele leerlijn inhoudelijk af is.
+
+Dossier: `docs/grammar-publication-20261101/` met exacte vrijgave, bronbehoud, archiefuitslagen, publicatie en bron-/bewijsback-up. Beide Drive-ZIP's geheel teruggelezen: 1.702 bronmanifestregels en 451 bewijsmanifestregels, alle hashes en ZIP-integriteit bevestigd. Alle zware controles lokaal; geen GitHub Actions aanwezig, toegevoegd of gestart. Deze administratieve vastlegging verandert geen runtime en vereist geen herpublicatie.
+
+---
+
 ## Actuele publicatie — Inzichten in het hamburgermenu — 1 november 2026
 
 Livebron `cfeb578a8e2fb29898d5ce994b74793e7630f219`, schone canonieke main; Worker `1e3d4580-29ea-435f-b65b-eb0f85ea3d53`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van livebron `6a4c2acd346c436cb0344b77da21de8dadc09c16` en de vastlegging `08fda5b385ed384d7bf6bebae7a8a2d388c4ac39`. De eerdere mobiele bediening en alle bestaande publicaties blijven behouden.
