@@ -1,3 +1,13 @@
+## Actuele publicatie — herhaalrondes en behoud van Enter-herstel — 1 november 2026
+
+Actuele schone livebron is `b670d0c1337eea07e96662237de4b9508de9735c` op canonieke main. Deze bron bevat de 48 herhaalrondes die via de gewone publicatieroute zijn gepubliceerd uit `92a560870a5c5368c6711394fb52394eec29a742` (oorspronkelijke Worker `d2049660-d8b9-4966-8670-ba899dba19dd`) en behoudt het vervolgens goedgekeurde Enter-/focusherstel.
+
+Samen herhalen > Oefen opnieuw > Zelf oefenen bevat 16 Alfa C-, 12 A1-, 8 A2- en 12 B1-rondes van elk twaalf posities. De 576 posities verwijzen naar bestaande oefeningen; nul nieuwe inhoudskopieën, beelden of opnamen. Alleen de benodigde oorspronkelijke bestanden worden bij openen geladen. Eigen ronde- en sessievoortgang staat apart van de oorspronkelijke oefeningen, pogingen en herhaalschema's. Oude afronding voltooit geen nieuwe ronde; opnieuw oefenen wist geen afronding.
+
+Lokaal en online slagen 1.152 oefenstromen, 96 rondes, 36 schermindelingen en zes bronfout-/herstelproeven in Chromium en WebKit. 822 oorspronkelijke opslagsleutels blijven bytegelijk. Alle 121 aangeboden bronbestanden en 417 audio-opnamen zijn bytegelijk teruggelezen; Taalroute-metadata blijven behouden. 834 browserdecodes en zes echte afspeelproeven via de bestaande knoppen slagen. Lokaal slagen 138 bron-/eenheids-/matrixproeven, negen positieve/negatieve vrijgaveproeven, typecheck, lint, productieopbouw en de volledige gewone publicatiepoort. De goedgekeurde vormgeving, Info-knoppen, kleinere openingsanimatie, bestaande inhoud, media, opslag en routes blijven behouden. Alle zware controles lokaal; geen GitHub Actions-workflows toegevoegd.
+
+Bron, code, controles en alle 417 hergebruikte audiobestanden staan in de volledig teruggelezen Drive-back-up `1LKyh9G2w5lxW0NL0eBxwhcH1_uvIIihQ`; het definitieve online herstelpakket wordt apart geregistreerd in `docs/repeat-rounds-20261101/final-backup.json`. Automatisch eigenaarsakkoord is vastgelegd. Een onafhankelijke menselijke review, praktijkpilot of fysieke telefoontest wordt niet als uitgevoerd geregistreerd. Een back-up is geen livepublicatie.
+
 ## Actuele publicatie — kleinere openingsloader die direct beweegt — 1 november 2026
 
 Livebron `039eb22ede86403144dc150e7f0f995df10c4f81`, schone canonieke main; Worker `4640f105-e667-4955-8be8-f58acbccfe84`. Normaal gepubliceerd via `npm run deploy` vanuit een afstammeling van livebron `f7fb187b7901b824234d83478313dcafff7d69a4`, inclusief de daaropvolgende herstelbewijzen op main. Alle leerdoelen-, mobiele bediening-, inhouds- en eerdere vormgevingsverbeteringen blijven behouden.
