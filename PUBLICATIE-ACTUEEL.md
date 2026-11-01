@@ -1,3 +1,15 @@
+## Actuele publicatie — pijlen en spatie na een muisantwoord — 1 november 2026
+
+Livebron `17f9db234295127531719cebb3df45d666d8ccac`, schone canonieke main; Worker `358edad8-fd3d-47b3-8ecd-01066aa287d2`. Gepubliceerd via de gewone `npm run deploy`, als afstammeling van de werkelijk live bevestigde bron `b670d0c1337eea07e96662237de4b9508de9735c` en de complete canonieke opvolger `38b937ebb11005942fc018e603f6658a53882857`. De bestaande openingsduur, officiële logo, leerdoelen, herhaalrondes en vaste vormgevingsvloer blijven behouden.
+
+Na een goed muisantwoord verliest de uitgeschakelde antwoordknop soms focus aan body. De gedeelde toetsenhook ontvangt daar nu ook →, ← en spatie, met dezelfde bescherming als Enter. Spatie vanuit een geselecteerd antwoord herhaalt het beschikbare geluid zonder het antwoord opnieuw te activeren. Andere knoppen, tekstvelden, opname, dialogen en menu's houden hun bestaande native bediening. De docentenhandleiding is verduidelijkt. Geen wijziging aan indeling, inhoud, audio, validatie, routes, score of opslag.
+
+Lokaal en online: twintig muisfocus-/pijl-/spatieflows in Chromium en WebKit op desktop en 320 × 568, twee proeven met daadwerkelijke leesaudio, acht Enter-focusproeven, vier werkbladproeven en veertien bestaande toetsen-/invoer-/opname-/voortgangsproeven. Lokaal aanvullend 482 toetsen-/knopvergelijkingen over zestig varianten, TypeScript, lint, zeventien vrijgaveproeven en de volledige normale publicatiepoort en productieopbouw. Na Goed gaat → direct verder terwijl de audio speelt en stopt die oude audio. De actuele schone livebron, alle inhoudsvingerafdrukken, vijf daadwerkelijk aangeboden naschrijfbanken en twee audiobestanden zijn bevestigd; de zeven bestanden zijn bytegelijk. Geen fysieke telefoon of toetsenbord getest. De app eenmaal vernieuwen om de nieuwe bediening te laden.
+
+Akkoord en exacte afbakening: `docs/klink-owner-release-answer-arrow-space-20261101.json`. Reproductie, controles, beperkingen, bronback-up en definitieve volledig teruggelezen Drive-herstelkopie: `docs/answer-arrow-space-20261101/`. Geen GitHub Actions-workflows aanwezig of toegevoegd; zware controles lokaal uitgevoerd. Publiceer uitsluitend opvolgers via de bestaande poort.
+
+---
+
 ## Kleine basisloader minimaal twee seconden — 1 november 2026
 
 Livebron `b670d0c1337eea07e96662237de4b9508de9735c`, schone canonieke main; Worker `c0eb92ef-ff9f-420a-9256-47d8f4267dc8`. Normaal gepubliceerd via `npm run deploy` als afstammeling van de werkelijk live bevestigde bron `b7c04d8da4835c8b01f8314bd6247710ed75d0bf`. De Enter-correctie en 48 herhaalrondes blijven behouden.
