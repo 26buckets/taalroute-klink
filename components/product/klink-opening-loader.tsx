@@ -22,7 +22,7 @@ export function KlinkOpeningLoader({ onComplete }: { onComplete?: () => void }) 
         <source media="(prefers-reduced-motion: reduce)" srcSet="/opening-loader-v4-20261101/klink-static.svg" />
         <img ref={image} src="/opening-loader-quick-20261101/klink-loader.svg" alt="" width="1942" height="1109" />
       </picture>
-      <span className="sr-only">Klink wordt geopend…</span>
+      <span className="klink-opening-label">Klink wordt geopend…</span>
     </output>
   );
 }

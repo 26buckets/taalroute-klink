@@ -1,0 +1,19 @@
+{
+  "types": true,
+  "lint": true,
+  "desktopMobile": true,
+  "lightDark": true,
+  "reducedMotion": true,
+  "twoSecondMinimum": true,
+  "originalAnimationUnchanged": true,
+  "allOtherRuntimeUnchanged": true,
+  "localOnly": true,
+  "physicalDevicesTested": false,
+  "review": "Reviewed desktop and 320px mobile screenshots. Text is below the original image without moving it. OS light/dark preferences both keep the existing opening background. Inherited font and text colour preserved. No application theme implementation changed.",
+  "runtimeScope": [
+    "components/product/klink-opening-loader.tsx",
+    "components/product/klink-opening-loader.css"
+  ],
+  "baselineSourceCommit": "be7d78289945084612b20a0aa3058bb7730a43a5",
+  "actionsWorkflows": []
+}
