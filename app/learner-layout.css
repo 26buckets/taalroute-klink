@@ -427,3 +427,33 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
     .cp-task-card:has(> .cp-text-entry) > p { grid-column: 2; }
   }
 }
+
+/* Compact mobile controls, with an editing canvas above the software keyboard. */
+@media (max-width: 820px) {
+  .learner-app.consistent-layout:has(.cp-pace-controls):has(.cp-text-entry) {
+    :is(.cp-exercise-tools, .cp-exercise-menu-bar, .cp-exercise-feedback, .cp-task-card) button { min-height: 44px; padding: 6px 8px; font-size: 14px; }
+    .cp-exercise-record-head nav button, .cp-exercise-listen, .cp-view-toggle { width: 44px; height: 44px; min-width: 44px; }
+    .cp-exercise-tools { min-height: 44px; gap: 8px; }
+    .cp-exercise-tools > .cp-pace-controls { gap: 8px; }
+    .cp-exercise-tools > .cp-pace-controls > button { white-space: nowrap; padding-inline: 4px; }
+    .cp-exercise-menu-bar { gap: 4px 8px; padding: 6px 8px; }
+    .cp-exercise-feedback { min-height: 60px; }
+    .cp-exercise-tools .cp-view-panel { gap: 4px; }
+  }
+  body:has(.learner-main[data-keyboard-open="true"]) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }
+  body:has(.learner-main[data-keyboard-open="true"]) > .taalroute-header,
+  .learner-app:has(.learner-main[data-keyboard-open="true"]) > .learner-nav { display: none; position: static; }
+  .product-root .learner-app.consistent-layout .learner-main[data-keyboard-open="true"] { position: fixed; top: var(--exercise-viewport-top); left: 0; right: 0; width: 100%; height: var(--exercise-visible-height); padding: 0; scroll-padding: 0; z-index: 22; }
+  .product-root .learner-app.consistent-layout .learner-main[data-keyboard-open="true"] {
+    .cp-context-header, .cp-exercise-record-head { display: none; }
+    .cp-chapter-playing { grid-template-rows: auto; }
+    .cp-chapter-playing > .cp-exercise-browser { grid-row: 1; }
+    .cp-exercise-stage { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; gap: 8px; padding: 8px; }
+    .cp-exercise-stage > .cp-exercise-tools { position: static; grid-column: 1; grid-row: 1; width: 44px; margin: 18px 0 0; }
+    .cp-exercise-tools > fieldset { display: none; }
+    .cp-exercise-stage > .cp-task-card { grid-column: 2; grid-row: 1; width: 100%; grid-template-columns: minmax(0, 1fr) auto; }
+    .cp-task-card > [data-practice-check] { grid-column: 2; grid-row: 1; }
+    .cp-paper-model, .cp-task-card:has(> .cp-text-entry) > p { grid-column: 1 / -1; grid-row: auto; }
+    :is(button, input, [tabindex]) { scroll-margin: 4px; }
+  }
+}
