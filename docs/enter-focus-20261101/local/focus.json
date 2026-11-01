@@ -1,0 +1,119 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "enterFromActualFocus": true,
+      "exactlyOneNext": true,
+      "heldEnterSafe": true,
+      "dialogNative": true,
+      "wrongCannotAdvance": false,
+      "storagePreserved": true
+    }
+  ],
+  "errors": [],
+  "physicalKeyboardTested": false
+}
