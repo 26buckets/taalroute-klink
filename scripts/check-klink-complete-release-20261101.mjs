@@ -3,14 +3,14 @@ import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {verifyCompleteContent} from './check-klink-complete-content-20261101.mjs';
-const base='6e7bb1ccc796ebdd899d24cc8a679d039fbc4c74',folder='docs/klink-complete-release-20261101/';
+const base='fcee57271b89595a14241f5b5e989ebf04477897',folder='docs/klink-complete-release-20261101/';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
-const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
+const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export const completeCoreFiles=[
  'components/product/extended-practice-surface.tsx','data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json',
- 'scripts/check-teacher-phase-labels-release-20261101.mjs','scripts/check-klink-complete-content-20261101.mjs','scripts/check-klink-complete-release-20261101.mjs',
+ 'scripts/check-text-question-spacing-release-20261101.mjs','scripts/check-klink-complete-content-20261101.mjs','scripts/check-klink-complete-release-20261101.mjs',
  'scripts/test-klink-complete-content-20261101.mjs','scripts/test-klink-complete-browser-20261101.mjs','scripts/test-klink-complete-progress-browser-20261101.mjs',
  'scripts/test-klink-complete-recorder-browser-20261101.mjs','scripts/test-klink-complete-release-20261101.mjs',
 ];
@@ -18,7 +18,7 @@ export function verifyCompleteRelease(read=readFileSync){
  const json=file=>JSON.parse(read(file));
  const r=json('docs/klink-owner-release-complete-20261101.json'),request=json(folder+'owner-instruction.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChanged,false);
- assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,'0f9191da3e38064bd81034f1d071056601bfe83e');
+ assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,'959d3416064c453d5f0115c89c7835a8a12c05e4');
  assert.equal(r.userRequest,request.userRequest);assert(r.userRequest.includes('Publiceer alles en zet alles online.'));
  assert.equal(request.newAudioAuthorized,true);assert.equal(request.independentHumanReviewClaimed,false);assert.equal(request.learnerPilotClaimed,false);
  git('merge-base','--is-ancestor',r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');

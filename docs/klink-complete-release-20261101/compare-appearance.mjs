@@ -19,4 +19,4 @@ for(const engine of [chromium,webkit]){
   results.push({engine:engine.name(),width,theme,elementsCompared:captures[0].length,geometryAndStylesIdentical:true});await context.close();
  }}finally{await b.close();}
 }
-writeFileSync(out+'/checks.json',JSON.stringify({comparedWith:'0f9191da3e38064bd81034f1d071056601bfe83e',checks:results,existingContentIdentical:true},null,2)+'\n');console.log(JSON.stringify({checks:results.length}));
+writeFileSync(out+'/checks.json',JSON.stringify({comparedWith:'959d3416064c453d5f0115c89c7835a8a12c05e4',checks:results,existingContentIdentical:true},null,2)+'\n');console.log(JSON.stringify({checks:results.length}));
