@@ -1,0 +1,30 @@
+✔ only approved mobile photo overrides preserve the latest app and original recordings (302.279083ms)
+✔ rejects changed app/learner-layout.css (71.9285ms)
+✔ rejects changed docs/klink-owner-release-dialogue-mobile-photo-20261101.json (0.1875ms)
+✔ rejects changed docs/dialogue-mobile-photo-20261101/backup.json (105.807166ms)
+✔ approved view controls preserve content, original storage and media (786.458375ms)
+✔ rejects changed components/product/exercise-view.tsx (505.921625ms)
+✔ rejects changed docs/klink-owner-release-exercise-view-20261101.json (489.112459ms)
+✔ rejects changed docs/exercise-view-20261101/backup.json (668.021042ms)
+✔ approved autoplay repair preserves the latest live content, audio and progress (572.654084ms)
+✔ rejects altered components/product/package-exercise-browser.tsx (106.434458ms)
+✔ rejects altered app/learner-layout.css (64.758709ms)
+✔ rejects altered docs/klink-owner-release-sentence-listen-repair-20261101.json (249.095083ms)
+✔ rejects altered docs/sentence-listen-repair-20261101/backup.json (348.10275ms)
+✔ eight distinct B1 context tasks preserve all 217 earlier records and A1/A2 availability (2.16675ms)
+✔ all eight support reverse, mix, turn and listen without leaking the heard word (1880.0845ms)
+✔ context errors survive reload in the same repeat task and direction; turning cards is not mastery (10.571458ms)
+✔ all existing media and bindings stay unchanged; three exact ElevenLabs phrases have lossless Taalroute metadata (84.21925ms)
+✔ publication requires exact context scope, explicit layout approval and verified recovery backup (996.861333ms)
+✔ seven new questions preserve the original 210 records, all IDs and all A1/A2 availability (1.912958ms)
+✔ all seven questions reverse, mix, turn and play their exact word in both directions (1850.865916ms)
+✔ all existing bindings remain and one female ElevenLabs counterpart has actual Taalroute metadata (42.72675ms)
+✔ publication permits only the approved recovery and rejects missing authorization or backup (1694.864125ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4103.201333
