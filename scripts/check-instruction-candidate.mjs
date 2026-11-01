@@ -24,7 +24,7 @@ function grammarBefore(file,scope){
 const alfaScopeFile='docs/grammar-alfa-b1-20261101/scope.json';
 const alfaScopeHash='bfb03db9da8d5c5cb0cd47f32f1fe5083e56fea1fe572e5f3f549f2a2d785bd0';
 const integrationFile='docs/grammar-live-integration-20261101/scope.json';
-const integrationHash='dc6c0c200ed70dbd1bac589802968c75e7b5c51b53853cd2e0e27032ac7ef20f';
+const integrationHash='5c7e3cc20270c673100d21de4f03298980914496481f13b12e356a1fb87b097e';
 function verifyIntegration(read){
  const bytes=read(integrationFile);assert.equal(sha(bytes),integrationHash,'Only the reviewed local merge is allowed');
  const r=JSON.parse(bytes);
