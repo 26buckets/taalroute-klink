@@ -352,3 +352,7 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 @media (max-width: 360px) {
   .learner-app .cp-dialogue-support button { padding-inline: 6px; }
 }
+
+/* Keep reading questions together instead of stretching their rows over the canvas. */
+.learner-app .cp-task-card.cp-extended-task:has(> .cp-source-text):has(> .cp-choice-grid) { height: auto; max-height: none; align-content: start; margin-block: 0; gap: 16px; }
+.learner-app .cp-task-card.cp-extended-task:has(> .cp-source-text):has(> .cp-choice-grid) > h4 { margin: 0; }
