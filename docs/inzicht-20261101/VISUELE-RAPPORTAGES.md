@@ -2,6 +2,10 @@
 
 Opdracht van Nico, 1 november 2026. Uitsluitend draft PR #8 en de bestaande fictieve EU-staging. Geen merge of productiepublicatie.
 
+## Actuele vrijgavestatus
+
+De visuele uitbreiding is gecommit en lokaal getest. **Niet op staging gepubliceerd.** De bestaande staging heeft schema 5: de gedeelde D1-dagschrijflimiet blokkeert aanmelding, migratie en de verplichte controle vóór deployment. De quota-blokkade is in de parallelle snelheidsdiagnose vastgesteld. Migraties 0006/0007 zijn alleen lokaal uitgevoerd; de remote database is door deze taak niet gemigreerd. Geen betaalde limieten verhoogd en geen beveiliging omzeild. De volgende stap na vrijgave van het quotum is de begrensde migratie met back-up/vergelijking, geïsoleerde stagingbouw/deployment en de MFA-browserproef. De online functionaliteit van deze uitbreiding is daarom nog niet bewezen.
+
 ## Bronnen en samenvoeging
 
 - Oorspronkelijk formulier: Drive `1YDoH5cfNqEECOWShsQJedu0LpCsvff3m`, SHA-256 `e12d1ff7156f8e72c7075708e58c6a2be1b9a2dee00e42649768b53cabee9a60`.
@@ -45,3 +49,18 @@ Uitgevoerde lokale controles: 87 gerichte tests inclusief exact broncatalogus, n
 Browsercontroles en automatische toegankelijkheidsanalyse zijn geen volledige onafhankelijke WCAG-audit. Screenreadergebruik en de praktijkinterpretatie door docenten blijven acceptatiepunten vóór gebruik met echte cursisten. Online bewijs, commit, deployment en resterende technische blokkades worden afzonderlijk vastgelegd; een lokale geslaagde test geldt niet als bewijs van livebouw.
 
 Alle zware controles lokaal. Geen nieuwe GitHub Actions, geen budgetwijziging. Bundeling en één afgestemde push naar de bestaande PR-branch; PR blijft draft.
+
+## Controles herhalen
+
+Gebruikte lokale gereedschappen: Node 26.4.0, Playwright 1.64.1 (Chromium en WebKit), axe Playwright 4.14.0, TypeScript 5.9.3, Vinext 1.1.0 en Wrangler 4.92.0. Runtime-afhankelijkheden blijven vastgelegd in package-lock.json. Playwright/axe zijn lokale testgereedschappen; installeer zo nodig met `npm install --no-save --package-lock=false playwright@1.64.1 @axe-core/playwright@4.14.0` en installeer beide browserengines.
+
+- `node scripts/inzicht/staging.mjs` maakt de lokale fictieve database en privétesttoegang aan; nooit een bestaande database overschrijven.
+- `KLINK_INZICHT_LOCAL=1 npm run dev -- --port 18851` start de lokale proef.
+- `OBSERVATION_ORIGINAL_HTML=/absoluut/pad/naar/bron.html node --test scripts/inzicht/test.mjs scripts/inzicht/auth-test.mjs scripts/inzicht/mfa-test.mjs scripts/inzicht/source-observation-test.mjs scripts/inzicht/source-observation-preflight.mjs scripts/inzicht/reports-test.mjs scripts/test-teacher-worksheets.mjs scripts/test-teacher-module-recovery.mjs` herhaalt de 87 basiscontroles. Zonder het exacte bronbestand wordt de expliciete bronvergelijking overgeslagen; claim dan geen volledige broncontrole.
+- `KLINK_TEST_URL=http://127.0.0.1:18851 node scripts/inzicht/reports-browser.mjs` controleert de nieuwe schermen, toetsenbord-drilldown, drie PDF-modi en toegankelijkheid in beide engines.
+- `KLINK_URL=http://127.0.0.1:18851 KLINK_DOCENT_OUTPUT=docs/inzicht-20261101/evidence/docent-regression node scripts/test-teacher-redesign-browser.mjs` controleert de bestaande Klink+Docent-schermen.
+- `node scripts/inzicht/portable-test.mjs` controleert overdracht/herstel; de echte lokale PostgreSQL-proef vereist de gedocumenteerde lokale PostgreSQL-voorziening.
+- `node_modules/.bin/tsc --noEmit`, de gerichte oxlint-controle en `npm run build` controleren code en gewone productbouw. Dit publiceert niets.
+- Na toegang/hernieuwde quotumcontrole: `node scripts/inzicht/observations-upgrade-check.mjs --apply` uitsluitend op de ingebouwde aparte staging, gevolgd door `node scripts/inzicht/staging-assets.mjs`, `KLINK_INZICHT_STAGING=1 node_modules/.bin/vinext build` en de bestaande gecontroleerde `deploy-staging.mjs --deploy`-route. Controleer vóór uitvoering opnieuw head, parallel werk en schema. De migratiecheck is specifiek voor schema 5 → 7 en stopt bij een afwijkende basis.
+
+Privé online testaccounts/MFA-factoren worden via de bestaande beveiligde toegang beheerd, nooit uit Git of dit Drive-pakket gehaald. Online browserproeven zijn pas geldig na een geslaagde aanmelding en deployment. De normale productdeploy en merge maken geen deel uit van deze opdracht.
