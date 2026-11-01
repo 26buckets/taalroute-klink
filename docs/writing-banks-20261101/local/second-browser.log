@@ -1,0 +1,119 @@
+chromium 1280 light 12 PASS
+chromium 1280 dark 24 PASS
+chromium 390 light 36 PASS
+chromium 390 dark 48 PASS
+webkit 1280 light 60 PASS
+webkit 1280 dark 72 PASS
+webkit 390 light 84 PASS
+webkit 390 dark 96 PASS
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   {
++     engine: 'webkit',
++     message: 'Importing a module script failed.',
++     stack: 'TypeError: Importing a module script failed.\n' +
++       '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)',
++     theme: 'light',
++     url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',
++     width: 1280
++   },
++   {
++     engine: 'webkit',
++     message: 'Importing a module script failed.',
++     stack: 'TypeError: Importing a module script failed.\n' +
++       '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)',
++     theme: 'dark',
++     url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',
++     width: 1280
++   },
++   {
++     engine: 'webkit',
++     message: 'Importing a module script failed.',
++     stack: 'TypeError: Importing a module script failed.\n' +
++       '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)',
++     theme: 'dark',
++     url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',
++     width: 390
++   }
++ ]
+- []
+
+    at file:///Users/nicoknoester/Documents/Codex/2026-11-01/doe-een-analyse-hoeveel-onderdelen-al/work/klink/scripts/test-writing-banks-browser-20261101.mjs:35:75 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    {
+      engine: 'webkit',
+      width: 1280,
+      theme: 'light',
+      url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',
+      message: 'Importing a module script failed.',
+      stack: 'TypeError: Importing a module script failed.\n' +
+        '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)'
+    },
+    {
+      engine: 'webkit',
+      width: 1280,
+      theme: 'dark',
+      url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',
+      message: 'Importing a module script failed.',
+      stack: 'TypeError: Importing a module script failed.\n' +
+        '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)'
+    },
+    {
+      engine: 'webkit',
+      width: 390,
+      theme: 'dark',
+      url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',
+      message: 'Importing a module script failed.',
+      stack: 'TypeError: Importing a module script failed.\n' +
+        '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)'
+    },
+    'AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n' +
+      '+ actual - expected\n' +
+      '\n' +
+      '+ [\n' +
+      '+   {\n' +
+      "+     engine: 'webkit',\n" +
+      "+     message: 'Importing a module script failed.',\n" +
+      "+     stack: 'TypeError: Importing a module script failed.\\n' +\n" +
+      "+       '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)',\n" +
+      "+     theme: 'light',\n" +
+      "+     url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',\n" +
+      '+     width: 1280\n' +
+      '+   },\n' +
+      '+   {\n' +
+      "+     engine: 'webkit',\n" +
+      "+     message: 'Importing a module script failed.',\n" +
+      "+     stack: 'TypeError: Importing a module script failed.\\n' +\n" +
+      "+       '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)',\n" +
+      "+     theme: 'dark',\n" +
+      "+     url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',\n" +
+      '+     width: 1280\n' +
+      '+   },\n' +
+      '+   {\n' +
+      "+     engine: 'webkit',\n" +
+      "+     message: 'Importing a module script failed.',\n" +
+      "+     stack: 'TypeError: Importing a module script failed.\\n' +\n" +
+      "+       '    at module code (http://127.0.0.1:19041/@id/__x00__virtual:vite-rsc/entry-browser:7:13)',\n" +
+      "+     theme: 'dark',\n" +
+      "+     url: 'http://127.0.0.1:19041/#learner/chapters/writing/copy/production%3Acopy%3Aalfa-a%3AKSW-AA-TN-001-020?level=alfa-a&help=guided',\n" +
+      '+     width: 390\n' +
+      '+   }\n' +
+      '+ ]\n' +
+      '- []\n' +
+      '\n' +
+      '    at file:///Users/nicoknoester/Documents/Codex/2026-11-01/doe-een-analyse-hoeveel-onderdelen-al/work/klink/scripts/test-writing-banks-browser-20261101.mjs:35:75'
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

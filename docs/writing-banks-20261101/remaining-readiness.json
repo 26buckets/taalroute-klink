@@ -1,0 +1,45 @@
+{
+  "totalSources": 880,
+  "batch01NewExactIdentities": 12,
+  "alreadyExactSourceModels": 99,
+  "reusedButNormalizationCriterionOpen": 9,
+  "otherModules": [
+    {
+      "module": "SW",
+      "sourceRecords": 100,
+      "open": "Every source visual is a production description or placeholder; an existing image may only be reused after matching the exact sense, answer ambiguity and complete hand review."
+    },
+    {
+      "module": "HT",
+      "sourceRecords": 100,
+      "open": "Recorded/verified single-word audio and file-level Taalroute metadata are not evidenced in the source; reuse requires actual sound-file checks."
+    },
+    {
+      "module": "HS",
+      "sourceRecords": 100,
+      "open": "Source requires handwriting, not typed input; verify real audio and paper/self-review workflow before integration."
+    },
+    {
+      "module": "TZ",
+      "sourceRecords": 100,
+      "open": "Unknown valid variants must enter review rather than automatically fail. Current generic typed-answer player does not fulfill this assessment contract."
+    },
+    {
+      "module": "VGI",
+      "sourceRecords": 140,
+      "open": "Source-specific accepted formats, evidence per field, feedback and partial form draft preservation still require integration and source-bound browser verification."
+    },
+    {
+      "module": "SB",
+      "sourceRecords": 120,
+      "open": "Rubric and alternative correct messages must remain open; no exact-string automatic scoring. Source-model visibility and saved first answer must be verified."
+    },
+    {
+      "module": "ZS",
+      "sourceRecords": 100,
+      "open": "Content criteria, alternative correct texts and independent first answer need source-bound integration and verification."
+    }
+  ],
+  "humanReviewPerformed": false,
+  "publicationOfUnverifiedSources": false
+}

@@ -1,3 +1,4 @@
+import {verifyWritingBanksRelease,readBeforeWritingBanks} from './check-writing-banks-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -6,14 +7,15 @@ const base='5aff33c933f6e6446264f4ae668ea2a923c20e61',live='039eb22ede86403144dc
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifySourceRepeatRelease(read=readFileSync){
+ const successor=verifyWritingBanksRelease(read),currentRead=read;read=file=>readBeforeWritingBanks(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-source-repeat-20261101.json');
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearanceUnchanged);
  assert(r.userRequest.includes('overige Klink-invulbatches zelfstandig af'));
  const policy='docs/klink-invullen-20261101/automatic-owner-approval.json';assert.equal(sha(read(policy)),sha(git('show',base+':'+policy)));
  git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');assert.equal(git('diff','--name-only',live,base,'--',...roots).length,0);
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);for(const[f,h]of Object.entries(r.evidenceFiles))assert.equal(sha(read(f)),h,f);
- assert.equal(git('diff','--name-only',base,'--','app','hooks','public','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','wrangler.jsonc').length,0,'Preserve approved appearance, every original media/content file, storage, dependencies and publication configuration');
+ assert.equal(git('diff','--name-only',base,successor.baselineSourceCommit,'--','app','hooks','public','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','wrangler.jsonc').length,0,'Preserve approved appearance, every original media/content file, storage, dependencies and publication configuration');
  assert.deepEqual(changed.filter(f=>f.startsWith('components/')),['components/product/practice-chapters.tsx','components/product/production-round.tsx','components/product/source-repeat-round.tsx']);
  assert.deepEqual(changed.filter(f=>f.startsWith('data/')),['data/klink-source-repeat-rounds.json']);assert.deepEqual(changed.filter(f=>f.startsWith('lib/')),['lib/practice-chapters.ts','lib/source-repeat.ts']);
  const data=json('data/klink-source-repeat-rounds.json'),source=json(folder+'sources/position-references.json'),native=json(folder+'sources/native-document.json');assert.equal(data.rounds.length,48);assert.equal(data.sourceRevisionId,native.revisionId);assert.equal(source.revisionId,native.revisionId);
@@ -34,6 +36,6 @@ export function verifySourceRepeatRelease(read=readFileSync){
  const audio=json(folder+'audio-audit.json');assert(audio.passed);assert.equal(audio.files.length,417);
  const media=json(folder+'local/media-checks.json');assert.equal(media.hashes.length,417);assert(media.hashes.every(c=>c.sourceAndHostedIdentical&&c.taalrouteMetadataRetained));assert.equal(media.decoded.length,2);assert(media.decoded.every(c=>c.files.length===417));assert.equal(media.played.length,6);assert(media.played.every(c=>c.ended&&c.nativeElement&&c.playedThroughExistingControl));assert.deepEqual(media.errors,[]);assert.equal(media.humanListeningPerformed,false);
  const proof=json(folder+'verification.json');for(const k of['types','lint','unit','build','sourceReferences','allAnswers','browser','progressIsolated','appearancePreserved','media','learningGoalsPreserved','localOnly'])assert.equal(proof[k],true,k);assert.equal(proof.independentHumanReview,false);assert.equal(proof.classroomPilot,'open');
- const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
+ const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,successor};
 }
-export function readBeforeSourceRepeat(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeSourceRepeat(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeWritingBanks(file,r.successor,read);}
