@@ -4,6 +4,97 @@
   "sourceBase": "6e7bb1ccc796ebdd899d24cc8a679d039fbc4c74",
   "live": {
     "application": "Klink",
+    "builtAt": "2026-11-01T02:45:48.986Z",
+    "sourceCommit": "0f9191da3e38064bd81034f1d071056601bfe83e",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "worker": {
+    "id": "67a1b3da-30f0-4549-9a67-5ce4e09ad295",
+    "source": "latest approved PUBLICATIE-ACTUEEL.md"
+  },
+  "originalRows": [
+    {
+      "activity": "text-question",
+      "level": "a1",
+      "help": "practice",
+      "image": null,
+      "id": "klink-teksten-zelf-a1-r01-v1",
+      "title": "Leesronde 1 · School, winkel en werk",
+      "url": "/practice-content/reading-rounds-20261031/a1-r01-e9b59c847cc51360.json",
+      "count": 12
+    },
+    {
+      "activity": "text-question",
+      "level": "a2",
+      "help": "practice",
+      "image": null,
+      "id": "klink-teksten-zelf-a2-r01-v1",
+      "title": "Leesronde 1 · Afspraken, reizen en boeken",
+      "url": "/practice-content/reading-rounds-20261031/a2-r01-220269c6452b808d.json",
+      "count": 12
+    },
+    {
+      "activity": "sentences",
+      "level": "a1",
+      "help": "practice",
+      "image": null,
+      "id": "klink-zinnen-zelf-a1-20261031-r1",
+      "title": "Zinnenronde 1 · Werk en dagelijks leven",
+      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r1-f3027ebbd369c1b2.json",
+      "count": 12
+    },
+    {
+      "activity": "sentences",
+      "level": "a2",
+      "help": "practice",
+      "image": null,
+      "id": "klink-zinnen-zelf-a2-20261031-r1",
+      "title": "Zinnenronde 1 · Werk en dagelijks leven",
+      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r1-e7cefe2754c23004.json",
+      "count": 12
+    },
+    {
+      "activity": "sentences",
+      "level": "a1",
+      "help": "practice",
+      "image": null,
+      "id": "klink-zinnen-zelf-a1-20261031-r2",
+      "title": "Zinnenronde 2 · Werk en dagelijks leven",
+      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r2-ea99e1d6797924b3.json",
+      "count": 10
+    },
+    {
+      "activity": "sentences",
+      "level": "a2",
+      "help": "practice",
+      "image": null,
+      "id": "klink-zinnen-zelf-a2-20261031-r2",
+      "title": "Zinnenronde 2 · Werk en dagelijks leven",
+      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r2-908b71686a655be7.json",
+      "count": 10
+    }
+  ],
+  "files": {
+    "data/klink-production-index.json": "4054b25ad9676ffa922516a6e3d5f15f83f221740b5bad83af580789f3e40c64",
+    "data/klink-progress-image-aliases-20261030.json": "bb5e42a75bee96803a1e10e499f96bada7e59ab5e13398748470ca1fc60c70cb",
+    "components/product/extended-practice-surface.tsx": "0abd6349175d3c0815d57f4a40497133b594c4c6bf271361e7f2686d4b719198",
+    "docs/appearance-floor-20261031/floor.json": "672588e3e5bd1fdcd5cc434fec7c32ff2bb2bb5ead27e57d287d4a6b9086f3d6",
+    "public/practice-content/reading-rounds-20261031/a1-r01-e9b59c847cc51360.json": "e9b59c847cc5136076d7cc0c007d1fd1eb11fe431a61bf3904a73253db969582",
+    "public/practice-content/reading-rounds-20261031/a2-r01-220269c6452b808d.json": "220269c6452b808d673e0ca2428e0f72769253c76d210139e8890e1e19f35694",
+    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r1-f3027ebbd369c1b2.json": "f3027ebbd369c1b2b684357432d34861d7c94361adffe26132632f3da5ad3fc9",
+    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r1-e7cefe2754c23004.json": "e7cefe2754c230040c9e32d90db5773d3007d6addc1948ca8bdd034344ed6ecd",
+    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r2-ea99e1d6797924b3.json": "ea99e1d6797924b32fd5bd24356a75664238662a095e027650a30caec2f16e7a",
+    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r2-908b71686a655be7.json": "908b71686a655be77419666843d5093c02fa29684deef4246c8de780ee55f6d2"
+  },
+  "initialSourceBase": "9b4e0937dcad82e14e25ebc97e8a4b08b244042f",
+  "initialLive": {
+    "application": "Klink",
     "builtAt": "2026-11-01T01:07:19.206Z",
     "sourceCommit": "dd3e3528b57ed9edcee4f99361dddbe3ab43da71",
     "branch": "main",
@@ -14,7 +105,8 @@
     "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
     "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
   },
-  "worker": [
+  "liveSourceCommit": "0f9191da3e38064bd81034f1d071056601bfe83e",
+  "initialWorker": [
     {
       "id": "d8ce4f6f-ac1d-47cd-9b73-1e6aaa62f664",
       "source": "wrangler",
@@ -175,93 +267,5 @@
       ],
       "created_on": "2026-11-01T01:07:59.110693Z"
     }
-  ],
-  "originalRows": [
-    {
-      "activity": "text-question",
-      "level": "a1",
-      "help": "practice",
-      "image": null,
-      "id": "klink-teksten-zelf-a1-r01-v1",
-      "title": "Leesronde 1 · School, winkel en werk",
-      "url": "/practice-content/reading-rounds-20261031/a1-r01-e9b59c847cc51360.json",
-      "count": 12
-    },
-    {
-      "activity": "text-question",
-      "level": "a2",
-      "help": "practice",
-      "image": null,
-      "id": "klink-teksten-zelf-a2-r01-v1",
-      "title": "Leesronde 1 · Afspraken, reizen en boeken",
-      "url": "/practice-content/reading-rounds-20261031/a2-r01-220269c6452b808d.json",
-      "count": 12
-    },
-    {
-      "activity": "sentences",
-      "level": "a1",
-      "help": "practice",
-      "image": null,
-      "id": "klink-zinnen-zelf-a1-20261031-r1",
-      "title": "Zinnenronde 1 · Werk en dagelijks leven",
-      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r1-f3027ebbd369c1b2.json",
-      "count": 12
-    },
-    {
-      "activity": "sentences",
-      "level": "a2",
-      "help": "practice",
-      "image": null,
-      "id": "klink-zinnen-zelf-a2-20261031-r1",
-      "title": "Zinnenronde 1 · Werk en dagelijks leven",
-      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r1-e7cefe2754c23004.json",
-      "count": 12
-    },
-    {
-      "activity": "sentences",
-      "level": "a1",
-      "help": "practice",
-      "image": null,
-      "id": "klink-zinnen-zelf-a1-20261031-r2",
-      "title": "Zinnenronde 2 · Werk en dagelijks leven",
-      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r2-ea99e1d6797924b3.json",
-      "count": 10
-    },
-    {
-      "activity": "sentences",
-      "level": "a2",
-      "help": "practice",
-      "image": null,
-      "id": "klink-zinnen-zelf-a2-20261031-r2",
-      "title": "Zinnenronde 2 · Werk en dagelijks leven",
-      "url": "/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r2-908b71686a655be7.json",
-      "count": 10
-    }
-  ],
-  "files": {
-    "data/klink-production-index.json": "4054b25ad9676ffa922516a6e3d5f15f83f221740b5bad83af580789f3e40c64",
-    "data/klink-progress-image-aliases-20261030.json": "bb5e42a75bee96803a1e10e499f96bada7e59ab5e13398748470ca1fc60c70cb",
-    "components/product/extended-practice-surface.tsx": "0abd6349175d3c0815d57f4a40497133b594c4c6bf271361e7f2686d4b719198",
-    "docs/appearance-floor-20261031/floor.json": "672588e3e5bd1fdcd5cc434fec7c32ff2bb2bb5ead27e57d287d4a6b9086f3d6",
-    "public/practice-content/reading-rounds-20261031/a1-r01-e9b59c847cc51360.json": "e9b59c847cc5136076d7cc0c007d1fd1eb11fe431a61bf3904a73253db969582",
-    "public/practice-content/reading-rounds-20261031/a2-r01-220269c6452b808d.json": "220269c6452b808d673e0ca2428e0f72769253c76d210139e8890e1e19f35694",
-    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r1-f3027ebbd369c1b2.json": "f3027ebbd369c1b2b684357432d34861d7c94361adffe26132632f3da5ad3fc9",
-    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r1-e7cefe2754c23004.json": "e7cefe2754c230040c9e32d90db5773d3007d6addc1948ca8bdd034344ed6ecd",
-    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a1-20261031-r2-ea99e1d6797924b3.json": "ea99e1d6797924b32fd5bd24356a75664238662a095e027650a30caec2f16e7a",
-    "public/practice-content/reading-rounds-20261031/klink-zinnen-zelf-a2-20261031-r2-908b71686a655be7.json": "908b71686a655be77419666843d5093c02fa29684deef4246c8de780ee55f6d2"
-  },
-  "initialSourceBase": "9b4e0937dcad82e14e25ebc97e8a4b08b244042f",
-  "initialLive": {
-    "application": "Klink",
-    "builtAt": "2026-11-01T01:07:19.206Z",
-    "sourceCommit": "dd3e3528b57ed9edcee4f99361dddbe3ab43da71",
-    "branch": "main",
-    "sourceClean": true,
-    "curriculumEdition": "klink-leerlijn-20261016-v1",
-    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
-    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
-    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
-    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
-  },
-  "liveSourceCommit": "0f9191da3e38064bd81034f1d071056601bfe83e"
+  ]
 }

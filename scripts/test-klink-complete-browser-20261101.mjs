@@ -27,7 +27,7 @@ async function playModel(page,source,button,full){
  await page.waitForFunction(({source,endBefore})=>window.__completeAudio.ended.length>endBefore&&window.__completeAudio.ended.slice(endBefore).some(s=>new URL(s).pathname===source),{source,endBefore},{timeout:full?90000:20000});
  assert(await page.evaluate(()=>new Set(window.__completeAudio.elements.filter(a=>!a.paused&&!a.ended)).size<=1));
 }
-for(const config of configurations){
+await Promise.all(configurations.map(async config=>{
  const browser=await({chromium,webkit}[config.engine]).launch();
  try{
   const page=await browser.newPage({viewport:{width:config.width,height:900},colorScheme:config.theme,hasTouch:config.width<650,isMobile:config.width<650});
@@ -103,6 +103,6 @@ for(const config of configurations){
    if(process.env.KLINK_COMPLETE_SMOKE&&round===2)break;
   }
  }finally{await browser.close();}
-}
+}));
 assert.deepEqual(errors,[]);
 console.log(JSON.stringify({roundChecks:checks.length,questions:checks.reduce((n,x)=>n+x.questions,0),nativeModelPlaybacks:checks.reduce((n,x)=>n+x.nativeModelPlaybacks,0),errors:errors.length}));

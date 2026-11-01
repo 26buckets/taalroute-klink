@@ -51,7 +51,7 @@ export function verifyCompleteContent(read=readFileSync){
  assert.equal(goals.length,200);assert.equal(new Set(goals.map(g=>g.textId)).size,200);
  for(const goal of goals){
   const source=json(folder+'sources/R7-PORTABLE-IMPORTMODEL-'+goal.level+'.json').texts.find(t=>t.id===goal.textId);assert(source);
-  assert.equal(goal.title,source.title);assert.deepEqual(goal.questionIds,[...source.questions.map(q=>q.id)]);assert(goal.existingGoalFamily);
+  assert.equal(goal.title,source.title);assert.deepEqual(goal.questionIds,source.questions.map(q=>q.id));assert(goal.existingGoalFamily);
  }
  let legacy=0;
  for(const row of baseline.originalRows.filter(r=>r.id.startsWith('klink-teksten-zelf-'))){
