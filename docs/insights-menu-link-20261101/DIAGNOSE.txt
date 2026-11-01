@@ -1,0 +1,7 @@
+1 november 2026 — ontbrekende Inzichten-link
+Livebron vooraf: 6a4c2acd346c436cb0344b77da21de8dadc09c16; canonieke main: 08fda5b385ed384d7bf6bebae7a8a2d388c4ac39.
+Het geopende echte hamburgermenu bevat Docentenhandleiding, Kleurstand, Klink+docent en Delen. Geen Inzichten-link in DOM of canonieke headerbron; geen login-, school-, rol- of CSS-voorwaarde die deze link wegfiltert.
+Nico verduidelijkt de bestaande afzonderlijke bestemming https://inzicht.taalroute.nl/. De echte browser toont Klink Inzicht, Log in voor je groepen en cursisten, E-mailadres, Wachtwoord en Inloggen. Geen login ingediend.
+Een afzonderlijke niet-samengevoegde Inzicht-uitbreiding (concept-PR8) is niet nodig voor deze gewone verwijzing. De eerdere hypothese dat die uitbreiding hiervoor moest worden gepubliceerd, is na Nico's verduidelijking verworpen.
+Herstel: één native externe link Inzichten, bestaande Lucide-grafiekicoon en bestaande menuopmaak; nieuw tabblad met noopener noreferrer houdt de oefening open. Geen inhoud, media, voortgang, opslag, routes of Inzicht-toegang gewijzigd.
+Geen zware GitHub Actions aanwezig of gestart. Lokale browsercontrole in Chromium/WebKit, vier schermmaten, licht/donker, aanraken, Tab/Enter, Escape, werkelijke bestemmingspagina en opslagbehoud. Geen fysieke telefoon of login achter het inlogscherm getest.
