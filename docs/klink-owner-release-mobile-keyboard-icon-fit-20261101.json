@@ -1,0 +1,27 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "20a1d3ccb4f63c7fcacd2fc90d5d0fa50b820a26",
+  "liveSourceCommit": "20a1d3ccb4f63c7fcacd2fc90d5d0fa50b820a26",
+  "userRequest": "Controleer ook of het antwoordveld, Vergelijk en Verder goed bereikbaar blijven als het toetsenbord op mobiel openstaat. Herstel wat nodig is, behoud alle inhoud, audio en voortgang en zet het online. Maak de knoopjes kleiner. Ik vind ze nog steeds heel groot.",
+  "approval": "docs/appearance-floor-20261031/approved-updates/mobile-keyboard-icon-fit-20261101.json",
+  "scope": "Fit the existing photo/text button faces inside their compact 44px controls with zero inner button padding and a 44px face. Preserve the already published keyboard viewport behavior, all handlers, data and media. Extend the whole-task test to the two photo/text controls and their actual face bounds.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "scripts/check-mobile-keyboard-icon-fit-release-20261101.mjs",
+    "scripts/check-mobile-keyboard-release-20261101.mjs",
+    "scripts/test-mobile-keyboard-icon-fit-release-20261101.mjs",
+    "scripts/test-mobile-keyboard-layout-browser-20261101.mjs",
+    "VORMGEVING-VASTGEZET.md"
+  ],
+  "files": {
+    "app/learner-layout.css": "5f78b412d7e76d6d98a8e0a82bc411340a619d4beb6c27772e25e2a8c155b723",
+    "scripts/check-mobile-keyboard-icon-fit-release-20261101.mjs": "0eafba8261f5a7eb815144122dff4300b9cc7bc393338697921744fea8624517",
+    "scripts/check-mobile-keyboard-release-20261101.mjs": "ee271de7253f1c75fde881c3f6f5f0689807b7f99c679e1611a8195b9e092f5f",
+    "scripts/test-mobile-keyboard-icon-fit-release-20261101.mjs": "e2776e3199cae9ab572c215dac1646ac9725f3e5ef0e7f8af5513fec0959421b",
+    "scripts/test-mobile-keyboard-layout-browser-20261101.mjs": "8d6f2b1393e455591cd8b3ddcfb6ed59df4f47e470006e0e5e6ee35bf0039bcd",
+    "VORMGEVING-VASTGEZET.md": "7fcae2c322093c046fed16d11c8d85c00988f1ce03a9f0c75127f74b3baa4987"
+  }
+}

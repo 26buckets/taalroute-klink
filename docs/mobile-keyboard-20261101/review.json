@@ -10,6 +10,6 @@
   "nativeScreenKeyboardTested": false,
   "physicalPhoneTested": false,
   "method": "Chromium/WebKit: synthetic VisualViewport resize/scroll and genuine layout viewport resize; visible heights 230/320/210px, pan offsets 0/80/20px, light/dark, typing/compare/ready, audio and stored progress, close restoration of selected tempo, navigation cleanup.",
-  "limitations": "No iOS Simulator is installed and no physical phone is connected. Actual native on-screen keyboard, browser-specific animation and device calibration remain unverified. No claim of physical-device testing.",
+  "limitations": "Actual native on-screen keyboard, browser-specific animation and physical-device calibration remain unverified. No physical-phone or native-screen-keyboard test was performed.",
   "codeScope": "Exact old component prefix/suffix outside the viewport useLayoutEffect retained. Source CSS is an unchanged prefix. No new dependencies; all listeners are cleaned up. Audio, tempo, answer, storage and route handlers remain byte-identical."
 }

@@ -433,6 +433,8 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
   .learner-app.consistent-layout:has(.cp-pace-controls):has(.cp-text-entry) {
     :is(.cp-exercise-tools, .cp-exercise-menu-bar, .cp-exercise-feedback, .cp-task-card) button { min-height: 44px; padding: 6px 8px; font-size: 14px; }
     .cp-exercise-record-head nav button, .cp-exercise-listen, .cp-view-toggle { width: 44px; height: 44px; min-width: 44px; }
+    .cp-exercise-tools .cp-view-toggle { padding: 0; }
+    .cp-view-toggle > span { width: 44px; height: 44px; }
     .cp-exercise-tools { min-height: 44px; gap: 8px; }
     .cp-exercise-tools > .cp-pace-controls { gap: 8px; }
     .cp-exercise-tools > .cp-pace-controls > button { white-space: nowrap; padding-inline: 4px; }
