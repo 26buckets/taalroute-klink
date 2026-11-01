@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { ExerciseSurface } from '@/components/product/package-exercise-browser';
+type Surface =
+  typeof import('@/components/product/package-exercise-browser').ExerciseSurface;
 import type { PackageDefinition, PackageExercise } from '@/lib/package-content';
 import { api, useSave } from './client';
 import type { Content } from '@/lib/inzicht/rules';
@@ -379,6 +380,21 @@ function SchoolPlayer({
   access: ExerciseAccess;
   close: () => void;
 }) {
+  const [ExerciseSurface, setSurface] = useState<Surface | null>(null),
+    [loadError, setLoadError] = useState(false);
+  useEffect(() => {
+    let active = true;
+    import('@/components/product/package-exercise-browser')
+      .then((module) => {
+        if (active) setSurface(() => module.ExerciseSurface);
+      })
+      .catch(() => {
+        if (active) setLoadError(true);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
   const [notice, setNotice] = useState(''),
     [correct, setCorrect] = useState(false),
     [audioError, setAudioError] = useState('');
@@ -399,48 +415,57 @@ function SchoolPlayer({
       </button>
       <h2>{access.content.title}</h2>
       <div className="cp-exercise-card">
-        <ExerciseSurface
-          exercise={exercise}
-          pack={pack}
-          guided={false}
-          canAnswer={!save.busy}
-          answeredCorrectly={correct}
-          speakingOptionId=""
-          onOpenExercise={() => {}}
-          onHelp={() => {}}
-          onReset={() => {
-            setCorrect(false);
-            setNotice('');
-          }}
-          onAudio={async (src) => {
-            if (!src) return false;
-            try {
-              audio.current?.pause();
-              audio.current = new Audio(src);
-              await audio.current.play();
-              setAudioError('');
-              return true;
-            } catch {
-              setAudioError('Luisteren is niet gelukt. Probeer opnieuw.');
-              return false;
-            }
-          }}
-          onFinish={(answer) => {
-            void save.save<{ correct: boolean }>(
-              `school-practice?class=${access.class}&content=${access.content.id}${access.assignment ? `&assignment=${access.assignment}` : ''}`,
-              school,
-              { answer },
-              (r) => {
-                setCorrect(r.correct);
-                setNotice(
-                  r.correct
-                    ? 'Goed. Je oefenpoging is bewaard.'
-                    : 'Je oefenpoging is bewaard. Probeer opnieuw.',
-                );
-              },
-            );
-          }}
-        />
+        {loadError ? (
+          <p role="alert">
+            Oefening laden is niet gelukt. Controleer je verbinding.{' '}
+            <button onClick={() => location.reload()}>Opnieuw openen</button>
+          </p>
+        ) : ExerciseSurface ? (
+          <ExerciseSurface
+            exercise={exercise}
+            pack={pack}
+            guided={false}
+            canAnswer={!save.busy}
+            answeredCorrectly={correct}
+            speakingOptionId=""
+            onOpenExercise={() => {}}
+            onHelp={() => {}}
+            onReset={() => {
+              setCorrect(false);
+              setNotice('');
+            }}
+            onAudio={async (src) => {
+              if (!src) return false;
+              try {
+                audio.current?.pause();
+                audio.current = new Audio(src);
+                await audio.current.play();
+                setAudioError('');
+                return true;
+              } catch {
+                setAudioError('Luisteren is niet gelukt. Probeer opnieuw.');
+                return false;
+              }
+            }}
+            onFinish={(answer) => {
+              void save.save<{ correct: boolean }>(
+                `school-practice?class=${access.class}&content=${access.content.id}${access.assignment ? `&assignment=${access.assignment}` : ''}`,
+                school,
+                { answer },
+                (r) => {
+                  setCorrect(r.correct);
+                  setNotice(
+                    r.correct
+                      ? 'Goed. Je oefenpoging is bewaard.'
+                      : 'Je oefenpoging is bewaard. Probeer opnieuw.',
+                  );
+                },
+              );
+            }}
+          />
+        ) : (
+          <output>Oefening ophalen…</output>
+        )}
       </div>
       <output>{save.busy ? 'Bewaren…' : notice}</output>
       <p role="alert">{save.error || audioError}</p>

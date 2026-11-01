@@ -2,7 +2,7 @@
 
 1 november 2026. Uitsluitend synthetische staging; teststatus is geen menselijke of juridische vrijgave. R2 > R1 > v1.0.
 
-53 GETEST, 16 DEELS, 3 OPEN.
+53 GETEST, 16 DEELS, 3 OPEN. Dit is een bewijsinventaris inclusief eerdere versies, geen volledige hertest van de nieuwste kandidaat. De actuele online herhaling is door het D1-dagquotum geblokkeerd.
 
 | Case | Eis | Status | Bewijs / open punt |
 |---|---|---|---|
@@ -40,7 +40,7 @@
 | KI032 | gedeelde computer logout -> geen leerlingdata in cache/volgende sessie. | GETEST | Online uitloggen trekt sessie in; Back/Forward/reload toont login; volgende beheerder krijgt geen dossiers. Chromium en WebKit; geen schooldata in browseropslag. |
 | KI033 | offline of netwerkstoring -> geen vals 'opgeslagen'. | GETEST | Browser netwerkverlies + retry in Chromium/WebKit; invoer blijft, geen vals succes. |
 | KI034 | uitgetreden docent open tab -> volgende save 403. | GETEST | Actueel uitgetreden membership weigert volgende mutatie. |
-| KI035 | 30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten. | DEELS | Online 30×100, 3000 TRAIN-events: API 254–362 ms; zes volledige browsernavigaties/renderingen 1560–4911 ms. Twee-secondengrens niet gehaald. Beide engines doorlopen vijf vaardigheidspagina's en bewijs. Geen gelijktijdigheids-/cold-startgarantie. |
+| KI035 | 30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten. | DEELS | Schaalproef 30×100/3000 TRAIN: zes browserruns 2159–5714 ms, mediaan 2400,5 ms versus 4830,5 ms baseline. API 432–697 ms. Twee seconden niet gehaald. Laatste volledige online herhaling geblokkeerd door D1-dagquotum; evidence/speed/. |
 | KI036 | bestaande Klink+Docent testregressie -> geen gewijzigde inhoud, routes of werkbladen. | GETEST | 27 bestaande Klink+Docent-regressietests opnieuw lokaal geslaagd; oorspronkelijke productbestanden en vormgevingsvloer zijn ongewijzigd. Zie evidence/mfa-klink-docent-regressions.log. |
 | KI037 | geen externe AI-aanroepen; code/audit van egress en dependencies. | GETEST | Statische runtime/dependencyreview: geen nieuwe AI/ML SDK of externe fetch in servermodule. |
 | KI038 | schoolwissel docent -> huidige leerlingselectie gereset. | GETEST | Schoolwissel reset geselecteerde klas/cursist in beide browserengines. |

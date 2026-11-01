@@ -216,7 +216,7 @@
       "id": "KI035",
       "requirement": "30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.",
       "status": "DEELS",
-      "evidence_or_gap": "Online 30×100, 3000 TRAIN-events: API 254–362 ms; zes volledige browsernavigaties/renderingen 1560–4911 ms. Twee-secondengrens niet gehaald. Beide engines doorlopen vijf vaardigheidspagina's en bewijs. Geen gelijktijdigheids-/cold-startgarantie."
+      "evidence_or_gap": "Schaalproef 30×100/3000 TRAIN: zes browserruns 2159–5714 ms, mediaan 2400,5 ms versus 4830,5 ms baseline. API 432–697 ms. Twee seconden niet gehaald. Laatste volledige online herhaling geblokkeerd door D1-dagquotum; evidence/speed/."
     },
     {
       "id": "KI036",
@@ -440,5 +440,6 @@
       "status": "DEELS",
       "evidence_or_gap": "Alle 72 eisen met bewijs/gaps en prioriteit vastgelegd; bovenstaande zwaardere eisen nog niet allemaal gerealiseerd."
     }
-  ]
+  ],
+  "current_candidate_note": "Latest performance candidate: local checks passed; full online journey blocked by daily D1 write quota. Earlier online proofs are historical."
 }

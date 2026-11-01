@@ -1,5 +1,6 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
+import { checkOnlineBudget } from './online-budget.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { hash } from '../../lib/inzicht/rules.ts';
@@ -10,6 +11,7 @@ assert.equal(
   config.d1_databases[0].database_id,
   '95f1de18-0c61-46ca-b2af-5ee36543f67f',
 );
+checkOnlineBudget();
 const args = [
   'd1',
   'execute',
@@ -142,8 +144,8 @@ const cleanup =
     .join('\n') +
   `\nDELETE FROM organizations WHERE id='${org}';\nDELETE FROM skill_definitions WHERE id LIKE 'perf-pr8-%';`;
 writeFileSync('.wrangler/performance-cleanup.sql', cleanup);
-run(['--file', '.wrangler/performance-seed.sql']);
 try {
+  run(['--file', '.wrangler/performance-seed.sql']);
   const cookie = await apiCookie('docent'),
     measurements = [];
   const browserMeasurements = [];
@@ -179,14 +181,29 @@ try {
           },
         ]);
         const page = await context.newPage();
+        const prefetched = [];
+        page.on('request', (request) => {
+          const url = new URL(request.url());
+          if (
+            url.pathname.startsWith('/inzicht/') &&
+            url.searchParams.has('_rsc')
+          )
+            prefetched.push(url.pathname);
+        });
         const start = performance.now();
-        await page.goto(
+        const document = await page.goto(
           `${base}/inzicht/klassen/${org}:klas/matrix?school=${org}`,
         );
+        assert.equal(document.headers()['cache-control'], 'no-store, private');
         await page.locator('.ki-table tbody tr').last().waitFor();
         assert.equal(await page.locator('.ki-table tbody tr').count(), 30);
         assert.equal(await page.locator('.ki-table thead th').count(), 21);
         const elapsed_ms = Math.round(performance.now() - start);
+        assert.equal(
+          prefetched.length,
+          0,
+          'Matrix opening must not prefetch dossiers',
+        );
         for (let i = 0; i < 4; i++)
           await page
             .getByRole('button', { name: 'Volgende leerdoelen', exact: true })
@@ -205,10 +222,35 @@ try {
         await page
           .getByRole('link', { name: 'Terug naar de matrix', exact: true })
           .waitFor();
+        const timing = await page.evaluate(() => ({
+          navigation: performance
+            .getEntriesByType('navigation')
+            .map((e) => e.toJSON()),
+          resources: performance
+            .getEntriesByType('resource')
+            .map((e) => e.toJSON()),
+        }));
+        const classRequest = timing.resources.find(
+          (r) => new URL(r.name).pathname === '/api/inzicht/classes',
+        );
+        const matrixRequest = timing.resources.find((r) =>
+          new URL(r.name).pathname.endsWith('/matrix'),
+        );
+        assert(
+          matrixRequest.startTime < classRequest.responseEnd,
+          'Matrix must start before class details finish',
+        );
+        assert(
+          !timing.resources.some((r) =>
+            new URL(r.name).pathname.includes('/package-exercise-browser-'),
+          ),
+          'Teacher matrix must not load the exercise player',
+        );
         browserMeasurements.push({
           engine,
           run,
           elapsed_ms,
+          timing,
           fresh_browser_cache: true,
           all_five_skill_pages: true,
           evidence_link: true,

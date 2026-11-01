@@ -1954,6 +1954,25 @@ export async function handleInzicht(
     if (error instanceof HttpError || error instanceof MfaError)
       return response({ error: error.message }, error.status);
     // Do not log names, notes, answers, tokens or database error text.
+    if (
+      error instanceof Error &&
+      error.message.startsWith('D1_ERROR:') &&
+      /daily.*limit|limit.*daily/i.test(error.message)
+    ) {
+      console.error('inzicht.database_daily_limit');
+      return response(
+        {
+          error:
+            'De testomgeving heeft de dagelijkse databaselimiet bereikt. Probeer later opnieuw.',
+        },
+        503,
+        {
+          'Retry-After': String(
+            Math.ceil((86400000 - (Date.now() % 86400000)) / 1000),
+          ),
+        },
+      );
+    }
     console.error('inzicht.request_failed');
     return response(
       { error: 'Opslaan of ophalen is niet gelukt. Probeer opnieuw.' },

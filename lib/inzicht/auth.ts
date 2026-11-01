@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer';
 // Same scrypt parameters as the separately inspected Klink Inzicht account service.
 import { randomBytes, scrypt, timingSafeEqual } from 'node:crypto';
 const derive = (password: string, salt: string) =>

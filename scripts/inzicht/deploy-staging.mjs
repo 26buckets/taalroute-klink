@@ -29,11 +29,19 @@ export function checkStaging(config) {
     ],
   );
   assert.equal(config.assets.binding, 'ASSETS');
-  assert.equal(config.assets.run_worker_first, true);
+  assert.deepEqual(config.assets.run_worker_first, [
+    '/',
+    '/inzicht',
+    '/inzicht/*',
+    '/api/*',
+  ]);
 }
 if (process.argv[1]?.endsWith('/deploy-staging.mjs')) {
   const config = JSON.parse(readFileSync('dist/server/wrangler.json'));
   checkStaging(config);
+  const headers = readFileSync('dist/client/_headers', 'utf8');
+  assert(headers.includes('X-Robots-Tag: noindex, nofollow, noarchive'));
+  assert(headers.includes("frame-ancestors 'none'"));
   assert.equal(
     process.argv[2],
     '--deploy',

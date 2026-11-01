@@ -1,4 +1,4 @@
-# KLINK INZICHT — docent-cursistproef op staging
+# KLINK INZICHT — snelheid en technische afronding op staging
 
 1 november 2026. Alleen fictieve gegevens. Geen merge of productiepublicatie.
 
@@ -7,8 +7,34 @@
 - Staging: https://klink-inzicht-pr8-staging.nico-554.workers.dev/inzicht
 - Draft PR: https://github.com/26buckets/taalroute-klink/pull/8
 - Projectmap: https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF
-- Actuele stagingdeployment: `06739054-6fc4-40c0-8e82-c6c8fd3fc4dd`, schema 5.
+- Actuele stagingdeployment: `a078ad0a-9adc-4b1c-ab5c-fbd870b75e21`, schema 5. De laatste lokale kandidaat is nog niet gedeployed: de verplichte schemacontrole stopt op het D1-dagquotum.
 - De lokale bestanden `KLINK-INZICHT-STAGING-TOEGANG.txt` en `KLINK-INZICHT-MFA-TOEGANG.txt` geven Nico toegang tot de zes fictieve testaccounts. Wachtwoorden, MFA-sleutels en herstelcodes blijven buiten Git en Drive.
+
+## Actuele vervolgopdracht: snelheid en techniek
+
+Dit is de uitvoering van de ontwerpchat **KLINK: Docentdashboard ontwerpen**, onder de naam Klink Inzicht. Klink+Docent blijft uitsluitend de afzonderlijke materialen-/digibordfunctie.
+
+De docentenmatrix haalt klasgegevens en matrix gelijktijdig op. Inzicht-links halen niet langer tientallen ongeopende dossiers op de achtergrond op. De grote bestaande oefenspeler wordt pas geladen wanneer de cursist daadwerkelijk een oefening opent. Statische assets worden rechtstreeks door Cloudflare Assets geleverd, met noindex- en veiligheidsheaders. De uiteindelijke schermindeling en vormgevingsvloer zijn behouden.
+
+Dezelfde schaalproef met 30 cursisten, 100 vaardigheden en 3000 fictieve TRAIN-events is voor en na uitgevoerd. De mediaan van zes browserruns daalde van **4830,5 naar 2400,5 ms** (ongeveer 50%). De laatste runs waren 2454, 5714, 2347, 2828, 2205 en 2159 ms; API 432–697 ms. Dit is een beperkte reeks, geen gegarandeerde halvering voor iedere gebruiker. De norm van twee seconden is **niet gehaald**, KI035 blijft DEELS. Bewijs: `evidence/speed/before.json`, `after.json`; gemeten deployment `7a3424e1-b55b-4a1c-abd5-420fc53228f1`.
+
+Het vertraagd laden van de speler is in Chromium en WebKit met een werkelijk afgebroken moduleverzoek getest: een duidelijke foutmelding verschijnt, teruggaan blijft mogelijk en Opnieuw openen herstelt de speler zonder extra oefenpoging. WebKit hield aanvankelijk een mislukte modulepreload vast; alleen voor deze dynamische speler zijn JavaScript-preloads vervangen door de eigen module-import. CSS en eerste HTML-preloads blijven behouden. `player-loading-browser.mjs` en `evidence/speed/player-loading.json` bevatten de proef. Een tijdelijke server-prefill van het account is teruggedraaid en zit niet in de oplevering.
+
+Auth en MFA gebruiken nu expliciet de bestaande Node Buffer-import. Een gerichte test zonder globale Buffer bevestigt dat wachtwoordcontrole, TOTP en versleuteling blijven werken. Geen nieuwe afhankelijkheid, schemawijziging, wachtwoord- of factorrotatie.
+
+**Online blokkade:** Cloudflare meldt een dagelijkse D1-schrijflimiet. Herhaalde zware schaalproeven met geïndexeerde fixtures hebben aan het verbruik bijgedragen. Metadata van alle accountdatabases samen gaf 218.998 geschreven rijen in de voortschrijdende 24 uur. Dit is accountbreed, geen exclusieve toeschrijving aan deze taak; evenmin is het een telling vanaf UTC-middernacht. Nieuwe native login en de verplichte deployment-schemacontrole worden momenteel geweigerd. Dit bewijst geen fout wachtwoord. Er is geen betaald abonnement, quotumverhoging of omzeiling toegepast.
+
+De nieuwste lokale code vertaalt deze specifieke D1-daglimiet naar HTTP 503 met begrensde Retry-After, zonder ruwe databasemelding. Deze foutafhandeling is lokaal getest maar **nog niet online uitgerold**. De schaaltest controleert voortaan eerst accountbrede schrijfmetadata en stopt vóór fixtureaanmaak vanaf 50.000 rijen/24 uur. Dit houdt conservatief ruimte over voor indexen, opruimen en andere apps; het is geen garantie tegen gelijktijdig verbruik. Deze blokkade is daadwerkelijk getest. De gratis daglimiet herstart om 00:00 UTC (2 november 2026 om 01:00 Nederlandse tijd); de conservatieve 24-uurscontrole kan langer blokkeren. Bron: https://developers.cloudflare.com/d1/platform/pricing/
+
+De nieuwste kandidaat heeft **55 lokale unit/API/auth/MFA-tests**, 27 bestaande Klink+Docent-regressies, TypeScript, gerichte lint, normale productbouw en stagingbouw doorstaan. De publieke loginweergave is online in beide engines op desktop/mobiel en licht/donker gecontroleerd, inclusief logo's en overloop. Een nieuwe volledige docent-cursistproef na de laatste wijzigingen is **niet voltooid** wegens de limiet. De eerdere volledige proef hieronder hoort bij commit e14b33aa, niet bij deze nieuwste kandidaat.
+
+Een actuele serverexport van 1 november 2026, 10:03 UTC is credentialvrij gemaakt: 24 onderwijstabellen, schema 5. Alle rijen zijn opnieuw gelijk hersteld in lokale SQLite en PostgreSQL; corrupte export en overschrijven worden geweigerd. Geen nieuwe remote herstel- of Time Travel-proef wegens de quota. Ruwe auth-export en sleutels blijven privé buiten Git/Drive. De huidige herstelset en `evidence/speed/portable.json` gaan mee in het pakket.
+
+Echte codepaden: `components/inzicht/app.tsx`, `components/inzicht/school.tsx`, `vite.config.ts`, `lib/inzicht/auth.ts`, `lib/inzicht/mfa.ts`, `lib/inzicht/service.ts`, plus `scripts/inzicht/online-budget.mjs`, `performance-online.mjs`, `deploy-staging.mjs`, `staging-assets.mjs`, `online-probe.mjs` en `auth-test.mjs`. De exacte broncommit en hashes staan in het oplevermanifest. Geen wijzigingen aan de oorspronkelijke spelerbestanden, content, Klink+Docent, migraties of productieconfiguratie. Nul GitHub Actions-workflows aangetroffen vóór push; alle zware controles lokaal.
+
+## Eerdere uitvoering en bewijzen (historisch)
+
+De volgende paragrafen beschrijven eerdere geslaagde proeven. Ze vervangen niet de geblokkeerde herhaling van de actuele kandidaat.
 
 ## Gebouwd en behouden
 

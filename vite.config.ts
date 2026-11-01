@@ -40,6 +40,22 @@ export default defineConfig(async ({ command }) => {
 
   return {
     ...(inzichtOnline ? { publicDir: '.wrangler/inzicht-assets' } : {}),
+    build: inzichtOnline
+      ? {
+          modulePreload: {
+            // WebKit retains failed modulepreloads; native import recovers on reload.
+            resolveDependencies: (
+              filename: string,
+              deps: string[],
+              { hostType }: { hostType: 'html' | 'js' },
+            ) =>
+              hostType === 'js' &&
+              filename.includes('package-exercise-browser-')
+                ? deps.filter((dep) => dep.endsWith('.css'))
+                : deps,
+          },
+        }
+      : undefined,
     css: {
       postcss: {
         plugins: [
@@ -66,7 +82,10 @@ export default defineConfig(async ({ command }) => {
           ? {
               ...stagingConfig,
               main: 'lib/inzicht/worker.ts',
-              assets: { run_worker_first: true, binding: 'ASSETS' },
+              assets: {
+                run_worker_first: ['/', '/inzicht', '/inzicht/*', '/api/*'],
+                binding: 'ASSETS',
+              },
             }
           : inzichtLocal
             ? {

@@ -465,6 +465,7 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
             <>
               <nav className="ki-nav" aria-label="Inzicht">
                 <Link
+                  prefetch={false}
                   href={href('')}
                   aria-current={!route[0] ? 'page' : undefined}
                 >
@@ -472,23 +473,34 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
                   Vandaag
                 </Link>
                 <Link
+                  prefetch={false}
                   href={href('/klassen')}
                   aria-current={route[0] === 'klassen' ? 'page' : undefined}
                 >
                   <Users />
                   Mijn klassen
                 </Link>
-                <Link href={href('/cursisten')}>Cursisten</Link>
-                <Link href={href('/vaardigheden')}>
+                <Link prefetch={false} href={href('/cursisten')}>
+                  Cursisten
+                </Link>
+                <Link prefetch={false} href={href('/vaardigheden')}>
                   <Grid2X2 />
                   Vaardigheden
                 </Link>
                 <details>
                   <summary>Meer</summary>
-                  <Link href={href('/observaties')}>Observaties</Link>
-                  <Link href={href('/opdrachten')}>Opdrachten</Link>
-                  <Link href={href('/toegang')}>Toegang</Link>
-                  <Link href={href('/advies')}>Lesadvies</Link>
+                  <Link prefetch={false} href={href('/observaties')}>
+                    Observaties
+                  </Link>
+                  <Link prefetch={false} href={href('/opdrachten')}>
+                    Opdrachten
+                  </Link>
+                  <Link prefetch={false} href={href('/toegang')}>
+                    Toegang
+                  </Link>
+                  <Link prefetch={false} href={href('/advies')}>
+                    Lesadvies
+                  </Link>
                 </details>
               </nav>
               <Workspace
@@ -518,6 +530,7 @@ function Workspace({
     search = useSearchParams();
   const [classes, setClasses] = useState<Group[] | null>(null),
     [detail, setDetail] = useState<ClassDetail | null>(null),
+    [matrix, setMatrix] = useState<Matrix | null>(null),
     [error, setError] = useState('');
   const gid =
     route[0] === 'klassen' && route[1] !== 'nieuw'
@@ -529,11 +542,15 @@ function Workspace({
     Promise.all([
       api<Group[]>('classes', school),
       gid ? api<ClassDetail>(`classes/${gid}`, school) : Promise.resolve(null),
+      gid && section === 'matrix'
+        ? api<Matrix>(`classes/${gid}/matrix`, school)
+        : Promise.resolve(null),
     ])
-      .then(([cs, d]) => {
+      .then(([cs, d, m]) => {
         if (active) {
           setClasses(cs);
           setDetail(d);
+          setMatrix(m);
         }
       })
       .catch((e) => {
@@ -542,12 +559,14 @@ function Workspace({
     return () => {
       active = false;
     };
-  }, [school, gid]);
+  }, [school, gid, section]);
   if (error)
     return (
       <section className="ki-card">
         <ErrorText text={error} />
-        <Link href={href('/klassen')}>Terug naar mijn klassen</Link>
+        <Link prefetch={false} href={href('/klassen')}>
+          Terug naar mijn klassen
+        </Link>
       </section>
     );
   if (!classes) return <output>Ophalen…</output>;
@@ -577,7 +596,11 @@ function Workspace({
                   } as Record<string, string>
                 )[route[0]] ?? 'Mijn klassen')}
           </h2>
-          <Link className="primary-button" href={href('/klassen/nieuw')}>
+          <Link
+            prefetch={false}
+            className="primary-button"
+            href={href('/klassen/nieuw')}
+          >
             <Plus />
             Nieuwe klas
           </Link>
@@ -596,6 +619,7 @@ function Workspace({
                 {c.status === 'active' ? 'Actief' : 'Gearchiveerd'}
               </p>
               <Link
+                prefetch={false}
                 className="secondary-button"
                 href={href(
                   `/klassen/${c.id}${section && section !== 'klassen' ? `/${section}` : ''}`,
@@ -604,7 +628,10 @@ function Workspace({
                 Openen <ArrowRight />
               </Link>
               {!route[0] && (
-                <Link href={href(`/klassen/${c.id}/observeren`)}>
+                <Link
+                  prefetch={false}
+                  href={href(`/klassen/${c.id}/observeren`)}
+                >
                   Observeren
                 </Link>
               )}
@@ -617,7 +644,7 @@ function Workspace({
   const go = (part = '') => href(`/klassen/${gid}${part ? `/${part}` : ''}`);
   return (
     <>
-      <Link href={href('/klassen')} className="ki-back">
+      <Link prefetch={false} href={href('/klassen')} className="ki-back">
         <ArrowLeft />
         Mijn klassen
       </Link>
@@ -634,18 +661,30 @@ function Workspace({
             {detail.group.status === 'active' ? 'Actief' : 'Gearchiveerd'}
           </p>
         </div>
-        <Link href={go('bewerken')}>Bewerken</Link>
+        <Link prefetch={false} href={go('bewerken')}>
+          Bewerken
+        </Link>
       </div>
       <div className="ki-actions">
-        <Link href={go('toevoegen')} className="secondary-button">
+        <Link
+          prefetch={false}
+          href={go('toevoegen')}
+          className="secondary-button"
+        >
           <Plus />
           Cursist toevoegen
         </Link>
-        <Link href={go('observeren')} className="primary-button">
+        <Link
+          prefetch={false}
+          href={go('observeren')}
+          className="primary-button"
+        >
           <ClipboardPen />
           Observeren
         </Link>
-        <Link href={go('opdrachten')}>Oefening klaarzetten</Link>
+        <Link prefetch={false} href={go('opdrachten')}>
+          Oefening klaarzetten
+        </Link>
       </div>
       <nav className="ki-tabs" aria-label="Klas">
         {[
@@ -656,6 +695,7 @@ function Workspace({
           ['toegang', 'Toegang'],
         ].map(([p, label]) => (
           <Link
+            prefetch={false}
             key={p}
             href={go(p)}
             aria-current={section === p ? 'page' : undefined}
@@ -665,7 +705,9 @@ function Workspace({
         ))}
         <details>
           <summary>Meer</summary>
-          <Link href={go('advies')}>Lesadvies</Link>
+          <Link prefetch={false} href={go('advies')}>
+            Lesadvies
+          </Link>
           <a href={`/api/inzicht/classes/${gid}/export?school=${school}`}>
             Klaslijst downloaden
           </a>
@@ -699,7 +741,9 @@ function Workspace({
       ) : section === 'profiel' ? (
         <LearnerProfile school={school} group={gid} id={route[3]} go={go} />
       ) : section === 'matrix' || section === 'vaardigheden' ? (
-        <MatrixView school={school} group={gid} go={go} />
+        matrix && (
+          <MatrixView school={school} group={gid} go={go} initial={matrix} />
+        )
       ) : section === 'bewijs' ? (
         <EvidenceView
           school={school}
@@ -726,7 +770,11 @@ function Workspace({
       ) : (
         <>
           <Learners learners={detail.learners} go={go} />
-          <Link className="primary-button ki-advice" href={go('advies')}>
+          <Link
+            prefetch={false}
+            className="primary-button ki-advice"
+            href={go('advies')}
+          >
             Wat heeft mijn groep morgen nodig?
           </Link>
         </>
@@ -750,13 +798,18 @@ function Learners({
         <ul className="ki-list">
           {learners.map((l) => (
             <li key={l.id}>
-              <Link href={go(`profiel/${l.id}`)}>{l.display_name}</Link>
+              <Link prefetch={false} href={go(`profiel/${l.id}`)}>
+                {l.display_name}
+              </Link>
               <span>
                 {l.membership_id
                   ? 'Gekoppeld account'
                   : 'Nog geen Klink-account'}
               </span>
-              <Link href={go('observeren') + `&learner=${l.id}`}>
+              <Link
+                prefetch={false}
+                href={go('observeren') + `&learner=${l.id}`}
+              >
                 Observeren
               </Link>
             </li>
@@ -814,7 +867,9 @@ function NewClass({
           <button className="primary-button" disabled={busy}>
             {busy ? 'Bewaren…' : 'Klas bewaren'}
           </button>
-          <Link href={cancel}>Annuleren</Link>
+          <Link prefetch={false} href={cancel}>
+            Annuleren
+          </Link>
         </div>
       </form>
     </section>
@@ -858,7 +913,9 @@ function AddLearner({
           <button className="primary-button" disabled={busy}>
             Cursist bewaren
           </button>
-          <Link href={cancel}>Annuleren</Link>
+          <Link prefetch={false} href={cancel}>
+            Annuleren
+          </Link>
         </div>
       </form>
     </section>
@@ -1122,6 +1179,7 @@ function LearnerProfile({
       <div className="ki-actions">
         <h3>{data.learner.display_name}</h3>
         <Link
+          prefetch={false}
           className="primary-button"
           href={go('observeren') + `&learner=${id}`}
         >
@@ -1157,7 +1215,10 @@ function LearnerProfile({
               {asText(o.payload.independence, independence)}
             </p>
             <p>{o.payload.note}</p>
-            <Link href={go('observeren') + `&learner=${id}&correction=${o.id}`}>
+            <Link
+              prefetch={false}
+              href={go('observeren') + `&learner=${id}&correction=${o.id}`}
+            >
               Corrigeren met reden
             </Link>
           </article>
@@ -1183,30 +1244,16 @@ function MatrixView({
   school,
   group,
   go,
+  initial,
 }: {
   school: string;
   group: string;
   go: (p?: string) => string;
+  initial: Matrix;
 }) {
-  const [data, setData] = useState<Matrix | null>(null),
-    [error, setError] = useState(''),
+  const [data, setData] = useState(initial),
     [offset, setOffset] = useState(0);
   const save = useSave();
-  useEffect(() => {
-    let active = true;
-    api<Matrix>(`classes/${group}/matrix`, school)
-      .then((d) => {
-        if (active) setData(d);
-      })
-      .catch((e) => {
-        if (active) setError(e.message);
-      });
-    return () => {
-      active = false;
-    };
-  }, [school, group]);
-  if (error) return <ErrorText text={error} />;
-  if (!data) return <p>Vaardigheden ophalen…</p>;
   const visible = data.skills.slice(offset, offset + 20);
   return (
     <section className="ki-card">
@@ -1261,6 +1308,7 @@ function MatrixView({
                 {visible.map((s) => (
                   <td key={s.id}>
                     <Link
+                      prefetch={false}
                       href={go('bewijs') + `&learner=${r.id}&skill=${s.id}`}
                       aria-label={`${r.name}, ${s.label}, ${labels[r.cells[s.id].status]}, bekijk bewijs`}
                     >
@@ -1328,7 +1376,9 @@ function EvidenceView({
   if (!data) return <p>Bewijs ophalen…</p>;
   return (
     <section className="ki-card">
-      <Link href={go('matrix')}>Terug naar de matrix</Link>
+      <Link prefetch={false} href={go('matrix')}>
+        Terug naar de matrix
+      </Link>
       <h3>{data.skill.label}</h3>
       <p>
         <Status value={data.mastery} />
@@ -1357,6 +1407,7 @@ function EvidenceView({
         ))
       )}
       <Link
+        prefetch={false}
         className="primary-button"
         href={go('observeren') + `&learner=${learner}`}
       >

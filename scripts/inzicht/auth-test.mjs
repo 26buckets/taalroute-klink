@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { readFileSync, readdirSync } from 'node:fs';
 import { sqlite } from './sqlite.mjs';
 import { fixtures } from './fixtures.mjs';
@@ -227,7 +228,10 @@ test('scheduled outbox retries safely and removes only expired limits and sessio
 test('deployment guard rejects production names, bindings, routes and unprotected asset handling', async () => {
   const { checkStaging } = await import('./deploy-staging.mjs');
   const config = JSON.parse(readFileSync('scripts/inzicht/online-config.json'));
-  config.assets = { binding: 'ASSETS', run_worker_first: true };
+  config.assets = {
+    binding: 'ASSETS',
+    run_worker_first: ['/', '/inzicht', '/inzicht/*', '/api/*'],
+  };
   checkStaging(config);
   for (const change of [
     { name: 'taalroute-klink' },
@@ -240,6 +244,74 @@ test('deployment guard rejects production names, bindings, routes and unprotecte
     },
     { services: [{ service: 'lexicon' }] },
     { assets: { run_worker_first: false } },
+    { assets: { binding: 'ASSETS', run_worker_first: ['/inzicht/*'] } },
   ])
     assert.throws(() => checkStaging({ ...config, ...change }));
+});
+
+// A separate process prevents a missing Worker global from affecting the test runner.
+test('password and MFA work without an implicit global Buffer', () => {
+  execFileSync(
+    process.execPath,
+    [
+      '--input-type=module',
+      '-e',
+      `
+    import assert from 'node:assert/strict';
+    import { passwordHash, passwordMatches } from './lib/inzicht/auth.ts';
+    import { totp, seal, unseal } from './lib/inzicht/mfa.ts';
+    delete globalThis.Buffer;
+    const password = 'synthetic-buffer-regression';
+    assert(await passwordMatches(password, await passwordHash(password)));
+    assert.equal(totp('GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ', 1), '287082');
+    const key = 'a'.repeat(64);
+    const secret = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
+    const encrypted = seal(secret, 'test-user', key);
+    assert.equal(unseal(encrypted, 'test-user', key), secret);
+  `,
+    ],
+    { stdio: 'pipe' },
+  );
+});
+
+test('D1 daily capacity failures stay private and provide a bounded retry time', async () => {
+  const response = await handleInzicht(
+    new Request(origin + '/api/inzicht/me', {
+      headers: { cookie: '__Host-inzicht_session=' + 'a'.repeat(64) },
+    }),
+    {
+      INZICHT_MODE: 'synthetic-online',
+      INZICHT_ORIGIN: origin,
+      INZICHT_DB: {
+        prepare() {
+          throw new Error(
+            'D1_ERROR: database exceeded its daily write limit; secret-field',
+          );
+        },
+      },
+    },
+  );
+  assert.equal(response.status, 503);
+  assert.equal(response.headers.get('cache-control'), 'no-store, private');
+  assert(Number(response.headers.get('retry-after')) > 0);
+  assert(Number(response.headers.get('retry-after')) <= 86400);
+  assert(!(await response.text()).includes('secret-field'));
+});
+
+test('remote scale tests reserve a shared account-wide D1 write budget', async () => {
+  const { assertBenchmarkBudget } = await import('./online-budget.mjs');
+  assert.equal(
+    assertBenchmarkBudget([
+      { rows_written_24h: 1000 },
+      { rows_written_24h: 2000 },
+    ]),
+    3000,
+  );
+  for (const values of [
+    [],
+    [{}],
+    [{ rows_written_24h: -1 }],
+    [{ rows_written_24h: 25000 }, { rows_written_24h: 25000 }],
+  ])
+    assert.throws(() => assertBenchmarkBudget(values));
 });

@@ -66,3 +66,13 @@ writeFileSync(
 console.log(
   `${files.size} unchanged original assets copied for the three-exercise staging catalog.`,
 );
+
+writeFileSync(
+  '.wrangler/inzicht-assets/_headers',
+  `/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy: frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+`,
+);
