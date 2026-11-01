@@ -26,7 +26,18 @@ for(const[engineName,engine]of Object.entries({chromium,webkit})){
   await page.addInitScript(()=>{window.Audio=class extends EventTarget{paused=true;play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){clearTimeout(this.timer);this.paused=true;}};localStorage.setItem('klink.view-check.sentinel','behouden');});
   await page.addInitScript(theme=>localStorage.setItem('taalroute-klink-appearance-v1',theme),theme);
   for(const route of routes){
-   await page.goto(base+'/'+route.hash);await page.locator('.cp-exercise-stage .cp-exercise-tools').waitFor();
+   await page.goto(base+'/'+route.hash);
+   if(['daily','functional'].includes(route.name)){
+    // These document players retain their own controls outside the exercise stage.
+    await page.locator(route.name==='daily'?'[data-daily-step]':'[data-functional-step]').waitFor();
+    assert.equal(await page.locator('.cp-exercise-stage .cp-exercise-tools').count(),0);
+    assert.equal(await page.locator('.cp-exercise-stage').count(),1);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,route.name);
+    assert.equal(await page.evaluate(()=>localStorage.getItem('klink.view-check.sentinel')),'behouden');
+    checks.push({engine:engineName,width,theme,route:route.name,documentLayout:true,horizontalOverflow:false});
+    continue;
+   }
+   await page.locator('.cp-exercise-stage .cp-exercise-tools').waitFor();
    const automatic=page.locator('[data-practice-automatic][aria-pressed="true"]');if(await automatic.count())await automatic.click();
    await page.waitForTimeout(120);
    const panel=page.locator('.cp-exercise-stage .cp-view-panel'),stage=page.locator('.cp-exercise-stage');
