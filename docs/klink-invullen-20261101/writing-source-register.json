@@ -15,8 +15,8 @@
     "independentHumanReview": false,
     "scope": "Actueel bronregister met afzonderlijke gecontroleerde publicatiebatches; een audiobestand of lokale voorbereiding telt niet automatisch als aangesloten bronopdracht.",
     "verifiedThroughSuccessorSourceCommit": "ded58bb090a90c87f6a5881b35830fa44f3b4de2",
-    "lastVerifiedLiveSourceCommit": "0c130f80053537b9976906b859e844a267912295",
-    "lastVerifiedAt": "2026-11-01T20:23:20.583364+00:00",
+    "lastVerifiedLiveSourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
+    "lastVerifiedAt": "2026-11-01T20:56:17.308870+00:00",
     "onlineSourceRecords": 103,
     "directSourceRecords": 103,
     "verifiedReusedSourceRecords": 0,
@@ -10164,7 +10164,61 @@
         "bytes": 1041515,
         "publishedSourceCommit": "0c130f80053537b9976906b859e844a267912295",
         "includesSourceArchiveAndGitBundle": true
-      }
+      },
+      "followUps": [
+        {
+          "sourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
+          "previousLiveCommit": "6838c678d794469cd7a438a00f7e8e01a19ebf77",
+          "branch": "main",
+          "sourceClean": true,
+          "workerVersion": "186e4844-c802-41bb-87d3-12fdfe243620",
+          "publishedAt": "2026-11-01T20:50:02.058Z",
+          "normalPublicationRoute": "npm run deploy",
+          "publicationGatePassed": true,
+          "beforeBytes": 90670,
+          "afterBytes": 78160,
+          "reductionPercent": 13.8,
+          "localBrowserChecks": 16,
+          "liveBrowserChecks": 16,
+          "gateUnitChecks": 8,
+          "pixelFrameComparisons": 104,
+          "timelineComparisons": 20576,
+          "physicalDevicesTested": false,
+          "contentHashesUnchanged": true,
+          "onlyRuntimeChangedFile": "public/opening-loader-quick-20261101/klink-loader.svg",
+          "labelComponentCssAndTimingUnchanged": true,
+          "staticReducedMotionAssetByteIdentical": true,
+          "smallImageAndCentreUnchanged": true,
+          "minimumTwoSecondsRetained": true,
+          "noActionsWorkflows": true,
+          "id": "loader-lossless-followup",
+          "title": "Goedgekeurde kleinere loader",
+          "status": "PUBLISHED_VERIFIED",
+          "verifiedAt": "2026-11-01T20:56:17.308870+00:00",
+          "ownerEvidence": "docs/opening-loader-lossless-20261101/publication.json",
+          "backup": {
+            "verified": true,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "everyArchivedFileCompared": true,
+            "driveId": "1wb5dfEsjSU8fLr6zwDJPlEWWlmwLAbkE",
+            "url": "https://drive.google.com/file/d/1wb5dfEsjSU8fLr6zwDJPlEWWlmwLAbkE/view",
+            "sha256": "a3030f7ecbb31bb5633e35a660c248c37f22889ea99beec6b982d8a106815459",
+            "bytes": 1132223,
+            "publishedSourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
+            "includesSourceArchiveAndGitBundle": true
+          },
+          "independentLiveFileReadback": {
+            "byteIdenticalToPublishedSource": true,
+            "sha256": "77192232c1da35e8cfdea1d4c36d11981ef4ca3e2611c3ff846fe10921260214",
+            "bytes": 78160
+          },
+          "sourceRecordsAdded": 0,
+          "newCanonicalQuestions": 0,
+          "newAudio": 0
+        }
+      ],
+      "verifiedThroughSourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882"
     }
   ],
   "orderedPublicationPlan": {
@@ -10179,7 +10233,9 @@
         "id": "loader-text",
         "title": "Loadertekst",
         "status": "PUBLISHED_VERIFIED",
-        "sourceCommit": "0c130f80053537b9976906b859e844a267912295"
+        "sourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
+        "initialTextSourceCommit": "0c130f80053537b9976906b859e844a267912295",
+        "approvedLosslessFollowup": true
       },
       {
         "id": "word-audio",
@@ -10196,6 +10252,6 @@
         "sourcePositionsPublished": 0
       }
     ],
-    "updatedAt": "2026-11-01T20:23:20.583364+00:00"
+    "updatedAt": "2026-11-01T20:56:17.308870+00:00"
   }
 }
