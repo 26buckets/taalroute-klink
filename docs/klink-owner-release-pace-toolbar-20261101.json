@@ -1,0 +1,32 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "0fd8d6dc609cdfcce195063075bd64f8f0e8685e",
+  "liveSourceCommit": "f828bb6200f54a8a061f55d3a4123640c202a836",
+  "userRequest": "Deze klopt ook niet helemaal. Ik wil gewoon dat die, ja, dat er ruimte tussen zit tussen die luisteren-knop voor audio en de knoppen. Je kan ze ook, die knoppen, naast die audio zetten. Dat vind ik ook goed. Vind ik ook mooi. Dan heb ik weer een laag gewonnen. Maar er moet sowieso ruimte tussen zitten. Dit is veel te strak.",
+  "approval": "docs/appearance-floor-20261031/approved-updates/pace-toolbar-20261101.json",
+  "scope": "Only pace controls join the existing audio/view toolbar with 12px gaps; mobile uses one separate pace row. Original handlers, media, text sizes, all other layout and stored progress remain intact.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/exercise-listen.tsx",
+    "components/product/package-exercise-browser.tsx",
+    "scripts/check-pace-toolbar-release-20261101.mjs",
+    "scripts/check-photo-choice-fit-release-20261101.mjs",
+    "scripts/test-pace-toolbar-browser-20261101.mjs",
+    "scripts/test-pace-toolbar-release-20261101.mjs",
+    "VORMGEVING-VASTGEZET.md"
+  ],
+  "files": {
+    "app/learner-layout.css": "fa7e36b6e74ad0de48644cb745123c26b9102aa4eb2d88d7a86570841c5f21b8",
+    "components/product/exercise-listen.tsx": "5ff82b898c2dd959ccad79d270dfac4c0ad119efdcff5b138ae221a75221be6d",
+    "components/product/package-exercise-browser.tsx": "f57d09d19e6b3dd666d5183873d991f1b0622ac78fe93827cd873ecf23909aea",
+    "scripts/check-pace-toolbar-release-20261101.mjs": "b5cc64401d40a2777cc6786101890fb9c3c90de255bfbfa75a72a0850f769011",
+    "scripts/check-photo-choice-fit-release-20261101.mjs": "f8971325d920ebb24cb9931054400eafa6e51ec2cbca3a7daa353b64dc83f99f",
+    "scripts/test-pace-toolbar-browser-20261101.mjs": "29c2d3bdcaf32847f6265c74a46b80f3381b464ef2519a22439969a9f79d5dc6",
+    "scripts/test-pace-toolbar-release-20261101.mjs": "534a9eabe4a2c4de6c4a2ecbfb183ddb03722cbfb449447e1205d2c58b7a43b8",
+    "VORMGEVING-VASTGEZET.md": "0732995acb27ce730bd5d6f0a03d11dcf09cac4f0b42a59547b0b6e23e70ae11"
+  },
+  "cssDeltaSha256": "8a19c31bda8cc58437e676300cb74bf76522dcaef15e133e099300f4e70d7d4b"
+}

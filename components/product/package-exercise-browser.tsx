@@ -479,8 +479,9 @@ function PackageExercisePlayer({
           </header>
 
           <div className="cp-exercise-stage" ref={exerciseStage}>
-            <ExerciseAudioSlot />
-            {pacedReading && <fieldset className="cp-pace-controls" aria-label="Tempo">{[0, 6, 9].map(seconds => <button key={seconds} className="secondary-button" aria-pressed={paceSeconds === seconds} onClick={() => setPaceSeconds(seconds)}>{seconds ? `${seconds} seconden` : 'Eigen tempo'}</button>)}</fieldset>}
+            <ExerciseAudioSlot>
+              {pacedReading && <fieldset className="cp-pace-controls" aria-label="Tempo">{[0, 6, 9].map(seconds => <button key={seconds} className="secondary-button" aria-pressed={paceSeconds === seconds} onClick={() => setPaceSeconds(seconds)}>{seconds ? `${seconds} seconden` : 'Eigen tempo'}</button>)}</fieldset>}
+            </ExerciseAudioSlot>
             {!guided && modes.length > 1 && <label className="cp-mode-picker">Wat wil je oefenen?<select value={isIndividual(exercise) ? exercise.exerciseId : exercise.mode} onChange={event => openAt(records.findIndex(item => item.exerciseId === event.target.value || item.mode === event.target.value))}>{modes.map(item => {
               const isQuestion = item.mode === 'sentence-question';
               const value = isIndividual(item) ? item.exerciseId : item.mode;

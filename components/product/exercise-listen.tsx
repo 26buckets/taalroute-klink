@@ -12,9 +12,9 @@ export function ExerciseAudioProvider({ children }: { children: ReactNode }) {
   return <ListenCorner value={corner}><ExerciseViewProvider>{children}</ExerciseViewProvider></ListenCorner>;
 }
 
-export function ExerciseAudioSlot() {
+export function ExerciseAudioSlot({ children }: { children?: ReactNode }) {
   const corner = useContext(ListenCorner);
-  return <div className="cp-exercise-tools"><span className="cp-listen-slot" ref={corner?.[1]} /><ExerciseViewPanel /></div>;
+  return <div className="cp-exercise-tools"><span className="cp-listen-slot" ref={corner?.[1]} />{children}<ExerciseViewPanel /></div>;
 }
 
 export function ExerciseListen({ label, inline = false, ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { label: string; inline?: boolean }) {
