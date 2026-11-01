@@ -1,0 +1,1305 @@
+{
+  "reviewer": "Codex",
+  "reviewType": "editorial AI review",
+  "ownerApproval": "standing-owner-approval",
+  "independentHumanReview": false,
+  "classroomPilot": "open",
+  "individualCefrValidated": false,
+  "formAndSenseIdsFinalized": false,
+  "sourceModelsChanged": false,
+  "sourceRecordsChanged": false,
+  "sourcePositionsAdded": 80,
+  "newCanonicalTasks": 79,
+  "totalSourcePositions": 100,
+  "canonicalTasks": 99,
+  "firstDifferencePosition": "Implemented for all 100 source positions; individual hints accompany the position.",
+  "sourceReuse": {
+    "KSW-AC-TN-097": "KSW-AC-TN-020"
+  },
+  "feedbackEdits": 20,
+  "newMedia": false,
+  "learningGoal": "SC-01: nauwkeurig overnemen met zichtbaar model; geen zelfstandige spelling- of begripsbeheersing geclaimd.",
+  "lessonUse": {
+    "teacher": "Lees de opdracht zo nodig samen. Laat de cursist het voorbeeld overnemen en de eerste verschilpositie met het model vergelijken.",
+    "learner": "Typt, vergelijkt en verbetert de eigen invoer. De volledige bron blijft beschikbaar in de bestaande kaart.",
+    "material": "Vijf bestaande Klink-kopieerrondes; nieuwe rondes 2–5. De langste bron kan op het kleinste toetsenbordvlak via de bestaande kaartscroll worden gelezen.",
+    "time": "Onderdeel van de werkelijk ingeroosterde schrijfoefentijd; geen nieuwe urenvariant of pilotclaim.",
+    "observation": "Cursist vergelijkt letters, woordgrenzen en leestekens; de docent ziet of bron, foutpositie en herstel worden gebruikt."
+  },
+  "dimensions": [
+    "natuurlijk Nederlands",
+    "spelling en grammatica",
+    "volwassen context",
+    "brongetrouwe exacte antwoorden",
+    "cursistenhints in eenvoudige taal",
+    "geen onterechte zelfstandige-beheersingsclaim"
+  ],
+  "keyboardScrollCases": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "theme": "light",
+      "id": "KSW-AC-TN-098"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "theme": "dark",
+      "id": "KSW-AC-TN-098"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "theme": "light",
+      "id": "KSW-AC-TN-098"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "theme": "dark",
+      "id": "KSW-AC-TN-098"
+    }
+  ],
+  "rows": [
+    {
+      "id": "KSW-AC-TN-021",
+      "canonicalId": "KSW-AC-TN-021",
+      "model": "de docent",
+      "review": "passed",
+      "runtimeHint": "Docent begint met d. Let op de c in het midden.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 21
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-022",
+      "canonicalId": "KSW-AC-TN-022",
+      "model": "mijn pen",
+      "review": "passed",
+      "runtimeHint": "Mijn schrijf je met ij. Daarna komt een spatie.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 22
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-023",
+      "canonicalId": "KSW-AC-TN-023",
+      "model": "De les begint vandaag.",
+      "review": "passed",
+      "runtimeHint": "Begint eindigt op t. Vandaag is één woord.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 23
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-024",
+      "canonicalId": "KSW-AC-TN-024",
+      "model": "Ik lees een boek in de klas.",
+      "review": "passed",
+      "runtimeHint": "Lees heeft twee e's. Zet een spatie tussen de woorden.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 24
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-025",
+      "canonicalId": "KSW-AC-TN-025",
+      "model": "Ik schrijf mijn naam op de kaart.",
+      "review": "passed",
+      "runtimeHint": "Schrijf begint met sch en heeft ij. Vergeet de punt niet.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 25
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-026",
+      "canonicalId": "KSW-AC-TN-026",
+      "model": "de sleutel",
+      "review": "passed",
+      "runtimeHint": "Sleutel bevat eu. Tussen de en sleutel staat een spatie.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 26
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-027",
+      "canonicalId": "KSW-AC-TN-027",
+      "model": "het raam",
+      "review": "passed",
+      "runtimeHint": "Raam heeft twee a's. Begin met het.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 27
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-028",
+      "canonicalId": "KSW-AC-TN-028",
+      "model": "Het raam is open.",
+      "review": "passed",
+      "runtimeHint": "Schrijf Het met een hoofdletter. Zet een punt aan het einde.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 28
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-029",
+      "canonicalId": "KSW-AC-TN-029",
+      "model": "Mijn jas ligt op de stoel.",
+      "review": "passed",
+      "runtimeHint": "Ligt schrijf je met gt. Kijk goed naar de spaties.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 29
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-030",
+      "canonicalId": "KSW-AC-TN-030",
+      "model": "Ik zoek mijn sleutel in de tas.",
+      "review": "passed",
+      "runtimeHint": "Zoek eindigt op k. Sleutel schrijf je met eu.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 30
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-031",
+      "canonicalId": "KSW-AC-TN-031",
+      "model": "een appel",
+      "review": "passed",
+      "runtimeHint": "Appel heeft twee p's. Schrijf een en appel los.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 31
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-032",
+      "canonicalId": "KSW-AC-TN-032",
+      "model": "de kassa",
+      "review": "passed",
+      "runtimeHint": "Kassa heeft twee s'en. Zet een spatie tussen de en kassa.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 32
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-033",
+      "canonicalId": "KSW-AC-TN-033",
+      "model": "De winkel is open.",
+      "review": "passed",
+      "runtimeHint": "Winkel schrijf je met nk. Begin met hoofdletter D.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 33
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-034",
+      "canonicalId": "KSW-AC-TN-034",
+      "model": "Ik koop brood en kaas.",
+      "review": "passed",
+      "runtimeHint": "Brood heeft oo. Kaas heeft aa. Vergeet en niet.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 34
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-035",
+      "canonicalId": "KSW-AC-TN-035",
+      "model": "Ik betaal met mijn betaalpas.",
+      "review": "passed",
+      "runtimeHint": "Betaal en betaalpas hebben aa. Met mijn betaalpas zijn drie woorden.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 35
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-036",
+      "canonicalId": "KSW-AC-TN-036",
+      "model": "een afspraak",
+      "review": "passed",
+      "runtimeHint": "Afspraak schrijf je aan elkaar. Zet er een voor.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 36
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-037",
+      "canonicalId": "KSW-AC-TN-037",
+      "model": "de dokter",
+      "review": "passed",
+      "runtimeHint": "Dokter schrijf je met kt. Zet een spatie tussen de en dokter.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 37
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-038",
+      "canonicalId": "KSW-AC-TN-038",
+      "model": "Mijn arm doet pijn.",
+      "review": "passed",
+      "runtimeHint": "Doet schrijf je met oe. Pijn schrijf je met ij.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 38
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-039",
+      "canonicalId": "KSW-AC-TN-039",
+      "model": "Ik ben vandaag niet ziek.",
+      "review": "passed",
+      "runtimeHint": "Ben eindigt op n. Vandaag is één woord.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 39
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-040",
+      "canonicalId": "KSW-AC-TN-040",
+      "model": "Ik heb morgen een afspraak bij de dokter.",
+      "review": "passed",
+      "runtimeHint": "Morgen schrijf je met één r. Eindig met een punt.",
+      "feedbackEdited": false,
+      "source": {
+        "url": "https://docs.google.com/document/d/19aJ-KylIWjak3myHn4BMJM_TAE_Pd66ub4pk6j-5-iU/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 40
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-041",
+      "canonicalId": "KSW-AC-TN-041",
+      "model": "de klok",
+      "review": "passed",
+      "runtimeHint": "Klok begint met kl en eindigt op k.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 41
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-042",
+      "canonicalId": "KSW-AC-TN-042",
+      "model": "het toilet",
+      "review": "passed",
+      "runtimeHint": "Typ het en toilet los van elkaar. Toilet schrijf je met oi.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 42
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-043",
+      "canonicalId": "KSW-AC-TN-043",
+      "model": "een groene trui",
+      "review": "passed",
+      "runtimeHint": "Groene eindigt op e. Trui schrijf je met ui.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 43
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-044",
+      "canonicalId": "KSW-AC-TN-044",
+      "model": "mijn telefoon",
+      "review": "passed",
+      "runtimeHint": "Mijn schrijf je met ij. Telefoon heeft oo.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 44
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-045",
+      "canonicalId": "KSW-AC-TN-045",
+      "model": "de nieuwe docent",
+      "review": "passed",
+      "runtimeHint": "Nieuwe schrijf je met ieuw en een e aan het einde.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 45
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-046",
+      "canonicalId": "KSW-AC-TN-046",
+      "model": "De trein staat bij het station.",
+      "review": "passed",
+      "runtimeHint": "Trein schrijf je met ei. Het laatste woord is station.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 46
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-047",
+      "canonicalId": "KSW-AC-TN-047",
+      "model": "De les begint na de pauze.",
+      "review": "passed",
+      "runtimeHint": "Schrijf na de pauze als drie losse woorden.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 47
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-048",
+      "canonicalId": "KSW-AC-TN-048",
+      "model": "Ik leg mijn sleutels op tafel.",
+      "review": "passed",
+      "runtimeHint": "Sleutels eindigt op s. Op tafel zijn twee woorden.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 48
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-049",
+      "canonicalId": "KSW-AC-TN-049",
+      "model": "Mijn broer komt vanavond thuis.",
+      "review": "passed",
+      "runtimeHint": "Vanavond is één woord. Thuis schrijf je met ui.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 49
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-050",
+      "canonicalId": "KSW-AC-TN-050",
+      "model": "De klok hangt boven de deur.",
+      "review": "passed",
+      "runtimeHint": "Boven is één woord. Zet de en deur los.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 50
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-051",
+      "canonicalId": "KSW-AC-TN-051",
+      "model": "Ik heb mijn afspraak verzet.",
+      "review": "passed",
+      "runtimeHint": "Verzet schrijf je met een t aan het einde.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 51
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-052",
+      "canonicalId": "KSW-AC-TN-052",
+      "model": "De bus rijdt vandaag niet.",
+      "review": "passed",
+      "runtimeHint": "Rijdt heeft ij en eindigt op dt.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 52
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-053",
+      "canonicalId": "KSW-AC-TN-053",
+      "model": "Ik neem een fles water mee.",
+      "review": "passed",
+      "runtimeHint": "Schrijf een fles water als drie losse woorden.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 53
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-054",
+      "canonicalId": "KSW-AC-TN-054",
+      "model": "We wachten bij de ingang.",
+      "review": "passed",
+      "runtimeHint": "Wachten eindigt op en. Zet een spatie tussen bij en de.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 54
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-055",
+      "canonicalId": "KSW-AC-TN-055",
+      "model": "Het is druk in de winkel.",
+      "review": "passed",
+      "runtimeHint": "Winkel schrijf je met nk. Zet een punt aan het einde.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 55
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-056",
+      "canonicalId": "KSW-AC-TN-056",
+      "model": "Morgen ga ik naar de bibliotheek.",
+      "review": "passed",
+      "runtimeHint": "Morgen begint met een hoofdletter. Bibliotheek schrijf je met th.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 56
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-057",
+      "canonicalId": "KSW-AC-TN-057",
+      "model": "Ik zoek de juiste les op mijn telefoon.",
+      "review": "passed",
+      "runtimeHint": "Juiste schrijf je met ui. Telefoon heeft oo.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 57
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-058",
+      "canonicalId": "KSW-AC-TN-058",
+      "model": "De dokter belt mij morgen terug.",
+      "review": "passed",
+      "runtimeHint": "Terug is één woord. Zet een punt achter terug.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 58
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-059",
+      "canonicalId": "KSW-AC-TN-059",
+      "model": "Ik heb mijn kaart in mijn jas gevonden.",
+      "review": "passed",
+      "runtimeHint": "Gevonden is één woord. Jas eindigt op s.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 59
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-060",
+      "canonicalId": "KSW-AC-TN-060",
+      "model": "Na het eten maak ik mijn huiswerk.",
+      "review": "passed",
+      "runtimeHint": "Na begint met een hoofdletter. Huiswerk is één woord.",
+      "feedbackEdited": true,
+      "source": {
+        "url": "https://docs.google.com/document/d/1CYALrQOrPhvdqlP2wWpDkg489174XWl5ELDd0LXKf4o/edit",
+        "snapshot": "KSW-AC-480-LEIDENDE-BRONNEN-HOLD.jsonl",
+        "snapshotSha256": "5336247d7f074cac9b60febf28f920115f789bae75f65843bb9ffe65ad173733",
+        "line": 60
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-061",
+      "canonicalId": "KSW-AC-TN-061",
+      "model": "een lege tas",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 225
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-062",
+      "canonicalId": "KSW-AC-TN-062",
+      "model": "het rode licht",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 226
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-063",
+      "canonicalId": "KSW-AC-TN-063",
+      "model": "mijn warme jas",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 227
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-064",
+      "canonicalId": "KSW-AC-TN-064",
+      "model": "de kleine sleutel",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 228
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-065",
+      "canonicalId": "KSW-AC-TN-065",
+      "model": "een kopje thee",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 229
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-066",
+      "canonicalId": "KSW-AC-TN-066",
+      "model": "Ik zet mijn fiets op slot.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 230
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-067",
+      "canonicalId": "KSW-AC-TN-067",
+      "model": "De les is vandaag in lokaal twee.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 231
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-068",
+      "canonicalId": "KSW-AC-TN-068",
+      "model": "Mijn dochter is vandaag ziek.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 232
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-069",
+      "canonicalId": "KSW-AC-TN-069",
+      "model": "De winkel gaat om zes uur dicht.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 233
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-070",
+      "canonicalId": "KSW-AC-TN-070",
+      "model": "Ik vul het formulier thuis in.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 234
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-071",
+      "canonicalId": "KSW-AC-TN-071",
+      "model": "Kun je de deur dichtdoen?",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 235
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-072",
+      "canonicalId": "KSW-AC-TN-072",
+      "model": "De afspraak is op dinsdag.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 236
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-073",
+      "canonicalId": "KSW-AC-TN-073",
+      "model": "Mijn tas staat naast de stoel.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 237
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-074",
+      "canonicalId": "KSW-AC-TN-074",
+      "model": "Ik kan morgen niet komen.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 238
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-075",
+      "canonicalId": "KSW-AC-TN-075",
+      "model": "Er ligt een brief op tafel.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 239
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-076",
+      "canonicalId": "KSW-AC-TN-076",
+      "model": "We beginnen over tien minuten.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 240
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-077",
+      "canonicalId": "KSW-AC-TN-077",
+      "model": "Ik heb de rekening betaald.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 241
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-078",
+      "canonicalId": "KSW-AC-TN-078",
+      "model": "De kinderen spelen buiten.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 242
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-079",
+      "canonicalId": "KSW-AC-TN-079",
+      "model": "Mag ik uw pen even lenen?",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 243
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-080",
+      "canonicalId": "KSW-AC-TN-080",
+      "model": "Na de les ga ik naar huis.",
+      "review": "passed",
+      "runtimeHint": "Kijk nog eens naar de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "revisionId": "AHj4eMQOivvTN9g2-bVNXuADUzed9R8IezPkBXWW_SmRB2z0mi_tANsGMNB-mXIUsCXjNY2LOkeN-ZjckhRb-FNtfBwHujW-W7q5y570fG4",
+        "url": "https://docs.google.com/document/d/1lCD_6oUCiXKQJ-ihixCRNR7iPiX3aihN_7MMFfJC4C4",
+        "snapshotSha256": "3cc9af9f550149f084e4a3c1d0fae155e5bbfc884e70f8859c8289bb91971241",
+        "paragraphIndex": 244
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-081",
+      "canonicalId": "KSW-AC-TN-081",
+      "model": "de stille straat",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 182
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-082",
+      "canonicalId": "KSW-AC-TN-082",
+      "model": "een blauwe pen",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 183
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-083",
+      "canonicalId": "KSW-AC-TN-083",
+      "model": "het grote raam",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 184
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-084",
+      "canonicalId": "KSW-AC-TN-084",
+      "model": "mijn nieuwe schoenen",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 185
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-085",
+      "canonicalId": "KSW-AC-TN-085",
+      "model": "de laatste bus",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 186
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-086",
+      "canonicalId": "KSW-AC-TN-086",
+      "model": "Ik doe de deur op slot.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 187
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-087",
+      "canonicalId": "KSW-AC-TN-087",
+      "model": "Mijn moeder belt vanavond.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 188
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-088",
+      "canonicalId": "KSW-AC-TN-088",
+      "model": "De post ligt op de mat.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 189
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-089",
+      "canonicalId": "KSW-AC-TN-089",
+      "model": "Wij eten om zes uur.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 190
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-090",
+      "canonicalId": "KSW-AC-TN-090",
+      "model": "Mijn telefoon ligt thuis.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 191
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-091",
+      "canonicalId": "KSW-AC-TN-091",
+      "model": "De afspraak is morgen.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 192
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-092",
+      "canonicalId": "KSW-AC-TN-092",
+      "model": "Ik wacht bij de bushalte.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 193
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-093",
+      "canonicalId": "KSW-AC-TN-093",
+      "model": "Kun je mij even helpen?",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 194
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-094",
+      "canonicalId": "KSW-AC-TN-094",
+      "model": "De dokter belt mij terug.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 195
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-095",
+      "canonicalId": "KSW-AC-TN-095",
+      "model": "Het regent de hele dag.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 196
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-096",
+      "canonicalId": "KSW-AC-TN-096",
+      "model": "Ik neem mijn lunch mee.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 197
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-097",
+      "canonicalId": "KSW-AC-TN-020",
+      "model": "De les begint om negen uur.",
+      "review": "passed",
+      "runtimeHint": "Begint eindigt op t. Negen en uur zijn twee woorden.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 198
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-098",
+      "canonicalId": "KSW-AC-TN-098",
+      "model": "Mijn buurvrouw heeft een hond.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 199
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-099",
+      "canonicalId": "KSW-AC-TN-099",
+      "model": "Na het werk ga ik naar huis.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 200
+      },
+      "learningGoal": "overschrijven"
+    },
+    {
+      "id": "KSW-AC-TN-100",
+      "canonicalId": "KSW-AC-TN-100",
+      "model": "Ik heb vandaag een vrije dag.",
+      "review": "passed",
+      "runtimeHint": "Vergelijk alle woorden en leestekens met de voorbeeldtekst.",
+      "feedbackEdited": false,
+      "source": {
+        "documentId": "1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "revisionId": "AHj4eMRRfKyczckWLgvQtPOsPvSQsf-WarRwp5zfQfWtczwYf6ceJ04ubtAwM2FTwv3_97hgJFcwa2paA_2ukgGIvem3n_wJ0jzyfDo3R7o",
+        "url": "https://docs.google.com/document/d/1c6iZXuSOMSSNsV6hwARy430W3QZdtaTuROzzCstBL7I",
+        "snapshotSha256": "3c9464af95fe6bbeed6d0425bb4f020826b617e2fb809bff5e971264ff9d285c",
+        "paragraphIndex": 201
+      },
+      "learningGoal": "overschrijven"
+    }
+  ]
+}

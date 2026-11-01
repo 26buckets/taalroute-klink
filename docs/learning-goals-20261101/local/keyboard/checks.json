@@ -1,0 +1,101 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "enterWrongRightNext": true,
+      "heldKey": true,
+      "manualFeedback": true,
+      "backAndDedup": true,
+      "inputSpacesAndCursor": true,
+      "completion": true
+    },
+    {
+      "engine": "chromium",
+      "spaceReplay": true,
+      "audioBlocksNavigation": true,
+      "modifiers": true,
+      "menuUnaffected": true
+    },
+    {
+      "engine": "chromium",
+      "sheetEnterAndArrows": true,
+      "sheetSpace": true,
+      "worksheetArrows": true
+    },
+    {
+      "engine": "chromium",
+      "textareaNative": true
+    },
+    {
+      "engine": "chromium",
+      "nativeSpaceRecordStop": true,
+      "recordingBlocksNavigation": true
+    },
+    {
+      "engine": "chromium",
+      "mobileWidths": [
+        1366,
+        768,
+        390,
+        320,
+        844
+      ],
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "nativeAudioSpaceReplay": true,
+      "mobileTouchBackAndReload": true
+    },
+    {
+      "engine": "webkit",
+      "enterWrongRightNext": true,
+      "heldKey": true,
+      "manualFeedback": true,
+      "backAndDedup": true,
+      "inputSpacesAndCursor": true,
+      "completion": true
+    },
+    {
+      "engine": "webkit",
+      "spaceReplay": true,
+      "audioBlocksNavigation": true,
+      "modifiers": true,
+      "menuUnaffected": true
+    },
+    {
+      "engine": "webkit",
+      "sheetEnterAndArrows": true,
+      "sheetSpace": true,
+      "worksheetArrows": true
+    },
+    {
+      "engine": "webkit",
+      "textareaNative": true
+    },
+    {
+      "engine": "webkit",
+      "nativeSpaceRecordStop": true,
+      "recordingBlocksNavigation": true
+    },
+    {
+      "engine": "webkit",
+      "mobileWidths": [
+        1366,
+        768,
+        390,
+        320,
+        844
+      ],
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "nativeAudioSpaceReplay": true,
+      "mobileTouchBackAndReload": true
+    }
+  ],
+  "errors": [],
+  "physicalDevices": false
+}

@@ -1,0 +1,3355 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 1280,
+      "height": 720,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": false,
+      "labels": [
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(234, 242, 251)",
+          "ink": "rgb(36, 76, 122)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(240, 234, 248)",
+          "ink": "rgb(96, 64, 138)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 241, 241)",
+          "ink": "rgb(23, 76, 83)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(230, 243, 246)",
+          "ink": "rgb(28, 82, 96)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(244, 236, 243)",
+          "ink": "rgb(116, 70, 111)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(250, 240, 219)",
+          "ink": "rgb(112, 80, 24)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(236, 238, 249)",
+          "ink": "rgb(67, 76, 128)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 320,
+      "height": 568,
+      "theme": "light",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(233, 242, 233)",
+          "ink": "rgb(56, 93, 64)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "goal": "betekenis-precies",
+      "family": "woorden",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(38, 61, 85)",
+          "ink": "rgb(211, 230, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "goal": "klank-first",
+      "family": "klanken",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(62, 49, 82)",
+          "ink": "rgb(228, 214, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "goal": "tekst-info",
+      "family": "lezen",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 65)",
+          "ink": "rgb(208, 238, 238)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "goal": "hoor-foto",
+      "family": "luisteren",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(36, 62, 72)",
+          "ink": "rgb(210, 237, 246)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "family": "spreken",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(72, 52, 71)",
+          "ink": "rgb(244, 213, 240)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "goal": "formulier",
+      "family": "schrijven",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "goal": "woord-dictee",
+      "family": "spelling",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(70, 59, 40)",
+          "ink": "rgb(246, 229, 183)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "goal": "vraagzin",
+      "family": "grammatica",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(48, 57, 84)",
+          "ink": "rgb(220, 226, 255)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "goal": "passende-reactie",
+      "family": "praktijk",
+      "width": 320,
+      "height": 568,
+      "theme": "dark",
+      "fits": true,
+      "goalBeforeHow": true,
+      "controlsReachable": true,
+      "bodyScrollable": true,
+      "labels": [
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        },
+        {
+          "bg": "rgb(45, 64, 50)",
+          "ink": "rgb(220, 238, 220)",
+          "fit": true
+        }
+      ],
+      "font": 16,
+      "keyboardContained": true,
+      "escapeFocusRestored": true,
+      "touchReturn": true,
+      "exercisePreserved": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": [],
+  "physicalPhoneTested": false
+}

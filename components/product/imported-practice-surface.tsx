@@ -1,21 +1,17 @@
 'use client';
 import { useExerciseViewTarget } from './exercise-view';
-import { useEffect, useRef, useState, type CSSProperties } from 'react';
-import { Check, Info, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Check } from 'lucide-react';
 import { contentTaskIssues, gradeContentResponse, type ContentTask } from '@/lib/imported-practice-contract';
 import type { PackageExercise } from '@/lib/package-content';
-import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { LearnerExerciseInfo } from './learner-exercise-info';
 import {ImportedTeacherWorkflow,TeacherPreparation} from './imported-teacher-workflow';
-type Props = { exercise: PackageExercise; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean };
-export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: Props) {
+type Props = { exercise: PackageExercise; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean; infoTarget?: HTMLElement | null };
+export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, canAnswer, answeredCorrectly, infoTarget }: Props) {
   const task = exercise.contentTask as ContentTask;
   const textView = useExerciseViewTarget('text', Boolean(task.stimulus));
   const [answer, setAnswer] = useState('');
   const [selected, setSelected] = useState<string[]>([]);
-  const [guidance, setGuidance] = useState(false);
-  const closeInfo = useRef<HTMLButtonElement>(null);
-  const infoTrigger = useRef<HTMLButtonElement>(null);
-  const [infoStyle, setInfoStyle] = useState<CSSProperties>({});
   const [prepared, setPrepared] = useState(exercise.access === 'self-practice');
   const questions = task.initialQuestions?.length ? task.initialQuestions : [{id: exercise.exerciseId.replace(/^content:/,''), prompt: task.prompt}];
   const sourceVersion = JSON.stringify([task.stimulus, questions]);
@@ -41,33 +37,10 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
   if(!prepared)return <TeacherPreparation task={task} locked={Boolean(locked)} onBegin={()=>setPrepared(true)}/>;
   return <section className="cp-task-card cp-content-task" data-content-player={task.mode}>
     <p {...textView} className="cp-content-stimulus">{task.stimulus}</p>
-    <Dialog open={guidance} onOpenChange={open => {
-      if (open) {
-        if (infoTrigger.current) {
-          const theme = getComputedStyle(infoTrigger.current);
-          setInfoStyle({ ...Object.fromEntries(['--ink', '--muted', '--primary', '--primary-dark', '--paper', '--canvas', '--line-strong', '--focus', '--radius'].map(name => [name, theme.getPropertyValue(name)])), fontFamily: theme.fontFamily } as CSSProperties);
-        }
-        onHelp();
-      }
-      setGuidance(open);
-    }}>
-      <div className="cp-content-question"><h4>{staged&&pendingQuestion?pendingQuestion.prompt:task.prompt}</h4>
-        {(!staged || firstResponse) && <DialogTrigger ref={infoTrigger} className="secondary-button cp-content-info-button" aria-label="Over deze oefening" title="Over deze oefening"><Info aria-hidden="true" /></DialogTrigger>}
-      </div>
-      {guidance && <DialogContent className="cp-learner-info" style={infoStyle} showCloseButton={false} initialFocus={closeInfo} aria-describedby={undefined}>
-        <header><DialogTitle>Over deze oefening</DialogTitle><DialogClose ref={closeInfo} className="secondary-button" aria-label="Uitleg sluiten"><X aria-hidden="true" /></DialogClose></header>
-        <ol>
-          <li>{task.stimulus ? 'Lees de vraag en de tekst.' : 'Lees de vraag rustig.'}</li>
-          <li>{task.mode === 'choice' ? task.correctOptionIds.length > 1 ? 'Kies alle passende antwoorden.' : 'Kies één antwoord dat past.' : task.mode === 'text' ? 'Schrijf je antwoord in het invulvak.' : 'Geef je antwoord. Je mag het zeggen of opschrijven.'}</li>
-          <li>{task.mode === 'teacher' ? 'Bespreek je antwoord. Kies daarna Gedaan en besproken.' : 'Klik op Controleer. Daarna kies je Verder.'}</li>
-        </ol>
-        <section className="cp-learner-info-tip"><h3>Als je twijfelt</h3><p>{task.mode === 'teacher' ? 'Oefen samen en bespreek wat je al kunt.' : task.mode === 'choice' && task.stimulus ? 'Lees de zin ervoor en erna. Welke keuze past bij de situatie?' : 'Lees de vraag nog eens en probeer opnieuw.'}</p></section>
-        <DialogClose className="secondary-button cp-learner-info-return">Terug naar de oefening</DialogClose>
-      </DialogContent>}
-    </Dialog>
-    {task.mode === 'choice' && <><p>{task.correctOptionIds.length > 1 ? 'Kies alle passende antwoorden.' : 'Kies één antwoord.'}</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className="secondary-button" aria-pressed={selected.includes(option.id)} disabled={locked} onClick={() => { setSelected(previous => task.correctOptionIds.length > 1 ? previous.includes(option.id) ? previous.filter(id => id !== option.id) : [...previous,option.id] : [option.id]); onReset(); }}>{option.text}</button>)}</div></>}
+    <LearnerExerciseInfo exercise={exercise} onHelp={onHelp} showTrigger={Boolean(!staged || firstResponse)} target={infoTarget} /><h4>{staged&&pendingQuestion?pendingQuestion.prompt:task.prompt}</h4>
+    {task.mode === 'choice' && <><p>{task.correctOptionIds.length > 1 ? 'Kies alle passende antwoorden.' : 'Kies één antwoord.'}</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className={`secondary-button${selected.includes(option.id) ? ' selected' : ''}`} aria-pressed={selected.includes(option.id)} disabled={locked} onClick={() => { setSelected(previous => task.correctOptionIds.length > 1 ? previous.includes(option.id) ? previous.filter(id => id !== option.id) : [...previous,option.id] : [option.id]); onReset(); }}>{option.text}</button>)}</div></>}
     {staged && !firstResponse && <p>Geef eerst zelf antwoord en wijs aan waar je dat in de tekst ziet. Je mag je antwoord zeggen. {questions.length>1?`Vraag ${questions.findIndex(question=>question.id===pendingQuestion?.id)+1} van ${questions.length}. Eerst alle eigen antwoorden; daarna bespreken we de mogelijkheden.`:''}</p>}
-    {staged && firstResponse && <><p>Je hebt eerst zelf geantwoord. Bekijk nu de mogelijkheden en bespreek waarom je antwoord bij de tekst past.</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className="secondary-button" aria-pressed={selected.includes(option.id)} disabled={responseLocked} onClick={() => {setSelected([option.id]);onReset();}}>{option.text}</button>)}</div></>}
+    {staged && firstResponse && <><p>Je hebt eerst zelf geantwoord. Bekijk nu de mogelijkheden en bespreek waarom je antwoord bij de tekst past.</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className={`secondary-button${selected.includes(option.id) ? ' selected' : ''}`} aria-pressed={selected.includes(option.id)} disabled={responseLocked} onClick={() => {setSelected([option.id]);onReset();}}>{option.text}</button>)}</div></>}
     {task.mode !== 'choice' && <label className="cp-text-entry"><span>{task.mode === 'teacher' ? 'Je antwoord of een korte notitie (mag leeg blijven)' : 'Je antwoord'}</span><textarea value={answer} disabled={responseLocked} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} rows={3} onChange={event => {setAnswer(event.target.value);onReset();}} /></label>}
     {task.mode === 'text' && <p>Hoofdletters, leestekens en spaties tellen mee. Volg de opdracht precies.</p>}
     {staged && !firstResponse ? <button data-practice-check className="primary-button" disabled={responseLocked} onClick={() => {setInitialAnswers(current=>({...current,[pendingQuestion!.id]:{answer}}));setAnswer('');}}>Ik heb eerst zelf geantwoord<Check /></button> : <button data-practice-check className="primary-button" disabled={responseLocked || (task.mode === 'choice' ? !selected.length : task.mode === 'text' ? !answer.trim() : false)} onClick={submit}>{task.mode === 'teacher' ? 'Gedaan en besproken' : 'Controleer'}<Check /></button>}
