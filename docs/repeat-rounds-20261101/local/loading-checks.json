@@ -1,0 +1,54 @@
+{
+  "base": "http://127.0.0.1:19031",
+  "checks": [
+    {
+      "engine": "chromium",
+      "fault": "unavailable",
+      "rejected": true,
+      "retryRecovered": true,
+      "oldReviewPreserved": true,
+      "requests": 3
+    },
+    {
+      "engine": "chromium",
+      "fault": "invalid-count",
+      "rejected": true,
+      "retryRecovered": true,
+      "oldReviewPreserved": true,
+      "requests": 3
+    },
+    {
+      "engine": "chromium",
+      "fault": "missing-source",
+      "rejected": true,
+      "retryRecovered": true,
+      "oldReviewPreserved": true,
+      "requests": 3
+    },
+    {
+      "engine": "webkit",
+      "fault": "unavailable",
+      "rejected": true,
+      "retryRecovered": true,
+      "oldReviewPreserved": true,
+      "requests": 3
+    },
+    {
+      "engine": "webkit",
+      "fault": "invalid-count",
+      "rejected": true,
+      "retryRecovered": true,
+      "oldReviewPreserved": true,
+      "requests": 3
+    },
+    {
+      "engine": "webkit",
+      "fault": "missing-source",
+      "rejected": true,
+      "retryRecovered": true,
+      "oldReviewPreserved": true,
+      "requests": 3
+    }
+  ],
+  "errors": []
+}

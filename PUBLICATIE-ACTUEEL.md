@@ -1,3 +1,15 @@
+## Actuele publicatie — kleinere openingsloader die direct beweegt — 1 november 2026
+
+Livebron `039eb22ede86403144dc150e7f0f995df10c4f81`, schone canonieke main; Worker `4640f105-e667-4955-8be8-f58acbccfe84`. Normaal gepubliceerd via `npm run deploy` vanuit een afstammeling van livebron `f7fb187b7901b824234d83478313dcafff7d69a4`, inclusief de daaropvolgende herstelbewijzen op main. Alle leerdoelen-, mobiele bediening-, inhouds- en eerdere vormgevingsverbeteringen blijven behouden.
+
+Nico meldde een stilstaand eerste beeld terwijl de app wel opende en vroeg de loader kleiner te maken. De website gebruikt het oorspronkelijke SVG, geen Lottie-speler. Bij een snelle start opende de app na circa 336–380 ms, vóór het einde van de stilstaande aanloop van circa 400 ms. Uitsluitend de bestaande animatietijden zijn aangepast: direct bewegen, dezelfde afzet, vlucht en nastuiters in 1,8 seconden. Alle beelden, lettervormen, kleuren en posities blijven identiek. De afbeeldingsruimte is 158 px breed, het zichtbare logo ongeveer 140 px. Geen wachttijd toegevoegd: zodra de app klaar is, verdwijnt de loader. Bij een zeer snelle start hoeft de volledige animatie dus niet zichtbaar te zijn.
+
+Lokaal én online slagen 32 afspeel-/maat-/route-/opslag-/minder-beweging-controles in Chromium en WebKit, desktop/mobiel en licht/donker. De eerste WebKit-screenshotmetingen wachtten op documentlettertypes en waren te laat of liepen vast. De SVG-meting is herhaald met Playwrights bestaande PW_TEST_SCREENSHOT_NO_FONTS_READY=1: de logoafbeelding zelf is wel volledig gedecodeerd, maar wacht niet op lettertypes die zij niet gebruikt. Er is geen appcode of browserinstelling gewijzigd. De gewone koude start en alle overige schermen met hun lettertypes zijn afzonderlijk gecontroleerd; eerste meetpogingen en de aangepaste meetopdracht blijven bewaard. De 24 overige schermen zijn lokaal pixelgelijk aan de livebasis; online is dezelfde vergelijking geslaagd. Normale starts, de drie werkelijk aangeboden loaderbestanden en alle release-inhoudsvingerafdrukken zijn online bevestigd. Lokaal aanvullend TypeScript, gerichte lint, tien docentherstelproeven, acht docentprivacyproeven, elf vrijgave-/herstelproeven en de volledige normale publicatiepoort en productieopbouw. Geen fysieke telefoons getest. Geen GitHub Actions aanwezig of toegevoegd; alle zware controles lokaal.
+
+Brongebonden scope en opdracht: `docs/klink-owner-release-opening-loader-repair-20261101.json`. De vaste vloer krijgt uitsluitend de goedgekeurde maat-/animatiewijziging. Bron, vergelijking, livebewijs en gecontroleerde Drive-herstelkopieën: `docs/opening-loader-repair-20261101/`. Geen andere loaderopties, footerlogo's of nieuwe functies gepubliceerd.
+
+---
+
 ## Actuele publicatie — gecontroleerde leerdoelen en mobiele bediening — 1 november 2026
 
 Livebron `f7fb187b7901b824234d83478313dcafff7d69a4`, schone canonieke main; Worker `976151dd-e176-4c27-b0bd-94f6f8384964`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de werkelijk live aangetroffen bron `995ae4407c6b9c0765cf63f801009846ca30ed11` (Worker `88da2bf9-7f47-43ff-a80d-2a8580e61820`). Die actualisering behoudt ook alle 100 naschrijfposities en de eerder goedgekeurde header. De bron is op de canonieke publicatiebranch gedeeld, zodat andere taken geen oudere basis publiceren.
@@ -13,6 +25,18 @@ De livebron, alle bestaande inhoudsvingerafdrukken, vijf naschrijfbanken en twee
 Akkoord: `docs/klink-owner-release-goal-audit-20261101.json`. De concrete gerichte aanvulling op de vaste vloer staat in `docs/appearance-floor-20261031/approved-updates/goal-audit-20261101.json`. Bronvergelijking, correcties, controles, onlineschermen en beperkingen: `docs/goal-audit-20261101/`. De bronkopie is volledig uit de bestaande Drive-projectmap teruggelezen en per bestand gecontroleerd (`backup.json`); de definitieve herstelkopie met bronbundel en onlinebewijzen staat in `final-backup.json`.
 
 ---
+
+## Eerder gepubliceerd — vijf volledige kopieerrondes — 1 november 2026
+
+Livebron `995ae4407c6b9c0765cf63f801009846ca30ed11`, schone canonieke main; Worker `88da2bf9-7f47-43ff-a80d-2a8580e61820`. Gepubliceerd via de gewone `npm run deploy`, bovenop de actuele goedgekeurde infoknop-/keuzebron `501b0b199de79e28fc20429718af8d5f5d14d167`. De infoknop in de opdrachtbalk, zichtbare bronkeuzes, leerdoelen, Synoniemen-review, openingsanimatie en alle eerdere functies blijven behouden.
+
+Schrijven > Typ na > Alfa C > Met de docent bevat nu Woorden en korte zinnen · 1–5: honderd bronposities met 99 verschillende voorbeelden. Bronpositie 097 hergebruikt dezelfde opdracht als 020 en behoudt haar eigen rondevoortgang. De oorspronkelijke eerste ronde en alle andere collecties blijven intact. Hoofdletters, interne spaties en leestekens zijn exact; buitenste invoerspaties mogen verschillen. De foutmelding geeft nu voor alle honderd posities het eerste afwijkende teken én een passende hint. Daarmee is het in de eerste publicatie gevonden feedbackpunt opgelost. Twintig hints gebruiken eenvoudige cursistentaal; alle oorspronkelijke bronrecords blijven bewaard. Alle honderd modellen zijn met de actuele native Google Docs vergeleken.
+
+Lokaal en online slagen 1.200 volledige oefenstromen, 96 korte/lange model- en toetsenbordindelingen, twaalf leerdoeldialogen en twee afwijzings-/herstelproeven met een defect bronbestand in Chromium/WebKit. De vijf aangeboden oefenbestanden zijn werkelijk bytegelijk teruggelezen. Lokaal slagen 131 eenheids-/bron-/matrixproeven, twaalf vrijgave-/herstelproeven, typecheck, gerichte lint, productieopbouw en de volledige gewone publicatiepoort. Bestaande antwoorden, opslag, routes, doelen, opmaak en media blijven behouden. De bestaande limiet van 200 recente pogingen en afzonderlijke afgeronde rondes zijn gecontroleerd. Geen nieuwe audio of beelden. Alle zware controles lokaal; geen GitHub-workflows toegevoegd.
+
+Op het kleinste gesimuleerde toetsenbordvlak blijft de volledige langste bron via de bestaande kaartscroll bereikbaar; invoer, Controleer en Verder blijven bereikbaar. Lettergroottes en compositie zijn behouden. Geen fysieke telefoon of native schermtoetsenbord getest. Menselijke NT2-review en cursistenpilot zijn niet uitgevoerd; Nico's automatische eigenaars- en publicatieakkoord geldt brongebonden. Het doel blijft nauwkeurig overnemen met een zichtbaar model.
+
+Akkoord en controles: `docs/klink-owner-release-writing-copy-next-20261101.json`, `docs/writing-copy-next-20261101/`. De bron-/controlekopie is volledig vanaf Drive teruggelezen: 143 manifestbestanden en ZIP-integriteit gecontroleerd. De definitieve herstelkopie en onlinebewijzen worden vastgelegd in `final-backup.json`.
 
 ## Actuele publicatie — info in opdrachtbalk en zichtbare antwoorden — 1 november 2026
 

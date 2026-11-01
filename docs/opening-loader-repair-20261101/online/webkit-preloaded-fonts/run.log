@@ -1,0 +1,15 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Dot must visibly move during loading, not only show a still frame
+    at file:///Users/nicoknoester/Documents/Codex/2026-11-01/referenced-chatgpt-conversation-this-is-an-6/work/loader-repair-check/retry-webkit.mjs:40:86 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

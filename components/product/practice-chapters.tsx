@@ -11,6 +11,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, Search, UserRound, UsersRound } from 'lucide-react';
 import Image from './compact-image';
 import { ProductionRound } from './production-round';
+import { SourceRepeatRound } from './source-repeat-round';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
@@ -99,7 +100,7 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
   const modeAvailable = (help: ContentHelp) => countMode(help) > 0;
   const openMode = (help: ContentHelp) => open({ ...location, help, collection: undefined, words: undefined });
   const collection = reviewMode ? visible.find(item => item.id === location.collection) : selectedChapterCollection(location);
-  const Round = collection?.contentUrl ? ProductionRound : GroupRound;
+  const Round = collection?.sourceRepeat ? SourceRepeatRound : collection?.contentUrl ? ProductionRound : GroupRound;
   const exerciseChoices = collection ? chapterExerciseChoices(location) : [];
   const sequenceBlock = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.find(block => block.id === location.collection) : undefined;
   const activitySelected = Boolean(activity || location.sequence);
@@ -141,9 +142,9 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
     </>}
     <AdditionalContent showPracticeChoice={false} selection={location} availableLevels={availableLevels} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
     </div>}
-    {collection && activity && <Round progressId={collectionProgressId(activity.id, (collection.wordRound ?? collection.readingSelection)?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={(collection.wordRound ?? collection.readingSelection)?.allExerciseIds} legacySessionId={(collection.wordRound ?? collection.readingSelection) && ((collection.wordRound ?? collection.readingSelection)!.sourceId !== collection.id || location.words) ? `chapter:${activity.id}:${(collection.wordRound ?? collection.readingSelection)!.sourceId}` : undefined} exerciseIds={(collection.wordRound ?? collection.readingSelection)?.exerciseIds} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ scopeLabel: collection.wordRound ? 'Met dezelfde woorden' : undefined, value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+    {collection && activity && <Round progressId={collectionProgressId(activity.id, (collection.wordRound ?? collection.readingSelection)?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={(collection.wordRound ?? collection.readingSelection)?.allExerciseIds} legacySessionId={(collection.wordRound ?? collection.readingSelection) && ((collection.wordRound ?? collection.readingSelection)!.sourceId !== collection.id || location.words) ? `chapter:${activity.id}:${(collection.wordRound ?? collection.readingSelection)!.sourceId}` : undefined} exerciseIds={(collection.wordRound ?? collection.readingSelection)?.exerciseIds} sourceRepeat={collection.sourceRepeat} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ scopeLabel: collection.wordRound ? 'Met dezelfde woorden' : undefined, value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);
       if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection, words: next.words });
-    } }} key={`${activity.id}:${collection.id}:${location.words?.join(',') ?? ''}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${location.words ? `:words:${location.words.join(',')}` : ''}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
+    } }} key={`${activity.id}:${collection.id}:${location.words?.join(',') ?? ''}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${location.words ? `:words:${location.words.join(',')}` : ''}${reviewMode && !collection.sourceRepeat ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
   </div>;
 }
