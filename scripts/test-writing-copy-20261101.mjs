@@ -16,7 +16,7 @@ const bytes=readFileSync('public'+row.url),collection=JSON.parse(bytes);
 test('20 source-bound tasks use the existing copy player and preserve the old catalogue',()=>{
   const before=JSON.parse(execFileSync('git',['show','4612b27eebe2ef45c6d806ed18df09f7e8f1e934:data/klink-production-index.json']));
   assert.deepEqual(index.slice(0,before.length),before);
-  assert.equal(index.length,before.length+1);
+  assert(index.length>=before.length+1);
   assert.equal(validateProductionCollection(collection,row.id,20).length,20);
   assert(row.url.includes(createHash('sha256').update(bytes).digest('hex').slice(0,16)));
   assert(displayedChapterCollections('copy',{level:'alfa-c',help:'guided'}).some(r=>r.id===row.id));

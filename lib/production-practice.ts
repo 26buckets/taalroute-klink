@@ -20,6 +20,10 @@ export function validateProductionCollection(value: unknown, id: string, count: 
   const ids = new Set<string>();
   for (const exercise of data.exercises) {
     if (!exercise || typeof exercise.exerciseId !== 'string' || ids.has(exercise.exerciseId) || typeof exercise.componentId !== 'string' || typeof exercise.mode !== 'string') throw new Error('Invalid exercise');
+    if (exercise.answerPolicy === 'exact-copy') {
+      const fields = exercise.fields;
+      if (exercise.componentId !== 'ALF-CMP-006' || exercise.mode !== 'copy-word' || typeof exercise.exampleWord !== 'string' || !exercise.exampleWord.trim() || !Array.isArray(fields) || fields.length !== 1 || !fields[0] || !Array.isArray(fields[0].acceptedAnswers) || fields[0].acceptedAnswers.length !== 1 || fields[0].acceptedAnswers[0] !== exercise.exampleWord) throw new Error('Invalid copy model');
+    }
     ids.add(exercise.exerciseId);
   }
   return data.exercises;
