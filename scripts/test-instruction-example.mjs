@@ -27,7 +27,7 @@ void test('All 89 numbered grammar instructions keep every source word, number a
 void test('Reading texts, short Alfa sources and unsupported numbering use the unchanged presentation',()=>{
  const texts=items.find(x=>x.id==='kg-b1-g62-001').teacherWorkflow.phases[0].learnerText;
  for(const kind of ['spelling','writing','precise-response'])assert.equal(render({kind,texts}),null);
- for(const changed of [[],texts.slice(0,2),[texts[0],texts[1],texts[2].replace('2. Herstel','4. Herstel')],[...texts,'Extra'],[texts[0],texts[1],texts[2]+'\nExtra opdracht.']])assert.equal(render({kind:'grammar',texts:changed}),null);
+ for(const changed of [[],texts.slice(0,2),[texts[0],texts[1],texts[2].replace(/^2\. /m,'4. ')],[...texts,'Extra'],[texts[0],texts[1],texts[2]+'\nExtra opdracht.']])assert.equal(render({kind:'grammar',texts:changed}),null);
 });
 void test('Times and exercise examples remain complete, and application instructions stay separate',()=>{
  const text=['Een afspraak','De les is om 18.00 uur. Je komt op tijd.','1. Lees: De les begint om 18.00 uur.\n2. Schrijf de tijd.\nToepassing: Vraag hoe laat de les begint.'];

@@ -1,12 +1,13 @@
 import {chromium,webkit} from 'playwright';
 import assert from 'node:assert/strict';
-import {mkdirSync,writeFileSync} from 'node:fs';
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 import sharp from 'sharp';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18984';
 const reference=process.env.KLINK_REFERENCE_URL||'http://127.0.0.1:18985';
 const out=process.env.KLINK_TEST_OUTPUT;assert(out,'Provide a separate output folder');mkdirSync(out,{recursive:true});
 const hash='#learner/chapters/grammar/content-grammatica/content%3Agrammatica%3Aklink-local-grammar-g62-20261018%3Ab1%3Agrammar?level=b1&help=guided';
 const results=[],comparisons=[];
+const situation=JSON.parse(readFileSync('data/klink-imported-practice.json')).items.find(item=>item.id==='kg-b1-g62-001').stimulus;
 async function configure(page,theme){await page.addInitScript(theme=>{localStorage.setItem('taalroute-klink-appearance-v1',theme);localStorage.setItem('instruction-review-sentinel','behouden');},theme);}
 async function showStep(page){await page.locator('.cp-instruction-step h4').first().evaluate(node=>{const stage=node.closest('.cp-exercise-stage'),tools=stage.querySelector('.cp-exercise-tools');stage.scrollTop+=node.getBoundingClientRect().top-tools.getBoundingClientRect().bottom-16;});}
 for(const [engineName,engine] of Object.entries({chromium,webkit})){
@@ -15,7 +16,7 @@ for(const [engineName,engine] of Object.entries({chromium,webkit})){
   const page=await browser.newPage({viewport:{width,height:950},colorScheme:theme,hasTouch:width<600}),errors=[];page.on('pageerror',e=>errors.push(e.message));
   await configure(page,theme);await page.goto(base+'/'+hash);await page.getByRole('button',{name:'Begin samen',exact:true}).click();await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('html').getAttribute('data-theme'),theme);
-  assert.equal(await page.locator('.cp-instruction-example section').count(),4);assert.equal(await page.locator('.cp-instruction-step').count(),2);assert.equal(await page.locator('.cp-instruction-context li').count(),6);
+  assert.equal(await page.locator('.cp-instruction-example section').count(),4);assert.equal(await page.locator('.cp-instruction-step').count(),2);assert.equal(await page.locator('.cp-instruction-context li').count(),situation.split(/(?<=[.!?])\s+(?=[A-ZÀ-Ý])/u).length);
   const toolbar=page.locator('.cp-exercise-stage > .cp-exercise-tools'),stage=page.locator('.cp-exercise-stage');
   const position=await toolbar.boundingBox();
   for(const fraction of [0,.5,1]){

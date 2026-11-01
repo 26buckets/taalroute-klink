@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-01",
+  "status": "local-reviewed-not-published",
+  "sourceCommit": "f91e1e8c87c5162a7e51c034be38f3aa2d202970",
+  "liveBasisFromPreviousReview": "4612b27eebe2ef45c6d806ed18df09f7e8f1e934",
+  "liveBasisRecheckedThisTurn": false,
+  "scope": {
+    "reviewedGrammarAndSpellingItems": 124,
+    "editedGrammar": 71,
+    "editedSpelling": 10,
+    "shorterInstructions": 50,
+    "equalLengthSimpler": 13,
+    "longerSimpler": 18,
+    "exactChangedFields": 237,
+    "instructionWordsBefore": 5847,
+    "instructionWordsAfter": 5656,
+    "emailExampleWordsBefore": 135,
+    "emailExampleWordsAfter": 116
+  },
+  "contentReview": {
+    "method": "Exacte redactionele voor/na-controle tegen de bestaande context, opdracht en docentverwachting; geen cursistpilot of onafhankelijke onderwijskundige validatie.",
+    "exerciseExamplesAndErrors": "Bewust foutieve oefenzinnen en spellingteksten behouden. Geen antwoordmodellen vereenvoudigd.",
+    "emailContext": "Alle feiten en voorwaarden behouden: datum, fictieve cursus, gevraagde B/bevestigde A, gelijke inhoud, alleen B avond, werk overdag, wijzigingsverzoek, antwoord vóór eerste les, zakelijke gewone mail, geen echte verzending.",
+    "pronounTask": "Vooraf roltoewijzing; zeven ontvangers en alle gevraagde vormen behouden. Eén docenttoelichting en de identieke verwachte-antwoordkopie bijgewerkt.",
+    "existingMirrorMismatch": "A2 G26 had twee oude, langere cursist/docentkopieën. Gelijkgetrokken met de vereenvoudigde hoofdopdracht.",
+    "unchanged": "IDs, sourceHash, les-/doelkoppelingen, criteria, antwoordvelden, juiste antwoorden, bronnen en registers behouden. Andere lange leesbronnen en noodzakelijke docentaanwijzingen niet als cursistinstructie ingekort."
+  },
+  "appearance": {
+    "componentsChanged": false,
+    "cssChanged": false,
+    "approvedNumberedColoredLayoutPreserved": true,
+    "audioControlsChanged": false
+  },
+  "audio": {
+    "generation": false,
+    "mediaChanges": false,
+    "instructionRecordingBindings": "Geen audio-velden bij de 124 grammatica-/spellingitems; de bestaande imported-practice route registreert audioReview paused en audioExpected 0. Dit is geen bewijs van methodebrede audiodekking. De aparte eerdere audio-werkbranch is niet geïmporteerd."
+  },
+  "designBasis": {
+    "read": "Google Drive 1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz en canonieke lokale TAALROUTE-ONTWERPBASIS.md",
+    "check": "Losse redactie binnen bestaande lesdoelen. Leskoppelingen, criteria, rooster en observatieafspraken niet veranderd; geen TLE-registerwijziging."
+  },
+  "checks": {
+    "unitIntegration": {
+      "passed": 36,
+      "failed": 0
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "browserScenarios": 108,
+    "browsers": [
+      "Chromium",
+      "WebKit"
+    ],
+    "widths": [
+      1366,
+      390,
+      320
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "savedAnswersAfterReload": "passed in 12 email cases",
+    "unrelatedHomePixelComparisons": 4,
+    "sourceGuard": "Exacte nieuwe amendment vastgezet; niet-gereviewde wijzigingen blijven geweigerd. Alleen testreconstructie aangepast, geen publicatiepoort."
+  },
+  "notDone": [
+    "Geen livepublicatie, push of GitHub Actions-run.",
+    "Geen productiebatches, imports of audiogeneratie.",
+    "Geen volledige nieuwe releasevrijgave en geen herhaling van ongerelateerde testreeksen.",
+    "Geen praktijktoets met cursisten, echte mobiele hardware of screenreader."
+  ]
+}

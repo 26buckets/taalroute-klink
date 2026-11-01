@@ -22,6 +22,7 @@ export function readBeforeLaterContentRevisions(file, read = readFileSync) {
   if (file === 'data/klink-imported-practice.json') {
     // Reconstruct only Nico's exact local text correction; this grants no publication approval.
     for (const [path, hash] of [
+      ['docs/instruction-simplification-20261101/amendment.json', '516c09aa6f83dc243b865ad937a4649b84fb588790cd5793b098a26f9f23c773'],
       ['docs/local-instruction-appwide-20261101/amendment.json', 'bdcc4e401f559f675a9ebeb73534c7c2bda1cf307835061874ba1d34053ccd06'],
       ['docs/local-instruction-review-20261101/amendment.json', '9545730f58edead36ce9a8ef9e0e038367df0a19ad57799248a2d8513489b4dd'],
     ]) {
