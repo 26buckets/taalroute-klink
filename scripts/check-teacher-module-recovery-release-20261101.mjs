@@ -1,5 +1,5 @@
+import {verifyTeacherPhaseLabelsRelease,readBeforeTeacherPhaseLabels} from './check-teacher-phase-labels-release-20261101.mjs';
 import assert from 'node:assert/strict';
-import {verifyWordUseRelease,readBeforeWordUse} from './check-word-use-release-20261101.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -9,7 +9,7 @@ const sort=a=>a.sort((a,b)=>a.localeCompare(b)),lines=b=>b.toString().trim().spl
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const allowed=sort(['components/product/classroom-boundary.tsx','components/product/teacher-module-recovery.ts','scripts/test-teacher-module-recovery.mjs','scripts/check-dialogue-mobile-photo-release-20261101.mjs','scripts/check-teacher-module-recovery-release-20261101.mjs','scripts/test-teacher-module-recovery-release-20261101.mjs']);
 export function verifyTeacherModuleRecoveryRelease(read=readFileSync){
- const successor=verifyWordUseRelease(read),currentRead=read;read=file=>readBeforeWordUse(file,successor,currentRead);
+ const successor=verifyTeacherPhaseLabelsRelease(read),currentRead=read;read=file=>readBeforeTeacherPhaseLabels(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-teacher-module-recovery-20261101.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceUnchanged,true);assert.equal(r.baselineSourceCommit,base);
  assert(r.userRequest.includes('zet het online')&&r.userRequest.includes('alle lessen en voortgang'));
@@ -26,4 +26,4 @@ export function verifyTeacherModuleRecoveryRelease(read=readFileSync){
  const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);
  return {...r,successor};
 }
-export function readBeforeTeacherModuleRecovery(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeWordUse(file,r.successor,read);}
+export function readBeforeTeacherModuleRecovery(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeTeacherPhaseLabels(file,r.successor,read);}

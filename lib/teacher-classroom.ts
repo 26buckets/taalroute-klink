@@ -175,7 +175,8 @@ export function classroomSoundId(units: string[], index: number) {
 }
 export function phasesForRoute(route: ClassroomRoute, lessonId = 'mat'): LessonPhase[] {
   const lesson = getClassroomLesson(lessonId);
-  return route === 'a' ? lesson.phases : lesson.routes[route].phases;
+  const selected = route === 'a' ? lesson.phases : lesson.routes[route].phases;
+  return selected.map(phase => ({ ...phase, title: phase.title.replace(/^(?:Woord|Zin|Tekst)\s+\d+\.\s*/, '') }));
 }
 export function sequenceForRoute(route: ClassroomRoute, lessonId = 'mat') {
   const lesson = getClassroomLesson(lessonId);
