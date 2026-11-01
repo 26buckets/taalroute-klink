@@ -1,3 +1,14 @@
+## Actuele publicatie — volledige taalreview woordgebruik — 1 november 2026
+Livebron `9d231b1d9cced59374d3ab4d56083f6881c0b3e8`; Worker `1f20969e-769b-4da1-8f3b-de0f8b82d5d1`. Gepubliceerd via de normale `npm run deploy` vanaf schone canonieke main, als afstammeling van de goedgekeurde livebron `76a8c365a83fd0181e79ca67077a891c1ae2a286`.
+
+Alle 288 vragen en 1152 antwoordkaarten van Woordcombinaties en Welke reactie past? zijn redactioneel beoordeeld op vloeiendheid, natuurlijkheid, grammatica, spelling, betekenis, pragmatiek, niveau en eenduidigheid. 139 vragen zijn aangescherpt. Alle zes combinaties van onderdeel en niveau behouden 48 vragen, zes rondes van acht, vier antwoordkaarten en de bestaande IDs/voortgang. Geen uiterlijk-, route-, opslag- of andere appwijziging.
+
+203 noodzakelijke nieuwe ElevenLabs-opnamen zijn gemaakt met de vooraf vastgelegde rolverdeling. Alle 203 zijn technisch gedecodeerd en via ElevenLabs-transcriptie volledig met de voorgeschreven tekst vergeleken; vijf tijdnotaties zijn handmatig tekstueel geaccepteerd. Geluidsdata bleven bij metadataherstel ongewijzigd. Alle 1294 eerdere audiobindingen en bestanden blijven behouden.
+
+Lokaal slagen alle 576 vraagdoorlopen, 1293 audiodecodes in elk van beide browsers, 12 afspeelreeksen, responsieve/feedbackcontroles, 8 identieke bestaande Synoniemen-schermen en 12 proeven met de gecompileerde speler. Type-, lint-, unit-, build- en publicatiecontroles slagen; 15 vrijgaveproeven slagen. Online zijn 12 oefenstromen, zes niveaukeuzes, twee volledige audio-/antwoordreeksen en alle 1497 aangeboden woordgebruik-opnamen gecontroleerd. Alle online audiobytes en ingebedde Taalroute-merkvelden zijn gelijk aan de gecontroleerde bestanden. De vijf vaste inhoudvingerafdrukken en alle eerder gepubliceerde functies blijven behouden.
+
+Dit is Codex-redactie en technische verificatie; geen onafhankelijke menselijke fonetische keuring, officiële woordniveau-certificering of cursistenpilot. Alle zware controles lokaal; nul GitHub-workflows. Bewijs en volledige bron-/audio-/herstelkopieën: `docs/word-use-language-review-20261101/`, `publication.json`, `backup.json` en `final-backup.json`.
+
 ## Actuele publicatie — schrijven, zinnendictee en Verder tijdens audio — 1 november 2026
 
 Livebron `76a8c365a83fd0181e79ca67077a891c1ae2a286`; Worker `1ebc45e7-2668-4235-99e5-955cf3fea545`. Via de normale `npm run deploy` gepubliceerd vanaf schone canonieke main, als afstammeling van de laatst goedgekeurde livebron `e5d442edf10a0b072586b26a2b081638a0e81044`.
