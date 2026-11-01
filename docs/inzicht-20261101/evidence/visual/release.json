@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-01",
+  "reconciled_base": "8744afabfd9088c50da38b8468556bafe792b58e",
+  "initial_pr_head": "e14b33aa2122db2e2718a31a2cf6c307cd935b51",
+  "inspected_main": "0f845d2d28e6fe4a0beca29caa768cb6ae9e425c",
+  "tested_code_commit": "404324c960e5994a51c1d8bfb1855d880e543953",
+  "local_tests": 90,
+  "unit_failures": 0,
+  "unit_skipped": 0,
+  "browsers": [
+    "Chromium",
+    "WebKit"
+  ],
+  "report_and_legacy_browser_runs": "passed after reconciliation",
+  "pdf_modes": [
+    "Woord",
+    "Zin",
+    "Tekst"
+  ],
+  "responsive_widths": [
+    1280,
+    390,
+    320
+  ],
+  "theme": [
+    "light",
+    "dark"
+  ],
+  "axe_tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "keyboard_chart_drilldown": true,
+  "klink_docent_regression": {
+    "journeys": 8,
+    "phase_views": 192,
+    "tools": 40,
+    "product_files_unchanged": true
+  },
+  "typescript": "passed",
+  "targeted_lint": "passed",
+  "product_build": "passed",
+  "staging_build": "passed",
+  "staging_config_guards": "passed locally",
+  "sqlite_postgres_restore": "passed locally",
+  "local_upgrade_preserves_existing_tables": 35,
+  "preserved_migrations_sha256": {
+    "db/migrations/inzicht/0004_mfa.sql": "5a019ab8236b5dd76d6c2ed25761b7a6bb542bd399aa3b925608e19b80048872",
+    "db/migrations/inzicht/0005_processing_retries.sql": "ca3bf5e89b745846333efa1591b2f87f0bfe7cac3cfa76882665903b8da39217"
+  },
+  "remote_migrations_applied": false,
+  "visual_reports_deployed": false,
+  "remote_schema": 5,
+  "current_worker_version": "a078ad0a-9adc-4b1c-ab5c-fbd870b75e21",
+  "online_final_verification": "BLOCKED: shared D1 daily write limit; see ../speed/final-status.json",
+  "next_steps": [
+    "Check current PR head, parallel work and available D1 quota",
+    "Back up and apply reviewed schema 5 to 7 only on existing EU staging",
+    "Build and deploy through the existing staging guard",
+    "Run MFA-authenticated Chromium and WebKit end-to-end checks"
+  ],
+  "production_published_by_this_task": false,
+  "merged": false,
+  "new_github_actions_workflows": 0,
+  "github_actions_workflows_before_push": 0,
+  "known_limits": [
+    "No licensed/validated national normdata; no percentiles or normbands",
+    "Alfa descriptor source is ITTA ISK; adult-specific didactic validation remains open",
+    "Independent WCAG/security and classroom practice review not performed",
+    "Offline browser-history draft recovery not supported; wait for server acknowledgement",
+    "Existing two-second performance target remains open in the parallel speed report"
+  ]
+}
