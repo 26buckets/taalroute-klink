@@ -1,0 +1,26 @@
+{
+  "base": "http://127.0.0.1:18830",
+  "checks": [
+    {
+      "engine": "chromium",
+      "nativeAudio": true,
+      "spaceFromActualBodyFocus": true,
+      "arrowAfterCorrectWhilePlaying": true,
+      "backBlockedDuringAudio": true,
+      "exactlyOneNext": true,
+      "oldAudioStopped": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "nativeAudio": true,
+      "spaceFromActualBodyFocus": true,
+      "arrowAfterCorrectWhilePlaying": true,
+      "backBlockedDuringAudio": true,
+      "exactlyOneNext": true,
+      "oldAudioStopped": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": []
+}

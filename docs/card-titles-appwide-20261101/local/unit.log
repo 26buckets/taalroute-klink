@@ -1,0 +1,21 @@
+✔ Short labels separate authored rounds, levels and support without clipping topics (1.356125ms)
+✔ All visible collection labels separate round and level prefixes (2179.898667ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (12002.369417ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (2.587875ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (13.952333ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (47.095375ms)
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+✔ scripts/test-unified-practice-navigation.mjs (2494.640084ms)
+PASS continuity: 1692 collections, 7461 small rounds, 49226 unchanged tasks, 1982 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (8365.605167ms)
+PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
+✔ scripts/test-word-rounds.mjs (1496.663375ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12465.177667

@@ -1,3 +1,4 @@
+import {verifyCardTitlesRelease,readBeforeCardTitles} from './check-card-titles-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -9,16 +10,17 @@ const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifyWritingBanksRelease(read=readFileSync){
+ const successor=verifyCardTitlesRelease(read),currentRead=read;read=file=>readBeforeCardTitles(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-writing-banks-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.ownerApproval,'standing-owner-approval');
  assert.equal(r.baselineSourceCommit,'17f9db234295127531719cebb3df45d666d8ccac');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
  assert(r.userRequest.includes('Zet gecontroleerde batches online'));
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)),])].sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(Object.keys(r.files).sort((a,b)=>a.localeCompare(b)),changed);
  for(const[f,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(f)),h,f);
- assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts').length,0,'Preserve every existing interface, player, dependency and workflow');
- assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')),[],'Existing offered files remain intact');
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts').length,0,'Preserve every existing interface, player, dependency and workflow');
+ assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,successor.baselineSourceCommit,'--','public')),[],'Existing offered files remain intact');
  const player='components/product/package-group-practice.tsx';assert.deepEqual(changed.filter(f=>f.startsWith('components/')),[player]);
  const expectedPlayer=git('show',r.baselineSourceCommit+':'+player).toString().replace('const storageKey = groupSessionKey(sessionId ?? pack.id, activity);','const storageKey = groupSessionKey(sessionId ?? pack.id, activity, progressId);\n  const legacyStorageKey = groupSessionKey(legacySessionId ?? sessionId ?? pack.id, activity);').replace('restoreGroupSession(localStorage.getItem(storageKey) ?? (legacySessionId ? localStorage.getItem(groupSessionKey(legacySessionId, activity)) : null), exercises)','restoreGroupSession(localStorage.getItem(storageKey) ?? (legacySessionId ? localStorage.getItem(legacyStorageKey) : null), exercises, progressId, storageKey === legacyStorageKey ? null : localStorage.getItem(legacyStorageKey))').replace('if (legacySessionId) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false }))','if (legacySessionId || storageKey !== legacyStorageKey) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false }))');assert.equal(read(player).toString(),expectedPlayer,'Only session storage changes; every rendered element remains identical');
  const register=json(folder+'source-register.json');assert.equal(register.documents.length,44);assert.equal(register.summary.sourceRecords,880);
@@ -45,6 +47,6 @@ export function verifyWritingBanksRelease(read=readFileSync){
  assert.equal(browser.sessionRecovery.length,8);assert(browser.sessionRecovery.every(x=>x.oldSessionPreserved&&x.oldCompletionResumedAtCorrection&&x.restartStartsAtFirst));
  const checks=json(folder+'verification.json');for(const k of['types','lint','unit','build','sourceAndAnswers','browser','appearancePreserved','progressPreserved','localOnly'])assert.equal(checks[k],true,k);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return r;
+ return {...r,successor};
 }
-export function readBeforeWritingBanks(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeWritingBanks(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeCardTitles(file,r.successor,read);}

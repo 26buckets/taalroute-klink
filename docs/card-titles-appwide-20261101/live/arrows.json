@@ -1,0 +1,343 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "scenario": "space",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": true,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "scenario": "arrows",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "scenario": "selected-space",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "space",
+      "initialFocus": "BUTTON",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "arrows",
+      "initialFocus": "BUTTON",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "scenario": "space",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": true,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "scenario": "arrows",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "scenario": "selected-space",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "space",
+      "initialFocus": "BUTTON",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "arrows",
+      "initialFocus": "BUTTON",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "scenario": "space",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": true,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "scenario": "arrows",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "scenario": "selected-space",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "space",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "arrows",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "scenario": "space",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": true,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "scenario": "arrows",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": false,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "scenario": "selected-space",
+      "selectedAnswerAudioReplay": true,
+      "spaceKeepsAnswer": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "space",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "scenario": "arrows",
+      "initialFocus": "BODY",
+      "selectedAnswerAudioReplay": false,
+      "spaceKeepsAnswer": false,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": false,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": [],
+  "physicalDeviceTested": false
+}
