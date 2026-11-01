@@ -1,0 +1,94 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "initialFocus": "BUTTON",
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "initialFocus": "BUTTON",
+      "spaceKeepsAnswer": true,
+      "spaceReplaysOnce": false,
+      "spaceDoesNotScroll": true,
+      "arrowsFromActualFocus": true,
+      "heldKeySafe": true,
+      "unconfirmedCannotAdvance": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "error": "Space replays available audio once, without inventing audio\n\n0 !== 1\n"
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "error": "Space replays available audio once, without inventing audio\n\n0 !== 1\n"
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "error": "Space replays available audio once, without inventing audio\n\n0 !== 1\n"
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "content-woordpakketten",
+      "error": "Expected values to be strictly equal:\n\n'BODY' !== 'BUTTON'\n"
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "error": "Space replays available audio once, without inventing audio\n\n0 !== 1\n"
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "content-woordpakketten",
+      "error": "Expected values to be strictly equal:\n\n'BODY' !== 'BUTTON'\n"
+    }
+  ],
+  "physicalDeviceTested": false
+}

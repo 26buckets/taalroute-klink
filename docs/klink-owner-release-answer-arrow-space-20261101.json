@@ -1,0 +1,43 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "userRequest": "Controleer ook de pijltjestoetsen en spatie nadat ik met de muis een antwoord heb gekozen. Die moeten ook werken zonder eerst op Verder te klikken. Behoud inhoud, audio en voortgang.",
+  "publicationApproved": true,
+  "publicationBasis": "Functional continuation of the explicitly requested keyboard repair and publication in this same chat; no visual change or content/media/storage migration.",
+  "appearanceUnchanged": true,
+  "baselineSourceCommit": "38b937ebb11005942fc018e603f6658a53882857",
+  "liveSourceCommit": "b670d0c1337eea07e96662237de4b9508de9735c",
+  "liveWorkerVersion": "c0eb92ef-ff9f-420a-9256-47d8f4267dc8",
+  "changedFiles": [
+    "docs/KLINK-DOCENTHANDLEIDING.md",
+    "hooks/use-practice-keyboard.ts",
+    "scripts/check-answer-arrow-space-release-20261101.mjs",
+    "scripts/check-opening-loader-duration-release-20261101.mjs",
+    "scripts/test-answer-arrow-audio-browser-20261101.mjs",
+    "scripts/test-answer-arrow-space-browser-20261101.mjs",
+    "scripts/test-answer-arrow-space-release-20261101.mjs"
+  ],
+  "files": {
+    "docs/KLINK-DOCENTHANDLEIDING.md": "a10dbcf49e96425b1d67d41523509303863a2acb35983e5d37a51bd52fe0d452",
+    "hooks/use-practice-keyboard.ts": "e19e4df40a888bf22ca192e8c4fb3d855fc0114000612d925925bd636c53cad3",
+    "scripts/check-answer-arrow-space-release-20261101.mjs": "58032a94dfe67f63edf08326b63e55576098681c58d00ed11d4e07c9ee6e12eb",
+    "scripts/check-opening-loader-duration-release-20261101.mjs": "c2659aec9589557421d3210c9b41efe5d6e7ef1dbc2806ee08011665526bab8b",
+    "scripts/test-answer-arrow-audio-browser-20261101.mjs": "855a6338a167650e3e5ec014c24cb8b62934e22d1765f3c33771ca0c5e9fe1ba",
+    "scripts/test-answer-arrow-space-browser-20261101.mjs": "d33912d39b977b2d0be21bd1078e82f295cca39165e8e1dec0937228e0f8e410",
+    "scripts/test-answer-arrow-space-release-20261101.mjs": "5e40fc8829b994d688ed30d849e61b5c454ea56a6db028641e4e64edaf81cff8"
+  },
+  "evidenceFiles": {
+    "docs/answer-arrow-space-20261101/REVIEW.md": "8a0fc39147f7ed66fcc7f1bad1e7e720d85e245b53d5d24e3e3f8d0afb910df4",
+    "docs/answer-arrow-space-20261101/live-baseline.json": "54fbf5b2b8e67013b8380671f2508925c8453121dd3ba7f26d11426ec0c3afea",
+    "docs/answer-arrow-space-20261101/local/audio.json": "2351609418ccd31a48d633a703c11c55b161afd865ee854df021ec7019db8725",
+    "docs/answer-arrow-space-20261101/local/enter.json": "6840c69bc6c520e80713db128446124d2c803cebf11638a777aeefd5df25c9e6",
+    "docs/answer-arrow-space-20261101/local/existing.json": "81d6119ad6a2b72f55de06ef243e74f766cf8bca3310cd2995e5187de40fb759",
+    "docs/answer-arrow-space-20261101/local/focus.json": "2f11617e15284ea82769747e4892e01e5674fde2faa079fb92d03cbc56a0294e",
+    "docs/answer-arrow-space-20261101/local/lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/answer-arrow-space-20261101/local/parity.json": "744c34bfb33c7d9230d8014c763ecdfd4ed2ee70d071e337cf473afcfd81e663",
+    "docs/answer-arrow-space-20261101/local/sheets.json": "f7735a0880f7773885b8ac43c793af6dda56916eaf1dcb46c395d866f3a18078",
+    "docs/answer-arrow-space-20261101/local/types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/answer-arrow-space-20261101/reproduction.json": "f234cdb394916d44f880cf46f2934e4512afc6aba38be8a9d820aefcd43c1426",
+    "docs/answer-arrow-space-20261101/verification.json": "f857249294b983bf32779081eba1a91619f5c63c4b8869e8eb8e263e3523eb64"
+  }
+}
