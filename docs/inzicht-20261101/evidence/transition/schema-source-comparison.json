@@ -1,0 +1,2084 @@
+{
+  "existing": {
+    "insight_schools": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_users": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "issuer",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "subject",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "display_name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "email",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "insight_school_memberships": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "role",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "active",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_classes": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_class_teachers": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "class_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "active",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_learners": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "display_name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_enrolments": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "class_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "joined_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "left_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "insight_credentials": [
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "password_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_sessions": [
+      {
+        "name": "token_hash",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "expires",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_invitations": [
+      {
+        "name": "token_hash",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "email",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "role",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "expires",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "accepted_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "accepted_by",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "insight_auth_limits": [
+      {
+        "name": "key",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "attempts",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "expires",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_audit": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "actor_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "action",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "target_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_observations": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "class_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "author_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "lesson_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "criterion_key",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "judgment",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "note",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "observed_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "observed_outcome",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "independence",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "insight_observation_sheets": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "request_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "class_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "author_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "mode",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "material_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "catalog_version",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "ratings",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "note",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "next_action",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "observed_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "insight_pilot_assessments": [
+      {
+        "name": "school_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "sheet_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "assessments",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ]
+  },
+  "pr8": {
+    "inzicht_schema": [
+      {
+        "name": "version",
+        "type": "INTEGER",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "applied_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "users": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "auth_subject",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "organizations": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "allowed_routes",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "data_version",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_write_guards": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "allowed",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "memberships": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "role",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "can_create_class",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_sessions": [
+      {
+        "name": "token_hash",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "expires_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "revoked",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "groups": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "start_level",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "period",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "version",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "group_teachers": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "membership_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      }
+    ],
+    "school_learners": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "display_name",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "group_memberships": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "started_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "ended_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "account_links": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "membership_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "verified_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "verification_ref",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "revoked_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "school_invites": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "membership_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "token_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "expires_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_rate_limits": [
+      {
+        "name": "bucket",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "requests",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "skill_definitions": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "label",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "domain",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "level_code",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "version",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "rubric_json",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "measurement_approved",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "teacher_observations": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "author_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "skill_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "current_revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "observation_revisions": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "observation_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "payload",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "changed_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "reason",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "recorded_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "evidence_events": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "skill_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "source_type",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "source_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "source_revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "payload",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "event_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "evidence_revocations": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "event_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "actor_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "reason",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "outbox_events": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "skill_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "processed_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "mastery_snapshots": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "skill_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 4
+      },
+      {
+        "name": "evidence_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 5
+      },
+      {
+        "name": "rule_version",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "payload",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "calculated_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "class_access_policies": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "subject_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "version",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "allowed_routes",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "exercise_mode",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "content_versions": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "stable_code",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "version_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "title",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "level_code",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "product",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "release_status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "skill_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "relation_type",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "deep_link",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "metadata",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "assignments": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "content_version_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "starts_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "ends_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "instructions",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "assignment_recipients": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "assignment_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "recommendation_previews": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "input_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "target_date",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "schedule_source",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "payload",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "expires_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "status",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "approved_lesson_plans": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "preview_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "payload",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "approved_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "audit_events": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "actor_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "action",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "resource_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "occurred_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_requests": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "actor_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "request_key",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "request_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "response",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "school_attempts": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "assignment_id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "content_version_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "answer",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "correct",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_credentials": [
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "email",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "password_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_mfa": [
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "secret_cipher",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "last_step",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_mfa_sessions": [
+      {
+        "name": "token_hash",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      }
+    ],
+    "inzicht_mfa_challenges": [
+      {
+        "name": "token_hash",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "password_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "pending_cipher",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "expires_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "attempts",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_mfa_recovery": [
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "code_hash",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "used_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_auth_events": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "user_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "action",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "inzicht_outbox_retries": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "failures",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "next_attempt_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      },
+      {
+        "name": "last_attempt_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "last_success_at",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 0
+      }
+    ],
+    "source_observations": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "author_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "material_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "mode",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "current_revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "created_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "updated_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "source_observation_revisions": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "observation_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "payload",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "changed_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "recorded_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "learning_hours": [
+      {
+        "name": "id",
+        "type": "TEXT",
+        "not_null": 0,
+        "primary_key": 1
+      },
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "group_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "learner_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "current_revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ],
+    "learning_hour_revisions": [
+      {
+        "name": "organization_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 1
+      },
+      {
+        "name": "entry_id",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 2
+      },
+      {
+        "name": "revision",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 3
+      },
+      {
+        "name": "attended_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "minutes",
+        "type": "INTEGER",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "reason",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "changed_by",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      },
+      {
+        "name": "recorded_at",
+        "type": "TEXT",
+        "not_null": 1,
+        "primary_key": 0
+      }
+    ]
+  }
+}

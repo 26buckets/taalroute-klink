@@ -1,0 +1,66 @@
+{
+  "existingRepository": "26buckets/taalroute-klink-inzicht",
+  "existingHead": "2c03e3ff3ed623e5449bab1900aad807423d82d7",
+  "prRepository": "26buckets/taalroute-klink",
+  "prHead": "40e11cd1dea612e160b0b905141d5fe00b2739b1",
+  "remoteDatabaseQueries": 0,
+  "cloudflareMutations": 0,
+  "files": [
+    {
+      "repository": "pr8",
+      "path": "lib/inzicht/service.ts",
+      "gitBlob": "10359f732739a4c8865f4aadf9f42348b01069fd",
+      "sha256": "8ba1d4af3ef16e2d7bc05800987a1496fd21611801b2fdb043ac60b199c2018d"
+    },
+    {
+      "repository": "pr8",
+      "path": "lib/inzicht/auth.ts",
+      "gitBlob": "b5e6d7f02719407f868b432b7783ea424288c72a",
+      "sha256": "c8df531003bb2d708ca7321f0c3ea38b5b24923903b2c08d8a1304fa24245b95"
+    },
+    {
+      "repository": "pr8",
+      "path": "lib/inzicht/source-observation.ts",
+      "gitBlob": "96146ae3630445827771dc523e4f320ec8c420e0",
+      "sha256": "7faaf71d9ba95cbf8d46cb3cc91abf4516ac5213558e6968791378f49ceaf239"
+    },
+    {
+      "repository": "pr8",
+      "path": "scripts/inzicht/online-config.json",
+      "gitBlob": "e313b2153ac8c743241817ef4bed0a16defeeba9",
+      "sha256": "5fb93204e7c235c1625fdd5af49690997f6bfde6ae8a09915e292ea7c3863232"
+    },
+    {
+      "repository": "pr8",
+      "path": "scripts/inzicht/portable.mjs",
+      "gitBlob": "5a7f06ea67b902b131fd72da81d88287e7322790",
+      "sha256": "0b076ec90f78a77aa0e3cfa0f88826afa8fd744db59a2a9bdb2379a6a4c350c0"
+    },
+    {
+      "repository": "existing",
+      "path": "migrations/0001_inzicht.sql",
+      "sha256": "abc3508cfea85ad3b25873d3a103a02563be4be60725b41497e1b0df97938856"
+    },
+    {
+      "repository": "existing",
+      "path": "migrations/0002_accounts.sql",
+      "sha256": "9ac935aeaaa338c58bfe13dd5a9da4080d3aeeed6ed4f32e8e205fd667c90e1e"
+    },
+    {
+      "repository": "existing",
+      "path": "migrations/0003_observation_dimensions.sql",
+      "sha256": "70574a0cd4a2395ac3ec6948f9e769f0a9324cc45d150e7c85e67faeaaa60ef6"
+    },
+    {
+      "repository": "existing",
+      "path": "migrations/0004_fixed_observations.sql",
+      "sha256": "c14b1688a800ddc3bc9368942ffbc35b6fe8cc9e5b0a11defa979cdda1495219"
+    },
+    {
+      "repository": "existing",
+      "path": "migrations/0005_pilot_norms.sql",
+      "sha256": "c4db9aeeef0f7ddc7998329f33d3a9bc21ce84bc3c682a98e88db53676ded2e2"
+    }
+  ],
+  "productionLearnerRecordsRead": false
+}
