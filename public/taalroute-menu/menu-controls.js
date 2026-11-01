@@ -20,7 +20,7 @@
   if (!apps[id] || window.TaalrouteShare) return;
   const [name, , path, description] = apps[id];
   const root = `https://${id}.taalroute.nl/`, url = new URL(path, root).href;
-  const image = new URL(['studio','klink'].includes(id) ? 'share-card.png' : 'share-card.webp', script.src).href;
+  const image = new URL(id === 'klink' ? 'klink-share-logo-20261101.png' : id === 'studio' ? 'share-card.png' : 'share-card.webp', script.src).href;
   const paths = {
     share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98m-.01-10.98-6.82 3.98"/>',
     link: '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>',

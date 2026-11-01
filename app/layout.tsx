@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   title: 'Taalroute | Klink',
   description:
     'Klink — Van klank naar taal. Kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
-  openGraph: {type:'website', title:'Taalroute KLINK', description:'Van klank naar taal.', url:'https://klink.taalroute.nl/', images:[{url:'https://klink.taalroute.nl/taalroute-menu/share-card.png',alt:'Taalroute KLINK'}]},
+  openGraph: {type:'website', title:'Taalroute KLINK', description:'Van klank naar taal.', url:'https://klink.taalroute.nl/', images:[{url:'https://klink.taalroute.nl/taalroute-menu/klink-share-logo-20261101.png',alt:'Taalroute KLINK'}]},
   manifest: '/manifest.webmanifest',
   icons: {
-    icon: '/favicon.svg?v=2',
-    shortcut: '/favicon.ico?v=2',
-    apple: '/favicon.ico?v=2',
+    icon: '/favicon.svg?v=logo-20261101',
+    shortcut: '/favicon.ico?v=logo-20261101',
+    apple: '/favicon.ico?v=logo-20261101',
   },
   appleWebApp: {
     capable: true,

@@ -1,3 +1,9 @@
+## Officieel Klink-logo — Nico, 1 november 2026
+
+Nico heeft het uitgewerkte petrolgroene vectorlogo met groene stip en vloeiende krul expliciet als officieel Klink-logo vastgesteld en uitsluitend deze vervanging in Klink en Studio voor publicatie vrijgegeven. Dit vervangt logo D van 24 oktober. Gebruik de gecontroleerde paden uit `docs/official-logo-20261101/master/`; letters #0F3B44, stip #3C8962, op donkere interfaces witte letters met dezelfde groene stip. Slogan waar al aanwezig behouden. Geen nieuwe lettervormen genereren of natekenen. De goedgekeurde favicon is afgeleid van dezelfde hoofdletter K.
+
+Brongebonden opdracht, masterhashes, toepassingen, controle en publicatie staan in `docs/official-logo-20261101/`. Behoud alle overige vormgeving, interfacekleuren, maatvoering, foto's, uitsneden, inhoud, audio, routes, functies en opslag. Historische D-bestanden en vloerreferenties blijven herstelbronnen; zij zijn niet langer de actuele logokeuze. De toestemming geldt uitsluitend deze logovervanging, niet voor andere ongepubliceerde wijzigingen.
+
 Gerichte vervolgopdracht van Nico, 1 november 2026: trek de compacte mobiele schrijfbediening door naar andere schrijfoefeningen en zinnendictees. Behoud de 44px-aanraakdoelen, leesbare invoertekst en het vaste Verder-blok boven de toetsenbordruimte. Tijdens bewerken krijgen antwoord en nakijkknoppen voorrang; context, zelfcontrole en langere formulieren blijven bereikbaar in het oefenvlak. De korte feedbacktoelichting komt na sluiten van het toetsenbord terug. Desktop, inhoud, audio en opslag blijven behouden. Bij een bevestigd goed antwoord mag handmatig Verder de lopende audio stoppen; actieve microfoonopnamen en video blijven beschermd. Zie `docs/klink-owner-release-writing-keyboard-next-20261101.json`.
 
 # Klink — vaste vormgevingsbasis

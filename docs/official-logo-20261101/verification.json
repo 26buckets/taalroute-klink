@@ -1,0 +1,28 @@
+{
+  "onlyLogoRuntimeChange": true,
+  "originalFramesPreserved": true,
+  "desktopMobileLightDark": true,
+  "functionsAndStoragePreserved": true,
+  "oldMediaPreserved": true,
+  "localOnly": true,
+  "browserComparisons": 24,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "viewports": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "sourcePreservation": "Full runtime diff checked against actual live source. No CSS, app components, learning content, audio or storage logic changed.",
+  "screenshotTolerance": "At most 8/255 per channel outside bounded logo regions; all DOM geometry, text, fonts and colors exact.",
+  "compiledBuild": true,
+  "compiledWorkerLocalStart": "Not successful: local environment spawn EBADF; production build succeeds. Live Worker verification follows the normal authorized deployment.",
+  "tests": "Landing at five widths; direct navigation, levels, sound card and preserved stored progress at four widths in Chromium/WebKit; curriculum tests; logo unit tests and full publication gate recorded separately."
+}
