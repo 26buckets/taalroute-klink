@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const base='33463705d0290f07b4502d98c1722aee783f9cbe',live='33463705d0290f07b4502d98c1722aee783f9cbe',folder='docs/word-use-20261101/';
+const base='9b5ca8c942d45dcf0988d3b893f55a23c069cca6',live='422894474e75ad18c3892263faa5c5c0486d6ca2',folder='docs/word-use-20261101/';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),sort=a=>a.sort((a,b)=>a.localeCompare(b)),lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyWordUseRelease(read=readFileSync){
@@ -34,7 +34,7 @@ export function verifyWordUseRelease(read=readFileSync){
  assert.equal(layouts.checks.length,84);assert(layouts.checks.filter(x=>x.width>=390).every(x=>x.stageOverflow<=2));assert.equal(preserved.checks.length,8);assert(preserved.checks.every(x=>x.pixelIdentical));
  const compiled=JSON.parse(read(folder+'worker-preview-checks.json'));assert.equal(compiled.checks.length,12);assert(compiled.checks.every(x=>x.compiledPlayer&&x.fourCards&&x.correctFeedback&&x.resume));
  const checks=JSON.parse(read(folder+'verification.json'));for(const k of ['types','lint','unit','build','all288Questions','fourAnswerCards','audioComplete','metadataVerified','nativePlayback','desktopAndMobile','keyboardAndTouch','reviewAndResume','previousContentPreserved','localOnly'])assert.equal(checks[k],true,k);
- const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);assert(backup.parts.length>=2&&backup.parts.every(p=>p.verified&&p.fullReadback&&p.zipIntegrity&&p.driveId&&p.sha256&&p.bytes<104857600));
+ const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);assert.equal(backup.restoredSourceVerified,true);assert(backup.parts.length>=2&&backup.parts.every(p=>p.verified&&p.fullReadback&&p.zipIntegrity&&p.driveId&&p.sha256&&p.bytes<104857600));
  return r;
 }
 export function readBeforeWordUse(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}

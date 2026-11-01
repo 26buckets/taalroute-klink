@@ -8,7 +8,7 @@ import {groupActivities,groupExercises} from '../lib/group-practice.ts';
 import {parseLearningReview,updateLearningReview} from '../lib/learning-review.ts';
 import {resolveRegisteredAudio} from '../lib/audio-register.ts';
 import {isInstructionAudioEnabled,isWithdrawnAudio} from '../lib/audio-policy.ts';
-const read=f=>JSON.parse(readFileSync(f)),base='33463705d0290f07b4502d98c1722aee783f9cbe';
+const read=f=>JSON.parse(readFileSync(f)),base='9b5ca8c942d45dcf0988d3b893f55a23c069cca6';
 const bindings=read('data/klink-word-use-audio.json');
 test('288 authored questions: two activities, three levels and six short rounds at each level',()=>{
  assert.equal(wordUseBank.entries.length,288);assert.equal(wordUseCollections.length,36);assert.equal(new Set(wordUseBank.entries.map(e=>e.id)).size,288);
