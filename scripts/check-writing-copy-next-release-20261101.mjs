@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const base='0bd3d9b0783beb7949bfee74a8a441c9530980b6',live='1fb7c126cc642aa9230652a11c60fe3b2ab3c065';
+const base='86ef96a12e8b90a19dccaa56e1711240a39dc4c5',live='501b0b199de79e28fc20429718af8d5f5d14d167';
 const folder='docs/writing-copy-next-20261101/';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex');
 const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));

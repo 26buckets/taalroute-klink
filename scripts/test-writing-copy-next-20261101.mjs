@@ -9,7 +9,7 @@ import {validateProductionCollection} from '../lib/production-practice.ts';
 const json=f=>JSON.parse(readFileSync(f));
 const rows=json('docs/writing-copy-next-20261101/source.json').rows;
 const index=json('data/klink-production-index.json');
-const before=JSON.parse(execFileSync('git',['show','0bd3d9b0783beb7949bfee74a8a441c9530980b6:data/klink-production-index.json']));
+const before=JSON.parse(execFileSync('git',['show','86ef96a12e8b90a19dccaa56e1711240a39dc4c5:data/klink-production-index.json']));
 const added=index.slice(before.length);
 
 test('all existing and new collection banks still pass the shared loader validation',()=>{
