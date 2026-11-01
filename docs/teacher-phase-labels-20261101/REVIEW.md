@@ -7,3 +7,7 @@ Alle 1392 onderdeeltitels in 58 lessen × drie stappen × acht onderdelen zijn g
 27 inhouds-/opslag-/hersteltests en de bestaande werkbladcontrole slagen. 72 lokale browserproeven slagen in Chromium en WebKit op 1366, 390 en 320 pixels: alle drie de stappen bij mat, tas, sok en meer, acht labels per menu, keuze met Enter, aanraken, herladen en behoud van een opgeslagen eigen zin. Zes directe vergelijkingen met de vorige liveversie bevestigen de oorspronkelijke kolombreedtes en knopstijl; de kortere titels mogen minder afbreken. Typecontrole en lint slagen. Geen fysieke telefoon getest. Zware controles lokaal; geen GitHub-workflows of budget gewijzigd.
 
 De oorspronkelijke visuele vloer blijft behouden. Dit is de concreet door Nico gevraagde correctie van dubbele menu-aanduidingen, geen herontwerp. Zie de brongebonden opdracht in docs/klink-owner-release-teacher-phase-labels-20261101.json. Livebasis 834e85e7; de latere dossiercommit 41091ea9 bevat uitsluitend de bevestiging van diezelfde publicatie en blijft behouden.
+
+## Bevestigde publicatie
+
+Normaal gepubliceerd vanaf schone main op broncommit 0f9191da3e38064bd81034f1d071056601bfe83e, Worker 67a1b3da-30f0-4549-9a67-5ce4e09ad295. De volledige gewone publicatiepoort en bouw slagen. Ook alle 72 online browserproeven slagen. De vijf oorspronkelijke releasekenmerken blijven gelijk en drie oorspronkelijke woordopnamen (mat, sok, meer) zijn bytegelijk teruggelezen. Geen fysieke telefoon getest.
