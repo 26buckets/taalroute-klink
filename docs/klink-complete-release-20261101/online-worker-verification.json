@@ -1,0 +1,23 @@
+{
+  "previous": {
+    "createdAt": "2026-11-01T03:07:19.638083Z",
+    "versions": [
+      {
+        "version_id": "1692a417-0552-44a5-b9ca-2791fe273643",
+        "percentage": 100
+      }
+    ]
+  },
+  "current": {
+    "createdAt": "2026-11-01T04:13:48.816814Z",
+    "versions": [
+      {
+        "version_id": "e1551ec7-ed16-4567-94d8-1247adac2477",
+        "percentage": 100
+      }
+    ]
+  },
+  "baselineRecordCorrection": "The early baseline worker field retained the first (oldest) entry of the ascending deployment list. The independently verified live release marker and source commit were correct. This record selects the newest deployment by timestamp.",
+  "previousLiveSourceCommit": "959d3416064c453d5f0115c89c7835a8a12c05e4",
+  "publishedSourceCommit": "33463705d0290f07b4502d98c1722aee783f9cbe"
+}
