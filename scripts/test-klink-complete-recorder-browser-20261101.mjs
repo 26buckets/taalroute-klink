@@ -10,8 +10,7 @@ async function listen(page,row){
  const e=JSON.parse(read('public'+row.url)).exercises[0];
  await page.getByRole('button',{name:'Luister naar '+e.displayWord,exact:true}).first().click();
  await page.waitForFunction(()=>window.__modelAudio?.some(a=>!a.paused&&Number.isFinite(a.duration)));
- await page.evaluate(()=>{const a=window.__modelAudio.findLast(a=>!a.paused);a.currentTime=Math.max(0,a.duration-.1);});
- await page.waitForFunction(()=>window.__modelAudio?.some(a=>a.ended));
+ await page.waitForFunction(()=>window.__modelAudio?.at(-1)?.ended);
 }
 const trackModels=()=>{window.__modelAudio=[];window.addEventListener('klink-audio-source',e=>window.__modelAudio.push(e.detail));};
 const browser=await chromium.launch({channel:'chrome',args:['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']});

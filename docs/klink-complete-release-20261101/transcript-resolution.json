@@ -1,7 +1,7 @@
 {
-  "checked": 1066,
-  "exactOrNumberSpellingEqual": 1011,
-  "differencesIndividuallyReviewed": 55,
+  "checked": 1076,
+  "exactOrNumberSpellingEqual": 1019,
+  "differencesIndividuallyReviewed": 57,
   "unresolved": 0,
   "humanListeningReview": false,
   "method": "Blind local Whisper turbo for every whole recording; independent Whisper large for differences; targeted phoneme checks; ten retakes retained as provenance, 807 active new deliveries. Automated evidence is not a human listening review.",
@@ -554,6 +554,26 @@
       "secondBlindTranscript": " Lin veegt de sneeuw van het pad.",
       "decision": "accepted-with-recorded-language-reason",
       "reason": "ASR-spelling van de gehoorde eigennaam en/of bezitsvorm. Canonieke bronnaam behouden; overige verschillen betreffen leestekens of getalspelling.",
+      "humanListeningReview": false
+    },
+    {
+      "id": "REUSE-KLINK-READ-A1-T01",
+      "audioSha256": "0430fad86ef09a4d03d5aa79dfcc509b5eed6f45c637258ac5cec9ec1c717706",
+      "source": "Sara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.",
+      "firstBlindTranscript": " Sarah gaat op maandag naar school. De les begint om 9 uur. Sarah gaat met de bus. Om 8 uur gaat Sarah van huis. In haar tas zit een boek.",
+      "secondBlindTranscript": " Sarah gaat op maandag naar school. De les begint om 9 uur. Sarah gaat met de bus. Om 8 uur gaat Sarah van huis. In haar tas zit een boek.",
+      "decision": "accepted-with-recorded-language-reason",
+      "reason": "Sara/Sarah is een gelijkluidende naamspelling; bronnaam Sara blijft behouden.",
+      "humanListeningReview": false
+    },
+    {
+      "id": "REUSE-KLINK-READ-A2-T02",
+      "audioSha256": "aefe7c9b2d9026d9a05a850a6bd88c732f11ba097f5b0a0df62e8f1663b82691",
+      "source": "Elif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 uur en komt om 8.05 uur aan. Elif loopt daarna nog vijf minuten naar haar werk. Haar dienst begint om 8.30 uur.",
+      "firstBlindTranscript": " Elif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 en komt om 8.05 aan. Elif loopt daarna nog 5 minuten naar haar werk. Haar dienst begint om 8.30.",
+      "secondBlindTranscript": " Elif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 uur en komt om 8.05 uur aan. Elif loopt daarna nog 5 minuten naar haar werk. Haar dienst begint om 8.30 uur.",
+      "decision": "accepted-with-recorded-language-reason",
+      "reason": "De twee onafhankelijke ASR-modellen normaliseren kloktijden; minuten, vertrektijd, aankomsttijd en diensttijd blijven gelijk. De bestaande goede opname blijft behouden.",
       "humanListeningReview": false
     }
   ]

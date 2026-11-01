@@ -1,0 +1,47 @@
+{
+  "id": "REUSE-klink-opname-3639e04f4e064c4f41e1",
+  "sha256": "9f411bc5b5ca86afb05b1710df99603c0ec16b6a854296d43210164f04e3be4f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik hier zitten?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.8,
+      "text": " Mag ik hier zitten?",
+      "temperature": 0,
+      "avg_logprob": -0.32251715660095215,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 4.2370430081151156e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.66162109375
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hier",
+          "start": 0.32,
+          "end": 0.54,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zitten?",
+          "start": 0.54,
+          "end": 0.8,
+          "probability": 0.99560546875
+        }
+      ]
+    }
+  ]
+}

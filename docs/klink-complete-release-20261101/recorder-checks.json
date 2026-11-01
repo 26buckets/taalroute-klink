@@ -1,0 +1,110 @@
+{
+  "base": "http://127.0.0.1:18950",
+  "checks": [
+    {
+      "level": "alfa-b",
+      "take": 0,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "alfa-b",
+      "take": 1,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "alfa-c",
+      "take": 0,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "alfa-c",
+      "take": 1,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "a1",
+      "take": 0,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "a1",
+      "take": 1,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "a2",
+      "take": 0,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "a2",
+      "take": 1,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "b1",
+      "take": 0,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "level": "b1",
+      "take": 1,
+      "realMediaRecorder": true,
+      "nativePlayback": true,
+      "busyControls": true,
+      "tracksStopped": true,
+      "recordingStoredOnlyInMemory": true
+    },
+    {
+      "unmountStopsMicrophone": true
+    },
+    {
+      "engine": "chromium",
+      "deniedMicrophoneFallback": true,
+      "participationOnly": true
+    },
+    {
+      "engine": "webkit",
+      "deniedMicrophoneFallback": true,
+      "participationOnly": true
+    }
+  ],
+  "errors": [],
+  "physicalMicrophoneTest": false
+}

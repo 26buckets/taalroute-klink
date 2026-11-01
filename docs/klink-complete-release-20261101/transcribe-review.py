@@ -5,7 +5,7 @@ import mlx_whisper
 repo = Path(__file__).resolve().parents[2]
 folder = Path(__file__).resolve().parent
 comparison = json.loads((folder/'transcript-comparison.json').read_text())
-plans = [json.loads((folder/f).read_text()) for f in ['voice-plan.json','voice-plan-b1.json','voice-plan-existing-sentences.json']]
+plans = [json.loads((folder/f).read_text()) for f in ['voice-plan.json','voice-plan-b1.json','voice-plan-existing-sentences.json', 'voice-plan-reused-audio.json']]
 clips = {c['id']:c for plan in plans for c in plan['clips']}
 output=folder/'transcripts-second'
 output.mkdir(exist_ok=True)

@@ -15,7 +15,20 @@
     "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
   },
   "worker": {
-    "source": "latest PUBLICATIE-ACTUEEL.md; deployed worker recorded before publication"
+    "id": "2e412a61-de75-46fb-9bd0-f26ba10d187c",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "nico@knoestertrainingen.nl",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "d53c9571-5b4d-46e9-8ce9-af7b612c888c",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-31T22:26:38.762696Z"
   },
   "originalRows": [
     {

@@ -9,7 +9,14 @@ for(const engine of [chromium,webkit]){
   const context=await b.newContext({viewport:{width,height:900},colorScheme:theme});
   const captures=[];
   for(const[name,base]of [['approved-live','https://klink.taalroute.nl'],['candidate','http://127.0.0.1:18950']]){
-   const page=await context.newPage();await page.goto(base+route);await page.locator('[data-exercise-id] h4').waitFor({timeout:60000});await page.evaluate(()=>document.fonts.ready);
+   const page=await context.newPage();
+   await page.addInitScript(()=>{window.__appearanceAudio=[];window.addEventListener('klink-audio-source',e=>window.__appearanceAudio.push(e.detail));});
+   await page.goto(base+route);await page.locator('[data-exercise-id] h4').waitFor({timeout:60000});await page.evaluate(()=>document.fonts.ready);
+   await page.getByRole('button',{name:'Luister naar de tekst',exact:true}).click();
+   await page.waitForFunction(()=>window.__appearanceAudio?.some(a=>!a.paused&&Number.isFinite(a.duration)));
+   await page.evaluate(()=>{const a=window.__appearanceAudio.findLast(a=>!a.paused);a.currentTime=a.duration-.1;});
+   await page.waitForFunction(()=>window.__appearanceAudio?.at(-1)?.ended);
+   await page.addStyleTag({content:'*,*::before,*::after{transition:none!important;animation:none!important}'});
    captures.push(await page.locator('[data-exercise-id]').evaluate(stage=>[stage,...stage.querySelectorAll('h3,h4,p,button,svg')].map(e=>{
     const s=getComputedStyle(e),r=e.getBoundingClientRect();return {tag:e.tagName,text:e.textContent,box:[r.x,r.y,r.width,r.height].map(n=>Math.round(n*100)/100),style:Object.fromEntries(['fontFamily','fontSize','fontWeight','lineHeight','color','backgroundColor','borderRadius','padding','gap'].map(k=>[k,s[k]]))};
    })));

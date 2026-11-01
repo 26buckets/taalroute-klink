@@ -2,7 +2,7 @@ from pathlib import Path
 import difflib, hashlib, json, re, unicodedata
 
 folder = Path(__file__).resolve().parent
-plans = [json.loads((folder / f).read_text()) for f in ['voice-plan.json','voice-plan-b1.json','voice-plan-existing-sentences.json']]
+plans = [json.loads((folder / f).read_text()) for f in ['voice-plan.json','voice-plan-b1.json','voice-plan-existing-sentences.json', 'voice-plan-reused-audio.json']]
 basic = ['nul','een','twee','drie','vier','vijf','zes','zeven','acht','negen','tien','elf','twaalf','dertien','veertien','vijftien','zestien','zeventien','achttien','negentien']
 tens = {20:'twintig',30:'dertig',40:'veertig',50:'vijftig',60:'zestig',70:'zeventig',80:'tachtig',90:'negentig'}
 def number(n):

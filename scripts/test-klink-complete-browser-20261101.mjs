@@ -6,7 +6,7 @@ const out=process.env.KLINK_COMPLETE_OUTPUT||'docs/klink-complete-release-202611
 mkdirSync(out,{recursive:true});
 const manifest=JSON.parse(read('docs/klink-complete-release-20261101/import-manifest.json'));
 const rows=manifest.rows,checks=[],errors=[];
-const configurations=[
+let configurations=[
  {engine:'chromium',width:1366,theme:'light',full:true},
  {engine:'webkit',width:390,theme:'dark',full:true},
  {engine:'chromium',width:320,theme:'dark',full:false},
@@ -15,6 +15,7 @@ const configurations=[
  {engine:'webkit',width:320,theme:'dark',full:false},
 ];
 if(process.env.KLINK_COMPLETE_SMOKE)configurations.splice(1);
+else configurations=configurations.flatMap(c=>c.full?[0,1,2,3].map(partition=>({...c,partition})):c);
 async function playModel(page,source,button,full){
  const before=await page.evaluate(()=>window.__completeAudio.played.length);
  await button.click();
@@ -29,6 +30,7 @@ async function playModel(page,source,button,full){
 }
 await Promise.all(configurations.map(async config=>{
  const browser=await({chromium,webkit}[config.engine]).launch();
+ let activeRow='';
  try{
   const page=await browser.newPage({viewport:{width:config.width,height:900},colorScheme:config.theme,hasTouch:config.width<650,isMobile:config.width<650});
   page.setDefaultTimeout(20000);page.on('pageerror',e=>errors.push({config,message:e.message}));
@@ -40,12 +42,13 @@ await Promise.all(configurations.map(async config=>{
     a.addEventListener('ended',()=>window.__completeAudio.ended.push(a.currentSrc));
    });
   });
-  await page.goto(base+'/#learner/home');await page.locator('.cp-home').waitFor({timeout:60000});
   const sentinelKey='klink.group.v1:groep-1:text-question',sentinel=JSON.stringify({version:1,done:false,exerciseId:'unrelated-progress-must-stay'});
-  await page.evaluate(([key,value])=>localStorage.setItem(key,value),[sentinelKey,sentinel]);
+  await page.addInitScript(([key,value])=>{if(!localStorage.getItem(key))localStorage.setItem(key,value);},[sentinelKey,sentinel]);
   const fullyPlayedLevels=new Set();
   const heardSources=new Set();
   for(const [round,row]of rows.entries()){
+   if(config.full&&config.partition!==undefined&&round%4!==config.partition)continue;
+   activeRow=row.id;
    const exercises=JSON.parse(read('public'+row.url)).exercises;
    const chapter=row.activity==='sentences'?'sentences':row.activity==='sentence-speak'?'speaking':'texts';
    const hash='#learner/chapters/'+chapter+'/'+row.activity+'/'+encodeURIComponent(row.id)+'?level='+row.level+'&help=practice';
@@ -53,7 +56,7 @@ await Promise.all(configurations.map(async config=>{
    let played=0,questionCount=0;
    const selected=config.full?exercises:exercises.slice(0,1);
    for(const [index,e]of selected.entries()){
-    const stage=page.locator('[data-exercise-id="'+e.exerciseId+'"]');await stage.waitFor();
+    const stage=page.locator('[data-exercise-id="'+e.exerciseId+'"]');await stage.waitFor({timeout:60000});
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal overflow '+e.exerciseId);
     const next=page.locator('.cp-exercise-feedback [data-practice-next]');
     if(e.mode==='text-question'){
@@ -102,7 +105,7 @@ await Promise.all(configurations.map(async config=>{
    if(round%10===0)console.log(config.engine+' '+config.width+' '+config.theme+' '+(round+1)+'/'+rows.length);
    if(process.env.KLINK_COMPLETE_SMOKE&&round===2)break;
   }
- }finally{await browser.close();}
+ }catch(error){errors.push({config,id:activeRow,message:String(error)});write(out+'/failure.json',JSON.stringify({checks,errors},null,2));throw error;}finally{await browser.close();}
 }));
 assert.deepEqual(errors,[]);
 console.log(JSON.stringify({roundChecks:checks.length,questions:checks.reduce((n,x)=>n+x.questions,0),nativeModelPlaybacks:checks.reduce((n,x)=>n+x.nativeModelPlaybacks,0),errors:errors.length}));

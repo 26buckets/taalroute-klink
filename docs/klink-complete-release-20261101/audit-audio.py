@@ -5,7 +5,7 @@ import numpy as np
 
 repo = Path(__file__).resolve().parents[2]
 folder = Path(__file__).resolve().parent
-plans = [json.loads((folder / f).read_text()) for f in ['voice-plan.json', 'voice-plan-b1.json', 'voice-plan-existing-sentences.json']]
+plans = [json.loads((folder / f).read_text()) for f in ['voice-plan.json', 'voice-plan-b1.json', 'voice-plan-existing-sentences.json', 'voice-plan-reused-audio.json']]
 clips = [c for p in plans for c in p['clips']]
 prior = json.loads((folder/'audio-file-audit.json').read_text()) if (folder/'audio-file-audit.json').exists() else {'records':[]}
 cached = {r['id']:r for r in prior['records']}

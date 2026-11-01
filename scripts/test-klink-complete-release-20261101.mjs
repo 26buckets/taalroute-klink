@@ -15,6 +15,7 @@ for(const[file,edit]of[
  [folder+'recorder-checks.json',r=>{r.errors.push('recording failure');}],
  [folder+'verification.json',r=>{r.progress=false;}],
  [folder+'backup.json',r=>{r.fullReadback=false;}],
+ [folder+'backup.json',r=>{r.parts[0].verified=false;}],
 ])test('rejects changed approval or evidence '+file+' '+edit.toString(),()=>assert.throws(()=>verifyCompleteRelease(f=>{
  if(f!==file)return readFileSync(f);const r=JSON.parse(readFileSync(f));edit(r);return Buffer.from(JSON.stringify(r));
 })));
