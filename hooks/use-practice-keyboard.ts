@@ -2,14 +2,15 @@
 
 import { useRef, type KeyboardEvent } from 'react';
 
-export function practiceBusy(root: HTMLElement | null) {
+export function practiceBusy(root: HTMLElement | null, ignoreAudio = false) {
   return Boolean(root?.querySelector('[data-practice-busy="true"], [data-practice-recording="true"]')) ||
-    Array.from(root?.querySelectorAll<HTMLMediaElement>('audio, video') ?? []).some(media => !media.paused && !media.ended);
+    Array.from(root?.querySelectorAll<HTMLMediaElement>('audio, video') ?? []).some(media => !media.paused && !media.ended && (!ignoreAudio || media.tagName !== 'AUDIO'));
 }
 
-export function usePracticeKeyboard({ enabled = true, busy = false, onUse, onListen }: {
+export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNext = false, onUse, onListen }: {
   enabled?: boolean;
   busy?: boolean;
+  allowAudioNext?: boolean;
   onUse?: () => void;
   onListen?: () => void;
 } = {}) {
@@ -30,7 +31,8 @@ export function usePracticeKeyboard({ enabled = true, busy = false, onUse, onLis
     if (!confirmedInput && button && (event.key === 'Enter' || event.key === ' ')) return;
     if (!confirmedInput && input?.form) return;
     event.preventDefault();
-    if (busy || practiceBusy(root)) return;
+    const forwardDuringAudio = allowAudioNext && !item && root.dataset.practiceReady === 'true' && (event.key === 'Enter' || event.key === 'ArrowRight');
+    if ((busy && !forwardDuringAudio) || practiceBusy(root, forwardDuringAudio)) return;
     if (!item && root.querySelector('[data-practice-item]')) {
       (root.querySelector<HTMLElement>('[data-practice-item][data-practice-ready="false"]') ?? root.querySelector<HTMLElement>('[data-practice-item]'))?.focus();
       return;

@@ -203,7 +203,7 @@ function PackageExercisePlayer({
     const resize = () => {
       const focused = main.contains(document.activeElement) && document.activeElement?.matches('input, textarea');
       const visibleHeight = viewport?.height ?? window.innerHeight;
-      const keyboard = window.innerWidth <= 820 && Boolean(stage.querySelector('.cp-pace-controls') && stage.querySelector('.cp-text-entry')) && (focused || main.dataset.keyboardOpen === 'true') && visibleHeight < fullHeight - 100;
+      const keyboard = window.innerWidth <= 820 && Boolean(stage.querySelector('.cp-text-entry, .cp-form-fields')) && (focused || main.dataset.keyboardOpen === 'true') && visibleHeight < fullHeight - 100;
       if (!keyboard && !focused) fullHeight = window.innerHeight;
       main.dataset.keyboardOpen = String(keyboard);
       main.style.setProperty('--exercise-visible-height', `${visibleHeight}px`);
@@ -214,7 +214,8 @@ function PackageExercisePlayer({
       const top = stage.getBoundingClientRect().top + main.scrollTop;
       stage.style.setProperty('--practice-stage-height', `${Math.max(keyboard ? 0 : 180, bottom - top - (feedback?.offsetHeight ?? 112) - 12)}px`);
     };
-    const observer = new ResizeObserver(resize);
+    let resizeFrame = 0;
+    const observer = new ResizeObserver(() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(resize); });
     observer.observe(main);
     for (const el of main.querySelectorAll('.cp-context-header, .cp-practice-display, .cp-exercise-record-head, .cp-exercise-feedback')) observer.observe(el);
     window.addEventListener('resize', resize);
@@ -224,7 +225,7 @@ function PackageExercisePlayer({
     main.addEventListener('focusout', resize);
     resize();
     return () => {
-      observer.disconnect(); window.removeEventListener('resize', resize);
+      observer.disconnect(); cancelAnimationFrame(resizeFrame); window.removeEventListener('resize', resize);
       viewport?.removeEventListener('resize', resize); viewport?.removeEventListener('scroll', resize);
       main.removeEventListener('focusin', resize); main.removeEventListener('focusout', resize);
       delete main.dataset.keyboardOpen;
@@ -244,13 +245,13 @@ function PackageExercisePlayer({
   const manualAdvance = exercise?.mode === 'connected-dialogue' || exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));
   const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !keyboardMode && !holdFeedback && !audioPending && !recording;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
-  const keyboard = usePracticeKeyboard({ enabled: !exerciseMenuOpen, busy: audioPending || recording,
+  const keyboard = usePracticeKeyboard({ enabled: !exerciseMenuOpen, busy: audioPending || recording, allowAudioNext: result === 'right' && !recording,
     onUse: () => { keyboardUsed.current = true; setKeyboardMode(true); },
     onListen: () => { const source = stimulus ?? findAudioSource(exercise); if (source) void listen(source); },
   });
   useEffect(() => { advancing.current = false; }, [exerciseId, completed]);
   useEffect(() => {
-    if (keyboardMode && result === 'right' && !audioPending && !recording) keyboard.ref.current?.querySelector<HTMLButtonElement>('[data-practice-next]:not(:disabled)')?.focus({ preventScroll: true });
+    if (keyboardMode && result === 'right' && !recording) keyboard.ref.current?.querySelector<HTMLButtonElement>('[data-practice-next]:not(:disabled)')?.focus({ preventScroll: true });
   }, [keyboardMode, result, audioPending, recording, keyboard.ref]);
   async function listen(source?: string, automaticStart = false, singleTurn?: number) {
     if ((exercise?.readingTask || (exercise?.componentId === 'KLINK-EXTENDED' && !(exercise.synonymPairId && source === stimulus)) || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
@@ -421,9 +422,11 @@ function PackageExercisePlayer({
   }
 
   function next() {
-    if (advancing.current || audioPending || recording || practiceBusy(keyboard.ref.current)) return;
-    if (guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion) && result !== 'right'))) return;
+    if (advancing.current || (audioPending && result !== 'right') || recording || practiceBusy(keyboard.ref.current, result === 'right')) return;
+    if (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || exercise.requiresExplicitCompletion) && result !== 'right'))) return;
     advancing.current = true;
+    playback.current?.abort();
+    stopMedia();
     if (guided) {
       if (selfPaced && result !== 'right') finish('geoefend', true);
       const nextRequired = nextRequiredIndex + (guidedIndex === nextRequiredIndex ? 1 : 0);
@@ -534,7 +537,7 @@ function PackageExercisePlayer({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' || !audioPending ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={audioPending || recording || (guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right')))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
+            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={(audioPending && result !== 'right') || recording || (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right')))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
           </footer>
         </div>
       </div>

@@ -51,7 +51,7 @@ In de docentomgeving bij Overzicht staat Van woordbeeld naar situatie. De vijf b
 
 Met Tab kies je een knop. Enter controleert je ingevulde antwoord. Na Goed druk je nog een keer op Enter om verder te gaan; bij toetsenbordgebruik blijft de feedback staan. Met → ga je verder zodra de knop Verder beschikbaar is, met ← ga je terug binnen dezelfde ronde. Op een blad ga je zo tussen opdrachten. Teruggaan wist geen voortgang.
 
-Spatie bedient de geselecteerde knop. Staat de aandacht op de opdracht, dan hoor je het geluid opnieuw. Tijdens luisteren of opnemen slaan de pijlen geen opdracht over. In tekstvelden typen spaties gewoon spaties, verplaatsen de pijlen de cursor en maakt Enter in een groot tekstvak een nieuwe regel. Met de afspeelknop bovenaan kun je automatisch verdergaan weer aanzetten.
+Spatie bedient de geselecteerde knop. Staat de aandacht op de opdracht, dan hoor je het geluid opnieuw. Na Goed hoef je niet te wachten op de audio: Verder, Enter of → stopt het geluid en opent de volgende opdracht. Tijdens luisteren ga je niet terug; tijdens opnemen blijft verdergaan geblokkeerd. In tekstvelden typen spaties gewoon spaties, verplaatsen de pijlen de cursor en maakt Enter in een groot tekstvak een nieuwe regel. Met de afspeelknop bovenaan kun je automatisch verdergaan weer aanzetten.
 
 ### Eén kleine leesstap
 

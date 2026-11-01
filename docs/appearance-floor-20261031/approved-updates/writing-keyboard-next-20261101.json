@@ -1,0 +1,33 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "0f845d2d28e6fe4a0beca29caa768cb6ae9e425c",
+  "liveSourceCommit": "e5d442edf10a0b072586b26a2b081638a0e81044",
+  "userRequest": "Pas dit ook toe bij de andere schrijfoefeningen en zinnendictees. Houd de knoppen compact en het antwoordveld en Verder bereikbaar met het toetsenbord open. Behoud inhoud, audio en voortgang en zet het online. Bij lezen tekst moet ik na een goed antwoord gewoon Verder kunnen, ook als de audio nog bezig is. Bouw het gelijk.",
+  "approval": "docs/appearance-floor-20261031/approved-updates/writing-keyboard-next-20261101.json",
+  "scope": "Extend existing compact mobile editing canvas to package text/form inputs, sentence dictation and functional writing, with 44px controls and native textarea editing. Only confirmed manual forward may interrupt playback; abort and stop old audio before navigation. Preserve grading, recording/video protection, automatic-next timing, sheet players, content/media/progress and desktop composition.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/package-exercise-browser.tsx",
+    "docs/KLINK-DOCENTHANDLEIDING.md",
+    "hooks/use-practice-keyboard.ts",
+    "scripts/check-mobile-keyboard-icon-fit-release-20261101.mjs",
+    "scripts/check-writing-keyboard-next-release-20261101.mjs",
+    "scripts/test-writing-keyboard-next-browser-20261101.mjs",
+    "scripts/test-writing-keyboard-next-release-20261101.mjs",
+    "VORMGEVING-VASTGEZET.md"
+  ],
+  "files": {
+    "app/learner-layout.css": "598f90c02caf407aa7f97524e43c6a872448c1cebe93135ce182c08dc924a2f3",
+    "components/product/package-exercise-browser.tsx": "fbf6d211667b3c225c572843f7378f8b32cf6ee92b9f724388e0e2b9e6aab9db",
+    "docs/KLINK-DOCENTHANDLEIDING.md": "37d920ecffef46479df2d1f3e73906a9f1161ef283a0f100b6075b1ed55e8f17",
+    "hooks/use-practice-keyboard.ts": "1a23c1e75c4ba77805c1f0da2da60518474523d4775b420c42b42804314b4ec0",
+    "scripts/check-mobile-keyboard-icon-fit-release-20261101.mjs": "ff6fb5f8e661f980e90c7e593c875c38d4b892832110e0e2313fbda4c6d72c1c",
+    "scripts/check-writing-keyboard-next-release-20261101.mjs": "b41521527d1fa21c0fcb877ee188d23790691e598b5d4423f934dc939033888b",
+    "scripts/test-writing-keyboard-next-browser-20261101.mjs": "9bbc35b63ff3c412b467e5efcab8f481a8cca89d59c1f435584b3b54fa5d3e70",
+    "scripts/test-writing-keyboard-next-release-20261101.mjs": "a397598aea5ddeb26bfdc4ccbbba948e09b501a476c84c0e1c1b641602eb7bc7",
+    "VORMGEVING-VASTGEZET.md": "e13ce6cd2fa467e9ff48dfacdb94b9df9d82ab087d9d1cf1c918504ee7f4a9e8"
+  }
+}
