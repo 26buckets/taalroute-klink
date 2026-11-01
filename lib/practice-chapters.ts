@@ -15,7 +15,7 @@ import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
 export const practiceChapters: { id: string; title: string; icon: typeof groupActivities[number]['icon']; activities: GroupActivity[] }[] = [
-  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards', 'synonyms', 'word-combinations'] },
+  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards', 'synonyms'] },
   { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-path', 'sound-compare'] },
   { id: 'sentences', title: 'Zinnen', icon: 'book', activities: ['sentences', 'word-sentence', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'] },
   { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence', 'context-order'] },
@@ -30,6 +30,7 @@ export const practiceChapters: { id: string; title: string; icon: typeof groupAc
 ];
 
 for (const activity of importedActivities) practiceChapters.find(chapter => chapter.id === activity.chapter)!.activities.push(activity.id);
+practiceChapters.find(chapter => chapter.id === 'words')!.activities.push('word-combinations');
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];

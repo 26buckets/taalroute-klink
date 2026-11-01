@@ -1,0 +1,7 @@
+.learner-app .cp-synonyms-task.cp-word-use-reply .cp-extended-option > button:first-child { font-size: clamp(16px, 1.6vw, 20px); line-height: 1.35; }
+.learner-app .cp-word-use-reply > .cp-synonym-context { font-size: clamp(16px, 1.6vw, 20px); }
+.learner-app .cp-word-use-reply > .cp-synonym-word { padding: 12px; font-size: clamp(18px, 2vw, 24px); }
+@media (max-width: 600px) {
+  .learner-app .cp-synonym-round .cp-exercise-stage > .cp-task-card.cp-synonyms-task.cp-word-use-reply { gap: 8px; }
+  .learner-app .cp-word-use-reply > .cp-synonym-word { padding: 4px; }
+}

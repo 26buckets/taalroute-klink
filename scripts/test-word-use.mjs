@@ -8,7 +8,7 @@ import {groupActivities,groupExercises} from '../lib/group-practice.ts';
 import {parseLearningReview,updateLearningReview} from '../lib/learning-review.ts';
 import {resolveRegisteredAudio} from '../lib/audio-register.ts';
 import {isInstructionAudioEnabled,isWithdrawnAudio} from '../lib/audio-policy.ts';
-const read=f=>JSON.parse(readFileSync(f)),base='834e85e7eb0ebafd0a05e7d8aa5bc33b0ab4ed27';
+const read=f=>JSON.parse(readFileSync(f)),base='6e7bb1ccc796ebdd899d24cc8a679d039fbc4c74';
 const bindings=read('data/klink-word-use-audio.json');
 test('288 authored questions: two activities, three levels and six short rounds at each level',()=>{
  assert.equal(wordUseBank.entries.length,288);assert.equal(wordUseCollections.length,36);assert.equal(new Set(wordUseBank.entries.map(e=>e.id)).size,288);
@@ -46,7 +46,7 @@ test('new collections keep their level, activity, IDs and answers through every 
   assert.deepEqual(parseChapterHash(chapterHash(location)),location);assert.equal(selectedChapterCollection(location)?.id,c.id);assert(groupActivities.some(a=>a.id===activity));
   for(const seed of [1,7]){
    const tasks=wordUseExercises(c.pack,activity,seed);assert.equal(tasks.length,8);assert.deepEqual(tasks,wordUseExercises(c.pack,activity,seed));
-   for(const e of tasks)assert.equal(e.options.filter(o=>e.answer.correctOptionIds.includes(o.id)).length,1);
+   for(const e of tasks){assert.equal(e.options.filter(o=>e.answer.correctOptionIds.includes(o.id)).length,1);assert.deepEqual(e.textBlocks.slice(1).map(b=>b.audio.src),e.options.map(o=>o.audio.src));}
   }
   assert.equal(groupExercises(c.pack,'synonyms').length,0);assert.equal(groupExercises(c.pack,'read').length,0);
   const e=c.exercises[0],state=parseLearningReview(JSON.stringify(updateLearningReview({},{exerciseId:e.exerciseId,assessment:e.assessment,reviewEligible:e.reviewEligible,correct:false,attempts:1},now)));
@@ -56,6 +56,8 @@ test('new collections keep their level, activity, IDs and answers through every 
 test('old synonym records, bank media, original curriculum, instructions and appearance remain unchanged',()=>{
  for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readFileSync(f),execFileSync('git',['show',base+':'+f],{maxBuffer:128e6}),f);
  for(const[level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
+ const original=JSON.parse(execFileSync('git',['show',base+':data/klink-word-library-index.json'],{maxBuffer:16e6})),current=read('data/klink-word-library-index.json'),added=new Set(['word-combinations','suitable-reply']);
+ assert.deepEqual({...current,chapters:current.chapters.map(c=>({...c,activities:c.activities.filter(a=>!added.has(a))})),activities:current.activities.filter(a=>!added.has(a.id))},original);
 });
 test('audio resolution refuses altered transcripts, roles, missing approval and unsafe paths',()=>{
  const [id,entry]=Object.entries(bindings)[0];assert(entry);

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const base='834e85e7eb0ebafd0a05e7d8aa5bc33b0ab4ed27',live='9dd5c840cd7b6f9b819e9c683782b5920a3e829b',folder='docs/word-use-20261101/';
+const base='6e7bb1ccc796ebdd899d24cc8a679d039fbc4c74',live='0f9191da3e38064bd81034f1d071056601bfe83e',folder='docs/word-use-20261101/';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),sort=a=>a.sort((a,b)=>a.localeCompare(b)),lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyWordUseRelease(read=readFileSync){
@@ -28,7 +28,12 @@ export function verifyWordUseRelease(read=readFileSync){
   assert.equal(c.voiceId===plan.instructionVoiceId,c.role==='instruction');if(!c.reused){assert(c.audioPacketsUnchanged&&c.audioPacketsSha256&&c.originalSha256);assert(!previous.has('public'+c.src));}else assert(previous.has('public'+c.src));
  }
  for(const f of changed.filter(x=>x.startsWith('public/')))assert(audio.some(c=>'public'+c.src===f&&!c.reused),'Only active new audio is published: '+f);
- const checks=JSON.parse(read(folder+'verification.json'));for(const k of ['types','lint','unit','all288Questions','fourAnswerCards','audioComplete','metadataVerified','nativePlayback','desktopAndMobile','keyboardAndTouch','reviewAndResume','previousContentPreserved','localOnly'])assert.equal(checks[k],true,k);
+ const questions=JSON.parse(read(folder+'local/browser-checks.json')),playback=JSON.parse(read(folder+'local/audio-browser-checks.json')),layouts=JSON.parse(read(folder+'final-layout/checks.json')),preserved=JSON.parse(read(folder+'preserved/checks.json'));
+ assert.equal(questions.checks.length,576);assert.equal(questions.layouts.length,72);assert.deepEqual(questions.errors,[]);
+ assert.equal(playback.native.length,12);assert.equal(playback.decoded.length,2);assert(playback.native.every(x=>x.clips.length===6&&x.clips.every(c=>c.ended)));assert(playback.decoded.every(x=>x.clips.length===audio.length));assert.deepEqual(playback.errors,[]);
+ assert.equal(layouts.checks.length,84);assert(layouts.checks.filter(x=>x.width>=390).every(x=>x.stageOverflow<=2));assert.equal(preserved.checks.length,8);assert(preserved.checks.every(x=>x.pixelIdentical));
+ const compiled=JSON.parse(read(folder+'worker-preview-checks.json'));assert.equal(compiled.checks.length,12);assert(compiled.checks.every(x=>x.compiledPlayer&&x.fourCards&&x.correctFeedback&&x.resume));
+ const checks=JSON.parse(read(folder+'verification.json'));for(const k of ['types','lint','unit','build','all288Questions','fourAnswerCards','audioComplete','metadataVerified','nativePlayback','desktopAndMobile','keyboardAndTouch','reviewAndResume','previousContentPreserved','localOnly'])assert.equal(checks[k],true,k);
  const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);
  return r;
 }

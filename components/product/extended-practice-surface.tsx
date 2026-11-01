@@ -1,4 +1,5 @@
 'use client';
+import './word-use.css';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseListen } from './exercise-listen';
 import { StandardPracticeSurface } from './standard-practice-surface';
@@ -20,7 +21,7 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   const correct = answer.correctOptionIds?.includes(selected);
   const synonyms = exercise.mode === 'synonyms';
   const wordUse = typeof exercise.wordUseId === 'string';
-  return <section className={`cp-task-card cp-extended-task${synonyms || wordUse ? ' cp-synonyms-task' : ''}`}>
+  return <section className={`cp-task-card cp-extended-task${synonyms || wordUse ? ' cp-synonyms-task' : ''}${wordUse && exercise.mode === 'suitable-reply' ? ' cp-word-use-reply' : ''}`}>
     {wordUse && <p className="cp-synonym-context">{String(exercise.wordUseContext)}</p>}
     {synonyms && exercise.prompt?.audio?.src && typeof exercise.synonymContext === 'string' && <p className="cp-synonym-context">{exercise.synonymContext}</p>}
     {exercise.mode === 'sound-compare' ? <ExerciseListen label="Luister naar beide woorden" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> :

@@ -7,8 +7,8 @@ import {groupSessionKey} from '../lib/group-practice.ts';
 const cache='/Users/nicoknoester/.cache/klink-word-use-20261101';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:'+readFileSync(cache+'/dev-port.txt','utf8');
 const out='docs/word-use-20261101/'+(base.startsWith('https')?'online':'local');mkdirSync(out,{recursive:true});
-const audio=JSON.parse(readFileSync('docs/word-use-20261101/audio.json'));
-const checks=[],layouts=[],native=[],decoded=[],errors=[];
+const checks=[],layouts=[],errors=[];
+const checkpoint=()=>writeFileSync(out+'/browser-progress.json',JSON.stringify({checks,layouts,errors},null,2)+'\n');
 const route=c=>'/'+chapterHash({chapter:c.exercises[0].mode==='word-combinations'?'words':'listening',activity:c.exercises[0].mode,collection:c.id,level:c.level,help:'practice'});
 const choice=page=>page.locator('.cp-choice-grid .cp-extended-option > button:first-child');
 async function inspect(page,label){
@@ -45,6 +45,7 @@ for(const engine of [chromium,webkit]){
    await page.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();
    const review=await page.evaluate(()=>JSON.parse(localStorage.getItem('klink.learning-review.v1')||'{}'));
    for(const e of collection.exercises)assert(review[e.exerciseId]?.streak===0,'Wrong answers must return for review: '+e.exerciseId);
+   checkpoint();console.log(JSON.stringify({engine:engine.name(),answerRuns:checks.length,round:collection.id}));
   }
   await context.close();
   for(const viewport of [{width:1366,height:768},{width:390,height:844},{width:320,height:740}])for(const colorScheme of ['light','dark']){
@@ -57,35 +58,11 @@ for(const engine of [chromium,webkit]){
     for(let i=0;i<4;i++){await choice(p).nth(i).scrollIntoViewIfNeeded();assert(await choice(p).nth(i).isVisible());}
     await p.locator('.cp-exercise-stage').evaluate(e=>e.scrollTo({top:0}));await p.screenshot({path:out+'/'+engine.name()+'-'+viewport.width+'-'+colorScheme+'-'+activity+'-'+level+'.png',animations:'disabled'});
     layouts.push({engine:engine.name(),...viewport,colorScheme,activity,level,id:pair.e.exerciseId,...dimensions});await p.close();
-   }await ctx.close();
+   }checkpoint();await ctx.close();
   }
-  const ctx=await browser.newContext({viewport:{width:1366,height:768}}),p=await ctx.newPage();
-  await p.addInitScript(()=>{
-   window.__nativeAudio=[];const original=HTMLMediaElement.prototype.play;
-   HTMLMediaElement.prototype.play=function(...args){const row={src:this.src,ended:false};window.__nativeAudio.push(row);this.addEventListener('ended',()=>{row.ended=true;row.duration=this.duration;},{once:true});return original.apply(this,args);};
-  });
-  for(const activity of ['word-combinations','suitable-reply'])for(const level of ['a1','a2','b1']){
-   const c=wordUseCollections.find(c=>c.level===level&&c.exercises[0].mode===activity),e=c.exercises[0];
-   await p.goto(base+route(c));await p.locator('[data-exercise-id]').waitFor();assert.equal(await p.evaluate(()=>window.__nativeAudio.length),0,'No forced narration on a new card');
-   await p.getByRole('button',{name:activity==='word-combinations'?'Luister naar de combinatie en de antwoorden':'Luister naar de ander en de antwoorden',exact:true}).click();
-   await p.waitForFunction(()=>window.__nativeAudio.length===6&&window.__nativeAudio.every(x=>x.ended),null,{timeout:120000});
-   const clips=await p.evaluate(()=>window.__nativeAudio);assert.deepEqual(clips.map(x=>new URL(x.src).pathname),[e.instructionAudio.src,e.prompt.audio.src,...e.options.map(o=>o.audio.src)]);
-   assert(clips.every(x=>x.duration>.2));assert.equal(await choice(p).first().isDisabled(),false);native.push({engine:engine.name(),activity,level,clips});
-   if(level==='a1'&&activity==='word-combinations'){
-    await p.keyboard.press('Space');await p.waitForFunction(()=>window.__nativeAudio.length===11&&window.__nativeAudio.every(x=>x.ended),null,{timeout:90000});
-    assert.deepEqual((await p.evaluate(()=>window.__nativeAudio.slice(6))).map(x=>new URL(x.src).pathname),[e.prompt.audio.src,...e.options.map(o=>o.audio.src)]);
-   }
-  }
-  // Decode every delivered recording, using the browser's real codec and actual bytes.
-  await p.goto(base+route(wordUseCollections[0]));await p.locator('[data-exercise-id]').waitFor();
-  const results=await p.evaluate(async rows=>{
-   const ctx=new AudioContext(),out=[];let at=0;
-   async function worker(){while(at<rows.length){const row=rows[at++],r=await fetch(row.src);if(!r.ok)throw Error('Audio HTTP '+r.status+': '+row.src);const bytes=await r.arrayBuffer(),hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join(''),buffer=await ctx.decodeAudioData(bytes.slice(0));if(hash!==row.sha256||buffer.duration<=.2)throw Error('Audio mismatch '+row.src);out.push({src:row.src,sha256:hash,duration:buffer.duration});}}
-   await Promise.all([worker(),worker(),worker(),worker()]);await ctx.close();return out;
-  },audio.map(c=>({src:c.src,sha256:c.sha256})));assert.equal(results.length,audio.length);decoded.push({engine:engine.name(),clips:results});
-  await ctx.close();
+
  }finally{await browser.close();}
 }
-assert.equal(checks.length,576);assert.equal(layouts.length,72);assert.equal(native.length,12);assert.deepEqual(errors,[]);
-writeFileSync(out+'/browser-checks.json',JSON.stringify({checks,layouts,native,decoded,errors},null,2)+'\n');
-console.log(JSON.stringify({questions:288,answerRuns:checks.length,layouts:layouts.length,nativeSequences:native.length,decodedAudioFiles:decoded.reduce((n,e)=>n+e.clips.length,0),errors:errors.length}));
+assert.equal(checks.length,576);assert.equal(layouts.length,72);assert.deepEqual(errors,[]);
+writeFileSync(out+'/browser-checks.json',JSON.stringify({checks,layouts,errors},null,2)+'\n');
+console.log(JSON.stringify({questions:288,answerRuns:checks.length,layouts:layouts.length,errors:errors.length}));

@@ -42,6 +42,7 @@ export const wordUseCollections = [...groups.values()].map(entries => {
 
 export function wordUseExercises(pack: PackageDefinition, activity: string, seed = 1): PackageExercise[] {
   if (!isWordUsePack(pack) || !pack.practiceActivities?.includes(activity)) return [];
+  if (seed === 1) return pack.exercises;
   return pack.exercises.map((exercise, index) => {
     const options = orderedChoices(Array.isArray(exercise.options) ? exercise.options as { id: string; audio?: { src?: string } }[] : [], seed + index);
     return { ...exercise, options, textBlocks: [{ id: 'prompt', audio: exercise.prompt?.audio }, ...options.map(option => ({ id: option.id, audio: option.audio }))] };
