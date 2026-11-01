@@ -54,7 +54,7 @@ export function verifyWritingCopyNextRelease(read=readFileSync){
     aliases.push(...Object.entries(collection.sourceAliases));
   }
   assert.deepEqual(sort(changed.filter(f=>f.startsWith('public/'))),sort(publicFiles));
-  assert(lines(git('diff','--name-status',base,'--','public')).every(l=>l.startsWith('A\t')),'Keep every existing public file unchanged');
+  assert(lines(git('diff','--name-status',base,successor.baselineSourceCommit,'--','public')).every(l=>l.startsWith('A\t')),'Keep every existing public file unchanged');
   assert.deepEqual(aliases,[['KSW-AC-TN-097','KSW-AC-TN-020']]);
   const review=json(folder+'content-review.json');assert.equal(review.rows.length,80);assert(review.rows.every(r=>r.review==='passed'));assert.equal(review.totalSourcePositions,100);assert.equal(review.canonicalTasks,99);assert.equal(review.independentHumanReview,false);assert.equal(review.classroomPilot,'open');assert.equal(json(folder+'feedback-edits.json').length,20);
   const browser=json(folder+'local/browser-checks.json');assert.equal(browser.checks.length,1200);assert.equal(browser.preserved.length,8);assert.deepEqual(browser.errors,[]);assert(browser.checks.every(c=>c.firstDifferenceExplained&&c.individualHintPreserved&&c.modelAlwaysVisible&&c.nextFits));

@@ -1,6 +1,6 @@
 import { importedActivities } from './imported-practice.ts';
 import { contentById, contentReadingConditions } from './connected-content.ts';
-import { sourceContentLevel, wordContentLevel, type ContentLevel } from './content-levels.ts';
+import { sourceContentLevel, wordContentLevel, exerciseSetLevel, type ContentLevel } from './content-levels.ts';
 import type { GroupActivity } from './group-practice';
 import type { PackageDefinition, PackageExercise, PackageLesson } from './package-content';
 
@@ -26,7 +26,7 @@ export const practiceStages: { id: string; label: string; description: string; a
   { id: 'recognize', label: 'Herkennen', description: 'Kies wat erbij hoort.', activities: ['word-sort', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'synonyms', 'sound-compare', 'sound-path'] },
   { id: 'model', label: 'Maken met voorbeeld', description: 'Kijk en maak na.', activities: ['build-model', 'worksheet', 'copy', 'write', 'write-letter', 'speak'] },
   { id: 'make', label: 'Zelf maken', description: 'Probeer het zonder volledig voorbeeld.', activities: ['build', 'worksheet-heard', 'missing', 'dictation', 'paper-dictation', 'spelling-path'] },
-  { id: 'use', label: 'Gebruiken', description: 'Zinnen en situaties, samen met je docent.', activities: [...importedActivities.map(item => item.id), 'context-order', 'situation-point', 'practice-branch', 'sentences', 'word-sentence', 'find-sentence', 'sentence-dictation', 'sentence-speak', 'understand', 'texts', 'dialogues', 'text-question', 'text-evidence', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form', 'sentence-build', 'verb-choice', 'grammar-path', 'practical-path', 'reading-path'] },
+  { id: 'use', label: 'Gebruiken', description: 'Oefen met zinnen en situaties. Vraag hulp als je die nodig hebt.', activities: [...importedActivities.map(item => item.id), 'word-combinations', 'suitable-reply', 'context-order', 'situation-point', 'practice-branch', 'sentences', 'word-sentence', 'find-sentence', 'sentence-dictation', 'sentence-speak', 'understand', 'texts', 'dialogues', 'text-question', 'text-evidence', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form', 'sentence-build', 'verb-choice', 'grammar-path', 'practical-path', 'reading-path'] },
   { id: 'recall', label: 'Gemengd herhalen', description: 'Oefen bekende woorden door elkaar.', activities: ['read-series', 'word-bingo', 'image-bingo', 'memory', 'learning-review'] },
 ];
 
@@ -34,7 +34,7 @@ export function lessonWordIds(pack: PackageDefinition, lesson?: PackageLesson) {
   return lesson ? [...new Set([...(lesson.known ?? []), ...(lesson.newWords ?? []), ...(lesson.returning ?? []), ...pack.words.filter(word => lesson.words.includes(word.word)).map(word => word.id)])] : pack.words.map(word => word.id);
 }
 export function lessonContentLevel(pack: PackageDefinition, lesson: PackageLesson): ContentLevel {
-  return wordContentLevel(lessonWordIds(pack, lesson));
+  return pack.status === 'local-proposal' ? exerciseSetLevel(pack.exercises.filter(item => item.lessonId === lesson.id)) : wordContentLevel(lessonWordIds(pack, lesson));
 }
 export function scopeWordExercises(exercises: PackageExercise[], ids?: string[]) {
   if (!ids) return exercises;
@@ -63,15 +63,25 @@ export function selectUsageExercises(exercises: PackageExercise[], pack: Package
     const key = typeof item.learningPathId === 'string' ? `path:${item.learningPathId}` : item.groupActivity === 'word-sentence' ? 'word-sentence' : item.exerciseId;
     const group = groups.get(key) ?? []; group.push(item); groups.set(key, group);
   }
+  const grammarLevel = settings.language !== 'all' ? settings.language : settings.literacy;
   const allowed = new Set([...groups.values()].filter(group => {
+    if (group.every(item => item.localGrammar === true)) {
+      const linked = group.every(item => item.packId === pack.id && (!lesson || item.lessonId === lesson.id));
+      const selected = grammarLevel === 'all' || group.every(item => item.contentLevel === grammarLevel);
+      return linked && readiness === (selected ? 'independent' : 'later');
+    }
     if (group.every(item => item.componentId === 'KLINK-CONTENT')) {
       const linked = !lesson || group.every(item => Array.isArray(item.sourceLessonIds) && item.sourceLessonIds.includes(lesson.id) || Array.isArray(item.targetWordIds) && item.targetWordIds.length > 0 && item.targetWordIds.every(id => lessonWordIds(pack, lesson).includes(String(id))) || Array.isArray(item.sourceContentIds) && item.sourceContentIds.some(id => pack.exercises.some(source => source.contextId === id && source.lessonId === lesson.id)));
       const selected = group.every(item => settings[item.contentAxis as 'literacy'|'language'] === 'all' || settings[item.contentAxis as 'literacy'|'language'] === item.contentLevel);
-      return linked && (selected ? readiness === 'guided' : readiness === 'later');
+      return linked && (selected ? readiness === (group.every(item => item.access === 'self-practice') ? 'independent' : 'guided') : readiness === 'later');
     }
+    if (group.every(item => item.learningActivity === 'grammar-path' && item.access === 'self-practice') && grammarLevel !== 'all' && exerciseSetLevel(group) !== grammarLevel) return false;
     const contexts = group.filter(item => typeof item.contextId === 'string');
     if (!contexts.length) return readiness === 'later' && !lesson;
-    if (lesson && !contexts.every(item => item.lessonId === lesson.id || (Array.isArray(item.sourceLessonIds) && item.sourceLessonIds.includes(lesson.id)))) return false;
+    const linked = (item: PackageExercise) => !lesson || item.lessonId === lesson.id || (Array.isArray(item.sourceLessonIds) && item.sourceLessonIds.includes(lesson.id));
+    // A complete grammar path may revisit several lessons; retain all of its steps.
+    if (lesson && !(group.every(item => item.learningActivity === 'grammar-path' && item.access === 'self-practice') ? contexts.some(linked) : contexts.every(linked))) return false;
+    if (group.every(item => item.access === 'self-practice') && (settings.language === 'all' || exerciseSetLevel(group) === settings.language)) return readiness === 'independent';
     const placements = contexts.map(item => contextReadiness(item.contextId as string, pack, lesson, settings).status);
     const status = placements.includes('later') ? 'later' : placements.includes('guided') ? 'guided' : 'independent';
     return status === readiness;

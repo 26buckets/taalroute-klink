@@ -44,9 +44,9 @@ export function verifyPracticeAvailabilityRelease(release=JSON.parse(readFileSyn
  const roots=['app','components','hooks','data','lib','public','scripts'];
  const changed=git('diff','--name-only',release.baselineSourceCommit,listening.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
  const untracked=[]; // The listening successor checks the current source delta.
- assert.deepEqual([...new Set([...changed,...untracked])].sort(),[...availabilityFiles].sort(),'Only approved practice UI, route availability and their checks may change');
+ assert.deepEqual([...new Set([...changed,...untracked])].sort((a,b)=>a<b?-1:a>b?1:0),[...availabilityFiles].sort((a,b)=>a<b?-1:a>b?1:0),'Only approved practice UI, route availability and their checks may change');
  const required=[...availabilityFiles,...['owner-request','live-baseline','review','source-manifest','source-drive-verification'].map(n=>`${evidence}/${n}.json`)];
- assert.deepEqual(Object.keys(release.files).sort(),required.sort());
+ assert.deepEqual(Object.keys(release.files).sort((a,b)=>a<b?-1:a>b?1:0),required.sort((a,b)=>a<b?-1:a>b?1:0));
  for(const [file,hash] of Object.entries(release.files))assert.equal(sha(readFile(file)),hash,file);
  const manifest=JSON.parse(readFile(`${evidence}/source-manifest.json`));
  assert.deepEqual(manifest.map(r=>r.path),[...availabilityFiles,...['owner-request','live-baseline','review'].map(n=>`${evidence}/${n}.json`)]);

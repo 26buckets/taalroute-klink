@@ -77,7 +77,7 @@ const levels: Level[] = [
       { title: 'Ontbrekende letter', group: 'Bouwen', cue: 'Vul de lege plek', visual: 'letters', icon: <FileInput /> },
       { title: 'Kijk, onthoud en typ', group: 'Schrijven', cue: 'Woordbeeld uit geheugen', visual: 'type', icon: <Keyboard />, demoId: 'flash' },
       { title: 'Maak de zin', group: 'Zinsbouw', cue: 'Woorden op volgorde', visual: 'sentence', icon: <ListOrdered />, demoId: 'sentence' },
-      { title: 'Wat hoort waar?', group: 'Woordenschat', cue: 'Orden op betekenis', visual: 'tiles', icon: <Shapes />, demoId: 'category' },
+      { title: 'Wat hoort waar?', group: 'Woordenschat', cue: 'Wat hoort bij elkaar?', visual: 'tiles', icon: <Shapes />, demoId: 'category' },
     ],
   },
   {

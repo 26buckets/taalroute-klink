@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {classroomLessons,getClassroomLesson,phasesForRoute,sequenceForRoute,isCorrectSequence,freshClassroom,restoreClassroom,saveClassroom,readLessonClassroom} from '../lib/teacher-classroom.ts';
-test('eight source lessons have 24 complete phases, canonical assets and distinct sentences',()=>{
+void test('eight source lessons have 24 complete phases, canonical assets and distinct sentences',()=>{
  assert.deepEqual(classroomLessons.slice(0,8).map(l=>l.id),['mat','tas','map','man','pan','jas','pen','pet']);
  for(const l of classroomLessons.slice(0,8)){
   assert.deepEqual(freshClassroom('basic','a',l.id).shown.slice(0,2),[true,true]);assert.equal(l.word.word,l.id);assert.equal(l.units.join(''),l.id);
@@ -21,13 +21,13 @@ test('eight source lessons have 24 complete phases, canonical assets and distinc
  const man=sequenceForRoute('c','man'),order=man.map((_,i)=>i),duplicates=order.filter(i=>man[i]==='zijn');
  [order[duplicates[0]],order[duplicates[1]]]=[order[duplicates[1]],order[duplicates[0]]];assert(isCorrectSequence('c',order,'man'));
 });
-test('saved lesson state migrates mat and rejects foreign exercise IDs, unknown letters and excessive input',()=>{
+void test('saved lesson state migrates mat and rejects foreign exercise IDs, unknown letters and excessive input',()=>{
  assert.equal(restoreClassroom('{"active":false}').lessonId,'mat');
  assert.equal(restoreClassroom('{"lessonId":"unknown"}').lessonId,'mat');
  const s=restoreClassroom(JSON.stringify({...freshClassroom('basic','c','tas'),tiles:['m','a','s'],exerciseId:getClassroomLesson('pen').exercises[0].exerciseId,ownSentence:'x'.repeat(200),order:[0,0,100,1]}));
  assert.deepEqual(s.tiles,['','a','s']);assert.equal(s.exerciseId,undefined);assert.equal(s.ownSentence.length,160);assert.deepEqual(s.order,[0,1]);
 });
-test('per-lesson progress is isolated and corrupted or unavailable storage does not open another lesson',()=>{
+void test('per-lesson progress is isolated and corrupted or unavailable storage does not open another lesson',()=>{
  const data=new Map();globalThis.sessionStorage={getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)};
  try{
   data.set('klink.docent.les.v1',JSON.stringify({active:false,phase:5}));assert.equal(readLessonClassroom('mat').phase,5);

@@ -13,9 +13,9 @@ export function playAudio(file: string, rate = DEFAULT_AUDIO_RATE) {
 export function Brand({ dark = false }: { dark?: boolean; label?: string }) {
   return (
     <span className={`brand ${dark ? 'brand-dark' : ''}`}>
-      <Image className="taalroute-logo" src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} priority />
+      <Image className="taalroute-logo" src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} preload loading="eager" fetchPriority="high" />
       <span className="brand-divider" aria-hidden="true" />
-      <Image className="product-name klink-wordmark" src="/klink-wordmark.svg" alt="Klink" width={770} height={252} priority />
+      <Image className="product-name klink-wordmark" src="/klink-wordmark.svg" alt="Klink" width={770} height={252} preload loading="eager" fetchPriority="high" />
     </span>
   );
 }

@@ -1,0 +1,585 @@
+{
+  "baselineSourceCommit": "422d7fcc",
+  "userRequest": "Goed, los nu de resterende codecontrolemeldingen veilig op en rond de lokale controles af. Behoud de opmaak en aanklikbare woordaudio. Nog geen productiebatches maken, importeren of publiceren.",
+  "localOnly": true,
+  "publicationApproved": false,
+  "productionBatch": false,
+  "files": {
+    "components/product/compact-learner-app.tsx": {
+      "before": "481ac4e0aa28bf30b6ecf59014519f8db95ab7a45f0622a090cf86a50f37319b",
+      "after": "af68c28f72aee6ea26a37b2c1eb08b86cd1e2886c366e240d1bde582b04a926f"
+    },
+    "components/product/entry-design.tsx": {
+      "before": "7665cfabc8674a19101dab77a7a6d378240cc1e8ba9ee6bd608abf69c10bc710",
+      "after": "7b8ef5a318cb990470071856e03d4088daa32bd9317d5213599c5567e79aaf8c"
+    },
+    "components/product/shared.tsx": {
+      "before": "bb00a9a5ac17bef87e4a7a18fde339515c00c93c3b48b8b98e10fef5e65b4d30",
+      "after": "28a9f7848551ba26841bd0f4bbe5d7bc979116cc526e08bec3c5341c83da9edf"
+    },
+    "docs/content-repair-20261030/audio-review.mjs": {
+      "before": "e6f8e8f59a28ca5eb50f0f9ed28e373cec437546443a6c8aabcb2b2037365151",
+      "after": "125938b92ba25ad452511bc20d617bd931502724053a1bd460e7fdfe78dceb5d"
+    },
+    "docs/cooking-release-20261030/preserve.mjs": {
+      "before": "5eac250fae09221a250df7b87ec96c07759c36a72449a10e20945eb771957401",
+      "after": "af99167c18d2f1d17f79cd052ce0ccb3f788063450bebb780d3d69365a4d7628"
+    },
+    "docs/imported-alfa-c-release-20261031/check.mjs": {
+      "before": "821ee1320b8673fdb06da3f0d020834850d7f45b7079a20e65be5c7c65cab31c",
+      "after": "425ce7355fc96b756f85821c9ffa3266339b52d6ad6c5d1713d54c32aa20edae"
+    },
+    "docs/imported-alfa-c-release-20261031/preserve.mjs": {
+      "before": "58fa06ffe3cd73eebdfd0cf97dea63663995ddfb95c7d3758d72c1b85ffc193b",
+      "after": "2ed0264b5045d5d82dff93f54ee660e61b4d658f202bb060eb3b311a52dfd26e"
+    },
+    "docs/imported-alfa-c-review-20261031/check.mjs": {
+      "before": "c9742aab91c7cec84a4c36a5fae43c83eee0877025ab8a53632a0a00265506a3",
+      "after": "bf6bbc522724f351fa0f39d26f022a4425f8aea3c47b8094c8c5d724b1b0100b"
+    },
+    "docs/klink-complete-release-20261101/online-current-smoke.mjs": {
+      "before": "6bbfde844fabdeae34ae169cc78d1defe3a13fb2d683d1045b0054dd3d3094e2",
+      "after": "3f1d4baf27ca327a643b3b918370313ca496571bfb29af8021537428d12adccb"
+    },
+    "docs/lespakketten-10-15-20261031/live-browser.mjs": {
+      "before": "ec6ccf0f2c038c9babfae06980ad69c2446f5126927a125ac656ca60bff8a835",
+      "after": "da0b96b0d1e936b3a8da6636f7999f57535d46631f2c06906a40533fb5302f83"
+    },
+    "docs/long-content-review-20261030/runtime-proof.mjs": {
+      "before": "aa2cea25d88a96db5693530b71472663a4514046b0a986a475e950dece47ac60",
+      "after": "a710f4a1b298e0dd2cd29a3dd0cfde8bd7ea0c125c42e5c2dcc2cb0b8606b78a"
+    },
+    "docs/official-logo-20261101/browser-check-source.mjs": {
+      "before": "9ea7188fcb141f41e7359433f98131e9fc08b448089137cc3c6c5f8c0e6a4cdb",
+      "after": "8bc5dca3aa49054243e8a373206e0edf21ff83ecbc020abecf4603a33f488ace"
+    },
+    "docs/opening-loader-20261101/compare-screens.cjs": {
+      "before": "4c1512cef82a61900b043067541127a8d513e66bfeea98b8ce408c70bd65bc77",
+      "after": "e64341cb1c790d7c784822745a5dd80c09891b4ae254d724a2389becc9122d33"
+    },
+    "docs/opening-loader-repair-20261101/online/webkit-image-capture/reproduce.mjs": {
+      "before": "23c7f7fa6d9da593cb2b53ec6d151388fc6d1ca8c4ad1a85d627794f32620121",
+      "after": "c3da609e6db473a5f6c46e18808b80c636c144819acc30776ccd9dac8cdc868a"
+    },
+    "docs/word-coverage-release-20261031/appearance.mjs": {
+      "before": "610c2199b307a559863ac9dd82ce1493396b0cd537611bbbdee586e4de3cb1f2",
+      "after": "aed26cc2acf55ed0c392e4d62c729c2420df8781e36aa64c8cf8edce33931e90"
+    },
+    "docs/word-coverage-release-20261031/browser.mjs": {
+      "before": "7884259a2d65338fc79e45cea3de968e99296d7d29d4b99de6e4125214a7495b",
+      "after": "1123a03b6e4aea105c9b875eee569548245e8216fc9236905947c31112755f2f"
+    },
+    "docs/word-meanings-release-20261031/browser-check.mjs": {
+      "before": "dc00e74e3a525da855e72895d700e780010353831eb4c31daeb4610d17cd4475",
+      "after": "b02b2b8f237d87ba2afc46ee8a4d47a104847b62c365f773054b5eced8080de0"
+    },
+    "docs/word-meanings-release-20261031/direct-check.mjs": {
+      "before": "59c19cdce59c7d2490e972d16beec77f6a2d938dbde7c9ae6578db0520d3fc3b",
+      "after": "ca06cb45d2f14372088b975f0956b98a8327eaef076af531671d5019216ddcf3"
+    },
+    "docs/word-meanings-release-20261031/preserve.mjs": {
+      "before": "831e2811f3047026e82e94b4b0c6e2e5ba283021cabaf958f691f31f146a6e4e",
+      "after": "096377456d534d0c49cf88d1a5ea385595af22f273a243ac00016eee415d5d93"
+    },
+    "scripts/check-alfa-c-dagelijks-release.mjs": {
+      "before": "41bf013af99e65368e6cac86d08c816bb642ede9891958212e5d85544c77cbbf",
+      "after": "4cc34837a72255d69f92777d90bad03eff579eefb0011ae569c10860f7b715a4"
+    },
+    "scripts/check-content-repair-release.mjs": {
+      "before": "82d943c2cace652f5cdded4be92482efdca2943f5d03d06c7f467287ddd148f0",
+      "after": "1419643ca0b3bdc6617ee72872b3b02cfdc0a3a221ed2daa0147e1410a7bb1a5"
+    },
+    "scripts/check-instruction-candidate.mjs": {
+      "before": "180765eec45c285f9a25d598522205902782c9ca9021684ae09f3c75973448dd",
+      "after": "4877623b07396e811cd9f94475530b239294e532ede278d474f406a0314a7ea4"
+    },
+    "scripts/check-practice-availability-release.mjs": {
+      "before": "56474a1f8f80a44c5873dc2075f29dd98d4a6b078d6600e822185fa2bdb45d54",
+      "after": "93e59a5e2babb041eb64880e7806178103d8172a1de17ba0d82469160bcaaf39"
+    },
+    "scripts/check-writing-banks-release-20261101.mjs": {
+      "before": "c655f20224a13fe922c91134ea03e52a1a75f6cc5552e9a96fa284418a579484",
+      "after": "f508d0b34ca75b928bf8bd3174e5aed79bd7e43438e717277550f53cb6d116ec"
+    },
+    "scripts/test-alfa-c-audio-release.mjs": {
+      "before": "80b3c683778e9087e16d42c8e2c5c101c07f794ab57dd75be3dfc706cbfa63c4",
+      "after": "83fc6d8134946aa7783860e1e8e2d29da738647e4d727b65ca0e12144cb29569"
+    },
+    "scripts/test-alfa-c-choice-release.mjs": {
+      "before": "20eebabfa59d62c724becf20311bde565658384dd1aed179b779422f510cde7e",
+      "after": "f8c1b1542558d19216df2481f4c4314327c344d87a0fe5577857259281be117b"
+    },
+    "scripts/test-alfa-c-dagelijks-release.mjs": {
+      "before": "2a07b2e02f56a3c204bd32d16f5a2304deabe67a20153698a7b7916ac55a3d8b",
+      "after": "098da98d8c62b3a5899c1496c27880363181b3ac9e7690bdadd2151636ab86dc"
+    },
+    "scripts/test-alfa-c-dagelijks.mjs": {
+      "before": "c62de2685018d2883309ef9e2ddd61350bee1d7da98e5595508eb0097f57363e",
+      "after": "4fdfe80230f8cb4c2f29a2039d7f9990494b7c3ef52fffc97169ef44ffbf83fb"
+    },
+    "scripts/test-alfa-c-docent-recovery.mjs": {
+      "before": "24054c983cc2d56e7c69b45dadd1584ca67801848c4c890b5a03d3311377fc65",
+      "after": "72e49f6e360373c6f6ccb653b07eeeceb500381bb9cf7c961751739c6d2be4ba"
+    },
+    "scripts/test-alfa-c-docent-release.mjs": {
+      "before": "0fedb7e2d7bc0b608dca9fb45518865b1756824468d8fb6a7c70745210813873",
+      "after": "5ade8cde9b8f3b0d96fbf67f1182849db633f5e1574713902097b58fb7594c42"
+    },
+    "scripts/test-alfa-c-docent.mjs": {
+      "before": "d42b71429e303f19bfa43e8ae3226504652dbc53e47e8a46e55c449aa41f35cf",
+      "after": "6eaffbcfa432f115655608966ca98b3c29cba840a7bbb665b254ace2e486b20b"
+    },
+    "scripts/test-alfa-c-functioneel-release.mjs": {
+      "before": "182a18b5db21a67aba45c8fc11484488f898ab24f22eeb72d06a245f7ff426bf",
+      "after": "aa31b93001e35c02b51994d7a3778681fcf8b6afc4b820075f4edd3058e79ba7"
+    },
+    "scripts/test-alfa-c-functioneel.mjs": {
+      "before": "ee14ad9a3f8f9a1daebeea88bea228f478dae11c1e0d86d31367c5de4f7366aa",
+      "after": "d099eecc18db549407939487359250f7aa0c6de2c683f19d2b5b93292c7756bf"
+    },
+    "scripts/test-alfa-c-no-scroll-release-20261101.mjs": {
+      "before": "068f4aa8e955285a27635d7215bd8d04bab1341c4f2afbbd1130662a8324d377",
+      "after": "5f5389d39cb3e2816254d79f02ecaa25c590ca5bff881059746cbad6b1f8ceca"
+    },
+    "scripts/test-alfa-c-online-browser.mjs": {
+      "before": "163871a5bea84bb351b57c1501744d669b983bd0a7d540f5bb4c581dd6b0392e",
+      "after": "75aa2fe42084217162c5b0fc5946900a0adbfe6383955d8b06de2c6081ff0f00"
+    },
+    "scripts/test-alfa-c-online.mjs": {
+      "before": "0fcc2e530e3070fe2921561a6328c8d504d6f8620acf72626d65e510bf864958",
+      "after": "7fb7afa59316158aa3c8e7511478129f7bb62c7e7fef3b958595e89cfe761968"
+    },
+    "scripts/test-alfa-c-panel-pages-20261101.mjs": {
+      "before": "b208b73f97e48ff93aee786b4722469e550b33b6887e23cd22a307ccec7b8976",
+      "after": "c8d88f193943036d7b54d275f7894ab1c77e582ad60112c1c37f36a8a1232b76"
+    },
+    "scripts/test-alfa-c-photo-repair-release.mjs": {
+      "before": "a4edf61b851bc75efb13d8f6ccfb69836ebe37b5ebbc30d527674c2b630a4c39",
+      "after": "bca95818e2d3010b7d5050a796732931f5102660eae0093d8fe7a0ba1b995527"
+    },
+    "scripts/test-alfa-c-preview.mjs": {
+      "before": "ec75c261d037facc63a15a91ab508d3598b67b73b5822599bbeed664a319397e",
+      "after": "98892d04f4bd0f5e08c563b42bf654b6dd2bb14527dc59ef14d8cd7383412a45"
+    },
+    "scripts/test-alfa-c-release.mjs": {
+      "before": "c773e31d2beeeed4d3294072a7c1a07a464fb8a364aff476bce53ef937bed62d",
+      "after": "62bdf1a83339344ae9c5e4ddcc3e27e460df6041fd42bd6d38339416fa4a0b58"
+    },
+    "scripts/test-alfa-c-support.mjs": {
+      "before": "b668360780f2a45e151ee7a6f1b6c2dfa5dbb529c5a63e8e7ff01b76982e9093",
+      "after": "96508b5c1d261c9fd4c9562ba3187ad57fe9539a87385023390d341fd1274243"
+    },
+    "scripts/test-alfa-c-texts-release.mjs": {
+      "before": "a8780725f1a1158196bcbe720da72e4b3d9d086c0fb27a7657f1d56abeef4b3d",
+      "after": "9d3aee5e02011e563bd7752de74cd18624dfc8170017b6c350f57070950e69ad"
+    },
+    "scripts/test-alfa-c-texts.mjs": {
+      "before": "3db7caa5c352dc35b579191b11e402e3c70b960d32cf6ece7e954fa6e65637a9",
+      "after": "4abb3d431988e9ef5abac8a22c7f5022d7200bcb50776e8fe91df2cda9c0d3e7"
+    },
+    "scripts/test-alfa-c-workspace-browser.mjs": {
+      "before": "77de881c62f2eafe8ff2ee63066fe9e37fa004a4f553f9ac318b19e74abe8692",
+      "after": "9cfa514b3aace428e11733ced030933b9795f4ddb56bf73527d618d93413221b"
+    },
+    "scripts/test-alfa-c-workspace-release.mjs": {
+      "before": "38f60dba114169e8d79caaaed9b7a08e4f43803a52b13df058f91281466acf14",
+      "after": "6f75c744ae455287a53108d96c9da65fd8a58204255726d9df9a23622b32b13a"
+    },
+    "scripts/test-answer-arrow-audio-browser-20261101.mjs": {
+      "before": "855a6338a167650e3e5ec014c24cb8b62934e22d1765f3c33771ca0c5e9fe1ba",
+      "after": "f8045031f0fb32e5a2c650ea000bb547cb2d892fe9f16cc442e67241703d8f74"
+    },
+    "scripts/test-answer-arrow-space-release-20261101.mjs": {
+      "before": "5e40fc8829b994d688ed30d849e61b5c454ea56a6db028641e4e64edaf81cff8",
+      "after": "adc6a9b6c0afc5b119537bce829edbe55ad1a963aab562b46ab4f86f5ebcac9c"
+    },
+    "scripts/test-article-review-release.mjs": {
+      "before": "2d0b87f295072b4e12e4a6faa3721eeb9b0777ad7da8d05d9f90c7a1fb7d8870",
+      "after": "42bf3229e930a792be8f5609d67702637741651471af963cad0387d2474b100c"
+    },
+    "scripts/test-audio-register.mjs": {
+      "before": "9719d540b4036ab085f1510bf635661248bc631e76d1b6315e4d83310a4493b9",
+      "after": "c0826ef36d969743f9790fc0760d99e33b57f32a67f11281da2cc1c9d8ee0c2a"
+    },
+    "scripts/test-beginner-demos.mjs": {
+      "before": "77d5b120416d88071ec8d574311df29325ae9f7c30a734c6894fa4e29b71c092",
+      "after": "364eb6807b9c7172d8951fca0583d364716c3d9f2b5ff3252b0a6e8708ab388b"
+    },
+    "scripts/test-build-checklist.mjs": {
+      "before": "62c5529153a80251863c7a031fd66a06e49ec9229364bd5ec4112df252b287eb",
+      "after": "969de41147401b9c31ba7632fca4818496a58f39e8a203a485c1c993e5226b1e"
+    },
+    "scripts/test-build-demo-release.mjs": {
+      "before": "3aa190156e9de133f73e58f1258e603babdf18039b50710a6fabe987c4530dc6",
+      "after": "46ae294532074b32d06b4967ba124ce31e27497d70716b7526afcc08fd019bbc"
+    },
+    "scripts/test-card-titles-release-20261101.mjs": {
+      "before": "99687546fbda30ea0a24f2bf4d707186796541809e0e20e68f19870b24f92293",
+      "after": "b34be4c01d10ca6d20f49fabe2372e322538fc8e34acfb4fd7638d92643294e5"
+    },
+    "scripts/test-collection-labels.mjs": {
+      "before": "59be49851a8fbe148bf20c1c87e9dbce5149eaa4f615227a205e5b9038c4d8a3",
+      "after": "7d202c45ca6c8d5374a2b3a691ea47ebc4e2eee738cef2419c77a094f87e9805"
+    },
+    "scripts/test-content-routing.mjs": {
+      "before": "612b4b22771db6dc57131d788c135b9d20a785b24451d7df9509c2a472e0e4e0",
+      "after": "3fcf205e684bbf99ce9befa660cb8fa484e0dad39b7db2ec76ffcb316868ee56"
+    },
+    "scripts/test-cooking-release-20261030.mjs": {
+      "before": "12791cb55e2cbc38ff9eff5466c9f40c4879c65a1068e1967e94f6e4af62a3fd",
+      "after": "d00a55c342b45f8c8464e5130731cd2a652671a3bfb979652e7943057035c7e0"
+    },
+    "scripts/test-curriculum.mjs": {
+      "before": "b925ac4e5f00900823ae4e709b4941aafb6c20485b3465719c4953b6f60b53ae",
+      "after": "7a0b97e959b82a6bca266739a1285f86d6138fd72df66b4385c2a1560dac686b"
+    },
+    "scripts/test-demo-hand-release.mjs": {
+      "before": "15be19ffc1ffb958c5492eae82d63c7b53f3fc178313c6e2c9d047b0a18c472e",
+      "after": "b250c4191526ca33d98741132a0766cebd8d5d0f0561b24682e1d6a9ea930875"
+    },
+    "scripts/test-demo-mobile-release.mjs": {
+      "before": "4c9019510091ba4a7f8bc179cc4959ca166b7e20d74caa1a0a1f97a1fe3614a8",
+      "after": "d256d5e526fd8895d3ef7ec921020692ce6e977283431598618f531459e649a9"
+    },
+    "scripts/test-dialogue-image-fit-release.mjs": {
+      "before": "e57965b1b9e61fdcb31744e1cc4c2097e5c147ffa5eae73fa050bddee77754ca",
+      "after": "00d044ab0b9e1b207d81cabab9a5c274cc2baf4e201670d04770721df4be123c"
+    },
+    "scripts/test-dialogue-mobile-photo-release-20261101.mjs": {
+      "before": "5c647a71ca3879f2b3a8c0ce6d80ed3b12e2db293d118f5faab6197b33d2683d",
+      "after": "48483bdd1c2bdfd4aeb4f458fd87119157a84ebf433f01c69d15bcae4e3da824"
+    },
+    "scripts/test-dialogue-playback-release.mjs": {
+      "before": "0feb145ce341abe3fa91162dff3387a9ff0a88f52ca94037845837e6f3cc912d",
+      "after": "d70b119acb50acaa5f7c869cc988908eef0b2eae79eab691d5ec84e9063837dd"
+    },
+    "scripts/test-dialogue-release.mjs": {
+      "before": "72aefad31615fb11452d357cc32eee0f521017298ac1f385a100e674d71a88ea",
+      "after": "69dcba5b0d0adc0621cf7af35dfd2a3ecc343d29f9b498f7ef8657cc245ee0c6"
+    },
+    "scripts/test-dialogue-transcript-release.mjs": {
+      "before": "add8f4168dea24a93f9093329370963d948c711e07927283ca27a51e926788f9",
+      "after": "9df55ad9a5917a83a2c7c2750ab94b88a44ac6992ab219abdc432701a5b862f3"
+    },
+    "scripts/test-didactic-round3.mjs": {
+      "before": "3d6c10535b1304c6222cbb2d55470b63331e6c30f19a3d28b537a094f3cf3f4d",
+      "after": "06fa4c9f17bca0c2221ad28d0e421206bac94cac7ce7b35a683862f296b07571"
+    },
+    "scripts/test-exercise-view-release-20261101.mjs": {
+      "before": "008a032e6287cbedf014b6652ac0ce37a729b33d65cffe7ae96ae5038e28ab15",
+      "after": "f6a4c33dc8582e039d81a33983f064a744dfeb33abb8960b5eac2a1a0baddf24"
+    },
+    "scripts/test-existing-player-curriculum.mjs": {
+      "before": "ae84ba1dcf889322e4c6d95dbbcfbb9c32c93dd83be4aea83441ab06985746cf",
+      "after": "a57bc6c814d2c9ddd1f5521805d325dbbf30b95a90b5991f8c97c344e8e25774"
+    },
+    "scripts/test-extended-practice.mjs": {
+      "before": "0ab5dc85b86f98dbd3ab22c56c4caabfc6b8e87f2da787c2550534d663861a30",
+      "after": "f288420c12a7e97b45e07733a0c74779b161abaa59a82262c870051bdcff2133"
+    },
+    "scripts/test-first-letter-guide.mjs": {
+      "before": "ca0c1664ba3e8bc7f51230c840e2e0b23af7efd1b925b6157ccd8aae3199c295",
+      "after": "f2439bcdedd61f322812031d5392fbd8dfb30699b566da971b6383ae03eb0c87"
+    },
+    "scripts/test-gap-demo-release.mjs": {
+      "before": "83f172a0bc07198b92e7a36d2888a0d112f7404a2d60856f0e48e693bc83861d",
+      "after": "44e4eb679c91f4f9e43f83b53411442d55f26399d386197f1b569555226f7a24"
+    },
+    "scripts/test-goal-audit-release-20261101.mjs": {
+      "before": "02a3c0a80f3025a6e5b4b0b446c40cd460761fb1c82871647b4bb7df66106ba0",
+      "after": "25c65d687955014199b97ff7edcc404a49c4c166b674ba3a1839bb3736f64c52"
+    },
+    "scripts/test-group-practice.mjs": {
+      "before": "cab33b1237ab9566748ec8f74bd6d030c53ba801cf0a0ffd5ea6eac85f7dadad",
+      "after": "944003b5d1ad13bd9b07c44ef37a6ed75f7c23ad83afc1086202c1dc75843bb1"
+    },
+    "scripts/test-home-start.mjs": {
+      "before": "25fe6a12bef63a03b2841a9b1a8e8b0fbd02ca1648173e542f3e6108c1d4cd50",
+      "after": "1eadcd7eeb9304dc390bcc9b8b5d1614456ae8bdf29bf190e8aee44791869db4"
+    },
+    "scripts/test-imported-practice.mjs": {
+      "before": "615455d64519bb21ec49dee7e8c37fb8bf1071bec15cbc057ab7d5da4097c13b",
+      "after": "0205be405b32dd74b159a05b699e90d8a5590400db6bfaf14cf8cf509e2abe2c"
+    },
+    "scripts/test-info-header-release-20261101.mjs": {
+      "before": "dcc8b709ba26cac3dcc2ea0b1a41e6619135018774027ddc2dc89f3eb264548c",
+      "after": "20fa9f227f5bdaf1c5cc9e9e3b18eaaa6f1b81d21a35fefefa7083d2027cdd62"
+    },
+    "scripts/test-instruction-candidate.mjs": {
+      "before": "e34c3c00ac8cb6b43b8a11d1e8f7940982a32afc3de6fbe5b5bbea2af1756b07",
+      "after": "fc5393e3c9b56728c5ae00d6ec8b34692988988610bf5244b4eae4098a8b2783"
+    },
+    "scripts/test-klink-complete-content-20261101.mjs": {
+      "before": "b11b905d1788e2c825d72aa1f5dd089d10990dedbfbecad16d9b06941c83280f",
+      "after": "ebfd8ef1e4e7e77f091d48b39ee1000a199d6ba1c72b7acbdd63e7b8dac22f0a"
+    },
+    "scripts/test-klink-complete-release-20261101.mjs": {
+      "before": "11fd45e0e388c5ad3267d5da5a7bb83fe20fc223e722bd859b19e45e7063a131",
+      "after": "3b066652f20755216550126f3ce7b9a34cb069faa030b0574ae91f2d76a5761d"
+    },
+    "scripts/test-klink-wav-metadata.mjs": {
+      "before": "01fa379d05b5aa92aab7c0b9dc427e2f15a40bd420b19436d966141db085c281",
+      "after": "8bb747dc8a39c52c8103c63b8c045f10ec6255a07a5b65ee613c5b3b15c05616"
+    },
+    "scripts/test-learner-info-release-20261101.mjs": {
+      "before": "5a938b450393acecda171d81a062341d04809849a46269f354efe20c8372bf66",
+      "after": "1cb4417ef0f778b6ca0fcaeb61e52754c350e79fa878a73c38700de3b1101748"
+    },
+    "scripts/test-learning-goals-release-20261101.mjs": {
+      "before": "cc1e1bfd645241e2278fd01b664b21b05438468601af57aa9415c2692fd64e98",
+      "after": "b8fb364d7f55340c6198dee42d74514e4fe31c7a2589ca67038c97fd6e2f5ed5"
+    },
+    "scripts/test-learning-paths.mjs": {
+      "before": "c55514ff37e8bbb3de08972069b0d71f2374887a7d0cb687768af12b79701eac",
+      "after": "30e1e4a2df6d6169dd264d3ca36d1648c766a2533df0c3a76b1e1f14f34fda52"
+    },
+    "scripts/test-lesson-extension.mjs": {
+      "before": "94e5d46bf641d14e205c8ab8218766d150da8bc4313f9c9bb866adbfeb8069c8",
+      "after": "3f4d4dae204d1263f1ba05000a2981e72c5e23cc3132d1c3dda28679bdde9dda"
+    },
+    "scripts/test-level-routes.mjs": {
+      "before": "176e302bd383a0c14a231d7ae5273a4ccd789a673e0d5cce42997b38e7834b70",
+      "after": "24a707ce3a0403b3f0228e091be124f07d3b4fab8f3ba70b656ae0187d984f81"
+    },
+    "scripts/test-lexicon-basis-selection.mjs": {
+      "before": "aae99a4f0f8b03159a175f49d7c49b58e8eff7f84372447479ab5d887e45afeb",
+      "after": "6ef471341cbaf170fe0810fef4197a4430ed6286ce1004e84f7d4ad81ba1e956"
+    },
+    "scripts/test-lexicon-wordbuild.mjs": {
+      "before": "cb65db5cf11987d98544b028b6e6271ef0b44e5438e941bf19fdcf65925d666f",
+      "after": "e540593429208211f4d4da85e86d4dc37731011eb3c1591247303d8e16fc56d9"
+    },
+    "scripts/test-listen-corner-release-20261031.mjs": {
+      "before": "c1d8558646fba7982e60e04a43cf23035bb1c6c03f29eaf0a391b05ca54d3755",
+      "after": "94163065c9e5d774297f640beb0683e7de0490c6ca9590316449bb020bd15462"
+    },
+    "scripts/test-listen-playfield-left-release-20261031.mjs": {
+      "before": "30fa07db1f16b1b32ae74dcf0044013d015937b1accacc4e92f9388fcf0f2093",
+      "after": "8c6e92bdd7a03a2d8cb0020fc95a8bae94c4135f8277efd66d0fae678e1650fd"
+    },
+    "scripts/test-listening-route.mjs": {
+      "before": "bd2e8635483e210e3b0e62716342702778ef109536b3a90349288796c63a414b",
+      "after": "23d76e1d002e56e22cf2e095c5737faddeeed02597c1edd94a8369cdf2d1cb49"
+    },
+    "scripts/test-local-code-cleanup.mjs": {
+      "before": null,
+      "after": "1f3d384d7a37bb7f7c689a4251cff1f3035473582214e6bc391cd67a979b76f9"
+    },
+    "scripts/test-media-progress.mjs": {
+      "before": "b5dbdaf7373ffab15668c1c353966853594042ce199d728edbce88d67f601a75",
+      "after": "ad2450d2daac51d998d739d3595b4bad5749473b84ac26abc83c2cd23e420830"
+    },
+    "scripts/test-media-rate.mjs": {
+      "before": "bdf4a4fe49f3f32f312aaa03fea32460d59e843057a735b37f6d05f90940cc2f",
+      "after": "73f071678ee08ee810708c33e16f106faf217a5717474adbb43cbbcccad6460f"
+    },
+    "scripts/test-mixed-practice.mjs": {
+      "before": "d6795ee32c9cd468ec957f4487cabc7d6cfce6c38213e964b0729672e9b3f60f",
+      "after": "bd7b0d6f2414d0adfc4d0eaaf663f29fe08a85fcb82c99f49e14a1cba3ede8bf"
+    },
+    "scripts/test-official-logo-release-20261101.mjs": {
+      "before": "2e95d73b5326119a7bfc63422bb8e89bbded9252048d3045e9ac08505c43abb3",
+      "after": "0128d6bc01e15c4713cc4c99e362570c4383bae89e2206ff6642b97299abe9a8"
+    },
+    "scripts/test-official-logo.mjs": {
+      "before": "25393acf27aa4ac73663c88cb394514ea77a4be95e7a5348d0a92b2121c1b903",
+      "after": "a40fb5e4b25fabb4441ae0d5b67bd7db3a678a8e41b15de1048ed52ae13b1462"
+    },
+    "scripts/test-opening-loader-label-release-20261101.mjs": {
+      "before": "18463a5e78a217aacbf05534420d14f6fd8095a00e828f609f0af1722cf65b48",
+      "after": "a01d7a019433f38a59f3afaaa022c705e7bfcaaa7d21a9d8ce9fff5bbeca81ea"
+    },
+    "scripts/test-opening-loader-release-20261101.mjs": {
+      "before": "e30a574a4cdd562d15ba8465b21b15794ba49e6805e8c1bb59c616fc7341034c",
+      "after": "4800e7b0be5439a20ee9efab5b1e174bd831c3a53df5d5eddd0c4fcc3d2b7e2f"
+    },
+    "scripts/test-photo-choice-fit-release-20261101.mjs": {
+      "before": "c701aac04c37fbd6672316cd638cca17d756ce53a26dc40e19afd7a10b3114b0",
+      "after": "27d7ed02f8bc5e67550202725904ca16d368371e31f5c3a662b6adea8d731d30"
+    },
+    "scripts/test-popup-style-release.mjs": {
+      "before": "42694c4e7732fea432204cce47a8f5dfc692d6d1fed74bc66ed2ff4b2bab3675",
+      "after": "09185d323859ef4475be3331009ae1e32961cd820498577fe2090b9883e6882b"
+    },
+    "scripts/test-practice-availability-release.mjs": {
+      "before": "e2447233ab36d6e547a71b894cd61e736bf4dbb74807ffa287c67a695d1675cc",
+      "after": "f63b457e204fa83dc6179788328cde7fd58f767fc31653d815de6cdc9a4a441b"
+    },
+    "scripts/test-practice-explanations-release.mjs": {
+      "before": "17ae77378932ef6888f8bcae7cada5874f3929b7e81d4a71f62c4afa3403ec38",
+      "after": "8e33dfc408f057347a29d3d66554ac1fdef1e58c0235f8e02d209bbf83770943"
+    },
+    "scripts/test-practice-keyboard-browser.mjs": {
+      "before": "f3a6248ff7a9e2890740f752590f5e47f191818ce4847e953e228d522653d793",
+      "after": "caf2cd4bbf8fcd886cb4f1a2dbeb08cdfc0030152784916762d3f4443491f006"
+    },
+    "scripts/test-practice-navigation.mjs": {
+      "before": "f388640ff51f64cfd971881406d2103a2c4871c86ec553fec939ce84b04ef708",
+      "after": "7e4a1d00a1400b7ad45052edacd357b46e9d542d9a8fe6d293caa77565798f40"
+    },
+    "scripts/test-publication-proof.mjs": {
+      "before": "805e55b52b32491f87dcfcbc4b1ddbec3eae1797ef0a76967229e3f570878eb2",
+      "after": "90e8dc70a987b0c9bc9f7b998819defc7203d82fc9f7f0ec1ccc156a109f7c5c"
+    },
+    "scripts/test-readalong-release.mjs": {
+      "before": "2317a69dc6d9fe9549d15a07c4eee7b1f5831464e70bc7e102dc0ff93f12aa00",
+      "after": "d92a2dc16cc3ecd19dcbcbc464808bf93aa7f441b6b4443c54065bfad0165350"
+    },
+    "scripts/test-reading-round-titles-release-20261101.mjs": {
+      "before": "a900af1685688d3cbc1cfea66142dd1fa78f3c33302d3f496004f7525abeb8a0",
+      "after": "f19e812506c5f183301f0985c962a0b6f15815aaa278c52ba19a721b2a0ecd52"
+    },
+    "scripts/test-reading-round-titles.mjs": {
+      "before": "69063b19d799209cd705fc908c1f6eb320995e302f027973196081a488e6a960",
+      "after": "f23d0bc328f97bc00dc161a2aa8700de6d6b168b21e485438d260f4394d5e35c"
+    },
+    "scripts/test-self-listening-release.mjs": {
+      "before": "73f7417c4ea15e7b0070fa383cbcb3337a0ef9a958a9245fe25d4c75d77e2599",
+      "after": "c751d904a6ac07026eeb5fa2dd57d8e854603705b1118a53390d728ba4d87d79"
+    },
+    "scripts/test-sentence-comprehension.mjs": {
+      "before": "696ab25f9007d72a75096e61c0f0d1d97480324b35288cf6556be73f695f57e6",
+      "after": "40694a71e0ceff82ee4d75235bf2118e59a1fc6731714324adda7f31fd8908d0"
+    },
+    "scripts/test-sentence-listen-repair-release-20261101.mjs": {
+      "before": "172b209e3a6ccec161ccdec26357dfb2c059a61d14ef9129a29909c0b8bc6a6c",
+      "after": "f14ee489163cedbe330279cb194ec32ffb2a3471ecefa93a3f04a71241e31b66"
+    },
+    "scripts/test-session-audio-release.mjs": {
+      "before": "6375ea04d642ce1a5f156fc52de8e36ea5a9c9904c501b7fb53b4712565a0b51",
+      "after": "9612d6427e2f5129b224373076f61948c64ab783ef6f3dc7437412af8a06c7fe"
+    },
+    "scripts/test-single-practice-title-release-20261031.mjs": {
+      "before": "17ef0e8a632d58de792fabe5dbce5ea061873a9920ebdad8e08af8e68bd325db",
+      "after": "c68671b54398a139026160f00b638ad77dde062dce97701f11857ba9d8d10a82"
+    },
+    "scripts/test-sound-audio-release.mjs": {
+      "before": "15a2c4ccb706446faf9d39b22857427b9174ab86b62a3ed4eb177cad34ccf4d6",
+      "after": "f9b60b700f146a3ae74828d2aa3456a001e171b7ea347a9c5fc1f6c3b7503218"
+    },
+    "scripts/test-sounds.mjs": {
+      "before": "18d65c30ef906b212ca9c27fcdd02e2969a809c6bb4ba0010cd17600992b0cbe",
+      "after": "b8a19023816f895cb1ee6d2b0b2e8c485ad32f2c33a53bb9996c7db03290c5f0"
+    },
+    "scripts/test-space-mixed-input-browser-20261101.mjs": {
+      "before": "65beb3b8184b795e7cdf9bcef580290a3f2bee1cccdfef020ae2ec1373e8c502",
+      "after": "3e31bc3cdb7f9ec0b2e440623be39fe3e5796be969904ecb0584ba43949b00ed"
+    },
+    "scripts/test-space-mixed-input-release-20261101.mjs": {
+      "before": "1f15302317d3301fd9316f57ad6b06247e3a042660d3ae105febefe9549b4421",
+      "after": "a9bd96d1559964dce68d6c499c2ed9de87bf5ba1e9a91ffd58889955956f59b5"
+    },
+    "scripts/test-standard-players.mjs": {
+      "before": "ae11bacd25d216d2a2905e18e1ac25d10a393928158566e8adb9d9c90074b2c5",
+      "after": "eccc4c1b43b07a508465c85953da4d75864f78aeefb4cf516e0220bda31f90cb"
+    },
+    "scripts/test-synonym-context-20261101.mjs": {
+      "before": "6a6fc307bade136271d585da7d40ad6214ee2f6d8e525d76a3eaeb9fd2ef399e",
+      "after": "852acf2400029f808371d46d187c5bcd2bc54827eab7871acc3eb77f8fcbc8f0"
+    },
+    "scripts/test-synonym-recovery-20261101.mjs": {
+      "before": "5ef506f8eff26eb915efd154e29b9a3221fa3f1fa4b60ac4d60931cdfff7d5aa",
+      "after": "afb1ef6f7f0cb2e1fa4d879c1b3fe69ff43c6a9e037c5a62759c38e04efe6cfe"
+    },
+    "scripts/test-synonyms-release-20261030.mjs": {
+      "before": "df86117b432d829c77d530c1654ffffb8269d364a53365e25f357daf91e1da51",
+      "after": "8d5335e837383d88cafe6a3de042344c197364e377d99885950cdcb9707b23b5"
+    },
+    "scripts/test-synonyms.mjs": {
+      "before": "e14b2913a68e2e310d76e9abdb674bdfc58fa8587c1b237bf20786e528104ad3",
+      "after": "20a85c8d6d9b83b9311f6061aaefbc6ef9a9b6b6259f8693e4d55e3374a43ada"
+    },
+    "scripts/test-teacher-classroom.mjs": {
+      "before": "fdca4c7d587c39d73b4471f192a5dc652a0cc693bb3f00f0afcb05bae747f154",
+      "after": "b3b45adb95bdf9407d4a6f9b66baf57208b6096b8aa4b12e1c588589c6113ef5"
+    },
+    "scripts/test-teacher-lessons.mjs": {
+      "before": "4bff47ebede5bf00811821913696c122117f68431e5b31e307fe17462cf06e81",
+      "after": "76d97355978b17ada736e9b76c39b5acc009502d53a008cfccf9fa2f37d45fd6"
+    },
+    "scripts/test-teacher-module-recovery-release-20261101.mjs": {
+      "before": "f2bdaa39c6a8d0c11ca3bce4f749da539cd33dc966ed42880a97be866a32dfb6",
+      "after": "3d7c0e1bbe579ec4d4f401b002cd38c10318fa39865191e742278b871cb66add"
+    },
+    "scripts/test-teacher-module-recovery.mjs": {
+      "before": "c6a581ba649eacf03f5444fc6337c6dcbe327019a866f00fb5e09d9d61d56229",
+      "after": "be386ab630e1b4fdf12f0651ddbcb5a5116b15213421db49cd8a25b606a22cdd"
+    },
+    "scripts/test-teacher-packages-1-9.mjs": {
+      "before": "5299b99585272c9bdd788f9e56ba4c128c0ab92452e7b3d58495e645cd69a494",
+      "after": "e633c76d983f6aca7cc2f0312603409384da697f80b0f8771c3cd3cfbc44d35c"
+    },
+    "scripts/test-teacher-packages-10-15-release-20261031.mjs": {
+      "before": "e5affa4c914a953eee709edd3dabbd3795b2c82345e96b370ed82c856b93a9b3",
+      "after": "9a747649b9046e0bb0404e7fb642ba3ec79ce79a5d40ee36ef3b234943b2929d"
+    },
+    "scripts/test-teacher-packages-10-15.mjs": {
+      "before": "cd399c1853520a327c30237c136e309fc0d7950abaeefc227d9cad54bfbc43f9",
+      "after": "7b53238c2ce6b112868ccd1b5416d37270a7495d3b9ef4bae6e7313c6dea796d"
+    },
+    "scripts/test-teacher-packages-release-20261031.mjs": {
+      "before": "6e878bfbafa1d060fb24b1e7aa0e364da86a07ddc222e7b1ac1be3ba4e9cd9a6",
+      "after": "b4dff227225ef763ba91270c33e8472971cf45f3d003002d0757bbcd040cfb2e"
+    },
+    "scripts/test-teacher-phase-labels-20261101.mjs": {
+      "before": "8ab5c1ad149ec4d23ee0c4f314c91cb6271763aee8401a17718ba7e2b67c21a2",
+      "after": "f97fa779e054a35e4e279c5c73947654b457a481fa6531dfe80fe3bde17c29db"
+    },
+    "scripts/test-teacher-phase-labels-release-20261101.mjs": {
+      "before": "483f0766863d34df0f8a8a5c193183c0dfa8ac07f7d67d583cca95afd5dd5760",
+      "after": "f126c1c02cacd4e7967c745d1aec0d9d10e144aec9b62b4a6d359a7c6f712675"
+    },
+    "scripts/test-text-question-spacing-release-20261101.mjs": {
+      "before": "0c5598ecaf5cb502baec7cd83c5e05ceaad1125fff0ddcadfb3241022514ad81",
+      "after": "c2fcdf48113dd00be18eb1e013867323d13933b5c907f6938e11e5726ef88158"
+    },
+    "scripts/test-word-library-release.mjs": {
+      "before": "1a16b99803d17bab70cb542f8b12f899704e3c96390e26f000da77f454d7c83d",
+      "after": "1d21fe94011e536ff940c5225ba9f55903aa538953c06a242f487726937153c6"
+    },
+    "scripts/test-word-use-language-release-20261101.mjs": {
+      "before": "2277ebfffab88b412e9834d33251f76c26f6f270229973f6a7e948055017ebc4",
+      "after": "e51eebd7f340296206b842f6fd93728fcc12c5bcfada14698568278d22310d40"
+    },
+    "scripts/test-worksheet-cleanup-release-20261031.mjs": {
+      "before": "00698e5fb6ae5ac4fa278560d50e2f4f6cc333656fc8c8bf9c277bca39f83056",
+      "after": "0dce4bafbd9fa8c3797a440ba30fbb370a6abf7d9348612e65e3ecb02240e05f"
+    },
+    "scripts/test-writing-banks-20261101.mjs": {
+      "before": "c18b2b57406898b9ff2e8c22671063f8f3a14e3fcd89802ffe008dca5e8a7d08",
+      "after": "9837aa26cd67d19752cff379c8ec11cb59ece09353a9669f09a68d9823522034"
+    },
+    "scripts/test-writing-copy-20261101.mjs": {
+      "before": "eb5f310b4f1e704985fdd9754b45d292da64df207356dd698dfc29a82ed31c09",
+      "after": "979f80c95640f71a8e1e9a9dd1a989d57b5e7380770465d794a01a07a140e333"
+    },
+    "scripts/test-writing-copy-browser-20261101.mjs": {
+      "before": "6bb24d23f8e29b4f635b782191efe0d64eacee719e0a79c077a4580d211aeab8",
+      "after": "680dec1a654156d1144155c54f9cfc71cc3935846bfe97705791d0f1881a4856"
+    },
+    "scripts/test-writing-copy-next-20261101.mjs": {
+      "before": "4c4f069045b8c9b74b7f92c23aa73afd57b42dcea3599690a710c1101e708fb2",
+      "after": "210795ce476e46e830ff7175dab98f7f5a77e10bcc974d1985e321ed986091e1"
+    },
+    "scripts/test-writing-copy-next-release-20261101.mjs": {
+      "before": "b7afa047cb6edfaacb5906a06ca57e339c3c88db278f217a5b221475976856f1",
+      "after": "138da25ba0cd19bd534356702f62ea0037b969b24426d7df2dd104df918924b5"
+    },
+    "scripts/test-writing-copy-release-20261101.mjs": {
+      "before": "2ab45ff496d338e8d13148483c87edc0be652b3a329d31a0862022805c2c2fa0",
+      "after": "2cf4b76007b70a0ac74fc6bba78cf6c93ae7aa747977682a5dec32723768c35b"
+    },
+    "scripts/test-writing-keyboard-next-browser-20261101.mjs": {
+      "before": "9bbc35b63ff3c412b467e5efcab8f481a8cca89d59c1f435584b3b54fa5d3e70",
+      "after": "a725ace78c4abb92bb7dbd1de6c2a703049544009593af6eae8d9914e7e44f21"
+    },
+    "scripts/verify-klink-baseline.mjs": {
+      "before": "9fa99feb76b881d10a40d0b8dae2a1baed332c515a958656150468633c162335",
+      "after": "46c38f376ed7183d2434253ab97fbcb96d9539dedabc60d68e4f948d3cb610ac"
+    },
+    "scripts/verify-live-release.mjs": {
+      "before": "5a6b7630fc272bd123122d4736cd29384f3549a948d07179dd26b6a3cb52ccd0",
+      "after": "774ef7d3eb25e5d57999b531182931a728e7f9237bebc3d1a8827d2d6b0eea48"
+    }
+  }
+}

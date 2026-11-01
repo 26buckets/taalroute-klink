@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {verifyWordLibraryRelease,readBeforeWordLibrary} from './check-word-library-release.mjs';
 import {verifyArticleReviewRelease} from './check-article-review-release.mjs';
-test('The review release requires exact scope, owner approval and unchanged audio',()=>{
+void test('The review release requires exact scope, owner approval and unchanged audio',()=>{
  const dialogueRelease = verifyDialogueRelease();
   const readBeforeDialogues = file => readBeforeDialogueRelease(file, dialogueRelease);
   const sounds = verifySoundAudioRelease(undefined, readBeforeDialogues, dialogueRelease.baselineSourceCommit);

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { dailyBlocks, dailyAnswer, emptyDailyRecord, readDailyProgress, recordDailyAnswer } from '../lib/alfa-c-dagelijks.ts';
 
-test('72 source-bound tasks have unique IDs, complete audio and unambiguous responses', () => {
+void test('72 source-bound tasks have unique IDs, complete audio and unambiguous responses', () => {
   const steps = dailyBlocks.flatMap(b => b.steps);
   assert.equal(steps.length, 72); assert.equal(new Set(steps.map(s => s.id)).size, 72);
   assert.equal(steps.filter(s => s.interaction === 'keuze').length, 64);
@@ -23,7 +23,7 @@ test('72 source-bound tasks have unique IDs, complete audio and unambiguous resp
     }
   }
 });
-test('first response and support survive correction and storage roundtrip', () => {
+void test('first response and support survive correction and storage roundtrip', () => {
   for (const b of dailyBlocks) for (const s of b.steps) {
     const wrong = s.interaction === 'keuze' ? [s.options.find(o => !o.correct).code] : [...s.answerOrder].reverse();
     const right = s.interaction === 'keuze' ? [s.options.find(o => o.correct).code] : s.answerOrder;
@@ -37,7 +37,7 @@ test('first response and support survive correction and storage roundtrip', () =
   assert.deepEqual(readDailyProgress('{broken'), { version: 1, positions: {}, records: {} });
   assert.deepEqual(readDailyProgress('{"version":2}'), readDailyProgress(null));
 });
-test('latest Drive corrections and context survive adaptation', () => {
+void test('latest Drive corrections and context survive adaptation', () => {
   const get = id => dailyBlocks.flatMap(b => b.steps).find(s => s.id === id);
   assert.equal(get('AFSPRAAK-07').instruction, 'Wat moet Idris eerst doen?');
   assert.equal(get('BON-07').instruction, 'Wat moet Nina met de bon doen?');

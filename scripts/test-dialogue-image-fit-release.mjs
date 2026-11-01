@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {verifyDialogueImageFitRelease} from './check-dialogue-image-fit-release.mjs';
-test('Photo correction preserves historical approval and rejects scope, evidence and crop regressions', () => {
+void test('Photo correction preserves historical approval and rejects scope, evidence and crop regressions', () => {
  const playback=verifyDialoguePlaybackRelease();
  const before=file=>readBeforeDialoguePlayback(file,playback);
  const verify=(r,read=before)=>verifyDialogueImageFitRelease(r,read,playback.baselineSourceCommit);

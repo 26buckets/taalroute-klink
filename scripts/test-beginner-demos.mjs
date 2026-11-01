@@ -4,7 +4,7 @@ import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute
 import { beginnerExerciseDemo } from '../lib/lesson-plan.ts';
 import { groupExercises } from '../lib/group-practice.ts';
 
-test('Only the first instance of each choice or matching form opens a demo within a beginner lesson', () => {
+void test('Only the first instance of each choice or matching form opens a demo within a beginner lesson', () => {
   const counts = { first: 0, repeat: 0 };
   for (const pack of packs) for (const lesson of pack.lessons) {
     const seen = new Set();
@@ -19,7 +19,7 @@ test('Only the first instance of each choice or matching form opens a demo withi
   assert.deepEqual(counts, { first: 213, repeat: 43 });
 });
 
-test('Every demonstrated pair uses a real label, approved exercise image and source answer mapping', () => {
+void test('Every demonstrated pair uses a real label, approved exercise image and source answer mapping', () => {
   for (const pack of packs) for (const lesson of pack.lessons) for (const exercise of exercisesForLesson(pack, lesson)) {
     if (!beginnerExerciseDemo(pack, exercise, true)) continue;
     if (exercise.mode === 'word-image-match') {
@@ -35,7 +35,7 @@ test('Every demonstrated pair uses a real label, approved exercise image and sou
   }
 });
 
-test('Recall, free practice, group rounds and separate learning paths receive no new demo', () => {
+void test('Recall, free practice, group rounds and separate learning paths receive no new demo', () => {
   for (const pack of packs) for (const lesson of pack.lessons) for (const exercise of exercisesForLesson(pack, lesson)) {
     assert.equal(beginnerExerciseDemo(pack, exercise, false), undefined);
     if (exercise.mode === 'recall-word') assert.equal(beginnerExerciseDemo(pack, exercise, true), undefined);
@@ -48,7 +48,7 @@ test('Recall, free practice, group rounds and separate learning paths receive no
   }
 });
 
-test('The missing-letter example fills the actual gap and uses the source answer', () => {
+void test('The missing-letter example fills the actual gap and uses the source answer', () => {
   const demonstrated = [];
   for (const pack of packs) for (const lesson of pack.lessons) for (const exercise of exercisesForLesson(pack, lesson)) {
     if (exercise.mode !== 'missing-grapheme' || !beginnerExerciseDemo(pack, exercise, true)) continue;

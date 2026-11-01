@@ -53,7 +53,7 @@ export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
     const levels = exercise.vocabularyLevels;
     return contentLevels.find(level => level.id !== 'all' && levels.includes(level.id))?.id ?? 'support';
   }
-  if (exercise.componentId === 'KLINK-CONTENT' && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
+  if ((exercise.componentId === 'KLINK-CONTENT' || exercise.localGrammar === true) && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
   // A known word inside a sentence does not establish the level of that sentence.
   if (exercise.contextId) {
     const source = typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId) : undefined;
@@ -90,6 +90,7 @@ export function exerciseSetLevel(exercises: PackageExercise[]): ContentLevel {
 
 export function exerciseSetHelp(exercises: PackageExercise[]): Exclude<ContentHelp, 'all'> {
   return exercises.some(item => {
+    if (item.access === 'self-practice' && exerciseContentLevel(item) !== 'support') return false;
     if (item.mode === 'connected-dialogue' && item.access === 'supported-listening' && item.assessment === 'participation' && !item.learningPathId) return false;
     return item.contextId || item.learningPathId || item.access === 'teacher-supported' || exerciseContentLevel(item) === 'support';
   }) ? 'guided' : 'practice';

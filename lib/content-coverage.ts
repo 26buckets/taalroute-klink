@@ -89,7 +89,7 @@ export const contentCoverage = [
     status: 'Gedeeltelijk',
     modes: ['sentence-build', 'verb-choice'],
     designed:
-      'Zinnen ordenen, aanvullen en natuurlijke formuleringen vergelijken.',
+      'Zinnen in de goede volgorde zetten, aanvullen en natuurlijke formuleringen vergelijken.',
     next: 'Gehoorde zinsvolgorde en ik-vormkeuze zijn aangesloten. Andere taalpatronen en een volledige grammaticaleerlijn blijven open.',
   },
   {

@@ -128,7 +128,7 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
     if (activity === 'sentence-build') {
       if (tokens.length < 3 || tokens.length > 9 || !item.blocks[0].audio?.src) return [];
       return [{ ...common, componentId: 'ALF-CMP-005', activityTypeId: 'ZI-02',
-        prompt: { audio: item.blocks[0].audio }, requiresAudio: true, access: 'supported-listening',
+        prompt: { audio: item.blocks[0].audio }, requiresAudio: true, access: 'self-practice',
         tiles: orderedChoices(tokens.map((token, at) => ({ id: `${at}`, token })), seed + index),
         answer: { targetTileIds: tokens.map((_, at) => `${at}`) }, helpWord: item.text,
         buildKind: 'sentence', feedback: 'Luister naar de volgorde. Zet dezelfde zin neer.',
@@ -143,7 +143,7 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
       const third = ({ ben: 'is', heb: 'heeft', ga: 'gaat', wil: 'wil' } as Record<string, string>)[verb] ?? (verb.endsWith('t') ? verb : verb + 't');
       const alternatives = unique([verb, third, infinitives[verb]], value => value);
       const gap: GapTask = { kind: 'gap', cue: `Werkwoord: ${infinitives[tokens[1]]}`, before: 'Ik ', after: ` ${tokens.slice(2).join(' ')}`, acceptedAnswers: verb === 'houd' ? ['houd', 'hou'] : verb === 'snijd' ? ['snijd', 'snij'] : [verb], options: orderedChoices(alternatives.map(label => ({ id: label, label })), seed + index), help: 'De zin begint met ik. Welk woord past op de lege plek?', model: item.text };
-      return [{ ...common, title: 'Vul het werkwoord in.', additionalReadingCondition: 'Werkwoordnaam en ik-vorm samen met de docent voorbereiden; niet automatisch een bekend woord.', instructionNeedId: 'klink-standard-gap-instruction', standardTask: gap, manualAdvance: true, activityTypeId: 'ZI-03', question: tokens.map((token, at) => at === 1 ? '…' : token).join(' '),
+      return [{ ...common, title: 'Vul het werkwoord in.', access: 'self-practice', additionalReadingCondition: 'Gebruik de woordaudio en het voorbeeld als je hulp nodig hebt. Zelf oefenen bewijst geen zelfstandig lezen.', instructionNeedId: 'klink-standard-gap-instruction', standardTask: gap, manualAdvance: true, activityTypeId: 'ZI-03', question: tokens.map((token, at) => at === 1 ? '…' : token).join(' '),
         sourceText: undefined, sourceBlocks: [], sourceModel: item.text, modelAudio: item.blocks[0].audio,
         options: orderedChoices(alternatives.map(label => ({ id: label, label })), seed + index),
         answer: { correctOptionIds: gap.acceptedAnswers }, rule: 'Bij ik gebruik je hier de ik-vorm van het werkwoord.',

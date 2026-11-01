@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { verifyWordLibraryRelease } from './check-word-library-release.mjs';
-test('Word-library publication requires the approved source, full coverage and verified recovery', () => {
+void test('Word-library publication requires the approved source, full coverage and verified recovery', () => {
   const dialogueRelease = verifyDialogueRelease();
   const readBeforeDialogues = file => readBeforeDialogueRelease(file, dialogueRelease);
   const sounds = verifySoundAudioRelease(undefined, readBeforeDialogues, dialogueRelease.baselineSourceCommit);

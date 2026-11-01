@@ -3,12 +3,12 @@ import test from 'node:test';
 import { chapterCollections, chapterHash, matchesChapterSelection, parseChapterHash, practiceChapters } from '../lib/practice-chapters.ts';
 import { exerciseSetHelp } from '../lib/content-levels.ts';
 
-test('Every collection has exactly one practice entrance; legacy direct links retain it', () => {
+void test('Every collection has exactly one practice entrance; legacy direct links retain it', () => {
   let checked = 0;
   for (const chapter of practiceChapters) for (const activity of chapter.activities) {
     for (const item of chapterCollections(activity)) {
       const location = { chapter: chapter.id, activity, collection: item.id, level: 'all' };
-      const mode = exerciseSetHelp(item.exercises);
+      const mode = item.help ?? exerciseSetHelp(item.exercises);
       const other = mode === 'guided' ? 'practice' : 'guided';
       assert(matchesChapterSelection(item, { ...location, help: mode }));
       assert(!matchesChapterSelection(item, { ...location, help: other }));
@@ -24,18 +24,18 @@ test('Every collection has exactly one practice entrance; legacy direct links re
   console.log('Collections checked:', checked);
 });
 
-test('Root choice and bookmarked mode survive route serialization', () => {
+void test('Root choice and bookmarked mode survive route serialization', () => {
   assert.deepEqual(parseChapterHash('#learner/chapters'), { level: 'all' });
   for (const help of ['practice', 'guided']) assert.deepEqual(parseChapterHash(chapterHash({ level: 'all', help })), { level: 'all', help });
   const spelling = parseChapterHash('#learner/chapters/spelling/content-spelling');
   assert.equal(spelling.help, 'guided');
 });
 
-test('Only recorded dialogue listening moves to independent practice; participation never implies comprehension', () => {
+void test('Only recorded dialogue listening moves to independent practice; participation never implies comprehension', () => {
   const dialogues = chapterCollections('dialogues');
   assert.equal(dialogues.length, 128);
   for (const item of dialogues) {
-    assert.equal(exerciseSetHelp(item.exercises), 'practice');
+    assert.equal(item.help ?? exerciseSetHelp(item.exercises), 'practice');
     for (const exercise of item.exercises) {
       assert.equal(exercise.assessment, 'participation');
       assert.equal(exercise.independentReading, false);

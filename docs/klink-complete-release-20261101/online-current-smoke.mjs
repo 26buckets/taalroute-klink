@@ -4,7 +4,7 @@ import {chromium,webkit} from 'playwright';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18950';
 const out=process.env.KLINK_COMPLETE_OUTPUT||'docs/klink-complete-release-20261101/browser';
 mkdirSync(out,{recursive:true});
-const manifest=JSON.parse(read('docs/klink-complete-release-20261101/import-manifest.json'));
+const _manifest=JSON.parse(read('docs/klink-complete-release-20261101/import-manifest.json'));
 const rows=JSON.parse(read('docs/klink-complete-release-20261101/online-current-smoke-rows.json')),checks=[],errors=[];
 let configurations=[{engine:'chromium',width:1366,theme:'light',full:false},{engine:'webkit',width:390,theme:'dark',full:false}];
 if(process.env.KLINK_COMPLETE_SMOKE)configurations.splice(1);

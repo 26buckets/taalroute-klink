@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-11-01T18:26:25.882120+00:00",
+  "scope": "Local instruction corrections integrated with actual live source; no publication permission",
+  "liveSourceCommit": "b670d0c1337eea07e96662237de4b9508de9735c",
+  "testedRuntimeCommit": "57790330",
+  "localOnly": true,
+  "publicationApproved": false,
+  "pushed": false,
+  "deployed": false,
+  "productionBatchesCreated": false,
+  "importsPerformed": false,
+  "githubActionsRunsStarted": 0,
+  "unitRuns": {
+    "all-final": {
+      "tests": 730,
+      "pass": 728,
+      "fail": 2,
+      "skipped": 0
+    },
+    "latest-core": {
+      "tests": 455,
+      "pass": 455,
+      "fail": 0,
+      "skipped": 0
+    },
+    "latest-chain": {
+      "tests": 25,
+      "pass": 25,
+      "fail": 0,
+      "skipped": 0
+    },
+    "publication-fixtures-final": {
+      "tests": 50,
+      "pass": 50,
+      "fail": 0,
+      "skipped": 0
+    },
+    "final-successors": {
+      "tests": 41,
+      "pass": 41,
+      "fail": 0,
+      "skipped": 0
+    },
+    "final-proof-positive": {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "initialUnitFailuresResolved": [
+    "Historic synonym comparison now uses its own immutable baseline; later live synonyms remain preserved",
+    "Serialized release fixtures retain the local instruction boundary; all 50 positive/negative publication fixtures subsequently passed"
+  ],
+  "browserChecks": {
+    "workflow": 48,
+    "instructionSections": 96,
+    "viewAndPrivacyPanels": 216,
+    "learningGoals": 202,
+    "answerInteractions": 100,
+    "worksheetGoals": 96,
+    "writingLayouts": 128,
+    "writingAudioNext": 12,
+    "writingNativeAudio": 2,
+    "latestInstructionLayout": 12,
+    "latestUnchangedHomePixelComparisons": 4,
+    "latestLoaderDuration": 32,
+    "repeatTaskFlows": 1152,
+    "repeatRounds": 96,
+    "repeatLayouts": 36,
+    "repeatLoadingRecovery": 6,
+    "repeatHostedAudioHashes": 417,
+    "repeatNativeDecodes": 834,
+    "repeatNativePlayback": 6,
+    "latestEnterAllForms": 100,
+    "latestEnterFocus": 8,
+    "latestEnterSheets": 4,
+    "latestEnterNativeAudio": 2
+  },
+  "lint": {
+    "files": 71,
+    "exitCode": 0
+  },
+  "build": {
+    "passed": true,
+    "typesPassed": true,
+    "sourceRuntimeUnchangedSinceTestedCommit": true
+  },
+  "media": {
+    "coreAudio": 338,
+    "coreImages": 338,
+    "contextAudio": 12,
+    "instructionAudio": 20,
+    "additionalComprehensionAudio": 7,
+    "missingAudio": 0,
+    "missingImages": 0,
+    "connectedAudioMetadataAndHashes": 1979,
+    "newAudioCreated": 0
+  },
+  "pdfsServedWithExactReviewedBytes": 31,
+  "publicationGate": "Intentionally blocked: local branch and explicit no-publication instruction; final readback result supplied separately",
+  "oldOptionalLedger": "Not recovered or fabricated; replaced by mandatory full comparison of 1612 connected items with the immutable approved live bank and existing audio pointers",
+  "unresolvedTechnicalTestFailures": [],
+  "independentGrammar": {
+    "status": "Not connected in this candidate; earlier P2–P5 standalone prototype exists separately",
+    "importedTeacherTasks": 92,
+    "importedChoiceTasks": 16,
+    "independentGrammarCollectionsByLevel": {
+      "alfa-a": 0,
+      "alfa-b": 0,
+      "alfa-c": 0,
+      "a1": 0,
+      "a2": 0,
+      "b1": 0
+    },
+    "reference": "zelfstandig-grammatica-bevinding.json"
+  },
+  "limitations": [
+    "Physical phone and native on-screen keyboard not tested",
+    "No new independent human NT2 or pronunciation approval inferred",
+    "The complete grammar curriculum and classroom pilot are not declared ready",
+    "Immutable historical evidence scripts are retained; runtime/test lint covers 71 affected code files, not the entire repository history"
+  ]
+}

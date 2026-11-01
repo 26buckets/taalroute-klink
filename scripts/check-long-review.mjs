@@ -4,6 +4,8 @@ import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
+import {readBeforeLaterContentRevisions,readBeforeLocalInstructionCorrections} from './check-later-content-revisions.mjs';
+import {importedExercise} from '../lib/imported-practice.ts';
 const manifest=JSON.parse(readFileSync('docs/long-content-review-20261030/source-amendments.json'));
 const baseline=new Map();
 function original(file){
@@ -12,8 +14,9 @@ function original(file){
 }
 export function readBeforeLongReview(file,read=readFileSync){
  const changes=manifest.changes.filter(c=>c.path[0]===file);
- if(!changes.length)return read(file);
- const current=JSON.parse(read(file));
+ const bytes=readBeforeLaterContentRevisions(file,read);
+ if(!changes.length)return bytes;
+ const current=JSON.parse(bytes);
  for(const c of changes){
   let o=current;for(const k of c.path.slice(1,-1))o=o[k];const k=c.path.at(-1);
   if(c.removed)assert(!Object.hasOwn(o,k));else assert.deepEqual(o[k],c.after,c.path.join('/'));
@@ -24,6 +27,16 @@ export function readBeforeLongReview(file,read=readFileSync){
 }
 
 export function rowsBeforeLongReview(rows) {
+ const later=readFileSync('docs/instruction-integration-20261101/runtime-later-amendments.json.gz');
+ assert.equal(createHash('sha256').update(later).digest('hex'),'9061bf9d3ad67824a7bfe0230fc50edc8a3d5cd533bc44fad217a5857de7bce2');
+ const revision=JSON.parse(gunzipSync(later));
+ const liveItems=new Map(JSON.parse(readBeforeLocalInstructionCorrections('data/klink-imported-practice.json')).items.map(item=>['content:'+item.id,item]));
+ rows=rows.map(r=>liveItems.has(r.exercise.exerciseId)?{...r,exercise:importedExercise(liveItems.get(r.exercise.exerciseId))}:r);
+ rows=JSON.parse(JSON.stringify(rows));
+ assert.equal(rows.length,revision.afterCount);
+ const groups=Map.groupBy(rows,r=>r.activity+'|'+r.exercise.exerciseId);
+ for(const change of revision.changes){assert.deepEqual(groups.get(change.key)??[],change.after,change.key);if(change.before.length)groups.set(change.key,change.before);else groups.delete(change.key);}
+ rows=[...groups.values()].flat();assert.equal(rows.length,revision.beforeCount);
  const proof=JSON.parse(gunzipSync(readFileSync('docs/long-content-review-20261030/runtime-amendments.json.gz')));
  const key=r=>r.activity+'|'+r.exercise.exerciseId;
  const restored=rows.map(row=>structuredClone(row)),byKey=new Map();

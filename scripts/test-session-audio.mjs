@@ -2,10 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {getSlowAudio,setSlowAudio,subscribeSlowAudio,applyDefaultAudioRate,playMedia,stopMedia,SLOW_AUDIO_RATE} from '../lib/media-player.ts';
 
-test('Session tempo changes active and later audio without restarting; restores each original rate and survives denied storage',async()=>{
+void test('Session tempo changes active and later audio without restarting; restores each original rate and survives denied storage',async()=>{
  const original={Audio:globalThis.Audio,window:globalThis.window,document:globalThis.document,storage:globalThis.sessionStorage};
  const stored=new Map();let audio,starts=0,notifications=0;
- const recording={};globalThis.window={};
+ const recording={};globalThis.window=new EventTarget();
  globalThis.sessionStorage={getItem:key=>stored.get(key)??null,setItem:(key,value)=>stored.set(key,value),removeItem:key=>stored.delete(key)};
  globalThis.document={querySelectorAll:()=>[recording]}; // oxlint-disable-line typescript/no-deprecated -- Minimal DOM test double, not a deprecated browser API.
  globalThis.Audio=class extends EventTarget{constructor(){super();audio=this;}play(){starts++;return Promise.resolve();}pause(){}};

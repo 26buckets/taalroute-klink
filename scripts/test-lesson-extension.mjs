@@ -8,7 +8,7 @@ import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import release from '../data/klink-release-readiness.json' with { type: 'json' };
 
 const all = packs.flatMap(pack => pack.exercises);
-test('All 302 routes have a complete status inventory and monotonically ordered phases', () => {
+void test('All 302 routes have a complete status inventory and monotonically ordered phases', () => {
   assert.equal(packs.flatMap(pack => pack.lessons).length, 302);
   const phases = Object.keys(phaseLabels);
   const statuses = new Set();
@@ -34,7 +34,7 @@ test('All 302 routes have a complete status inventory and monotonically ordered 
   }
   assert.equal(statuses.size, 4);
 });
-test('Dictation and independent rebuilding never contain a visible model; missing audio excludes them', () => {
+void test('Dictation and independent rebuilding never contain a visible model; missing audio excludes them', () => {
   assert(all.filter(item => item.mode === 'word-dictation').length > 300);
   for (const exercise of all.filter(item => ['word-dictation', 'recall-word'].includes(item.mode))) {
     assert(exercise.prompt.audio?.src);
@@ -52,7 +52,7 @@ test('Dictation and independent rebuilding never contain a visible model; missin
     assert(!material.exercises.some(item => item.wordId === 'klink-woord-fit' && item.mode === 'word-dictation'));
   } finally { media['klink-woord-fit'].audio = original; }
 });
-test('Gap items mask a complete source unit with two prepared distinct alternatives', () => {
+void test('Gap items mask a complete source unit with two prepared distinct alternatives', () => {
   const gaps = all.filter(item => item.mode === 'missing-grapheme');
   assert(gaps.length >= 12);
   for (const exercise of gaps) {
@@ -69,7 +69,7 @@ test('Gap items mask a complete source unit with two prepared distinct alternati
   assert.equal(book.targetGrapheme, 'oe');
   assert.equal(book.maskedWord, 'b…k');
 });
-test('Single-word entry has no manufactured choice or pair; matching uses unique prepared meanings and images', () => {
+void test('Single-word entry has no manufactured choice or pair; matching uses unique prepared meanings and images', () => {
   const first = all.filter(item => item.lessonId === 'klink-leesstap-01');
   assert(!first.some(item => ['same-word', 'heard-word', 'heard-image', 'word-image', 'memory', 'word-image-match'].includes(item.mode)));
   for (const exercise of all.filter(item => item.mode === 'word-image-match')) {
@@ -78,7 +78,7 @@ test('Single-word entry has no manufactured choice or pair; matching uses unique
     assert.equal(new Set(Object.values(exercise.answer.mapping)).size, 2);
   }
 });
-test('Route cursor is validated, meaning-safe and separate from mastery; completion has a real next lesson', () => {
+void test('Route cursor is validated, meaning-safe and separate from mastery; completion has a real next lesson', () => {
   for (const input of [null, 'x', 'null', '[]', '{"position":null}', '{"completed":[null,4,"bad"],"position":{"packageId":"bad"}}']) assert.deepEqual(parseProgress(input, packs), { completed: [] });
   const pack = packs[0], lesson = pack.lessons[1];
   const position = { packageId: pack.id, lessonId: lesson.id, exerciseId: lesson.guidedExerciseIds[2] };
@@ -89,7 +89,7 @@ test('Route cursor is validated, meaning-safe and separate from mastery; complet
   assert.equal(nextLessonPosition(packs, pack.id, pack.lessons.at(-1).id).lessonId, 'klink-leesstap-06');
   assert.equal(nextLessonPosition(packs, 'bad', 'bad'), undefined);
 });
-test('Explicit release approval does not turn recording/self-check into mastery', () => {
+void test('Explicit release approval does not turn recording/self-check into mastery', () => {
   assert.equal(release.publicationApproved, true);
   assert.equal(release.approvalRecord, 'docs/klink-content-approval-20261017.json');
   assert.equal(release.standaloneT, 'parked-do-not-use');

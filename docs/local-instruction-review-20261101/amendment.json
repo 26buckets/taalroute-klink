@@ -1,0 +1,57 @@
+{
+  "approvedBy": "Nico",
+  "date": "2026-11-01",
+  "scope": "local instruction simplification only",
+  "localOnly": true,
+  "publicationApproved": false,
+  "baseline": "834e85e7eb0ebafd0a05e7d8aa5bc33b0ab4ed27",
+  "file": "data/klink-imported-practice.json",
+  "itemId": "kg-b1-g62-001",
+  "userRequest": "Ik vind het gewoon geen goede zin. Ik vind orden helemaal niet het goede woord. Kun je geen ander woord verzinnen voor deze standaardinstructie? Want het is een standaardinstructie, dus die gaan we veel gebruiken. Ik vind hem te moeilijk. Maak het makkelijker.",
+  "changes": [
+    {
+      "path": [
+        "items",
+        135,
+        "prompt"
+      ],
+      "before": "1. Orden de informatie in drie korte alinea’s: aanleiding, reden, verzoek. Gebruik één dat- of omdat-bijzin en één duidelijke verwijzing.\n2. Herstel: Omdat ik overdag werk ik kan alleen in de avond komen. Maak ook duidelijk waarop deze in Deze wil ik wijzigen slaat.\nToepassing: Schrijf de hele e-mail met aanhef en afsluiting. Controleer of de ontvanger weet wat die moet veranderen en waarom.",
+      "after": "1. Schrijf drie korte alinea’s: wat er aan de hand is, waarom je iets wilt veranderen en wat je vraagt. Gebruik één dat- of omdat-bijzin en één duidelijke verwijzing.\n2. Herstel: Omdat ik overdag werk ik kan alleen in de avond komen. Maak ook duidelijk waarop deze in Deze wil ik wijzigen slaat.\nToepassing: Schrijf de hele e-mail met aanhef en afsluiting. Controleer of de ontvanger weet wat die moet veranderen en waarom."
+    },
+    {
+      "path": [
+        "items",
+        135,
+        "prerequisites",
+        1
+      ],
+      "before": "Exacte zichtbare woordvormen: 1, 2, 3, a, aan, aangevraagd, aanhef, aanleiding, aanmelding, afsluiting, alinea’s, alleen, avond, b, beide, bevestiging, controleer, cursus, dat, de, deze, dezelfde, die, drie, duidelijk, duidelijke, e-mail, echte, een, eerste, en, er, fictieve, gebruik, geen, gevraagd, gewone, groep, groepen, had, hebt, hele, herstel, ik, in, informatie, inhoud, is, je, kan, komen, korte, les, maak, maar, maart, met, moet, noemt, of, omdat, omdat-bijzin, ontvanger, ook, op, orden, organisatie, overdag, reden, schrijf, schrijft, slaat, terwijl, toepassing, veranderen, verwijzing, verzending, verzoek, volgen, vóór, waarom, waarop, wat, weet, werk, werkt, weten, wijzigen, wil, wilt, zakelijke, één",
+      "after": "Exacte zichtbare woordvormen: 1, 2, 3, a, aan, aangevraagd, aanhef, aanleiding, aanmelding, afsluiting, alinea’s, alleen, avond, b, beide, bevestiging, controleer, cursus, dat, de, deze, dezelfde, die, drie, duidelijk, duidelijke, e-mail, echte, een, eerste, en, er, fictieve, gebruik, geen, gevraagd, gewone, groep, groepen, had, hand, hebt, hele, herstel, iets, ik, in, inhoud, is, je, kan, komen, korte, les, maak, maar, maart, met, moet, noemt, of, omdat, omdat-bijzin, ontvanger, ook, op, organisatie, overdag, reden, schrijf, schrijft, slaat, terwijl, toepassing, veranderen, verwijzing, verzending, verzoek, volgen, vraagt, vóór, waarom, waarop, wat, weet, werk, werkt, weten, wijzigen, wil, wilt, zakelijke, één"
+    },
+    {
+      "path": [
+        "items",
+        135,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "learnerText",
+        2
+      ],
+      "before": "1. Orden de informatie in drie korte alinea’s: aanleiding, reden, verzoek. Gebruik één dat- of omdat-bijzin en één duidelijke verwijzing.\n2. Herstel: Omdat ik overdag werk ik kan alleen in de avond komen. Maak ook duidelijk waarop deze in Deze wil ik wijzigen slaat.\nToepassing: Schrijf de hele e-mail met aanhef en afsluiting. Controleer of de ontvanger weet wat die moet veranderen en waarom.",
+      "after": "1. Schrijf drie korte alinea’s: wat er aan de hand is, waarom je iets wilt veranderen en wat je vraagt. Gebruik één dat- of omdat-bijzin en één duidelijke verwijzing.\n2. Herstel: Omdat ik overdag werk ik kan alleen in de avond komen. Maak ook duidelijk waarop deze in Deze wil ik wijzigen slaat.\nToepassing: Schrijf de hele e-mail met aanhef en afsluiting. Controleer of de ontvanger weet wat die moet veranderen en waarom."
+    },
+    {
+      "path": [
+        "items",
+        135,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "1. Orden de informatie in drie korte alinea’s: aanleiding, reden, verzoek. Gebruik één dat- of omdat-bijzin en één duidelijke verwijzing.\n2. Herstel: Omdat ik overdag werk ik kan alleen in de avond komen. Maak ook duidelijk waarop deze in Deze wil ik wijzigen slaat.\nToepassing: Schrijf de hele e-mail met aanhef en afsluiting. Controleer of de ontvanger weet wat die moet veranderen en waarom.",
+      "after": "1. Schrijf drie korte alinea’s: wat er aan de hand is, waarom je iets wilt veranderen en wat je vraagt. Gebruik één dat- of omdat-bijzin en één duidelijke verwijzing.\n2. Herstel: Omdat ik overdag werk ik kan alleen in de avond komen. Maak ook duidelijk waarop deze in Deze wil ik wijzigen slaat.\nToepassing: Schrijf de hele e-mail met aanhef en afsluiting. Controleer of de ontvanger weet wat die moet veranderen en waarom."
+    }
+  ]
+}

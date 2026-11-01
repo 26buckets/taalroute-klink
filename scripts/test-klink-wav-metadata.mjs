@@ -10,7 +10,7 @@ function fixture() {
   wav.write('data', 36); wav.writeUInt32LE(4, 40); wav.writeInt16LE(1234, 44); wav.writeInt16LE(-987, 46);
   return wav;
 }
-test('WAVE album artist and publisher are appended without changing any existing sound or tags', () => {
+void test('WAVE album artist and publisher are appended without changing any existing sound or tags', () => {
   const source = fixture(), original = Buffer.from(source), { output, audioSha256 } = addWaveBrandTags(source);
   assert(source.equals(original)); assert(output.subarray(8, source.length).equals(source.subarray(8)));
   assert.equal(output.readUInt32LE(4) + 8, output.length);
@@ -18,7 +18,7 @@ test('WAVE album artist and publisher are appended without changing any existing
   assert(output.includes(Buffer.from('TPE2'))); assert(output.includes(Buffer.from('TPUB')));
   assert.throws(() => addWaveBrandTags(output), /Existing ID3/);
 });
-test('Malformed, truncated and non-WAVE files are rejected before mutation', () => {
+void test('Malformed, truncated and non-WAVE files are rejected before mutation', () => {
   assert.throws(() => addWaveBrandTags(Buffer.from('not a wav file')));
   assert.throws(() => addWaveBrandTags(fixture().subarray(0, 47)));
   const damaged = fixture(); damaged.writeUInt32LE(200, 40);

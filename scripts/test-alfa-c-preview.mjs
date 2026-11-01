@@ -9,7 +9,7 @@ import {
 } from '../lib/alfa-c-practice.ts';
 import { contentById, sentenceLevelReviews } from '../lib/connected-content.ts';
 import { allPackageWords } from '../lib/package-content.ts';
-test('Three bounded pilots reuse real source media without modifying source levels', () => {
+void test('Three bounded pilots reuse real source media without modifying source levels', () => {
   assert.equal(pilotBlocks.length, 3);
   const ids = [];
   for (const b of pilotBlocks) {
@@ -63,7 +63,7 @@ test('Three bounded pilots reuse real source media without modifying source leve
       .every((s) => sentenceLevelReviews.get(s.id)?.text === s.text && s.sourceLevel === sentenceLevelReviews.get(s.id)?.level && s.independentReading === false),
   );
 });
-test('Preview progress rejects malformed records and stays in a separate namespace', () => {
+void test('Preview progress rejects malformed records and stays in a separate namespace', () => {
   assert.equal(pilotStorageKey, 'klink.preview.alfa-c.v1');
   for (const raw of [
     'null',
@@ -96,7 +96,7 @@ test('Preview progress rejects malformed records and stays in a separate namespa
     4,
   );
 });
-test('Repeat uses help and actual attempts, never merely seeing a model', () => {
+void test('Repeat uses help and actual attempts, never merely seeing a model', () => {
   const b = pilotBlocks[0];
   const row = {
     correct: true,
@@ -115,13 +115,13 @@ test('Repeat uses help and actual attempts, never merely seeing a model', () => 
     [b.steps[3].id, b.steps[5].id],
   );
 });
-test('The reviewed preview address opens the normal learner route', () =>
+void test('The reviewed preview address opens the normal learner route', () =>
   assert(
     fs
       .readFileSync('app/proef-alfa-c/page.tsx', 'utf8')
       .includes("redirect('/#learner/alfa-c')"),
   ));
-test('Correct choices use all three positions and retries stay stable', () => {
+void test('Correct choices use all three positions and retries stay stable', () => {
   for (const block of pilotBlocks) {
     const steps = block.steps.filter((s) => s.exercise.options);
     assert.equal(

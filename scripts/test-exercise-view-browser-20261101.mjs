@@ -5,6 +5,7 @@ import {chapterCollections,chapterHash,practiceChapters} from '../lib/practice-c
 import {exerciseSetHelp} from '../lib/content-levels.ts';
 import {pilotBlocks} from '../lib/alfa-c-practice.ts';
 import {dailyBlocks} from '../lib/alfa-c-dagelijks.ts';
+import {legacyAlfaCHash} from '../lib/alfa-c-navigation.ts';
 import {functionalBlocks} from '../lib/alfa-c-functioneel.ts';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18996';
 const out=process.env.KLINK_VIEW_OUTPUT||'outputs/exercise-view-20261101/browser';
@@ -15,7 +16,7 @@ const routes=activities.map(activity=>{
  const c=all.find(c=>c.exercises[0].readingRoundId)||all.find(c=>c.exercises.length>1)||all[0];assert(c,activity);
  return {name:activity,hash:chapterHash({chapter:practiceChapters.find(ch=>ch.activities.includes(activity)).id,activity,collection:c.id,level:c.level,help:exerciseSetHelp(c.exercises)})};
 });
-for(const[name,b]of [['pilot',pilotBlocks[0]],['daily',dailyBlocks[0]],['functional',functionalBlocks[0]]])routes.push({name,hash:'#learner/alfa-c/'+b.id});
+for(const[name,b]of [['pilot',pilotBlocks[0]],['daily',dailyBlocks[0]],['functional',functionalBlocks[0]]])routes.push({name,hash:legacyAlfaCHash('#learner/alfa-c/'+b.id)});
 routes.push({name:'marked-dialogue',hash:'#learner/chapters/speaking/dialogues/klink-dialogue-32f962399de8f4c3?level=a2&help=practice'});
 const checks=[],errors=[];
 for(const[engineName,engine]of Object.entries({chromium,webkit})){
@@ -23,8 +24,20 @@ for(const[engineName,engine]of Object.entries({chromium,webkit})){
  try{for(const width of [1366,390,320])for(const theme of ['light','dark']){
   const page=await browser.newPage({viewport:{width,height:900},hasTouch:width<600,isMobile:width<600,colorScheme:theme});page.setDefaultTimeout(15000);page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>{window.Audio=class extends EventTarget{paused=true;play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){clearTimeout(this.timer);this.paused=true;}};localStorage.setItem('klink.view-check.sentinel','behouden');});
+  await page.addInitScript(theme=>localStorage.setItem('taalroute-klink-appearance-v1',theme),theme);
   for(const route of routes){
-   await page.goto(base+'/'+route.hash);await page.locator('.cp-exercise-stage .cp-exercise-tools').waitFor();
+   await page.goto(base+'/'+route.hash);
+   if(['daily','functional'].includes(route.name)){
+    // These document players retain their own controls outside the exercise stage.
+    await page.locator(route.name==='daily'?'[data-daily-step]':'[data-functional-step]').waitFor();
+    assert.equal(await page.locator('.cp-exercise-stage .cp-exercise-tools').count(),0);
+    assert.equal(await page.locator('.cp-exercise-stage').count(),1);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,route.name);
+    assert.equal(await page.evaluate(()=>localStorage.getItem('klink.view-check.sentinel')),'behouden');
+    checks.push({engine:engineName,width,theme,route:route.name,documentLayout:true,horizontalOverflow:false});
+    continue;
+   }
+   await page.locator('.cp-exercise-stage .cp-exercise-tools').waitFor();
    const automatic=page.locator('[data-practice-automatic][aria-pressed="true"]');if(await automatic.count())await automatic.click();
    await page.waitForTimeout(120);
    const panel=page.locator('.cp-exercise-stage .cp-view-panel'),stage=page.locator('.cp-exercise-stage');

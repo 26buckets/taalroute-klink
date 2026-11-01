@@ -22,7 +22,7 @@ for(const [engine,type] of Object.entries({chromium,webkit})) {
           localStorage.setItem('klink.space.retention','kept');
           window.__spacePlays=[];
           if(native) {
-            const play=HTMLMediaElement.prototype.play;
+            const play=Reflect.get(HTMLMediaElement.prototype,'play');
             HTMLMediaElement.prototype.play=function(){window.__spacePlays.push(this);return play.call(this);};
           } else window.Audio=class extends EventTarget {
             play(){window.__spacePlays.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),50);return Promise.resolve();}

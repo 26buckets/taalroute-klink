@@ -12,6 +12,7 @@ import './learner-layout.css';
 import './sounds.css';
 import './teaching.css';
 import './motion.css';
+import '../components/product/word-audio-text.css';
 import { MotionFeedback } from '@/components/product/motion-feedback';
 import { ClassroomBoundary } from '@/components/product/classroom-boundary';
 

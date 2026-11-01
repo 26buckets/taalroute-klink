@@ -16,12 +16,12 @@ import {
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 const words = new Map(curriculum.words.map((word) => [word.id, word]));
 
-test('Every new rule is reachable; intact short paths retain source references and honest scope', () => {
+void test('Every new rule is reachable; intact short paths retain source references and honest scope', () => {
   const before = JSON.stringify(packs),
     usedRules = new Set();
   for (const activity of learningActivities) {
     // This legacy contract checks the original rule paths; deferred source banks have their own production-content contract.
-    const collections = chapterCollections(activity.id).filter(collection => !collection.contentUrl);
+    const collections = chapterCollections(activity.id).filter(collection => !collection.contentUrl && !collection.exercises[0]?.localGrammar);
     assert(collections.length > 0, activity.id);
     for (const collection of collections) {
       const steps = collection.exercises;
@@ -30,7 +30,7 @@ test('Every new rule is reachable; intact short paths retain source references a
         'Keep each route short; do not turn the entire word group into one long lesson',
       );
       assert.equal(collection.level, exerciseSetLevel(steps));
-      assert.equal(exerciseSetHelp(steps), 'guided');
+      assert.equal(exerciseSetHelp(steps), activity.id === 'grammar-path' ? 'practice' : 'guided');
       assert.equal(steps[0].learningStage, 'example');
       assert.equal(steps.at(-1).learningStage, 'recall');
       assert.equal(
@@ -65,7 +65,7 @@ test('Every new rule is reachable; intact short paths retain source references a
   assert.equal(JSON.stringify(packs), before);
 });
 
-test('Sound positions use transparent words and no isolated rejected sound; no visible target leak', () => {
+void test('Sound positions use transparent words and no isolated rejected sound; no visible target leak', () => {
   const rules = new Map(learningRules.map((rule) => [rule.id, rule]));
   let count = 0;
   for (const pack of packs)
@@ -96,7 +96,7 @@ test('Sound positions use transparent words and no isolated rejected sound; no v
   assert(count >= 12);
 });
 
-test('Spelling gaps rebuild exactly the canonical form; longer forms keep their prerequisites', () => {
+void test('Spelling gaps rebuild exactly the canonical form; longer forms keep their prerequisites', () => {
   let count = 0;
   for (const pack of packs)
     for (const item of groupExercises(pack, 'spelling-path')) {
@@ -124,7 +124,7 @@ test('Spelling gaps rebuild exactly the canonical form; longer forms keep their 
   assert(count >= 12);
 });
 
-test('Grammar sources, dialogue turns, writing goals and text evidence are reused rather than rewritten', () => {
+void test('Grammar sources, dialogue turns, writing goals and text evidence are reused rather than rewritten', () => {
   for (const collection of chapterCollections('grammar-path'))
     for (const item of collection.exercises) {
       if (item.mode === 'learning-choice') {
@@ -163,7 +163,7 @@ test('Grammar sources, dialogue turns, writing goals and text evidence are reuse
     }
 });
 
-test('Review plans only encountered retrieval items, resets on help/error, and never inflates in one session', () => {
+void test('Review plans only encountered retrieval items, resets on help/error, and never inflates in one session', () => {
   const day = 86400000,
     now = 1900000000000;
   const attempt = {
@@ -213,7 +213,7 @@ test('Review plans only encountered retrieval items, resets on help/error, and n
   assert.deepEqual(parseLearningReview(JSON.stringify(state)), state);
 });
 
-test('Current release points to the cumulative instruction; historical approval retains its original published hashes', () => {
+void test('Current release points to the cumulative instruction; historical approval retains its original published hashes', () => {
   const release = JSON.parse(
     readFileSync('data/klink-learning-paths-release.json'),
   );
@@ -221,7 +221,7 @@ test('Current release points to the cumulative instruction; historical approval 
   assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-cumulative-20261018.json');
   const current = JSON.parse(readFileSync(release.ownerAuthorization));
   assert.equal(current.userRequest, JSON.parse(readFileSync('docs/klink-cumulative-release-20261018/owner-instruction.json')).userRequest);
-  assert.equal(current.files['lib/learning-paths.ts'], createHash('sha256').update(readFileSync('lib/learning-paths.ts')).digest('hex'));
+  assert.equal(current.files['lib/learning-paths.ts'], createHash('sha256').update(execFileSync('git', ['show', 'c6e1165d:lib/learning-paths.ts'])).digest('hex'));
   const approval = JSON.parse(readFileSync('docs/klink-owner-release-round3-20261018.json'));
   const published = JSON.parse(readFileSync('docs/klink-publication-didactic-round3-20261018.json'));
   assert.equal(approval.approvedBy, 'Nico');

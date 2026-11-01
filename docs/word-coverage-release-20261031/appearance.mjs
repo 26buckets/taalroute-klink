@@ -13,7 +13,7 @@ try {
    await p.evaluate(t=>{document.documentElement.dataset.theme=t;document.documentElement.dataset.appearance=t},theme);
    await p.screenshot({path:`${D}/${side}-${width}-${theme}-${level}.png`});raw.push(await geometry(p));
    assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-   if(side==='floor')prior=await p.locator('[data-chapter-activity]').evaluateAll(xs=>xs.map(x=>({id:x.dataset.chapterActivity,html:x.innerHTML,disabled:x.disabled,className:x.className})));
+   if(side==='floor')prior=await p.locator('[data-chapter-activity]').evaluateAll(xs=>xs.map(x=>({id:x.dataset.chapterActivity,html:x.innerHTML,disabled:x.disabled,className:x.getAttribute('class')})));
    else await p.evaluate(items=>{for(const item of items){const el=document.querySelector(`[data-chapter-activity="${item.id}"]`);el.innerHTML=item.html;el.disabled=item.disabled;el.className=item.className}},prior);
    // Compare identical content states: removing “Niet beschikbaar” naturally shortens a row.
    views.push(await geometry(p));await p.close();

@@ -51,7 +51,10 @@ void test('All sentence IDs remain reachable once in free listening, at their le
  for(const level of ['a1','a2']){
   const rows=availableChapterCollections('sentences',{level,help:'guided'}).flatMap(c=>c.exercises);
   assert.equal(rows.length,review.items.filter(r=>r.level.toLowerCase()===level).length);
-  assert.equal(availableChapterCollections('sentences',{level,help:'practice'}).length,0);
+  const independent=availableChapterCollections('sentences',{level,help:'practice'});
+  assert(independent.length>0);
+  assert(independent.every(c=>c.contentUrl&&c.exerciseCount>0&&c.help==='practice'));
+  assert(!independent.flatMap(c=>c.exercises).some(e=>listening.some(old=>old.exerciseId===e.exerciseId)));
  }
  assert.equal(availableChapterCollections('sentences',{level:'b1',help:'guided'}).length,0);
 });

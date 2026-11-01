@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-01",
+  "userRequest": "Rond de volledige lokale releasecontrole af. Herstel de verkeerde plaatsing van Je antwoord, Voor de docent en Deze stap is uitgevoerd. Behoud deze opmaak en publiceer niets.",
+  "publicationApproved": false,
+  "localOnly": true,
+  "integratedLiveBase": "995ae4407c6b9c0765cf63f801009846ca30ed11",
+  "newerLiveObservedAtEnd": "f7fb187b7901b824234d83478313dcafff7d69a4",
+  "newerLiveMerged": false,
+  "remainingPublicationRequirement": "Combineer de gecontroleerde correcties met de dan daadwerkelijk actuele livebron; controleer geraakte schermen en los de vrijgavebewijzen en bestaande testafwijkingen brongebonden op.",
+  "fix": "Begeleide opdrachten houden op mobiel hun natuurlijke volgorde; antwoord en bevestiging staan onder de bron. Tekstknop registreert de echte cursistbron. Nummerstappen en antwoord blijven zichtbaar.",
+  "preserved": [
+    "goedgekeurde kleuren, typografie, kaarten en iconen",
+    "docentafscherming",
+    "opgeslagen antwoorden en voortgang",
+    "inhoudelijke correcties uit de vorige taak",
+    "bestaande audio, beelden, logo, ID’s en leskoppelingen"
+  ],
+  "tests": {
+    "workflow": 48,
+    "panels": 216,
+    "writingKeyboard": 128,
+    "audioNext": 12,
+    "nativeAudioProgress": 2,
+    "instructionLayout": 12,
+    "unchangedStartPixelComparisons": 4,
+    "instructionSections": 96,
+    "headerAndGoals": 60,
+    "targetedUnit": 36,
+    "allGeneralUnit": {
+      "total": 451,
+      "pass": 430,
+      "fail": 20,
+      "skip": 1
+    },
+    "allReleaseUnit": {
+      "total": 217,
+      "pass": 158,
+      "fail": 59,
+      "skip": 0
+    },
+    "types": "pass",
+    "lint": "pass",
+    "build": "pass",
+    "catalogueRecords": 1187,
+    "servedCorrectedPdfs": 31
+  },
+  "limitations": [
+    "Geen publicatievrijgave: algemene én historische vrijgavecontroles zijn niet volledig groen.",
+    "Geen fysieke telefoon met echt schermtoetsenbord getest; viewportgedrag lokaal gesimuleerd in Chromium en WebKit.",
+    "De nieuwere livecommit f7fb187b is nog niet in deze kandidaat opgenomen."
+  ],
+  "noPush": true,
+  "noDeployment": true,
+  "noProductionBatches": true,
+  "noImport": true
+}

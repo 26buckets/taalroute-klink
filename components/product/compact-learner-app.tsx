@@ -319,7 +319,7 @@ function ExerciseSurface({
 
 function CompactPicture({ src, alt }: { src?: Exercise['image']; alt: string }) {
   if (!src) return null;
-  return <span className="compact-picture"><Image src={src} alt={alt} width={1254} height={1254} priority /></span>;
+  return <span className="compact-picture"><Image src={src} alt={alt} width={1254} height={1254} preload loading="eager" fetchPriority="high" /></span>;
 }
 
 function CompactSpeak({ sentence, listen, onReady }: { sentence: string; listen: () => void; onReady: () => void }) {

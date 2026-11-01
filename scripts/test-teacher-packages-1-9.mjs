@@ -7,7 +7,7 @@ import {classroomLessons,getClassroomLesson,freshClassroom,placeTile,restoreClas
 import {worksheets,worksheetSelection,worksheetHash} from '../lib/teacher-worksheets.ts';
 
 const groups=['kam kat kan','kip kin ik','in is en kast','mes nek mens','pak bon bot','bus dak bed dit','kop kok op','mus kus munt','mand mond kind post'];
-test('all nine packages retain 30 lesson kernels, 720 phases and 900 matching answers',()=>{
+void test('all nine packages retain 30 lesson kernels, 720 phases and 900 matching answers',()=>{
  assert.equal(classroomLessons.length,58);assert.equal(worksheets.length,58);
  assert.deepEqual(additional.map(x=>x.id),groups.flatMap(x=>x.split(' ')));
  assert.deepEqual(worksheets.map(x=>x.id),classroomLessons.map(x=>x.id));
@@ -30,7 +30,7 @@ test('all nine packages retain 30 lesson kernels, 720 phases and 900 matching an
  }
  assert.equal(phases,720);assert.equal(answers,900);assert.equal(ids.size,900);
 });
-test('repeated letters build, move, clear and restore without admitting excess copies',()=>{
+void test('repeated letters build, move, clear and restore without admitting excess copies',()=>{
  const state=freshClassroom('basic','a','kok');
  for(const letter of ['k','o','k'])state.tiles=placeTile(state.tiles,letter,undefined,'kok');
  assert.deepEqual(state.tiles,['k','o','k']);assert.deepEqual(restoreClassroom(JSON.stringify(state)).tiles,state.tiles);
@@ -40,13 +40,13 @@ test('repeated letters build, move, clear and restore without admitting excess c
  assert.deepEqual(placeTile(['m','a','t'],'m',2,'mat'),['t','a','m']);
  assert.deepEqual(placeTile(['k','o','k'],'x',1,'kok'),['k','o','k']);
 });
-test('final d uses the existing t sound, while initial d and written letters remain intact',()=>{
+void test('final d uses the existing t sound, while initial d and written letters remain intact',()=>{
  for(const word of ['bed','mand','mond','kind']){const units=getClassroomLesson(word).units;assert.equal(units.at(-1),'d');assert.equal(classroomSoundId(units,units.length-1),'t');}
  assert.equal(classroomSoundId(getClassroomLesson('dak').units,0),'d');
  assert.equal(classroomSoundId(getClassroomLesson('post').units,3),'t');
  assert.deepEqual(getClassroomLesson('kok').units.map((_,i)=>classroomSoundId(getClassroomLesson('kok').units,i)),['k','o','k']);
 });
-test('review repairs preserve meaning, exact text evidence and matching models',()=>{
+void test('review repairs preserve meaning, exact text evidence and matching models',()=>{
  const sheet=(word,r,n)=>additional.find(l=>l.id===word).worksheet.rounds[r].answers[n-1];
  assert.match(sheet('kam','c',9).answer,/in mijn tas/);assert.match(sheet('bed','a',2).answer,/3 t/);
  assert.match(sheet('bon','c',8).title,/zin 3/);assert.match(sheet('bon','c',8).answer,/bewaar/);

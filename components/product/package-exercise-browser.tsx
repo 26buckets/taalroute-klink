@@ -1,4 +1,5 @@
 'use client';
+import { WordAudioText, isWordAudioClick } from './word-audio-text';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { WordPlaceholder } from './word-placeholder';
@@ -489,7 +490,7 @@ function PackageExercisePlayer({
               <span ref={setInfoTarget} className="cp-exercise-info-slot">{(exercise.componentId !== 'KLINK-CONTENT' || Boolean((exercise.contentTask as {teacherWorkflow?:unknown}|undefined)?.teacherWorkflow)) && <LearnerExerciseInfo key={exercise.exerciseId} exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }} />}</span>
             </nav>);
   return (
-    <section {...keyboard} data-practice-ready={result === 'right'} className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
+    <section {...keyboard} onClickCapture={event => { if (isWordAudioClick(event)) { metrics.current.helpUsed = true; playback.current?.abort(); setAudioPending(false); setSpeakingOptionId(''); } }} data-practice-ready={result === 'right'} className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
       <header>
         <div>
           <span className="eyebrow">{eyebrow}</span>
@@ -617,7 +618,7 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   return (
     <div className={`cp-task-prompt${source && onAudio && typeof visibleWord !== 'string' ? ' cp-corner-prompt' : ''}`}>
       {typeof visibleWord !== 'string' && (source && onAudio ? <ExerciseListen onClick={() => onAudio(source)} label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'} /> : <span><FileText /></span>)}
-      <div>{typeof visibleWord === 'string' && (source && onAudio ? <><ExerciseListen onClick={() => onAudio(source)} label={`Luister naar ${visibleWord}`} /><button {...textView} className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}</button></> : <strong {...textView}>{visibleWord}</strong>)}{children}</div>
+      <div>{typeof visibleWord === 'string' && (source && onAudio ? <><ExerciseListen onClick={() => onAudio(source)} label={`Luister naar ${visibleWord}`} /><button {...textView} className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}</button></> : <strong {...textView}><WordAudioText text={visibleWord} /></strong>)}{children}</div>
     </div>
   );
 }
@@ -791,7 +792,7 @@ function WordHint({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () 
   const hint = useRef<HTMLDivElement>(null);
   useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <><strong>{exercise.helpWord}</strong>{typeof exercise.meaning === 'string' && <p>{exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {

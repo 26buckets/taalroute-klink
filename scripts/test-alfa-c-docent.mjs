@@ -28,12 +28,12 @@ const prep = (t) => ({
   paperPresent: true,
 });
 function ready(t, store = emptyTeacherStore()) {
-  let s = startSession(store, t, prep(t), now);
-  let id = s.sessions.at(-1).id;
+  const s = startSession(store, t, prep(t), now);
+  const id = s.sessions.at(-1).id;
   return { s, id };
 }
 const event = (type, extra = {}) => ({ type, at: now, stage: 0, ...extra });
-test('27 canonical IDs and 13 phases in one grammar item; no new fictional source tasks', () => {
+void test('27 canonical IDs and 13 phases in one grammar item; no new fictional source tasks', () => {
   assert.equal(teacherTasks.length, 27);
   assert.equal(new Set(teacherTasks.map((t) => t.id)).size, 27);
   assert.equal(
@@ -42,13 +42,13 @@ test('27 canonical IDs and 13 phases in one grammar item; no new fictional sourc
   );
   assert.equal(teacherTasks.filter((t) => t.kind === 'recall').length, 12);
 });
-test('unknown/corrupt storage never resets or silently discards data', () => {
+void test('unknown/corrupt storage never resets or silently discards data', () => {
   assert.throws(() => readTeacherStore('{'));
   assert.throws(() => readTeacherStore('{"version":2,"sessions":[]}'));
   assert.throws(() => readTeacherStore('{"version":1,"sessions":[{}]}'));
   assert.deepEqual(readTeacherStore(null), emptyTeacherStore());
 });
-test('per-person preparation and real dated evidence required', () => {
+void test('per-person preparation and real dated evidence required', () => {
   for (const t of teacherTasks.filter((t) => t.kind !== 'check')) {
     const p = prep(t);
     assert.equal(
@@ -92,7 +92,7 @@ test('per-person preparation and real dated evidence required', () => {
     );
   }
 });
-test('recall needs exactly >=24 hours, different actual meeting, max four started tasks', () => {
+void test('recall needs exactly >=24 hours, different actual meeting, max four started tasks', () => {
   const tasks = teacherTasks.filter((t) => t.kind === 'recall'),
     t = tasks[0],
     p = prep(t);
@@ -135,7 +135,7 @@ test('recall needs exactly >=24 hours, different actual meeting, max four starte
     undefined,
   );
 });
-test('grammar has no invented 24-hour gate; preparation still mandatory', () => {
+void test('grammar has no invented 24-hour gate; preparation still mandatory', () => {
   const t = teacherTasks.find((t) => t.kind === 'grammar');
   assert.equal(
     startProblem(
@@ -147,9 +147,11 @@ test('grammar has no invented 24-hour gate; preparation still mandatory', () => 
     undefined,
   );
 });
-test('first attempts immutable, incorrect order retained, replays/models/hints persist across reload', () => {
+void test('first attempts immutable, incorrect order retained, replays/models/hints persist across reload', () => {
   const t = teacherTasks.find((t) => t.kind === 'recall');
-  let { s, id } = ready(t);
+  const initial = ready(t);
+  let { s } = initial;
+  const { id } = initial;
   assert.throws(
     () => appendEvent(s, id, event('first', { text: 'x', tokens: t.order })),
     /volledige/,
@@ -189,9 +191,11 @@ test('first attempts immutable, incorrect order retained, replays/models/hints p
     replayCount: 1,
   });
 });
-test('model and recovery audio blocked before reading response; later phases require earlier observations', () => {
+void test('model and recovery audio blocked before reading response; later phases require earlier observations', () => {
   const t = teacherTasks.find((t) => t.kind === 'grammar');
-  let { s, id } = ready(t);
+  const initial = ready(t);
+  let { s } = initial;
+  const { id } = initial;
   assert.throws(() => appendEvent(s, id, event('model')));
   assert.throws(() =>
     appendEvent(s, id, event('audio', { src: t.stages[0].audio[0] })),
@@ -224,13 +228,15 @@ test('model and recovery audio blocked before reading response; later phases req
     appendEvent(s, id, event('first', { stage: 1, text: 'read' })),
   );
 });
-test('actual paper reference required; checking requires same learner/session preserved dictation', () => {
+void test('actual paper reference required; checking requires same learner/session preserved dictation', () => {
   const t = teacherTasks.find((t) => t.kind === 'dictation'),
     check = teacherTasks.find((t) => t.kind === 'check');
   assert(
     startProblem(emptyTeacherStore(), check, prep(check), Date.parse(now)),
   );
-  let { s, id } = ready(t);
+  const initial = ready(t);
+  let { s } = initial;
+  const { id } = initial;
   s = appendEvent(s, id, event('audio', { src: t.stages[0].audio[0] }));
   assert.throws(() =>
     appendEvent(s, id, event('first', { text: 'De pen...' })),
@@ -261,12 +267,12 @@ test('actual paper reference required; checking requires same learner/session pr
   assert.equal(next.sessions[1].linkedSessionId, id);
   assert(assistance(next.sessions[1], 0).modelEverShown);
 });
-test('whole spelling normalization does not fix accents, punctuation, interior spaces or spelling', () => {
+void test('whole spelling normalization does not fix accents, punctuation, interior spaces or spelling', () => {
   assert.equal(normalizeWord(' CAMERA '), 'camera');
   for (const s of ['caméra', 'ca mera', 'camera.', 'kamara'])
     assert.notEqual(normalizeWord(s), 'camera');
 });
-test('33 exact audio bindings with embedded Taalroute metadata and 6 approved review-package recordings', () => {
+void test('33 exact audio bindings with embedded Taalroute metadata and 6 approved review-package recordings', () => {
   const m = JSON.parse(fs.readFileSync('data/klink-alfa-c-docent-audio.json'));
   assert.equal(m.clips.length, 33);
   assert.equal(m.clips.filter((c) => c.new).length, 6);

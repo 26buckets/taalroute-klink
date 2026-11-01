@@ -13,7 +13,7 @@ globalThis.Audio = class extends EventTarget {
   play() { this.paused = false; return fail ? Promise.reject(new Error('autoplay denied')) : Promise.resolve(); }
   pause() { this.paused = true; }
 };
-test('Playback waits for actual completion, handles denial/errors, cancels, and reuses the unlocked element', async () => {
+void test('Playback waits for actual completion, handles denial/errors, cancels, and reuses the unlocked element', async () => {
   const pending = playMedia('/one.mp3', { waitUntilEnd: true });
   let resolved = false; void pending.then(() => { resolved = true; });
   await Promise.resolve(); assert.equal(resolved, false);
@@ -32,7 +32,7 @@ test('Playback waits for actual completion, handles denial/errors, cancels, and 
   stopMedia(); assert.equal(await stopped, false); assert(audio.paused);
   assert.equal(await playMedia('/seven.mp3', { signal: controller.signal }), false);
 });
-test('Eight sentences and four situations reuse exact authored Taalroute text and audio without fabricated approval', () => {
+void test('Eight sentences and four situations reuse exact authored Taalroute text and audio without fabricated approval', () => {
   const prior = JSON.parse(readFileSync('lib/package-content.generated.json')).flatMap(pack => pack.exercises).flatMap(item => item.textBlocks ?? []);
   assert.equal(klinkContexts.filter(item => item.kind === 'sentence').length, 8);
   assert.equal(klinkContexts.filter(item => item.kind === 'situation').length, 4);
@@ -57,7 +57,7 @@ test('Eight sentences and four situations reuse exact authored Taalroute text an
     }
   }
 });
-test('Every active mode has a separate-voice instruction script; absent recordings stay explicit', () => {
+void test('Every active mode has a separate-voice instruction script; absent recordings stay explicit', () => {
   assert.notEqual(instructions.voiceId, instructions.targetVoiceId);
   for (const mode of new Set(packs.flatMap(pack => pack.exercises.map(item => item.mode)))) {
     assert.equal(instructions.items.filter(item => item.modes.includes(mode)).length, 1, mode);

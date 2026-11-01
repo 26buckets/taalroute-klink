@@ -1,0 +1,1199 @@
+{
+  "date": "2026-11-01",
+  "approvedBy": "Nico",
+  "userRequest": "Deze vernieuwing van die zin die moet je doorvoeren door de hele app. Overal waar het staat moet die aangepast worden en ook de opname als dat nodig is.",
+  "clarification": "Ja, ook die instructies eenvoudiger",
+  "publicationApproved": false,
+  "localOnly": true,
+  "files": [
+    {
+      "file": "data/klink-alfa-c-dagelijks.json",
+      "beforeSha256": "d85c8643e6b66a31c70102321073f73f35b99ae6d7ea4f7881934473bf49b814",
+      "afterSha256": "816155a734b548f0b1e831cdc48a0d9354e7ed9b6e5534e7bd0851252e0a8c49"
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "beforeSha256": "69ac7d7ee6e5dcf8f4803a6e236e212dce984299e17b4ceb7dfd54b1866c2d5a",
+      "afterSha256": "4be038b2bbf45e4a28d6a06a59e8193ece225955e66e7254b0c9b50de44c9854"
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "beforeSha256": "0520e125b32133579a907fe447410cd18b51a73d1e9091bf77d8a39bc1afb927",
+      "afterSha256": "c50618ac44d870b868a0f0309fb8f975d86bf8106803814fe229511dbfd820a6"
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "beforeSha256": "178e20b3405cb59a50b5148231953e5532ccfd72e8dfbe09e97adbffdd01c33a",
+      "afterSha256": "4d96613456c6b62c2d21ff680e72f094f0a3b8a5a8f6226009f423844a2e77e2"
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "beforeSha256": "570a1adc6e449d14394f7b9e07862b0fcb61223e6eb1bb98a9fc0c6b931e5513",
+      "afterSha256": "990d995e640836442b2a7c3bb3337658972dac6c166294ee251d1e9de6f6e5ff"
+    },
+    {
+      "file": "public/content/pakketten/2/CP002-ALFA_A-TEXT-03.json",
+      "beforeSha256": "4076007b784faca9e7c2729ae729cbdec02c383aea7e5af02bdcc93b3407195d",
+      "afterSha256": "45144bccb2e50a35eee888dc3f955ce5e13ebd39cc473b142f05fb79eeb885a5"
+    },
+    {
+      "file": "components/product/exercise-atlas.tsx",
+      "beforeSha256": "c8fe33fe9c60f556d30aab6439fe54a3c29d26e365c67be60f8bfecc1d797676",
+      "afterSha256": "2b7d487345c868100a0e3fc658fcd19105e025a5080d16df9b329ae4db4add3d"
+    },
+    {
+      "file": "components/product/exercise-sampler.tsx",
+      "beforeSha256": "59a793d1517a0b140920fb70ee89de94f60b955b358c4b783896e20baff91887",
+      "afterSha256": "fb16323303fa4e7fd031498bd860063ef4105d0a0285143cb66869dae48a5250",
+      "textReplacements": [
+        {
+          "before": "Orden woorden op betekenis.",
+          "after": "Leg bij elkaar wat bij elkaar hoort."
+        }
+      ]
+    },
+    {
+      "file": "lib/content-coverage.ts",
+      "beforeSha256": "ef17168cfc796c20803816c54c0648d671a4ae0f2e627b2fe1de55b6889ab0f9",
+      "afterSha256": "42fc177c5672e596c9e3183a594449b2b12929ca13c7a627b521d085faff670d",
+      "textReplacements": [
+        {
+          "before": "Zinnen ordenen, aanvullen en natuurlijke formuleringen vergelijken.",
+          "after": "Zinnen in de goede volgorde zetten, aanvullen en natuurlijke formuleringen vergelijken."
+        }
+      ]
+    },
+    {
+      "file": "lib/exercise-opportunities.ts",
+      "beforeSha256": "813854f5d95db2fe83605713d51e7e09def1a523f3bb6700f2be29763728ab3a",
+      "afterSha256": "09e6fab91a4627e6d8e57148613134996730b4dcce593284029b4833854822a7",
+      "textReplacements": [
+        {
+          "before": "audio-items ordenen",
+          "after": "audio-items in de goede volgorde zetten"
+        },
+        {
+          "before": "lettertegels ordenen",
+          "after": "lettertegels in de goede volgorde zetten"
+        },
+        {
+          "before": "woorddelen ordenen",
+          "after": "woorddelen in de goede volgorde zetten"
+        },
+        {
+          "before": "beelden ordenen",
+          "after": "beelden in de goede volgorde zetten"
+        },
+        {
+          "before": "woorden ordenen",
+          "after": "woorden in de goede volgorde zetten"
+        },
+        {
+          "before": "regels ordenen",
+          "after": "regels in de goede volgorde zetten"
+        },
+        {
+          "before": "beurten ordenen",
+          "after": "beurten in de goede volgorde zetten"
+        },
+        {
+          "before": "stappen ordenen",
+          "after": "stappen in de goede volgorde zetten"
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "file": "data/klink-alfa-c-dagelijks.json",
+      "path": [
+        "blocks",
+        1,
+        "steps",
+        7,
+        "title"
+      ],
+      "before": "Een zin over aanmelden ordenen",
+      "after": "Een zin over aanmelden maken"
+    },
+    {
+      "file": "data/klink-alfa-c-dagelijks.json",
+      "path": [
+        "blocks",
+        2,
+        "steps",
+        10,
+        "title"
+      ],
+      "before": "Een kort vertragingsbericht ordenen",
+      "after": "Een kort vertragingsbericht in de goede volgorde zetten"
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        0,
+        "worksheet",
+        "rounds",
+        "a",
+        "answers",
+        3,
+        "criteria"
+      ],
+      "before": "Ordenen vanuit klank versus nadoen.",
+      "after": "Letters op volgorde leggen op gehoor, of het voorbeeld nadoen."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        0,
+        "worksheet",
+        "rounds",
+        "b",
+        "answers",
+        1,
+        "criteria"
+      ],
+      "before": "Betekenisvol ordenen of kopiëren.",
+      "after": "De goede volgorde kiezen op basis van de betekenis, of het voorbeeld kopiëren."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        3,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Vraag eerst wie/wat en wat er gebeurt; laat daarna de rest ordenen.",
+      "after": "Vraag eerst wie of wat en wat er gebeurt; laat daarna de andere kaartjes op de goede plek zetten."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        3,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Noemt de volgorde en ordent woordkaartjes op bord met aanwijzen of slepen.",
+      "after": "Noemt de volgorde en zet woordkaartjes goed op het bord door aan te wijzen of te slepen."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        4,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Vraag eerst wie/wat en wat er gebeurt; laat daarna de rest ordenen.",
+      "after": "Vraag eerst wie of wat en wat er gebeurt; laat daarna de andere kaartjes op de goede plek zetten."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        4,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Noemt de volgorde en ordent woordkaartjes op bord met aanwijzen of slepen.",
+      "after": "Noemt de volgorde en zet woordkaartjes goed op het bord door aan te wijzen of te slepen."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        5,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Vraag eerst wie/wat en wat er gebeurt; laat daarna de rest ordenen.",
+      "after": "Vraag eerst wie of wat en wat er gebeurt; laat daarna de andere kaartjes op de goede plek zetten."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        5,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Noemt de volgorde en ordent woordkaartjes op bord met aanwijzen of slepen.",
+      "after": "Noemt de volgorde en zet woordkaartjes goed op het bord door aan te wijzen of te slepen."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        6,
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: kies gezamenlijk de eerste en tweede letter en vul de vakken op het bord.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: kies gezamenlijk de eerste en tweede letter en vul de vakken op het bord."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        6,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: kies gezamenlijk de eerste en tweede letter en vul de vakken op het bord.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: kies gezamenlijk de eerste en tweede letter en vul de vakken op het bord."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        6,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: plaats met groepskeuzes de zes kaartjes links-naar-rechts.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: plaats met groepskeuzes de zes kaartjes links-naar-rechts."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        6,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: orden de kaartjes tot de derde tekstzin; één cursist kiest, groep leest.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: maak met de kaartjes de derde tekstzin; één cursist kiest, de groep leest."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        6,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden de kaartjes tot de derde tekstzin; één cursist kiest, groep leest.",
+      "after": "Maak met de kaartjes de derde tekstzin; één cursist kiest, de groep leest."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        7,
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: kies samen de juiste volgorde.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: kies samen de juiste volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        7,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: kies samen de juiste volgorde.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: kies samen de juiste volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        7,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: leg met de groep de woordkaartjes in logische volgorde.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: leg met de groep de woordkaartjes in logische volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        7,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: leg samen de laatste zin.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: leg samen de laatste zin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        8,
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: zet de letters samen.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: zet de letters samen."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        8,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: zet de letters samen.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: zet de letters samen."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        8,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: plaats alle kaarten, inclusief twee keer de.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: plaats alle kaarten, inclusief twee keer de."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        8,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: orden samen tot de derde zin.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: maak samen de derde zin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        8,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden samen tot de derde zin.",
+      "after": "Maak samen de derde zin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        9,
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: leg alle vier letters in volgorde.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: leg alle vier letters in volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        9,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: leg alle vier letters in volgorde.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: leg alle vier letters in volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        9,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: leg de zes kaartjes in volgorde, inclusief twee keer de.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: leg de zes kaartjes in volgorde, inclusief twee keer de."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        9,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Observeer zelfstandig ordenen versus nabouwen na model; specifiek hier: zet de kaartjes in volgorde.",
+      "after": "Kijk of de cursist zelf de goede volgorde kiest of een voorbeeld nadoet. In deze opdracht: zet de kaartjes in volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        10,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden klassikaal de losse kaartjes; één deelnemer verplaatst op aanwijzing.",
+      "after": "Zet samen de losse kaartjes in de goede volgorde; één deelnemer verplaatst ze op aanwijzing."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        11,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden klassikaal de losse kaartjes; één deelnemer verplaatst op aanwijzing.",
+      "after": "Zet samen de losse kaartjes in de goede volgorde; één deelnemer verplaatst ze op aanwijzing."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        12,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden klassikaal de losse kaartjes; één deelnemer verplaatst op aanwijzing.",
+      "after": "Zet samen de losse kaartjes in de goede volgorde; één deelnemer verplaatst ze op aanwijzing."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        13,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden uitsluitend de vijf benodigde kaartjes, wijs overbodige kaartjes weg.",
+      "after": "Zet alleen de vijf nodige kaartjes in de goede volgorde. Wijs aan welke kaartjes overblijven."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        14,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Zelfstandig zin ordenen.",
+      "after": "Zelfstandig de woorden in de goede volgorde zetten."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        15,
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden drie letterkaartjes op bord of mondeling.",
+      "after": "Zet drie letterkaartjes in de goede volgorde op het bord, of zeg de volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons.json",
+      "path": [
+        15,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden drie letterkaartjes op bord of mondeling.",
+      "after": "Zet drie letterkaartjes in de goede volgorde op het bord, of zeg de volgorde."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        0,
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Wijs kaartjes aan; één cursist ordent op het bord, groep controleert.",
+      "after": "Wijs kaartjes aan; één cursist zet ze in de goede volgorde op het bord, de groep controleert."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        0,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Wijs kaartjes aan; één cursist ordent op het bord, groep controleert.",
+      "after": "Wijs kaartjes aan; één cursist zet ze in de goede volgorde op het bord, de groep controleert."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        0,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Zeg de zin en orden de kaartjes op het bord.",
+      "after": "Zeg de zin en zet de kaartjes in de goede volgorde op het bord."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        0,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden de kaartjes op bord, lees het resultaat, zoek de zin in de tekst.",
+      "after": "Zet de kaartjes in de goede volgorde op het bord. Lees de zin en zoek die in de tekst."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        1,
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Wijs kaartjes aan; één cursist ordent op het bord, groep controleert.",
+      "after": "Wijs kaartjes aan; één cursist zet ze in de goede volgorde op het bord, de groep controleert."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        1,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Wijs kaartjes aan; één cursist ordent op het bord, groep controleert.",
+      "after": "Wijs kaartjes aan; één cursist zet ze in de goede volgorde op het bord, de groep controleert."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        1,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Zeg de zin en orden de kaartjes op het bord.",
+      "after": "Zeg de zin en zet de kaartjes in de goede volgorde op het bord."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        1,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden de kaartjes op bord, lees het resultaat, zoek de zin in de tekst.",
+      "after": "Zet de kaartjes in de goede volgorde op het bord. Lees de zin en zoek die in de tekst."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        2,
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Wijs kaartjes aan; één cursist ordent op het bord, groep controleert.",
+      "after": "Wijs kaartjes aan; één cursist zet ze in de goede volgorde op het bord, de groep controleert."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        2,
+        "routes",
+        "a",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Wijs kaartjes aan; één cursist ordent op het bord, groep controleert.",
+      "after": "Wijs kaartjes aan; één cursist zet ze in de goede volgorde op het bord, de groep controleert."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        2,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Zeg de zin en orden de kaartjes op het bord.",
+      "after": "Zeg de zin en zet de kaartjes in de goede volgorde op het bord."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        2,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden de kaartjes op bord, lees het resultaat, zoek de zin in de tekst.",
+      "after": "Zet de kaartjes in de goede volgorde op het bord. Lees de zin en zoek die in de tekst."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        3,
+        "routes",
+        "c",
+        "phases",
+        4,
+        "observe"
+      ],
+      "before": "Leest, begrijpt en ordent; scheid de drie observaties.",
+      "after": "Leest, begrijpt en zet de kaartjes in de goede volgorde; noteer deze drie dingen apart."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        4,
+        "routes",
+        "c",
+        "phases",
+        4,
+        "observe"
+      ],
+      "before": "Leest, begrijpt en ordent; scheid de drie observaties.",
+      "after": "Leest, begrijpt en zet de kaartjes in de goede volgorde; noteer deze drie dingen apart."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        5,
+        "routes",
+        "c",
+        "phases",
+        4,
+        "observe"
+      ],
+      "before": "Leest, begrijpt en ordent; scheid de drie observaties.",
+      "after": "Leest, begrijpt en zet de kaartjes in de goede volgorde; noteer deze drie dingen apart."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        6,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Ordenen met of zonder zichtbare voorbeeldzin.",
+      "after": "De kaartjes in de goede volgorde zetten, met of zonder zichtbare voorbeeldzin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        6,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "action"
+      ],
+      "before": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
+      "after": "Toon eerst alleen de losse kaarten. Laat ze in de goede volgorde zetten. Bespreek de hoofdletter en punt. Geen papier vereist."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        7,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Ordenen met of zonder zichtbare voorbeeldzin.",
+      "after": "De kaartjes in de goede volgorde zetten, met of zonder zichtbare voorbeeldzin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        7,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "action"
+      ],
+      "before": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
+      "after": "Toon eerst alleen de losse kaarten. Laat ze in de goede volgorde zetten. Bespreek de hoofdletter en punt. Geen papier vereist."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        8,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Ordenen met of zonder zichtbare voorbeeldzin.",
+      "after": "De kaartjes in de goede volgorde zetten, met of zonder zichtbare voorbeeldzin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        8,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "action"
+      ],
+      "before": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
+      "after": "Toon eerst alleen de losse kaarten. Laat ze in de goede volgorde zetten. Bespreek de hoofdletter en punt. Geen papier vereist."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        9,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Ordenen met of zonder zichtbare voorbeeldzin.",
+      "after": "De kaartjes in de goede volgorde zetten, met of zonder zichtbare voorbeeldzin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        9,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "action"
+      ],
+      "before": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
+      "after": "Toon eerst alleen de losse kaarten. Laat ze in de goede volgorde zetten. Bespreek de hoofdletter en punt. Geen papier vereist."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        10,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Zelfstandig ordenen, naspelen en overschrijven apart noteren.",
+      "after": "Apart noteren: zelf de goede volgorde kiezen, naspelen en overschrijven."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        11,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Zelfstandig ordenen, naspelen en overschrijven apart noteren.",
+      "after": "Apart noteren: zelf de goede volgorde kiezen, naspelen en overschrijven."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        12,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "observe"
+      ],
+      "before": "Zelfstandig ordenen, naspelen en overschrijven apart noteren.",
+      "after": "Apart noteren: zelf de goede volgorde kiezen, naspelen en overschrijven."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        13,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden vier woordkaartjes en lees de gevormde zin.",
+      "after": "Zet vier woordkaartjes in de goede volgorde en lees de zin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        14,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden vier woordkaartjes en lees de gevormde zin.",
+      "after": "Zet vier woordkaartjes in de goede volgorde en lees de zin."
+    },
+    {
+      "file": "data/klink-docent-extra-lessons-10-15.json",
+      "path": [
+        15,
+        "routes",
+        "b",
+        "phases",
+        3,
+        "studentAction"
+      ],
+      "before": "Orden vier woordkaartjes en lees de gevormde zin.",
+      "after": "Zet vier woordkaartjes in de goede volgorde en lees de zin."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        2,
+        "routes",
+        "b",
+        "phases",
+        6,
+        "action"
+      ],
+      "before": "Geef het zin-werkblad. Laat kaarten ordenen, de plaats/handeling aanwijzen en één korte zin overschrijven of mondeling navertellen.",
+      "after": "Geef het zin-werkblad. Laat de kaarten in de goede volgorde zetten, de plaats of handeling aanwijzen en één korte zin overschrijven of mondeling navertellen."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        2,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Docent en deelnemer voeren samen uit: Geef de eerste woordkaart, laat de rest ordenen op betekenis en leestekens.",
+      "after": "Docent en deelnemer voeren samen uit: geef de eerste woordkaart. Laat de andere kaarten op de goede plek zetten. Let op de betekenis en leestekens."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        3,
+        "routes",
+        "b",
+        "phases",
+        6,
+        "action"
+      ],
+      "before": "Geef het zin-werkblad. Laat kaarten ordenen, de plaats/handeling aanwijzen en één korte zin overschrijven of mondeling navertellen.",
+      "after": "Geef het zin-werkblad. Laat de kaarten in de goede volgorde zetten, de plaats of handeling aanwijzen en één korte zin overschrijven of mondeling navertellen."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        3,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Docent en deelnemer voeren samen uit: Geef de eerste woordkaart, laat de rest ordenen op betekenis en leestekens.",
+      "after": "Docent en deelnemer voeren samen uit: geef de eerste woordkaart. Laat de andere kaarten op de goede plek zetten. Let op de betekenis en leestekens."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        4,
+        "routes",
+        "b",
+        "phases",
+        6,
+        "action"
+      ],
+      "before": "Geef het zin-werkblad. Laat kaarten ordenen, de plaats/handeling aanwijzen en één korte zin overschrijven of mondeling navertellen.",
+      "after": "Geef het zin-werkblad. Laat de kaarten in de goede volgorde zetten, de plaats of handeling aanwijzen en één korte zin overschrijven of mondeling navertellen."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        4,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Docent en deelnemer voeren samen uit: Geef de eerste woordkaart, laat de rest ordenen op betekenis en leestekens.",
+      "after": "Docent en deelnemer voeren samen uit: geef de eerste woordkaart. Laat de andere kaarten op de goede plek zetten. Let op de betekenis en leestekens."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        5,
+        "routes",
+        "b",
+        "phases",
+        6,
+        "action"
+      ],
+      "before": "Geef het zin-werkblad. Laat kaarten ordenen, de plaats/handeling aanwijzen en één korte zin overschrijven of mondeling navertellen.",
+      "after": "Geef het zin-werkblad. Laat de kaarten in de goede volgorde zetten, de plaats of handeling aanwijzen en één korte zin overschrijven of mondeling navertellen."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        5,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Docent en deelnemer voeren samen uit: Geef de eerste woordkaart, laat de rest ordenen op betekenis en leestekens.",
+      "after": "Docent en deelnemer voeren samen uit: geef de eerste woordkaart. Laat de andere kaarten op de goede plek zetten. Let op de betekenis en leestekens."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        6,
+        "routes",
+        "b",
+        "phases",
+        6,
+        "action"
+      ],
+      "before": "Geef het zin-werkblad. Laat kaarten ordenen, de plaats/handeling aanwijzen en één korte zin overschrijven of mondeling navertellen.",
+      "after": "Geef het zin-werkblad. Laat de kaarten in de goede volgorde zetten, de plaats of handeling aanwijzen en één korte zin overschrijven of mondeling navertellen."
+    },
+    {
+      "file": "data/klink-docent-lessons.json",
+      "path": [
+        6,
+        "routes",
+        "c",
+        "phases",
+        3,
+        "hint"
+      ],
+      "before": "Docent en deelnemer voeren samen uit: Geef de eerste woordkaart, laat de rest ordenen op betekenis en leestekens.",
+      "after": "Docent en deelnemer voeren samen uit: geef de eerste woordkaart. Laat de andere kaarten op de goede plek zetten. Let op de betekenis en leestekens."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        77,
+        "feedback",
+        "correct"
+      ],
+      "before": "Docentfeedback na beoordeling: Frequentie onderbouwd door rooster; eerst/dan ordent; tijden eenduidig en dagen correct geschreven.",
+      "after": "Docentfeedback na beoordeling: Frequentie onderbouwd door rooster; eerst/dan maakt de volgorde duidelijk; tijden eenduidig en dagen correct geschreven."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        77,
+        "teacherGuidance"
+      ],
+      "before": "1. Maandag altijd open om negen. Dinsdag meestal les, soms geen les. Vrijdag nooit open. Varianten met dezelfde gegevens mogelijk.\n2. Eerst openen we de deur. Dan zetten we koffie. Dagen klein geschreven behalve aan zinsbegin.\nBeoordeling toepassing: Frequentie onderbouwd door rooster; eerst/dan ordent; tijden eenduidig en dagen correct geschreven.\nTegencontrole: Meestal en soms zijn geen vaste percentages; de concrete roostergegevens bepalen hier een passende beschrijving.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen.",
+      "after": "1. Maandag altijd open om negen. Dinsdag meestal les, soms geen les. Vrijdag nooit open. Varianten met dezelfde gegevens mogelijk.\n2. Eerst openen we de deur. Dan zetten we koffie. Dagen klein geschreven behalve aan zinsbegin.\nBeoordeling toepassing: Frequentie onderbouwd door rooster; eerst/dan maakt de volgorde duidelijk; tijden eenduidig en dagen correct geschreven.\nTegencontrole: Meestal en soms zijn geen vaste percentages; de concrete roostergegevens bepalen hier een passende beschrijving.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        77,
+        "teacherWorkflow",
+        "criteria",
+        0
+      ],
+      "before": "Frequentie onderbouwd door rooster; eerst/dan ordent; tijden eenduidig en dagen correct geschreven.",
+      "after": "Frequentie onderbouwd door rooster; eerst/dan maakt de volgorde duidelijk; tijden eenduidig en dagen correct geschreven."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        77,
+        "teacherWorkflow",
+        "expected"
+      ],
+      "before": "1. Maandag altijd open om negen. Dinsdag meestal les, soms geen les. Vrijdag nooit open. Varianten met dezelfde gegevens mogelijk.\n2. Eerst openen we de deur. Dan zetten we koffie. Dagen klein geschreven behalve aan zinsbegin.\nBeoordeling toepassing: Frequentie onderbouwd door rooster; eerst/dan ordent; tijden eenduidig en dagen correct geschreven.\nTegencontrole: Meestal en soms zijn geen vaste percentages; de concrete roostergegevens bepalen hier een passende beschrijving.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen.",
+      "after": "1. Maandag altijd open om negen. Dinsdag meestal les, soms geen les. Vrijdag nooit open. Varianten met dezelfde gegevens mogelijk.\n2. Eerst openen we de deur. Dan zetten we koffie. Dagen klein geschreven behalve aan zinsbegin.\nBeoordeling toepassing: Frequentie onderbouwd door rooster; eerst/dan maakt de volgorde duidelijk; tijden eenduidig en dagen correct geschreven.\nTegencontrole: Meestal en soms zijn geen vaste percentages; de concrete roostergegevens bepalen hier een passende beschrijving.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        307,
+        "teacherGuidance"
+      ],
+      "before": "Bereid alle vijf lettervormen en de naam als verwijzing naar de fictieve persoon voor. Geef losse tegels a, E, n, e, l en een modelkaart Elena. Laat ordenen, daarna zelf schrijven. Noteer ordening en handschrift apart; het model blijft zichtbaar. Leesbaar los schrift is toegestaan. Geen vaste pengreep, streekvolgorde of verbonden schrift eisen. Vorm en spelling afzonderlijk beoordelen. Benodigd materiaal: pen; papier met passende schrijflijn; voorbereide modelkaart achter de hand; vijf losse tegels: a, E, n, e, l; voorbereide modelkaart Elena. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De gelegde volgorde is E-l-e-n-a.; De eigen geschreven naam behoudt beginhoofdletter en volgorde.; Een gelegde naam zonder eigen schrijfproduct is nog geen schrijfbewijs.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): Elena: Hallo, wat is jouw naam?\nYoussef: Mijn naam is Youssef. En jij?\nElena: Ik ben Elena. Is deze stoel vrij?\nYoussef: Ja, kom maar naast mij zitten.",
+      "after": "Bereid alle vijf lettervormen en de naam als verwijzing naar de fictieve persoon voor. Geef losse tegels a, E, n, e, l en een modelkaart Elena. Laat de letters in de goede volgorde leggen en daarna zelf schrijven. Noteer de gekozen volgorde en het handschrift apart; het model blijft zichtbaar. Leesbaar los schrift is toegestaan. Geen vaste pengreep, streekvolgorde of verbonden schrift eisen. Vorm en spelling afzonderlijk beoordelen. Benodigd materiaal: pen; papier met passende schrijflijn; voorbereide modelkaart achter de hand; vijf losse tegels: a, E, n, e, l; voorbereide modelkaart Elena. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De gelegde volgorde is E-l-e-n-a.; De eigen geschreven naam behoudt beginhoofdletter en volgorde.; Een gelegde naam zonder eigen schrijfproduct is nog geen schrijfbewijs.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): Elena: Hallo, wat is jouw naam?\nYoussef: Mijn naam is Youssef. En jij?\nElena: Ik ben Elena. Is deze stoel vrij?\nYoussef: Ja, kom maar naast mij zitten."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        307,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "Bereid alle vijf lettervormen en de naam als verwijzing naar de fictieve persoon voor. Geef losse tegels a, E, n, e, l en een modelkaart Elena. Laat ordenen, daarna zelf schrijven. Noteer ordening en handschrift apart; het model blijft zichtbaar.",
+      "after": "Bereid alle vijf lettervormen en de naam als verwijzing naar de fictieve persoon voor. Geef losse tegels a, E, n, e, l en een modelkaart Elena. Laat de letters in de goede volgorde leggen en daarna zelf schrijven. Noteer de gekozen volgorde en het handschrift apart; het model blijft zichtbaar."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        324,
+        "teacherGuidance"
+      ],
+      "before": "Bereid het hele woord tomaten en de drie lettergrepen to, ma en ten voor, met de klemtoon in het midden zoals de bron vraagt. Geef de kaartjes ten, to en ma plus het woordmodel. Laat ordenen en tomaten als één woord schrijven. De geschreven delen zijn geen drie nieuwe bronwoorden. Houd o en a enkel en behoud e en n in het slotdeel. Ten is hier de laatste lettergreep, geen algemene meervoudsuitgang. Het eindproduct bevat geen streepjes of spaties tussen de delen. De basisvorm is alleen een afzonderlijk te bevestigen bronvoorwaarde. Mondelinge voorbereiding, woordherkenning, zeven geschreven letters, meerlettergrepige spelling en motoriek afzonderlijk beoordelen. Kopiëren/invullen levert geen algemeen zelfstandig schrijf- of leesbewijs. Herkenbare persoonlijke kleine letters en los schrift zijn toegestaan; geen vaste pengreep, streekvolgorde of verbonden schrift eisen. tomaten blijft de meervoudsvorm. Betekenis, woordspelling, schrijfvorm, hoeveelheid en gebruikte hulp afzonderlijk beoordelen. Benodigd materiaal: pen; schrijflijn; kaartjes ten, to, ma; voorbereid model tomaten. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De volgorde is to-ma-ten.; Het eindproduct is één woord tomaten, zonder tussenruimtes.; De enkele o/a en de laatste e/n blijven behouden.; Leggen is nog geen handschriftbewijs; eigen schrift wordt apart bekeken.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): tomaten",
+      "after": "Bereid het hele woord tomaten en de drie lettergrepen to, ma en ten voor, met de klemtoon in het midden zoals de bron vraagt. Geef de kaartjes ten, to en ma plus het woordmodel. Laat de kaartjes in de goede volgorde leggen en tomaten als één woord schrijven. De geschreven delen zijn geen drie nieuwe bronwoorden. Houd o en a enkel en behoud e en n in het slotdeel. Ten is hier de laatste lettergreep, geen algemene meervoudsuitgang. Het eindproduct bevat geen streepjes of spaties tussen de delen. De basisvorm is alleen een afzonderlijk te bevestigen bronvoorwaarde. Mondelinge voorbereiding, woordherkenning, zeven geschreven letters, meerlettergrepige spelling en motoriek afzonderlijk beoordelen. Kopiëren/invullen levert geen algemeen zelfstandig schrijf- of leesbewijs. Herkenbare persoonlijke kleine letters en los schrift zijn toegestaan; geen vaste pengreep, streekvolgorde of verbonden schrift eisen. tomaten blijft de meervoudsvorm. Betekenis, woordspelling, schrijfvorm, hoeveelheid en gebruikte hulp afzonderlijk beoordelen. Benodigd materiaal: pen; schrijflijn; kaartjes ten, to, ma; voorbereid model tomaten. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De volgorde is to-ma-ten.; Het eindproduct is één woord tomaten, zonder tussenruimtes.; De enkele o/a en de laatste e/n blijven behouden.; Leggen is nog geen handschriftbewijs; eigen schrift wordt apart bekeken.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): tomaten"
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        324,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "Bereid het hele woord tomaten en de drie lettergrepen to, ma en ten voor, met de klemtoon in het midden zoals de bron vraagt. Geef de kaartjes ten, to en ma plus het woordmodel. Laat ordenen en tomaten als één woord schrijven. De geschreven delen zijn geen drie nieuwe bronwoorden. Houd o en a enkel en behoud e en n in het slotdeel. Ten is hier de laatste lettergreep, geen algemene meervoudsuitgang. Het eindproduct bevat geen streepjes of spaties tussen de delen. De basisvorm is alleen een afzonderlijk te bevestigen bronvoorwaarde.",
+      "after": "Bereid het hele woord tomaten en de drie lettergrepen to, ma en ten voor, met de klemtoon in het midden zoals de bron vraagt. Geef de kaartjes ten, to en ma plus het woordmodel. Laat de kaartjes in de goede volgorde leggen en tomaten als één woord schrijven. De geschreven delen zijn geen drie nieuwe bronwoorden. Houd o en a enkel en behoud e en n in het slotdeel. Ten is hier de laatste lettergreep, geen algemene meervoudsuitgang. Het eindproduct bevat geen streepjes of spaties tussen de delen. De basisvorm is alleen een afzonderlijk te bevestigen bronvoorwaarde."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        326,
+        "teacherGuidance"
+      ],
+      "before": "Toon de exact voorbereide bronzin. Laat de cursist de zin eenmaal overschrijven met herkenbare grenzen tussen de zes woorden. Laat daarna de woorden in het eigen schrift één voor één aanwijzen. Geef geen vast aantal millimeters of één verplichte handbeweging voor spaties. Dit blijft kopiëren met een zichtbaar model. Zes woorden hebben hier vijf tussenruimtes; de punt blijft aan boek vast. Beoordeel herkenbare grenzen, niet alleen het aantal lege plekken. Betekenis, spelling, woordvolgorde, vijf woordtussenruimtes, hoofdletter D, punt, motorische leesbaarheid en steun afzonderlijk noteren. Naschrijven en ordenen van gegeven woorden bewijzen geen zelfstandig zinnen formuleren of lezen. Zes bronwoorden met zichtbaar model overschrijven; geen zelfstandige spelling of vrije zinsproductie. Leesbaar persoonlijk schrift is toegestaan; geen vaste pengreep, letterverbinding of vaste spatiebreedte eisen. Woordgrenzen moeten herkenbaar zijn. Beoordeel de bedoelde ligging apart van woordvolgorde, spelling, hoofdletter, punt en hulp. Een begrijpelijke andere formulering kan betekenis tonen, maar is geen bewijs dat deze bronzin is geschreven. Benodigd materiaal: pen om te schrijven; papier; voorbereid volledig zinsmodel. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De zes bronwoorden zijn afzonderlijk herkenbaar.; De volgorde blijft De pen ligt naast het boek.; Hoofdletter en punt worden afzonderlijk genoteerd.; Geen woordgrenzen afleiden uit alleen tellen of aanwijzen; het eigen schrijfproduct is nodig.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): De pen ligt naast het boek.",
+      "after": "Toon de exact voorbereide bronzin. Laat de cursist de zin eenmaal overschrijven met herkenbare grenzen tussen de zes woorden. Laat daarna de woorden in het eigen schrift één voor één aanwijzen. Geef geen vast aantal millimeters of één verplichte handbeweging voor spaties. Dit blijft kopiëren met een zichtbaar model. Zes woorden hebben hier vijf tussenruimtes; de punt blijft aan boek vast. Beoordeel herkenbare grenzen, niet alleen het aantal lege plekken. Betekenis, spelling, woordvolgorde, vijf woordtussenruimtes, hoofdletter D, punt, motorische leesbaarheid en steun afzonderlijk noteren. Naschrijven en op volgorde leggen van gegeven woorden bewijzen geen zelfstandig zinnen formuleren of lezen. Zes bronwoorden met zichtbaar model overschrijven; geen zelfstandige spelling of vrije zinsproductie. Leesbaar persoonlijk schrift is toegestaan; geen vaste pengreep, letterverbinding of vaste spatiebreedte eisen. Woordgrenzen moeten herkenbaar zijn. Beoordeel de bedoelde ligging apart van woordvolgorde, spelling, hoofdletter, punt en hulp. Een begrijpelijke andere formulering kan betekenis tonen, maar is geen bewijs dat deze bronzin is geschreven. Benodigd materiaal: pen om te schrijven; papier; voorbereid volledig zinsmodel. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De zes bronwoorden zijn afzonderlijk herkenbaar.; De volgorde blijft De pen ligt naast het boek.; Hoofdletter en punt worden afzonderlijk genoteerd.; Geen woordgrenzen afleiden uit alleen tellen of aanwijzen; het eigen schrijfproduct is nodig.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): De pen ligt naast het boek."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        327,
+        "teacherGuidance"
+      ],
+      "before": "Geef de zes bekende woordkaarten in gemengde volgorde: het, pen, boek., naast, De, ligt. Toon tijdens de poging geen volledige zin. Laat de bronvolgorde leggen en vervolgens de hele zin schrijven. De woorden, hoofdletter en eindpunt zijn al gegeven; dit is gesteunde reconstructie, geen zelfstandig formuleren. Bewaar de gelegde volgorde vóór feedback. Laat de kaarten tijdens het schrijven liggen en registreer die steun. Bij latere vergelijking met het volledige model begint een nieuwe, geholpen poging. Betekenis, spelling, woordvolgorde, vijf woordtussenruimtes, hoofdletter D, punt, motorische leesbaarheid en steun afzonderlijk noteren. Naschrijven en ordenen van gegeven woorden bewijzen geen zelfstandig zinnen formuleren of lezen. De gegeven bronwoorden ordenen en overschrijven met kaarten zichtbaar; geen vrije formulering. Leesbaar persoonlijk schrift is toegestaan; geen vaste pengreep, letterverbinding of vaste spatiebreedte eisen. Woordgrenzen moeten herkenbaar zijn. Beoordeel de bedoelde ligging apart van woordvolgorde, spelling, hoofdletter, punt en hulp. Een begrijpelijke andere formulering kan betekenis tonen, maar is geen bewijs dat deze bronzin is geschreven. Benodigd materiaal: zes losse bronwoordkaarten; papier; pen; volledig zinsmodel uit zicht. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: supplied-word-cards. Beoordelingspunten: Alle zes gegeven woorden worden eenmaal gebruikt.; De bekende bronvolgorde is gelegd en daarna geschreven.; Woordgrenzen blijven zichtbaar in het eigen schrift.; De gegeven woorden en de hints door hoofdletter/eindpunt worden als steun geregistreerd.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): De pen ligt naast het boek.",
+      "after": "Geef de zes bekende woordkaarten in gemengde volgorde: het, pen, boek., naast, De, ligt. Toon tijdens de poging geen volledige zin. Laat de bronvolgorde leggen en vervolgens de hele zin schrijven. De woorden, hoofdletter en eindpunt zijn al gegeven; dit is gesteunde reconstructie, geen zelfstandig formuleren. Bewaar de gelegde volgorde vóór feedback. Laat de kaarten tijdens het schrijven liggen en registreer die steun. Bij latere vergelijking met het volledige model begint een nieuwe, geholpen poging. Betekenis, spelling, woordvolgorde, vijf woordtussenruimtes, hoofdletter D, punt, motorische leesbaarheid en steun afzonderlijk noteren. Naschrijven en op volgorde leggen van gegeven woorden bewijzen geen zelfstandig zinnen formuleren of lezen. De gegeven bronwoorden in de goede volgorde leggen en overschrijven met kaarten zichtbaar; geen vrije formulering. Leesbaar persoonlijk schrift is toegestaan; geen vaste pengreep, letterverbinding of vaste spatiebreedte eisen. Woordgrenzen moeten herkenbaar zijn. Beoordeel de bedoelde ligging apart van woordvolgorde, spelling, hoofdletter, punt en hulp. Een begrijpelijke andere formulering kan betekenis tonen, maar is geen bewijs dat deze bronzin is geschreven. Benodigd materiaal: zes losse bronwoordkaarten; papier; pen; volledig zinsmodel uit zicht. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: supplied-word-cards. Beoordelingspunten: Alle zes gegeven woorden worden eenmaal gebruikt.; De bekende bronvolgorde is gelegd en daarna geschreven.; Woordgrenzen blijven zichtbaar in het eigen schrift.; De gegeven woorden en de hints door hoofdletter/eindpunt worden als steun geregistreerd.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): De pen ligt naast het boek."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        328,
+        "teacherGuidance"
+      ],
+      "before": "Zet een echte pen en een boek klaar als vooraf bevestigde referenten, zonder de gevraagde ligging voor te doen. Toon de voorbereide bronzin. Laat de cursist zelf de pen naast het boek leggen en de zin erbij schrijven. Links of rechts is toegestaan. Beoordeel de ligging en het geschreven product afzonderlijk. Voorzeggen, voordoen of voorlezen door de docent geldt als betekenishulp; een juiste ligging na die hulp bewijst geen zelfstandige betekenisverwerking. Betekenis, spelling, woordvolgorde, vijf woordtussenruimtes, hoofdletter D, punt, motorische leesbaarheid en steun afzonderlijk noteren. Naschrijven en ordenen van gegeven woorden bewijzen geen zelfstandig zinnen formuleren of lezen. Betekenis aan een zelf gelegde situatie koppelen en de zin naschrijven; lezen en schrijven niet automatisch zelfstandig. Leesbaar persoonlijk schrift is toegestaan; geen vaste pengreep, letterverbinding of vaste spatiebreedte eisen. Woordgrenzen moeten herkenbaar zijn. Beoordeel de bedoelde ligging apart van woordvolgorde, spelling, hoofdletter, punt en hulp. Een begrijpelijke andere formulering kan betekenis tonen, maar is geen bewijs dat deze bronzin is geschreven. Benodigd materiaal: echte pen als referent; boek; papier en aparte schrijfpen; voorbereid zinsmodel. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De pen ligt naast het boek zoals de bronzin zegt.; De geschreven zin hoort bij de getoonde situatie.; De bronvolgorde en woordgrenzen blijven intact.; Een passend neergelegde pen alleen bewijst geen schrijven of zelfstandig lezen.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): De pen ligt naast het boek.",
+      "after": "Zet een echte pen en een boek klaar als vooraf bevestigde referenten, zonder de gevraagde ligging voor te doen. Toon de voorbereide bronzin. Laat de cursist zelf de pen naast het boek leggen en de zin erbij schrijven. Links of rechts is toegestaan. Beoordeel de ligging en het geschreven product afzonderlijk. Voorzeggen, voordoen of voorlezen door de docent geldt als betekenishulp; een juiste ligging na die hulp bewijst geen zelfstandige betekenisverwerking. Betekenis, spelling, woordvolgorde, vijf woordtussenruimtes, hoofdletter D, punt, motorische leesbaarheid en steun afzonderlijk noteren. Naschrijven en op volgorde leggen van gegeven woorden bewijzen geen zelfstandig zinnen formuleren of lezen. Betekenis aan een zelf gelegde situatie koppelen en de zin naschrijven; lezen en schrijven niet automatisch zelfstandig. Leesbaar persoonlijk schrift is toegestaan; geen vaste pengreep, letterverbinding of vaste spatiebreedte eisen. Woordgrenzen moeten herkenbaar zijn. Beoordeel de bedoelde ligging apart van woordvolgorde, spelling, hoofdletter, punt en hulp. Een begrijpelijke andere formulering kan betekenis tonen, maar is geen bewijs dat deze bronzin is geschreven. Benodigd materiaal: echte pen als referent; boek; papier en aparte schrijfpen; voorbereid zinsmodel. Bewaar de eerste respons. Model/bron uitsluitend volgens het oorspronkelijke zichtbaarheidsbeleid: visible. Beoordelingspunten: De pen ligt naast het boek zoals de bronzin zegt.; De geschreven zin hoort bij de getoonde situatie.; De bronvolgorde en woordgrenzen blijven intact.; Een passend neergelegde pen alleen bewijst geen schrijven of zelfstandig lezen.. Volledige broninformatie voor de docent (toon geen doelantwoord bij modelvrije taken): De pen ligt naast het boek."
+    },
+    {
+      "file": "data/klink-imported-practice.json",
+      "path": [
+        "items",
+        331,
+        "prerequisites",
+        5
+      ],
+      "before": "Orden de twee bezoeken en de eerdere melding; scheid bronfeiten, gevolgen en gewenste toekomstige actie.",
+      "after": "Zet de twee bezoeken en de eerdere melding in tijdsvolgorde. Houd apart: wat er is gebeurd, wat het gevolg was en wat er nu moet gebeuren."
+    },
+    {
+      "file": "public/content/pakketten/2/CP002-ALFA_A-TEXT-03.json",
+      "path": [
+        "learning",
+        "support"
+      ],
+      "before": "Bereid hok, gras en kijkt naar met betekenissteun voor. Kip en koe hebben verschillende klinkers. Ordening betreft tekstvolgorde, niet de tijdvolgorde van gelijktijdige waarnemingen.",
+      "after": "Bereid hok, gras en kijkt naar met betekenissteun voor. Kip en koe hebben verschillende klinkers. Leg de kaartjes in de volgorde van de tekst. De gebeurtenissen die je ziet, kunnen tegelijk plaatsvinden."
+    }
+  ],
+  "atlasChange": {
+    "before": "Orden op betekenis",
+    "after": "Wat hoort bij elkaar?"
+  },
+  "internalLayoutKeysAndVocabularyPreserved": true
+}

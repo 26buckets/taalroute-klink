@@ -20,7 +20,7 @@ export function verifyDailyRelease(read = readFileSync) {
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts'];
   const changed = git('diff', '--name-only', release.baselineSourceCommit, workspaceRelease.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
   const untracked = []; // The workspace successor verifies the current working tree.
-  assert.deepEqual([...new Set([...changed, ...untracked])].sort(), [...release.changedFiles].sort());
+  assert.deepEqual([...new Set([...changed, ...untracked])].sort((a,b)=>a<b?-1:a>b?1:0), [...release.changedFiles].sort((a,b)=>a<b?-1:a>b?1:0));
   for (const [path, hash] of Object.entries(release.files)) assert.equal(sha(read(path)), hash, path);
   assert(release.changedFiles.every(p => release.files[p]));
   assert.equal(git('diff', release.baselineSourceCommit, workspaceRelease.baselineSourceCommit, '--', 'db', 'drizzle', 'lib/learner-progress.ts', 'data/klink-imported-practice.json', 'data/klink-alfa-c-functioneel.json', 'data/klink-alfa-c-texts.json', 'public/klink-wordmark.svg').length, 0);

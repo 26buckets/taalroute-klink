@@ -3,7 +3,7 @@ import {connectedContent} from '../lib/connected-content.ts';
 import {allPackageWords} from '../lib/package-content.ts';
 import {importedItems} from '../lib/imported-practice.ts';
 const changes=JSON.parse(readFileSync('docs/content-repair-20261030/source-changes.json')).changes;
-const original=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-30/wat-ik-zo-bijzonder-vind-is/outputs/klink-contentreview/bevindingen.json'));
+const _original=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-30/wat-ik-zo-bijzonder-vind-is/outputs/klink-contentreview/bevindingen.json'));
 const ids=new Set(changes.filter(c=>c.path[0]==='data/klink-connected-content.json').map(c=>connectedContent[c.path[2]].id));
 for(const c of changes.filter(c=>c.path[0]==='data/klink-imported-practice.json'))for(const id of importedItems[c.path[2]].sourceIds)ids.add(id);
 for(const c of changes.filter(c=>c.path[0]==='data/klink-functional-writing.json'))ids.add(JSON.parse(readFileSync(c.path[0])).items[c.path[2]].contentId);

@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-01",
+  "baseCommit": "4612b27eebe2ef45c6d806ed18df09f7e8f1e934",
+  "ownerRequest": "Beperkte instructiecorrecties op de nieuwste livebasis; mobiel overlapje herstellen; lokaal voorbeeld met opdracht 1 en 2; niets publiceren.",
+  "localOnly": true,
+  "publicationApproved": false,
+  "exampleExercise": "content:kg-b1-g62-001",
+  "scope": [
+    "Bestaande vereenvoudigde instructies: 98 appbrede velden plus 4 eerste correcties",
+    "31 eerder gecorrigeerde bestaande docentdownloads, bytegelijk overgenomen",
+    "Eén brongebonden opmaakvoorbeeld met kopjes, opsommingen en witruimte",
+    "Ondoorzichtige achtergrond achter bestaande vaste knoppen bij docentgestuurde oefeningen"
+  ],
+  "unchanged": [
+    "Bestaande layout buiten het voorbeeld",
+    "Logo, kleuren, knoppen, audio en audio-iconen",
+    "Oefen-ID’s, antwoorden, bronversies en opslag",
+    "Nieuwste live openingsscherm en synoniemcorrecties",
+    "Publicatiebeveiligingen, canonieke vormgevingsvloer en GitHub-workflows"
+  ],
+  "validation": {
+    "coreTests": 95,
+    "corePassed": 94,
+    "existingSkipped": 1,
+    "expandedTests": 107,
+    "expandedPassed": 104,
+    "expandedPublicationScopeFailures": 2,
+    "expandedSkipped": 1,
+    "browserCases": 216,
+    "documentLayoutCases": 24,
+    "numberedExampleCases": 12,
+    "pixelIdenticalHomeComparisons": 4,
+    "types": "passed",
+    "targetedLint": "passed",
+    "productionBuild": "passed",
+    "diffWhitespace": "passed"
+  },
+  "limitations": [
+    "Geen fysieke telefoon of schermlezer getest",
+    "Geen nieuwe uitspraakcontrole: geen audio gewijzigd",
+    "Het bestaande brongetrouwheidsledger-testgeval blijft overgeslagen",
+    "Twee controles van oudere afzonderlijke publicatiepakketten weigeren terecht de extra lokale wijzigingen; beveiligingen zijn niet versoepeld",
+    "De generieke DigiBord-stijlmap uit de vaste instructie was lokaal niet beschikbaar; de actuele livebasis en vastgezette Klink-bronnen zijn als referentie behouden"
+  ],
+  "reactReview": "Directe kleine renderfunctie zonder nieuwe dependencies, effecten, opslag of onveilige HTML; semantische kopjes/lijsten; onbekende bron valt terug op bestaande weergave."
+}

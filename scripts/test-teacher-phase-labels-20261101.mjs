@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {classroomLessons,phasesForRoute,routeIds} from '../lib/teacher-classroom.ts';
 
-test('all 58 lessons have eight unnumbered phase titles in all three rounds without changing source content',()=>{
+void test('all 58 lessons have eight unnumbered phase titles in all three rounds without changing source content',()=>{
  const before=JSON.stringify(classroomLessons);let checked=0,cleaned=0;
  assert.equal(classroomLessons.length,58);
  for(const lesson of classroomLessons)for(const route of routeIds){

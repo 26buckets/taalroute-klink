@@ -41,7 +41,8 @@ void test('All 65 contextual meanings reach reading preparation even when anothe
  for(const item of hair)assert.match(contentReadingConditions(item,{id:'test'}).otherWords.find(w=>w.id==='klink-woord-haar').meaning,/Haren op/);
 });
 void test('Every imported repair is admitted and its full teacher task is passed through',()=>{
- assert.equal(importedItems.length,1393);
+ assert.equal(importedItems.filter(item=>!item.id.startsWith('self-use:')).length,1393);
+ assert.equal(importedItems.filter(item=>item.id.startsWith('self-use:')).length,42);
  for(const item of importedItems){assert.deepEqual(importedItemIssues(item),[],item.id);assert.equal(importedExercise(item).contentTask.prompt,item.prompt);}
  assert.match(get('kg-a1-f02-001').prompt,/heb, hebt, heeft of hebben/);
  assert.match(get('kg-a2-g12-001').teacherWorkflow.expected,/het brede\/een breed bureau/);

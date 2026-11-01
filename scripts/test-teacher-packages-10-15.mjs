@@ -8,7 +8,7 @@ import {classroomLessons,getClassroomLesson,freshClassroom,placeTile,restoreClas
 import {worksheets,worksheetHash,worksheetSelection} from '../lib/teacher-worksheets.ts';
 const groups=['sok stop stad','boom boon boot','tand been bord jurk','kaak kaas naam','kook koop maak','maan maand mee meer'];
 const item=(w,r,n)=>extra.find(l=>l.id===w).worksheet.rounds[r].answers[n-1];
-test('packages 10–15 append twenty complete lessons and retain the previous 38',()=>{
+void test('packages 10–15 append twenty complete lessons and retain the previous 38',()=>{
  assert.deepEqual(extra.map(l=>l.id),groups.flatMap(g=>g.split(' ')));
  assert.equal(classroomLessons.length,58);assert.equal(worksheets.length,58);
  assert.deepEqual(classroomLessons.slice(8,38).map(l=>l.id),prior.map(l=>l.id));
@@ -30,7 +30,7 @@ test('packages 10–15 append twenty complete lessons and retain the previous 38
  }
  assert.equal(phases,480);assert.equal(answers,600);assert.equal(ids.size,600);
 });
-test('long vowels and duplicate k tiles build and restore as complete sound cards',()=>{
+void test('long vowels and duplicate k tiles build and restore as complete sound cards',()=>{
  for(const [w,units]of [['kaak',['k','aa','k']],['kook',['k','oo','k']],['mee',['m','ee']]]){
   assert.deepEqual(getClassroomLesson(w).units,units);const state=freshClassroom('basic','a',w);
   for(const u of units)state.tiles=placeTile(state.tiles,u,undefined,w);
@@ -38,7 +38,7 @@ test('long vowels and duplicate k tiles build and restore as complete sound card
  }
  for(const w of ['stad','tand','bord','maand']){const units=getClassroomLesson(w).units;assert.equal(units.at(-1),'d');assert.equal(classroomSoundId(units,units.length-1),'t');}
 });
-test('source review blockers have matching questions, precise answers and explicit April context',()=>{
+void test('source review blockers have matching questions, precise answers and explicit April context',()=>{
  assert.match(item('sok','c',3).title,/tweede zin/);assert.match(item('stop','a',10).body,/Ik ____ bij de deur/);assert.equal(item('stad','a',8).answer,'d');assert.match(item('stad','c',8).body,/persoon in de tekst koopt/);
  for(const w of ['boon','boot'])assert.match(item(w,'a',7).answer,/1, 5 en 8/);
  assert.equal(item('boon','b',4).answer,'bruine');assert(!/boon|boot/.test(item('boom','b',9).answer));

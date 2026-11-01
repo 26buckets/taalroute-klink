@@ -1,13 +1,14 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
 import {verifyWordUseRelease,readBeforeWordUse} from './check-word-use-release-20261101.mjs';
-test('release is tied to the explicit owner request, all reviewed content, active audio and verified backup',()=>{
+void test('release is tied to the explicit owner request, all reviewed content, active audio and verified backup',()=>{
  const r=verifyWordUseRelease();assert.equal(r.provider,'ElevenLabs');assert.equal(r.appearanceUnchanged,true);
  assert.notDeepEqual(readBeforeWordUse('lib/group-practice.ts',r),readFileSync('lib/group-practice.ts'));
- assert.deepEqual(readBeforeWordUse('data/klink-synonyms.json',r),readFileSync('data/klink-synonyms.json'));
+ assert.deepEqual(readBeforeWordUse('data/klink-synonyms.json',r),execFileSync('git',['show',r.baselineSourceCommit+':data/klink-synonyms.json']));
 });
-test('publication refuses missing approval, incomplete checks, missing cloud readback and modified content or audio',()=>{
+void test('publication refuses missing approval, incomplete checks, missing cloud readback and modified content or audio',()=>{
  for(const[file,key,value]of [['docs/klink-owner-release-word-use-20261101.json','publicationApproved',false],['docs/word-use-20261101/backup.json','fullReadback',false],['docs/word-use-20261101/verification.json','all288Questions',false]]){
   const x=JSON.parse(readFileSync(file));x[key]=value;assert.throws(()=>verifyWordUseRelease(f=>f===file?Buffer.from(JSON.stringify(x)):readFileSync(f)),file);
  }

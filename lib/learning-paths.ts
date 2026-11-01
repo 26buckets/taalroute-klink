@@ -34,7 +34,7 @@ function wrap(pack: PackageDefinition, activity: LearningActivity, id: string, t
     ...(stage === 'recall' && Array.isArray(source.options) ? { options: orderedChoices(source.options, seed) } : {}),
     learningPathId: id, learningPathTitle: title, learningStage: stage, learningActivity: activity,
     // A listening route or an answer after a model never establishes independent reading.
-    sourceStatus: 'concept', combinationReview: 'open', independentReading: false, access: 'teacher-supported',
+    sourceStatus: 'concept', combinationReview: 'open', independentReading: false, access: activity === 'grammar-path' ? 'self-practice' : 'teacher-supported',
     objective: `${activity}:${id}:${text(source.wordId) || text(source.contextId) || index}`, instructionAudio: instructionAudioEnabled ? source.instructionAudio : undefined,
     requiresExplicitCompletion: source.mode === 'learning-example' ? false : source.requiresExplicitCompletion,
     assessment: source.assessment ?? 'answer', reviewEligible: stage === 'recall' && source.assessment !== 'participation',

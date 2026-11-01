@@ -6,7 +6,7 @@ import media from '../data/klink-media.json' with { type: 'json' };
 import release from '../data/klink-mixed-practice-release.json' with { type: 'json' };
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 
-test('All six first-section words are targets, not just distractors, in each applicable mode', () => {
+void test('All six first-section words are targets, not just distractors, in each applicable mode', () => {
   const pack = packs[0], expected = pack.words.map(word => word.id).sort((a,b)=>a.localeCompare(b));
   const before = JSON.stringify(pack);
   for (const mode of mixedModes) {
@@ -18,7 +18,7 @@ test('All six first-section words are targets, not just distractors, in each app
   assert.equal(JSON.stringify(pack), before, 'Never mutate the authoritative package');
 });
 
-test('Fifteen sections retain their own words and valid media across varied rounds', () => {
+void test('Fifteen sections retain their own words and valid media across varied rounds', () => {
   for (const pack of packs) for (const seed of [1, 2, 42, 0xffffffff]) for (const mode of mixedModes) {
     const round = createMixedRound(pack, mode.id, seed);
     const words = new Map(pack.words.map(word => [word.id, word]));
@@ -67,7 +67,7 @@ test('Fifteen sections retain their own words and valid media across varied roun
   }
 });
 
-test('Seeded order and retries are reproducible; invalid saved sessions are rejected', () => {
+void test('Seeded order and retries are reproducible; invalid saved sessions are rejected', () => {
   const pack = packs[0], round = createMixedRound(pack, 'listen', 42);
   assert.deepEqual(createMixedRound(pack, 'listen', 42), round);
   assert.notDeepEqual(createMixedRound(pack, 'listen', 43).map(item => item.wordId), round.map(item => item.wordId));
@@ -81,7 +81,7 @@ test('Seeded order and retries are reproducible; invalid saved sessions are reje
   assert.equal(restoreMixedSession(JSON.stringify(saved), packs[1], 'listen'), undefined);
 });
 
-test('Cross-section review never pulls in an unprepared future section automatically', () => {
+void test('Cross-section review never pulls in an unprepared future section automatically', () => {
   assert.equal(mixedReviewPack(packs, [], []).words.length, 0);
   const complete = [packs[0].lessons[0].id, packs[1].lessons[0].id];
   const sourceLessons = packs.flatMap(pack => pack.lessons).filter(lesson => complete.includes(lesson.id));
@@ -93,14 +93,14 @@ test('Cross-section review never pulls in an unprepared future section automatic
   assert(mixedReviewPack(packs, [], [saved, 'unknown']).words.every(word => word.id === saved));
 });
 
-test('Owner publication authorization does not pretend independent review happened', () => {
+void test('Owner publication authorization does not pretend independent review happened', () => {
   assert.equal(release.publicationApproved, true);
   assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-cumulative-20261018.json');
   assert.equal(release.combinationReview, 'open');
   assert.equal(release.existingMediaChanged, false);
 });
 
-test('Choice sorting segments each spelling only once and preserves Unicode distractors', () => {
+void test('Choice sorting segments each spelling only once and preserves Unicode distractors', () => {
   const spellings = ['e\u0301', 'é', '👨‍👩‍👧', '👨‍👩‍👦', 'ab', 'a', 'a\u0301b'];
   const pack = { ...packs[0], words: spellings.map((word, i) => ({ id: `unicode-${i}`, word, audio: '/fixture.wav' })), exercises: [] };
   const original = Reflect.get(Intl.Segmenter.prototype, 'segment');

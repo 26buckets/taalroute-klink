@@ -6,7 +6,8 @@ const goals = catalogue.goals as Record<string, {family: keyof typeof catalogue.
 export function learningGoalFor(exercise: PackageExercise) {
   const task = exercise.contentTask as ImportedItem | undefined;
   let id: string | undefined;
-  if (task) id = (catalogue.contentGoals as Record<string,string>)[`${task.domain}:${task.teacherWorkflow?.kind ?? ''}:${task.objective}`];
+  if (exercise.localGrammar === true && typeof exercise.learningGoalId === 'string') id = exercise.learningGoalId;
+  else if (task) id = (catalogue.contentGoals as Record<string,string>)[`${task.domain}:${task.teacherWorkflow?.kind ?? ''}:${task.objective}`];
   else if (typeof exercise.ruleId === 'string') id = (catalogue.rules as Record<string,string>)[exercise.ruleId];
   if (!id && !task) {
     if (exercise.mode === 'word-sort') id = ({meaning:'sorteer-betekenis',spelling:'sorteer-spelling',letter:'sorteer-letter'} as Record<string,string>)[String((exercise.standardTask as {basis?:string})?.basis)];

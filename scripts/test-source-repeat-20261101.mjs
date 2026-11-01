@@ -12,7 +12,7 @@ const native=JSON.parse(readFileSync(folder+'sources/native-document.json'));
 const banks=new Map();
 for(const round of sourceRepeatRounds)for(const bank of sourceRepeatBanks(round))if(!banks.has(bank.id))banks.set(bank.id,validateProductionCollection(JSON.parse(readFileSync('public'+bank.url)),bank.id,bank.count));
 
-test('All 576 stable positions resolve to unchanged canonical source content and media',()=>{
+void test('All 576 stable positions resolve to unchanged canonical source content and media',()=>{
  assert.equal(source.revisionId,native.revisionId);assert.equal(sourceRepeatRounds.length,48);assert.equal(banks.size,121);
  const original=JSON.stringify([...banks]);const positionIds=[],sourceIds=[];const levels={};
  for(const [i,round] of sourceRepeatRounds.entries()){
@@ -35,7 +35,7 @@ test('All 576 stable positions resolve to unchanged canonical source content and
  for(const f of source.sourceFiles)assert.equal(createHash('sha256').update(readFileSync(f.path)).digest('hex'),f.sha256,f.path);
 });
 
-test('Repeat rounds remain available independently of original completion or review deadlines',()=>{
+void test('Repeat rounds remain available independently of original completion or review deadlines',()=>{
  const originalReview=Object.fromEntries(sourceRepeatRounds.flatMap(r=>r.positions.map(p=>[p.sourceId,{due:Date.now()+86400000,last:Date.now(),correct:10}])));
  for(const round of sourceRepeatRounds){
   const selection={chapter:'repeat',activity:'learning-review',collection:round.id,level:round.level,help:'practice'};
@@ -49,7 +49,7 @@ test('Repeat rounds remain available independently of original completion or rev
  assert(!availableChapterCollections('learning-review',{level:'all',help:'guided'}).some(c=>c.sourceRepeat));
 });
 
-test('Broken source references and ambiguous position lists fail closed',()=>{
+void test('Broken source references and ambiguous position lists fail closed',()=>{
  const r=sourceRepeatRounds[0];
  const edit=change=>{const copy=structuredClone(r);change(copy);return copy;};
  for(const broken of[edit(x=>x.positions.pop()),edit(x=>x.positions[1].id=x.positions[0].id),edit(x=>x.positions[1].sourceId=x.positions[0].sourceId),edit(x=>x.positions[0].bankId='unknown'),edit(x=>x.positions[0].sourceId='missing')])assert.throws(()=>sourceRepeatExercises(broken,banks));

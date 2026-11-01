@@ -53,7 +53,7 @@ export function chapterForLevel(level: ChapterLevel, preferred: string) {
   return ordered.find(chapter => chapter.activities.some(activity => chapterCollections(activity).some(item => level === 'all' || (item.levels ?? [item.level]).includes(level))))?.id ?? preferred;
 }
 
-export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => (selection.level === 'all' || (item.levels ?? [item.level]).includes(selection.level)) && matchesContent(item.level, (item.help ?? exerciseSetHelp(item.exercises)), { ...selection, level: 'all' });
+export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => (selection.level === 'all' || (item.levels ?? [item.level]).includes(selection.level)) && ((selection.help === 'guided' && item.exercises.length > 0 && item.exercises.every(exercise => exercise.access === 'self-practice' && (exercise.learningActivity === 'grammar-path' || ['sentence-build', 'verb-choice', 'content-grammatica'].includes(String(exercise.groupActivity))))) || matchesContent(item.level, (item.help ?? exerciseSetHelp(item.exercises)), { ...selection, level: 'all' }));
 
 // Use the same filtered tasks for entrance buttons and the collection list.
 export function availableChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}, now = Date.now()): ChapterCollection[] {

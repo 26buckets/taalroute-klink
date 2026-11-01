@@ -1,0 +1,119 @@
+{
+  "candidate": {
+    "files": 78,
+    "tests": 451,
+    "pass": 430,
+    "fail": 20,
+    "skipped": 1
+  },
+  "reference995ae440": {
+    "files": 75,
+    "tests": 484,
+    "pass": 463,
+    "fail": 20,
+    "skipped": 1
+  },
+  "countsNotDirectlyComparable": "Drie lokale testbestanden ontbreken in referentie; één kandidaatbestand stopt bij scopecontrole voordat onderliggende tests starten. Geen volledige groenclaim.",
+  "failures": [
+    {
+      "test": "All revised Alfa C guidance has a separate voice and exact branded recordings; existing targets are unchanged",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Explanation timings match exact text and unchanged audio, across all three players",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Every imported repair is admitted and its full teacher task is passed through",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Exercise choices retain exact collection, filters and real routes across skills",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Every collection has exactly one practice entrance; legacy direct links retain it",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "All existing activities have exactly one place in the growth sequence",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Every available entrance has matching tasks; unavailable combinations remain empty without lowering level",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Twelve independent chapters cover all registered activities without changing Lexicon",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "scripts/test-publication-proof.mjs",
+      "alsoFailsOn995ae440": false,
+      "classification": "publicatie-/scopecontrole: nieuwe set heeft nog geen vrijgave"
+    },
+    {
+      "test": "All sentence IDs remain reachable once in free listening, at their level, with support",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Every previous exercise key survives; only the recorded linked fields and two new rich-person order tasks differ",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Session tempo changes active and later audio without restarting; restores each original rate and survives denied storage",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "publication requires exact context scope, explicit layout approval and verified recovery backup",
+      "alsoFailsOn995ae440": false,
+      "classification": "publicatie-/scopecontrole: nieuwe set heeft nog geen vrijgave"
+    },
+    {
+      "test": "publication rejects missing owner approval, stale or incomplete reviews, altered audio and unverified backup",
+      "alsoFailsOn995ae440": false,
+      "classification": "publicatie-/scopecontrole: nieuwe set heeft nog geen vrijgave"
+    },
+    {
+      "test": "publication permits only the approved recovery and rejects missing authorization or backup",
+      "alsoFailsOn995ae440": false,
+      "classification": "publicatie-/scopecontrole: nieuwe set heeft nog geen vrijgave"
+    },
+    {
+      "test": "publication rejects reactivated unsafe pairs, missing reviews and false listening claims",
+      "alsoFailsOn995ae440": false,
+      "classification": "publicatie-/scopecontrole: nieuwe set heeft nog geen vrijgave"
+    },
+    {
+      "test": "Every current meaning is reviewed, with articles separate from spelling and answers",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "All original source data, production rows and published exercise bytes unchanged",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "All fifteen replacements reach their existing word cards",
+      "alsoFailsOn995ae440": true,
+      "classification": "bestaande afwijking: afzonderlijk beoordelen en herstellen"
+    },
+    {
+      "test": "Replacement release rejects wrong scope, quantity defaults, changed audio and image tampering",
+      "alsoFailsOn995ae440": false,
+      "classification": "publicatie-/scopecontrole: nieuwe set heeft nog geen vrijgave"
+    }
+  ]
+}
