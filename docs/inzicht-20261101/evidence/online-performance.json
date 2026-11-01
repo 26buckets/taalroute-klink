@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-01T02:32:00.340Z",
+  "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "learners": 30,
+  "skills": 100,
+  "train_evidence_events": 3000,
+  "measurements": [
+    {
+      "run": 1,
+      "elapsed_ms": 318
+    },
+    {
+      "run": 2,
+      "elapsed_ms": 276
+    },
+    {
+      "run": 3,
+      "elapsed_ms": 527
+    },
+    {
+      "run": 4,
+      "elapsed_ms": 235
+    },
+    {
+      "run": 5,
+      "elapsed_ms": 309
+    }
+  ],
+  "threshold_ms": 2000,
+  "all_under_threshold": true,
+  "scope": "Full network API response from this Mac; not cold-start guarantee, simultaneous school benchmark or whole-browser render SLO."
+}

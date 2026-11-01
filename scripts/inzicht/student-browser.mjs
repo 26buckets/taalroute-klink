@@ -1,13 +1,16 @@
 import assert from 'node:assert/strict';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium, webkit } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
-const base = process.env.KLINK_TEST_URL ?? 'http://127.0.0.1:18841';
-assert.equal(new URL(base).hostname, '127.0.0.1');
-const tokens = JSON.parse(
-  readFileSync('.wrangler/inzicht-credentials.json', 'utf8'),
-);
-const out = 'docs/inzicht-20261101/evidence';
+import {
+  base,
+  online,
+  login,
+  apiCookie,
+  logoutSessions,
+} from './browser-auth.mjs';
+const out = `docs/inzicht-20261101/evidence/${online ? 'online' : 'local'}`;
+mkdirSync(out, { recursive: true });
 const results = [];
 async function call(path, body, user = 'docent') {
   const r = await fetch(
@@ -15,7 +18,7 @@ async function call(path, body, user = 'docent') {
     {
       method: body === undefined ? 'GET' : 'POST',
       headers: {
-        cookie: `inzicht_session=${tokens[user]}`,
+        cookie: await apiCookie(user),
         origin: base,
         'Content-Type': 'application/json',
         'Idempotency-Key': crypto.randomUUID(),
@@ -26,12 +29,6 @@ async function call(path, body, user = 'docent') {
   const data = await r.json();
   assert(r.ok, JSON.stringify(data));
   return data;
-}
-async function login(page, user) {
-  await page.goto(`${base}/inzicht`);
-  await page.getByLabel('Testtoegang', { exact: true }).fill(tokens[user]);
-  await page.getByRole('button', { name: 'Openen', exact: true }).click();
-  await page.getByLabel('Actieve school', { exact: true }).waitFor();
 }
 for (const [engine, type] of Object.entries({ chromium, webkit })) {
   const registry = await call('registrar', undefined, 'registrar');
@@ -205,3 +202,5 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
 console.log(
   'Student/registrar, school exercise storage, network loss/retry and automated accessibility passed in two engines.',
 );
+
+await logoutSessions();

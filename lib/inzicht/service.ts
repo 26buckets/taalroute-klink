@@ -1,4 +1,10 @@
 import {
+  newSession,
+  passwordMatches,
+  sessionCookie,
+  sessionToken,
+} from './auth.ts';
+import {
   canonical,
   computeMastery,
   csvCell,
@@ -14,7 +20,11 @@ import {
   type Skill,
 } from './rules.ts';
 
-export type InzichtEnv = { INZICHT_DB?: D1Database; INZICHT_MODE?: string };
+export type InzichtEnv = {
+  INZICHT_DB?: D1Database;
+  INZICHT_MODE?: string;
+  INZICHT_ORIGIN?: string;
+};
 type Row = Record<string, string | number | null>;
 type Context = {
   db: D1Database;
@@ -78,7 +88,8 @@ const audit = (c: Context, action: string, id: string) =>
 const loopback = (request: Request) =>
   ['localhost', '127.0.0.1', '[::1]'].includes(new URL(request.url).hostname);
 export const enabled = (env: InzichtEnv) =>
-  env.INZICHT_MODE === 'synthetic-local' && Boolean(env.INZICHT_DB);
+  ['synthetic-local', 'synthetic-online'].includes(env.INZICHT_MODE ?? '') &&
+  Boolean(env.INZICHT_DB);
 
 async function limit(db: D1Database, key: string, max: number) {
   const bucket = `${key}:${Math.floor(Date.now() / 60000)}`;
@@ -90,11 +101,10 @@ async function limit(db: D1Database, key: string, max: number) {
   if (Number(result?.requests) > max)
     fail(429, 'Even wachten en opnieuw proberen.');
 }
-async function actor(request: Request, db: D1Database) {
-  const token = request.headers
-    .get('cookie')
-    ?.match(/(?:^|;\s*)inzicht_session=([a-f0-9]{64})(?:;|$)/)?.[1];
-  if (!token) return fail(401, 'Meld je aan in de testomgeving.');
+async function actor(request: Request, db: D1Database, online = false) {
+  const token = sessionToken(request, online);
+  if (!token || !/^[a-f0-9]{64}$/.test(token))
+    return fail(401, 'Meld je aan in de testomgeving.');
   const session = await one(
     db,
     "SELECT s.user_id FROM inzicht_sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>? AND s.revoked=0 AND u.status='active'",
@@ -319,6 +329,43 @@ async function matrix(c: Context, group: string, process = false) {
     calculated_at: calculated,
     rule_version: RULE_VERSION,
   };
+}
+// Bounded scheduled retry; unprocessed rows remain durable when a batch fails.
+export async function processPending(db: D1Database) {
+  const pending = await rows(
+    db,
+    "SELECT DISTINCT organization_id,group_id FROM outbox_events WHERE status<>'processed' ORDER BY created_at LIMIT 5",
+  );
+  for (const item of pending) {
+    await matrix(
+      {
+        db,
+        org: String(item.organization_id),
+        user: '',
+        member: '',
+        role: '',
+        create: false,
+        routes: [],
+        version: 0,
+      },
+      String(item.group_id),
+      true,
+    );
+  }
+  await stmt(
+    db,
+    'DELETE FROM inzicht_sessions WHERE expires_at<? OR revoked=1',
+    now(),
+  ).run();
+  // All rate windows are at most fifteen minutes. Keep the current windows only.
+  const minute = Math.floor(Date.now() / 60000),
+    quarter = Math.floor(Date.now() / 900000);
+  await stmt(
+    db,
+    "DELETE FROM inzicht_rate_limits WHERE (bucket LIKE 'login-%' AND CAST(substr(bucket,length(rtrim(bucket,'0123456789'))+1) AS INTEGER)<?) OR (bucket NOT LIKE 'login-%' AND CAST(substr(bucket,length(rtrim(bucket,'0123456789'))+1) AS INTEGER)<?)",
+    quarter - 1,
+    minute - 1,
+  ).run();
 }
 async function inputs(c: Context, group: string) {
   const version = c.version;
@@ -576,7 +623,12 @@ export async function handleInzicht(
     extra: Record<string, string> = {},
   ) => Response.json(data, { status, headers: { ...headers, ...extra } });
   try {
-    if (!enabled(env) || !loopback(request))
+    const online = env.INZICHT_MODE === 'synthetic-online';
+    const validHost = online
+      ? new URL(request.url).origin === env.INZICHT_ORIGIN &&
+        new URL(request.url).protocol === 'https:'
+      : loopback(request);
+    if (!enabled(env) || !validHost)
       return response({ error: 'Niet beschikbaar.' }, 404);
     const db = env.INZICHT_DB!;
     const url = new URL(request.url);
@@ -604,6 +656,57 @@ export async function handleInzicht(
         return response({ error: 'Ongeldige gegevens.' }, 400);
       }
     }
+    if (path[0] === 'login' && writing && online) {
+      const email = string(body.email, 254).toLowerCase();
+      const password =
+        typeof body.password === 'string' && body.password.length <= 200
+          ? body.password
+          : fail(400, 'Controleer je aanmelding.');
+      const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
+      const window = Math.floor(Date.now() / 900000);
+      for (const [key, max] of [
+        [`login-ip:${await hash(ip)}:${window}`, 40],
+        [`login-account:${await hash(email)}:${window}`, 10],
+      ] as const) {
+        const result = await stmt(
+          db,
+          'INSERT INTO inzicht_rate_limits VALUES (?,1) ON CONFLICT(bucket) DO UPDATE SET requests=requests+1 RETURNING requests',
+          key,
+        ).first<Row>();
+        if (Number(result?.requests) > max)
+          fail(
+            429,
+            'Te veel aanmeldpogingen. Probeer het over vijftien minuten opnieuw.',
+          );
+      }
+      const credentials = await one(
+        db,
+        "SELECT c.* FROM inzicht_credentials c JOIN users u ON u.id=c.user_id WHERE c.email=? AND u.status='active' AND u.auth_subject LIKE 'synthetic:%'",
+        email,
+      );
+      if (!(await passwordMatches(password, credentials?.password_hash)))
+        fail(401, 'E-mailadres of wachtwoord klopt niet.');
+      const token = newSession();
+      const created = await stmt(
+        db,
+        "INSERT INTO inzicht_sessions SELECT ?,c.user_id,?,0 FROM inzicht_credentials c JOIN users u ON u.id=c.user_id WHERE c.user_id=? AND c.password_hash=? AND u.status='active'",
+        await hash(token),
+        new Date(Date.now() + 8 * 3600000).toISOString(),
+        String(credentials!.user_id),
+        String(credentials!.password_hash),
+      ).run();
+      if (!created.meta.changes) fail(401, 'Meld je opnieuw aan.');
+      await stmt(
+        db,
+        'DELETE FROM inzicht_rate_limits WHERE bucket=?',
+        `login-account:${await hash(email)}:${window}`,
+      ).run();
+      return response({ ok: true }, 200, {
+        'Set-Cookie': sessionCookie(true, token),
+      });
+    }
+    if (path[0] === 'session' && online)
+      return response({ error: 'Niet beschikbaar.' }, 404);
     if (path[0] === 'session' && writing) {
       await limit(db, 'login', 20);
       const token = string(body.token, 64);
@@ -620,24 +723,21 @@ export async function handleInzicht(
         'Set-Cookie': `inzicht_session=${token}; HttpOnly; SameSite=Strict; Path=/api/inzicht; Max-Age=28800${url.protocol === 'https:' ? '; Secure' : ''}`,
       });
     }
-    const user = await actor(request, db);
+    const user = await actor(request, db, online);
     await limit(
       db,
       `${user}:${writing ? 'write' : 'read'}`,
       writing ? 120 : 600,
     );
     if (path[0] === 'logout' && writing) {
-      const token = request.headers
-        .get('cookie')!
-        .match(/inzicht_session=([a-f0-9]{64})/)![1];
+      const token = sessionToken(request, online)!;
       await stmt(
         db,
         'UPDATE inzicht_sessions SET revoked=1 WHERE token_hash=?',
         await hash(token),
       ).run();
       return response({ ok: true }, 200, {
-        'Set-Cookie':
-          'inzicht_session=; HttpOnly; SameSite=Strict; Path=/api/inzicht; Max-Age=0',
+        'Set-Cookie': sessionCookie(online, ''),
       });
     }
     if (path[0] === 'me' && !writing)
@@ -763,14 +863,39 @@ export async function handleInzicht(
             throw error;
         }
       }
+      const classes = await rows(
+        db,
+        "SELECT g.id,g.name FROM groups g JOIN group_memberships gm ON gm.organization_id=g.organization_id AND gm.group_id=g.id WHERE g.organization_id=? AND gm.learner_id=? AND gm.status='active' AND g.status='active'",
+        c.org,
+        lid,
+      );
+      const freePractice: {
+        group_id: string;
+        content_id: string;
+        title: string;
+      }[] = [];
+      const freeCatalog = await catalog(c);
+      // shortcut: three-item staging catalog; batch authorization before enabling a full catalog.
+      for (const g of classes)
+        for (const content of freeCatalog) {
+          try {
+            await schoolAccess(c, String(g.id), content.id, null);
+            freePractice.push({
+              group_id: String(g.id),
+              content_id: content.id,
+              title: content.title,
+            });
+          } catch (error) {
+            if (
+              !(error instanceof HttpError && [403, 404].includes(error.status))
+            )
+              throw error;
+          }
+        }
       return response({
         linked: true,
-        classes: await rows(
-          db,
-          "SELECT g.id,g.name FROM groups g JOIN group_memberships gm ON gm.organization_id=g.organization_id AND gm.group_id=g.id WHERE g.organization_id=? AND gm.learner_id=? AND gm.status='active' AND g.status='active'",
-          c.org,
-          lid,
-        ),
+        classes,
+        free_practice: freePractice,
         assignments: visible,
         attempts: await rows(
           db,
@@ -919,12 +1044,18 @@ export async function handleInzicht(
         );
         if (target !== '*') await learner(c, group, target);
         if (!writing) return response(await policy(c, group, target));
-        const routes = Array.isArray(body.allowed_routes)
-          ? [...new Set(body.allowed_routes.map((r) => choice(r, ROUTES)))]
-          : fail(400, 'Kies toegestane routes.');
+        const inherit = body.inherit === true && target !== '*';
+        const standard = await policy(c, group);
+        const routes = inherit
+          ? standard.allowed_routes
+          : Array.isArray(body.allowed_routes)
+            ? [...new Set(body.allowed_routes.map((r) => choice(r, ROUTES)))]
+            : fail(400, 'Kies toegestane routes.');
         if (routes.some((r) => !c.routes.includes(r)))
           return fail(403, 'Deze route valt buiten de schoollicentie.');
-        const mode = choice(body.exercise_mode, ['free', 'assigned']);
+        const mode = inherit
+          ? standard.exercise_mode
+          : choice(body.exercise_mode, ['free', 'assigned']);
         const current = await policy(c, group, target);
         const affected = await rows(
           db,
@@ -936,6 +1067,8 @@ export async function handleInzicht(
         );
         const impactHash = await hash({
           current,
+          inherit,
+          standard,
           affected,
           routes,
           mode,
@@ -954,17 +1087,29 @@ export async function handleInzicht(
           await mutate(c, request, body, async () => ({
             data: { ok: true },
             statements: [
-              stmt(
-                db,
-                'INSERT INTO class_access_policies VALUES (?,?,?,?,?,?) ON CONFLICT(organization_id,group_id,subject_id) DO UPDATE SET version=class_access_policies.version+1,allowed_routes=excluded.allowed_routes,exercise_mode=excluded.exercise_mode',
-                c.org,
-                group,
-                target,
-                current.version + 1,
-                canonical(routes),
-                mode,
+              inherit
+                ? stmt(
+                    db,
+                    'DELETE FROM class_access_policies WHERE organization_id=? AND group_id=? AND subject_id=?',
+                    c.org,
+                    group,
+                    target,
+                  )
+                : stmt(
+                    db,
+                    'INSERT INTO class_access_policies VALUES (?,?,?,?,?,?) ON CONFLICT(organization_id,group_id,subject_id) DO UPDATE SET version=class_access_policies.version+1,allowed_routes=excluded.allowed_routes,exercise_mode=excluded.exercise_mode',
+                    c.org,
+                    group,
+                    target,
+                    current.version + 1,
+                    canonical(routes),
+                    mode,
+                  ),
+              audit(
+                c,
+                inherit ? 'policy.inherit' : 'policy.update',
+                `${group}:${target}`,
               ),
-              audit(c, 'policy.update', `${group}:${target}`),
             ],
           })),
         );
@@ -979,6 +1124,33 @@ export async function handleInzicht(
               group,
             ),
           );
+        if (path[3]) {
+          const existing = await one(
+            db,
+            'SELECT id FROM assignments WHERE organization_id=? AND group_id=? AND id=?',
+            c.org,
+            group,
+            path[3],
+          );
+          if (!existing) fail(404, 'Niet beschikbaar.');
+          if (body.action !== 'withdraw' || body.confirmed !== true)
+            fail(400, 'Bevestig het intrekken van deze opdracht.');
+          return response(
+            await mutate(c, request, body, async () => ({
+              data: { ok: true },
+              statements: [
+                stmt(
+                  db,
+                  "UPDATE assignments SET status='withdrawn' WHERE organization_id=? AND group_id=? AND id=?",
+                  c.org,
+                  group,
+                  path[3],
+                ),
+                audit(c, 'assignment.withdraw', path[3]),
+              ],
+            })),
+          );
+        }
         return response(
           await mutate(c, request, body, async () => {
             const a = await assignmentStatements(c, group, body);
@@ -1047,6 +1219,65 @@ export async function handleInzicht(
           ),
           201,
         );
+      }
+      if (path[2] === 'report' && !writing) {
+        const report = {
+          format: 'klink-inzicht-class-report',
+          version: 1,
+          exported_at: now(),
+          school: c.org,
+          group: g,
+          matrix: await matrix(c, group),
+          learners: await rows(
+            db,
+            'SELECT l.*,gm.status AS enrollment_status FROM school_learners l JOIN group_memberships gm ON gm.organization_id=l.organization_id AND gm.learner_id=l.id WHERE l.organization_id=? AND gm.group_id=?',
+            c.org,
+            group,
+          ),
+          revisions: await rows(
+            db,
+            'SELECT o.id,o.learner_id,o.skill_id,o.current_revision,r.* FROM teacher_observations o JOIN observation_revisions r ON r.organization_id=o.organization_id AND r.observation_id=o.id WHERE o.organization_id=? AND o.group_id=? ORDER BY o.id,r.revision',
+            c.org,
+            group,
+          ),
+          evidence: await rows(
+            db,
+            'SELECT e.*,r.reason AS revocation_reason,r.created_at AS revoked_at FROM evidence_events e LEFT JOIN evidence_revocations r ON r.organization_id=e.organization_id AND r.event_id=e.id WHERE e.organization_id=? AND e.group_id=?',
+            c.org,
+            group,
+          ),
+          attempts: await rows(
+            db,
+            'SELECT * FROM school_attempts WHERE organization_id=? AND group_id=?',
+            c.org,
+            group,
+          ),
+          assignments: await rows(
+            db,
+            'SELECT a.*,ar.learner_id,ar.status AS learner_status FROM assignments a JOIN assignment_recipients ar ON ar.organization_id=a.organization_id AND ar.assignment_id=a.id WHERE a.organization_id=? AND a.group_id=?',
+            c.org,
+            group,
+          ),
+          warning:
+            'Observaties en TRAIN zijn geen gevalideerd beheersingsbewijs. Dit onderwijsrapport is geen databaseback-up.',
+        };
+        if (
+          Number(
+            (
+              await one(
+                db,
+                'SELECT data_version FROM organizations WHERE id=?',
+                c.org,
+              )
+            )?.data_version,
+          ) !== c.version
+        )
+          fail(409, 'Gegevens zijn gewijzigd. Download opnieuw.');
+        await audit(c, 'class.report', group).run();
+        return response(report, 200, {
+          'Content-Disposition':
+            'attachment; filename="klink-inzicht-onderwijsrapport.json"',
+        });
       }
       if (path[2] === 'export' && !writing) {
         await audit(c, 'class.export', group).run();

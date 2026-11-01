@@ -1,6 +1,8 @@
-# Klink Inzicht — reviewbare lokale uitvoering
+# Klink Inzicht — lokale en online uitvoering
 
-1 november 2026. Normatieve volgorde: **R2 > R1 > v1.0**. De zeven volledige bronbestanden staan in `sources/`; de geactualiseerde startprompt v1.2 staat onderaan bron 00. Dit is een werkende, afzonderlijke module in de echte Klink-codebase, met lokale Cloudflare D1-opslag. **Geen vrijgave voor echte accounts, echte cursistgegevens of productie.**
+**Actuele vervolgstatus:** echte wachtwoordlogin met fictieve accounts en afzonderlijke online Cloudflare-staging zijn gerealiseerd. Lees [ONLINE-STAGING.md](ONLINE-STAGING.md) voor omgeving, bediening, controles en resterende gates. Dit bestand bewaart hieronder ook de lokale startprocedure; uitspraken over ontbrekende online voorzieningen zijn daarmee vervangen.
+
+1 november 2026. Normatieve volgorde: **R2 > R1 > v1.0**. De zeven volledige bronbestanden staan in `sources/`; de geactualiseerde startprompt v1.2 staat onderaan bron 00. Dit is een werkende, afzonderlijke module in de echte Klink-codebase, met lokale en afzonderlijke online Cloudflare D1-opslag. **Alleen fictieve accounts en gegevens; geen vrijgave voor echte cursisten of productie.**
 
 ## Wat werkt
 
@@ -45,6 +47,9 @@ De browsercontroles gebruiken Playwright en voor de beperkte geautomatiseerde to
 | Onderdeel | Bestanden |
 |---|---|
 | Featuregrens | `vite.config.ts`, `app/inzicht/[[...path]]/page.tsx` |
+| Online accountlogin | `lib/inzicht/auth.ts`, `db/migrations/inzicht/0003_staging_accounts.sql` |
+| Afzonderlijke online router | `scripts/inzicht/staging-app/app/`, `lib/inzicht/frame.tsx`, `lib/inzicht/worker.ts` |
+| Stagingbeheer | `scripts/inzicht/online-config.json`, `deploy-staging.mjs`, `online-init.mjs`, `rotate-staging-account.mjs` (scripts onder `scripts/inzicht/`) |
 | API | `app/api/inzicht/[...path]/route.ts`, `lib/inzicht/service.ts` |
 | Deterministische regels | `lib/inzicht/rules.ts` |
 | Docentschermen, echte navigatie | `components/inzicht/app.tsx`, `client.ts`, `inzicht.css` |
@@ -63,16 +68,16 @@ Alle school-API's vereisen `?school=...`. Schrijven vereist dezelfde Origin, JSO
 | WP0 inspectie | Uitgevoerd | Nieuwe livebasis opnieuw toetsen vóór iedere latere publicatie |
 | WP1 klassen/accounts | Lokale synthetische uitvoering | Beheerde echte login, MFA/herstel, accountactivatie, operationeel schoolbeheer |
 | WP2 observaties | Werkend lokaal | Goedgekeurde observatierubrics en praktijkreview |
-| WP3 bewijs/matrix | Werkend raamwerk; 3 proefvaardigheden | Gevalideerde meetinstrumenten, volledige skill/contentmapping, automatische bewaakte outbox-consumer, schaaltest op afgesproken cloudstaging |
-| WP4 toegang/opdrachten | Lokale kernroute werkend | Vrij-oefenenkeuzescherm, volledige catalogus, planning/intrekking in UI, terugzetten individuele uitzondering op klasstandaard, volledig onderwijsrapport |
+| WP3 bewijs/matrix | Werkend raamwerk; 3 proefvaardigheden | Gevalideerde meetinstrumenten, volledige skill/contentmapping, afgetekende alarmbewaking en verdere schaalacceptatie |
+| WP4 toegang/opdrachten | Lokale kernroute werkend | Volledige gevalideerde catalogus en praktijkreview; vrije keuze, planning/intrekking, herstel klasstandaard en onderwijsrapport zijn nu gebouwd |
 | WP5 lesadvies | Zuivere regels en docentoordeel werkend | Didactische kalibratie, geïntegreerde taakselectie vanuit advies, echte roosterbron |
-| WP6 vrijgave | Niet vrijgegeven | Zie ondertekende poorten, menselijke toegankelijkheids- en docentpilot, beheerde cloudstaging en productie-operatie |
+| WP6 vrijgave | Niet vrijgegeven | Zie ondertekende poorten, menselijke toegankelijkheids- en docentpilot, productie-auth/MFA en productie-operatie |
 
 Geen verborgen persoonlijke SQL-omgeving geclaimd: de bestaande persoonlijke voortgang is nog apparaatgebonden. Het nieuwe schoolsysteem importeert die niet. Een werkelijk persoonlijk account/passport en delen tussen contexten moeten apart ontworpen en goedgekeurd worden.
 
 ## Review vóór samenvoegen
 
-Lees `WP0.md`, `ACCEPTATIE-72.md`, `SECURITY-PRIVACY.md`, `HERSTEL.md` en de bewijsbestanden. De draft-PR is bedoeld voor inhoudelijke/code-review en vervolgbouw, **niet voor merge of uitrol**. Geen cloudstaging aangemaakt; geen remote database gewijzigd. Productiebuild compilet, maar lokaal starten van de gebouwde Worker via Wrangler beëindigde vóór ready; de gewone configuratie is afzonderlijk in dev gecontroleerd. Een online Worker/auth/privacyacceptatie blijft open.
+Lees `WP0.md`, `ACCEPTATIE-72.md`, `SECURITY-PRIVACY.md`, `HERSTEL.md` en de bewijsbestanden. De draft-PR is bedoeld voor inhoudelijke/code-review en vervolgbouw, **niet voor merge of uitrol**. De oorspronkelijke lokale oplevering wijzigde geen remote database. De nu toegestane aparte cloudstaging staat in ONLINE-STAGING.md. Productiebuild compilet, maar lokaal starten van de gebouwde Worker via Wrangler beëindigde vóór ready; de gewone configuratie is afzonderlijk in dev gecontroleerd. De online Worker en fictieve accountlogin zijn inmiddels getest; privacyacceptatie blijft open.
 
 De nieuwe cursistspeler heeft een echte heropenbare route `/inzicht/oefenen` met school-, klas-, content- en waar nodig opdrachtcontext. Een cataloguslink zonder klas vraagt eerst expliciet de juiste klas; een andere of ingetrokken context wordt opnieuw server-side geweigerd. De donkere weergave van alleen de nieuwe module gebruikt de bestaande donkere schoolmenu-kleuren. Bestaande hoofdschermen zijn niet aangepast.
 

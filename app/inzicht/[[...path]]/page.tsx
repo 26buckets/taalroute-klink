@@ -6,7 +6,11 @@ export default function Page() {
   if (!enabled(env as unknown as InzichtEnv)) notFound();
   return (
     <div className="ki-page">
-      <InzichtApp />
+      <InzichtApp
+        online={
+          (env as unknown as InzichtEnv).INZICHT_MODE === 'synthetic-online'
+        }
+      />
     </div>
   );
 }

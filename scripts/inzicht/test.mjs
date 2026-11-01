@@ -855,3 +855,208 @@ test('KI005/019/020/043: multiple classes, explicit context, individual override
     404,
   );
 });
+
+test('KI018/019/020: restore inheritance previews the actual class standard and follows later changes', async () => {
+  const s = setup();
+  const path = 'classes/school-a:klas/policy';
+  const change = async (body) => {
+    const p = await s.request(path, { ...body, preview: true });
+    assertStatus(p, 200);
+    return s.request(path, {
+      ...body,
+      impact_hash: p.data.impact_hash,
+      confirmed: true,
+    });
+  };
+  assertStatus(
+    await change({
+      learner_id: 'school-a:leerling-1',
+      allowed_routes: [],
+      exercise_mode: 'assigned',
+    }),
+    200,
+  );
+  assertStatus(
+    await change({ learner_id: 'school-a:leerling-1', inherit: true }),
+    200,
+  );
+  assert.deepEqual(
+    (await s.request(path + '?learner=school-a:leerling-1')).data
+      .allowed_routes,
+    ['Alfa A'],
+  );
+  assertStatus(
+    await change({ allowed_routes: [], exercise_mode: 'assigned' }),
+    200,
+  );
+  assert.deepEqual(
+    (await s.request(path + '?learner=school-a:leerling-1')).data
+      .allowed_routes,
+    [],
+  );
+  assert.equal(
+    s.db.connection
+      .prepare(
+        "SELECT COUNT(*) n FROM class_access_policies WHERE subject_id='school-a:leerling-1'",
+      )
+      .get().n,
+    0,
+  );
+});
+test('KI021/043: future assignments stay hidden, free practice respects policy, withdrawal preserves evidence', async () => {
+  const s = setup();
+  const i = await s.request(
+    'invites',
+    {
+      learner_id: 'school-a:leerling-1',
+      membership_id: 'school-a:cursist',
+      identity_checked: true,
+    },
+    { user: 'registrar' },
+  );
+  await s.request(
+    'accept-invite',
+    { token: i.data.token },
+    { user: 'cursist' },
+  );
+  let home = await s.request('my-school', undefined, { user: 'cursist' });
+  assert.equal(home.data.free_practice.length, 3);
+  const future = await s.request('classes/school-a:klas/assignments', {
+    content_id: 'word-mat',
+    learner_ids: ['school-a:leerling-1'],
+    starts_at: new Date(Date.now() + 86400000).toISOString(),
+    ends_at: new Date(Date.now() + 172800000).toISOString(),
+  });
+  assertStatus(future, 201);
+  home = await s.request('my-school', undefined, { user: 'cursist' });
+  assert.equal(home.data.assignments.length, 0);
+  const a = await s.request('classes/school-a:klas/assignments', {
+    content_id: 'word-mat',
+    learner_ids: ['school-a:leerling-1'],
+    starts_at: new Date(Date.now() - 1000).toISOString(),
+  });
+  assertStatus(a, 201);
+  const practice = `school-practice?class=school-a:klas&content=word-mat&assignment=${a.data.id}`;
+  assertStatus(
+    await s.request(
+      practice,
+      { answer: 'klink-woord-mat' },
+      { user: 'cursist' },
+    ),
+    201,
+  );
+  const withdraw = `classes/school-a:klas/assignments/${a.data.id}`;
+  assertStatus(await s.request(withdraw, { action: 'withdraw' }), 400);
+  assertStatus(
+    await s.request(
+      withdraw,
+      { action: 'withdraw', confirmed: true },
+      { user: 'collega' },
+    ),
+    404,
+  );
+  assertStatus(
+    await s.request(withdraw, { action: 'withdraw', confirmed: true }),
+    200,
+  );
+  assertStatus(await s.request(practice, undefined, { user: 'cursist' }), 403);
+  assert.equal(s.count('school_attempts'), 1);
+  assert.equal(s.count('evidence_events'), 1);
+  const body = { allowed_routes: ['Alfa A'], exercise_mode: 'assigned' };
+  const p = await s.request('classes/school-a:klas/policy', {
+    ...body,
+    preview: true,
+  });
+  await s.request('classes/school-a:klas/policy', {
+    ...body,
+    impact_hash: p.data.impact_hash,
+    confirmed: true,
+  });
+  home = await s.request('my-school', undefined, { user: 'cursist' });
+  assert.equal(home.data.free_practice.length, 0);
+});
+test('KI024/048: education report includes observations and evidence, never other tenants or credentials', async () => {
+  const s = setup();
+  await s.observe();
+  const r = await s.request('classes/school-a:klas/report');
+  assertStatus(r, 200);
+  assert.equal(r.data.revisions.length, 1);
+  assert.equal(r.data.evidence.length, 1);
+  assert.equal(r.data.learners.length, 12);
+  assert.match(r.headers.get('content-disposition'), /attachment/);
+  const text = JSON.stringify(r.data);
+  for (const secret of ['school-b', 'token_hash', 'password_hash'])
+    assert(!text.includes(secret));
+  for (const user of ['beheerder', 'registrar', 'support', 'cursist'])
+    assertStatus(
+      await s.request('classes/school-a:klas/report', undefined, { user }),
+      403,
+    );
+  assertStatus(await s.request('classes/school-b:klas/report'), 404);
+});
+
+test('KI048: automatic processing keeps two schools and their evidence hashes separate', async () => {
+  const s = setup();
+  await s.observe();
+  assertStatus(
+    await s.observe(
+      { class_id: 'school-b:klas', learner_id: 'school-b:leerling-1' },
+      { org: 'school-b' },
+    ),
+    201,
+  );
+  const { processPending } = await import('../../lib/inzicht/service.ts');
+  await processPending(s.db);
+  const snapshots = s.db.connection
+    .prepare('SELECT * FROM mastery_snapshots ORDER BY organization_id')
+    .all();
+  assert.equal(snapshots.length, 2);
+  for (const row of snapshots) {
+    assert(row.group_id.startsWith(row.organization_id + ':'));
+    assert(row.learner_id.startsWith(row.organization_id + ':'));
+  }
+  assert.notEqual(snapshots[0].evidence_hash, snapshots[1].evidence_hash);
+  assert.equal(
+    s.db.connection
+      .prepare("SELECT COUNT(*) n FROM outbox_events WHERE status<>'processed'")
+      .get().n,
+    0,
+  );
+});
+test('KI042: waiting, tampered and expired invitation never opens a learner dossier', async () => {
+  const s = setup();
+  const invitation = await s.request(
+    'invites',
+    {
+      learner_id: 'school-a:leerling-1',
+      membership_id: 'school-a:cursist',
+      identity_checked: true,
+    },
+    { user: 'registrar' },
+  );
+  assertStatus(invitation, 201);
+  assert.equal(
+    (await s.request('my-school', undefined, { user: 'cursist' })).data.linked,
+    false,
+  );
+  assertStatus(
+    await s.request(
+      'accept-invite',
+      { token: 'a'.repeat(64) },
+      { user: 'cursist' },
+    ),
+    409,
+  );
+  s.db.exec("UPDATE school_invites SET expires_at='2020-01-01'");
+  assertStatus(
+    await s.request(
+      'accept-invite',
+      { token: invitation.data.token },
+      { user: 'cursist' },
+    ),
+    409,
+  );
+  const home = await s.request('my-school', undefined, { user: 'cursist' });
+  assert.equal(home.data.linked, false);
+  assert.deepEqual(home.data.assignments, []);
+});

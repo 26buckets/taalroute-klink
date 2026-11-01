@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-01T02:57:50.486Z",
+  "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "checks": [
+    {
+      "path": "/inzicht",
+      "status": 200
+    },
+    {
+      "path": "/api/inzicht/me",
+      "status": 401
+    },
+    {
+      "path": "/api/inzicht/classes?school=school-a",
+      "status": 401
+    },
+    {
+      "path": "/api/inzicht/session",
+      "status": 404
+    },
+    {
+      "path": "/docenten",
+      "status": 404
+    },
+    {
+      "path": "/api/attempts",
+      "status": 404
+    }
+  ],
+  "real_password_login": true,
+  "secure_cookie": true,
+  "tenant_isolation": true,
+  "csrf": true,
+  "server_logout": true
+}

@@ -2,6 +2,10 @@
 
 Dit document registreert implementatie en open beslissingen. Het is geen juridische goedkeuring. Er zijn uitsluitend synthetische testgegevens verwerkt; de bestaande remote database is alleen op schemaniveau geïnspecteerd.
 
+## Vervolgstatus online staging
+
+De afzonderlijke online testomgeving is uitsluitend met fictieve accounts ingericht. Echte wachtwoordcontrole, host-only Secure/HttpOnly-cookies, rate limiting, account- en sessie-intrekking, gedeeld-apparaatcontrole en credentialrotatie zijn getest. Lokale testtokens werken er niet. Zie ONLINE-STAGING.md en de auth-/browserbewijzen. De aparte reeds bestaande Inzicht-app en haar accounts zijn niet gebruikt. MFA, echte activatie/identiteitsverificatie en juridische poorten blijven open. Er is geen onbeveiligde fixture-login online gezet.
+
 ## Getoetste grenzen
 
 - Iedere API-read/write haalt actuele sessie, user, schoolmembership en rol op; klasacties toetsen docenttoewijzing. School-admin en support krijgen geen onderwijsdossiers. Schoolregistrar krijgt alleen registratiegegevens, geen observaties.
@@ -21,9 +25,9 @@ Cross-school URL/export, vreemde klas, onbevoegde docent/admin/support, ingetrok
 1. **Identiteit:** keuze en integratie van beheerde auth; verificatie van identiteit en schooldomein, veilige activatie, MFA voor bevoegde medewerkers, sessierotatie, intrekken, herstel, schooluitdiensttreding en gedeelde apparaten. Geen knop waarmee de lokale fixture-login op internet wordt aangezet.
 2. **Privacy:** bevoegde privacyverantwoordelijke tekent doel/grondslag, controller/verwerkerrollen, DPIA-beoordeling, informatie aan cursisten, inzage/correctie/verwijdering, dataminimalisatie en onderstaande retentiematrix. Schoolcontracten, subverwerkers/regio en doorgiften afzonderlijk vaststellen.
 3. **Didactiek:** valideer rubrics, minimumitems, onafhankelijkheid/transfer, aandacht, veroudering, 60%-dekking en 3-en-30%-grens. Alle huidige runtimevaardigheden hebben `measurement_approved=0`. Synthetische tests van grenswaarden zijn geen inhoudelijk bewijs van validiteit.
-4. **Beheer:** eigenaar, herstelbevoegde, RPO/RTO, back-upschema, versleutelde opslag/toegang, alarmen, fout-/outboxbewaking, verzoekretentie, limieten en incidentprocedure. Globale schoolversie kiest veilige conflictafhandeling boven gelijktijdige schrijfsnelheid; grotere scholen eerst op echte D1-staging belasten. Nog geen automatische outbox-worker of periodieke back-uptaak.
+4. **Beheer:** eigenaar, herstelbevoegde, RPO/RTO, back-upschema, versleutelde opslag/toegang, alarmen, fout-/outboxbewaking, verzoekretentie, limieten en incidentprocedure. Globale schoolversie kiest veilige conflictafhandeling boven gelijktijdige schrijfsnelheid; grotere scholen eerst op echte D1-staging belasten. Er is nu een begrensde automatische outbox-consumer en geteste D1 Time Travel-herstelroute. Een onafhankelijke periodieke versleutelde export en operationele alarmdienst zijn nog niet vastgesteld.
 5. **Praktijk:** twee bevoegde docenten testen echte taken met fictieve dossiers; keyboard/screenreader en zoom/reflow op afgesproken apparaten, ook light/dark. Automatische axe-controle op enkele schermen is geen WCAG 2.2 AA-certificaat.
-6. **Publicatie:** actuele goedgekeurde livebron opnieuw vaststellen, veilige beheerde cloudstaging inrichten, gehele release lokaal valideren, concreet akkoord van Nico. Deze PR nooit automatisch mergen/publiceren.
+6. **Publicatie:** actuele goedgekeurde livebron opnieuw vaststellen, de ingerichte synthetische cloudstaging beoordelen, gehele release lokaal valideren, concreet akkoord van Nico. Deze PR nooit automatisch mergen/publiceren.
 
 ## Retentiematrix — te besluiten en te tekenen
 

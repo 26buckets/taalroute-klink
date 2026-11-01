@@ -1,3 +1,4 @@
+import stagingConfig from './scripts/inzicht/online-config.json';
 import tailwindcss from '@tailwindcss/postcss';
 import vinext from 'vinext';
 import { defineConfig } from 'vite';
@@ -22,6 +23,8 @@ const cloudflareConfig = {
 
 export default defineConfig(async ({ command }) => {
   const inzichtLocal = process.env.KLINK_INZICHT_LOCAL === '1';
+  const inzichtOnline = process.env.KLINK_INZICHT_STAGING === '1';
+  if (inzichtOnline && inzichtLocal) throw new Error('Kies één testomgeving.');
   if (inzichtLocal && command !== 'serve')
     throw new Error(
       'Inzicht synthetische staging mag uitsluitend lokaal draaien.',
@@ -36,7 +39,16 @@ export default defineConfig(async ({ command }) => {
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
   return {
-    css: { postcss: { plugins: [tailwindcss()] } },
+    ...(inzichtOnline ? { publicDir: '.wrangler/inzicht-assets' } : {}),
+    css: {
+      postcss: {
+        plugins: [
+          tailwindcss(
+            inzichtOnline ? { base: `${process.cwd()}/components` } : {},
+          ),
+        ],
+      },
+    },
     server: {
       ...(inzichtLocal ? { host: '127.0.0.1' } : {}),
       watch: {
@@ -47,25 +59,31 @@ export default defineConfig(async ({ command }) => {
       },
     },
     plugins: [
-      vinext(),
+      vinext(inzichtOnline ? { appDir: 'scripts/inzicht/staging-app' } : {}),
       cloudflare({
         viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] },
-        config: inzichtLocal
+        config: inzichtOnline
           ? {
-              ...cloudflareConfig,
-              name: 'taalroute-klink-inzicht-local',
-              routes: [],
-              vars: { INZICHT_MODE: 'synthetic-local' },
-              d1_databases: [
-                ...cloudflareConfig.d1_databases,
-                {
-                  binding: 'INZICHT_DB',
-                  database_name: 'klink-inzicht-synthetic-local',
-                  database_id: '00000000-0000-4000-8000-000000000001',
-                },
-              ],
+              ...stagingConfig,
+              main: 'lib/inzicht/worker.ts',
+              assets: { run_worker_first: true, binding: 'ASSETS' },
             }
-          : cloudflareConfig,
+          : inzichtLocal
+            ? {
+                ...cloudflareConfig,
+                name: 'taalroute-klink-inzicht-local',
+                routes: [],
+                vars: { INZICHT_MODE: 'synthetic-local' },
+                d1_databases: [
+                  ...cloudflareConfig.d1_databases,
+                  {
+                    binding: 'INZICHT_DB',
+                    database_name: 'klink-inzicht-synthetic-local',
+                    database_id: '00000000-0000-4000-8000-000000000001',
+                  },
+                ],
+              }
+            : cloudflareConfig,
       }),
     ],
   };

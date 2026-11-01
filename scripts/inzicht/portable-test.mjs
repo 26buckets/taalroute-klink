@@ -19,7 +19,9 @@ source.exec('PRAGMA foreign_keys=ON');
 for (const f of readdirSync('db/migrations/inzicht').sort())
   source.exec(readFileSync(`db/migrations/inzicht/${f}`, 'utf8'));
 source.exec((await fixtures()).sql);
-const bundle = await snapshot(source);
+const bundle = process.argv[2]
+  ? JSON.parse(readFileSync(process.argv[2], 'utf8'))
+  : await snapshot(source);
 await verify(bundle);
 assert(!bundle.data.inzicht_sessions);
 assert(!bundle.data.school_invites);
@@ -83,7 +85,7 @@ try {
     );
   }
   writeFileSync(
-    'docs/inzicht-20261101/evidence/portable-test-results.json',
+    `docs/inzicht-20261101/evidence/${process.argv[2] ? 'online-' : ''}portable-test-results.json`,
     JSON.stringify(
       {
         at: new Date().toISOString(),

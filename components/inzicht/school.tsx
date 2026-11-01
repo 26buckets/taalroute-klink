@@ -178,6 +178,7 @@ export function Registrar({ school }: { school: string }) {
 }
 type MySchool = {
   linked: boolean;
+  free_practice: { group_id: string; content_id: string; title: string }[];
   classes: { id: string; name: string }[];
   assignments: {
     id: string;
@@ -330,6 +331,30 @@ export function SchoolLearner({ school }: { school: string }) {
                 </p>
                 <button className="primary-button" onClick={() => open(a)}>
                   Oefening openen
+                </button>
+              </article>
+            ))
+          )}
+          <h3>Vrij oefenen voor school</h3>
+          {!data.free_practice?.length ? (
+            <p>Er zijn geen oefeningen vrijgegeven buiten je opdrachten.</p>
+          ) : (
+            data.free_practice.map((p) => (
+              <article
+                className="ki-preview"
+                key={`${p.group_id}:${p.content_id}`}
+              >
+                <h4>{p.title}</h4>
+                <p>{data.classes.find((c) => c.id === p.group_id)?.name}</p>
+                <button
+                  className="secondary-button"
+                  onClick={() =>
+                    router.push(
+                      `/inzicht/oefenen?school=${encodeURIComponent(school)}&class=${encodeURIComponent(p.group_id)}&content=${encodeURIComponent(p.content_id)}`,
+                    )
+                  }
+                >
+                  Vrij oefenen
                 </button>
               </article>
             ))

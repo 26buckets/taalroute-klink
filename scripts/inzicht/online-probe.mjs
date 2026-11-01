@@ -1,0 +1,79 @@
+import assert from 'node:assert/strict';
+import { readFileSync, writeFileSync } from 'node:fs';
+const { vars } = JSON.parse(readFileSync('scripts/inzicht/online-config.json'));
+const base = vars.INZICHT_ORIGIN;
+const checks = [];
+for (const [path, status] of [
+  ['/inzicht', 200],
+  ['/api/inzicht/me', 401],
+  ['/api/inzicht/classes?school=school-a', 401],
+  ['/api/inzicht/session', 404],
+  ['/docenten', 404],
+  ['/api/attempts', 404],
+]) {
+  const r = await fetch(base + path, { redirect: 'manual' });
+  assert.equal(r.status, status, `${path}: ${await r.text()}`);
+  checks.push({ path, status: r.status });
+}
+const account = JSON.parse(
+  readFileSync('.wrangler/inzicht-online-credentials.json'),
+).docent;
+const r = await fetch(base + '/api/inzicht/login', {
+  method: 'POST',
+  headers: { origin: base, 'Content-Type': 'application/json' },
+  body: JSON.stringify(account),
+});
+assert.equal(r.status, 200, await r.text());
+const cookie = r.headers.get('set-cookie').split(';')[0];
+assert.match(r.headers.get('set-cookie'), /HttpOnly/);
+assert.match(r.headers.get('set-cookie'), /Secure/);
+assert.match(r.headers.get('set-cookie'), /SameSite=Strict/);
+const me = await fetch(base + '/api/inzicht/me', { headers: { cookie } });
+assert.equal(me.status, 200);
+assert.equal(me.headers.get('cache-control'), 'no-store, private');
+assert.equal((await me.json()).user, 'docent');
+const cross = await fetch(
+  base + '/api/inzicht/classes/school-b:klas?school=school-a',
+  { headers: { cookie } },
+);
+assert.equal(cross.status, 404);
+const csrf = await fetch(base + '/api/inzicht/classes?school=school-a', {
+  method: 'POST',
+  headers: {
+    cookie,
+    origin: 'https://evil.invalid',
+    'Content-Type': 'application/json',
+  },
+  body: '{}',
+});
+assert.equal(csrf.status, 403);
+const logout = await fetch(base + '/api/inzicht/logout', {
+  method: 'POST',
+  headers: { cookie, origin: base, 'Content-Type': 'application/json' },
+  body: '{}',
+});
+assert.equal(logout.status, 200);
+assert.equal(
+  (await fetch(base + '/api/inzicht/me', { headers: { cookie } })).status,
+  401,
+);
+writeFileSync(
+  'docs/inzicht-20261101/evidence/online-probe.json',
+  JSON.stringify(
+    {
+      at: new Date().toISOString(),
+      origin: base,
+      checks,
+      real_password_login: true,
+      secure_cookie: true,
+      tenant_isolation: true,
+      csrf: true,
+      server_logout: true,
+    },
+    null,
+    2,
+  ),
+);
+console.log(
+  'Online: public login only, real password login, secure cookie, tenant denial, CSRF and revoked logout passed.',
+);

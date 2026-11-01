@@ -1,0 +1,179 @@
+{
+  "at": "2026-11-01",
+  "deployment_version": "dde62061-5024-461f-bd7e-cdc4dd60471a",
+  "base_commit": "41091ea9f98e75697bbe091b5124218f3c78b925",
+  "normal_product_files_changed": false,
+  "staging_files": [
+    {
+      "path": "app/inzicht/[[...path]]/page.tsx",
+      "sha256": "b382a45f2834e9addbaa836f1df35ee4b844af62583332747c6e5edcd6112a4f"
+    },
+    {
+      "path": "app/api/inzicht/[...path]/route.ts",
+      "sha256": "4ff1099bae91deb1f821486f96d6fabf30334e904d770d149b4eabe077553562"
+    },
+    {
+      "path": "components/inzicht/school.tsx",
+      "sha256": "48962020a168e38757d2da14543ac329f7d05dabe8167b429735f47343cbaf66"
+    },
+    {
+      "path": "components/inzicht/app.tsx",
+      "sha256": "8e97e417c0d481f4249020b550d4eb8fbb244e6f985cc22cd78db38160091dec"
+    },
+    {
+      "path": "components/inzicht/client.ts",
+      "sha256": "7aa4003b6458d668f2e5e4e304640481dcf5fe533f8d90bd78bf17e60aaf98f0"
+    },
+    {
+      "path": "components/inzicht/inzicht.css",
+      "sha256": "449cd4cd43af46a405a8d8056f6daecc4e1967065dee1c1f99b99417f6a26ba5"
+    },
+    {
+      "path": "lib/inzicht/rules.ts",
+      "sha256": "bf5efa85f5994c8f8fb66a1c194445b747f854811a7fb70d68d35c5bac5e1b48"
+    },
+    {
+      "path": "lib/inzicht/service.ts",
+      "sha256": "beee6ad69761fc7ece504ac8dca0528bc4f506d8c4411ecdbe1d59c701d51cf4"
+    },
+    {
+      "path": "lib/inzicht/frame.tsx",
+      "sha256": "c3e699602f1a6e1b07f7e3c82c4f2671fc98cd7fa96e4312f166ffa37beabbf3"
+    },
+    {
+      "path": "lib/inzicht/auth.ts",
+      "sha256": "594cdd56705fda395bb31e5463a26dad2d7445801bb1b3793409f1586e4c7a93"
+    },
+    {
+      "path": "lib/inzicht/worker.ts",
+      "sha256": "ff01bf2607931f24a5c333f9e770b323cc280552c8b1d8dc9d520579453bfc9f"
+    },
+    {
+      "path": "scripts/inzicht/rotate-staging-account.mjs",
+      "sha256": "088cc51914b82dbe49b1c245df571456284aa33636c001246b3b311edc019530"
+    },
+    {
+      "path": "scripts/inzicht/test.mjs",
+      "sha256": "00770b3152d5b7ae989345b2ccd3b5f38be836a28c42c553c6d2daa4e8792dc5"
+    },
+    {
+      "path": "scripts/inzicht/shared-device.mjs",
+      "sha256": "e0be34da1f29f14bebbb3982f2e743ba2684aca88f2d402bff36cc4a5e93930f"
+    },
+    {
+      "path": "scripts/inzicht/online-config.json",
+      "sha256": "5fb93204e7c235c1625fdd5af49690997f6bfde6ae8a09915e292ea7c3863232"
+    },
+    {
+      "path": "scripts/inzicht/student-browser.mjs",
+      "sha256": "3379a8393e09ff76ad0dd1a3d28b9e4c844ed0d8c324e5c5729e78a28d205aee"
+    },
+    {
+      "path": "scripts/inzicht/performance-online.mjs",
+      "sha256": "3d208e3833bdd99bdc794b9c06f8ac64a960da06d33de2cd4122c2b763f8932a"
+    },
+    {
+      "path": "scripts/inzicht/appearance-browser.mjs",
+      "sha256": "49fcbb62ed1019187f4b59b36257a96a5e49d3a20627bb227c63b64ba93c11b3"
+    },
+    {
+      "path": "scripts/inzicht/staging.mjs",
+      "sha256": "1c6a44af300ae00df5cd84dfbb406f39c3b27735134a3be512b95d4ae422f085"
+    },
+    {
+      "path": "scripts/inzicht/browser.mjs",
+      "sha256": "6a646dc23d1a52d941b08b8e5d90ede8a304910cfe99bbea83737819dd7e385e"
+    },
+    {
+      "path": "scripts/inzicht/recover-online.mjs",
+      "sha256": "33bda0cc33aa4c234854076f12f57568d340e704f09a6f169f7adf40f46a032b"
+    },
+    {
+      "path": "scripts/inzicht/online-probe.mjs",
+      "sha256": "0122bc126c1b79ace3041387175bb8a5c242d37b42477c3582fefca7fd03a5e4"
+    },
+    {
+      "path": "scripts/inzicht/staging-assets.mjs",
+      "sha256": "d728abd69ac8ca1ecad950b454ff8bb328dea88d840b7ae48590b61f5998faff"
+    },
+    {
+      "path": "scripts/inzicht/sqlite.mjs",
+      "sha256": "0e8bd4ef8adb8737bc626a9b4de12d2a31baede11f71986386ff9f32ff3f4973"
+    },
+    {
+      "path": "scripts/inzicht/rotation-test.mjs",
+      "sha256": "891d68787c593e1052dee4332151854050518b7487498e0d68f591f28b140576"
+    },
+    {
+      "path": "scripts/inzicht/portable-test.mjs",
+      "sha256": "498de267b4aecda8ca68990840cec95230adbf985dd3213d2b82c14ccd0e6546"
+    },
+    {
+      "path": "scripts/inzicht/auth-test.mjs",
+      "sha256": "745b575da85931895bb7588a38a15020567437a1f71fa4a04aa02c6d0c5569f1"
+    },
+    {
+      "path": "scripts/inzicht/fixtures.mjs",
+      "sha256": "e4216ab3dfe97640bea65fe3e2e39e0a458c56dc8e49fe6f2c5872a3b145f8d4"
+    },
+    {
+      "path": "scripts/inzicht/browser-auth.mjs",
+      "sha256": "2c7904247e77411577b1845e44b9e8224587393d24af889f9dca19a9d742b0ce"
+    },
+    {
+      "path": "scripts/inzicht/portable.mjs",
+      "sha256": "97f6149232616822f171539deea0e5f319e20f651d5413d64f826d9e2956272a"
+    },
+    {
+      "path": "scripts/inzicht/sessions.mjs",
+      "sha256": "bd9c63bdb6aeb6b44bbc61097b221bd2f5f0cecf6241a9cd888bdf5b6b07684a"
+    },
+    {
+      "path": "scripts/inzicht/online-init.mjs",
+      "sha256": "312b06bf294a2415847a5baf1c372329f6a9f661d9a2cc8f59e4b2d29801c229"
+    },
+    {
+      "path": "scripts/inzicht/restore-config.json",
+      "sha256": "2fa1eee77fcc39469129ebcdf43148e00594f95ed7694604df0b4bf410a779a3"
+    },
+    {
+      "path": "scripts/inzicht/deploy-staging.mjs",
+      "sha256": "fd60ae3c185c7db7e603d098d6ccbf8cad90e624a7c8c555be641e504a7d1f7d"
+    },
+    {
+      "path": "scripts/inzicht/remaining-browser.mjs",
+      "sha256": "bfe7eb02e843356ba6cc1a44748862c13362e2dea6ef0739eb56bc7068c2c9bc"
+    },
+    {
+      "path": "scripts/inzicht/staging-app/app/layout.tsx",
+      "sha256": "4627899e4004da17762fdec8495b3ac62a21b08037b4aeaba55e7f5d59a8b9e5"
+    },
+    {
+      "path": "scripts/inzicht/staging-app/app/inzicht/[[...path]]/page.tsx",
+      "sha256": "4db2354e5a712d5ed7bb9697eeea87395873a5cb771aad8afe8317ea2d3c186a"
+    },
+    {
+      "path": "scripts/inzicht/staging-app/app/api/inzicht/[...path]/route.ts",
+      "sha256": "28ce95cd8bb360050c5a8d90c1dc8c7af386584de805264403eb5bc4e4ad08ac"
+    },
+    {
+      "path": "db/migrations/inzicht/0001_inzicht.sql",
+      "sha256": "4fde2d4604032169657047a549ca60f87df4eb9324c363c807c578afa03b25d6"
+    },
+    {
+      "path": "db/migrations/inzicht/0002_school_attempts.sql",
+      "sha256": "7d86f14b288d5db3b2d2be34e824f71e7119f681f9aee62aaf051317eb54f8cc"
+    },
+    {
+      "path": "db/migrations/inzicht/0003_staging_accounts.sql",
+      "sha256": "35e2972b12e89b9778717f16d4a1530ee403b21a5b92f7a36f965bc789ce290f"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "082dd5dee1f7ecff35a343c0c8b32d1a8dfd397978a186344fa9c733b219a6d4"
+    }
+  ],
+  "synthetic_data_only": true,
+  "production_published": false,
+  "pr_merged": false
+}

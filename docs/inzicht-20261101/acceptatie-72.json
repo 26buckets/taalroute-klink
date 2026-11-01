@@ -1,10 +1,10 @@
 {
   "date": "2026-11-01",
-  "scope": "synthetic local only; not release approval",
+  "scope": "synthetic local and isolated online staging; not release approval",
   "priority": "R2 > R1 > v1.0",
   "counts": {
-    "GETEST": 48,
-    "DEELS": 21,
+    "GETEST": 51,
+    "DEELS": 18,
     "OPEN": 3
   },
   "cases": [
@@ -12,7 +12,7 @@
       "id": "KI001",
       "requirement": "docent maakt klas; opnieuw inloggen -> identieke serverklasse.",
       "status": "GETEST",
-      "evidence_or_gap": "API-persistentie en browser reload; herstartcontrole. Echte productie-login blijft apart open."
+      "evidence_or_gap": "Online native wachtwoordlogin, serverklasse, herladen/heropenen; twee browsers. Echte identiteiten/MFA blijven releasegate."
     },
     {
       "id": "KI002",
@@ -114,7 +114,7 @@
       "id": "KI018",
       "requirement": "matrixcel -> exact onderliggend bewijs zichtbaar.",
       "status": "GETEST",
-      "evidence_or_gap": "API en keyboard browserdoorklik naar werkelijke onderliggende events."
+      "evidence_or_gap": "Klaspolicy, impactbevestiging en terugzetten individuele uitzondering op blijvend erven van de klasstandaard; API en online browsers."
     },
     {
       "id": "KI019",
@@ -150,7 +150,7 @@
       "id": "KI024",
       "requirement": "assignment status 'finished' -> geen onbewezen mastery.",
       "status": "GETEST",
-      "evidence_or_gap": "Finished schooloefening blijft TRAIN; serverresultaat verandert geen mastery."
+      "evidence_or_gap": "Bestaande acceptatie plus volledig klasrapport met matrix, observatierevisies, bewijs, pogingen en opdrachten; geen credentials of andere school. API en online browsers."
     },
     {
       "id": "KI025",
@@ -197,8 +197,8 @@
     {
       "id": "KI032",
       "requirement": "gedeelde computer logout -> geen leerlingdata in cache/volgende sessie.",
-      "status": "DEELS",
-      "evidence_or_gap": "Serverlogout, no-store en geen browserstorage getest; volledige back/forward/shared-device audit nog nodig."
+      "status": "GETEST",
+      "evidence_or_gap": "Online uitloggen trekt sessie in; Back/Forward/reload toont login; volgende beheerder krijgt geen dossiers. Chromium en WebKit; geen schooldata in browseropslag."
     },
     {
       "id": "KI033",
@@ -216,7 +216,7 @@
       "id": "KI035",
       "requirement": "30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.",
       "status": "DEELS",
-      "evidence_or_gap": "30x100 lokale Node/SQLite-servicemeting circa 3 ms; geen afgesproken cloudstaging-SLO of grote browsermatrix bewezen."
+      "evidence_or_gap": "Online D1, 30×100 matrix en 3000 TRAIN-events: vijf volledige API-antwoorden 235–527 ms. Geen cold-start-, gelijktijdigheids- of volledige browserrender-SLO."
     },
     {
       "id": "KI036",
@@ -257,8 +257,8 @@
     {
       "id": "KI042",
       "requirement": "wachtende, verlopen of vervalste invitatie geeft nooit leerlinggegevens vrij.",
-      "status": "DEELS",
-      "evidence_or_gap": "Exact account, hash, expiryquery, replay en onbekende invite; volledig abuse/expiry browserpakket nog uitbouwen."
+      "status": "GETEST",
+      "evidence_or_gap": "Wachtende, vervalste en verlopen uitnodiging openen geen dossier; exacte accountbinding en eenmaligheid in API-tests. Registratie/koppeling met echte fictieve login in twee online browsers."
     },
     {
       "id": "KI043",
@@ -293,8 +293,8 @@
     {
       "id": "KI048",
       "requirement": "school A via export/achtergrondtaak/cache kan geen school B-resultaat lezen.",
-      "status": "DEELS",
-      "evidence_or_gap": "API/export/context/cachegrenzen getest; aparte automatische achtergrondconsumer bestaat nog niet."
+      "status": "GETEST",
+      "evidence_or_gap": "Tenant- en klascontrole op API, CSV/onderwijsrapport, context/cache en automatische outbox-consumer. Twee-schooltest bevestigt gescheiden snapshot-hashes. Echte Cloudflare-timer verwerkt alleen correct gecontextualiseerde gebeurtenissen."
     },
     {
       "id": "KI049",
@@ -318,7 +318,7 @@
       "id": "KI052",
       "requirement": "beperkte leerroute met actieve open opdracht -> impactpreview en expliciete beslissing.",
       "status": "DEELS",
-      "evidence_or_gap": "Impacthash + bevestiging en hercontrole actieve opdracht getest; preview toont beperkte impact, geen volledige intrekkingswizard."
+      "evidence_or_gap": "Actuele impacthash, expliciete bevestiging, individuele reset en aparte bevestigde opdrachtintrekking werken. Impactoverzicht blijft beperkt; volledige causale intrekkingswizard open."
     },
     {
       "id": "KI053",
@@ -336,7 +336,7 @@
       "id": "KI055",
       "requirement": "audit/back-upverwijderingscontract en RTO/RPO runbook bestaan en getest vóór echte pilotdata.",
       "status": "OPEN",
-      "evidence_or_gap": "Technische SQLite/PostgreSQL-restore geslaagd; back-upverwijderingscontract, cloud-RTO/RPO en tombstones nog niet afgetekend/getest."
+      "evidence_or_gap": "Online D1-export naar SQLite, PostgreSQL en aparte remote D1 teruggelezen; Time Travel wijziging/restore geslaagd. Juridisch verwijdercontract, tombstones en afgetekende RPO/RTO blijven open."
     },
     {
       "id": "KI056",
@@ -420,7 +420,7 @@
       "id": "KI069",
       "requirement": "docentnote bevat script/HTML of CSV-formule -> opgeslagen en geëxporteerd zonder XSS/formula-executie.",
       "status": "DEELS",
-      "evidence_or_gap": "SQL-waarden, tekstweergave en CSV-formule-escaping; nog geen volledige note-export/XSS-browserfuzzing."
+      "evidence_or_gap": "Tekstweergave, SQL-parameters en CSV-formule-escaping getest. Volledig JSON-onderwijsrapport toegevoegd; onafhankelijke uitgebreide browserfuzzing/pentest niet geclaimd."
     },
     {
       "id": "KI070",

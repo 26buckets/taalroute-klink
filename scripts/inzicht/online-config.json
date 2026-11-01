@@ -1,0 +1,26 @@
+{
+  "name": "klink-inzicht-pr8-staging",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [],
+  "vars": {
+    "INZICHT_MODE": "synthetic-online",
+    "INZICHT_ORIGIN": "https://klink-inzicht-pr8-staging.nico-554.workers.dev"
+  },
+  "d1_databases": [
+    {
+      "binding": "INZICHT_DB",
+      "database_name": "klink-inzicht-pr8-staging",
+      "database_id": "95f1de18-0c61-46ca-b2af-5ee36543f67f",
+      "migrations_dir": "../../db/migrations/inzicht"
+    }
+  ],
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "observability": {
+    "enabled": false
+  }
+}

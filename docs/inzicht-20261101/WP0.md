@@ -49,3 +49,7 @@ Beheerde echte authenticatie/activatie; DPIA/grondslag/retentie/controller-verwe
 Tijdens deze taak verscheen main `51f4cbcfe704a2358d80e95988f363da50bd634c` met afzonderlijk goedgekeurde synoniemenwijzigingen. De lokale ontwikkelbranch is daarop gebaseerd vóór de eerste Inzicht-commit, zonder main te wijzigen. De nieuwe appearance-floor-aanvulling is gelezen; Inzicht verandert deze productbestanden niet. De drie proefcatalogus-items blijven versiegebonden aan hun gecontroleerde bron uit `9b4e0937...`; de oefeninginhoud is gelijk. De relevante lokale suites zijn na het bijwerken opnieuw uitgevoerd.
 
 Laatste read-only livecontrole op 1 november: `/release.json` bevestigt inmiddels ook `51f4cbcfe704a2358d80e95988f363da50bd634c`. Dit is de definitieve PR-basis; zie `evidence/live-reference.json`. Geen Inzicht-publicatie uitgevoerd.
+
+## Nieuwe inspectie na vervolgopdracht
+
+Zie ONLINE-STAGING.md. Op 1 november is naast Klink een inmiddels afzonderlijk gepubliceerde `taalroute-klink-inzicht`-Worker/EU-D1 en repository aangetroffen. Die bestaande app is ongemoeid gelaten; alleen haar gecontroleerde scrypt-aanpak is hergebruikt voor nieuwe fictieve stagingaccounts. Cloudflare Access apps en identityproviders waren leeg; de organisatie-API gaf 403. Er is geen accountbreed Access-/SSO-plan of betaalinstelling gewijzigd. Nieuwe resources heten uitsluitend `klink-inzicht-pr8-staging` en `klink-inzicht-pr8-restore`. De PR is lokaal bijgewerkt naar canonieke main `41091ea9`, met livebasis `834e85e7`; geen terugpublicatie of wijziging van productie.

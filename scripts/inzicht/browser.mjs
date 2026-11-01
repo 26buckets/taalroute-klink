@@ -1,15 +1,8 @@
 import assert from 'node:assert/strict';
-import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium, webkit } from 'playwright';
-const base = process.env.KLINK_TEST_URL ?? 'http://127.0.0.1:18841';
-assert(
-  new URL(base).hostname === '127.0.0.1',
-  'Synthetic credentials may only be sent to local staging',
-);
-const credentials = JSON.parse(
-  readFileSync('.wrangler/inzicht-credentials.json', 'utf8'),
-);
-const out = 'docs/inzicht-20261101/evidence';
+import { base, online, login } from './browser-auth.mjs';
+const out = `docs/inzicht-20261101/evidence/${online ? 'online' : 'local'}`;
 mkdirSync(out, { recursive: true });
 const results = [];
 for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
@@ -20,11 +13,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
-  await page.goto(`${base}/inzicht`);
-  await page
-    .getByLabel('Testtoegang', { exact: true })
-    .fill(credentials.docent);
-  await page.getByRole('button', { name: 'Openen', exact: true }).click();
+  await login(page, 'docent');
   await page
     .getByRole('navigation', { name: 'Inzicht', exact: true })
     .waitFor();

@@ -83,6 +83,7 @@ type Assignment = {
   title: string;
   status: string;
   starts_at: string;
+  ends_at: string | null;
 };
 type Preview = {
   id: string;
@@ -165,7 +166,7 @@ function Status({ value }: { value: Mastery }) {
   );
 }
 
-export function InzichtApp() {
+export function InzichtApp({ online = false }: { online?: boolean }) {
   const router = useRouter(),
     pathname = usePathname(),
     search = useSearchParams();
@@ -175,6 +176,7 @@ export function InzichtApp() {
     [checking, setChecking] = useState(true),
     [loginError, setLoginError] = useState('');
   const [token, setToken] = useState('');
+  const [email, setEmail] = useState('');
   const login = useSave();
   const school = search.get('school') ?? me?.schools[0]?.id ?? '';
   const selected = me?.schools.find((s) => s.id === school);
@@ -245,28 +247,48 @@ export function InzichtApp() {
         <section className="ki-card">
           <h2>Testomgeving openen</h2>
           <p>
-            Gebruik je persoonlijke testcode. Dit is nog geen echte
-            Klink-accountlogin.
+            {online
+              ? 'Meld je aan met je fictieve testaccount. Alleen voor de besloten proef.'
+              : 'Gebruik je persoonlijke testcode. Dit is nog geen echte Klink-accountlogin.'}
           </p>
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              void login.save<{ ok: boolean }>('session', '', { token }, () => {
-                setToken('');
-                api<{ user: string; schools: School[] }>('me', '')
-                  .then(setMe)
-                  .catch((e) => setLoginError(e.message));
-              });
+              void login.save<{ ok: boolean }>(
+                online ? 'login' : 'session',
+                '',
+                online ? { email, password: token } : { token },
+                () => {
+                  setToken('');
+                  api<{ user: string; schools: School[] }>('me', '')
+                    .then(setMe)
+                    .catch((e) => setLoginError(e.message));
+                },
+              );
             }}
           >
-            <Field label="Testtoegang">
+            <>
+              {online && (
+                <Field label="E-mailadres">
+                  <input
+                    type="email"
+                    autoComplete="username"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    maxLength={254}
+                  />
+                </Field>
+              )}
+            </>
+            <Field label={online ? 'Wachtwoord' : 'Testtoegang'}>
               <input
                 type="password"
                 value={token}
                 onChange={(e) => setToken(e.target.value)}
-                autoComplete="off"
+                autoComplete={online ? 'current-password' : 'off'}
                 required
-                maxLength={64}
+                maxLength={online ? 200 : 64}
               />
             </Field>
             <button className="primary-button" disabled={login.busy}>
@@ -515,6 +537,9 @@ function Workspace({
           <Link href={go('advies')}>Lesadvies</Link>
           <a href={`/api/inzicht/classes/${gid}/export?school=${school}`}>
             Klaslijst downloaden
+          </a>
+          <a href={`/api/inzicht/classes/${gid}/report?school=${school}`}>
+            Onderwijsrapport downloaden
           </a>
         </details>
       </nav>
@@ -1225,6 +1250,7 @@ function AccessForm({
       impact_hash: string;
       affected: { id: string }[];
     } | null>(null),
+    [inherit, setInherit] = useState(false),
     [notice, setNotice] = useState(''),
     [loadError, setLoadError] = useState('');
   const save = useSave();
@@ -1249,6 +1275,7 @@ function AccessForm({
           value={target}
           onChange={(e) => {
             setTarget(e.target.value);
+            setInherit(false);
             setPolicy(null);
             setPreview(null);
             setNotice('');
@@ -1265,6 +1292,29 @@ function AccessForm({
       <ErrorText text={loadError} />
       {policy && (
         <>
+          {target !== '*' && (
+            <button
+              className="secondary-button"
+              disabled={save.busy}
+              onClick={() => {
+                void api<Policy>(`classes/${group}/policy`, school)
+                  .then((p) => {
+                    setPolicy(p);
+                    setInherit(true);
+                    setPreview(null);
+                  })
+                  .catch((e) => setLoadError(e.message));
+              }}
+            >
+              Klasstandaard herstellen
+            </button>
+          )}
+          {inherit && (
+            <p>
+              Na bevestiging volgt deze cursist weer de klasstandaard, ook bij
+              latere wijzigingen.
+            </p>
+          )}
           <fieldset>
             <legend>Beschikbare leerroutes</legend>
             {ROUTES.map((r) => (
@@ -1273,6 +1323,7 @@ function AccessForm({
                   type="checkbox"
                   checked={policy.allowed_routes.includes(r)}
                   onChange={(e) => {
+                    setInherit(false);
                     setPolicy({
                       ...policy,
                       allowed_routes: e.target.checked
@@ -1290,6 +1341,7 @@ function AccessForm({
             <select
               value={policy.exercise_mode}
               onChange={(e) => {
+                setInherit(false);
                 setPolicy({
                   ...policy,
                   exercise_mode: e.target.value as Policy['exercise_mode'],
@@ -1312,7 +1364,7 @@ function AccessForm({
               void save.save(
                 `classes/${group}/policy`,
                 school,
-                { learner_id: target, ...policy, preview: true },
+                { learner_id: target, ...policy, inherit, preview: true },
                 setPreview,
               )
             }
@@ -1342,6 +1394,7 @@ function AccessForm({
                     school,
                     {
                       learner_id: target,
+                      inherit,
                       ...policy,
                       impact_hash: preview.impact_hash,
                       confirmed: true,
@@ -1379,6 +1432,9 @@ function Assignments({
     [recipients, setRecipients] = useState<string[]>([]),
     [preview, setPreview] = useState(false),
     [note, setNote] = useState(''),
+    [start, setStart] = useState(''),
+    [end, setEnd] = useState(''),
+    [withdraw, setWithdraw] = useState(''),
     [notice, setNotice] = useState(''),
     [loadError, setLoadError] = useState('');
   const save = useSave();
@@ -1458,10 +1514,26 @@ function Assignments({
               maxLength={1000}
             />
           </Field>
-          <p>
-            3. Beschikbaar vanaf bevestiging; geen einddatum in deze eerste
-            schermversie.
-          </p>
+          <Field label="3. Beschikbaar vanaf (leeg is direct)">
+            <input
+              type="datetime-local"
+              value={start}
+              onChange={(e) => {
+                setStart(e.target.value);
+                setPreview(false);
+              }}
+            />
+          </Field>
+          <Field label="Beschikbaar tot (leeg is zonder einddatum)">
+            <input
+              type="datetime-local"
+              value={end}
+              onChange={(e) => {
+                setEnd(e.target.value);
+                setPreview(false);
+              }}
+            />
+          </Field>
           <button
             className="secondary-button"
             disabled={!content || !recipients.length}
@@ -1473,6 +1545,15 @@ function Assignments({
             <div className="ki-preview">
               <h4>{content.title}</h4>
               <p>{note}</p>
+              <p>
+                {start
+                  ? new Date(start).toLocaleString('nl-NL')
+                  : 'Direct beschikbaar'}{' '}
+                ·{' '}
+                {end
+                  ? `tot ${new Date(end).toLocaleString('nl-NL')}`
+                  : 'zonder einddatum'}
+              </p>
               <p>
                 {recipients.length} cursisten · oefenactiviteit, geen
                 automatische beheersingsscore.
@@ -1487,7 +1568,10 @@ function Assignments({
                     {
                       content_id: selected,
                       learner_ids: recipients,
-                      starts_at: new Date().toISOString(),
+                      starts_at: start
+                        ? new Date(start).toISOString()
+                        : new Date().toISOString(),
+                      ends_at: end ? new Date(end).toISOString() : null,
                       instructions: note,
                     },
                     () => {
@@ -1513,9 +1597,63 @@ function Assignments({
         <p>Nog geen opdrachten.</p>
       ) : (
         list.map((a) => (
-          <p key={a.id}>
-            {a.title} · {a.status === 'active' ? 'Actief' : 'Ingetrokken'}
-          </p>
+          <article className="ki-preview" key={a.id}>
+            <p>
+              {a.title} · {a.status === 'active' ? 'Actief' : 'Ingetrokken'}
+            </p>
+            <p>
+              Vanaf {new Date(a.starts_at).toLocaleString('nl-NL')}
+              {a.ends_at
+                ? ` tot ${new Date(a.ends_at).toLocaleString('nl-NL')}`
+                : ''}
+            </p>
+            {a.status === 'active' &&
+              (withdraw !== a.id ? (
+                <button
+                  className="secondary-button"
+                  onClick={() => setWithdraw(a.id)}
+                >
+                  Opdracht intrekken
+                </button>
+              ) : (
+                <>
+                  <p>
+                    Intrekken sluit deze opdracht voor cursisten. Opgeslagen
+                    pogingen en historie blijven bewaard.
+                  </p>
+                  <button
+                    className="primary-button"
+                    disabled={save.busy}
+                    onClick={() =>
+                      void save.save(
+                        `classes/${group}/assignments/${a.id}`,
+                        school,
+                        { action: 'withdraw', confirmed: true },
+                        () => {
+                          setWithdraw('');
+                          setList(
+                            list.map((item) =>
+                              item.id === a.id
+                                ? { ...item, status: 'withdrawn' }
+                                : item,
+                            ),
+                          );
+                          setNotice('Opdracht ingetrokken.');
+                        },
+                      )
+                    }
+                  >
+                    Intrekken bevestigen
+                  </button>
+                  <button
+                    className="secondary-button"
+                    onClick={() => setWithdraw('')}
+                  >
+                    Annuleren
+                  </button>
+                </>
+              ))}
+          </article>
         ))
       )}
     </section>
