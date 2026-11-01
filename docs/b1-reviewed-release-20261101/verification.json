@@ -1,6 +1,6 @@
 {
-  "baselineLiveSourceCommit": "be7d78289945084612b20a0aa3058bb7730a43a5",
-  "canonicalDocumentationCommit": "3e4c0f062d5c14dd00ffc00393c7013fc6f25458",
+  "baselineLiveSourceCommit": "0c130f80053537b9976906b859e844a267912295",
+  "canonicalDocumentationCommit": "22d231b0e5944115137b1e1548ac4d61cf811778",
   "types": true,
   "lint": true,
   "lintScope": "All four changed scripts. Full-repository lint has six pre-existing errors in three byte-unchanged files; see unchanged-ui-and-existing-lint.json.",
@@ -32,7 +32,7 @@
     ],
     "lightDark": true
   },
-  "baselineWorkerVersion": "82dcca3e-2cd1-486e-b1df-d60d51f374b9",
+  "baselineWorkerVersion": "28f6987d-6f0d-4113-8f93-28d7fb8c163f",
   "fullBrowserAndProgressBasis": "35182be471e139a7615181206ce1288c45886c86",
   "lastBasisChange": "Only A1/A2 collection topic titles changed in the already approved successor. All B1 inputs and player/storage code unchanged; added current-basis title and native browser checks.",
   "finalBasisChecks": {
@@ -40,5 +40,12 @@
     "B1NativeBrowserCases": 12,
     "errors": 0,
     "B1RenderedTitlesUnchanged": true
-  }
+  },
+  "inheritedOpeningLabel": "Approved opening-label successor retained; the B1 player, all reading inputs, media and progress logic are unchanged.",
+  "openingSuccessorChecks": {
+    "sourceCommit": "0c130f80053537b9976906b859e844a267912295",
+    "nativeB1Cases": 12,
+    "errors": 0
+  },
+  "finalNativeFieldsMatched": 1800
 }

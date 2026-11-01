@@ -1,4 +1,4 @@
-import {verifyB1ReviewedRelease,readBeforeB1Reviewed} from './check-b1-reviewed-release-20261101.mjs';
+import {verifyOpeningLoaderLabelRelease,readBeforeOpeningLoaderLabel} from './check-opening-loader-label-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -10,7 +10,7 @@ const sort = values => values.sort((a, b) => a.localeCompare(b));
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts', 'db', 'drizzle', '.github', 'AGENTS.md', 'PUBLICATIE.md', 'VORMGEVING-VASTGEZET.md', 'docs/appearance-floor-20261031', 'docs/KLINK-DOCENTHANDLEIDING.md', 'vite.config.ts', 'next.config.ts', 'package.json', 'package-lock.json', 'wrangler.jsonc'];
 export function verifyReadingRoundTitlesRelease(read = readFileSync) {
-  const successor=verifyB1ReviewedRelease(read),currentRead=read;read=file=>readBeforeB1Reviewed(file,successor,currentRead);
+  const successor=verifyOpeningLoaderLabelRelease(read),currentRead=read;read=file=>readBeforeOpeningLoaderLabel(file,successor,currentRead);
   const json = file => JSON.parse(read(file)), r = json('docs/klink-owner-release-reading-round-titles-20261101.json');
   assert.equal(r.approvedBy, 'Nico'); assert(r.publicationApproved && r.appearanceChangeApproved);
   assert.equal(r.baselineSourceCommit, base); assert.equal(r.liveSourceCommit, live);
@@ -43,5 +43,5 @@ export function verifyReadingRoundTitlesRelease(read = readFileSync) {
   return {...r,successor};
 }
 export function readBeforeReadingRoundTitles(file, r, read = readFileSync) {
-  return r.changedFiles.includes(file) ? git('show', base + ':' + file) : readBeforeB1Reviewed(file,r.successor,read);
+  return r.changedFiles.includes(file) ? git('show', base + ':' + file) : readBeforeOpeningLoaderLabel(file,r.successor,read);
 }

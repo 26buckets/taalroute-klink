@@ -1,0 +1,15 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "appearanceChangeApproved": true,
+  "publicationApproved": true,
+  "userRequest": "Ik mis op dit moment nog wel klink wordt geopend. puntje puntje puntje.",
+  "publicationScope": "Concrete correction to the existing live loader in this chat: show its existing opening label. Keep the original small basisloader, animation, two-second minimum, all app content and other appearance. No alternative loaders.",
+  "baselineSourceCommit": "be7d78289945084612b20a0aa3058bb7730a43a5",
+  "liveSourceCommit": "be7d78289945084612b20a0aa3058bb7730a43a5",
+  "files": {
+    "components/product/klink-opening-loader.tsx": "b4ae7f1d278c441ac914eb1b1f57bcabc8d29963e4c623c59b233819c13922d9",
+    "components/product/klink-opening-loader.css": "c5244d17c6266dfbcad467301537a0b18d24b430c6beca846fc553fd12367f76"
+  },
+  "checks": "docs/opening-loader-label-20261101/verification.json"
+}

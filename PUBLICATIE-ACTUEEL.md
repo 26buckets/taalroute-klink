@@ -1,3 +1,13 @@
+## 1 november 2026 — openingsregel zichtbaar onder de kleine basisloader
+
+- Werkelijk live: `0c130f80053537b9976906b859e844a267912295`, canonieke `main`, schone bron; Worker `28f6987d-6f0d-4113-8f93-28d7fb8c163f`.
+- Gerichte opdracht van Nico: “Ik mis op dit moment nog wel klink wordt geopend. puntje puntje puntje.” De bestaande toegankelijke regel is nu zichtbaar onder het logo.
+- Kleine basisloader, oorspronkelijke animatie/afbeeldingen, centrering, minimumduur van twee seconden en alle bestaande inhoud, titels, schrijfbanken, audio, opslag en bediening blijven behouden. Geen alternatieve loaders gepubliceerd.
+- Normale vrijgavepoort, typecontrole, lint en zeven gerichte poortcontroles geslaagd. Zestien lokale en zestien live browsergevallen: Chromium/WebKit, desktop/320px mobiel, systeemvoorkeur licht/donker en verminderde beweging; exacte tekst, plaatsing, wachttijd, doorladen, route en opslag gecontroleerd. Geen fysieke telefoon getest.
+- Beide originele loaderafbeeldingen op de website bytegelijk; alle inhoudshashes gelijk aan voorafgaande livebron `be7d78289945084612b20a0aa3058bb7730a43a5`. De titeldocumentatie `3e4c0f06` is meegenomen.
+- Dossier: `docs/opening-loader-label-20261101/`; toestemming: `docs/klink-owner-release-opening-loader-label-20261101.json`. Herstelkopieën in de bestaande Drive-projectmap; volledige terugleescontrole staat in `backup.json` en `final-backup.json`.
+- Geen GitHub Actions-workflows aanwezig of toegevoegd; controles lokaal uitgevoerd.
+
 ## Actuele publicatie — inhoudelijke titels voor alle leesrondes — 1 november 2026
 
 Livebron `be7d78289945084612b20a0aa3058bb7730a43a5`, schone canonieke main; Worker `82dcca3e-2cd1-486e-b1df-d60d51f374b9`. Gepubliceerd via de gewone `npm run deploy` als afstammeling van de werkelijk live bevestigde bron `35182be471e139a7615181206ce1288c45886c86` en de complete canonieke documentatieopvolger `d5cfe28a`. De nieuwste toetsenbediening, schrijfrondes, oude en herziene sessievoortgang en het actuele bronregister blijven behouden.
