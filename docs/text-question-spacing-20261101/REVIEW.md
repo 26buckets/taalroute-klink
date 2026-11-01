@@ -7,3 +7,7 @@ Nico wijst de grote lege ruimte tussen vraag en antwoordknoppen aan. De gedeelde
 De correcte antwoorden zijn gekozen; Enter en pijl rechts gaan verder. Oorspronkelijke voortgang onder de oude sleutel blijft bytegelijk. Beide browsers spelen de oorspronkelijke A1-opname volledig af; tekst aan/uit tijdens luisteren en bediening met spatie behouden het afspelen en de oude voortgang. De bestaande inhoudstest voor leesrondes en lint slagen. CSS-only in de app: geen extra typecontrole nodig voor ongewijzigde TypeScript-bronnen. Geen fysieke telefoon getest. Lange inhoud blijft op zeer korte schermen scrollbaar; er is geen universele belofte dat iedere tekst zonder scrollen past.
 
 De oorspronkelijke vormgevingsvloer en alle eerdere akkoorden blijven bewaard. Uitsluitend de concrete ruimtecorrectie is toegevoegd als nieuwe brongebonden goedgekeurde aanvulling. Alle zware controles worden lokaal uitgevoerd; geen GitHub-workflows of betaald budget gewijzigd.
+
+## Bevestigde publicatie
+
+Normaal gepubliceerd via npm run deploy op schone main, bron 959d3416064c453d5f0115c89c7835a8a12c05e4 en Worker 1692a417-0552-44a5-b9ca-2791fe273643. De gewone volledige publicatiepoort en bouw slagen. Ook alle 120 online browsergevallen en twee volledige oorspronkelijke luisterproeven slagen; alle afstanden blijven 16px. Vijf oorspronkelijke releasekenmerken blijven gelijk. A1-t01 en A2-t01 zijn werkelijk van de live-app teruggelezen en bytegelijk aan de oorspronkelijke bestanden. Geen fysieke telefoon getest.
