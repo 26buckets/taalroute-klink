@@ -1,4 +1,4 @@
-import {verifyWordUseRelease,readBeforeWordUse} from './check-word-use-release-20261101.mjs';
+import {verifyAlfaCNoScrollRelease,readBeforeAlfaCNoScroll} from './check-alfa-c-no-scroll-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -17,7 +17,7 @@ export const completeCoreFiles=[
  'scripts/test-practice-chapters.mjs',
 ];
 export function verifyCompleteRelease(read=readFileSync){
- const successor=verifyWordUseRelease(read),currentRead=read;read=file=>readBeforeWordUse(file,successor,currentRead);
+ const successor=verifyAlfaCNoScrollRelease(read),currentRead=read;read=file=>readBeforeAlfaCNoScroll(file,successor,currentRead);
  const json=file=>JSON.parse(read(file));
  const r=json('docs/klink-owner-release-complete-20261101.json'),request=json(folder+'owner-instruction.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChanged,false);
@@ -72,4 +72,4 @@ export function verifyCompleteRelease(read=readFileSync){
  assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
  return {...r,successor};
 }
-export function readBeforeCompleteRelease(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeWordUse(file,r.successor,read);}
+export function readBeforeCompleteRelease(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeAlfaCNoScroll(file,r.successor,read);}

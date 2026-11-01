@@ -140,6 +140,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div>
       </header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
+        <ExerciseAudioSlot />
         <ExerciseListen inline={model ? Boolean(step.exampleTargetTexts.length) : Boolean(step.dictationTexts.length || documents.length)} label="Luister naar de uitleg" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)} />
         {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <ExerciseListen inline={!model && step.dictationTexts.length > 0} label={model ? 'Luister naar het voorbeeld' : 'Luister naar de tekst'} disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }} />}
         {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />Voorbeeld</button>}
@@ -147,8 +148,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
-            <ExerciseAudioSlot />
-        <AlfaCWorkspace key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help || Boolean(readAlong.reading)}>
+        <AlfaCWorkspace key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help || Boolean(readAlong.reading)} feedback={<output className="ac-task-feedback" data-motion-feedback={result} aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? step.successFeedback : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>}>
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stopPlayback(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{retry ? step.retryVisible : step.helpVisible}</p><button className="secondary-button" disabled={busy} onClick={() => void guide(retry ? step.retryVisible : step.helpVisible)}><Volume2 />Luister naar de tip</button><button className="secondary-button" onClick={() => { stopPlayback(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
               : <>
@@ -161,7 +161,6 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         </AlfaCWorkspace>
       </div>
       <footer className="pilot-footer">
-        <output data-motion-feedback={result} aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? step.successFeedback : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>
         {result === 'done' && <button className="secondary-button" onClick={() => { setResult('idle'); setHelp(true); setRetry(true); markHelp(); void guide(step.retryVisible); }}><RefreshCw />Nog eens</button>}
         <button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || !['right', 'done'].includes(result)} onClick={onNext}>Verder<ArrowRight /></button>
       </footer>

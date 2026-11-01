@@ -1,0 +1,30 @@
+✔ approved full-height Alfa C panels keep all content reachable (283.709958ms)
+✔ rejects altered components/product/alfa-c-workspace.css (115.352542ms)
+✔ rejects altered components/product/panel-pages.ts (107.348958ms)
+✔ rejects altered docs/klink-owner-release-alfa-c-no-scroll-20261101.json (0.320125ms)
+✔ rejects altered docs/alfa-c-no-scroll-20261101/backup.json (157.419959ms)
+✔ complete source, audio, progress and backup evidence permits this exact release (2073.607291ms)
+✔ rejects changed approval or evidence docs/klink-owner-release-complete-20261101.json r=>{r.publicationApproved=false;} (159.255833ms)
+✔ rejects changed approval or evidence docs/klink-owner-release-complete-20261101.json r=>{r.appearanceChanged=true;} (251.254917ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/owner-instruction.json r=>{r.newAudioAuthorized=false;} (263.786125ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/transcript-resolution.json r=>{r.unresolved=1;} (417.121959ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/audio-file-audit.json r=>{r.issues.push('missing brand metadata');} (256.741375ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/browser/checks.json r=>{r.errors.push('player error');} (305.307542ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/progress-checks.json r=>{r.checks.pop();} (356.110333ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/recorder-checks.json r=>{r.errors.push('recording failure');} (370.199375ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/verification.json r=>{r.progress=false;} (423.535375ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/backup.json r=>{r.fullReadback=false;} (1210.055209ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/backup.json r=>{r.parts[0].verified=false;} (1070.098125ms)
+✔ rejects changed appearance source (154.872958ms)
+✔ approved compact source questions preserve text, audio, keyboard and old progress (2216.53075ms)
+✔ rejects altered app/learner-layout.css (1526.265958ms)
+✔ rejects altered docs/klink-owner-release-text-question-spacing-20261101.json (1140.878583ms)
+✔ rejects altered docs/text-question-spacing-20261101/backup.json (1347.336833ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7393.8935
