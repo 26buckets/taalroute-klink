@@ -1,4 +1,4 @@
-import {verifyInstructionCandidate,readBeforeInstructionCandidate} from './check-instruction-candidate.mjs';
+import {verifyOpeningLoaderLabelRelease,readBeforeOpeningLoaderLabel} from './check-opening-loader-label-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -10,18 +10,18 @@ const sort = values => values.sort((a, b) => a.localeCompare(b));
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts', 'db', 'drizzle', '.github', 'AGENTS.md', 'PUBLICATIE.md', 'VORMGEVING-VASTGEZET.md', 'docs/appearance-floor-20261031', 'docs/KLINK-DOCENTHANDLEIDING.md', 'vite.config.ts', 'next.config.ts', 'package.json', 'package-lock.json', 'wrangler.jsonc'];
 export function verifyReadingRoundTitlesRelease(read = readFileSync) {
-  const candidate=verifyInstructionCandidate(read),currentRead=read;read=file=>readBeforeInstructionCandidate(file,candidate,currentRead);
+  const successor=verifyOpeningLoaderLabelRelease(read),currentRead=read;read=file=>readBeforeOpeningLoaderLabel(file,successor,currentRead);
   const json = file => JSON.parse(read(file)), r = json('docs/klink-owner-release-reading-round-titles-20261101.json');
   assert.equal(r.approvedBy, 'Nico'); assert(r.publicationApproved && r.appearanceChangeApproved);
   assert.equal(r.baselineSourceCommit, base); assert.equal(r.liveSourceCommit, live);
   assert(r.userRequest.includes('Geef elke ronde liever een korte titel die iets over de inhoud zegt'));
   assert(r.publicationRequest.includes('zet deze versie nu live in Klink'));
   git('merge-base', '--is-ancestor', live, base); git('merge-base', '--is-ancestor', base, 'HEAD');
-  const changed = sort(lines(git('diff', '--name-only', base, candidate.integration.liveSourceCommit, '--', ...roots)));
+  const changed = sort(lines(git('diff', '--name-only', base, successor.baselineSourceCommit, '--', ...roots)));
   assert.deepEqual(changed, r.changedFiles); assert.deepEqual(sort(Object.keys(r.files)), changed);
   for (const [file, hash] of Object.entries({ ...r.files, ...r.evidenceFiles })) assert.equal(sha(read(file)), hash, file);
   assert.deepEqual(changed.filter(f => /^(app|components|hooks|data|lib|public|db|drizzle)\//.test(f)), ['lib/learner-copy.ts']);
-  assert.equal(git('diff', '--name-only', base, candidate.integration.liveSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'public', 'db', 'drizzle', '.github', 'package.json', 'package-lock.json', 'vite.config.ts').length, 0);
+  assert.equal(git('diff', '--name-only', base, successor.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'public', 'db', 'drizzle', '.github', 'package.json', 'package-lock.json', 'vite.config.ts').length, 0);
   for (const file of ['hooks/use-practice-keyboard.ts', 'app/learner-ui.css', 'components/product/teacher-classroom.css']) assert.equal(sha(read(file)), sha(git('show', base + ':' + file)), file);
   const floor = 'docs/appearance-floor-20261031/floor.json', oldFloor = JSON.parse(git('show', base + ':' + floor));
   assert.deepEqual(json(floor), { ...oldFloor, approvedUpdates: [...oldFloor.approvedUpdates, r.approval] });
@@ -40,8 +40,8 @@ export function verifyReadingRoundTitlesRelease(read = readFileSync) {
   const p = json(folder + 'verification.json'); for (const key of ['types', 'lint', 'unit', 'build', 'sourceHeadingReview', 'desktopMobile', 'progressPreserved', 'nonReadingTitlesUnchanged', 'localOnly']) assert.equal(p[key], true, key);
   const backup = json(folder + 'backup.json'); assert(backup.verified && backup.fullReadback && backup.zipIntegrity && backup.driveId);
   assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
-  return {...r,instructionCandidate:candidate};
+  return {...r,successor};
 }
 export function readBeforeReadingRoundTitles(file, r, read = readFileSync) {
-  return r.changedFiles.includes(file) ? git('show', base + ':' + file) : readBeforeInstructionCandidate(file,r.instructionCandidate,read);
+  return r.changedFiles.includes(file) ? git('show', base + ':' + file) : readBeforeOpeningLoaderLabel(file,r.successor,read);
 }

@@ -1,3 +1,15 @@
+## Actuele publicatie — inhoudelijke titels voor alle leesrondes — 1 november 2026
+
+Livebron `be7d78289945084612b20a0aa3058bb7730a43a5`, schone canonieke main; Worker `82dcca3e-2cd1-486e-b1df-d60d51f374b9`. Gepubliceerd via de gewone `npm run deploy` als afstammeling van de werkelijk live bevestigde bron `35182be471e139a7615181206ce1288c45886c86` en de complete canonieke documentatieopvolger `d5cfe28a`. De nieuwste toetsenbediening, schrijfrondes, oude en herziene sessievoortgang en het actuele bronregister blijven behouden.
+
+Nico corrigeerde de algemene kaarttitel Korte teksten. Alle 68 bestaande leesrondes bij Teksten / Begrijp het verhaal (34 A1 en 34 A2) hebben nu een eigen korte titel op basis van de bijbehorende bronkoppen, bijvoorbeeld Gemeente, cursus en dienst en Zaal, buurt en afspraken. Ronde, niveau en werkelijk aantal oefeningen blijven apart. De 6.043 overige collectietitels blijven exact gelijk. Alleen de tekstweergave in de bestaande gedeelde helper is gewijzigd; geen wijziging aan broninhoud, vragen, antwoorden, bron-/ronde-/voortgangs-ID's, audio, URLs, opslag, CSS, kaartroosters, typografie, kleuren, knoppen of navigatie.
+
+Lokaal en online: alle 68 titels in 24 licht-/donker-/desktop-/390px-/320px-lijsten in Chromium/WebKit, inclusief alle 34 rondes na Meer opdrachten, gelijke kaarthoogtes, geen afgekapt label, apart niveau/ronde/aantal en acht bron-/herlaad-/hervatstromen. Online tevens acht echte audioflows en de bytegelijke teruglezing van 12 bronbanken/audiobestanden, alle inhoudsvingerafdrukken en de nieuwe client. Lokaal slagen TypeScript, gerichte lint, zeven bron-/kaartproeven, 29 vrijgave-/herstelproeven, productieopbouw en de volledige normale publicatiepoort. Geen fysiek toestel of menselijke NT2-review uitgevoerd. Geen nieuwe audio of beelden; geen GitHub Actions aanwezig of toegevoegd. Alle zware controles lokaal.
+
+Concrete correctie en voorafgaande publicatieopdracht staan in `docs/klink-owner-release-reading-round-titles-20261101.json`. De vaste vloer heeft uitsluitend het brongebonden titelakkoord als aanvulling: `docs/appearance-floor-20261031/approved-updates/reading-round-titles-20261101.json`. Titel-/bronreview, lokale en livebewijzen en volledig teruggelezen Drive-herstelkopieën staan in `docs/reading-round-titles-20261101/`. Vernieuw de app eenmaal om de nieuwe titels te laden.
+
+---
+
 ## Actuele publicatie — spatie na afwisselend muis- en toetsenbordgebruik — 1 november 2026
 
 Livebron `35182be471e139a7615181206ce1288c45886c86`, schone canonieke main; Worker `61d76dc2-e89f-4415-b34a-ab7f75163812`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de werkelijk live bevestigde bron `ded58bb090a90c87f6a5881b35830fa44f3b4de2`, inclusief het gecontroleerde metadataregister `62df6f0d9504a8f2ada15b07d75a3b39db398322`. De actuele schrijfbank en sessieterugval, appbrede kaarttitels, loader, leerdoelen, herhaalrondes en vaste vormgevingsvloer blijven behouden.

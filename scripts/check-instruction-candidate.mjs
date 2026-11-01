@@ -24,11 +24,11 @@ function grammarBefore(file,scope){
 const alfaScopeFile='docs/grammar-alfa-b1-20261101/scope.json';
 const alfaScopeHash='bfb03db9da8d5c5cb0cd47f32f1fe5083e56fea1fe572e5f3f549f2a2d785bd0';
 const integrationFile='docs/grammar-live-integration-20261101/scope.json';
-const integrationHash='581e2d92cb85109078a11fe58cc56930f70ab466ac70717d351deb7395e56ff1';
+const integrationHash='dc6c0c200ed70dbd1bac589802968c75e7b5c51b53853cd2e0e27032ac7ef20f';
 function verifyIntegration(read){
  const bytes=read(integrationFile);assert.equal(sha(bytes),integrationHash,'Only the reviewed local merge is allowed');
  const r=JSON.parse(bytes);
- assert.equal(r.liveSourceCommit,'be7d78289945084612b20a0aa3058bb7730a43a5');
+ assert.equal(r.liveSourceCommit,'0c130f80053537b9976906b859e844a267912295');
  assert.equal(r.previousCandidate,'f16073e9');
  assert.equal(r.localOnly,true);assert.equal(r.publicationApproved,false);assert.equal(r.productionBatch,false);
  for(const revision of [r.liveSourceCommit,r.previousCandidate])git('merge-base','--is-ancestor',revision,'HEAD');
