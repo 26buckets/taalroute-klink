@@ -11,7 +11,7 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifyWritingBanksRelease(read=readFileSync){
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-writing-banks-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.ownerApproval,'standing-owner-approval');
- assert.equal(r.baselineSourceCommit,'b7c04d8da4835c8b01f8314bd6247710ed75d0bf');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
+ assert.equal(r.baselineSourceCommit,'2ee6c95a7550e1d123f96fc550b5f2e1d1e5b709');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
  assert(r.userRequest.includes('Zet gecontroleerde batches online'));
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
