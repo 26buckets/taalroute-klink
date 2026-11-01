@@ -13,6 +13,12 @@ const migrations = readdirSync('db/migrations/inzicht')
 const transient = new Set([
   'inzicht_sessions',
   'inzicht_credentials',
+  'inzicht_mfa',
+  'inzicht_mfa_sessions',
+  'inzicht_mfa_challenges',
+  'inzicht_mfa_recovery',
+  'inzicht_auth_events',
+  'inzicht_outbox_retries',
   'inzicht_rate_limits',
   'inzicht_write_guards',
   'inzicht_requests',

@@ -1,3 +1,4 @@
+import { nativeLogin, passwordLogin, responseCookie } from './mfa-client.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -5,16 +6,13 @@ const base = JSON.parse(readFileSync('scripts/inzicht/online-config.json')).vars
   .INZICHT_ORIGIN;
 const account = () =>
   JSON.parse(readFileSync('.wrangler/inzicht-online-credentials.json')).collega;
-const login = (a) =>
-  fetch(`${base}/api/inzicht/login`, {
-    method: 'POST',
-    headers: { origin: base, 'Content-Type': 'application/json' },
-    body: JSON.stringify(a),
-  });
+const login = (a) => nativeLogin('collega', a);
 const old = account();
 const r = await login(old);
+const pending = await passwordLogin('collega', old);
+const challenge = responseCookie(pending, '__Host-inzicht_mfa');
 assert.equal(r.status, 200);
-const cookie = r.headers.get('set-cookie').split(';')[0];
+const cookie = responseCookie(r, '__Host-inzicht_session');
 execFileSync(
   process.execPath,
   ['scripts/inzicht/rotate-staging-account.mjs', 'collega'],
@@ -25,6 +23,16 @@ assert.equal(
   401,
 );
 assert.equal((await login(old)).status, 401);
+const rejected = await fetch(base + '/api/inzicht/mfa', {
+  method: 'POST',
+  headers: {
+    origin: base,
+    'Content-Type': 'application/json',
+    cookie: challenge,
+  },
+  body: JSON.stringify({ code: '000000' }),
+});
+assert.equal(rejected.status, 401);
 const fresh = await login(account());
 assert.equal(fresh.status, 200);
 const ended = await fetch(`${base}/api/inzicht/logout`, {
@@ -32,7 +40,7 @@ const ended = await fetch(`${base}/api/inzicht/logout`, {
   headers: {
     origin: base,
     'Content-Type': 'application/json',
-    cookie: fresh.headers.get('set-cookie').split(';')[0],
+    cookie: responseCookie(fresh, '__Host-inzicht_session'),
   },
   body: '{}',
 });
@@ -45,6 +53,7 @@ writeFileSync(
       account: 'collega@klink-test.invalid',
       old_password_rejected: true,
       old_session_revoked: true,
+      mfa_challenge_invalidated: true,
       new_password_accepted: true,
     },
     null,

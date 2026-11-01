@@ -15,13 +15,13 @@
 
 Zes vooraf aangemaakte fictieve accounts hebben eigen e-mailadres, willekeurig wachtwoord, gezouten scrypt-hash en rollen. Gebruikersnamen eindigen op `@klink-test.invalid`; er worden geen e-mails verstuurd en geen echte identiteit of e-mailverificatie geclaimd. De cryptografische parameters zijn overgenomen uit het daadwerkelijk geïnspecteerde `src/auth.mjs` van de aparte Klink Inzicht-app: scrypt N=32768, r=8, p=3. Dit is native accountlogin voor staging, geen nieuwe beheerde identityprovider.
 
-`lib/inzicht/auth.ts` verzorgt de wachtwoordcontrole. `service.ts` beperkt pogingen per IP en account, maakt een nieuwe willekeurige sessie na succesvolle login, bewaart alleen de tokenhash en controleert de actuele gebruiker/lidmaatschappen/klasrechten bij iedere aanvraag. Succesvolle login wist de account-foutteller; de IP-limiet blijft staan. Een gelijktijdige wachtwoordwijziging kan geen sessie met de oude hash opleveren.
+`lib/inzicht/auth.ts` verzorgt de wachtwoordcontrole. `service.ts` beperkt pogingen per IP en account, maakt pas na succesvolle MFA een nieuwe willekeurige sessie, bewaart alleen de tokenhash en controleert de actuele gebruiker/lidmaatschappen/klasrechten bij iedere aanvraag. Succesvolle login wist de account-foutteller; de IP-limiet blijft staan. Een gelijktijdige wachtwoordwijziging kan geen sessie met de oude hash opleveren.
 
 Online cookies zijn host-only (`__Host-`), HttpOnly, Secure en SameSite Strict, acht uur geldig. Mutaties eisen dezelfde Origin en JSON. Data en pagina's zijn no-store; iframe-insluiting is geblokkeerd. Uitloggen trekt de sessie op de server in. De oude lokale tokenlogin is online 404. Geen openbare registratie, resetmail, lokale fixture-token of accountwisselknop online.
 
 Toegang staat uitsluitend in `.wrangler/inzicht-online-credentials.json` (0600), buiten Git en de Drive-back-up. `rotate-staging-account.mjs collega` genereert een nieuw wachtwoord voor precies dat fictieve account en trekt bestaande sessies in. `rotation-test.mjs` heeft dit daadwerkelijk online gecontroleerd. De gebruiker krijgt een afzonderlijk lokaal toegangsbestand, nooit in het herstelarchief.
 
-**Nog geen vrijgave voor echte accounts:** MFA/SSO, veilige echte activatie, domein-/identiteitsverificatie, lifecycle/herstel met bevoegde medewerkers en onafhankelijke beveiligingsreview blijven voorwaarden voor een echte pilot. Een geverifieerde fictieve accountkoppeling bewijst geen verificatie van een natuurlijk persoon.
+**Nog geen vrijgave voor echte accounts:** Veilige echte activatie en eventuele SSO-integratie, domein-/identiteitsverificatie, lifecycle/herstel met bevoegde medewerkers en onafhankelijke beveiligingsreview blijven voorwaarden voor een echte pilot. Een geverifieerde fictieve accountkoppeling bewijst geen verificatie van een natuurlijk persoon.
 
 ## Aanvullend afgerond
 
@@ -45,7 +45,7 @@ Dit is uitsluitend de door Nico toegestane stagingroute. `deploy-staging.mjs` we
 De volledige controles draaien lokaal tegen de online testomgeving, zonder GitHub Actions. Bekijk `evidence/` voor de logs en bewijsbestanden. Browserreeksen met schrijfacties worden achtereenvolgens uitgevoerd: de conservatieve schoolversie weigert terecht goedkeuring van een advies wanneer een andere proef tussentijds schoolgegevens wijzigt.
 
 ```sh
-node --test scripts/inzicht/test.mjs scripts/inzicht/auth-test.mjs
+node --test scripts/inzicht/test.mjs scripts/inzicht/auth-test.mjs scripts/inzicht/mfa-test.mjs
 KLINK_TEST_URL=https://klink-inzicht-pr8-staging.nico-554.workers.dev node scripts/inzicht/browser.mjs
 KLINK_TEST_URL=https://klink-inzicht-pr8-staging.nico-554.workers.dev node scripts/inzicht/student-browser.mjs
 KLINK_TEST_URL=https://klink-inzicht-pr8-staging.nico-554.workers.dev node scripts/inzicht/remaining-browser.mjs
@@ -58,4 +58,8 @@ De schaalproef gebruikt tijdelijk 30 fictieve cursisten, 100 vaardigheden en 300
 
 ## Bewust nog open
 
-Privacy/grondslag/DPIA/retentie en verwijdering uit back-ups; MFA en echte identity lifecycle; didactisch gevalideerde meetrubrics en volledige contentmapping; persoonlijk SQL-paspoort en gecontroleerd delen; volledig schoolbeheer; onafhankelijke schermlezer-/docentpilot; grootschalige catalogusquery's, storingsdienst en afgetekende RPO/RTO. Geen van deze poorten wordt door een geslaagde synthetische proef afgetekend. Geen merge en geen productiepublicatie.
+Privacy/grondslag/DPIA/retentie en verwijdering uit back-ups; Echte identity lifecycle; didactisch gevalideerde meetrubrics en volledige contentmapping; persoonlijk SQL-paspoort en gecontroleerd delen; volledig schoolbeheer; onafhankelijke schermlezer-/docentpilot; grootschalige catalogusquery's, storingsdienst en afgetekende RPO/RTO. Geen van deze poorten wordt door een geslaagde synthetische proef afgetekend. Geen merge en geen productiepublicatie.
+
+## Aanvulling MFA en beheer, 1 november 2026
+
+Wachtwoord plus verplichte authenticatorcode, eenmalige herstelcodes, beheerreset, revocatie en duurzame foutisolatie zijn op de afzonderlijke fictieve staging uitgevoerd. Zie `MFA-EN-BEHEER.md` voor actuele codepaden, schema 5, bewijzen en operationele grenzen. De huidige test- en acceptatiestand staat in `PROJECTVERSLAG.md` en `ACCEPTATIE-72.md`; oudere logbestanden zijn historische bewijzen.

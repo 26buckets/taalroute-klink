@@ -3,8 +3,8 @@
   "scope": "synthetic local and isolated online staging; not release approval",
   "priority": "R2 > R1 > v1.0",
   "counts": {
-    "GETEST": 51,
-    "DEELS": 18,
+    "GETEST": 53,
+    "DEELS": 16,
     "OPEN": 3
   },
   "cases": [
@@ -12,7 +12,7 @@
       "id": "KI001",
       "requirement": "docent maakt klas; opnieuw inloggen -> identieke serverklasse.",
       "status": "GETEST",
-      "evidence_or_gap": "Online native wachtwoordlogin, serverklasse, herladen/heropenen; twee browsers. Echte identiteiten/MFA blijven releasegate."
+      "evidence_or_gap": "Online wachtwoord + authenticatorlogin, serverklasse en herladen/heropenen; twee browsers. Echte persoonsverificatie blijft vrijgavepoort."
     },
     {
       "id": "KI002",
@@ -114,7 +114,7 @@
       "id": "KI018",
       "requirement": "matrixcel -> exact onderliggend bewijs zichtbaar.",
       "status": "GETEST",
-      "evidence_or_gap": "Klaspolicy, impactbevestiging en terugzetten individuele uitzondering op blijvend erven van de klasstandaard; API en online browsers."
+      "evidence_or_gap": "Matrixcel opent het individuele bewijsdossier; de opgeslagen observatie en teruglink naar de matrix zijn in beide browsers gecontroleerd. API controleert cursist, klas en school; browser.mjs en performance-online.mjs."
     },
     {
       "id": "KI019",
@@ -150,7 +150,7 @@
       "id": "KI024",
       "requirement": "assignment status 'finished' -> geen onbewezen mastery.",
       "status": "GETEST",
-      "evidence_or_gap": "Bestaande acceptatie plus volledig klasrapport met matrix, observatierevisies, bewijs, pogingen en opdrachten; geen credentials of andere school. API en online browsers."
+      "evidence_or_gap": "Expliciete regeltest KI010/024/044/066/067: completion, TRAIN en hergebruikte feedback zijn geen beheersingsbewijs. Werkelijke schoolpoging blijft TRAIN; test.mjs en student-browser.mjs."
     },
     {
       "id": "KI025",
@@ -191,8 +191,8 @@
     {
       "id": "KI031",
       "requirement": "school-admin zonder onderwijsrecht -> alleen administratieve data.",
-      "status": "DEELS",
-      "evidence_or_gap": "School-admin/support krijgen geen onderwijsdata; volledig schoolbeheerscherm nog niet gebouwd."
+      "status": "GETEST",
+      "evidence_or_gap": "School-admin/support zien alleen eigen-school administratieve verwerkingsaantallen en tijdstippen via afgeschermde API/UI; onderwijsdata geweigerd. API/tenanttest en gedeeld-apparaatbrowserproef. Volledig schoolbeheer blijft apart uitbreidingswerk."
     },
     {
       "id": "KI032",
@@ -216,13 +216,13 @@
       "id": "KI035",
       "requirement": "30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.",
       "status": "DEELS",
-      "evidence_or_gap": "Online D1, 30×100 matrix en 3000 TRAIN-events: vijf volledige API-antwoorden 235–527 ms. Geen cold-start-, gelijktijdigheids- of volledige browserrender-SLO."
+      "evidence_or_gap": "Online 30×100, 3000 TRAIN-events: API 254–362 ms; zes volledige browsernavigaties/renderingen 1560–4911 ms. Twee-secondengrens niet gehaald. Beide engines doorlopen vijf vaardigheidspagina's en bewijs. Geen gelijktijdigheids-/cold-startgarantie."
     },
     {
       "id": "KI036",
       "requirement": "bestaande Klink+Docent testregressie -> geen gewijzigde inhoud, routes of werkbladen.",
       "status": "GETEST",
-      "evidence_or_gap": "17 bestaande lokale tests, 6 board-browserjourneys en 8 randscenario’s; bestaande productbestanden niet gewijzigd."
+      "evidence_or_gap": "27 bestaande Klink+Docent-regressietests opnieuw lokaal geslaagd; oorspronkelijke productbestanden en vormgevingsvloer zijn ongewijzigd. Zie evidence/mfa-klink-docent-regressions.log."
     },
     {
       "id": "KI037",
@@ -288,7 +288,7 @@
       "id": "KI047",
       "requirement": "outbox retry en dubbele HTTP submit geven 1 event, 1 logisch bewijs en consistente matrix.",
       "status": "GETEST",
-      "evidence_or_gap": "Zelfde request veroorzaakt één event/outbox; gewijzigde body/context wordt geweigerd."
+      "evidence_or_gap": "Dubbele request veroorzaakt één event/outbox; gewijzigde body/context wordt geweigerd. Foutinjectie bewijst duurzame retry met vertraging, doorgaan voor andere klassen en succesvolle herverwerking."
     },
     {
       "id": "KI048",
@@ -336,7 +336,7 @@
       "id": "KI055",
       "requirement": "audit/back-upverwijderingscontract en RTO/RPO runbook bestaan en getest vóór echte pilotdata.",
       "status": "OPEN",
-      "evidence_or_gap": "Online D1-export naar SQLite, PostgreSQL en aparte remote D1 teruggelezen; Time Travel wijziging/restore geslaagd. Juridisch verwijdercontract, tombstones en afgetekende RPO/RTO blijven open."
+      "evidence_or_gap": "Schema 5: online D1 → SQLite, aparte remote D1 en PostgreSQL plus Time Travel; nieuwe wachtwoorden/MFA na herstel getest. Verwijdercontract, tombstones en ondertekende operationele RPO/RTO blijven open."
     },
     {
       "id": "KI056",
@@ -419,8 +419,8 @@
     {
       "id": "KI069",
       "requirement": "docentnote bevat script/HTML of CSV-formule -> opgeslagen en geëxporteerd zonder XSS/formula-executie.",
-      "status": "DEELS",
-      "evidence_or_gap": "Tekstweergave, SQL-parameters en CSV-formule-escaping getest. Volledig JSON-onderwijsrapport toegevoegd; onafhankelijke uitgebreide browserfuzzing/pentest niet geclaimd."
+      "status": "GETEST",
+      "evidence_or_gap": "Werkelijke online Chromium/WebKit-proef met script/HTML in observatie en spreadsheetformule in naam: tekst blijft inert na herladen, CSV neutraliseert formule, JSON bewaart originele tekst als download. evidence/security-browser.json. Geen onafhankelijke pentest geclaimd."
     },
     {
       "id": "KI070",

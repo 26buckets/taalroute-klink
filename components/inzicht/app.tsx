@@ -177,6 +177,26 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
     [loginError, setLoginError] = useState('');
   const [token, setToken] = useState('');
   const [email, setEmail] = useState('');
+  const [mfa, setMfa] = useState<{
+    mfa?: 'enroll' | 'verify';
+    secret?: string;
+    uri?: string;
+  } | null>(null);
+  const [code, setCode] = useState('');
+  const [recoveryCodes, setRecoveryCodes] = useState<string[]>([]);
+  useEffect(() => {
+    if (mfa || recoveryCodes.length)
+      document.getElementById('ki-login-step')?.focus();
+  }, [mfa, recoveryCodes.length]);
+  function openAccount() {
+    setMfa(null);
+    setCode('');
+    setRecoveryCodes([]);
+    setToken('');
+    api<{ user: string; schools: School[] }>('me', '')
+      .then(setMe)
+      .catch((e) => setLoginError(e.message));
+  }
   const login = useSave();
   const school = search.get('school') ?? me?.schools[0]?.id ?? '';
   const selected = me?.schools.find((s) => s.id === school);
@@ -245,57 +265,165 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
         <output>Toegang controleren…</output>
       ) : !me ? (
         <section className="ki-card">
-          <h2>Testomgeving openen</h2>
-          <p>
-            {online
-              ? 'Meld je aan met je fictieve testaccount. Alleen voor de besloten proef.'
-              : 'Gebruik je persoonlijke testcode. Dit is nog geen echte Klink-accountlogin.'}
-          </p>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              void login.save<{ ok: boolean }>(
-                online ? 'login' : 'session',
-                '',
-                online ? { email, password: token } : { token },
-                () => {
-                  setToken('');
-                  api<{ user: string; schools: School[] }>('me', '')
-                    .then(setMe)
-                    .catch((e) => setLoginError(e.message));
-                },
-              );
-            }}
-          >
+          {recoveryCodes.length ? (
             <>
-              {online && (
-                <Field label="E-mailadres">
+              <h2 id="ki-login-step" tabIndex={-1}>
+                Bewaar je herstelcodes
+              </h2>
+              <p>
+                Elke code werkt één keer, samen met je wachtwoord. Bewaar ze
+                apart van je wachtwoord. Deze codes worden niet opnieuw getoond.
+              </p>
+              <Field label="Herstelcodes">
+                <textarea
+                  readOnly
+                  rows={8}
+                  value={recoveryCodes.join('\n')}
+                  autoComplete="off"
+                />
+              </Field>
+              <button className="primary-button" onClick={openAccount}>
+                Ik heb de herstelcodes bewaard
+              </button>
+            </>
+          ) : mfa ? (
+            <>
+              <h2 id="ki-login-step" tabIndex={-1}>
+                {mfa.mfa === 'enroll'
+                  ? 'Extra beveiliging instellen'
+                  : 'Bevestig je aanmelding'}
+              </h2>
+              {mfa.mfa === 'enroll' ? (
+                <>
+                  <p>
+                    Voeg dit testaccount toe aan je authenticator-app met deze
+                    instelsleutel. Kies tijdgebaseerde codes en vul daarna de
+                    zescijferige code in. Deel de sleutel niet.
+                  </p>
+                  <Field label="Instelsleutel">
+                    <input
+                      readOnly
+                      autoComplete="off"
+                      value={mfa.secret ?? ''}
+                    />
+                  </Field>
+                  <p>
+                    <a href={mfa.uri}>Open je authenticator</a>
+                  </p>
+                </>
+              ) : (
+                <p>
+                  Vul de actuele code uit je authenticator in. Je kunt ook een
+                  ongebruikte herstelcode invoeren. Wacht bij een al gebruikte
+                  code op de volgende code.
+                </p>
+              )}
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  void login.save<{ recovery_codes: string[] }>(
+                    'mfa',
+                    '',
+                    { code },
+                    (result) => {
+                      setCode('');
+                      setMfa(null);
+                      if (result.recovery_codes.length)
+                        setRecoveryCodes(result.recovery_codes);
+                      else openAccount();
+                    },
+                  );
+                }}
+              >
+                <Field label="Authenticatorcode of herstelcode">
                   <input
-                    type="email"
-                    autoComplete="username"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={code}
+                    onChange={(e) => setCode(e.target.value)}
+                    autoComplete="one-time-code"
+                    maxLength={40}
                     required
-                    maxLength={254}
                   />
                 </Field>
-              )}
+                <button className="primary-button" disabled={login.busy}>
+                  Aanmelding bevestigen
+                </button>
+                <button
+                  className="secondary-button"
+                  type="button"
+                  disabled={login.busy}
+                  onClick={() =>
+                    void login.save('mfa/cancel', '', {}, () => {
+                      setMfa(null);
+                      setCode('');
+                      setToken('');
+                    })
+                  }
+                >
+                  Opnieuw aanmelden
+                </button>
+                <ErrorText text={login.error || loginError} />
+              </form>
             </>
-            <Field label={online ? 'Wachtwoord' : 'Testtoegang'}>
-              <input
-                type="password"
-                value={token}
-                onChange={(e) => setToken(e.target.value)}
-                autoComplete={online ? 'current-password' : 'off'}
-                required
-                maxLength={online ? 200 : 64}
-              />
-            </Field>
-            <button className="primary-button" disabled={login.busy}>
-              Openen <ArrowRight />
-            </button>
-            <ErrorText text={login.error || loginError} />
-          </form>
+          ) : (
+            <>
+              <h2>Testomgeving openen</h2>
+              <p>
+                {online
+                  ? 'Meld je aan met je fictieve testaccount. Alleen voor de besloten proef.'
+                  : 'Gebruik je persoonlijke testcode. Dit is nog geen echte Klink-accountlogin.'}
+              </p>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  void login.save<{
+                    ok?: boolean;
+                    mfa?: 'enroll' | 'verify';
+                    secret?: string;
+                    uri?: string;
+                  }>(
+                    online ? 'login' : 'session',
+                    '',
+                    online ? { email, password: token } : { token },
+                    (next) => {
+                      setToken('');
+                      setLoginError('');
+                      if (online && next.mfa) setMfa(next);
+                      else openAccount();
+                    },
+                  );
+                }}
+              >
+                <>
+                  {online && (
+                    <Field label="E-mailadres">
+                      <input
+                        type="email"
+                        autoComplete="username"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        maxLength={254}
+                      />
+                    </Field>
+                  )}
+                </>
+                <Field label={online ? 'Wachtwoord' : 'Testtoegang'}>
+                  <input
+                    type="password"
+                    value={token}
+                    onChange={(e) => setToken(e.target.value)}
+                    autoComplete={online ? 'current-password' : 'off'}
+                    required
+                    maxLength={online ? 200 : 64}
+                  />
+                </Field>
+                <button className="primary-button" disabled={login.busy}>
+                  Openen <ArrowRight />
+                </button>
+                <ErrorText text={login.error || loginError} />
+              </form>
+            </>
+          )}
         </section>
       ) : (
         <>
@@ -329,6 +457,9 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
                 dossierhandelingen is een afzonderlijke klas- en
                 onderwijsbevoegdheid nodig.
               </p>
+              {['school_admin', 'support'].includes(selected.role) && (
+                <OperationalStatus key={school} school={school} />
+              )}
             </section>
           ) : (
             <>
@@ -1795,6 +1926,60 @@ function Advice({ school, group }: { school: string; group: string }) {
         </>
       )}
       <output>{notice}</output>
+    </section>
+  );
+}
+
+function OperationalStatus({ school }: { school: string }) {
+  const [status, setStatus] = useState<{
+    pending_groups: number;
+    failed_groups: number;
+    last_success_at: string | null;
+  } | null>(null);
+  const [error, setError] = useState('');
+  useEffect(() => {
+    let active = true;
+    api<{
+      pending_groups: number;
+      failed_groups: number;
+      last_success_at: string | null;
+    }>('operations', school)
+      .then((value) => {
+        if (active) setStatus(value);
+      })
+      .catch((e) => {
+        if (active) setError(e.message);
+      });
+    return () => {
+      active = false;
+    };
+  }, [school]);
+  return (
+    <section aria-label="Verwerkingsstatus">
+      <h3>Voortgang verwerken</h3>
+      {status ? (
+        <>
+          <p>
+            Klassen in verwerking: {status.pending_groups}. Daarvan wachten op
+            een nieuwe poging: {status.failed_groups}.
+          </p>
+          <p>
+            {status.failed_groups
+              ? 'Een berekening is niet gelukt. De gegevens zijn bewaard; de testomgeving probeert het opnieuw.'
+              : 'Er is geen verwerkingsfout gemeld.'}
+          </p>
+          <p>
+            Laatste geslaagde automatische verwerking:{' '}
+            {status.last_success_at
+              ? new Date(status.last_success_at).toLocaleString('nl-NL')
+              : 'nog niet beschikbaar'}
+            .
+          </p>
+          <p>Vernieuw de pagina om de actuele status op te halen.</p>
+        </>
+      ) : (
+        <p>{error || 'Status ophalen…'}</p>
+      )}
     </section>
   );
 }

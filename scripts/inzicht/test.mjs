@@ -1060,3 +1060,70 @@ test('KI042: waiting, tampered and expired invitation never opens a learner doss
   assert.equal(home.data.linked, false);
   assert.deepEqual(home.data.assignments, []);
 });
+
+test('processing failure backs off only its class, preserves events and exposes no dossiers to administration', async () => {
+  const s = setup();
+  await s.observe();
+  await s.observe(
+    { class_id: 'school-b:klas', learner_id: 'school-b:leerling-1' },
+    { org: 'school-b' },
+  );
+  s.db.exec(
+    "CREATE TRIGGER fail_one_school BEFORE INSERT ON mastery_snapshots WHEN NEW.organization_id='school-a' BEGIN SELECT RAISE(ABORT,'synthetic failure'); END;",
+  );
+  const { processPending } = await import('../../lib/inzicht/service.ts');
+  assert.deepEqual(await processPending(s.db), {
+    processed_groups: 1,
+    failed_groups: 1,
+  });
+  assert.equal(
+    s.db.connection
+      .prepare(
+        "SELECT status FROM outbox_events WHERE organization_id='school-a'",
+      )
+      .get().status,
+    'queued',
+  );
+  assert.equal(
+    s.db.connection
+      .prepare(
+        "SELECT status FROM outbox_events WHERE organization_id='school-b'",
+      )
+      .get().status,
+    'processed',
+  );
+  assert.deepEqual(await processPending(s.db), {
+    processed_groups: 0,
+    failed_groups: 0,
+  });
+  const admin = await s.request('operations', undefined, { user: 'beheerder' });
+  assertStatus(admin, 200);
+  assert.equal(admin.data.failed_groups, 1);
+  assert.equal(admin.data.pending_groups, 1);
+  assert.deepEqual(Object.keys(admin.data).sort(), [
+    'failed_groups',
+    'last_attempt_at',
+    'last_success_at',
+    'oldest_pending_at',
+    'pending_groups',
+  ]);
+  assertStatus(
+    await s.request('operations', undefined, { user: 'cursist' }),
+    403,
+  );
+  assertStatus(
+    await s.request('operations', undefined, { user: 'docent' }),
+    403,
+  );
+  s.db.exec(
+    "DROP TRIGGER fail_one_school; UPDATE inzicht_outbox_retries SET next_attempt_at='2020-01-01'",
+  );
+  assert.deepEqual(await processPending(s.db), {
+    processed_groups: 1,
+    failed_groups: 0,
+  });
+  const done = await s.request('operations', undefined, { user: 'beheerder' });
+  assert.equal(done.data.pending_groups, 0);
+  assert.equal(done.data.failed_groups, 0);
+  assert(done.data.last_success_at);
+});

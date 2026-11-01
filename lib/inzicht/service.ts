@@ -1,9 +1,11 @@
 import {
-  newSession,
-  passwordMatches,
-  sessionCookie,
-  sessionToken,
-} from './auth.ts';
+  beginMfa,
+  finishMfa,
+  cancelMfa,
+  challengeCookie,
+  MfaError,
+} from './mfa.ts';
+import { passwordMatches, sessionCookie, sessionToken } from './auth.ts';
 import {
   canonical,
   computeMastery,
@@ -24,6 +26,7 @@ export type InzichtEnv = {
   INZICHT_DB?: D1Database;
   INZICHT_MODE?: string;
   INZICHT_ORIGIN?: string;
+  INZICHT_MFA_KEY?: string;
 };
 type Row = Record<string, string | number | null>;
 type Context = {
@@ -107,7 +110,7 @@ async function actor(request: Request, db: D1Database, online = false) {
     return fail(401, 'Meld je aan in de testomgeving.');
   const session = await one(
     db,
-    "SELECT s.user_id FROM inzicht_sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>? AND s.revoked=0 AND u.status='active'",
+    `SELECT s.user_id FROM inzicht_sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>? AND s.revoked=0 AND u.status='active' ${online ? 'AND EXISTS(SELECT 1 FROM inzicht_mfa f JOIN inzicht_mfa_sessions ms ON ms.token_hash=s.token_hash WHERE f.user_id=s.user_id)' : ''}`,
     await hash(token),
     now(),
   );
@@ -334,27 +337,61 @@ async function matrix(c: Context, group: string, process = false) {
 export async function processPending(db: D1Database) {
   const pending = await rows(
     db,
-    "SELECT DISTINCT organization_id,group_id FROM outbox_events WHERE status<>'processed' ORDER BY created_at LIMIT 5",
+    "SELECT e.organization_id,e.group_id,COALESCE(r.failures,0) failures FROM outbox_events e LEFT JOIN inzicht_outbox_retries r ON r.organization_id=e.organization_id AND r.group_id=e.group_id WHERE e.status<>'processed' AND (r.next_attempt_at IS NULL OR r.next_attempt_at<=?) GROUP BY e.organization_id,e.group_id ORDER BY MIN(e.created_at),e.organization_id,e.group_id LIMIT 5",
+    now(),
   );
+  const result = { processed_groups: 0, failed_groups: 0 };
   for (const item of pending) {
-    await matrix(
-      {
+    try {
+      await matrix(
+        {
+          db,
+          org: String(item.organization_id),
+          user: '',
+          member: '',
+          role: '',
+          create: false,
+          routes: [],
+          version: 0,
+        },
+        String(item.group_id),
+        true,
+      );
+      await stmt(
         db,
-        org: String(item.organization_id),
-        user: '',
-        member: '',
-        role: '',
-        create: false,
-        routes: [],
-        version: 0,
-      },
-      String(item.group_id),
-      true,
-    );
+        'INSERT INTO inzicht_outbox_retries VALUES (?,?,0,NULL,?,?) ON CONFLICT(organization_id,group_id) DO UPDATE SET failures=0,next_attempt_at=NULL,last_attempt_at=excluded.last_attempt_at,last_success_at=excluded.last_success_at',
+        String(item.organization_id),
+        String(item.group_id),
+        now(),
+        now(),
+      ).run();
+      result.processed_groups++;
+    } catch {
+      // Preserve the queued events; back off this class so other classes can continue.
+      const delay = Math.min(
+        3600000,
+        300000 * 2 ** Math.min(Number(item.failures), 4),
+      );
+      await stmt(
+        db,
+        'INSERT INTO inzicht_outbox_retries VALUES (?,?,1,?,?,NULL) ON CONFLICT(organization_id,group_id) DO UPDATE SET failures=failures+1,next_attempt_at=excluded.next_attempt_at,last_attempt_at=excluded.last_attempt_at',
+        String(item.organization_id),
+        String(item.group_id),
+        new Date(Date.now() + delay).toISOString(),
+        now(),
+      ).run();
+      result.failed_groups++;
+      console.error('inzicht.processing_failed');
+    }
   }
   await stmt(
     db,
     'DELETE FROM inzicht_sessions WHERE expires_at<? OR revoked=1',
+    now(),
+  ).run();
+  await stmt(
+    db,
+    'DELETE FROM inzicht_mfa_challenges WHERE expires_at<?',
     now(),
   ).run();
   // All rate windows are at most fifteen minutes. Keep the current windows only.
@@ -366,6 +403,7 @@ export async function processPending(db: D1Database) {
     quarter - 1,
     minute - 1,
   ).run();
+  return result;
 }
 async function inputs(c: Context, group: string) {
   const version = c.version;
@@ -607,6 +645,40 @@ async function mutate(
   return data;
 }
 
+async function readBody(request: Request) {
+  if (Number(request.headers.get('content-length')) > 16000)
+    return fail(413, 'Te veel gegevens.');
+  const reader = request.body?.getReader();
+  if (!reader) return '';
+  const parts: Uint8Array[] = [];
+  let size = 0;
+  try {
+    while (true) {
+      const chunk = await reader.read();
+      if (chunk.done) break;
+      size += chunk.value.byteLength;
+      if (size > 16000) {
+        void reader.cancel().catch(() => {});
+        return fail(413, 'Te veel gegevens.');
+      }
+      parts.push(chunk.value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  const data = new Uint8Array(size);
+  let offset = 0;
+  for (const part of parts) {
+    data.set(part, offset);
+    offset += part.byteLength;
+  }
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(data);
+  } catch {
+    return fail(400, 'Ongeldige tekstcodering.');
+  }
+}
+
 export async function handleInzicht(
   request: Request,
   env: InzichtEnv,
@@ -642,9 +714,7 @@ export async function handleInzicht(
         !request.headers.get('content-type')?.startsWith('application/json'))
     )
       return response({ error: 'Ongeldige verzoekherkomst.' }, 403);
-    const raw = writing ? await request.text() : '';
-    if (raw.length > 16000)
-      return response({ error: 'Te veel gegevens.' }, 413);
+    const raw = writing ? await readBody(request) : '';
     let body: Record<string, unknown> = {};
     if (raw) {
       try {
@@ -686,24 +756,45 @@ export async function handleInzicht(
       );
       if (!(await passwordMatches(password, credentials?.password_hash)))
         fail(401, 'E-mailadres of wachtwoord klopt niet.');
-      const token = newSession();
-      const created = await stmt(
+      const next = await beginMfa(
         db,
-        "INSERT INTO inzicht_sessions SELECT ?,c.user_id,?,0 FROM inzicht_credentials c JOIN users u ON u.id=c.user_id WHERE c.user_id=? AND c.password_hash=? AND u.status='active'",
-        await hash(token),
-        new Date(Date.now() + 8 * 3600000).toISOString(),
         String(credentials!.user_id),
+        email,
         String(credentials!.password_hash),
-      ).run();
-      if (!created.meta.changes) fail(401, 'Meld je opnieuw aan.');
+        env.INZICHT_MFA_KEY,
+      );
+      const oldToken = sessionToken(request, true);
+      if (oldToken)
+        await stmt(
+          db,
+          'DELETE FROM inzicht_sessions WHERE token_hash=?',
+          await hash(oldToken),
+        ).run();
       await stmt(
         db,
         'DELETE FROM inzicht_rate_limits WHERE bucket=?',
         `login-account:${await hash(email)}:${window}`,
       ).run();
-      return response({ ok: true }, 200, {
-        'Set-Cookie': sessionCookie(true, token),
+      const result = response(next.data, 200, {
+        'Set-Cookie': challengeCookie(next.token),
       });
+      result.headers.append('Set-Cookie', sessionCookie(true, ''));
+      return result;
+    }
+    if (path[0] === 'mfa' && writing && online) {
+      if (path[1] === 'cancel') {
+        await cancelMfa(db, request);
+        return response({ ok: true }, 200, {
+          'Set-Cookie': challengeCookie(''),
+        });
+      }
+      if (path[1]) return response({ error: 'Niet beschikbaar.' }, 404);
+      const next = await finishMfa(db, request, body.code, env.INZICHT_MFA_KEY);
+      const result = response(next.data, 200, {
+        'Set-Cookie': sessionCookie(true, next.token),
+      });
+      result.headers.append('Set-Cookie', challengeCookie(''));
+      return result;
     }
     if (path[0] === 'session' && online)
       return response({ error: 'Niet beschikbaar.' }, 404);
@@ -753,6 +844,22 @@ export async function handleInzicht(
     const c = await context(db, user, url.searchParams.get('school'));
     const group =
       path[0] === 'classes' ? path[1] : url.searchParams.get('class');
+    if (path[0] === 'operations' && !writing) {
+      if (!['school_admin', 'support'].includes(c.role))
+        return fail(403, 'Geen beheerrechten.');
+      const state = await one(
+        db,
+        "SELECT COUNT(*) pending_groups,COALESCE(SUM(CASE WHEN r.failures>0 THEN 1 ELSE 0 END),0) failed_groups,MIN(p.created_at) oldest_pending_at FROM (SELECT group_id,MIN(created_at) created_at FROM outbox_events WHERE organization_id=? AND status<>'processed' GROUP BY group_id) p LEFT JOIN inzicht_outbox_retries r ON r.group_id=p.group_id AND r.organization_id=?",
+        c.org,
+        c.org,
+      );
+      const history = await one(
+        db,
+        'SELECT MAX(last_attempt_at) last_attempt_at,MAX(last_success_at) last_success_at FROM inzicht_outbox_retries WHERE organization_id=?',
+        c.org,
+      );
+      return response({ ...state, ...history });
+    }
     if (path[0] === 'registrar' && !writing) {
       if (c.role !== 'registrar') return fail(403, 'Geen registrarrechten.');
       return response({
@@ -1841,7 +1948,7 @@ export async function handleInzicht(
     }
     return response({ error: 'Niet beschikbaar.' }, 404);
   } catch (error) {
-    if (error instanceof HttpError)
+    if (error instanceof HttpError || error instanceof MfaError)
       return response({ error: error.message }, error.status);
     // Do not log names, notes, answers, tokens or database error text.
     console.error('inzicht.request_failed');

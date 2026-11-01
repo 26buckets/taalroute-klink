@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-01T02:57:50.486Z",
+  "at": "2026-11-01T03:32:30.764Z",
   "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
   "checks": [
     {
@@ -28,6 +28,8 @@
     }
   ],
   "real_password_login": true,
+  "mfa_required": true,
+  "password_only_denied": true,
   "secure_cookie": true,
   "tenant_isolation": true,
   "csrf": true,

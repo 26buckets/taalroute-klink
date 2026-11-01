@@ -1,0 +1,82 @@
+{
+  "at": "2026-11-01T03:32:33.401Z",
+  "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "learners": 30,
+  "skills": 100,
+  "train_evidence_events": 3000,
+  "measurements": [
+    {
+      "run": 1,
+      "elapsed_ms": 303
+    },
+    {
+      "run": 2,
+      "elapsed_ms": 248
+    },
+    {
+      "run": 3,
+      "elapsed_ms": 302
+    },
+    {
+      "run": 4,
+      "elapsed_ms": 286
+    },
+    {
+      "run": 5,
+      "elapsed_ms": 240
+    }
+  ],
+  "browser_measurements": [
+    {
+      "engine": "chromium",
+      "run": 1,
+      "elapsed_ms": 2691,
+      "fresh_browser_cache": true,
+      "all_five_skill_pages": true,
+      "evidence_link": true
+    },
+    {
+      "engine": "chromium",
+      "run": 2,
+      "elapsed_ms": 3162,
+      "fresh_browser_cache": true,
+      "all_five_skill_pages": true,
+      "evidence_link": true
+    },
+    {
+      "engine": "chromium",
+      "run": 3,
+      "elapsed_ms": 3010,
+      "fresh_browser_cache": true,
+      "all_five_skill_pages": true,
+      "evidence_link": true
+    },
+    {
+      "engine": "webkit",
+      "run": 1,
+      "elapsed_ms": 3672,
+      "fresh_browser_cache": true,
+      "all_five_skill_pages": true,
+      "evidence_link": true
+    },
+    {
+      "engine": "webkit",
+      "run": 2,
+      "elapsed_ms": 2306,
+      "fresh_browser_cache": true,
+      "all_five_skill_pages": true,
+      "evidence_link": true
+    },
+    {
+      "engine": "webkit",
+      "run": 3,
+      "elapsed_ms": 3388,
+      "fresh_browser_cache": true,
+      "all_five_skill_pages": true,
+      "evidence_link": true
+    }
+  ],
+  "threshold_ms": 2000,
+  "all_under_threshold": false,
+  "scope": "Full network API and fresh browser-context navigation until 30 learner rows and 20 visible skill columns render, with all five skill pages and evidence navigation checked. MFA completed before the timer. No simultaneous-school or forced Worker cold-start guarantee."
+}

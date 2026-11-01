@@ -66,7 +66,7 @@ Alle school-API's vereisen `?school=...`. Schrijven vereist dezelfde Origin, JSO
 | Werkpakket | Status | Nog nodig |
 |---|---|---|
 | WP0 inspectie | Uitgevoerd | Nieuwe livebasis opnieuw toetsen vóór iedere latere publicatie |
-| WP1 klassen/accounts | Lokale synthetische uitvoering | Beheerde echte login, MFA/herstel, accountactivatie, operationeel schoolbeheer |
+| WP1 klassen/accounts | Afzonderlijke staging met wachtwoord + MFA en fictieve accountkoppeling | Echte accountactivatie/identity lifecycle, volledig operationeel schoolbeheer (synthetische wachtwoordlogin + MFA/herstel zijn getest) |
 | WP2 observaties | Werkend lokaal | Goedgekeurde observatierubrics en praktijkreview |
 | WP3 bewijs/matrix | Werkend raamwerk; 3 proefvaardigheden | Gevalideerde meetinstrumenten, volledige skill/contentmapping, afgetekende alarmbewaking en verdere schaalacceptatie |
 | WP4 toegang/opdrachten | Lokale kernroute werkend | Volledige gevalideerde catalogus en praktijkreview; vrije keuze, planning/intrekking, herstel klasstandaard en onderwijsrapport zijn nu gebouwd |
@@ -82,3 +82,7 @@ Lees `WP0.md`, `ACCEPTATIE-72.md`, `SECURITY-PRIVACY.md`, `HERSTEL.md` en de bew
 De nieuwe cursistspeler heeft een echte heropenbare route `/inzicht/oefenen` met school-, klas-, content- en waar nodig opdrachtcontext. Een cataloguslink zonder klas vraagt eerst expliciet de juiste klas; een andere of ingetrokken context wordt opnieuw server-side geweigerd. De donkere weergave van alleen de nieuwe module gebruikt de bestaande donkere schoolmenu-kleuren. Bestaande hoofdschermen zijn niet aangepast.
 
 De bestaande publicatiecheck voor de afzonderlijke synoniemenrelease weigert de extra Inzicht-bestanden terecht omdat zij buiten dat eerdere akkoord vallen. Die check is niet aangepast of omzeild. De vier functionele synoniemenregressies zijn apart geslaagd; samen met de 17 docent/werkbladcontroles zijn dit 21 bestaande functionele controles. Er is geen productievrijgavecheck groen verklaard voor Inzicht.
+
+## Aanvulling MFA en beheer, 1 november 2026
+
+Wachtwoord plus verplichte authenticatorcode, eenmalige herstelcodes, beheerreset, revocatie en duurzame foutisolatie zijn op de afzonderlijke fictieve staging uitgevoerd. Zie `MFA-EN-BEHEER.md` voor actuele codepaden, schema 5, bewijzen en operationele grenzen. De huidige test- en acceptatiestand staat in `PROJECTVERSLAG.md` en `ACCEPTATIE-72.md`; oudere logbestanden zijn historische bewijzen.

@@ -1,9 +1,13 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 export function checkStaging(config) {
   assert.equal(config.name, 'klink-inzicht-pr8-staging');
   assert.equal(config.vars.INZICHT_MODE, 'synthetic-online');
+  assert(
+    !('INZICHT_MFA_KEY' in config.vars),
+    'Encryption key must be a Worker secret, never plaintext configuration',
+  );
   assert.equal(
     config.vars.INZICHT_ORIGIN,
     'https://klink-inzicht-pr8-staging.nico-554.workers.dev',
@@ -34,6 +38,40 @@ if (process.argv[1]?.endsWith('/deploy-staging.mjs')) {
     process.argv[2],
     '--deploy',
     'Explicit --deploy required; only the isolated staging is allowed',
+  );
+  const secrets = JSON.parse(
+    execFileSync(
+      'node_modules/.bin/wrangler',
+      ['secret', 'list', '--config', 'scripts/inzicht/online-config.json'],
+      { encoding: 'utf8' },
+    ),
+  );
+  assert(
+    secrets.some((s) => s.name === 'INZICHT_MFA_KEY'),
+    'Configure the MFA encryption secret before deploying',
+  );
+  const version = JSON.parse(
+    execFileSync(
+      'node_modules/.bin/wrangler',
+      [
+        'd1',
+        'execute',
+        'INZICHT_DB',
+        '--remote',
+        '--config',
+        'scripts/inzicht/online-config.json',
+        '--command',
+        'SELECT MAX(version) v FROM inzicht_schema',
+        '--json',
+      ],
+      { encoding: 'utf8' },
+    ),
+  )[0].results[0].v;
+  assert.equal(
+    version,
+    readdirSync('db/migrations/inzicht').filter((f) => f.endsWith('.sql'))
+      .length,
+    'Apply reviewed staging migrations before deploying',
   );
   execFileSync(
     'node_modules/.bin/wrangler',

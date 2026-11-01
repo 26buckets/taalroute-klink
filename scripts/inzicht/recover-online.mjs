@@ -29,7 +29,8 @@ const targetArgs = [
 ];
 const query = (sql) =>
   JSON.parse(run([...targetArgs, '--command', sql, '--json']));
-const dir = '.wrangler/online-recovery';
+const mfa = process.argv.includes('--mfa');
+const dir = mfa ? '.wrangler/mfa-recovery' : '.wrangler/online-recovery';
 mkdirSync(dir, { recursive: true, mode: 0o700 });
 let bundle;
 if (process.argv.includes('--verify-existing'))
@@ -63,6 +64,14 @@ else {
   source.close();
   assert(!bundle.data.inzicht_credentials);
   assert(!bundle.data.inzicht_sessions);
+  for (const table of [
+    'inzicht_mfa',
+    'inzicht_mfa_sessions',
+    'inzicht_mfa_challenges',
+    'inzicht_mfa_recovery',
+    'inzicht_auth_events',
+  ])
+    assert(!bundle.data[table]);
   writeFileSync(`${dir}/snapshot.json`, JSON.stringify(bundle, null, 2), {
     mode: 0o600,
   });
@@ -129,13 +138,14 @@ run([
 ]);
 compare();
 writeFileSync(
-  'docs/inzicht-20261101/evidence/online-recovery.json',
+  `docs/inzicht-20261101/evidence/${mfa ? 'mfa-' : ''}online-recovery.json`,
   JSON.stringify(
     {
       at: new Date().toISOString(),
       source: 'klink-inzicht-pr8-staging',
       target: 'klink-inzicht-pr8-restore',
       tables: names.length,
+      schema_version: bundle.schema_version,
       checksum: bundle.checksum,
       sqlite: 'all rows equal',
       d1: 'all rows equal',

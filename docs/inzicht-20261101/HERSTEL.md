@@ -2,7 +2,7 @@
 
 ## Huidige grens
 
-Lokale en afzonderlijke online synthetische staging. De productie-D1 is niet gemigreerd. Geen down-migratie, DROP of destructieve rollback toegevoegd. Er zijn drie geordende schemafiles in Git; de eerste voegt de nieuwe tabellen toe, de tweede server-side schoolpogingen, de derde afzonderlijke stagingcredentials. Bestaande demotabellen worden niet gebruikt of veranderd.
+Lokale en afzonderlijke online synthetische staging. De productie-D1 is niet gemigreerd. Geen down-migratie of destructieve applicatierollback toegevoegd. Een streng gecontroleerde reset bestaat uitsluitend voor de eigen ongebonden fictieve herstel-DB; zie MFA-EN-BEHEER.md. Er zijn vijf geordende schemafiles in Git; de eerste voegt de nieuwe tabellen toe, de tweede server-side schoolpogingen, de derde afzonderlijke stagingcredentials, de vierde MFA en de vijfde duurzame verwerkingsherhalingen. Bestaande demotabellen worden niet gebruikt of veranderd.
 
 `staging.mjs` leest eerst de schema-versie, past ontbrekende migraties in volgorde toe en seedt alleen een lege Inzicht-database. Het markerbestand voorkomt opnieuw vullen. Een volgende echte schemawijziging krijgt een nieuw migratienummer en een upgrade-/hersteltest op een kopie, niet een wijziging van een al gebruikte migratie. Nog geen algemene productiemigratieplanner of cloudrelease-command.
 
@@ -51,3 +51,7 @@ node scripts/inzicht/portable-test.mjs .wrangler/online-recovery/snapshot.json
 Bewijs: `evidence/online-recovery.json`, `online-portable-test-results.json`, herstel-/PostgreSQL-logs en de gecontroleerde portable snapshot in het nieuwe herstelpakket. De oorspronkelijke ruwe SQL-export met auth-hashes blijft in `.wrangler/online-recovery/` en gaat nooit naar Git/Drive. Ook de herstelde database heeft nul credentials en nul sessies. Het portable pakket kan dus geen oude login herstellen.
 
 De providerhistorie is een automatische technische herstelvoorziening. Zij vervangt geen onafhankelijke archiefkopie, vastgelegde bewaartermijn of goedgekeurde RPO/RTO. In deze taak is daarnaast een onafhankelijke portable export in de bestaande Drive-projectmap opgeslagen en teruggelezen. Een toekomstige restore voor echte gebruikers vereist nieuwe gecontroleerde authenticatie en toepassing van actuele verwijderbesluiten vóór het openen van toegang.
+
+## Aanvulling MFA en beheer, 1 november 2026
+
+Wachtwoord plus verplichte authenticatorcode, eenmalige herstelcodes, beheerreset, revocatie en duurzame foutisolatie zijn op de afzonderlijke fictieve staging uitgevoerd. Zie `MFA-EN-BEHEER.md` voor actuele codepaden, schema 5, bewijzen en operationele grenzen. De huidige test- en acceptatiestand staat in `PROJECTVERSLAG.md` en `ACCEPTATIE-72.md`; oudere logbestanden zijn historische bewijzen.

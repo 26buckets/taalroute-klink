@@ -4,7 +4,7 @@ Dit document registreert implementatie en open beslissingen. Het is geen juridis
 
 ## Vervolgstatus online staging
 
-De afzonderlijke online testomgeving is uitsluitend met fictieve accounts ingericht. Echte wachtwoordcontrole, host-only Secure/HttpOnly-cookies, rate limiting, account- en sessie-intrekking, gedeeld-apparaatcontrole en credentialrotatie zijn getest. Lokale testtokens werken er niet. Zie ONLINE-STAGING.md en de auth-/browserbewijzen. De aparte reeds bestaande Inzicht-app en haar accounts zijn niet gebruikt. MFA, echte activatie/identiteitsverificatie en juridische poorten blijven open. Er is geen onbeveiligde fixture-login online gezet.
+De afzonderlijke online testomgeving is uitsluitend met fictieve accounts ingericht. Echte wachtwoordcontrole, host-only Secure/HttpOnly-cookies, rate limiting, account- en sessie-intrekking, gedeeld-apparaatcontrole en credentialrotatie zijn getest. Lokale testtokens werken er niet. Zie ONLINE-STAGING.md en de auth-/browserbewijzen. De aparte reeds bestaande Inzicht-app en haar accounts zijn niet gebruikt. Echte activatie/identiteitsverificatie en juridische poorten blijven open. Er is geen onbeveiligde fixture-login online gezet.
 
 ## Getoetste grenzen
 
@@ -22,7 +22,7 @@ Cross-school URL/export, vreemde klas, onbevoegde docent/admin/support, ingetrok
 
 ## Open releasepoorten — geen echte pilot toestaan
 
-1. **Identiteit:** keuze en integratie van beheerde auth; verificatie van identiteit en schooldomein, veilige activatie, MFA voor bevoegde medewerkers, sessierotatie, intrekken, herstel, schooluitdiensttreding en gedeelde apparaten. Geen knop waarmee de lokale fixture-login op internet wordt aangezet.
+1. **Identiteit:** productiekeuze voor identitybeheer (native of SSO); verificatie van identiteit en schooldomein, veilige activatie, MFA voor bevoegde medewerkers (synthetisch getest, nog onafhankelijk te beoordelen), sessierotatie, intrekken, herstel, schooluitdiensttreding en gedeelde apparaten. Geen knop waarmee de lokale fixture-login op internet wordt aangezet.
 2. **Privacy:** bevoegde privacyverantwoordelijke tekent doel/grondslag, controller/verwerkerrollen, DPIA-beoordeling, informatie aan cursisten, inzage/correctie/verwijdering, dataminimalisatie en onderstaande retentiematrix. Schoolcontracten, subverwerkers/regio en doorgiften afzonderlijk vaststellen.
 3. **Didactiek:** valideer rubrics, minimumitems, onafhankelijkheid/transfer, aandacht, veroudering, 60%-dekking en 3-en-30%-grens. Alle huidige runtimevaardigheden hebben `measurement_approved=0`. Synthetische tests van grenswaarden zijn geen inhoudelijk bewijs van validiteit.
 4. **Beheer:** eigenaar, herstelbevoegde, RPO/RTO, back-upschema, versleutelde opslag/toegang, alarmen, fout-/outboxbewaking, verzoekretentie, limieten en incidentprocedure. Globale schoolversie kiest veilige conflictafhandeling boven gelijktijdige schrijfsnelheid; grotere scholen eerst op echte D1-staging belasten. Er is nu een begrensde automatische outbox-consumer en geteste D1 Time Travel-herstelroute. Een onafhankelijke periodieke versleutelde export en operationele alarmdienst zijn nog niet vastgesteld.
@@ -45,3 +45,7 @@ Het product heeft nog geen goedgekeurde verwijderworkflow/tombstoneregister en b
 ## Samenhang met de Taalroute-ontwerpbasis
 
 De canonieke ontwerpbasis (Drive `1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz`, lokale bronkopie in `sources/`) is in de eindreview geraadpleegd. Inzicht vervangt geen lesbezoekkader en claimt geen methode-, cursus- of taalniveauvrijgave. De huidige drie proefvaardigheden zijn geen vervangende officiële criteria. De verbinding boekdoel → werkelijk ingeroosterde bijeenkomst → docenthandeling → zichtbaar cursistgedrag → materiaal/tijd moet per toekomstige content-/rubrickoppeling nog inhoudelijk worden vastgelegd en beoordeeld. Geen rooster- of duurgegevens worden verzonnen; onbekende duur blijft onbekend. Klink+Docent blijft de bestaande plek voor lesmateriaal, niet een automatische individuele meetbron.
+
+## Aanvulling MFA en beheer, 1 november 2026
+
+Wachtwoord plus verplichte authenticatorcode, eenmalige herstelcodes, beheerreset, revocatie en duurzame foutisolatie zijn op de afzonderlijke fictieve staging uitgevoerd. Zie `MFA-EN-BEHEER.md` voor actuele codepaden, schema 5, bewijzen en operationele grenzen. De huidige test- en acceptatiestand staat in `PROJECTVERSLAG.md` en `ACCEPTATIE-72.md`; oudere logbestanden zijn historische bewijzen.

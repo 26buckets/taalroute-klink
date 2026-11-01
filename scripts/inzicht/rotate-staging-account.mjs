@@ -30,7 +30,7 @@ writeFileSync(
   JSON.stringify({ user, password }),
   { mode: 0o600 },
 );
-const sql = `UPDATE inzicht_credentials SET password_hash='${await passwordHash(password)}',updated_at='${new Date().toISOString()}' WHERE user_id='${user}'; UPDATE inzicht_sessions SET revoked=1 WHERE user_id='${user}';`;
+const sql = `UPDATE inzicht_credentials SET password_hash='${await passwordHash(password)}',updated_at='${new Date().toISOString()}' WHERE user_id='${user}'; UPDATE inzicht_sessions SET revoked=1 WHERE user_id='${user}'; DELETE FROM inzicht_mfa_challenges WHERE user_id='${user}'; INSERT INTO inzicht_auth_events VALUES ('${crypto.randomUUID()}','${user}','password_rotated','${new Date().toISOString()}');`;
 writeFileSync('.wrangler/inzicht-rotate.sql', sql, { mode: 0o600 });
 execFileSync(
   'node_modules/.bin/wrangler',

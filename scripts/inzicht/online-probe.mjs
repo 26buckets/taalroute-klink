@@ -1,3 +1,9 @@
+import {
+  nativeLogin,
+  passwordLogin,
+  responseCookie,
+  post,
+} from './mfa-client.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync } from 'node:fs';
 const { vars } = JSON.parse(readFileSync('scripts/inzicht/online-config.json'));
@@ -15,16 +21,18 @@ for (const [path, status] of [
   assert.equal(r.status, status, `${path}: ${await r.text()}`);
   checks.push({ path, status: r.status });
 }
-const account = JSON.parse(
-  readFileSync('.wrangler/inzicht-online-credentials.json'),
-).docent;
-const r = await fetch(base + '/api/inzicht/login', {
-  method: 'POST',
-  headers: { origin: base, 'Content-Type': 'application/json' },
-  body: JSON.stringify(account),
-});
+const first = await passwordLogin('docent');
+assert.equal(first.status, 200);
+const preauth = responseCookie(first, '__Host-inzicht_mfa');
+assert.equal(
+  (await fetch(base + '/api/inzicht/me', { headers: { cookie: preauth } }))
+    .status,
+  401,
+);
+await post('mfa/cancel', {}, preauth);
+const r = await nativeLogin('docent');
 assert.equal(r.status, 200, await r.text());
-const cookie = r.headers.get('set-cookie').split(';')[0];
+const cookie = responseCookie(r, '__Host-inzicht_session');
 assert.match(r.headers.get('set-cookie'), /HttpOnly/);
 assert.match(r.headers.get('set-cookie'), /Secure/);
 assert.match(r.headers.get('set-cookie'), /SameSite=Strict/);
@@ -65,6 +73,8 @@ writeFileSync(
       origin: base,
       checks,
       real_password_login: true,
+      mfa_required: true,
+      password_only_denied: true,
       secure_cookie: true,
       tenant_isolation: true,
       csrf: true,

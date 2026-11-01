@@ -1,3 +1,4 @@
+import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -145,6 +146,7 @@ run(['--file', '.wrangler/performance-seed.sql']);
 try {
   const cookie = await apiCookie('docent'),
     measurements = [];
+  const browserMeasurements = [];
   for (let i = 0; i < 5; i++) {
     const start = performance.now();
     const r = await fetch(
@@ -159,6 +161,64 @@ try {
     assert(data.rows.every((row) => Object.keys(row.cells).length === 100));
     measurements.push({ run: i + 1, elapsed_ms });
   }
+  for (const [engine, type] of Object.entries({ chromium, webkit })) {
+    const browser = await type.launch();
+    try {
+      for (let run = 1; run <= 3; run++) {
+        const context = await browser.newContext({
+          viewport: { width: 1366, height: 1000 },
+        });
+        await context.addCookies([
+          {
+            name: '__Host-inzicht_session',
+            value: cookie.split('=')[1],
+            url: base,
+            httpOnly: true,
+            secure: true,
+            sameSite: 'Strict',
+          },
+        ]);
+        const page = await context.newPage();
+        const start = performance.now();
+        await page.goto(
+          `${base}/inzicht/klassen/${org}:klas/matrix?school=${org}`,
+        );
+        await page.locator('.ki-table tbody tr').last().waitFor();
+        assert.equal(await page.locator('.ki-table tbody tr').count(), 30);
+        assert.equal(await page.locator('.ki-table thead th').count(), 21);
+        const elapsed_ms = Math.round(performance.now() - start);
+        for (let i = 0; i < 4; i++)
+          await page
+            .getByRole('button', { name: 'Volgende leerdoelen', exact: true })
+            .click();
+        assert(
+          await page
+            .getByRole('button', { name: 'Volgende leerdoelen', exact: true })
+            .isDisabled(),
+        );
+        assert.equal(await page.locator('.ki-table tbody tr').count(), 30);
+        assert.equal(await page.locator('.ki-table thead th').count(), 21);
+        await page
+          .getByRole('link', { name: /bekijk bewijs/ })
+          .first()
+          .click();
+        await page
+          .getByRole('link', { name: 'Terug naar de matrix', exact: true })
+          .waitFor();
+        browserMeasurements.push({
+          engine,
+          run,
+          elapsed_ms,
+          fresh_browser_cache: true,
+          all_five_skill_pages: true,
+          evidence_link: true,
+        });
+        await context.close();
+      }
+    } finally {
+      await browser.close();
+    }
+  }
   writeFileSync(
     'docs/inzicht-20261101/evidence/online-performance.json',
     JSON.stringify(
@@ -169,18 +229,23 @@ try {
         skills: 100,
         train_evidence_events: 3000,
         measurements,
+        browser_measurements: browserMeasurements,
         threshold_ms: 2000,
-        all_under_threshold: measurements.every((m) => m.elapsed_ms < 2000),
+        all_under_threshold: [...measurements, ...browserMeasurements].every(
+          (m) => m.elapsed_ms < 2000,
+        ),
         scope:
-          'Full network API response from this Mac; not cold-start guarantee, simultaneous school benchmark or whole-browser render SLO.',
+          'Full network API and fresh browser-context navigation until 30 learner rows and 20 visible skill columns render, with all five skill pages and evidence navigation checked. MFA completed before the timer. No simultaneous-school or forced Worker cold-start guarantee.',
       },
       null,
       2,
     ),
   );
-  assert(measurements.every((m) => m.elapsed_ms < 2000));
+  assert(
+    [...measurements, ...browserMeasurements].every((m) => m.elapsed_ms < 2000),
+  );
   console.log(
-    'Remote D1 30 × 100 matrix with 3000 TRAIN events: all five complete network responses below 2 seconds.',
+    'Remote D1 30 × 100 matrix with 3000 TRAIN events: all five network responses and six browser renders below 2 seconds.',
   );
 } finally {
   run(['--file', '.wrangler/performance-cleanup.sql']);

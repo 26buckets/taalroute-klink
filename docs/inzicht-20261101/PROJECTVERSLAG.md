@@ -1,41 +1,45 @@
-# KLINK INZICHT — uitvoering en online staging
+# KLINK INZICHT — staging met MFA
 
-1 november 2026. Vervolg op de lokale implementatie. Uitsluitend fictieve gegevens; geen merge en geen productiepublicatie.
+1 november 2026. Alleen fictieve gegevens. Geen merge of productiepublicatie.
 
-## Review en openen
+## Review en toegang
 
-- Testomgeving: https://klink-inzicht-pr8-staging.nico-554.workers.dev/inzicht
+- Staging: https://klink-inzicht-pr8-staging.nico-554.workers.dev/inzicht
 - Draft PR: https://github.com/26buckets/taalroute-klink/pull/8
-- Bronnen en herstelarchief: https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF
-- Het afzonderlijke lokale bestand `KLINK-INZICHT-STAGING-TOEGANG.txt` bevat de fictieve testaccounts. Wachtwoorden, sessies en ruwe database-export met credentialhashes worden niet meegeleverd in Git of Drive.
+- Projectmap: https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF
+- Actuele stagingdeployment: `07b76637-7961-409e-8ab2-2543b2a0ab17`, schema 5.
+- De lokale bestanden `KLINK-INZICHT-STAGING-TOEGANG.txt` en `KLINK-INZICHT-MFA-TOEGANG.txt` geven Nico toegang tot de zes fictieve testaccounts. Wachtwoorden, MFA-sleutels en herstelcodes blijven buiten Git en Drive.
 
-## Uitgevoerd
+## Gebouwd en behouden
 
-De volledige bronset 00/03/01/02 en KLINK 2.0 is gelezen en bewaard met bronmanifest. Normatieve prioriteit blijft R2 > R1 > v1.0. De echte Klink-repository en Cloudflare-opzet zijn geïnspecteerd. D1 is gekozen als gecontroleerde uitbreiding van de aanwezige SQL-infrastructuur. De bestaande productiedatabase is niet veranderd. Nieuwe schoolgegevens staan permanent op een afzonderlijke EU-stagingdatabase, met drie migraties in Git.
+Bronnen 00/03/01/02 en KLINK 2.0 zijn volledig gelezen en opgenomen met bronmanifest; R2 > R1 > v1.0 blijft normatief. De echte repository en Cloudflare-architectuur zijn geïnspecteerd. D1 is een gecontroleerde uitbreiding van de aanwezige SQL-infrastructuur. Schoolgegevens worden duurzaam bewaard op een afzonderlijke EU-stagingdatabase, met vijf geordende migraties in Git. De productiedatabase is ongewijzigd.
 
-De module bevat klassen, voorlopige cursisten, expliciete accountkoppeling, duurzame observatierevisies, vaardighedenmatrix en individuele leerbewijzen, leerroutetoegang en uitzonderingen, opdrachten en transparante deterministische lesvoorstellen. De docent bevestigt wijzigingen; er is geen AI in de runtime. Drie bestaande oefeningen vormen de gecontroleerde catalogus. De volledige catalogus, gevalideerde meetrubrics en het persoonlijke SQL-paspoort blijven uitbreidingswerk.
+De bestaande uitvoering bevat klassen, voorlopige cursisten, expliciete accountkoppeling, observatierevisies, vaardighedenmatrix en individuele leerbewijzen, klas-/cursisttoegang, opdrachten en deterministische lesadviezen met docentgoedkeuring. Planning/intrekken, klasstandaard herstellen, toegestaan vrij oefenen en onderwijsrapporten werken. De catalogus bevat drie gecontroleerde bestaande oefeningen; volledige contentmapping, gevalideerde meetrubrics en het persoonlijke SQL-paspoort zijn nog niet af.
 
-Deze vervolgronde voegt echte wachtwoordlogin voor zes fictieve identiteiten toe: gezouten scrypt, server-side sessies, beveiligde cookies, begrensde loginpogingen, uitloggen en geteste wachtwoordrotatie. Er is geen echte persoonsverificatie of MFA geclaimd. Ook zijn opdrachtplanning/intrekken, terugkeer naar de klasstandaard, toegestaan vrij oefenen en een compleet onderwijsrapport per klas toegevoegd. Een timer verwerkt open voortgangswerk iedere vijf minuten, begrensd per run.
+Deze ronde voegt verplichte authenticator-MFA toe aan de native wachtwoordlogin van zes fictieve identiteiten. Een wachtwoord alleen opent geen dossier. TOTP-geheimen zijn afzonderlijk versleuteld, herstelcodes eenmalig en gehasht, vooraanmeldingen kort geldig en begrensd. Oude sessies, verlopen codes, replay, wachtwoordrotatie en factorreset zijn gecontroleerd. Gelijktijdige bevestigingen kunnen niet tweemaal slagen. Geen echte persoonsverificatie, SSO of phishingbestendige MFA geclaimd.
 
-De stagingrouter is gescheiden van het oorspronkelijke product. De oorspronkelijke header, stijlen en 42 benodigde assets worden hergebruikt en bytegelijk gecontroleerd. Het bestaande Klink+Docent, productroutes, vormgevingsvloer, inhoud en persoonlijke opslag zijn niet gewijzigd. De knop voor Klink+Docent verwijst naar de bestaande app. De aparte reeds bestaande app op inzicht.taalroute.nl en haar eigen database zijn alleen geïnspecteerd, niet gewijzigd. Een eventuele samenvoeging is een latere productbeslissing.
+Automatische verwerking is per klas geïsoleerd: fouten behouden het werk, krijgen oplopende herhaalvertraging en blokkeren andere klassen niet. Schoolbeheer/support zien uitsluitend eigen-school administratieve tellers en tijdstippen. Een externe alarmdienst en volledig schoolbeheer zijn hiermee niet gerealiseerd. Verzoekbodies zijn ook tijdens het lezen op grootte begrensd.
 
-## Controlebewijs en grenzen
+Klink+Docent, de oorspronkelijke oefenspeler, content, productroutes, persoonlijke opslag en vormgevingsvloer blijven ongewijzigd. De gedeelde header, stijlen en 42 benodigde assets blijven behouden. De aparte bestaande app op inzicht.taalroute.nl en haar database zijn niet aangepast of gekoppeld; consolidatie vraagt een productbeslissing.
 
-- 37 unit-, API-, auth- en beveiligingscontroles geslaagd; 27 bestaande docentregressiecontroles geslaagd.
-- TypeScript, gerichte lint, gewone productiebouw en afzonderlijke stagingbouw geslaagd. De normale configuratie behoudt uitsluitend de oorspronkelijke Klink-binding en heeft geen Inzicht-modus.
-- Chromium en WebKit: docent- en cursistflow, blijvende opslag na herladen, correctiehistorie, matrix, beleid, opdrachten, lesvoorstellen, netwerkonderbreking/herhalen, gerichte automatische toegankelijkheidscontrole en responsieve weergave.
-- Aanvullend beide browsers: planning, intrekken, klasstandaard, vrij oefenen, onderwijsrapport, uitloggen plus terug/vooruit/herladen en dossierisolatie bij accountwisseling. Loginpagina gecontroleerd op desktop/mobiel, licht/donker, alle oorspronkelijke headerlogo's en gescheiden hashroute.
-- Online autorisatieproeven: anonieme dossieraanvragen geweigerd, andere school afgeschermd, verkeerde Origin geweigerd, lokale tokenlogin online uitgeschakeld, uitgelogde sessie ongeldig. Wachtwoordrotatie maakt oud wachtwoord en oude sessies ongeldig.
-- Getest herstel van een werkelijk online synthetisch snapshot: alle 24 tabellen en waarden gelijk in SQLite, aparte Cloudflare D1 en PostgreSQL. D1 Time Travel terugzetten na een opzettelijke wijziging op uitsluitend de herstel-DB is gecontroleerd. Authgegevens zijn bewust niet teruggezet.
-- Schaalproef: 30 fictieve cursisten × 100 vaardigheden, 3000 TRAIN-events; vijf volledige API-antwoorden inclusief netwerk 235–527 ms. Fixtures daarna verwijderd. Dit bewijst geen cold-start-, gelijktijdigheids- of volledige browserrender-SLO.
-- Acceptatieboekhouding: 72 cases, 51 GETEST, 18 DEELS, 3 OPEN. Zie `ACCEPTATIE-72.md`; een teststatus vervangt geen menselijke goedkeuring.
+## Getest
 
-Alle zware controles zijn lokaal uitgevoerd. De gecontroleerde repository heeft nul GitHub Actions-workflows; deze ronde voegt er geen toe. Geen betaald Actions-budget gewijzigd. Accountbreed minutenverbruik is niet aan deze taak toegeschreven.
+- 49 lokale unit/API/auth/MFA/securitytests en 27 bestaande Klink+Docent-regressietests geslaagd. TypeScript, gerichte lint, normale productbouw en afzonderlijke stagingbouw geslaagd.
+- Online Chromium en WebKit: docent- en cursistflow, duurzame opslag, accountkoppeling, observatiecorrectie, matrix/bewijs, beleid, opdrachten, lesadvies, planning/intrekken, vrij oefenen, rapporten en netwerkonderbreking/herhalen.
+- Beide browsers: MFA-inschrijving, onjuiste code, eenmalig herstel, focus en gerichte automatische toegankelijkheidscontrole. Servertests: secure cookies, password-only weigering, oude sessies/challenges, reset, rotatie, dubbele bevestiging en schoolisolatie. Gedeeld apparaat getest met uitloggen, terug/vooruit, herladen en nieuw account.
+- Werkelijke HTML/script- en CSV-formule-invoer getest in beide browsers: tekst blijft inert, CSV neutraliseert formules, JSON levert de oorspronkelijke tekst als download. Geen onafhankelijke pentest geclaimd.
+- Schema 3 → 5 behoudt alle velden van alle 24 onderwijstabellen. Nieuw online snapshot volledig gelijk hersteld in SQLite, aparte D1 en lokale PostgreSQL. D1 Time Travel na opzettelijke mutatie uitsluitend op de herstel-DB geslaagd. Na herstel vereisen alle zes fictieve gebruikers nieuwe wachtwoorden en nieuwe MFA; onderwijschecksum blijft gelijk.
+- Schaalproef 30 cursisten × 100 vaardigheden, 3000 TRAIN-events: API 254–362 ms; zes volledige browsernavigaties/renderingen 1560–4911 ms. Alle vijf vaardigheidspagina's en bewijslinks gecontroleerd. Twee-secondengrens NIET gehaald; KI035 blijft DEELS. Geen garantie voor geforceerde cold-starts of gelijktijdige scholen. Tijdelijke schaalfixtures zijn verwijderd.
+- 72 acceptatiecases: 53 GETEST, 16 DEELS, 3 OPEN. Zie `ACCEPTATIE-72.md`; geen vervanging voor menselijke goedkeuring.
 
-## Nog niet vrijgegeven
+Alle zware controles draaiden lokaal. Vóór push zijn nul GitHub Actions-workflows aangetroffen; geen workflow of betaald budget toegevoegd. Het bestaande D1-aantallimiet is niet verhoogd. De eigen ongebonden fictieve herstel-DB is na exacte inhoudscontrole en back-up hergebruikt; staging en productie zijn niet gewist.
 
-Echte cursisten, MFA/SSO en identity lifecycle, onafhankelijke security-/toegankelijkheidsreview, docent-/didactische pilot, grondslag/DPIA/retentie, verwijdering uit back-ups, operationele alarmen, periodieke onafhankelijke back-ups en ondertekende RPO/RTO blijven open. Het bewezen herstel is een point-in-time proef; het is geen afgetekende operationele back-updienst. Geen merge, productiepublicatie of echte persoonsgegevens zonder afzonderlijke toestemming en de vereiste beoordeling.
+## Open grenzen
+
+Echte accountactivatie/identiteitscontrole, identity lifecycle en herstelbevoegdheid, onafhankelijke security-/toegankelijkheidsreview, docent-/didactische pilot, grondslag/DPIA/retentie, verwijdering uit back-ups/tombstones, periodieke onafhankelijke back-ups, operationele alarmering en ondertekende RPO/RTO blijven nodig. De snelheidsgrens is afzonderlijk zichtbaar in KI035. Geen merge, productiepublicatie of echte cursistgegevens zonder afzonderlijke toestemming en de vereiste beoordeling.
 
 ## Overdracht
 
-`ONLINE-STAGING.md` beschrijft bediening en echte codepaden. `HERSTEL.md`, `SECURITY-PRIVACY.md`, `WP0.md`, de 72 cases en `evidence/` bevatten migratie-, veiligheids- en testbewijs. Het archief bevat een reviewpatch, incrementele Git-bundle ten opzichte van de gecontroleerde hoofdbranch, bronbestanden, scripts, screenshots, het geteste credentialvrije snapshot en PostgreSQL-import. De bundle vereist de vermelde basiscommit uit de bestaande repository. `OPLEVERING.json` legt broncommit, deploymentversie en bestanden vast; de afzonderlijke uploadcontrole vergelijkt de werkelijk teruggelezen Drive-bytes.
+`MFA-EN-BEHEER.md` beschrijft de echte codepaden, cryptografische keuzes, resets, migraties en herstelgrenzen. `ONLINE-STAGING.md`, `HERSTEL.md`, `SECURITY-PRIVACY.md`, de 72 cases en `evidence/` bevatten controlebewijs. Het pakket bevat bronbestanden, reviewpatch, incrementele Git-bundle, screenshots, credentialvrij schema-5-snapshot en geteste PostgreSQL-import. De bundle vereist de vermelde basiscommit. `OPLEVERING.json` legt broncommit/deployment en bestandshashes vast; uploadcontrole vergelijkt teruggelezen Drive-bytes. Oude logs zijn historische bewijzen, niet automatisch bewijs van de laatste build.
+
+De herstelset is een geteste momentopname van 1 november 2026, 03:46 UTC; latere browserproeven voegen alleen fictieve testrecords toe. Tijdens afronding stond upstream main vier commits verder (`fcee5727`), zonder wijzigingen aan Inzicht, Vite-configuratie of packagebestanden. De reviewbranch blijft op de vastgelegde basis; integratie met de actuele hoofdbranch hoort bij een afzonderlijke mergebeoordeling.

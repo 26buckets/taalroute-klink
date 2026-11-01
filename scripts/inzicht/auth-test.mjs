@@ -6,6 +6,9 @@ import { fixtures } from './fixtures.mjs';
 import { passwordHash, passwordMatches } from '../../lib/inzicht/auth.ts';
 import { handleInzicht, processPending } from '../../lib/inzicht/service.ts';
 import { hash } from '../../lib/inzicht/rules.ts';
+import { seal } from '../../lib/inzicht/mfa.ts';
+const mfaKey = 'a'.repeat(64);
+const mfaSecret = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
 const origin = 'https://klink-inzicht-pr8-staging.nico-554.workers.dev';
 const password = 'Fictieve-wachtwoord-test-alleen-2026';
 const encoded = await passwordHash(password);
@@ -23,6 +26,21 @@ async function setup() {
       encoded,
       new Date().toISOString(),
     );
+  db.connection
+    .prepare('INSERT INTO inzicht_mfa VALUES (?,?,?,?)')
+    .run(
+      'docent',
+      seal(mfaSecret, 'docent', mfaKey),
+      -1,
+      new Date().toISOString(),
+    );
+  const recovery = Array.from({ length: 8 }, (_, i) =>
+    (i + 1).toString(16).padStart(32, '0'),
+  );
+  for (const code of recovery)
+    db.connection
+      .prepare('INSERT INTO inzicht_mfa_recovery VALUES (?,?,NULL)')
+      .run('docent', await hash(`docent:${code}`));
   const request = (path, body, cookie = '', extra = {}) =>
     handleInzicht(
       new Request(`${origin}/api/inzicht/${path}`, {
@@ -41,10 +59,20 @@ async function setup() {
         INZICHT_MODE: 'synthetic-online',
         INZICHT_DB: db,
         INZICHT_ORIGIN: origin,
+        INZICHT_MFA_KEY: mfaKey,
       },
     );
-  const login = () =>
-    request('login', { email: 'docent@klink-test.invalid', password });
+  const login = async () => {
+    const first = await request('login', {
+      email: 'docent@klink-test.invalid',
+      password,
+    });
+    if (first.status !== 200) return first;
+    const cookie = first.headers
+      .getSetCookie()
+      .find((s) => s.startsWith('__Host-inzicht_mfa='));
+    return request('mfa', { code: recovery.shift() }, cookie);
+  };
   return { db, request, login };
 }
 test('salted scrypt rejects wrong, oversized and malformed credentials', async () => {
@@ -58,7 +86,9 @@ test('online login creates only hashed server session and a secure host cookie',
   const s = await setup();
   const r = await s.login();
   assert.equal(r.status, 200);
-  const cookie = r.headers.get('set-cookie');
+  const cookie = r.headers
+    .getSetCookie()
+    .find((s) => s.startsWith('__Host-inzicht_session='));
   assert.match(
     cookie,
     /^__Host-inzicht_session=[a-f0-9]{64}; HttpOnly; SameSite=Strict; Path=\/; Max-Age=28800; Secure$/,
@@ -133,19 +163,27 @@ test('host, scheme, origin, disabled account and local token are refused online'
 });
 test('logout revokes server session; expiry and user revocation apply immediately', async () => {
   const s = await setup();
-  let cookie = (await s.login()).headers.get('set-cookie');
+  let cookie = (await s.login()).headers
+    .getSetCookie()
+    .find((s) => s.startsWith('__Host-inzicht_session='));
   assert.equal((await s.request('logout', {}, cookie)).status, 200);
   assert.equal((await s.request('me', undefined, cookie)).status, 401);
-  cookie = (await s.login()).headers.get('set-cookie');
+  cookie = (await s.login()).headers
+    .getSetCookie()
+    .find((s) => s.startsWith('__Host-inzicht_session='));
   s.db.exec("UPDATE inzicht_sessions SET expires_at='2020-01-01'");
   assert.equal((await s.request('me', undefined, cookie)).status, 401);
-  cookie = (await s.login()).headers.get('set-cookie');
+  cookie = (await s.login()).headers
+    .getSetCookie()
+    .find((s) => s.startsWith('__Host-inzicht_session='));
   s.db.exec("UPDATE users SET status='disabled' WHERE id='docent'");
   assert.equal((await s.request('me', undefined, cookie)).status, 401);
 });
 test('scheduled outbox retries safely and removes only expired limits and sessions', async () => {
   const s = await setup();
-  const cookie = (await s.login()).headers.get('set-cookie');
+  const cookie = (await s.login()).headers
+    .getSetCookie()
+    .find((s) => s.startsWith('__Host-inzicht_session='));
   const r = await s.request(
     'observations?school=school-a',
     {
@@ -193,6 +231,7 @@ test('deployment guard rejects production names, bindings, routes and unprotecte
   checkStaging(config);
   for (const change of [
     { name: 'taalroute-klink' },
+    { vars: { ...config.vars, INZICHT_MFA_KEY: 'never-in-config' } },
     { routes: [{ pattern: 'klink.taalroute.nl', custom_domain: true }] },
     {
       d1_databases: [

@@ -37,7 +37,8 @@ const worker = {
   async scheduled(_event: ScheduledEvent, env: InzichtEnv) {
     if (env.INZICHT_MODE !== 'synthetic-online' || !env.INZICHT_DB)
       throw new Error('Invalid staging configuration');
-    await processPending(env.INZICHT_DB);
+    const result = await processPending(env.INZICHT_DB);
+    if (result.failed_groups) throw new Error('inzicht.processing_degraded');
   },
 };
 

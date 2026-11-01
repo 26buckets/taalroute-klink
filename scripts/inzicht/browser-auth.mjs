@@ -1,3 +1,9 @@
+import {
+  nextCode,
+  nativeLogin,
+  saveFactor,
+  responseCookie,
+} from './mfa-client.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 export const base = process.env.KLINK_TEST_URL ?? 'http://127.0.0.1:18841';
@@ -29,19 +35,60 @@ export async function login(page, user) {
       .getByLabel('Testtoegang', { exact: true })
       .fill(credentials[user]);
   await page.getByRole('button', { name: 'Openen', exact: true }).click();
+  if (online) {
+    await page
+      .getByLabel('Authenticatorcode of herstelcode', { exact: true })
+      .waitFor();
+    const enrolling =
+      (await page.getByLabel('Instelsleutel', { exact: true }).count()) > 0;
+    if (enrolling)
+      saveFactor(user, {
+        secret: await page
+          .getByLabel('Instelsleutel', { exact: true })
+          .inputValue(),
+        last_step: -1,
+        recovery_codes: [],
+        enrolled: false,
+      });
+    const { code, step } = await nextCode(user);
+    await page
+      .getByLabel('Authenticatorcode of herstelcode', { exact: true })
+      .fill(code);
+    const response = page.waitForResponse(
+      (r) => new URL(r.url()).pathname === '/api/inzicht/mfa',
+    );
+    await page
+      .getByRole('button', { name: 'Aanmelding bevestigen', exact: true })
+      .click();
+    assert.equal(
+      (await response).status(),
+      200,
+      'Authenticator confirmation failed',
+    );
+    saveFactor(user, { last_step: step, enrolled: true });
+    const recovery = page.getByLabel('Herstelcodes', { exact: true });
+    if (enrolling) {
+      await recovery.waitFor();
+      saveFactor(user, {
+        recovery_codes: (await recovery.inputValue()).split('\n'),
+      });
+      await page
+        .getByRole('button', {
+          name: 'Ik heb de herstelcodes bewaard',
+          exact: true,
+        })
+        .click();
+    }
+  }
+
   await page.getByLabel('Actieve school', { exact: true }).waitFor();
 }
 export async function apiCookie(user) {
   if (!online) return `inzicht_session=${credentials[user]}`;
   if (!sessions.has(user)) {
-    const r = await fetch(`${base}/api/inzicht/login`, {
-      method: 'POST',
-      headers: { origin: base, 'Content-Type': 'application/json' },
-      body: JSON.stringify(credentials[user]),
-      redirect: 'error',
-    });
+    const r = await nativeLogin(user);
     assert.equal(r.status, 200, 'Staging account login failed');
-    sessions.set(user, r.headers.get('set-cookie').split(';')[0]);
+    sessions.set(user, responseCookie(r, '__Host-inzicht_session'));
   }
   return sessions.get(user);
 }
