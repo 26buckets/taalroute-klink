@@ -183,6 +183,20 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     await page
       .getByRole('heading', { name: 'Individuele groei', exact: true })
       .waitFor();
+    const plotPoint = page
+      .locator('.ki-observation-plot [role="button"]')
+      .first();
+    await plotPoint.focus();
+    await page.keyboard.press('Enter');
+    await page
+      .getByRole('heading', {
+        name: 'Observatie en correctiehistorie',
+        exact: true,
+      })
+      .waitFor();
+    await page
+      .getByRole('button', { name: 'Details sluiten', exact: true })
+      .click();
     await page
       .getByRole('button', { name: /revisie/ })
       .first()
@@ -290,6 +304,16 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       await page.evaluate(() => {
         document.documentElement.dataset.theme = 'dark';
         document.documentElement.classList.add('dark');
+      });
+      // Measure the settled theme, not the existing 120 ms button colour transition.
+      await page.waitForFunction(() => {
+        const style = getComputedStyle(
+          document.querySelector('.ki-reports .secondary-button'),
+        );
+        return (
+          style.color === 'rgb(197, 220, 239)' &&
+          style.backgroundColor === 'rgb(23, 34, 50)'
+        );
       });
       const a = await new AxeBuilder({ page })
         .include('.ki-reports')
