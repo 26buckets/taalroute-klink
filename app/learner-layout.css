@@ -486,3 +486,21 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
     .cp-form-fields input { min-height: 44px; }
   }
 }
+
+/* Preview: learner instructions stay by the question, outside the answer actions. */
+.learner-app .cp-content-question { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.learner-app .cp-content-question h4 { margin: 0; align-self: center; }
+.learner-app .cp-content-question .cp-content-info-button { flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
+.learner-app .cp-content-info-button svg { width: 20px; height: 20px; }
+body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
+.cp-learner-info[data-slot="dialog-content"] { z-index: 2001; width: min(520px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 24px); overflow-y: auto; gap: 20px; padding: 24px; color: var(--ink); background: var(--paper); border: 1px solid var(--line-strong); border-radius: var(--radius); font: 400 16px/1.5 var(--body); }
+.cp-learner-info header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.cp-learner-info header h2 { margin: 0; font-size: 22px; font-weight: 500; line-height: 1.3; }
+.cp-learner-info header button { flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; padding: 0; display: inline-flex; justify-content: center; align-items: center; }
+.cp-learner-info header svg { width: 20px; height: 20px; }
+.cp-learner-info h3 { margin: 0 0 8px; font-size: 17px; font-weight: 500; }
+.cp-learner-info p { margin: 0; }
+.cp-learner-info ol { margin: 0; padding-left: 24px; list-style: decimal; display: grid; gap: 8px; }
+.cp-learner-info-tip { padding: 16px; background: var(--canvas); border-left: 3px solid var(--primary); }
+.cp-learner-info-return { min-height: 44px; justify-self: start; padding: 8px 12px; font-size: 16px; font-weight: 400; }
+@media (max-width: 480px) { .cp-learner-info[data-slot="dialog-content"] { padding: 16px; gap: 16px; } }
