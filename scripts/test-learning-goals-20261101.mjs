@@ -10,12 +10,12 @@ const matrix=JSON.parse(readFileSync('docs/learning-goals-20261101/approved-matr
 const rows=gunzipSync(readFileSync('docs/learning-goals-20261101/approved-mapping.jsonl.gz')).toString().trim().split('\n').map(JSON.parse);
 const expected=new Map(rows.map(r=>[r.exerciseId,r.goalId]));
 test('all existing variants match the approved goal matrix; source exercises stay unchanged',()=>{
- let checked=0;const ids=new Set(),modes=new Set();
+ let checked=0,added=0;const ids=new Set(),modes=new Set();
  for(const activity of groupActivities)for(const row of chapterCollections(activity.id)){
   const exercises=row.contentUrl?JSON.parse(readFileSync('public'+row.contentUrl)).exercises:row.exercises;
-  for(const exercise of exercises){const before=JSON.stringify(exercise),goal=learningGoalFor(exercise);assert(goal,exercise.exerciseId);assert.equal(goal.id,expected.get(exercise.exerciseId),exercise.exerciseId);assert.equal(JSON.stringify(exercise),before);assert(goal.displayLabels.length>=1&&goal.displayLabels.length<=2);assert(goal.learnerText.startsWith('Je oefent om '));checked++;ids.add(exercise.exerciseId);modes.add(exercise.mode);}
+  for(const exercise of exercises){const before=JSON.stringify(exercise),goal=learningGoalFor(exercise);assert(goal,exercise.exerciseId);if(expected.has(exercise.exerciseId))assert.equal(goal.id,expected.get(exercise.exerciseId),exercise.exerciseId);else{assert.equal(exercise.answerPolicy,'exact-copy');assert(exercise.exerciseId.startsWith('KSW-AC-TN-'));assert.equal(goal.id,'overschrijven');assert.equal(goal.learnerText,'Je oefent om de tekst precies over te nemen.');added++;}assert.equal(JSON.stringify(exercise),before);assert(goal.displayLabels.length>=1&&goal.displayLabels.length<=2);assert(goal.learnerText.startsWith('Je oefent om '));checked++;ids.add(exercise.exerciseId);modes.add(exercise.mode);}
  }
- assert.equal(checked,matrix.scope.catalogueVariants);assert.equal(ids.size,matrix.scope.uniqueExerciseIds);assert.equal(modes.size,matrix.scope.rendererModes);
+ assert.equal(added,20);assert.equal(checked,matrix.scope.catalogueVariants+added);assert.equal(ids.size,matrix.scope.uniqueExerciseIds+added);assert.equal(modes.size,matrix.scope.rendererModes);
 });
 test('goal copy and light/dark label colors equal the approved matrix',()=>{
  const data=JSON.parse(readFileSync('data/klink-learning-goals.json'));assert.deepEqual(data.families,matrix.families);
@@ -24,4 +24,4 @@ test('goal copy and light/dark label colors equal the approved matrix',()=>{
  for(const family of Object.values(data.families))for(const theme of['light','dark']){const[a,b]=[luminance(family[theme].background),luminance(family[theme].foreground)].sort((a,b)=>a-b);assert((b+.05)/(a+.05)>=4.5);}
 });
 test('unrecognised new tasks do not invent an objective',()=>assert.equal(learningGoalFor({mode:'unknown',exerciseId:'unknown'}),undefined));
-test('published source learning content is unchanged',()=>{for(const[file,hash]of Object.entries(matrix.source.files).filter(([f])=>f.startsWith('data/')||f==='lib/practice-chapters.ts'))assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),hash,file);});
+test('published source learning content is unchanged',()=>{for(const[file,hash]of Object.entries(JSON.parse(readFileSync('docs/learning-goals-20261101/integrated-baseline.json')).files))assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),hash,file);});

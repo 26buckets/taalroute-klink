@@ -15,5 +15,5 @@ export function learningGoalFor(exercise: PackageExercise) {
     else id = (catalogue.modes as Record<string,string>)[exercise.mode];
   }
   const goal = id ? goals[id] : undefined;
-  return goal ? {id:id!, ...goal, colors:catalogue.families[goal.family]} : undefined;
+  return goal ? {id:id!, ...goal, learnerText:exercise.answerPolicy==='exact-copy'?'Je oefent om de tekst precies over te nemen.':goal.learnerText, colors:catalogue.families[goal.family]} : undefined;
 }

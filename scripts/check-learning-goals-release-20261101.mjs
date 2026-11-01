@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const base='80f35eaddfbbee4b785616a331cf030da241997c',live='6dd42a5df6ed0fb29a2a0c0922cc67b24a2ace36',folder='docs/learning-goals-20261101/',floor='docs/appearance-floor-20261031/floor.json';
+const base='780d798ba604114c5be5828aa89c2932ef45faac',live='780d798ba604114c5be5828aa89c2932ef45faac',folder='docs/learning-goals-20261101/',floor='docs/appearance-floor-20261031/floor.json';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyLearningGoalsRelease(read=readFileSync){
@@ -17,7 +17,8 @@ export function verifyLearningGoalsRelease(read=readFileSync){
  const scroll=json(folder+'keyboard-scroll.json');assert(scroll.after.top>scroll.before.top&&scroll.controls.every(c=>c.visible));
  const retention=json(folder+'local/retention/checks.json');assert.equal(retention.checks.length,12);assert.deepEqual(retention.errors,[]);assert(retention.checks.every(c=>c.answerPreserved&&c.progressPreserved&&c.reloadPreserved&&c.keyboardContained));
  const writing=json(folder+'local/writing/checks.json');assert.equal(writing.checks.length,16);assert.equal(writing.audioNext.length,12);assert.equal(writing.native.length,2);assert.deepEqual(writing.errors,[]);const imported=json(folder+'local/imported/browser-checks.json');assert.equal(imported.checks.length,9);assert.deepEqual(imported.errors,[]);
- const proof=json(folder+'verification.json');for(const k of['types','lint','allGoalMappings','approvedLabelsAndColors','keyboard','mobileTouch','teacherPrivacy','nativeAudioAndNext','answersAndProgress','contentMediaAndStorageUnchanged','localOnly'])assert.equal(proof[k],true,k);assert.equal(proof.catalogueVariants,99632);assert.equal(proof.uniqueExerciseIds,67936);
+ const copies=json(folder+'local/copy/checks.json');assert.equal(copies.checks.length,12);assert.deepEqual(copies.errors,[]);
+ const proof=json(folder+'verification.json');for(const k of['types','lint','allGoalMappings','approvedLabelsAndColors','keyboard','mobileTouch','teacherPrivacy','nativeAudioAndNext','answersAndProgress','contentMediaAndStorageUnchanged','localOnly'])assert.equal(proof[k],true,k);assert.equal(proof.catalogueVariants,99652);assert.equal(proof.uniqueExerciseIds,67956);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
 }
 export function readBeforeLearningGoals(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):read(file);}

@@ -1,3 +1,4 @@
+import{verifyLearningGoalsRelease,readBeforeLearningGoals}from'./check-learning-goals-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -11,6 +12,7 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyWritingCopyRelease(read=readFileSync){
+  const successor=verifyLearningGoalsRelease(read),currentRead=read;read=file=>readBeforeLearningGoals(file,successor,currentRead);
   const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-writing-copy-20261101.json');
   assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);
   assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');
@@ -19,11 +21,11 @@ export function verifyWritingCopyRelease(read=readFileSync){
   const policy='docs/klink-invullen-20261101/automatic-owner-approval.json';
   assert.equal(sha(read(policy)),sha(git('show',base+':'+policy)));
   git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
-  const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
   for(const[f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);
   for(const[f,h]of Object.entries(r.evidenceFiles))assert.equal(sha(read(f)),h,f);
-  assert.equal(git('diff','--name-only',base,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts').length,0,'Preserve appearance, storage, dependencies and workflows');
+  assert.equal(git('diff','--name-only',base,successor.baselineSourceCommit,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts').length,0,'Preserve appearance, storage, dependencies and workflows');
   assert.deepEqual(changed.filter(f=>f.startsWith('components/')),['components/product/package-exercise-browser.tsx']);
   assert.deepEqual(changed.filter(f=>f.startsWith('lib/')),['lib/copy-answer.ts','lib/lesson-plan.ts']);
   assert.deepEqual(changed.filter(f=>f.startsWith('data/')),['data/klink-production-index.json']);
@@ -41,7 +43,7 @@ export function verifyWritingCopyRelease(read=readFileSync){
   assert.equal(row.id,'production:copy:alfa-c:KSW-AC-TN-001-020');assert.equal(row.count,20);assert.equal(collection.exercises.length,20);
   assert(row.url.includes(sha(read('public'+row.url)).slice(0,16)));
   assert.deepEqual(changed.filter(f=>f.startsWith('public/')),['public'+row.url]);
-  assert(lines(git('diff','--name-status',base,'--','public')).every(l=>l.startsWith('A\t')),'All existing public files remain unchanged');
+  assert(lines(git('diff','--name-status',base,successor.baselineSourceCommit,'--','public')).every(l=>l.startsWith('A\t')),'All existing public files remain unchanged');
   for(const[i,e]of collection.exercises.entries()){
     assert.equal(e.exerciseId,`KSW-AC-TN-${String(i+1).padStart(3,'0')}`);
     assert.equal(e.exampleWord,source[i].sourceRecord.visibleModel);
@@ -56,6 +58,6 @@ export function verifyWritingCopyRelease(read=readFileSync){
   const layouts=json(folder+'local/layout-checks.json');assert.equal(layouts.checks.length,16);assert(layouts.checks.every(c=>c.modelInputAndButtonsFit));
   const checks=json(folder+'verification.json');for(const k of['types','lint','unit','sourcePreserved','allAnswers','browser','progressPreserved','appearancePreserved','localOnly'])assert.equal(checks[k],true,k);
   const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
-  return r;
+  return {...r,successor};
 }
-export function readBeforeWritingCopy(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeWritingCopy(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeLearningGoals(file,r.successor,read);}
