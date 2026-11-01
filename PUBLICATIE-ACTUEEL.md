@@ -1,3 +1,16 @@
+## Actuele publicatie — onafhankelijke tweede AI-taalreview — 1 november 2026
+Livebron `0391320925fc10e4ec86f9c4e8b837fe660df46e`; Worker `865e57f8-c5a0-429a-8257-5267fe5af38d`. Gepubliceerd via `npm run deploy` vanaf schone canonieke main, met behoud van de inmiddels gepubliceerde officiële logoversie `8a8acb1968846acb1843b84981614a5bcc16c012` en diens bevestiging op main.
+
+Drie afzonderlijke AI-reviewers beoordeelden zonder eerdere reviewconclusies alle 288 vragen en 1152 antwoordkaarten van Woordcombinaties en Welke reactie past?. Twaalf directe verbeteringen en één voorzorgsvervanging zijn toegepast: vijf A1, vier A2 en vier B1. Alle dertien zijn door de niveaureviewer opnieuw goedgekeurd op de definitieve bronhash. Eerste rapporten, concrete bevindingen en eindcontroles zijn behouden. Geen onafhankelijke menselijke keuring of officiële CEFR-certificering geclaimd; cursistenpilot blijft open.
+
+Vijftien noodzakelijke ElevenLabs-opnamen zijn toegevoegd met de vastgelegde rolverdeling. Alle nieuwe opnamen zijn technisch gedecodeerd, zonder digitale oversturing en met verliesloze Taalroute-metadata. Transcriptie vergelijkt alle vijftien teksten volledig; één notatie-/gelijkluidend spellingverschil is redactioneel beoordeeld. Alle 1497 eerder geregistreerde opnamen blijven behouden.
+
+Lokaal: alle 576 vraagproeven, 1295 audiodecodes in elke browser, 12 afspeelreeksen, 14 inhoudelijke units, 26 actuele/historische vrijgaveproeven en de normale publicatiepoort slagen. Na integratie van de goedgekeurde logoversie zijn de gecompileerde oefenstromen, 84 responsieve lay-outs, 16 feedbackschermen en 8 identieke bestaande Synoniemen-schermen opnieuw gecontroleerd. Alle gewijzigde scripts slagen voor lint; de algemene repository-lint heeft 417 meldingen in andere, ongewijzigde bestanden en wordt niet als volledig schoon geclaimd. Typecheck en productiebuild slagen.
+
+Online: twaalf oefenstromen, alle dertien verbeterde vragen inclusief hun context/kaarten/feedback, zes niveaukeuzes, twee volledige native audioreeksen en alle 1512 aangeboden woordgebruikbestanden zijn gecontroleerd. Alle bytes en ingebedde Taalroute-merkvelden kloppen. Geen wijzigingen aan uiterlijk, overige inhoud, routes of voortgang ten opzichte van de laatste goedgekeurde livebasis. Alle zware controles lokaal; nul GitHub-workflows.
+
+Bewijs, leesbaar overzicht en gecontroleerde Drive-herstelkopieën: `docs/word-use-independent-review-20261101/`, `publication.json`, `backup.json`, `final-backup.json`.
+
 ## Actuele publicatie — officieel Klink-logo — 1 november 2026
 
 Livebron `8a8acb1968846acb1843b84981614a5bcc16c012`; Worker `ab0012e1-c819-4ebb-ac5b-d20fe78a0acd`. Via de normale `npm run deploy` gepubliceerd vanaf schone canonieke main, als afstammeling van de actuele goedgekeurde livebron `9d231b1d9cced59374d3ab4d56083f6881c0b3e8`.
