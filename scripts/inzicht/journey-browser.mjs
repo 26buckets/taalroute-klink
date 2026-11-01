@@ -102,7 +102,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     passed('MFA login, class and two provisional learners through UI');
 
     await teacher.goto(
-      `${classUrl}/observeren?school=school-a&learner=${learners[0]}`,
+      `${classUrl}/observeren?school=school-a&general=1&learner=${learners[0]}`,
     );
     await field(teacher, 'Vaardigheid').selectOption('woordbeeld');
     await field(teacher, 'Concrete taaksituatie').fill(

@@ -32,6 +32,11 @@ import {
 import './inzicht.css';
 import { api, useSave } from './client';
 import { Registrar, SchoolLearner } from './school';
+import { Reports } from './reports';
+import {
+  SourceObservationForm,
+  SourceObservationHistory,
+} from './source-observation';
 
 type School = { id: string; name: string; role: string };
 type Group = {
@@ -228,6 +233,12 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
     return () => window.removeEventListener('pageshow', reset);
   }, []);
   async function logout() {
+    if (
+      !window.dispatchEvent(
+        new Event('inzicht:before-navigation', { cancelable: true }),
+      )
+    )
+      return;
     setLoginError('');
     try {
       await api('logout', school, {});
@@ -430,11 +441,18 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
           <Field label="Actieve school">
             <select
               value={school}
-              onChange={(e) =>
-                router.push(
-                  `/inzicht?school=${encodeURIComponent(e.target.value)}`,
+              onChange={(e) => {
+                if (
+                  window.dispatchEvent(
+                    new Event('inzicht:before-navigation', {
+                      cancelable: true,
+                    }),
+                  )
                 )
-              }
+                  router.push(
+                    `/inzicht?school=${encodeURIComponent(e.target.value)}`,
+                  );
+              }}
             >
               {me.schools.map((s) => (
                 <option key={s.id} value={s.id}>
@@ -691,6 +709,7 @@ function Workspace({
           ['cursisten', 'Cursisten'],
           ['matrix', 'Vaardigheden'],
           ['observaties', 'Observaties'],
+          ['rapportages', 'Rapportages'],
           ['opdrachten', 'Opdrachten'],
           ['toegang', 'Toegang'],
         ].map(([p, label]) => (
@@ -716,7 +735,16 @@ function Workspace({
           </a>
         </details>
       </nav>
-      {section === 'toevoegen' ? (
+      {section === 'rapportages' ? (
+        <Reports
+          key={school + gid}
+          school={school}
+          group={gid}
+          learners={detail.learners}
+          initialLearner={search.get('learner') ?? ''}
+          go={go}
+        />
+      ) : section === 'toevoegen' ? (
         <AddLearner
           school={school}
           group={gid}
@@ -729,6 +757,21 @@ function Workspace({
           group={detail.group}
           done={() => router.push(go())}
         />
+      ) : section === 'observeren' &&
+        !search.get('correction') &&
+        !search.get('general') ? (
+        <>
+          <Link href={go('observeren') + '&general=1'}>
+            Algemene vaardigheidsobservatie
+          </Link>
+          <SourceObservationForm
+            school={school}
+            group={gid}
+            learners={detail.learners}
+            selected={search.get('learner') ?? ''}
+            originalId={search.get('source') ?? ''}
+          />
+        </>
       ) : section === 'observeren' ? (
         <ObservationForm
           school={school}
@@ -1197,7 +1240,13 @@ function LearnerProfile({
           kan nog bezig zijn.
         </output>
       )}
-      <h4>Observaties</h4>
+      <SourceObservationHistory
+        school={school}
+        group={group}
+        learnerId={id}
+        go={go}
+      />
+      <h4>Oudere algemene observaties</h4>
       {!data.observations.length ? (
         <p>Nog geen observaties.</p>
       ) : (

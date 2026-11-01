@@ -144,7 +144,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
   });
   // Network loss must not claim success or discard a filled observation.
   await teacher.goto(
-    `${base}/inzicht/klassen/${group.id}/observeren?school=school-a`,
+    `${base}/inzicht/klassen/${group.id}/observeren?school=school-a&general=1`,
   );
   await teacher
     .getByLabel('Concrete taaksituatie', { exact: true })

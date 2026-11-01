@@ -128,8 +128,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       await page.locator('[data-tile-slot="0"]').waitFor();
       assert.equal(await page.locator('[data-tile-slot="0"]').innerText(), 'm');
       await page.getByRole('button', { name: 'Pauze', exact: true }).click();
-      assert.equal(await page.locator('.kpd-board').evaluate(el => getComputedStyle(el).opacity), '0');
-      assert(await page.locator('.kpd-board').evaluate(el => el.inert));
+      await page.locator('.kpd-board').waitFor({state:'hidden'});
+      assert(await page.locator('.kpd-board').evaluate(el => el.hidden));
       await page
         .getByRole('button', { name: 'Verder met de les', exact: true })
         .click();

@@ -1,3 +1,4 @@
+import { buildReport, type ReportInput, type ReportFilter } from './reports.ts';
 import {
   beginMfa,
   finishMfa,
@@ -6,6 +7,13 @@ import {
   MfaError,
 } from './mfa.ts';
 import { passwordMatches, sessionCookie, sessionToken } from './auth.ts';
+import {
+  sourceMaterial,
+  sourceCriteria,
+  SOURCE_KEY,
+  SOURCE_VERSION,
+  type SourceMode,
+} from './source-observation.ts';
 import {
   canonical,
   computeMastery,
@@ -1349,6 +1357,18 @@ export async function handleInzicht(
             c.org,
             group,
           ),
+          source_revisions: await rows(
+            db,
+            'SELECT o.id,o.learner_id,o.material_id,o.mode,o.current_revision,r.* FROM source_observations o JOIN source_observation_revisions r ON r.organization_id=o.organization_id AND r.observation_id=o.id WHERE o.organization_id=? AND o.group_id=? ORDER BY o.id,r.revision',
+            c.org,
+            group,
+          ),
+          attended_minutes_revisions: await rows(
+            db,
+            'SELECT h.id,h.learner_id,h.current_revision,r.* FROM learning_hours h JOIN learning_hour_revisions r ON r.organization_id=h.organization_id AND r.entry_id=h.id WHERE h.organization_id=? AND h.group_id=? ORDER BY h.id,r.revision',
+            c.org,
+            group,
+          ),
           evidence: await rows(
             db,
             'SELECT e.*,r.reason AS revocation_reason,r.created_at AS revoked_at FROM evidence_events e LEFT JOIN evidence_revocations r ON r.organization_id=e.organization_id AND r.event_id=e.id WHERE e.organization_id=? AND e.group_id=?',
@@ -1457,6 +1477,444 @@ export async function handleInzicht(
         events,
         mastery: computeMastery(skill, events, now()),
       });
+    }
+    if (path[0] === 'learning-hours') {
+      const gid = string(
+        writing ? body.class_id : url.searchParams.get('class'),
+      );
+      const lid = string(
+        writing ? body.learner_id : url.searchParams.get('learner'),
+      );
+      await teacher(c, gid, writing);
+      await learner(c, gid, lid, writing);
+      if (!writing)
+        return response(
+          await rows(
+            db,
+            `SELECT h.id,h.current_revision,r.* FROM learning_hours h JOIN learning_hour_revisions r ON r.organization_id=h.organization_id AND r.entry_id=h.id WHERE h.organization_id=? AND h.group_id=? AND h.learner_id=? ORDER BY r.attended_at,r.revision`,
+            c.org,
+            gid,
+            lid,
+          ),
+        );
+      return response(
+        await mutate(c, request, body, async () => {
+          const id = string(body.id, 36),
+            expected = body.expected_revision;
+          if (
+            !/^[0-9a-f-]{36}$/i.test(id) ||
+            !Number.isSafeInteger(expected) ||
+            Number(expected) < 0
+          )
+            return fail(400, 'Ongeldige registratie.');
+          const minutes = body.minutes;
+          const at = string(body.attended_at, 32),
+            date = Date.parse(at);
+          if (
+            !Number.isInteger(minutes) ||
+            Number(minutes) < 0 ||
+            Number(minutes) > 720 ||
+            !Number.isFinite(date) ||
+            date > Date.now() ||
+            date < Date.now() - 366 * 86400000
+          )
+            return fail(
+              400,
+              'Controleer lesdatum en werkelijk gevolgde minuten (0–720).',
+            );
+          const old = await one(
+            db,
+            'SELECT * FROM learning_hours WHERE organization_id=? AND group_id=? AND learner_id=? AND id=?',
+            c.org,
+            gid,
+            lid,
+            id,
+          );
+          if (Number(old?.current_revision ?? 0) !== expected)
+            return fail(
+              409,
+              'De urenregistratie is gewijzigd. Vernieuw en vergelijk.',
+            );
+          const reason = string(body.reason, 500);
+          const revision = Number(expected) + 1;
+          const statements = old
+            ? [
+                stmt(
+                  db,
+                  'UPDATE learning_hours SET current_revision=? WHERE organization_id=? AND id=?',
+                  revision,
+                  c.org,
+                  id,
+                ),
+              ]
+            : [
+                stmt(
+                  db,
+                  'INSERT INTO learning_hours VALUES (?,?,?,?,?)',
+                  id,
+                  c.org,
+                  gid,
+                  lid,
+                  revision,
+                ),
+              ];
+          statements.push(
+            stmt(
+              db,
+              'INSERT INTO learning_hour_revisions VALUES (?,?,?,?,?,?,?,?)',
+              c.org,
+              id,
+              revision,
+              new Date(date).toISOString(),
+              Number(minutes),
+              reason,
+              c.member,
+              now(),
+            ),
+            audit(c, 'learning-hours.save', id),
+          );
+          return { data: { id, revision }, statements };
+        }),
+        201,
+      );
+    }
+    if (path[0] === 'visual-reports' && !writing) {
+      const gid = string(url.searchParams.get('class'));
+      await teacher(c, gid);
+      const filter: ReportFilter = {};
+      for (const key of [
+        'learner',
+        'mode',
+        'material',
+        'level',
+        'condition',
+        'from',
+        'to',
+      ] as const) {
+        const value = url.searchParams.get(key);
+        if (value) filter[key] = string(value, 100);
+      }
+      if (filter.learner) await learner(c, gid, filter.learner, false);
+      if (filter.level) choice(filter.level, ROUTES);
+      if (filter.mode) choice(filter.mode, ['word', 'sentence', 'text']);
+      if (filter.material && !sourceMaterial(filter.material))
+        return fail(400, 'Onbekend materiaal.');
+      for (const key of ['from', 'to'] as const)
+        if (
+          filter[key] &&
+          (!/^\d{4}-\d{2}-\d{2}$/.test(filter[key]!) ||
+            !Number.isFinite(Date.parse(filter[key]!)))
+        )
+          return fail(400, 'Ongeldige periode.');
+      if (filter.from && filter.to && filter.from > filter.to)
+        return fail(400, 'Begindatum ligt na einddatum.');
+      for (const key of ['minHours', 'maxHours'] as const) {
+        const raw = url.searchParams.get(key);
+        if (raw !== null && raw !== '') {
+          const value = Number(raw);
+          if (!Number.isFinite(value) || value < 0 || value > 100000)
+            return fail(400, 'Ongeldig urenfilter.');
+          filter[key] = value;
+        }
+      }
+      if (
+        filter.minHours !== undefined &&
+        filter.maxHours !== undefined &&
+        filter.minHours > filter.maxHours
+      )
+        return fail(400, 'Ongeldig urenbereik.');
+      const observations = await rows(
+        db,
+        `SELECT o.id,o.learner_id,o.current_revision,o.author_id,r.payload FROM source_observations o JOIN source_observation_revisions r ON r.organization_id=o.organization_id AND r.observation_id=o.id AND r.revision=o.current_revision WHERE o.organization_id=? AND o.group_id=?`,
+        c.org,
+        gid,
+      );
+      const hours = await rows(
+        db,
+        `SELECT h.id,h.learner_id,h.current_revision,r.attended_at,r.minutes FROM learning_hours h JOIN learning_hour_revisions r ON r.organization_id=h.organization_id AND r.entry_id=h.id AND r.revision=h.current_revision WHERE h.organization_id=? AND h.group_id=?`,
+        c.org,
+        gid,
+      );
+      const learners = await rows(
+        db,
+        `SELECT l.id,l.display_name,gm.started_at,gm.ended_at FROM school_learners l JOIN group_memberships gm ON gm.organization_id=l.organization_id AND gm.learner_id=l.id WHERE gm.organization_id=? AND gm.group_id=?`,
+        c.org,
+        gid,
+      );
+      const input = {
+        observations: observations.map((o) => ({
+          ...o,
+          payload: json(o.payload),
+        })),
+        hours,
+        learners,
+      } as unknown as ReportInput;
+      const report = buildReport(input, filter);
+      // Existing evidence is a separate channel, never inferred from source marks.
+      const registeredRows = await rows(
+        db,
+        `SELECT e.*,r.event_id AS revoked,o.current_revision FROM evidence_events e LEFT JOIN evidence_revocations r ON r.organization_id=e.organization_id AND r.event_id=e.id LEFT JOIN teacher_observations o ON o.organization_id=e.organization_id AND o.id=e.source_id AND e.source_type='observation' WHERE e.organization_id=? AND e.group_id=?`,
+        c.org,
+        gid,
+      );
+      const registered = registeredRows.map((e) => ({
+        ...json<Evidence>(e.payload),
+        id: String(e.id),
+        learner_id: String(e.learner_id),
+        skill_id: String(e.skill_id),
+        source_id: String(e.source_id),
+        source_revision: Number(e.source_revision),
+        revoked: Boolean(
+          e.revoked ||
+          (e.source_type === 'observation' &&
+            e.current_revision !== e.source_revision),
+        ),
+      }));
+      const catalog = await skills(db);
+      const proofs = registered
+        .filter(
+          (e) =>
+            (!filter.learner || e.learner_id === filter.learner) &&
+            (!filter.from || e.occurred_at.slice(0, 10) >= filter.from) &&
+            (!filter.to || e.occurred_at.slice(0, 10) <= filter.to),
+        )
+        .map((e) => {
+          const skill = catalog.find((s) => s.id === e.skill_id);
+          return {
+            ...e,
+            eligible: Boolean(
+              skill && computeMastery(skill, [e], now()).measured,
+            ),
+            skill_label: skill?.label ?? e.skill_id,
+          };
+        });
+      if (
+        Number(
+          (
+            await one(
+              db,
+              'SELECT data_version FROM organizations WHERE id=?',
+              c.org,
+            )
+          )?.data_version,
+        ) !== c.version
+      )
+        return fail(
+          409,
+          'De schoolgegevens zijn gewijzigd tijdens het ophalen. Vernieuw de rapportage.',
+        );
+      return response({
+        ...report,
+        learners,
+        proofs,
+        hours: input.hours.filter(
+          (h) => !filter.learner || h.learner_id === filter.learner,
+        ),
+        generated_at: now(),
+        school: c.org,
+        class_id: gid,
+      });
+    }
+    // Original Word/Zin/Tekst instrument, separated from general teacher observations.
+    // No skill id or MEASURE event is assigned to these source-bound marks.
+    if (path[0] === 'source-observations') {
+      const gid = string(
+        writing ? body.class_id : url.searchParams.get('class'),
+      );
+      const lid = string(
+        writing ? body.learner_id : url.searchParams.get('learner'),
+      );
+      await teacher(c, gid, writing);
+      await learner(c, gid, lid, writing);
+      if (!writing && path[1]) {
+        const found = await one(
+          db,
+          `SELECT o.*,g.name AS class_name,l.display_name AS learner_name,org.name AS school_name FROM source_observations o JOIN groups g ON g.organization_id=o.organization_id AND g.id=o.group_id JOIN school_learners l ON l.organization_id=o.organization_id AND l.id=o.learner_id JOIN organizations org ON org.id=o.organization_id WHERE o.organization_id=? AND o.group_id=? AND o.learner_id=? AND o.id=?`,
+          c.org,
+          gid,
+          lid,
+          path[1],
+        );
+        if (!found) return fail(404, 'Niet beschikbaar.');
+        const history = await rows(
+          db,
+          'SELECT revision,payload,changed_by,recorded_at FROM source_observation_revisions WHERE organization_id=? AND observation_id=? ORDER BY revision',
+          c.org,
+          path[1],
+        );
+        const revision = url.searchParams.get('revision')
+          ? Number(url.searchParams.get('revision'))
+          : Number(found.current_revision);
+        const selected = history.find((r) => r.revision === revision);
+        if (!selected) return fail(404, 'Revisie niet beschikbaar.');
+        if (path[2] === 'export')
+          await audit(c, 'source-observation.export', path[1]).run();
+        return response({
+          observation: found,
+          revision,
+          payload: json(selected.payload),
+          history: history.map((r) => ({ ...r, payload: json(r.payload) })),
+          exported_at: now(),
+        });
+      }
+      if (!writing) {
+        const found = await rows(
+          db,
+          `SELECT o.id,o.material_id,o.mode,o.current_revision,o.author_id,
+                  o.created_at,o.updated_at,r.payload
+             FROM source_observations o
+             JOIN source_observation_revisions r
+               ON r.organization_id=o.organization_id AND r.observation_id=o.id
+              AND r.revision=o.current_revision
+            WHERE o.organization_id=? AND o.group_id=? AND o.learner_id=?
+            ORDER BY o.updated_at DESC,o.id LIMIT 200`,
+          c.org,
+          gid,
+          lid,
+        );
+        return response(
+          found.map((o) => ({
+            ...o,
+            editable: o.author_id === c.member,
+            payload: json(o.payload),
+          })),
+        );
+      }
+      return response(
+        await mutate(c, request, body, async () => {
+          const id = string(body.id, 36);
+          if (
+            !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
+              id,
+            )
+          )
+            return fail(400, 'Ongeldige observatie-identificatie.');
+          const materialId = string(body.material_id, 10);
+          const mode = choice(body.mode, [
+            'word',
+            'sentence',
+            'text',
+          ]) as SourceMode;
+          if (
+            !sourceMaterial(materialId) ||
+            sourceCriteria(mode, materialId).length !== 6
+          )
+            return fail(400, 'Onbekend observatiemateriaal.');
+          const values = body.values;
+          if (
+            !Array.isArray(values) ||
+            values.length !== 6 ||
+            !values.every((v) => v === null || v === 0 || v === 1 || v === 2)
+          )
+            return fail(
+              400,
+              'Een observatie heeft precies zes geldige vakjes.',
+            );
+          const expected = body.expected_revision;
+          if (!Number.isSafeInteger(expected) || Number(expected) < 0)
+            return fail(400, 'Ongeldige revisie.');
+          const observed = string(body.observed_at, 32);
+          const moment = Date.parse(observed);
+          if (
+            !Number.isFinite(moment) ||
+            moment > Date.now() + 60000 ||
+            moment < Date.now() - 366 * 86400000
+          )
+            return fail(
+              400,
+              'Kies een observatiedatum binnen het afgelopen jaar.',
+            );
+          const payload = {
+            source: SOURCE_KEY,
+            source_version: SOURCE_VERSION,
+            material_id: materialId,
+            mode,
+            values,
+            level: body.level ? choice(body.level, ROUTES) : '',
+            condition: string(body.condition ?? '', 100, true),
+            reason: string(body.reason ?? '', 500, true),
+            note: string(body.note ?? '', 1000, true),
+            next: string(body.next ?? '', 1000, true),
+            observed_at: new Date(moment).toISOString(),
+          };
+          const existing = await one(
+            db,
+            'SELECT * FROM source_observations WHERE organization_id=? AND group_id=? AND learner_id=? AND id=?',
+            c.org,
+            gid,
+            lid,
+            id,
+          );
+          if (
+            existing &&
+            (existing.author_id !== c.member ||
+              existing.mode !== mode ||
+              existing.material_id !== materialId)
+          )
+            return fail(403, 'Deze observatie mag je niet aanpassen.');
+          if ((existing ? Number(existing.current_revision) : 0) !== expected)
+            return fail(
+              409,
+              'De observatie is gewijzigd. Vernieuw de gegevens.',
+            );
+          const revision = Number(expected) + 1;
+          const timestamp = now();
+          const statements = existing
+            ? [
+                stmt(
+                  db,
+                  'UPDATE source_observations SET current_revision=?,updated_at=? WHERE organization_id=? AND group_id=? AND learner_id=? AND id=? AND current_revision=?',
+                  revision,
+                  timestamp,
+                  c.org,
+                  gid,
+                  lid,
+                  id,
+                  expected,
+                ),
+              ]
+            : [
+                stmt(
+                  db,
+                  'INSERT INTO source_observations VALUES (?,?,?,?,?,?,?,?,?,?)',
+                  id,
+                  c.org,
+                  gid,
+                  lid,
+                  c.member,
+                  materialId,
+                  mode,
+                  revision,
+                  timestamp,
+                  timestamp,
+                ),
+              ];
+          statements.push(
+            stmt(
+              db,
+              'INSERT INTO source_observation_revisions VALUES (?,?,?,?,?,?)',
+              c.org,
+              id,
+              revision,
+              canonical(payload),
+              c.member,
+              timestamp,
+            ),
+            audit(
+              c,
+              existing
+                ? 'source-observation.revise'
+                : 'source-observation.create',
+              id,
+            ),
+          );
+          return {
+            data: { id, revision, saved_at: timestamp, source: SOURCE_KEY },
+            statements,
+          };
+        }),
+        201,
+      );
     }
     if (path[0] === 'observations' && writing) {
       const gid = string(body.class_id),

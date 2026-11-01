@@ -42,6 +42,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     .getByRole('link', { name: 'Observeren', exact: true })
     .last()
     .click();
+  await page.getByRole('link', { name: 'Algemene vaardigheidsobservatie', exact: true }).click();
   await page
     .getByLabel('Concrete taaksituatie', { exact: true })
     .fill('Kiest een woord uit vier kaarten');

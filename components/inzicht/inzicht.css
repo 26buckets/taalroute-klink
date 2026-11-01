@@ -345,3 +345,220 @@
     overflow-wrap: anywhere;
   }
 }
+
+/* Source-faithful observation instrument, styled using existing Klink Inzicht variables. */
+.ki-source-modes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin: 18px 0;
+}
+.ki-source-modes button {
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 10px;
+}
+.ki-source-modes button[aria-pressed='true'] {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+.ki-source-context {
+  white-space: pre-line;
+}
+.ki-source-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  font-size: 14px;
+  margin: 18px 0;
+}
+.ki-source-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ki-source-legend strong {
+  font-size: 22px;
+  font-weight: 400;
+  min-width: 22px;
+  text-align: center;
+}
+.ki-source-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 8px 0;
+  margin: 0;
+}
+.ki-source-row legend {
+  float: left;
+  min-width: 0;
+  max-width: 100%;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.ki-source-choices {
+  display: flex;
+  gap: 6px;
+}
+.ki-source-choices label {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.ki-source-choices label.is-selected {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+.ki-source-choices input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.ki-source-choices label:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.ki-source-status {
+  display: block;
+  margin: 12px 0;
+  color: var(--muted);
+}
+.ki-source-history {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  margin: 6px 0;
+}
+@media (max-width: 460px) {
+  .ki-source-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ki-source-choices {
+    justify-content: flex-end;
+  }
+}
+
+/* Source marks are categorical: patterns and text remain readable without colour. */
+.ki-report-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.ki-report-bar {
+  display: flex;
+  min-height: 32px;
+  width: 100%;
+  background: var(--background, #fff);
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.ki-report-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  color: #fff;
+  font-size: 14px;
+}
+.ki-report-mark-0 {
+  background: #275f55;
+}
+.ki-report-mark-1 {
+  background: repeating-linear-gradient(
+    45deg,
+    #674b80,
+    #674b80 4px,
+    #48365b 4px,
+    #48365b 8px
+  );
+}
+.ki-report-mark-2 {
+  background: #59636c;
+}
+.ki-report-mark-3 {
+  background: #fff;
+  color: #17201e;
+}
+.ki-report-counts {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.ki-report-timeline {
+  padding-left: 24px;
+}
+.ki-report-timeline > li {
+  margin-block: 24px;
+}
+.ki-reports button {
+  min-height: 44px;
+}
+.ki-reports [aria-pressed='true'] {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.ki-reports th,
+.ki-reports td {
+  overflow-wrap: anywhere;
+}
+.ki-source-choices {
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .ki-report-timeline {
+    padding-left: 18px;
+  }
+  .ki-report-timeline button {
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+.ki-app .ki-observation-plot {
+  height: auto;
+  display: block;
+  width: 100%;
+  min-width: 600px;
+  margin-block: 20px;
+}
+.ki-reports figure {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.ki-observation-plot [role='button'] {
+  cursor: pointer;
+}
+.ki-observation-plot [role='button']:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.ki-reports td {
+  color: var(--ink);
+  background: var(--paper);
+}
+.ki-reports td a {
+  color: var(--primary);
+}

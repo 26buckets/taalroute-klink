@@ -37,6 +37,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
   const situation = '<img src=x onerror="window.__kiInjected=1">';
   const note =
     '<script>window.__kiInjected=2</script> =HYPERLINK("https://example.invalid")';
+  await page.getByRole('link', { name: 'Algemene vaardigheidsobservatie', exact: true }).click();
   await page
     .getByLabel('Concrete taaksituatie', { exact: true })
     .fill(situation);
