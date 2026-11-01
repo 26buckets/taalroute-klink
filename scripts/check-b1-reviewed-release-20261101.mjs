@@ -4,8 +4,8 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 
 const folder='docs/b1-reviewed-release-20261101/';
-const base='35182be471e139a7615181206ce1288c45886c86';
-const live='35182be471e139a7615181206ce1288c45886c86';
+const base='be7d78289945084612b20a0aa3058bb7730a43a5';
+const live='be7d78289945084612b20a0aa3058bb7730a43a5';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const sort=a=>a.sort((a,b)=>a.localeCompare(b));
@@ -21,7 +21,7 @@ export function verifyB1ReviewedRelease(read=readFileSync) {
   git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
   const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
   assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
-  const scripts=['scripts/check-space-mixed-input-release-20261101.mjs','scripts/check-b1-reviewed-release-20261101.mjs','scripts/test-b1-reviewed-browser-20261101.mjs','scripts/test-b1-reviewed-progress-browser-20261101.mjs'];
+  const scripts=['scripts/check-reading-round-titles-release-20261101.mjs','scripts/check-b1-reviewed-release-20261101.mjs','scripts/test-b1-reviewed-browser-20261101.mjs','scripts/test-b1-reviewed-progress-browser-20261101.mjs'];
   assert(changed.every(f=>scripts.includes(f)||['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json'].includes(f)||/^public\/(practice-content|package-audio)\/b1-review-20261101\//.test(f)));
   assert.equal(changed.filter(f=>f.startsWith('public/practice-content/')).length,20);
   assert.equal(changed.filter(f=>f.startsWith('public/package-audio/')).length,114);

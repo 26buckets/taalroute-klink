@@ -1,4 +1,4 @@
-import {verifyB1ReviewedRelease,readBeforeB1Reviewed} from './check-b1-reviewed-release-20261101.mjs';
+import {verifyReadingRoundTitlesRelease,readBeforeReadingRoundTitles} from './check-reading-round-titles-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -12,7 +12,7 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 
 export function verifySpaceMixedInputRelease(read=readFileSync) {
-  const successor=verifyB1ReviewedRelease(read),currentRead=read;read=file=>readBeforeB1Reviewed(file,successor,currentRead);
+  const successor=verifyReadingRoundTitlesRelease(read),currentRead=read;read=file=>readBeforeReadingRoundTitles(file,successor,currentRead);
   const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-space-mixed-input-20261101.json');
   assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceUnchanged);
   assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,base);
@@ -47,5 +47,5 @@ export function verifySpaceMixedInputRelease(read=readFileSync) {
   return {...r,successor};
 }
 export function readBeforeSpaceMixedInput(file,r,read=readFileSync) {
-  return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeB1Reviewed(file,r.successor,read);
+  return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeReadingRoundTitles(file,r.successor,read);
 }

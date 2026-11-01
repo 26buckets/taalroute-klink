@@ -1,6 +1,6 @@
 {
-  "baselineLiveSourceCommit": "35182be471e139a7615181206ce1288c45886c86",
-  "canonicalDocumentationCommit": "d5cfe28a1b52b14d8931e38ad271267cd41dae4c",
+  "baselineLiveSourceCommit": "be7d78289945084612b20a0aa3058bb7730a43a5",
+  "canonicalDocumentationCommit": "3e4c0f062d5c14dd00ffc00393c7013fc6f25458",
   "types": true,
   "lint": true,
   "lintScope": "All four changed scripts. Full-repository lint has six pre-existing errors in three byte-unchanged files; see unchanged-ui-and-existing-lint.json.",
@@ -32,5 +32,13 @@
     ],
     "lightDark": true
   },
-  "baselineWorkerVersion": "61d76dc2-e89f-4415-b34a-ab7f75163812"
+  "baselineWorkerVersion": "82dcca3e-2cd1-486e-b1df-d60d51f374b9",
+  "fullBrowserAndProgressBasis": "35182be471e139a7615181206ce1288c45886c86",
+  "lastBasisChange": "Only A1/A2 collection topic titles changed in the already approved successor. All B1 inputs and player/storage code unchanged; added current-basis title and native browser checks.",
+  "finalBasisChecks": {
+    "readingTitleUnitTests": 3,
+    "B1NativeBrowserCases": 12,
+    "errors": 0,
+    "B1RenderedTitlesUnchanged": true
+  }
 }
