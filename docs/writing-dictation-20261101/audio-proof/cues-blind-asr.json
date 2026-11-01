@@ -1,0 +1,198 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "files": [
+    {
+      "sourceId": "KSW-AC-HT-007",
+      "script": "Je hebt het niet warm. Luister en typ het woord.",
+      "text": " Je hebt het niet warm. Luister en typ het woord.",
+      "exactWords": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.52,
+          "text": " Je hebt het niet warm. Luister en typ het woord.",
+          "tokens": [
+            50365,
+            2588,
+            28339,
+            3639,
+            6899,
+            4561,
+            13,
+            5047,
+            1964,
+            465,
+            2125,
+            3639,
+            6020,
+            765,
+            13,
+            50541
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09583175883573644,
+          "compression_ratio": 0.96,
+          "no_speech_prob": 6.507365826746714e-12
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-AC-HT-043",
+      "script": "Dit is kleding. Luister en typ het woord.",
+      "text": " Dit is kleding, luister en type het woord.",
+      "exactWords": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.98,
+          "text": " Dit is kleding, luister en type het woord.",
+          "tokens": [
+            50365,
+            25270,
+            307,
+            350,
+            1493,
+            278,
+            11,
+            10438,
+            1964,
+            465,
+            2010,
+            3639,
+            6020,
+            765,
+            13,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.13381209092981675,
+          "compression_ratio": 0.84,
+          "no_speech_prob": 4.617669094320043e-12
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-AC-HT-047",
+      "script": "Dit kun je eten. Luister en typ het woord.",
+      "text": " Dit kun je eten. Luister en typ het woord.",
+      "exactWords": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.22,
+          "text": " Dit kun je eten. Luister en typ het woord.",
+          "tokens": [
+            50365,
+            25270,
+            8215,
+            1506,
+            1030,
+            268,
+            13,
+            5047,
+            1964,
+            465,
+            2125,
+            3639,
+            6020,
+            765,
+            13,
+            50476
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07698779947617475,
+          "compression_ratio": 0.84,
+          "no_speech_prob": 4.709354434195845e-12
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-AC-HT-088",
+      "script": "Je vaart hiermee op het water. Luister en typ het woord.",
+      "text": " Je vaart hiermee op het water. Luister en typ het woord.",
+      "exactWords": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.22,
+          "text": " Je vaart hiermee op het water. Luister en typ het woord.",
+          "tokens": [
+            50365,
+            2588,
+            2773,
+            446,
+            3296,
+            42952,
+            999,
+            3639,
+            1281,
+            13,
+            5047,
+            1964,
+            465,
+            2125,
+            3639,
+            6020,
+            765,
+            13,
+            50526
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07290244102478027,
+          "compression_ratio": 0.9824561403508771,
+          "no_speech_prob": 4.30782362906279e-12
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-AC-HT-100",
+      "script": "Je krijgt dit na een vraag. Luister en typ het woord.",
+      "text": " Je krijgt dit na een vraag, luister en type het woord.",
+      "exactWords": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.9,
+          "text": " Je krijgt dit na een vraag, luister en type het woord.",
+          "tokens": [
+            50365,
+            2588,
+            27027,
+            10463,
+            6176,
+            1667,
+            3881,
+            46485,
+            11,
+            10438,
+            1964,
+            465,
+            2010,
+            3639,
+            6020,
+            765,
+            13,
+            50510
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.0765166533620734,
+          "compression_ratio": 0.8852459016393442,
+          "no_speech_prob": 5.273424925900105e-12
+        }
+      ]
+    }
+  ]
+}

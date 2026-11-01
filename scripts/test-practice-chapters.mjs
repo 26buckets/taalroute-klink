@@ -9,6 +9,7 @@ import { contentById } from '../lib/connected-content.ts';
 import { synonymCollections, synonymActivities } from '../lib/synonyms.ts';
 import { wordUseCollections } from '../lib/word-use.ts';
 import complete from '../docs/klink-complete-release-20261101/import-manifest.json' with {type:'json'};
+import { writingDictationRounds } from '../lib/writing-dictation.ts';
 
 void test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
   const before = JSON.stringify(packs);
@@ -20,6 +21,13 @@ void test('Twelve independent chapters cover all registered activities without c
     assert(collections.length, activity.id);
     assert.equal(new Set(collections.map(item => item.id)).size, collections.length, `${activity.id}: unique collections`);
     for (const collection of collections) {
+      const writing = writingDictationRounds.find(round => round.id === collection.id);
+      if (writing) {
+        assert.equal(activity.id, 'dictation');
+        assert.deepEqual(collection.exercises, writing.exercises);
+        assert.equal(collection.exercises.length, 20);
+        continue;
+      }
       if (collection.sourceRepeat) {
         assert.equal(activity.id, 'learning-review');
         assert.equal(collection.exercises.length, 0, 'Repetition references original banks');
@@ -38,7 +46,7 @@ void test('Twelve independent chapters cover all registered activities without c
       for (const item of collection.exercises) assert.deepEqual(item, source.get(item.exerciseId), 'Keep source IDs, answers, media, reading conditions and assessment unchanged');
     }
     const original = activity.id.startsWith('content-') ? importedItems.filter(item=>item.domain===importedRoutes.find(route=>route.id===activity.id).domain).map(importedExercise) : [...packs, ...([...synonymActivities, 'learning-review'].includes(activity.id) ? synonymCollections.map(collection => collection.pack) : []), ...wordUseCollections.filter(collection=>collection.pack.practiceActivities.includes(activity.id)).map(collection=>collection.pack)].flatMap(pack => groupExercises(pack, activity.id));
-    const connected = collections.flatMap(item => item.exercises);
+    const connected = collections.filter(item => !writingDictationRounds.some(round => round.id === item.id)).flatMap(item => item.exercises);
     const key = item => item.contextId && activity.id !== 'word-sentence' ? `${item.mode}:${item.contextId}` : item.exerciseId;
     assert.deepEqual(new Set(connected.map(key)), new Set(original.map(key)), `${activity.id}: no lost content`);
     for (const pack of packs) {

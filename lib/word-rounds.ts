@@ -11,7 +11,7 @@ const selectionCache = new WeakMap<ChapterCollection, Map<string, ChapterCollect
 const unique = (ids: string[]) => [...new Set(ids)];
 
 export function wordRoundDefinitions(exercises: PackageExercise[], packWords: PackageWord[] = []): WordRound[] {
-  if (!exercises.length || exercises.some(item => item.learningPathId || item.contextId || item.synonymPairId || !wordRoundActivities.has(typeof item.groupActivity === 'string' ? item.groupActivity : item.mode === 'model' ? 'meet' : ''))) return [];
+  if (!exercises.length || exercises.some(item => item.writingSourceId || item.learningPathId || item.contextId || item.synonymPairId || !wordRoundActivities.has(typeof item.groupActivity === 'string' ? item.groupActivity : item.mode === 'model' ? 'meet' : ''))) return [];
   const byId = new Map(packWords.map(word => [word.id, word]));
   const targets = exercises.map(item => unique((Array.isArray(item.targetWordIds) && item.targetWordIds.length ? item.targetWordIds : typeof item.wordId === 'string' ? [item.wordId] : []).filter((id): id is string => typeof id === 'string')));
   if (targets.some(ids => !ids.length)) return [];
