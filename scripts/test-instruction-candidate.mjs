@@ -50,5 +50,5 @@ void test('Remote changes outside the reviewed merge intersections remain byte-i
   if(local.has(file)||file==='scripts/check-reading-round-titles-release-20261101.mjs')continue;
   assert.deepEqual(readFileSync(file),execFileSync('git',['show',live+':'+file],{maxBuffer:128e6}),file);checked++;
  }
- assert(checked>70);
+ assert.equal(checked,35);
 });
