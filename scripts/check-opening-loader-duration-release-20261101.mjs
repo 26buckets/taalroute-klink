@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-const base='92a560870a5c5368c6711394fb52394eec29a742',folder='docs/opening-loader-duration-20261101/',floor='docs/appearance-floor-20261031/floor.json';
+const base='b7c04d8da4835c8b01f8314bd6247710ed75d0bf',folder='docs/opening-loader-duration-20261101/',floor='docs/appearance-floor-20261031/floor.json';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyOpeningLoaderDuration(read=readFileSync){

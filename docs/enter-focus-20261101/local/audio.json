@@ -1,0 +1,22 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "nativeAudio": true,
+      "enterAfterCorrectWhilePlaying": true,
+      "exactlyOneNext": true,
+      "oldAudioStopped": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "nativeAudio": true,
+      "enterAfterCorrectWhilePlaying": true,
+      "exactlyOneNext": true,
+      "oldAudioStopped": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": []
+}
