@@ -550,5 +550,7 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
 }
 
 @media (max-width: 820px) {
- .learner-app .cp-teacher-workflow:has(> .cp-guided-instructions) > :is(.cp-workflow-controls, .cp-guided-instructions, .cp-workflow-source) { grid-column: 1 / -1; min-width: 0; }
+ /* Guided tasks keep their reading order instead of the compact answer/check grid. */
+ .product-root .learner-app.consistent-layout .learner-main .cp-task-card.cp-teacher-workflow[data-teacher-workflow] > * { grid-column: 1 / -1; grid-row: auto; order: 0; min-width: 0; }
+ .product-root .learner-app.consistent-layout .learner-main .cp-task-card.cp-teacher-workflow[data-teacher-workflow] > [data-practice-check] { position: static; }
 }

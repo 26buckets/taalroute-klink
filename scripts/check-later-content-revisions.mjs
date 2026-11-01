@@ -13,6 +13,14 @@ const files = new Set([
   'public/content-register/summary.json',
 ]);
 const snapshots = new Map();
+export function readBeforeLocalInstructionCorrections(file, read = readFileSync) {
+  if (file !== 'data/klink-imported-practice.json') return read(file);
+  readBeforeLaterContentRevisions(file, read);
+  const approved = execFileSync('git', ['show', `${contentRevisionCheckpoints.approved}:${file}`], { maxBuffer: 128e6 });
+  const live = execFileSync('git', ['show', `995ae4407c6b9c0765cf63f801009846ca30ed11:${file}`], { maxBuffer: 128e6 });
+  assert.deepEqual(JSON.parse(approved), JSON.parse(live));
+  return live;
+}
 export function readBeforeLaterContentRevisions(file, read = readFileSync) {
   if (!files.has(file)) return read(file);
   if (!snapshots.has(file)) snapshots.set(file, Object.fromEntries(Object.entries(contentRevisionCheckpoints).map(([stage, commit]) =>

@@ -9,7 +9,7 @@ import {ImportedTeacherWorkflow,TeacherPreparation} from './imported-teacher-wor
 type Props = { exercise: PackageExercise; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean; infoTarget?: HTMLElement | null };
 export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, canAnswer, answeredCorrectly, infoTarget }: Props) {
   const task = exercise.contentTask as ContentTask;
-  const textView = useExerciseViewTarget('text', Boolean(task.stimulus));
+  const textView = useExerciseViewTarget('text', !task.teacherWorkflow && Boolean(task.stimulus));
   const [answer, setAnswer] = useState('');
   const [selected, setSelected] = useState<string[]>([]);
   const [prepared, setPrepared] = useState(exercise.access === 'self-practice');

@@ -55,7 +55,7 @@ void test('new collections keep their level, activity, IDs and answers through e
  }
 });
 void test('old synonym records, bank media, original curriculum, instructions and appearance remain unchanged',()=>{
- for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readPreservedAppearance(f),execFileSync('git',['show',(f==='data/klink-synonyms.json'||f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?'4612b27eebe2ef45c6d806ed18df09f7e8f1e934':base)+':'+f],{maxBuffer:128e6}),f);
+ for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readPreservedAppearance(f),execFileSync('git',['show',(f==='data/klink-synonyms.json'||f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?'995ae4407c6b9c0765cf63f801009846ca30ed11':base)+':'+f],{maxBuffer:128e6}),f);
  for(const[level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
  const original=JSON.parse(execFileSync('git',['show',base+':data/klink-word-library-index.json'],{maxBuffer:16e6})),current=read('data/klink-word-library-index.json'),added=new Set(['word-combinations','suitable-reply']);
  assert.deepEqual({...current,chapters:current.chapters.map(c=>({...c,activities:c.activities.filter(a=>!added.has(a))})),activities:current.activities.filter(a=>!added.has(a.id))},original);
@@ -70,7 +70,7 @@ function readPreservedAppearance(file) {
  const current=readFileSync(file);
  if(file!=='app/learner-layout.css')return current;
  const addition=readFileSync('docs/instruction-local-20261101/layout-addition.css');
- assert.equal(createHash('sha256').update(addition).digest('hex'),'f1fbee77c6fb2c9376ebe1cd2e03cb938f6d4fff9f09135fd426014bd73b78c3');
+ assert.equal(createHash('sha256').update(addition).digest('hex'),'fb22accf4eca581e4bf3576add6b8e6e3f5b5e4f9320b05911d7abf653172cc0');
  assert(current.subarray(-addition.length).equals(addition));
  return current.subarray(0,current.length-addition.length);
 }

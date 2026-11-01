@@ -3,6 +3,7 @@
 import {useEffect,useState} from 'react';
 import {ArrowRight,Check,Eye,EyeOff} from 'lucide-react';
 import {renderGrammarInstructionExample} from './grammar-instruction-example';
+import {useExerciseViewTarget} from './exercise-view';
 import type {ContentTask} from '@/lib/imported-practice-contract';
 
 type Reply={phaseId:string; answer:string; fields:Record<string,string>; tileOrder:number[]; performed:boolean; interlude:string; interval:string; exposure:string; completedAt:number; helpUsed:boolean};
@@ -41,7 +42,8 @@ export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
  const [teacher,setTeacher]=useState(true);
  const [privateView,setPrivateView]=useState(false);
  const phase=flow.phases[state.index];
- const instructionExample=phase&&!phase.correction?renderGrammarInstructionExample({kind:flow.kind,texts:phase.learnerText}):null;
+ const textView=useExerciseViewTarget('text',Boolean(state.prepared&&!teacher&&phase?.learnerText.length));
+ const instructionExample=phase&&!phase.correction?renderGrammarInstructionExample({kind:flow.kind,texts:phase.learnerText,textView}):null;
  const reviewing=!phase;
  const needsNote=Boolean(phase&&['text','oral','paper'].includes(phase.response)&&!['model','guided'].includes(phase.id));
  const responseReady=Boolean(phase&&state.performed&&(!phase.interlude||(state.interlude.trim()&&state.interval?.trim()&&state.exposure?.trim()))&&(!needsNote||state.note.trim())&&(phase.response!=='fields'||Object.values(state.fields).some(value=>value.trim()))&&(phase.response!=='tiles'||state.tiles.length===phase.tiles?.length));
@@ -79,7 +81,7 @@ export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
    </>}
   </div>:!state.prepared?<p>Bereid de opdracht eerst samen met je docent voor.</p>:reviewing?<p>Bespreek je antwoorden samen met je docent.</p>:<>
    {flow.kind==='spelling'&&<ol className="cp-guided-instructions" role="list">{phase.instruction.replaceAll('op papier', 'in het invulvak').split(/(?<=[.!?])\s+/).map((instruction,index)=><li key={index}><span className="cp-instruction-number" aria-hidden="true">{index+1}</span><span>{instruction}</span></li>)}</ol>}
-   {phase.learnerText.length>0&&<div className="cp-workflow-source">{instructionExample??phase.learnerText.map((text,index)=><p className="cp-content-stimulus" key={index}>{phase.correction?.oldValue===text?<del aria-label={`Oud, niet geldig: ${text}`}>{text}</del>:text}</p>)}</div>}
+   {phase.learnerText.length>0&&<div className="cp-workflow-source" {...(instructionExample?{}:textView)}>{instructionExample??phase.learnerText.map((text,index)=><p className="cp-content-stimulus" key={index}>{phase.correction?.oldValue===text?<del aria-label={`Oud, niet geldig: ${text}`}>{text}</del>:text}</p>)}</div>}
    {phase.interlude&&<>{([['interlude','Welke andere voorbereide activiteit is tussendoor gedaan?'],['interval','Hoeveel tijd zat er werkelijk tussen?'],['exposure','Welke woorden, voorbeelden of hints zijn tussendoor opnieuw aangeboden? Noteer ook als er geen waren.']] as const).map(([key,label])=><label className="cp-text-entry" key={key}><span>{label} Laat je docent dit invullen.</span><input disabled={locked} value={state[key]??''} onChange={event=>setState(current=>({...current,[key]:event.target.value}))}/></label>)}</>}
    {phase.response==='fields'&&phase.fields.map(label=><label className="cp-text-entry" key={label}><span>{label}</span><input disabled={locked} autoComplete="off" value={state.fields[label]??''} onChange={event=>setState(current=>({...current,fields:{...current.fields,[label]:event.target.value}}))}/></label>)}
    {['text','paper'].includes(phase.response)&&<label className="cp-text-entry"><span>Je antwoord</span><textarea rows={5} disabled={locked} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} value={state.note} onChange={event=>setState(current=>({...current,note:event.target.value}))}/></label>}

@@ -1,5 +1,6 @@
+import type {HTMLAttributes} from 'react';
 // Only explicit numbered instructions are reformatted; reading texts retain their source layout.
-export function renderGrammarInstructionExample({kind,texts}:{kind:string;texts:string[]}) {
+export function renderGrammarInstructionExample({kind,texts,textView}:{kind:string;texts:string[];textView?:HTMLAttributes<HTMLElement>}) {
  if(kind!=='grammar'||texts.length!==3)return null;
  const [title,situation,instruction]=texts;
  const lines=instruction.split('\n');
@@ -9,7 +10,7 @@ export function renderGrammarInstructionExample({kind,texts}:{kind:string;texts:
  const sentences=(text:string)=>text.split(/(?<=[.!?])\s+(?=[A-ZÀ-Ý])/u);
  return <div className="cp-instruction-example">
   <h4>{title}</h4>
-  <section className="cp-instruction-context" aria-label="Je situatie"><h4>Je situatie</h4><ul>{sentences(situation).map((text,i)=><li key={i}>{text}</li>)}</ul></section>
+  <section {...textView} className="cp-instruction-context" aria-label="Je situatie"><h4>Je situatie</h4><ul>{sentences(situation).map((text,i)=><li key={i}>{text}</li>)}</ul></section>
   {steps.map((match,i)=>{
    const text=match![2],colon=text.indexOf(': '),parts=sentences(text);
    const lead=colon>=0&&colon<parts[0].length?text.slice(0,colon+1):parts[0];

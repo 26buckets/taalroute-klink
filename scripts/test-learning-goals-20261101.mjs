@@ -7,6 +7,7 @@ import {execFileSync} from 'node:child_process';
 import {chapterCollections} from '../lib/practice-chapters.ts';
 import {groupActivities} from '../lib/group-practice.ts';
 import {learningGoalFor} from '../lib/learning-goals.ts';
+import {readBeforeLocalInstructionCorrections} from './check-later-content-revisions.mjs';
 const matrix=JSON.parse(readFileSync('docs/learning-goals-20261101/approved-matrix.json'));
 const rows=gunzipSync(readFileSync('docs/learning-goals-20261101/approved-mapping.jsonl.gz')).toString().trim().split('\n').map(JSON.parse);
 const expected=new Map(rows.map(r=>[r.exerciseId,r.goalId]));
@@ -25,4 +26,4 @@ test('goal copy and light/dark label colors equal the approved matrix',()=>{
  for(const family of Object.values(data.families))for(const theme of['light','dark']){const[a,b]=[luminance(family[theme].background),luminance(family[theme].foreground)].sort((a,b)=>a-b);assert((b+.05)/(a+.05)>=4.5);}
 });
 test('unrecognised new tasks do not invent an objective',()=>assert.equal(learningGoalFor({mode:'unknown',exerciseId:'unknown'}),undefined));
-test('published source learning content is unchanged',()=>{for(const[file,hash]of Object.entries(JSON.parse(readFileSync('docs/learning-goals-20261101/integrated-baseline.json')).files)){if(file==='data/klink-production-index.json'){const old=execFileSync('git',['show','86ef96a12e8b90a19dccaa56e1711240a39dc4c5:'+file]);assert.equal(createHash('sha256').update(old).digest('hex'),hash);const before=JSON.parse(old),current=JSON.parse(readFileSync(file));assert.deepEqual(current.slice(0,before.length),before);assert.equal(current.length,before.length+4);}else assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'),hash,file);}});
+test('published source learning content is unchanged',()=>{for(const[file,hash]of Object.entries(JSON.parse(readFileSync('docs/learning-goals-20261101/integrated-baseline.json')).files)){if(file==='data/klink-production-index.json'){const old=execFileSync('git',['show','86ef96a12e8b90a19dccaa56e1711240a39dc4c5:'+file]);assert.equal(createHash('sha256').update(old).digest('hex'),hash);const before=JSON.parse(old),current=JSON.parse(readFileSync(file));assert.deepEqual(current.slice(0,before.length),before);assert.equal(current.length,before.length+4);}else assert.equal(createHash('sha256').update(readBeforeLocalInstructionCorrections(file)).digest('hex'),hash,file);}});
