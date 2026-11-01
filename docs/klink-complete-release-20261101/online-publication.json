@@ -1,0 +1,61 @@
+{
+  "application": "Klink",
+  "initialPublicationSource": "33463705d0290f07b4502d98c1722aee783f9cbe",
+  "currentVerifiedLiveSource": "d829bf9b4dea365c8197b977f5e38ddca9062adf",
+  "currentVerifiedWorkerVersion": "d592bd5d-a54f-47be-a807-8ceb8f52a0d2",
+  "branch": "main",
+  "sourceClean": true,
+  "scope": {
+    "rounds": 158,
+    "exercises": 1740,
+    "sentenceQuestions": 200,
+    "b1FlashTexts": 120,
+    "b1Questions": 240,
+    "speakingModels": 500,
+    "a1Texts": 100,
+    "a2Texts": 100,
+    "readingQuestions": 800,
+    "choiceExplanations": 3720,
+    "newAudio": 807,
+    "female": 405,
+    "male": 402
+  },
+  "checks": {
+    "localRounds": 948,
+    "onlineRounds": 948,
+    "onlineFullRounds": 316,
+    "onlineQuestionTrials": 2912,
+    "onlineNativeAudioTrials": 2814,
+    "latestSuccessorSmoke": 20,
+    "oldProgressCases": 24,
+    "recordingCases": 13,
+    "appearanceComparisons": 8,
+    "offeredCollectionsByteIdentical": 158,
+    "offeredAudioFilesByteIdentical": 1075,
+    "retainedInstructionKeptOffline": 1,
+    "audioFilesAuditedIncludingInactiveInstruction": 1076,
+    "sourceBackupParts": 4,
+    "sourceBackupFilesFullReadback": 4198,
+    "historicalTests": {
+      "total": 201,
+      "passed": 197,
+      "obsoleteOrMisconfigured": 4
+    }
+  },
+  "normalPublicationGate": "passed",
+  "originalSixTextsAnd24QuestionsPreserved": true,
+  "existingProgressPreserved": true,
+  "existingCharacterVoicesPreserved": true,
+  "noNewAppDependencies": true,
+  "githubActionsTriggeredByThisTask": false,
+  "budgetRaised": false,
+  "humanListeningReview": false,
+  "learnerPilot": false,
+  "physicalPhoneTest": false,
+  "approvedSuccessorsPreserved": [
+    "Alfa C no-scroll",
+    "word-use"
+  ],
+  "successorPreservation": "All own collection JSON, audio and progress aliases are unchanged. Shared-player additions only apply to wordUseId or word-use pack prefixes, absent from all 1740 own exercises and all 158 pack IDs. Current-source smoke and complete offered-file readback pass.",
+  "audioMethod": "Whole blind ASR, PCM and embedded-tag audit. Native browser state tests use documented seeks in earlier passed rounds and natural accelerated completion in resumed checks; normal complete samples are retained. App playback settings are unchanged."
+}

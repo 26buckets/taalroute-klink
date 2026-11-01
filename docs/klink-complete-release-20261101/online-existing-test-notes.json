@@ -1,0 +1,28 @@
+{
+  "suite": "node --test scripts/test-*release*.mjs scripts/test-publication-proof.mjs",
+  "total": 201,
+  "passed": 197,
+  "failed": 4,
+  "releaseScopedChecks": "all passed, including complete-release proof and rejection tests",
+  "normalPublicationGate": "passed",
+  "baseline": "fcee57271b89595a14241f5b5e989ebf04477897",
+  "failures": [
+    {
+      "file": "scripts/test-image-release-20261030.mjs",
+      "reason": "Old October 30 exact component assertion excludes the already approved November 1 player changes. package-exercise-browser.tsx is byte-identical to baseline."
+    },
+    {
+      "file": "scripts/test-image-release-browser.mjs",
+      "reason": "A browser script was included by a broad filename glob; it targets an inactive old local port 18850. The complete-release browser suite used its actual configured server and passed."
+    },
+    {
+      "file": "scripts/test-image-release.mjs",
+      "reason": "Old October 25 image manifest expects the superseded goed picture; the current approved source uses word-photo-repair-20261029/goed.webp. Unchanged from baseline."
+    },
+    {
+      "file": "scripts/test-word-audio-release.mjs",
+      "reason": "Old October 25 manifest expects the superseded regent audio. The approved meaning-bound regent-weer.mp3 is unchanged from baseline."
+    }
+  ],
+  "changedSourceScope": "Only production index, canonical progress aliases, two feedback lines and bounded production/publication tests. No word media, package library, original image manifest or original word-audio manifest changed."
+}
