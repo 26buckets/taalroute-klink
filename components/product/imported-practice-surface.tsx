@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 import { useEffect, useState } from 'react';
 import { Check } from 'lucide-react';
 import { contentTaskIssues, gradeContentResponse, type ContentTask } from '@/lib/imported-practice-contract';
@@ -7,6 +8,7 @@ import {ImportedTeacherWorkflow,TeacherPreparation} from './imported-teacher-wor
 type Props = { exercise: PackageExercise; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean };
 export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: Props) {
   const task = exercise.contentTask as ContentTask;
+  const textView = useExerciseViewTarget('text', Boolean(task.stimulus));
   const [answer, setAnswer] = useState('');
   const [selected, setSelected] = useState<string[]>([]);
   const [guidance, setGuidance] = useState(false);
@@ -34,7 +36,7 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
   }
   if(!prepared)return <TeacherPreparation task={task} locked={Boolean(locked)} onBegin={()=>setPrepared(true)}/>;
   return <section className="cp-task-card cp-content-task" data-content-player={task.mode}>
-    <p className="cp-content-stimulus">{task.stimulus}</p><h4>{staged&&pendingQuestion?pendingQuestion.prompt:task.prompt}</h4>
+    <p {...textView} className="cp-content-stimulus">{task.stimulus}</p><h4>{staged&&pendingQuestion?pendingQuestion.prompt:task.prompt}</h4>
     {task.mode === 'choice' && <><p>{task.correctOptionIds.length > 1 ? 'Kies alle passende antwoorden.' : 'Kies één antwoord.'}</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className="secondary-button" aria-pressed={selected.includes(option.id)} disabled={locked} onClick={() => { setSelected(previous => task.correctOptionIds.length > 1 ? previous.includes(option.id) ? previous.filter(id => id !== option.id) : [...previous,option.id] : [option.id]); onReset(); }}>{option.text}</button>)}</div></>}
     {staged && !firstResponse && <p>Geef eerst zelf antwoord en wijs aan waar je dat in de tekst ziet. Je mag je antwoord zeggen. {questions.length>1?`Vraag ${questions.findIndex(question=>question.id===pendingQuestion?.id)+1} van ${questions.length}. Eerst alle eigen antwoorden; daarna bespreken we de mogelijkheden.`:''}</p>}
     {staged && firstResponse && <><p>Je hebt eerst zelf geantwoord. Bekijk nu de mogelijkheden en bespreek waarom je antwoord bij de tekst past.</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className="secondary-button" aria-pressed={selected.includes(option.id)} disabled={responseLocked} onClick={() => {setSelected([option.id]);onReset();}}>{option.text}</button>)}</div></>}

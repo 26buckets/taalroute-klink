@@ -16,7 +16,7 @@ import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
 import { availableChapterActivities, availableChapterCollections, selectedChapterCollection, displayedChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterExerciseChoices, chapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel, type ContentHelp } from '@/lib/content-levels';
-import { MyRoute, PictureHelp, useRouteSettings } from './route-settings';
+import { MyRoute, AdditionalContent, useRouteSettings } from './route-settings';
 import { practiceLocation } from '@/lib/practice-navigation';
 import type { PracticeAttempt } from '@/lib/package-content';
 import { learningReviewKey, parseLearningReview } from '@/lib/learning-review';
@@ -139,7 +139,7 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
 
       {items.length > limit && <button className="secondary-button cp-chapter-more" onClick={() => setLimits(current => ({ ...current, [listKey]: limit + pageSize }))}>Meer opdrachten<ArrowRight /></button>}
     </>}
-    <div className="cp-direct-help"><PictureHelp showPracticeChoice={false} selection={location} availableLevels={availableLevels} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} /></div>
+    <AdditionalContent showPracticeChoice={false} selection={location} availableLevels={availableLevels} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
     </div>}
     {collection && activity && <Round progressId={collectionProgressId(activity.id, (collection.wordRound ?? collection.readingSelection)?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={(collection.wordRound ?? collection.readingSelection)?.allExerciseIds} legacySessionId={(collection.wordRound ?? collection.readingSelection) && ((collection.wordRound ?? collection.readingSelection)!.sourceId !== collection.id || location.words) ? `chapter:${activity.id}:${(collection.wordRound ?? collection.readingSelection)!.sourceId}` : undefined} exerciseIds={(collection.wordRound ?? collection.readingSelection)?.exerciseIds} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ scopeLabel: collection.wordRound ? 'Met dezelfde woorden' : undefined, value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);

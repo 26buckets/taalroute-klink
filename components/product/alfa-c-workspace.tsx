@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 import { useState, type ReactNode } from 'react';
 import { Check, FileText } from 'lucide-react';
 import Image from './compact-image';
@@ -16,8 +17,9 @@ function documentKind({ id = '', title = '', text }: Document) {
 }
 
 export function PracticeDocument({ document, label }: { document: Document; label?: string }) {
+  const textView = useExerciseViewTarget('text');
   const kind = documentKind(document), lines = document.text.split('\n');
-  return <figure className={`ac-document ac-document-${kind}`} data-document-id={document.id} data-document-kind={kind}>
+  return <figure {...textView} className={`ac-document ac-document-${kind}`} data-document-id={document.id} data-document-kind={kind}>
     {label && label !== lines[0] && <figcaption>{label}</figcaption>}
     <div className="ac-document-paper">
       {lines.map((line, index) => {

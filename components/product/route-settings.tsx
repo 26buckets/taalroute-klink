@@ -1,23 +1,29 @@
 'use client';
 
-import { createContext, useContext, useEffect, useId, useRef, useState, type ReactNode } from 'react';
-import { ArrowRight, CircleDashed, SlidersHorizontal } from 'lucide-react';
-import { availableContentLevels, contentLevels, contentHelp, levelLabel, type ContentSelection } from '@/lib/content-levels';
+import { createContext, useContext, useEffect, useId, useState, type ReactNode } from 'react';
+import { ArrowRight, CircleDashed } from 'lucide-react';
+import { availableContentLevels, contentLevels, contentHelp, type ContentSelection } from '@/lib/content-levels';
 import { defaultRouteSettings, parseRouteSettings, routeSettingsKey, type RouteSettings } from '@/lib/learner-route';
 import { stopMedia } from './shared';
 import { defaultPracticePreferences, parsePracticePreferences, practicePreferencesKey, type PracticePreferences } from '@/lib/practice-navigation';
 
-const RouteContext = createContext({ settings: defaultRouteSettings, change: (_next: RouteSettings) => {}, practice: defaultPracticePreferences, changePractice: (_next: PracticePreferences) => {}, stored: true });
+export type ExerciseViewPreferences = { photo: boolean; text: boolean };
+export const exerciseViewKey = 'klink.exercise-view.v1';
+const RouteContext = createContext({ settings: defaultRouteSettings, change: (_next: RouteSettings) => {}, practice: defaultPracticePreferences, changePractice: (_next: PracticePreferences) => {}, view: { photo: true, text: true }, changeView: (_next: ExerciseViewPreferences) => {}, stored: true });
 export const useRouteSettings = () => useContext(RouteContext);
 
 export function RouteSettingsProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<RouteSettings>(defaultRouteSettings);
   const [practice, setPractice] = useState<PracticePreferences>(defaultPracticePreferences);
   const [stored, setStored] = useState(true);
+  const [view, setView] = useState<ExerciseViewPreferences>({ photo: true, text: true });
   useEffect(() => {
-    const read = () => { try { const next = parseRouteSettings(localStorage.getItem(routeSettingsKey)); setSettings(next); setPractice(parsePracticePreferences(localStorage.getItem(practicePreferencesKey), next)); } catch { setStored(false); } };
+    const read = () => { try { const next = parseRouteSettings(localStorage.getItem(routeSettingsKey)); setSettings(next); setPractice(parsePracticePreferences(localStorage.getItem(practicePreferencesKey), next));
+      let saved: Partial<ExerciseViewPreferences> = {}; try { saved = JSON.parse(localStorage.getItem(exerciseViewKey) ?? '{}') ?? {}; } catch { /* Keep malformed view preferences separate from learning progress. */ }
+      setView({ photo: typeof saved.photo === 'boolean' ? saved.photo : next.pictures === 'always', text: typeof saved.text === 'boolean' ? saved.text : true });
+    } catch { setStored(false); } };
     read();
-    const sync = (event: StorageEvent) => { if (event.key === routeSettingsKey || event.key === practicePreferencesKey || event.key === null) read(); };
+    const sync = (event: StorageEvent) => { if (event.key === routeSettingsKey || event.key === practicePreferencesKey || event.key === exerciseViewKey || event.key === null) read(); };
     window.addEventListener('storage', sync);
     return () => window.removeEventListener('storage', sync);
   }, []);
@@ -30,7 +36,11 @@ export function RouteSettingsProvider({ children }: { children: ReactNode }) {
     stopMedia(); setPractice(next);
     try { localStorage.setItem(practicePreferencesKey, JSON.stringify(next)); } catch { setStored(false); }
   }
-  return <RouteContext.Provider value={{ settings, change, practice, changePractice, stored }}>{children}</RouteContext.Provider>;
+  function changeView(next: ExerciseViewPreferences) {
+    setView(next);
+    try { localStorage.setItem(exerciseViewKey, JSON.stringify(next)); } catch { setStored(false); }
+  }
+  return <RouteContext.Provider value={{ settings, change, practice, changePractice, view, changeView, stored }}>{children}</RouteContext.Provider>;
 }
 
 type RouteAxis = 'literacy' | 'language';
@@ -59,7 +69,7 @@ export function MyRoute({ onChange, onBrowse, axis, selection, onSelectionChange
         </button>;
       })}{direct ? currentAxis === 'language' && <button type="button" className="cp-route-level" disabled aria-hidden="true" style={{ visibility: 'hidden' }} aria-label="B2 — nog niet beschikbaar">B2</button> : <button type="button" className="cp-route-reset" aria-label={currentAxis === 'literacy' ? 'Alle leesniveaus' : 'Alle taalniveaus'} aria-pressed={(selection?.level ?? settings[currentAxis]) === 'all'} onClick={() => choose(currentAxis, 'all')}>Alles</button>}</div>
     </fieldset>)}</div>
-    {!direct && <div className="cp-route-actions"><PictureHelp selection={selection} onSelectionChange={onSelectionChange} showPracticeChoice={showPracticeChoice} availableLevels={availableLevels} />
+    {!direct && <div className="cp-route-actions"><AdditionalContent selection={selection} onSelectionChange={onSelectionChange} showPracticeChoice={showPracticeChoice} availableLevels={availableLevels} />
       {onBrowse && <button type="button" className="primary-button" onClick={onBrowse}>Bekijk mijn oefeningen<ArrowRight aria-hidden="true" /></button>}
     </div>}
     <p className="sr-only">Kies samen met je docent. Dit is je oefenkeuze, niet je behaalde niveau. Je keuze geldt op dit apparaat.</p>
@@ -67,24 +77,10 @@ export function MyRoute({ onChange, onBrowse, axis, selection, onSelectionChange
   </section>;
 }
 
-export function PictureHelp({ selection, onSelectionChange, showPracticeChoice = true, availableLevels }: RouteControls = {}) {
-  const { settings, change } = useRouteSettings();
-  const disclosure = useRef<HTMLDetailsElement>(null);
-  useEffect(() => {
-    const element = disclosure.current;
-    const close = (event: KeyboardEvent) => { if (event.key === 'Escape' && element) { element.open = false; element.querySelector('summary')?.focus(); } };
-    element?.addEventListener('keydown', close);
-    return () => element?.removeEventListener('keydown', close);
-  }, []);
-  const filter = selection?.level === 'support' ? levelLabel(selection.level) : showPracticeChoice && selection?.help && selection.help !== 'all' ? contentHelp.find(item => item.id === selection.help)?.label : undefined;
-  return <details ref={disclosure} className="cp-level-picker cp-picture-settings" data-picture-settings><summary><SlidersHorizontal aria-hidden="true" />Hulp{filter && <span> · {filter}</span>}</summary>
-    <div className="cp-route-options">
-    <fieldset className="cp-chapter-levels"><legend>Foto bij zelf woorden maken</legend>{([['always', 'Met foto'], ['request', 'Foto als hulp'], ['after', 'Foto na je antwoord']] as const).map(([id, label]) => <button type="button" key={id} className="secondary-button" aria-pressed={settings.pictures === id} onClick={() => change({ ...settings, pictures: id })}>{label}</button>)}</fieldset>
-    <p>Voorbeelden en situatiebeelden blijven zichtbaar.</p>
-    {selection && onSelectionChange && <>
+export function AdditionalContent({ selection, onSelectionChange, showPracticeChoice = true, availableLevels }: RouteControls = {}) {
+  if (!selection || !onSelectionChange) return null;
+  return <div className="cp-additional-content">
       {showPracticeChoice && <fieldset className="cp-chapter-levels"><legend>Opdrachten tonen</legend>{contentHelp.map(item => <button type="button" key={item.id} className="secondary-button" aria-pressed={(selection.help ?? 'all') === item.id} onClick={() => onSelectionChange({ ...selection, help: selection.help === item.id ? 'all' : item.id })}>{item.label}</button>)}</fieldset>}
-      <button type="button" className="secondary-button" disabled={availableLevels ? !availableLevels.has('support') : false} aria-pressed={selection.level === 'support'} onClick={() => onSelectionChange({ ...selection, level: selection.level === 'support' ? 'all' : 'support' })}>Overige inhoud</button>
-    </>}
-    </div>
-  </details>;
+      {(!availableLevels || availableLevels.has('support') || selection.level === 'support') && <button type="button" className="secondary-button" aria-pressed={selection.level === 'support'} onClick={() => onSelectionChange({ ...selection, level: selection.level === 'support' ? 'all' : 'support' })}>Overige inhoud</button>}
+  </div>;
 }

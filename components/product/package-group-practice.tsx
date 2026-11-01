@@ -144,7 +144,7 @@ function PracticeSheet({ pack, exercises, title, showTitle, active, onAudio, onA
 }
 
 function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttempt, onDone }: { pack: PackageDefinition; exercise: PackageExercise; number: number; onAudio: AudioPlayer; startPlayback: () => AbortController; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
-  const { settings } = useRouteSettings();
+  const { view } = useRouteSettings();
   const [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
@@ -159,7 +159,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,
-      support: model || typeof exercise.exampleWord === 'string' || (settings.pictures === 'always' && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && pack.words.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: settings.pictures, elapsedMs: Date.now() - metrics.current.started,
+      support: model || typeof exercise.exampleWord === 'string' || (view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && pack.words.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: view.photo ? 'always' : 'request', elapsedMs: Date.now() - metrics.current.started,
       objective: typeof exercise.objective === 'string' ? exercise.objective : `${exercise.mode}:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: model ? 'participation' : exercise.assessment ?? 'answer', independentReading: false });
     setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
   }
@@ -203,7 +203,7 @@ function BuildWorksheet({ showTitle, exercises, onAudio, onAttempt, initialId, o
 }
 
 function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { completed: boolean; exercise: PackageExercise; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
-  const { settings } = useRouteSettings();
+  const { view } = useRouteSettings();
   const [result, setResult] = useState<'idle' | 'right' | 'wrong'>(completed ? 'right' : 'idle');
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
@@ -223,7 +223,7 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { com
     }} canAnswer={result !== 'right' && heard} onHelp={() => { metrics.current.helpUsed = true; }} onReset={() => setResult('idle')} onFinish={(answer, correct) => {
       metrics.current.attempts++;
       onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,
-        support: typeof exercise.exampleWord === 'string' || (settings.pictures === 'always' && allPackageWords.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: settings.pictures, elapsedMs: Date.now() - metrics.current.started, objective: `WO-03:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: 'answer', independentReading: false });
+        support: typeof exercise.exampleWord === 'string' || (view.photo && allPackageWords.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: view.photo ? 'always' : 'request', elapsedMs: Date.now() - metrics.current.started, objective: `WO-03:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: 'answer', independentReading: false });
       setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
     }} />
     <output aria-live="polite">{audioError ? 'Het geluid lukt niet. Probeer opnieuw.' : result === 'right' ? <><Check />Goed</> : result === 'wrong' ? 'Kijk naar het voorbeeld. Verander een letter.' : ''}</output>

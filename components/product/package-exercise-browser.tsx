@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
@@ -186,7 +187,7 @@ function PackageExercisePlayer({
   const playback = useRef<AbortController | null>(null);
   const explainedModes = useRef(previousInstructions());
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });
-  const { settings } = useRouteSettings();
+  const { view } = useRouteSettings();
   const reportPosition = useEffectEvent((id: string) => {
     if (practiceRound || exercises.findIndex(item => item.exerciseId === id) <= nextRequiredIndex) onPosition?.(id);
   });
@@ -378,8 +379,8 @@ function PackageExercisePlayer({
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts,
-      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' || (settings.pictures === 'always' && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && wordPictures.has(String(exercise.wordId)) && !exercise.contextId) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
-      pictureSupport: settings.pictures,
+      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' || (view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && wordPictures.has(String(exercise.wordId)) && !exercise.contextId) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
+      pictureSupport: view.photo ? 'always' : 'request',
       helpUsed: metrics.current.helpUsed, elapsedMs: Date.now() - metrics.current.started,
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
@@ -579,28 +580,32 @@ export function ExerciseSurface({
 function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; onAudio?: AudioPlayer; children?: ReactNode }) {
   const source = wordMeaningContexts(exercise).some(c => c.audio) && !exercise.requiresAudio ? undefined : exercise.prompt?.audio?.src ?? (exercise.wordId ? undefined : findAudioSource(exercise));
   const visibleWord = typeof exercise.displayWord === 'string' ? exercise.displayWord : exercise.exampleWord;
+  const textView = useExerciseViewTarget('text', typeof visibleWord === 'string');
   if (!source && typeof visibleWord !== 'string' && !children) return null;
   return (
     <div className={`cp-task-prompt${source && onAudio && typeof visibleWord !== 'string' ? ' cp-corner-prompt' : ''}`}>
       {typeof visibleWord !== 'string' && (source && onAudio ? <ExerciseListen onClick={() => onAudio(source)} label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'} /> : <span><FileText /></span>)}
-      <div>{typeof visibleWord === 'string' && (source && onAudio ? <><ExerciseListen onClick={() => onAudio(source)} label={`Luister naar ${visibleWord}`} /><button className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}</button></> : <strong>{visibleWord}</strong>)}{children}</div>
+      <div>{typeof visibleWord === 'string' && (source && onAudio ? <><ExerciseListen onClick={() => onAudio(source)} label={`Luister naar ${visibleWord}`} /><button {...textView} className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}</button></> : <strong {...textView}>{visibleWord}</strong>)}{children}</div>
     </div>
   );
 }
 
-function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht', word }: { image?: ExerciseImage; alt?: string; word?: string }) {
+function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht', word, optional = false, onReveal }: { image?: ExerciseImage; alt?: string; word?: string; optional?: boolean; onReveal?: () => void }) {
+  const visibility = useExerciseViewTarget('photo', optional && Boolean(image?.src), onReveal);
+  const placeholderClassName = visibility['data-view-hidden'] ? 'cp-view-photo-hidden' : undefined;
   if (!image?.src) return null;
-  if (image.placeholderWord && image.src.startsWith('/package-media/klink-placeholders-20261030/')) return <WordPlaceholder word={image.placeholderWord} />;
-  return <Image src={image.src} alt={image.altText || alt} fallbackWord={word} width={760} height={760} unoptimized={image.src.startsWith('/package-media/klink-productie-20261029/') || image.src.startsWith('/package-media/klink-beelden-20261030/')} />;
+  if (image.placeholderWord && image.src.startsWith('/package-media/klink-placeholders-20261030/')) return <WordPlaceholder word={image.placeholderWord} className={placeholderClassName} />;
+  return <Image {...visibility} placeholderClassName={placeholderClassName} src={image.src} alt={image.altText || alt} fallbackWord={word} width={760} height={760} unoptimized={image.src.startsWith('/package-media/klink-productie-20261029/') || image.src.startsWith('/package-media/klink-beelden-20261030/')} />;
 }
 
 function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
   const text = asRecord(exercise.text);
+  const textView = useExerciseViewTarget('text', Boolean(asString(text.primary)));
   const source = findAudioSource(exercise);
   const modelClass = `cp-model-content${/\s/.test(asString(text.primary).trim()) ? ' cp-model-sentence' : ''}`;
   const articleId = useId();
   const phrase = wordWithArticle({ id: asString(exercise.wordId), word: asString(text.primary) });
-  const content = <><ExerciseImageView image={exerciseImage(exercise)} word={asString(text.primary)} /><strong>{asString(text.primary)}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></>;
+  const content = <><ExerciseImageView optional image={exerciseImage(exercise)} word={asString(text.primary)} /><strong {...textView}>{asString(text.primary)}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></>;
   return <section className="cp-task-card">{source && <ExerciseListen label={`Luister naar ${asString(text.primary)}`} onClick={() => onAudio(source)} />}{source ? <button className={modelClass} onClick={() => onAudio(source)} aria-describedby={phrase ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className={modelClass}>{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button data-practice-check className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
@@ -623,7 +628,7 @@ function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer 
   const showGapDemo = showDemo && gapLetter && gapParts?.length === 2;
   useEffect(() => { if (showDemo) scrollDemoIntoView(choices.current); }, [showDemo]);
   useEffect(() => { if (demoAvailable && !showDemo && canAnswer) choices.current?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true }); }, [demoAvailable, showDemo, canAnswer]);
-  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{showDemo && <p className="cp-letter-cue">Kijk eerst</p>}{maskedWord && (showGapDemo ? <figure className="cp-missing-word cp-gap-demo" aria-label={`Voorbeeld: ${gapLetter} vult de lege plek. Het woord is ${gapParts.join(gapLetter)}.`}><span>{maskedWord}</span><ArrowRight aria-hidden="true" /><span>{gapParts[0]}<mark><b className="cp-demo-arrival">{gapLetter}</b></mark>{gapParts[1]}</span></figure> : <p className="cp-missing-word" aria-label={`Woord met een lege plek: ${maskedWord}`}>{maskedWord}</p>)}{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid" ref={choices}>{options.map((option) => <button key={option.id} disabled={showDemo || !canAnswer} className={(showDemo ? correct.includes(option.id) : selected === option.id) ? 'selected' : ''} data-speaking={speakingOptionId === option.id ? 'true' : undefined} aria-pressed={showDemo ? correct.includes(option.id) : selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} word={option.label ?? wordLabels.get(option.id)} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}{showDemo && correct.includes(option.id) && <Hand className="cp-demo-hand" aria-hidden="true" />}{Boolean(option.audio) && <Volume2 className="cp-option-audio" aria-hidden="true" />}</button>)}</div>{demoAvailable && (showDemo ? <button data-practice-check className="primary-button" disabled={!canAnswer} onClick={() => { onHelp?.(); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" disabled={correct.includes(selected)} onClick={() => { onHelp?.(); setShowDemo(true); }}>Kijk nog eens</button>)}</>;
+  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{showDemo && <p className="cp-letter-cue">Kijk eerst</p>}{maskedWord && (showGapDemo ? <figure className="cp-missing-word cp-gap-demo" aria-label={`Voorbeeld: ${gapLetter} vult de lege plek. Het woord is ${gapParts.join(gapLetter)}.`}><span>{maskedWord}</span><ArrowRight aria-hidden="true" /><span>{gapParts[0]}<mark><b className="cp-demo-arrival">{gapLetter}</b></mark>{gapParts[1]}</span></figure> : <p className="cp-missing-word" aria-label={`Woord met een lege plek: ${maskedWord}`}>{maskedWord}</p>)}{exercise.prompt?.image && <ExerciseImageView optional image={exercise.prompt.image} />}<div className="cp-choice-grid" ref={choices}>{options.map((option) => <button key={option.id} disabled={showDemo || !canAnswer} className={(showDemo ? correct.includes(option.id) : selected === option.id) ? 'selected' : ''} data-speaking={speakingOptionId === option.id ? 'true' : undefined} aria-pressed={showDemo ? correct.includes(option.id) : selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} word={option.label ?? wordLabels.get(option.id)} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}{showDemo && correct.includes(option.id) && <Hand className="cp-demo-hand" aria-hidden="true" />}{Boolean(option.audio) && <Volume2 className="cp-option-audio" aria-hidden="true" />}</button>)}</div>{demoAvailable && (showDemo ? <button data-practice-check className="primary-button" disabled={!canAnswer} onClick={() => { onHelp?.(); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" disabled={correct.includes(selected)} onClick={() => { onHelp?.(); setShowDemo(true); }}>Kijk nog eens</button>)}</>;
   return nested ? <div className="cp-linked-choice">{content}</div> : <section className={`cp-task-card${demoAvailable ? ' cp-beginner-choice' : ''}${demoAvailable && exercise.mode === 'missing-grapheme' ? ' cp-gap-choice' : ''}${showDemo ? ' cp-exercise-demo' : ''}`} aria-label={showDemo ? 'Voorbeeld' : undefined}>{content}</section>;
 }
 
@@ -767,37 +772,32 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {
   const contexts = wordMeaningContexts(exercise);
   const [selected, setSelected] = useState(0);
+  const photoView = useExerciseViewTarget('photo', Boolean(contexts[selected]?.image));
+  const textView = useExerciseViewTarget('text', contexts.length > 0);
   if (!contexts.length) return null;
   const context = contexts[selected] ?? contexts[0];
   return <aside className="cp-meaning-contexts" aria-label="Betekenissen in een situatie">
     <div className="cp-task-actions">{contexts.map((item, index) => <button key={item.label} className="secondary-button" aria-label={item.label} aria-pressed={index === selected} onClick={() => setSelected(index)}>{item.choice ?? item.label}</button>)}</div>
     {context.optional && <small>Andere betekenis · uitbreiding met je docent</small>}
-    <div className="cp-meaning-example">{context.image && <Image unoptimized src={context.image} alt={context.label} width={80} height={80} />}<div><p>{context.meaning}</p><p>{context.example}</p></div></div>
+    <div className="cp-meaning-example">{context.image && <Image {...photoView} unoptimized src={context.image} alt={context.label} width={80} height={80} />}<div {...textView}><p>{context.meaning}</p><p>{context.example}</p></div></div>
     {context.audio && <button className="secondary-button" onClick={() => onAudio(context.audio)}>Luister naar de voorbeeldzin<Volume2 /></button>}
   </aside>;
 }
 
-function WordPicture({ exercise, onHelp, answeredCorrectly }: { exercise: PackageExercise; onHelp: () => void; answeredCorrectly: boolean }) {
-  const { settings } = useRouteSettings();
-  const [revealed, setRevealed] = useState(false);
+function WordPicture({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () => void; answeredCorrectly: boolean }) {
   if (wordMeaningContexts(exercise).length) return null;
   const image = exerciseImage(exercise) ?? (!exercise.contextId && exercise.buildKind !== 'sentence' ? wordPictures.get(String(exercise.wordId)) : undefined);
   if (!image) return null;
-  // Situation images are the task itself, not optional word-production hints.
-  if (exercise.contextId || exercise.buildKind === 'sentence') return <ExerciseImageView image={image} />;
-  const model = typeof exercise.exampleWord === 'string';
-  const visible = model || settings.pictures === 'always' || revealed || answeredCorrectly;
-  return <div className="cp-picture-help" data-picture-support={settings.pictures}>
-    {visible ? <ExerciseImageView image={image} /> : <button className="secondary-button" onClick={() => { onHelp(); setRevealed(true); }}>{settings.pictures === 'after' ? 'Toch hulp: toon foto' : 'Toon foto'}</button>}
-  </div>;
+  return <div className="cp-picture-help"><ExerciseImageView optional image={image} onReveal={onHelp} /></div>;
 }
 
 function ReadingSurface({ exercise, onAudio, onFinish, guided, canAnswer }: SurfaceProps & { guided: boolean; canAnswer: boolean }) {
   const readingSupport = readingSupportForExercise(exercise);
+  const textView = useExerciseViewTarget('text');
   const blocks = asArray<{ id: string; text: string; speaker?: string; audio?: unknown }>(exercise.textBlocks);
   const image = exerciseImage(exercise);
   const audio = exercise.prompt?.audio?.src;
-  return <section className={`cp-task-card cp-context-card${isBeginnerLesson(exercise, guided) && exercise.mode === 'listen-situation' ? ' cp-beginner-listening' : ''}`}><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-context-layout">{image && (audio ? <button className="cp-context-image" aria-label="Luister bij de foto" onClick={() => onAudio(audio)}><ExerciseImageView image={image} /></button> : <ExerciseImageView image={image} />)}<div className={`cp-reading-blocks${readingSupport ? ' cp-reading-support' : ''}`}>{blocks.map(block => {
+  return <section className={`cp-task-card cp-context-card${isBeginnerLesson(exercise, guided) && exercise.mode === 'listen-situation' ? ' cp-beginner-listening' : ''}`}><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-context-layout">{image && (audio ? <button className="cp-context-image" aria-label="Luister bij de foto" onClick={() => onAudio(audio)}><ExerciseImageView optional image={image} /></button> : <ExerciseImageView optional image={image} />)}<div {...textView} className={`cp-reading-blocks${readingSupport ? ' cp-reading-support' : ''}`}>{blocks.map(block => {
     const source = wordMeaningContexts(exercise).some(c => c.audio) ? undefined : findAudioSource(block.audio);
     return source ? <button key={block.id} aria-label={`Luister: ${block.speaker ? `${block.speaker}: ` : ''}${block.text}`} onClick={() => onAudio(source)}>{block.speaker && <small>{block.speaker}<br /></small>}{block.text}</button> : <p key={block.id}>{block.text}</p>;
   })}{readingSupport && <aside aria-label="Betekenis en voorbeeld"><p>{readingSupport.meaning}</p><p>{readingSupport.example}</p><small>Lees de voorbeeldzin samen. Leg in je eigen woorden uit wat het woord hier betekent.</small></aside>}<MeaningContexts exercise={exercise} onAudio={onAudio} /></div></div>{!guided && <button data-practice-check className="primary-button" disabled={!canAnswer} onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}</section>;
@@ -812,7 +812,7 @@ function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfacePro
 
 function SpeakSurface({ exercise, onAudio, onFinish, onRecordingChange }: SurfaceProps) {
   const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<Recorder onFinish={onFinish} onRecordingChange={onRecordingChange} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView optional image={image} />}<Recorder onFinish={onFinish} onRecordingChange={onRecordingChange} /></section>;
 }
 
 function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onFinish']; onRecordingChange?: (busy: boolean) => void }) {
@@ -1039,6 +1039,7 @@ function ListenGameSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
 }
 
 function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {
+  const textView = useExerciseViewTarget('text');
   const cards = asArray<{ cardId: string; front?: { image?: ExerciseImage; text?: string }; back?: { text?: string }; audio?: unknown }>(exercise.cards);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -1049,7 +1050,7 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
   const phrase = wordWithArticle(pack.words.find(word => word.id === card?.cardId && word.word === backText) ?? pack.words.find(word => word.image && word.image === card?.front?.image?.src && word.word === backText));
   return <section className="cp-task-card">
     {source && <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(source)} />}
-    {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={card.front?.text ? flipped ? 'Toon het eerste woord' : 'Toon het synoniem' : flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}><span key={index} className="cp-card-turn"><span className="cp-card-face cp-card-front" aria-hidden={flipped}>{card.front?.text ? <strong>{card.front.text}</strong> : <ExerciseImageView image={card.front?.image} word={backText} />}</span><span className="cp-card-face cp-card-back" aria-hidden={!flipped}><strong>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></span></span></button>}
+    {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={card.front?.text ? flipped ? 'Toon het eerste woord' : 'Toon het synoniem' : flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}><span key={index} className="cp-card-turn"><span className="cp-card-face cp-card-front" aria-hidden={flipped}>{card.front?.text ? <strong {...textView}>{card.front.text}</strong> : <ExerciseImageView optional image={card.front?.image} word={backText} />}</span><span className="cp-card-face cp-card-back" aria-hidden={!flipped}><strong {...textView}>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></span></span></button>}
     <span className="cp-card-hint">Tik op de kaart.</span>
     <div className="cp-task-actions">
       {cards.length > 1 && <><button data-practice-step-previous className="secondary-button" disabled={index === 0} onClick={() => { setIndex(index - 1); setFlipped(false); }}><ArrowLeft />Vorige</button><button data-practice-step-next data-practice-check className="primary-button" onClick={() => { if (index >= cards.length - 1) onFinish('kaartenset afgerond', true); else { setIndex(index + 1); setFlipped(false); } }}>{index >= cards.length - 1 ? 'Klaar' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button></>}

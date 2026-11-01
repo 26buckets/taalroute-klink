@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 
 import { useState } from 'react';
 import { ExerciseListen } from './exercise-listen';
@@ -11,13 +12,14 @@ export function LearningPathSurface({ exercise, onAudio, onFinish, onHelp, canAn
   const [help, setHelp] = useState(false);
   const [selected, setSelected] = useState('');
   const model = exercise.mode === 'learning-example';
+  const textView = useExerciseViewTarget('text', model);
   const source = exercise.prompt?.audio?.src;
   const options = (exercise.options ?? []) as { id: string; label: string }[];
   const answers = (exercise.answer as { correctOptionIds?: string[] })?.correctOptionIds ?? [];
   const modelUnits = exercise.modelUnits as string[] | undefined;
   return <section className="cp-task-card cp-learning-task">
     {model ? <>
-      <p className="cp-learning-example">{modelUnits ? modelUnits.map((unit, index) => <span key={index}>{index > 0 && ' · '}{index === exercise.modelFocus ? <mark data-model-unit>{unit}</mark> : unit}</span>) : String(exercise.displayWord)}</p>
+      <p {...textView} className="cp-learning-example">{modelUnits ? modelUnits.map((unit, index) => <span key={index}>{index > 0 && ' · '}{index === exercise.modelFocus ? <mark data-model-unit>{unit}</mark> : unit}</span>) : String(exercise.displayWord)}</p>
       {source && <ExerciseListen label="Luister" onClick={() => onAudio(source)} />}
       <p>{String(exercise.explanation)}</p>
     </> : <>

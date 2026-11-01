@@ -311,12 +311,23 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-task-card:has(> .cp-corner-prompt):not(:has(.cp-corner-prompt > button)) { padding-left: 8px; }
 .learner-app .cp-corner-prompt > div:empty { display: none; }
 .learner-app :is(.cp-sheet-item, .cp-worksheet-row) { position: relative; }
-.learner-app :is(.cp-sheet-item, .cp-worksheet-row):has(> .cp-listen-slot button) { padding-top: 64px; }
-.learner-app :is(.cp-sheet-item, .cp-worksheet-row) > .cp-listen-slot { position: absolute; top: 8px; left: 8px; }
+.learner-app :is(.cp-sheet-item, .cp-worksheet-row):has(> .cp-exercise-tools) { padding-top: 64px; }
+.learner-app :is(.cp-sheet-item, .cp-worksheet-row) > .cp-exercise-tools { position: absolute; top: 8px; left: 8px; right: 8px; width: auto; }
 .learner-app .cp-source-text > div:has(> .cp-block-listen) { position: relative; padding-right: 56px; }
 .learner-app .cp-block-listen { position: absolute; top: 0; right: 0; width: 48px; height: 48px; padding: 0; }
-.learner-app .cp-exercise-stage:has(> .cp-listen-slot button:not([hidden])) { scroll-padding-top: 72px; }
-.learner-app .cp-exercise-stage > .cp-listen-slot { position: sticky; top: 12px; align-self: flex-start; justify-self: start; flex: 0 0 auto; z-index: 2; margin-bottom: 12px; }
-.learner-app .ac-document-player .cp-exercise-stage:has(> .cp-listen-slot button:not([hidden])) { display: grid; grid-template-rows: auto minmax(0, 1fr); }
-.learner-app .ac-document-player .cp-exercise-stage > .cp-listen-slot { margin: 0 0 12px; }
-.learner-app .ac-docent-learner > .cp-listen-slot { justify-self: start; }
+.learner-app .cp-exercise-tools { display: flex; align-items: center; justify-content: space-between; grid-column: 1 / -1; width: 100%; min-height: 48px; gap: 8px; flex: 0 0 auto; }
+.learner-app .ac-docent-learner:has(> .cp-exercise-tools) { row-gap: 12px; }
+.learner-app .cp-exercise-stage:has(> .cp-exercise-tools) { scroll-padding-top: 72px; }
+.learner-app .cp-exercise-stage > .cp-exercise-tools { position: sticky; top: 12px; align-self: flex-start; justify-self: start; z-index: 2; margin-bottom: 12px; }
+.learner-app .ac-document-player .cp-exercise-stage:has(> .cp-exercise-tools) { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.learner-app .ac-document-player .cp-exercise-stage > .cp-exercise-tools { margin: 0 0 12px; }
+.learner-app .cp-view-panel { display: flex; align-items: center; gap: 2px; margin: 0 0 0 auto; padding: 0; border: 0; min-width: 0; }
+.learner-app .cp-view-toggle { width: 44px; height: 44px; min-width: 44px; min-height: 44px; display: grid; place-items: center; padding: 6px; border: 0; background: transparent; color: var(--ink); }
+.learner-app .cp-view-toggle > span { position: relative; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); }
+.learner-app .cp-view-toggle svg { width: 18px; height: 18px; stroke-width: 1.7; }
+.learner-app .cp-view-toggle[aria-pressed="true"] > span { border-color: var(--primary); background: var(--primary-soft); }
+.learner-app .cp-view-toggle[aria-pressed="false"] > span, .learner-app .cp-view-toggle:disabled { color: var(--muted); }
+.learner-app .cp-view-toggle:disabled { opacity: .55; }
+.learner-app .cp-view-toggle[data-view-toggle="text"][aria-pressed="false"] > span::after { content: ''; position: absolute; width: 24px; height: 1.5px; background: currentColor; transform: rotate(-45deg); }
+.learner-app [data-view-hidden="true"], .learner-app .cp-view-photo-hidden { visibility: hidden; pointer-events: none; }
+.learner-app .cp-additional-content:empty { display: none; }

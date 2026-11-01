@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordDailyRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
@@ -37,6 +38,7 @@ export function AlfaCDailyPractice({ block, backHref, header }: { backHref: stri
 }
 
 function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext }: { block: DailyBlock; step: DailyStep; index: number; record: DailyRecord; onRecord: (r: DailyRecord) => void; onPrevious?: () => void; onNext: () => void }) {
+  const textView = useExerciseViewTarget('text', step.context.length > 0);
   const readAlong = useAlfaCReadAlong();
   const [model, setModel] = useState(false), [help, setHelp] = useState(false);
   const [chosen, setChosen] = useState<string[]>([]), [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
@@ -76,7 +78,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stop(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.example}</p><button className="primary-button" onClick={() => { stop(); setModel(false); setChosen([]); setResult('idle'); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{step.speech.H}</p><button className="secondary-button" onClick={() => { stop(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
               : <>
-                {step.context.map(text => <p className="ac-task-context" key={text}>{text}</p>)}
+                {step.context.map(text => <p {...textView} className="ac-task-context" key={text}>{text}</p>)}
                 {step.interaction === 'keuze' ? <fieldset className="functional-choice"><legend className="sr-only">{step.instruction}</legend><p>Kies één antwoord.</p><div className="functional-choice-grid">{step.options.map(o => <button key={o.code} className="cp-option" aria-pressed={chosen[0] === o.code} disabled={busy || result === 'right'} onClick={() => answer([o.code])}>{o.text}</button>)}</div></fieldset>
                   : <fieldset className="functional-choice"><legend className="sr-only">{step.instruction}</legend><output className="ac-built-answer" aria-live="polite" aria-label="Jouw zin">{chosen.join(' ') || 'Tik op het eerste kaartje.'}</output><div className="functional-choice-grid">{step.cards.map(card => <button key={card} className="cp-option" disabled={busy || chosen.includes(card) || result === 'right'} onClick={() => { const next = [...chosen, card]; setChosen(next); if (next.length === step.cards.length) answer(next); }}>{card}</button>)}</div><button className="secondary-button" disabled={busy || !chosen.length} onClick={() => { setChosen(chosen.slice(0, -1)); setResult('idle'); }}><ArrowLeft />Eén terug</button></fieldset>}
               </>}

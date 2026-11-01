@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -443,6 +444,7 @@ function TeacherPlayer({
   const audioDone = stage.audio.every((src) =>
     events.some((e) => e.type === 'audio' && e.src === src),
   );
+  const textView = useExerciseViewTarget('text', Boolean(stage.display || stage.model) && !teacher);
   const draftKey = `klink.alfa-c.docent.draft:${session.id}:${at}`;
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -753,7 +755,7 @@ function TeacherPlayer({
           </h2>
           <ExerciseAudioSlot />
           {stage.display && !model && (
-            <div className="ac-docent-card">
+            <div {...textView} className="ac-docent-card">
               {stage.display.split('\n').map((line, i) => (
                 <p key={i}>{line}</p>
               ))}
@@ -888,7 +890,7 @@ function TeacherPlayer({
                 </button>
               ))}
               {model && (
-                <div className="ac-docent-card" aria-label="Voorbeeld">
+                <div {...textView} className="ac-docent-card" aria-label="Voorbeeld">
                   <p>{stage.model}</p>
                 </div>
               )}

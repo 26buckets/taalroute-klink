@@ -3,17 +3,18 @@
 import { createContext, useContext, useState, type ButtonHTMLAttributes, type Dispatch, type ReactNode, type SetStateAction } from 'react';
 import { createPortal } from 'react-dom';
 import { Volume2 } from 'lucide-react';
+import { ExerciseViewProvider, ExerciseViewPanel } from './exercise-view';
 
 const ListenCorner = createContext<[HTMLSpanElement | null, Dispatch<SetStateAction<HTMLSpanElement | null>>] | null>(null);
 
 export function ExerciseAudioProvider({ children }: { children: ReactNode }) {
   const corner = useState<HTMLSpanElement | null>(null);
-  return <ListenCorner value={corner}>{children}</ListenCorner>;
+  return <ListenCorner value={corner}><ExerciseViewProvider>{children}</ExerciseViewProvider></ListenCorner>;
 }
 
 export function ExerciseAudioSlot() {
   const corner = useContext(ListenCorner);
-  return <span className="cp-listen-slot" ref={corner?.[1]} />;
+  return <div className="cp-exercise-tools"><span className="cp-listen-slot" ref={corner?.[1]} /><ExerciseViewPanel /></div>;
 }
 
 export function ExerciseListen({ label, inline = false, ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { label: string; inline?: boolean }) {

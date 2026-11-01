@@ -1,4 +1,5 @@
 'use client';
+import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseListen } from './exercise-listen';
 import { StandardPracticeSurface } from './standard-practice-surface';
 import { useState } from 'react';
@@ -38,9 +39,10 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
 
 export function SourceText({ exercise, onAudio, onHelp, corner = true }: { exercise: PackageExercise; onAudio: AudioPlayer; onHelp: () => void; corner?: boolean }) {
   const blocks = (exercise.sourceBlocks ?? []) as Block[];
+  const textView = useExerciseViewTarget('text', blocks.length > 0);
   if (!blocks.length) return null;
   return <div className="cp-source-text">{blocks.map((block, index) => <div key={block.id}>
-    {block.speaker && <small>{block.speaker}</small>}<p>{block.text}</p>
+    {block.speaker && <small>{block.speaker}</small>}<p {...textView}>{block.text}</p>
     {block.audio?.src && (corner && index === blocks.findIndex(item => item.audio?.src) ? <ExerciseListen label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }} /> : <button className="secondary-button cp-block-listen" aria-label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 /></button>)}
   </div>)}</div>;
 }
