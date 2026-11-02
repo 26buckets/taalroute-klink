@@ -1,0 +1,36 @@
+{
+  "changes": [
+    {
+      "sourceId": "A2-TEXT-03-06",
+      "previousQuestion": "Wanneer vertrekt Layla met haar klas vanaf school?",
+      "question": "Wanneer vertrekt de klas vanaf school?",
+      "reason": "Beide onafhankelijke ASR-modellen wijken af bij de naam; concrete vraag zonder eigennaam behoudt dezelfde bewijszin en voorkomt onbewezen naamuitspraak in de instructie.",
+      "oldAudio": {
+        "audioId": "k10ta2-9cb675fefd0538ed",
+        "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-9cb675fefd0538ed.mp3"
+      }
+    },
+    {
+      "sourceId": "A2-TEXT-03-09",
+      "previousQuestion": "Wat stuurt de winkel om Meryem te helpen de handdoeken terug te sturen?",
+      "question": "Wat stuurt de winkel na de melding over de verkeerde handdoeken?",
+      "reason": "Beide onafhankelijke ASR-modellen wijken af bij de naam; concrete vraag zonder eigennaam behoudt dezelfde bewijszin en voorkomt onbewezen naamuitspraak in de instructie.",
+      "oldAudio": {
+        "audioId": "k10ta2-60581dd0329d58af",
+        "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-60581dd0329d58af.mp3"
+      }
+    }
+  ],
+  "pendingWordChecks": [
+    "klaarligt",
+    "regenbui",
+    "taalklas",
+    "retourlabel"
+  ],
+  "spellingVariantsOnly": [
+    "Sofia/Sophia",
+    "Layla/Leila"
+  ],
+  "humanListeningPerformed": false,
+  "publicationReady": false
+}

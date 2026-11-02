@@ -1,0 +1,92 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10ta2-extracted-f6ed68829e2f3156",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/klaarligt-f6ed68829e2f3156.mp3",
+      "expected": "klaarligt",
+      "recognized": " klaar ligt.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " klaar ligt.",
+          "tokens": [
+            50365,
+            33337,
+            289,
+            287,
+            5828,
+            13,
+            50390
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.37238338589668274,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 0.7825025916099548
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-extracted-b4abdd2e505bb80c",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/regenbui-b4abdd2e505bb80c.mp3",
+      "expected": "regenbui",
+      "recognized": " regenbui",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " regenbui",
+          "tokens": [
+            50365,
+            33909,
+            65,
+            3077,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.34042517344156903,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.16526423394680023
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-extracted-2e3d372c740166f3",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/retourlabel-2e3d372c740166f3.mp3",
+      "expected": "retourlabel",
+      "recognized": " Retourlabel",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.68,
+          "text": " Retourlabel",
+          "tokens": [
+            50365,
+            11495,
+            396,
+            75,
+            18657,
+            50399
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.346799509865897,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 0.674345850944519
+        }
+      ]
+    }
+  ]
+}

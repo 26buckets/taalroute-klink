@@ -1,0 +1,74 @@
+{
+  "application": "Klink",
+  "authorization": "Nico 2 november 2026: eerste tien afmaken inclusief noodzakelijke ElevenLabs-audio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "7qdUFMklKPaaAVMsBTBt",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 36,
+  "clips": [
+    {
+      "id": "k10ta2-extracted-f6ed68829e2f3156",
+      "text": "klaarligt",
+      "title": "klaarligt",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/klaarligt-f6ed68829e2f3156.mp3",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "textSha256": "0be86422f7f6da03f15a3bfd5af7aa79aa839d31c368023efcc16b62e8fc4cf3",
+      "wordKey": "klaarligt"
+    },
+    {
+      "id": "k10ta2-extracted-b4abdd2e505bb80c",
+      "text": "regenbui",
+      "title": "regenbui",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/regenbui-b4abdd2e505bb80c.mp3",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "textSha256": "fa136377313fc634b0dacc75e56ebc8c5ec65d9e653b23b77cfa33c535fab9c6",
+      "wordKey": "regenbui"
+    },
+    {
+      "id": "k10ta2-extracted-181bc6d2671972c7",
+      "text": "taalklas",
+      "title": "taalklas",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/taalklas-181bc6d2671972c7.mp3",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "textSha256": "a1111aff4a2b4f8720d769fb17aa79680cedef2a17162caf8b083bd5ceb72e00",
+      "wordKey": "taalklas"
+    },
+    {
+      "id": "k10ta2-extracted-2e3d372c740166f3",
+      "text": "retourlabel",
+      "title": "retourlabel",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/retourlabel-2e3d372c740166f3.mp3",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "textSha256": "612986ff141deb0a69375b0a3ed7359e578a1b36672c443c7b23daba28292085",
+      "wordKey": "retourlabel"
+    }
+  ],
+  "pronunciationChecks": [
+    "OV-kaart: afkorting als twee Nederlandse letternamen, gevolgd door kaart",
+    "Layla: behoud de fictieve bronnaam, geen automatische vervanging door een andere naam",
+    "klaarligt en samenkomt: volledige samengestelde woorden, geen afgeknipt begin/einde",
+    "gesolliciteerd: alle lettergrepen en eindklank behouden",
+    "Bestaande voorkomen-verhinderen-opname hergebruiken voor voorkomen in deze context; niet de variant aanwezig zijn",
+    "ASR-spelling is geen zelfstandig bewijs van klemtoon; concrete twijfel blokkeren totdat echte audio is gecontroleerd"
+  ],
+  "repairReason": "Gerichte controle van twee naaminstructies en vier onzekere losse woorden; originele opnamen blijven bewaard.",
+  "purpose": "Existing context audio extraction only; do not call generator for this plan."
+}

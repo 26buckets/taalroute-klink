@@ -2,13 +2,15 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyKlink10TextA2EvidenceRelease,readBeforeKlink10TextA2Evidence} from './check-klink10-text-a2-evidence-release-20261102.mjs';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifyKlink10TextEvidenceRelease(read=readFileSync){
+ const next=verifyKlink10TextA2EvidenceRelease(read),currentRead=read;read=file=>readBeforeKlink10TextA2Evidence(file,next,currentRead);
  const json=p=>JSON.parse(read(p)),dir='docs/klink10-text-evidence-20261102/',r=json('docs/klink-owner-release-ten-text-evidence-20261102.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.existingAppearancePreserved&&r.progressPreserved);
  assert.equal(r.baselineSourceCommit,'4734ec25c3ca6a3ac6f8e43b9e379555ab54afac');assert.equal(r.liveSourceCommit,'9518708b3ddd764ec830c151965bae3503977868');git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,next.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  const allowed=['data/klink-production-index.json','data/klink-production-instructions.json','data/klink-word-listening.json','data/klink-word-listening-audio.json','scripts/test-practice-chapters.mjs','scripts/check-klink10-bingo-release-20261102.mjs','scripts/check-klink10-text-evidence-release-20261102.mjs','scripts/test-klink10-text-evidence-20261102.mjs','scripts/test-klink10-text-evidence-browser-20261102.mjs','scripts/test-klink10-text-evidence-media-20261102.mjs','scripts/test-klink10-text-evidence-release-20261102.mjs'];
  assert(changed.every(p=>allowed.includes(p)||p.startsWith('public/practice-content/klink10-text-evidence-20261102/')||p.startsWith('public/package-audio/klink10-text-evidence-20261102/')));assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
@@ -22,6 +24,6 @@ export function verifyKlink10TextEvidenceRelease(read=readFileSync){
  const n=json(dir+'local/native-media.json');assert.equal(n.checks.length,22);assert.equal(n.flows.length,4);assert.equal(json(dir+'local/existing-view/checks.json').checks.length,14);
  const audio=json(dir+'selected-media-verification.json');assert.equal(audio.checks.length,11);assert(audio.checks.every(x=>x.fullDecode&&x.metadataVerified&&x.pronunciationEvidence));
  const v=json(dir+'verification.json');for(const k of['types','lint','coreTests','wordAudioCoverage','screensVisuallyReviewed','sourceReview','existingPublicBytesPreserved'])assert(v[k]);assert.equal(v.humanListening,false);
- const backup=json(dir+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
+ const backup=json(dir+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,next};
 }
-export function readBeforeKlink10TextEvidence(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeKlink10TextEvidence(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeKlink10TextA2Evidence(file,r.next,read);}
