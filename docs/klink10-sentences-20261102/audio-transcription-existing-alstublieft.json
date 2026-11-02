@@ -1,0 +1,76 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "existing-alstublieft",
+      "src": "/package-audio/woorden-20261025/TL0082.mp3",
+      "expected": "alstublieft",
+      "recognized": " Alsjeblieft.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.62,
+          "text": " Alsjeblieft.",
+          "tokens": [
+            50365,
+            12948,
+            2884,
+            5199,
+            414,
+            844,
+            13,
+            50396
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.27852853139241535,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 2.5484295229638576e-11
+        }
+      ]
+    },
+    {
+      "id": "existing-zdz-ac-002",
+      "src": "/package-audio/complete-20261101/zdz-ac-002.mp3",
+      "expected": "Ik wil graag een brood, alstublieft.",
+      "recognized": " Ik wil graag een brood, alstublieft.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.68,
+          "text": " Ik wil graag een brood, alstublieft.",
+          "tokens": [
+            50365,
+            8316,
+            20501,
+            1295,
+            559,
+            3881,
+            2006,
+            378,
+            11,
+            419,
+            372,
+            836,
+            6302,
+            844,
+            13,
+            50449
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06227597068337833,
+          "compression_ratio": 0.8181818181818182,
+          "no_speech_prob": 4.195727099087776e-12
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exer
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
+import { checkSentenceAnswer, parseOwnSentence, type OwnSentence } from '@/lib/sentence-answer';
 import { wordAudioParts } from '@/lib/word-audio';
 import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 import { emptyWritingInk, hasWritingInk, loadWritingInk, openWritingInk, saveWritingInk, updateWritingInk, type WritingInk } from '@/lib/writing-ink';
@@ -601,6 +602,8 @@ export function ExerciseSurface({
   infoTarget?: HTMLElement | null;
 }) {
   const demo = beginnerExerciseDemo(pack, exercise, guided);
+  if (exercise.mode === 'open-sentence') return <OwnSentenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onRecordingChange={onRecordingChange} canAnswer={canAnswer} />;
+  if (Array.isArray(exercise.sequenceStages)) return <StagedSequenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
   switch (exercise.componentId) {
     case 'KLINK-CONTENT': return <ImportedPracticeSurface infoTarget={infoTarget} exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
     case 'KLINK-STANDARD': return <StandardPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
@@ -631,7 +634,7 @@ export function ExerciseSurface({
 function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; onAudio?: AudioPlayer; children?: ReactNode }) {
   const source = wordMeaningContexts(exercise).some(c => c.audio) && !exercise.requiresAudio ? undefined : exercise.prompt?.audio?.src ?? (exercise.wordId ? undefined : findAudioSource(exercise));
   const visibleWord = typeof exercise.displayWord === 'string' ? exercise.displayWord : exercise.exampleWord;
-  const textView = useExerciseViewTarget('text', typeof visibleWord === 'string' && exercise.answerPolicy !== 'exact-copy');
+  const textView = useExerciseViewTarget('text', typeof visibleWord === 'string' && exercise.answerPolicy !== 'exact-copy' && exercise.sentenceAnswerPolicy !== 'exact-copy');
   if (!source && typeof visibleWord !== 'string' && !children) return null;
   return (
     <div className={`cp-task-prompt${source && onAudio && typeof visibleWord !== 'string' ? ' cp-corner-prompt' : ''}`}>
@@ -840,7 +843,7 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
     catch { setWritingError(true); }
   }
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && writingReady && value.trim()) { change(value, true); onFinish(value, accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value)), exercise.answerPolicy === 'exact-copy' && accepted[0] !== undefined ? copyDifferenceFeedback(accepted[0], value, exercise.feedback) : undefined); } }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && writingReady && value.trim()) { change(value, true); const sentence = exercise.sentenceAnswerPolicy && accepted[0] ? checkSentenceAnswer(accepted[0], value, exercise.sentenceAnswerPolicy === 'exact-copy') : undefined; onFinish(value, sentence ? sentence.correct : accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value)), sentence?.feedback ?? (exercise.answerPolicy === 'exact-copy' && accepted[0] !== undefined ? copyDifferenceFeedback(accepted[0], value, exercise.feedback) : undefined)); } }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {
@@ -1029,6 +1032,77 @@ function TraceSurface({ exercise, onAudio, onFinish, onReset, canAnswer }: Surfa
       : <button data-practice-check className="primary-button" disabled={!canAnswer || !value.trim()} onClick={() => setRevealed(true)}>Vergelijk<Check /></button>}
   </section>;
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Typ de letter hieronder.' : 'Typ dit woord hieronder.'} Papier is een extra.</span></div>{input}<button data-practice-check className="primary-button" disabled={!value.trim() || !canAnswer} onClick={() => onFinish(value, normalize(value) === normalize(target), 'Vergelijk jouw antwoord met het model.')}>Ik heb geschreven<Check /></button></section>;
+}
+
+function OwnSentenceSurface({ exercise, onAudio, onFinish, onReset, onHelp, onRecordingChange, canAnswer }: SurfaceProps & { onReset: () => void; onHelp: () => void; canAnswer: boolean }) {
+  const key = `klink.own-sentence.v1:${exercise.exerciseId}`;
+  const [response, setResponse] = useState<OwnSentence>({ draft: '' });
+  const current = useRef(response);
+  const [ready, setReady] = useState(false), [error, setError] = useState(false);
+  const [medium, setMedium] = useState<'typed' | 'spoken'>('spoken');
+  const [model, setModel] = useState(false), [review, setReview] = useState([false, false]);
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      try { const saved = parseOwnSentence(localStorage.getItem(key)); current.current = saved; setResponse(saved); if (saved.first) setMedium(saved.first.medium); }
+      catch { setError(true); }
+      setReady(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [key]);
+  function save(next: OwnSentence) {
+    current.current = next; setResponse(next);
+    try { localStorage.setItem(key, JSON.stringify(next)); setError(false); } catch { setError(true); }
+  }
+  function attempt(text: string, kind: 'typed' | 'spoken') {
+    if (!ready || !canAnswer || !text.trim()) return;
+    save({ ...current.current, first: current.current.first ?? { medium: kind, text } });
+    setReview([false, false]); onReset();
+  }
+  const criteria = [`Ik gebruik het woord '${String(exercise.sentenceWord)}' in mijn zin.`, 'Mijn zin vertelt iets duidelijks.'];
+  return <section className="cp-task-card cp-extended-task"><Prompt exercise={exercise} onAudio={onAudio} />
+    <fieldset className="cp-practice-display" aria-label="Hoe maak je jouw zin?">{(['spoken', 'typed'] as const).map(kind => <button key={kind} className="secondary-button" disabled={!ready || !canAnswer} aria-pressed={medium === kind} onClick={() => setMedium(kind)}>{kind === 'spoken' ? 'Zeg de zin' : 'Typ de zin'}</button>)}</fieldset>
+    {ready && medium === 'spoken' && <><p>Zeg eerst je eigen zin. Opnemen en terugluisteren mag ook.</p><Recorder onRecordingChange={onRecordingChange} onFinish={text => attempt(text, 'spoken')} /></>}
+    {ready && medium === 'typed' && <><label className="cp-text-entry"><span>Jouw eigen zin</span><textarea rows={3} maxLength={10000} disabled={!canAnswer} value={response.draft} onChange={event => { save({ ...current.current, draft: event.target.value }); setReview([false, false]); onReset(); }} /></label><button className="primary-button" disabled={!canAnswer || !response.draft.trim()} onClick={() => attempt(response.draft, 'typed')}>Mijn zin is klaar<Check /></button></>}
+    {response.first && <><p>{response.first.medium === 'typed' ? `Je eerste eigen zin: ${response.first.text}` : 'Je hebt aangegeven dat je zelf een zin hebt gezegd. Een opname blijft alleen beschikbaar zolang dit scherm open is.'}</p>
+      <button className="secondary-button" aria-expanded={model} onClick={() => { if (!model) onHelp(); setModel(!model); }}>{model ? 'Verberg voorbeeld' : 'Bekijk een voorbeeld'}</button>
+      {model && <div className="cp-source-text"><p>{String(exercise.modelSentence)}</p><button className="secondary-button" onClick={() => onAudio(asString(asRecord(exercise.modelAudio).src))}><Volume2 />Luister naar het voorbeeld</button><p>Jouw zin mag anders zijn.</p></div>}
+      <fieldset className="cp-task-actions"><legend>Kijk zelf of samen met je docent na.</legend>{criteria.map((text, index) => <label key={text}><input type="checkbox" checked={review[index]} onChange={event => { setReview(review.map((value, at) => at === index ? event.target.checked : value)); onReset(); }} />{text}</label>)}</fieldset>
+      <p>Klink beoordeelt de grammatica van je eigen zin niet automatisch.</p>
+      <button data-practice-check className="primary-button" disabled={!canAnswer || !review.every(Boolean) || (medium === 'typed' && !response.draft.trim())} onClick={() => onFinish(JSON.stringify({ first: response.first, medium, draft: response.draft, selfReviewed: true, automaticGrammarScoring: false }), true, 'Je hebt een eigen zin gemaakt en nagekeken. Bespreek twijfel met je docent.')}>Nagekeken en klaar<Check /></button>
+    </>}
+    {error && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}
+  </section>;
+}
+
+function StagedSequenceSurface(props: Pick<SurfaceProps, 'exercise' | 'onAudio' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {
+  const [stages] = useState(() => asArray<{ items: ExerciseItem[]; targetOrderIds: string[] }>(props.exercise.sequenceStages));
+  const key = `klink.sentence-stages.v1:${props.exercise.exerciseId}`;
+  const [completed, setCompleted] = useState<string[]>([]), [passed, setPassed] = useState(false), [ready, setReady] = useState(false), [error, setError] = useState(false);
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      try {
+        const saved: unknown = JSON.parse(localStorage.getItem(key) ?? '[]');
+        if (Array.isArray(saved) && saved.length < stages.length && saved.every((answer, i) => typeof answer === 'string' && answer === stages[i].targetOrderIds.join('|'))) setCompleted(saved);
+      } catch { setError(true); }
+      setReady(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [key, stages]);
+  const phase = completed.length, stage = stages[phase];
+  if (!stage) return <p>Deze oefening kan niet worden geladen.</p>;
+  return <><p className="cp-round-progress">Zin {phase + 1} van {stages.length}</p>
+    <SequenceSurface key={phase} {...props} exercise={{ ...props.exercise, ...stage }} canAnswer={props.canAnswer && ready} answeredCorrectly={props.answeredCorrectly || passed} onFinish={(answer, correct) => {
+      if (!correct) { props.onFinish(answer, false, 'Luister opnieuw. Maak dezelfde zin als in de opname.'); return; }
+      if (phase === stages.length - 1) props.onFinish(JSON.stringify([...completed, answer]), true);
+      else setPassed(true);
+    }} />
+    {passed && <button className="primary-button" onClick={() => {
+      const next = [...completed, stage.targetOrderIds.join('|')];
+      try { localStorage.setItem(key, JSON.stringify(next)); setError(false); } catch { setError(true); }
+      setCompleted(next); setPassed(false); props.onReset();
+    }}>Goed. Volgende zin<ArrowRight /></button>}
+    {error && <output>Je stappen worden alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}
+  </>;
 }
 
 function SequenceSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onAudio' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {

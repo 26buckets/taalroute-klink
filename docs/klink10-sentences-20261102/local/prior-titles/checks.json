@@ -1,0 +1,482 @@
+{
+  "base": "http://127.0.0.1:19041",
+  "sentenceRounds": 20,
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "light",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 140,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "light",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 140,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "dark",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "dark",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "theme": "light",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "theme": "light",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "theme": "dark",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "theme": "dark",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "light",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 140,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "light",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 140,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "dark",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "dark",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 167,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "theme": "light",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "theme": "light",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "theme": "dark",
+      "level": "a1",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "theme": "dark",
+      "level": "a2",
+      "rounds": 10,
+      "sourceIds": true,
+      "contentTitles": true,
+      "metadataSeparate": true,
+      "cardsEqual": true,
+      "cardHeight": 186.59375,
+      "noOverflow": true
+    }
+  ],
+  "flows": [
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "level": "a1",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/55ee7616af468c47341b.wav",
+          "duration": 2,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "level": "a2",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/f4ffbf404f93f707c8c1.wav",
+          "duration": 2.08,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "level": "a1",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/55ee7616af468c47341b.wav",
+          "duration": 2,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "level": "a2",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/f4ffbf404f93f707c8c1.wav",
+          "duration": 2.08,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "level": "a1",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/55ee7616af468c47341b.wav",
+          "duration": 2,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "level": "a2",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/f4ffbf404f93f707c8c1.wav",
+          "duration": 2.08,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "level": "a1",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/55ee7616af468c47341b.wav",
+          "duration": 2,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "level": "a2",
+      "round": 3,
+      "sourceExerciseUnchanged": true,
+      "reload": true,
+      "progressPreserved": true,
+      "newTitleOnReturn": true,
+      "nativeAudio": [
+        {
+          "src": "http://127.0.0.1:19041/package-audio/connected/f4ffbf404f93f707c8c1.wav",
+          "duration": 2.08,
+          "rate": 0.85,
+          "error": false
+        }
+      ],
+      "originalAudioPlayed": true,
+      "audioStoppedOnNavigation": true
+    }
+  ],
+  "errors": [],
+  "physicalDeviceTested": false
+}

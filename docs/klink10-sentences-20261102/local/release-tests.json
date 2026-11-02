@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Full historical release chain",
+    "Rejects publicationApproved",
+    "Rejects existingAppearancePreserved",
+    "Rejects progressPreserved",
+    "Rejects fullReadback",
+    "Rejects wordAudioCoverage",
+    "Rejects changed bank bytes"
+  ],
+  "negativeProofCases": 6,
+  "parentGatePassed": true
+}

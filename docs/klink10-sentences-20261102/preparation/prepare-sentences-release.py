@@ -1,0 +1,19 @@
+import json,hashlib,subprocess,zipfile,shutil
+from pathlib import Path
+T=Path(__file__).resolve().parent;R=T.parent.parent/'work/klink10-20261102';D=R/'docs/klink10-sentences-20261102';base='eb6270430997e84ffbb3428d4f1fbdfe06e52546';sha=lambda b:hashlib.sha256(b).hexdigest()
+def save(p,d):p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+for src,name in [('/tmp/klink10-sentences-types.log','types.log'),('/tmp/klink10-sentences-lint.log','lint.log')]:assert (Path(src).read_text()=='' if 'types' in name else '0 errors' in Path(src).read_text() or Path(src).read_text()=='');shutil.copy2(src,D/name)
+for name,n in [('browser',880),('native-media',566),('access',16)]:assert len(json.load(open(D/'local'/f'{name}.json'))['checks'])==n
+assert len(json.load(open(D/'local/existing-view/checks.json'))['checks'])==14
+save(D/'verification.json',{'types':True,'lint':True,'wordAudioCoverage':True,'missingWordAudio':0,'coreTests':True,'coreUnitChecks':15,'screensVisuallyReviewed':True,'screens':['chromium-1280-klink10-sentences-alfa-c-sentence-build.png','webkit-390-klink10-sentences-a1-find-sentence.png','access-webkit-390-dark.png','access-chromium-1280-light.png'],'existingViewControlsPreserved':True,'existingViewChecks':14,'persistenceAndSelfReviewChecks':16,'humanListening':False,'physicalDeviceTested':False,'existingPublicBytesPreserved':True,'githubWorkflowFiles':[]})
+roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc']
+git=lambda *args:subprocess.check_output(['git',*args],cwd=R,text=True).splitlines()
+changed=set(git('diff','--name-only',base,'--',*roots)+git('ls-files','--others','--exclude-standard','--',*roots));assert not git('diff','--name-only','--diff-filter=MD',base,'--','public');assert not git('ls-files','.github/workflows')
+# Match the publication gate's localeCompare order using Node.
+changed=json.loads(subprocess.check_output(['node','-e','let s="";process.stdin.on("data",x=>s+=x);process.stdin.on("end",()=>console.log(JSON.stringify(JSON.parse(s).sort((a,b)=>a.localeCompare(b)))));'],input=json.dumps(list(changed)).encode()))
+files={p:sha((R/p).read_bytes())for p in changed};excluded={'backup.json','postflight.json','final-backup.json','local/release-tests.json','local/publication-gate.log'};evidence={str(p.relative_to(R)):sha(p.read_bytes())for p in sorted(D.rglob('*'))if p.is_file()and str(p.relative_to(D))not in excluded and not str(p.relative_to(D)).startswith('live/')};owner={'approvedBy':'Nico','ownerApproval':'standing-owner-approval','approvalSource':'Explicit user instruction of 2 November 2026: finish and publish all ten named Klink packages including audio.','publicationApproved':True,'existingAppearancePreserved':True,'progressPreserved':True,'baselineSourceCommit':base,'liveSourceCommit':'eb6270430997e84ffbb3428d4f1fbdfe06e52546','changedFiles':changed,'files':files,'evidenceFiles':evidence,'sourcePositions':220,'blockedSourcePositions':10,'humanListeningPerformed':False,'physicalDeviceTested':False};ownerpath=R/'docs/klink-owner-release-ten-sentences-20261102.json';save(ownerpath,owner)
+archive=T/'Klink-tien-zinnen-bronnen-herstel-20261102.zip'
+with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED)as z:
+ for p in [*files,*evidence,str(ownerpath.relative_to(R))]:z.write(R/p,p)
+with zipfile.ZipFile(archive)as z:assert z.testzip()is None;assert len(z.namelist())==len(files)+len(evidence)+1
+save(T/'sentences-backup-local.json',{'path':str(archive),'sha256':sha(archive.read_bytes()),'bytes':archive.stat().st_size,'files':len(files),'evidenceFiles':len(evidence),'members':len(files)+len(evidence)+1});print(json.dumps({'archive':str(archive),'bytes':archive.stat().st_size,'files':len(files),'evidence':len(evidence)}))

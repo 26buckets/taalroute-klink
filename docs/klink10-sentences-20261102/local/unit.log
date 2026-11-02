@@ -1,0 +1,24 @@
+✔ Packed lesson clips retain exact bytes, playback completion, cancellation and object URL cleanup (13.676791ms)
+Sentence copying/dictation distinctions and first-own-response validation passed.
+✔ scripts/test-sentence-answer.mjs (54.235459ms)
+✔ Every listening and reading sentence round has a short title from its own source content (11.613916ms)
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.291792ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.1475ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.303125ms)
+✔ Every attached precise mark task refers literally to its existing source and question (105.474875ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (82.153792ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (29.94575ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.286625ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.237458ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (4574.8135ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (1.980667ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (310.499125ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.613125ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5373.284708
