@@ -1,3 +1,15 @@
+## Actuele publicatie — tien A2-tekstbewijsopdrachten — 2 november 2026
+
+Livebron `d52a891e9129b6664ec5ed72759a5f402f736ca7`, schone canonieke main; Worker `cf99418f-c5ac-44bb-a643-15caf07b5da4`. Normale `npm run deploy` geslaagd, opvolger van `e3ce253798375049f0dbc7478b5133963205f0a6`.
+
+Tien brongebonden A2-opdrachten onder Teksten → Zoek het antwoord. Bestaande markeerspeler, ongewijzigde leesteksten, concrete vragen, twintig geselecteerde ElevenLabs-opnamen met afzonderlijke instructie- en doelstemmen. Alle oude assets, vormgeving en voortgang behouden. Geen tien nieuwe unieke scenario’s geclaimd.
+
+Lokaal en live: 40 antwoord-/opslag-/hervatstromen, 40 native audiodecodes en vier echte afspeelstromen; 21 livebestanden volledig bytegelijk teruggelezen, inclusief Taalroute-audiometadata. Types, gerichte lint, kerntests, woorddekking en zes negatieve vrijgaveproeven geslaagd. Bestaande volledige repository-lint heeft afzonderlijke fouten in oude schrijfscripts; geen volledige groene lint geclaimd. De eerste build stopte op indexvolgorde; bestaande bouwer heeft uitsluitend de volgorde genormaliseerd. Geen extra audio of Actions hiervoor.
+
+Bronnen, originelen en herstel volledig teruggelezen uit Drive `1iuSpf1sbJN_YQ8p7qVxQpYUNkX7YE64I`. Livebewijs: `docs/klink10-text-a2-evidence-20261102/postflight.json`. Menselijke luister-/klemtoonreview, onafhankelijke NT2-review, fysieke apparaten en klasproef niet uitgevoerd. Spreken-uitspraakhold en beeldproductiestop blijven gelden.
+
+---
+
 ## Actuele publicatie — Klink tien: tien A1-tekstbewijsopdrachten — 2 november 2026
 
 Livebron `e3ce253798375049f0dbc7478b5133963205f0a6`, schone canonieke main; Worker `f8db2549-84df-4c3b-8c90-90cec2c775d2`. Gewone `npm run deploy`, volledige publicatiepoort en bouw geslaagd; opvolger van `9518708b3ddd764ec830c151965bae3503977868`.
