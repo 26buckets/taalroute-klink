@@ -1,0 +1,316 @@
+{
+  "files": [
+    {
+      "path": "prepare_hs100.mjs",
+      "bytes": 5596,
+      "sha256": "5669fe82cad5333f7d248a506b8025a794806a893a2674d74e747c73f4a2ad69"
+    },
+    {
+      "path": "isolate_context_words.py",
+      "bytes": 3252,
+      "sha256": "6970d86f400fedc9a2e32d24edc3767bb87abf92d9a0dc1b05abdb62d1654ee7"
+    },
+    {
+      "path": "produce_missing_words.py",
+      "bytes": 5308,
+      "sha256": "b8dab2ef1a2a16eecfa7bbe04aba4cc8bcd0fa8eddad7e58889a1fbad658c199"
+    },
+    {
+      "path": "transcribe_context.py",
+      "bytes": 786,
+      "sha256": "1c5647589435fbf81350e2acabef31c5b7e6afb73cb90a45a355a56e44cabecd"
+    },
+    {
+      "path": "audio-selection-preflight.json",
+      "bytes": 12871,
+      "sha256": "be906688dbb60c2e16fec085e757cfa1e825d7017abdc2f43fffb392fff51bfe"
+    },
+    {
+      "path": "check_audio_blind.py",
+      "bytes": 1165,
+      "sha256": "fc9792cefdcbb7832bf7613659d019ae29e97b3d3b2dc6538310b9d4b5b55b6d"
+    },
+    {
+      "path": "audio-context-isolated/KSW-AC-HS-078.wav",
+      "bytes": 79202,
+      "sha256": "d2a397efcb95b520d39a5f75ce63ced2212d30a964e3a391b696a7a93312b1dc"
+    },
+    {
+      "path": "audio-context-isolated/KSW-AC-HS-084.wav",
+      "bytes": 50644,
+      "sha256": "1b7014c55125687e7a8784607d3646ca73437c42aaf8494ce841f98981668d65"
+    },
+    {
+      "path": "audio-context-isolated/KSW-AC-HS-078-original.wav",
+      "bytes": 79034,
+      "sha256": "7ee2b88290e63d3c766bb3e081cf3afd6fa69fc5c891236c9948eff377068cb2"
+    },
+    {
+      "path": "audio-context-isolated/blind-asr.json",
+      "bytes": 414,
+      "sha256": "ad26b5cfa9876876b2c8d97ebd58a15a6b3c8cf746a2ed211058cd6e95d8b092"
+    },
+    {
+      "path": "audio-context-isolated/KSW-AC-HS-084-original.wav",
+      "bytes": 50482,
+      "sha256": "ef348522e9e533e211ebbfe0cc1b6a8ac2a88bd649cb5df515060a5e9859a15c"
+    },
+    {
+      "path": "audio-context-isolated/file-proof.json",
+      "bytes": 2900,
+      "sha256": "5549608478e5aadeaa28370a7cd65c0879b37b6ec8aaf4732e7fbd9420814394"
+    },
+    {
+      "path": "audio-context-peter/KSW-AC-HS-078.wav",
+      "bytes": 200944,
+      "sha256": "590710c91cbd195e4a0ee66e9bfab161d26175043d86125fc179acc1bb17c790"
+    },
+    {
+      "path": "audio-context-peter/KSW-AC-HS-084.wav",
+      "bytes": 147686,
+      "sha256": "46bebfe35bbb1eb5e6a7a424edd0a7cbfa14eed20149fdf35de8770fe16aca9b"
+    },
+    {
+      "path": "audio-context-peter/KSW-AC-HS-078-request.json",
+      "bytes": 1060,
+      "sha256": "15e8d942288ad5cc415b21f27df77f19a081c515a4a2922ad13ce4f5f1ff540b"
+    },
+    {
+      "path": "audio-context-peter/KSW-AC-HS-078-original.wav",
+      "bytes": 200748,
+      "sha256": "4948e9769c8b1040e51a589e5f31d77f77a0c4c9563f7c4406a6a72f5b661b42"
+    },
+    {
+      "path": "audio-context-peter/production-plan.json",
+      "bytes": 1302,
+      "sha256": "f322b06a906378dc6b8b5e4f2b7d93fcbdcc034d3b66ad7f8954c1233f35ad9e"
+    },
+    {
+      "path": "audio-context-peter/blind-context-timestamps.json",
+      "bytes": 3544,
+      "sha256": "b33dff6597d4479bfa30beedcfa482299c94ff1a1fabca778518603d5c33d32d"
+    },
+    {
+      "path": "audio-context-peter/silence-analysis.json",
+      "bytes": 821,
+      "sha256": "d5ad0e112098579465a098e45cf66e42c3fecc4561b0a32115f8d5f3c12f4c2a"
+    },
+    {
+      "path": "audio-context-peter/KSW-AC-HS-084-original.wav",
+      "bytes": 147500,
+      "sha256": "e26fbce916cac275e8d46607747c7dbbe40f65acdc067efd6487fb06e3a07aaa"
+    },
+    {
+      "path": "audio-context-peter/KSW-AC-HS-084-request.json",
+      "bytes": 1042,
+      "sha256": "65102f64f80510673cd414f50788fb156ccc85b1c4e13062967b2faa049d9deb"
+    },
+    {
+      "path": "audio-context-peter/file-proof.json",
+      "bytes": 2845,
+      "sha256": "bc6964e31b7bca9cf63cfa5df3294bb730b90f691c106bd29c57822710e6b810"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-078.wav",
+      "bytes": 69846,
+      "sha256": "569e46e52250b32b2427e9e90ffd63db039fe1b036acf80d6431406abbdbf527"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-084.wav",
+      "bytes": 49360,
+      "sha256": "30234e8184dd26d5e4f426a2aed6cb9e4e10275f8728d045376cf1da8cb3214a"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-078-request.json",
+      "bytes": 1002,
+      "sha256": "b4fba665e9e6c5a707418eca77e5fd6201233740472e91be8d5c93d2ba7f9201"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-078-original.wav",
+      "bytes": 69676,
+      "sha256": "451ca913a97339dd1d108f66466f45e109c87473177e0d8882cbd69c55dce21f"
+    },
+    {
+      "path": "audio-repair-roos/production-plan.json",
+      "bytes": 1407,
+      "sha256": "97793102a08a49410c67083a72ec38a25a475dd15ddca378f8b232658aa802c0"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-061-original.wav",
+      "bytes": 41004,
+      "sha256": "1a078e222c793ee5b5f41b6f7128decb5e3b66df4012312cf9b599ea73ef720a"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-061-request.json",
+      "bytes": 990,
+      "sha256": "70c94abf331d58b6d5ae134b842689035ae3ead8293cc06ef151048cc88cfb87"
+    },
+    {
+      "path": "audio-repair-roos/blind-asr.json",
+      "bytes": 543,
+      "sha256": "5186a82f1c7c08bcbbf957d619c63a276067aa63d7ae586cbd0e820462719adb"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-084-original.wav",
+      "bytes": 49196,
+      "sha256": "94cf5cf163367f56b941a9d9325a6caf95173f0bbd4097e19716ace38a8567d5"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-084-request.json",
+      "bytes": 989,
+      "sha256": "52cffe3595de8742f9d0ce1e2fe0edff90ff647f1418826189608d4eb4edccf8"
+    },
+    {
+      "path": "audio-repair-roos/KSW-AC-HS-061.wav",
+      "bytes": 41168,
+      "sha256": "7d0821299fd7ed93f4712f5176f6683a9f0ce1b0a57202886da7e4a1b2bb8f8e"
+    },
+    {
+      "path": "audio-repair-roos/file-proof.json",
+      "bytes": 3823,
+      "sha256": "043213276d064313bc862ebf85778bd03c1cbba4ab649c0a4b14fd987131987b"
+    },
+    {
+      "path": "audio/KSW-AC-HS-078.wav",
+      "bytes": 69844,
+      "sha256": "a79891df0502d605266b30a4df79c256c626d3737dc5849c40ed704b2341d514"
+    },
+    {
+      "path": "audio/KSW-AC-HS-091.wav",
+      "bytes": 94418,
+      "sha256": "354115685b0b708ead3754781a933a270ca63a19bb0fc8861a5823470d171249"
+    },
+    {
+      "path": "audio/KSW-AC-HS-090.wav",
+      "bytes": 69840,
+      "sha256": "883f425fa1010461812a82c5b20c9c6bfd56030fd14942a69f076b6c41b06bfc"
+    },
+    {
+      "path": "audio/KSW-AC-HS-084.wav",
+      "bytes": 69838,
+      "sha256": "b5ab5b9f822deb1c1b7bee3f304ea7606feac65c81950276857a8a9d3fcefedc"
+    },
+    {
+      "path": "audio/KSW-AC-HS-095-original.wav",
+      "bytes": 73772,
+      "sha256": "0a677d6ee566e884901e9ad20ec8ae87fa8478307dde0777057e56e6b8582f16"
+    },
+    {
+      "path": "audio/KSW-AC-HS-078-request.json",
+      "bytes": 975,
+      "sha256": "1643b2829e579ed66e1681042ad1974754cd7b7a7914b1305416b580e3d8a99c"
+    },
+    {
+      "path": "audio/KSW-AC-HS-095.wav",
+      "bytes": 73942,
+      "sha256": "2ac51221cacd4c0b1029bc038d732afe037b4224e04ecef9ba6d47cc62234535"
+    },
+    {
+      "path": "audio/KSW-AC-HS-078-original.wav",
+      "bytes": 69676,
+      "sha256": "07b1f347f3eddad3470d5b969656227673bed9241425c4fceb5bf0cb444f0510"
+    },
+    {
+      "path": "audio/KSW-AC-HS-095-request.json",
+      "bytes": 978,
+      "sha256": "78c808724d4bdc148ac3eded895b6407e89aa6b9544950efc459feedc98508f0"
+    },
+    {
+      "path": "audio/KSW-AC-HS-072-original.wav",
+      "bytes": 73772,
+      "sha256": "3f539ef811cb750e8587906a34e637b63408f60a7df5be969c50ce4556ed60c7"
+    },
+    {
+      "path": "audio/production-plan.json",
+      "bytes": 1230,
+      "sha256": "2c8721e805854773e955c2b50ea2cd02351048837a70b1243a3fe9512973b569"
+    },
+    {
+      "path": "audio/KSW-AC-HS-072-request.json",
+      "bytes": 971,
+      "sha256": "48206d7331cde0e7e008842a5de96d1b5a5cec6a6a8c53b985d70e3fd979febf"
+    },
+    {
+      "path": "audio/technical-review.json",
+      "bytes": 478,
+      "sha256": "4876073885e3c9a08445ea7e7573d9f4354525db6d930af1229212fa7f8a6052"
+    },
+    {
+      "path": "audio/KSW-AC-HS-061-original.wav",
+      "bytes": 53292,
+      "sha256": "21bfc32572502c1af44ee5eccd9a5c29d590e02f916dfdd5c70436e641c943c6"
+    },
+    {
+      "path": "audio/KSW-AC-HS-061-request.json",
+      "bytes": 962,
+      "sha256": "067c230e7a3537f374f434b3cdcb785abf807ffc12d29f203110e3326d48171e"
+    },
+    {
+      "path": "audio/KSW-AC-HS-077-original.wav",
+      "bytes": 98348,
+      "sha256": "3a52201e02a537e85dd1347c5f9767a6839da2784ca37fca5459686cd0ca7a4f"
+    },
+    {
+      "path": "audio/KSW-AC-HS-077-request.json",
+      "bytes": 978,
+      "sha256": "695cab5a2644ba68643505e06942ff8b7cedf4e4acebde8cf08e3426436069b3"
+    },
+    {
+      "path": "audio/KSW-AC-HS-090-original.wav",
+      "bytes": 69676,
+      "sha256": "409e927f5c28b43688d5ef15640e50b9eda837c360888fb8356b8f574bd4c9f0"
+    },
+    {
+      "path": "audio/KSW-AC-HS-090-request.json",
+      "bytes": 967,
+      "sha256": "9577f646e85127c855e6e89ef1edd681dec9a80a8ff7ee95c9150f968b7a1a70"
+    },
+    {
+      "path": "audio/blind-asr.json",
+      "bytes": 1211,
+      "sha256": "36ee3ead57fe0a80aae6a879f98f90b79f0b84a621c5fc7f90e3e1a4fb054933"
+    },
+    {
+      "path": "audio/KSW-AC-HS-072.wav",
+      "bytes": 73938,
+      "sha256": "e0e2d10cbe6e8a42324df5f4148c7fba46b82bad1fb3ba9fdc373902005b6888"
+    },
+    {
+      "path": "audio/KSW-AC-HS-091-request.json",
+      "bytes": 969,
+      "sha256": "ea1f81a50f1aa9bc42d7b7ca64c6bda00464874a54304d1d319f6fa233a66f26"
+    },
+    {
+      "path": "audio/KSW-AC-HS-084-original.wav",
+      "bytes": 69676,
+      "sha256": "4bcdaa248d84233a7e25c2a82ecd2c687cced8fa9c5bcb6783d9ef2509ccbe89"
+    },
+    {
+      "path": "audio/KSW-AC-HS-091-original.wav",
+      "bytes": 94252,
+      "sha256": "d3c7b6824a256f13933ad9739926d75baeff5963ca995c69860a92dbd1966f57"
+    },
+    {
+      "path": "audio/KSW-AC-HS-077.wav",
+      "bytes": 98518,
+      "sha256": "283cc763b4c51f38e01c91f23d03c4dff8f82a31eac9348964af01516050efd2"
+    },
+    {
+      "path": "audio/KSW-AC-HS-084-request.json",
+      "bytes": 963,
+      "sha256": "8d60cbac422ffbde583ef682e74082ecfb380b17878e885004a832bb146a23e0"
+    },
+    {
+      "path": "audio/KSW-AC-HS-061.wav",
+      "bytes": 53454,
+      "sha256": "d881718e8a046e845e0ca3ea37c72a9915e172590f6a79377c73e315a7a4f0c4"
+    },
+    {
+      "path": "audio/file-proof.json",
+      "bytes": 9150,
+      "sha256": "a2f8483241006c7fadde4a14f7e6850617f8bee9052f0eb87e9f7875c0ce83e0"
+    }
+  ],
+  "noApiKeysIncluded": true,
+  "originalsAndRejectedCandidatesRetained": true
+}

@@ -1,0 +1,37 @@
+{
+  "role": "target-word",
+  "voiceId": "60CwgZt94Yf7yYIXMDDe",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "instructionSource": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+  "languageCode": "nl",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "format": "pcm_44100",
+  "maxIncludedCredits": 100,
+  "extraPaidUsageAuthorized": false,
+  "attemptsPerWord": 1,
+  "targets": [
+    {
+      "sourceId": "KSW-AC-HS-078",
+      "word": "schutting",
+      "script": "De schutting is van hout. Schutting."
+    },
+    {
+      "sourceId": "KSW-AC-HS-084",
+      "word": "mug",
+      "script": "Een mug is een insect. Mug."
+    }
+  ],
+  "existingGoodRecordingsNotRegenerated": 92,
+  "createdAt": "2026-11-02T04:15:07.760123+00:00",
+  "finalOutput": "Only the final isolated word, extracted losslessly from a Dutch carrier utterance; carrier sentences never enter the learner package.",
+  "previousCandidateDisposition": "Both bare-word candidates for schutting and mug failed both independent recognizers; keep originals privately. Mop Roos matches Whisper and remains a candidate.",
+  "previousReportedCredits": 33.0,
+  "aggregateCreditCap": 100
+}

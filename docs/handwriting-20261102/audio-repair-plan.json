@@ -1,0 +1,53 @@
+{
+  "role": "target-word",
+  "voiceId": "7qdUFMklKPaaAVMsBTBt",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "instructionSource": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+  "languageCode": "nl",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "format": "pcm_44100",
+  "maxIncludedCredits": 100,
+  "extraPaidUsageAuthorized": false,
+  "attemptsPerWord": 1,
+  "targets": [
+    {
+      "sourceId": "KSW-AC-HS-061",
+      "script": "mop."
+    },
+    {
+      "sourceId": "KSW-AC-HS-078",
+      "script": "schutting."
+    },
+    {
+      "sourceId": "KSW-AC-HS-084",
+      "script": "mug."
+    }
+  ],
+  "existingGoodRecordingsNotRegenerated": 97,
+  "createdAt": "2026-11-02T04:09:42.422359+00:00",
+  "previousCandidateDisposition": {
+    "humanListeningPerformed": false,
+    "whisper": "audio/blind-asr.json",
+    "dutchCtc": "/tmp/klink-hs100-blind-ctc.log",
+    "rejectedSourceIds": [
+      "KSW-AC-HS-061",
+      "KSW-AC-HS-078",
+      "KSW-AC-HS-084"
+    ],
+    "reason": "Both independent blind recognizers disagree with the intended word; do not publish these candidates.",
+    "acceptedTechnicalEvidenceOnly": [
+      "KSW-AC-HS-072",
+      "KSW-AC-HS-077",
+      "KSW-AC-HS-090",
+      "KSW-AC-HS-091",
+      "KSW-AC-HS-095"
+    ]
+  }
+}

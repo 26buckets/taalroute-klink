@@ -1,0 +1,27 @@
+{
+  "changes": [
+    {
+      "sourceId": "KSW-AC-HS-071",
+      "field": "feedback.whyWrong",
+      "before": "De t ontbreekt.",
+      "after": "Markt eindigt op kt.",
+      "reason": "The original missing-letter feedback belongs only to the specific wrong example; handwriting is not automatically recognized."
+    },
+    {
+      "sourceId": "KSW-AC-HS-084",
+      "field": "feedback.spellingHint",
+      "before": "Mug eindigt op g. Die klinkt vaak als k.",
+      "after": "Mug eindigt op g.",
+      "reason": "Dutch final g is not a k; remove the false pronunciation explanation. Source originals are retained."
+    },
+    {
+      "sourceId": "KSW-AC-HS-086",
+      "field": "feedback.spellingHint",
+      "before": "Berg eindigt op g, ook als je een k-klank hoort.",
+      "after": "Berg eindigt op g.",
+      "reason": "Dutch final g is not a k; remove the false pronunciation explanation. Source originals are retained."
+    }
+  ],
+  "conditionalCorrectAndIncorrectFeedback": "Original source messages retained privately. The app records participation and shows model/self-review; it does not assert recognized handwriting correctness.",
+  "originalFullSources": "docs/handwriting-20261102/source-records.jsonl"
+}

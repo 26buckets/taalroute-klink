@@ -7,7 +7,6 @@ import {
   useMemo,
   useRef,
   useState,
-  type PointerEvent as ReactPointerEvent,
 } from "react";
 import {
   ArrowLeft,
@@ -62,10 +61,9 @@ import {
   TeacherRouteStage,
 } from "./teacher-route-stage";
 import "./teacher-classroom.css";
+import { WritingBoard, type Stroke } from "./writing-board";
 
 type ClipStatus = "loading" | "ready" | "missing";
-type Point = [number, number];
-type Stroke = Point[];
 
 function useClassroomAudio(lessonId = "mat") {
   const lesson = getClassroomLesson(lessonId);
@@ -201,101 +199,6 @@ function SoundButtons({
   );
 }
 
-function WritingBoard({
-  strokes,
-  onChange,
-  text,
-  onText,
-}: {
-  strokes: Stroke[];
-  onChange: (strokes: Stroke[]) => void;
-  text: string;
-  onText: (text: string) => void;
-}) {
-  const drawing = useRef(false);
-  function point(event: ReactPointerEvent<SVGSVGElement>): Point {
-    const rect = event.currentTarget.getBoundingClientRect();
-    return [
-      Math.max(
-        0,
-        Math.min(1000, ((event.clientX - rect.left) / rect.width) * 1000),
-      ),
-      Math.max(
-        0,
-        Math.min(450, ((event.clientY - rect.top) / rect.height) * 450),
-      ),
-    ];
-  }
-  return (
-    <>
-      {/* oxlint-disable-next-line jsx-a11y/prefer-tag-over-role -- Drawing surface is an SVG, with a keyboard text alternative below. */}
-      <svg
-        className="kpd-writing"
-        viewBox="0 0 1000 450"
-        aria-label="Schrijfvlak voor vinger of pen; gebruik het tekstveld als alternatief"
-        onPointerDown={(event) => {
-          if (event.button !== 0) return;
-          drawing.current = true;
-          event.currentTarget.setPointerCapture(event.pointerId);
-          onChange([...strokes, [point(event)]]);
-        }}
-        onPointerMove={(event) => {
-          if (!drawing.current) return;
-          onChange([
-            ...strokes.slice(0, -1),
-            [...(strokes.at(-1) ?? []), point(event)],
-          ]);
-        }}
-        onPointerUp={() => {
-          drawing.current = false;
-        }}
-        onPointerCancel={() => {
-          drawing.current = false;
-        }}
-      >
-        {strokes.map((stroke, i) => (
-          <polyline
-            key={i}
-            points={stroke.map((p) => p.join(",")).join(" ")}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        ))}
-      </svg>
-      <div className="kpd-actions">
-        <button
-          className="secondary-button"
-          onClick={() => onChange(strokes.slice(0, -1))}
-          disabled={!strokes.length}
-        >
-          <Undo2 />
-          Laatste lijn weg
-        </button>
-        <button
-          className="secondary-button"
-          onClick={() => {
-            onChange([]);
-            onText("");
-          }}
-        >
-          <RotateCcw />
-          Wis bord
-        </button>
-      </div>
-      <label className="kpd-type">
-        Of typ op het bord
-        <input
-          value={text}
-          onChange={(e) => onText(e.target.value)}
-          maxLength={80}
-        />
-      </label>
-    </>
-  );
-}
 
 function MirrorBoard() {
   const video = useRef<HTMLVideoElement>(null);

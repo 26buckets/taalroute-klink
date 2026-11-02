@@ -1,0 +1,565 @@
+{
+  "groups": [
+    {
+      "directory": "audio",
+      "plan": {
+        "role": "target-word",
+        "voiceId": "0qLmDzgqulxcvv0yf3kg",
+        "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+        "instructionSource": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+        "languageCode": "nl",
+        "model": "eleven_multilingual_v2",
+        "settings": {
+          "stability": 0.5,
+          "similarity_boost": 0.75,
+          "style": 0,
+          "use_speaker_boost": true,
+          "speed": 1.0
+        },
+        "format": "pcm_44100",
+        "maxIncludedCredits": 100,
+        "extraPaidUsageAuthorized": false,
+        "attemptsPerWord": 1,
+        "targets": [
+          {
+            "sourceId": "KSW-AC-HS-061",
+            "script": "mop"
+          },
+          {
+            "sourceId": "KSW-AC-HS-072",
+            "script": "spijker"
+          },
+          {
+            "sourceId": "KSW-AC-HS-077",
+            "script": "sleutelbos"
+          },
+          {
+            "sourceId": "KSW-AC-HS-078",
+            "script": "schutting"
+          },
+          {
+            "sourceId": "KSW-AC-HS-084",
+            "script": "mug"
+          },
+          {
+            "sourceId": "KSW-AC-HS-090",
+            "script": "kruik"
+          },
+          {
+            "sourceId": "KSW-AC-HS-091",
+            "script": "schild"
+          },
+          {
+            "sourceId": "KSW-AC-HS-095",
+            "script": "pannenkoek"
+          }
+        ],
+        "existingGoodRecordingsNotRegenerated": 92,
+        "createdAt": "2026-11-02T04:00:16.456269+00:00"
+      },
+      "proof": {
+        "planSha256": "2c8721e805854773e955c2b50ea2cd02351048837a70b1243a3fe9512973b569",
+        "voiceId": "0qLmDzgqulxcvv0yf3kg",
+        "voiceName": "Remko - Clear Dutch Narrator",
+        "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+        "characterCountBefore": 337662,
+        "characterLimit": 685381,
+        "paidExtension": 0,
+        "files": [
+          {
+            "sourceId": "KSW-AC-HS-061",
+            "script": "mop",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:23.371062+00:00",
+            "characters": 3,
+            "requestId": "XU0mV97ObNvTPj6Fqw0R",
+            "characterCost": "1",
+            "audioDataIdentical": true,
+            "bytes": 53454,
+            "sha256": "d881718e8a046e845e0ca3ea37c72a9915e172590f6a79377c73e315a7a4f0c4",
+            "pcmSha256": "eb73986a10ac5171105b6113776cd47bf2b6bb7a6e65c52b43367e52b6120c52",
+            "seconds": 0.603718820861678,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "mop",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-061-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-061.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-072",
+            "script": "spijker",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:24.332450+00:00",
+            "characters": 7,
+            "requestId": "kfFVfOreurzGBP64CIcz",
+            "characterCost": "3",
+            "audioDataIdentical": true,
+            "bytes": 73938,
+            "sha256": "e0e2d10cbe6e8a42324df5f4148c7fba46b82bad1fb3ba9fdc373902005b6888",
+            "pcmSha256": "bc864e88681f6afee1e4c79aa6e281708eb52868bba088329ca3abe6e141a1b0",
+            "seconds": 0.8359183673469388,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "spijker",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-072-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-072.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-077",
+            "script": "sleutelbos",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:24.753831+00:00",
+            "characters": 10,
+            "requestId": "V2YDSQgkMMfyTK0xHOq6",
+            "characterCost": "5",
+            "audioDataIdentical": true,
+            "bytes": 98518,
+            "sha256": "283cc763b4c51f38e01c91f23d03c4dff8f82a31eac9348964af01516050efd2",
+            "pcmSha256": "177dee3c938d7a6f9002de40fa663a5a63d7285df7e6958fee2a6b50757ca214",
+            "seconds": 1.1145578231292517,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "sleutelbos",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-077-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-077.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-078",
+            "script": "schutting",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:25.198131+00:00",
+            "characters": 9,
+            "requestId": "1JYo96gRnMKhJWwLSLCJ",
+            "characterCost": "4",
+            "audioDataIdentical": true,
+            "bytes": 69844,
+            "sha256": "a79891df0502d605266b30a4df79c256c626d3737dc5849c40ed704b2341d514",
+            "pcmSha256": "558883d29476a5bfedba963806831aceddda216e265b3207263c0875e395574c",
+            "seconds": 0.7894784580498866,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "schutting",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-078-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-078.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-084",
+            "script": "mug",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:25.613726+00:00",
+            "characters": 3,
+            "requestId": "zoR2eSM4jJoPuwCmpsEA",
+            "characterCost": "1",
+            "audioDataIdentical": true,
+            "bytes": 69838,
+            "sha256": "b5ab5b9f822deb1c1b7bee3f304ea7606feac65c81950276857a8a9d3fcefedc",
+            "pcmSha256": "8e4e0192f29fdb8d109a388600c2b203361be10447bdaa0ee1fd67d8b256ad69",
+            "seconds": 0.7894784580498866,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "mug",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-084-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-084.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-090",
+            "script": "kruik",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:26.005492+00:00",
+            "characters": 5,
+            "requestId": "gUJFMEsDandt4MRhdy1y",
+            "characterCost": "2",
+            "audioDataIdentical": true,
+            "bytes": 69840,
+            "sha256": "883f425fa1010461812a82c5b20c9c6bfd56030fd14942a69f076b6c41b06bfc",
+            "pcmSha256": "49de1f55b8219d90bcdeb6d046d0485a26d830768c21bca16aecdb385de8120a",
+            "seconds": 0.7894784580498866,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "kruik",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-090-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-090.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-091",
+            "script": "schild",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:26.411027+00:00",
+            "characters": 6,
+            "requestId": "SRA2fWxm9B4qqkxgC9ZE",
+            "characterCost": "3",
+            "audioDataIdentical": true,
+            "bytes": 94418,
+            "sha256": "354115685b0b708ead3754781a933a270ca63a19bb0fc8861a5823470d171249",
+            "pcmSha256": "61f4c898fb5a1d3503bfa7c42035079658a1a75775366fa490596d3fcb1eccb3",
+            "seconds": 1.0681179138321995,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "schild",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-091-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-091.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-095",
+            "script": "pannenkoek",
+            "voiceId": "0qLmDzgqulxcvv0yf3kg",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:01:26.855127+00:00",
+            "characters": 10,
+            "requestId": "IVmtmDnKK3wy5Fm44O24",
+            "characterCost": "5",
+            "audioDataIdentical": true,
+            "bytes": 73942,
+            "sha256": "2ac51221cacd4c0b1029bc038d732afe037b4224e04ecef9ba6d47cc62234535",
+            "pcmSha256": "65d5572d996bbe77404362bd1432256c099b53484cf01d91e4967382bafa54c3",
+            "seconds": 0.8359183673469388,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "pannenkoek",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-095-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio/KSW-AC-HS-095.wav",
+            "humanListeningPerformed": false
+          }
+        ],
+        "characterCountAfter": 337662,
+        "sharedAccountDelta": 0,
+        "deltaNotAttributableDuringOtherProduction": true,
+        "totalReportedCost": 24.0,
+        "completedAt": "2026-11-02T04:01:28.428175+00:00"
+      }
+    },
+    {
+      "directory": "audio-repair-roos",
+      "plan": {
+        "role": "target-word",
+        "voiceId": "7qdUFMklKPaaAVMsBTBt",
+        "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+        "instructionSource": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+        "languageCode": "nl",
+        "model": "eleven_multilingual_v2",
+        "settings": {
+          "stability": 0.5,
+          "similarity_boost": 0.75,
+          "style": 0,
+          "use_speaker_boost": true,
+          "speed": 1.0
+        },
+        "format": "pcm_44100",
+        "maxIncludedCredits": 100,
+        "extraPaidUsageAuthorized": false,
+        "attemptsPerWord": 1,
+        "targets": [
+          {
+            "sourceId": "KSW-AC-HS-061",
+            "script": "mop."
+          },
+          {
+            "sourceId": "KSW-AC-HS-078",
+            "script": "schutting."
+          },
+          {
+            "sourceId": "KSW-AC-HS-084",
+            "script": "mug."
+          }
+        ],
+        "existingGoodRecordingsNotRegenerated": 97,
+        "createdAt": "2026-11-02T04:09:42.422359+00:00",
+        "previousCandidateDisposition": {
+          "humanListeningPerformed": false,
+          "whisper": "audio/blind-asr.json",
+          "dutchCtc": "/tmp/klink-hs100-blind-ctc.log",
+          "rejectedSourceIds": [
+            "KSW-AC-HS-061",
+            "KSW-AC-HS-078",
+            "KSW-AC-HS-084"
+          ],
+          "reason": "Both independent blind recognizers disagree with the intended word; do not publish these candidates.",
+          "acceptedTechnicalEvidenceOnly": [
+            "KSW-AC-HS-072",
+            "KSW-AC-HS-077",
+            "KSW-AC-HS-090",
+            "KSW-AC-HS-091",
+            "KSW-AC-HS-095"
+          ]
+        }
+      },
+      "proof": {
+        "planSha256": "97793102a08a49410c67083a72ec38a25a475dd15ddca378f8b232658aa802c0",
+        "voiceId": "7qdUFMklKPaaAVMsBTBt",
+        "voiceName": "Roos dutch professional voice",
+        "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+        "characterCountBefore": 337686,
+        "characterLimit": 685381,
+        "paidExtension": 0,
+        "files": [
+          {
+            "sourceId": "KSW-AC-HS-061",
+            "script": "mop.",
+            "voiceId": "7qdUFMklKPaaAVMsBTBt",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:09:44.312711+00:00",
+            "characters": 4,
+            "requestId": "X00Rz9L0dtq0vv71Y5mt",
+            "characterCost": "2",
+            "audioDataIdentical": true,
+            "bytes": 41168,
+            "sha256": "7d0821299fd7ed93f4712f5176f6683a9f0ce1b0a57202886da7e4a1b2bb8f8e",
+            "pcmSha256": "e642bef4cf5db6bf21416c22a62e88d2fa436924952a54d2fa3a3703d94a0a2c",
+            "seconds": 0.46439909297052157,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "mop.",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio-repair-roos/KSW-AC-HS-061-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio-repair-roos/KSW-AC-HS-061.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-078",
+            "script": "schutting.",
+            "voiceId": "7qdUFMklKPaaAVMsBTBt",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:09:44.962403+00:00",
+            "characters": 10,
+            "requestId": "Hg07ZWjts92egPFmPUhW",
+            "characterCost": "5",
+            "audioDataIdentical": true,
+            "bytes": 69846,
+            "sha256": "569e46e52250b32b2427e9e90ffd63db039fe1b036acf80d6431406abbdbf527",
+            "pcmSha256": "a8b2d93cda51d9f059e96f9647c8042ef2156aa1311501572b1ab79d416d7551",
+            "seconds": 0.7894784580498866,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "schutting.",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio-repair-roos/KSW-AC-HS-078-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio-repair-roos/KSW-AC-HS-078.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-084",
+            "script": "mug.",
+            "voiceId": "7qdUFMklKPaaAVMsBTBt",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:09:45.315831+00:00",
+            "characters": 4,
+            "requestId": "wDtQ1em78XZUi8InISWH",
+            "characterCost": "2",
+            "audioDataIdentical": true,
+            "bytes": 49360,
+            "sha256": "30234e8184dd26d5e4f426a2aed6cb9e4e10275f8728d045376cf1da8cb3214a",
+            "pcmSha256": "c6e9f1a72ed312aabce80f8c99a455f70dfe2ec3f1df39905db5d313a4a6ec48",
+            "seconds": 0.5572789115646258,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "mug.",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio-repair-roos/KSW-AC-HS-084-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio-repair-roos/KSW-AC-HS-084.wav",
+            "humanListeningPerformed": false
+          }
+        ],
+        "characterCountAfter": 337686,
+        "sharedAccountDelta": 0,
+        "deltaNotAttributableDuringOtherProduction": true,
+        "totalReportedCost": 9.0,
+        "completedAt": "2026-11-02T04:09:46.859418+00:00"
+      }
+    },
+    {
+      "directory": "audio-context-peter",
+      "plan": {
+        "role": "target-word",
+        "voiceId": "60CwgZt94Yf7yYIXMDDe",
+        "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+        "instructionSource": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+        "languageCode": "nl",
+        "model": "eleven_multilingual_v2",
+        "settings": {
+          "stability": 0.5,
+          "similarity_boost": 0.75,
+          "style": 0,
+          "use_speaker_boost": true,
+          "speed": 1.0
+        },
+        "format": "pcm_44100",
+        "maxIncludedCredits": 100,
+        "extraPaidUsageAuthorized": false,
+        "attemptsPerWord": 1,
+        "targets": [
+          {
+            "sourceId": "KSW-AC-HS-078",
+            "word": "schutting",
+            "script": "De schutting is van hout. Schutting."
+          },
+          {
+            "sourceId": "KSW-AC-HS-084",
+            "word": "mug",
+            "script": "Een mug is een insect. Mug."
+          }
+        ],
+        "existingGoodRecordingsNotRegenerated": 92,
+        "createdAt": "2026-11-02T04:15:07.760123+00:00",
+        "finalOutput": "Only the final isolated word, extracted losslessly from a Dutch carrier utterance; carrier sentences never enter the learner package.",
+        "previousCandidateDisposition": "Both bare-word candidates for schutting and mug failed both independent recognizers; keep originals privately. Mop Roos matches Whisper and remains a candidate.",
+        "previousReportedCredits": 33.0,
+        "aggregateCreditCap": 100
+      },
+      "proof": {
+        "planSha256": "f322b06a906378dc6b8b5e4f2b7d93fcbdcc034d3b66ad7f8954c1233f35ad9e",
+        "voiceId": "60CwgZt94Yf7yYIXMDDe",
+        "voiceName": "Peter - Natural, Professional Narrator",
+        "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+        "characterCountBefore": 337695,
+        "characterLimit": 685381,
+        "paidExtension": 0,
+        "files": [
+          {
+            "sourceId": "KSW-AC-HS-078",
+            "script": "De schutting is van hout. Schutting.",
+            "voiceId": "60CwgZt94Yf7yYIXMDDe",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:15:09.427911+00:00",
+            "characters": 36,
+            "requestId": "gDX5qYjBW4K3eJMty7Xx",
+            "characterCost": "17",
+            "audioDataIdentical": true,
+            "bytes": 200944,
+            "sha256": "590710c91cbd195e4a0ee66e9bfab161d26175043d86125fc179acc1bb17c790",
+            "pcmSha256": "1c7b838dfd947cf0dd2b6a715096c074d1d5d8bae9cf4a66d4f0eb5b1522c918",
+            "seconds": 2.2755555555555556,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "De schutting is van hout. Schutting.",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio-context-peter/KSW-AC-HS-078-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio-context-peter/KSW-AC-HS-078.wav",
+            "humanListeningPerformed": false
+          },
+          {
+            "sourceId": "KSW-AC-HS-084",
+            "script": "Een mug is een insect. Mug.",
+            "voiceId": "60CwgZt94Yf7yYIXMDDe",
+            "languageCode": "nl",
+            "status": "received-and-complete-metadata-checked",
+            "startedAt": "2026-11-02T04:15:10.257921+00:00",
+            "characters": 27,
+            "requestId": "0t1zw4B0pe0GGmuVYhNA",
+            "characterCost": "13",
+            "audioDataIdentical": true,
+            "bytes": 147686,
+            "sha256": "46bebfe35bbb1eb5e6a7a424edd0a7cbfa14eed20149fdf35de8770fe16aca9b",
+            "pcmSha256": "610c7560474cc656604e387f6e1c03102c03c97af28f53324b3f9fa24b504290",
+            "seconds": 1.6718367346938776,
+            "metadata": {
+              "artist": "Taalroute",
+              "copyright": "Taalroute",
+              "title": "Een mug is een insect. Mug.",
+              "album": "Taalroute - Klink - Hoor en schrijf",
+              "album_artist": "Taalroute",
+              "publisher": "Taalroute"
+            },
+            "original": "/tmp/klink-invul-sources/handwriting-100/audio-context-peter/KSW-AC-HS-084-original.wav",
+            "final": "/tmp/klink-invul-sources/handwriting-100/audio-context-peter/KSW-AC-HS-084.wav",
+            "humanListeningPerformed": false
+          }
+        ],
+        "characterCountAfter": 337695,
+        "sharedAccountDelta": 0,
+        "deltaNotAttributableDuringOtherProduction": true,
+        "totalReportedCost": 30.0,
+        "completedAt": "2026-11-02T04:15:11.877220+00:00"
+      }
+    }
+  ],
+  "totalRequests": 13,
+  "selectedPublicNewRecordings": 8,
+  "reportedIncludedCredits": 63.0,
+  "paidBudgetIncrease": 0,
+  "allVoicePlansDeclaredBeforeGeneration": true,
+  "originalsAndRejectedCandidatesPrivate": true,
+  "carrierSentencesNotInLearnerAudio": true,
+  "humanListeningPerformed": false
+}

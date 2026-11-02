@@ -2,23 +2,26 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyHandwritingRelease,readBeforeHandwriting} from './check-handwriting-release-20261102.mjs';
 const folder='docs/writing-copy-aa-17-20261102/';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifyWritingCopyAaRelease(read=readFileSync){
+ const successor=verifyHandwritingRelease(read),currentRead=read;
+ read=file=>readBeforeHandwriting(file,successor,currentRead);
  const json=file=>JSON.parse(read(file)),r=json('docs/klink-owner-release-writing-copy-aa-17-20261102.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.newWordModels,0);assert.equal(r.handwritingAdded,false);
  assert(r.userRequest.includes('overige Klink-invulbatches zelfstandig af')&&r.userRequest.includes('zonder opnieuw om akkoord te vragen'));
  const policy=json('docs/klink-invullen-20261101/automatic-owner-approval.json');assert(policy.automaticOwnerApproval&&policy.automaticPublicationApproval&&!policy.mayInventHumanReviewEvidence&&!policy.mayBypassPublicationGate);
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[file,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),h,file);
  const historicalMetadata=json(folder+'historical-metadata-transition.json');assert.equal(historicalMetadata.baselineSourceCommit,r.baselineSourceCommit);assert(historicalMetadata.onlyDocumentaryMetadataChanged&&historicalMetadata.currentEditableTrackersMustRemainCurrent&&historicalMetadata.allChangedHistoricallyPinnedMetadataIncluded);
  assert.deepEqual(sort(historicalMetadata.files.map(row=>row.file)),['docs/klink-invullen-20261101/implementation-progress.json','docs/klink-invullen-20261101/writing-source-register.json','docs/ordered-publication-20261101/register-backup.json','docs/ordered-publication-20261101/register-files-readback.json']);
  git('merge-base','--is-ancestor',r.liveSourceCommit,historicalMetadata.historicalCommit);git('merge-base','--is-ancestor',historicalMetadata.historicalCommit,r.baselineSourceCommit);assert.equal(git('diff','--name-only',historicalMetadata.historicalCommit,r.baselineSourceCommit,'--',...roots).length,0,'Historical metadata bindings must not hide runtime changes');
  assert.equal(historicalMetadata.originalApprovalFile,'docs/grammar-publication-20261101/approval.json');const originalApproval=JSON.parse(git('show',historicalMetadata.historicalCommit+':'+historicalMetadata.originalApprovalFile));for(const entry of historicalMetadata.files){assert.equal(entry.originalApprovalSection,'candidateFiles');assert.equal(originalApproval.candidateFiles[entry.file].after,entry.historicalSha256);assert.equal(sha(read(entry.historicalSnapshot)),entry.historicalSha256);assert.equal(sha(git('show',historicalMetadata.historicalCommit+':'+entry.file)),entry.historicalSha256);assert.equal(sha(read(entry.baselineSnapshot)),entry.baselineSha256);assert.equal(sha(git('show',r.baselineSourceCommit+':'+entry.file)),entry.baselineSha256);}
- assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','app','components','hooks','lib','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','next.config.ts','wrangler.jsonc').length,0);
- assert.deepEqual(changed.filter(f=>f.startsWith('data/')),['data/klink-production-index.json']);assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0);
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','app','components','hooks','lib','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','next.config.ts','wrangler.jsonc').length,0);
+ assert.deepEqual(changed.filter(f=>f.startsWith('data/')),['data/klink-production-index.json']);assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,successor.baselineSourceCommit,'--','public').length,0);
  const manifest=json(folder+'import-manifest.json'),ids=new Set(manifest.newRows.map(item=>item.row.id)),index=json('data/klink-production-index.json'),before=JSON.parse(git('show',r.baselineSourceCommit+':data/klink-production-index.json'));
  assert.equal(manifest.newRows.length,3);assert.equal(manifest.sourcePositions,17);assert.equal(manifest.newWordModels,0);assert(manifest.noHandwritingClaim);assert.deepEqual(index.filter(row=>!ids.has(row.id)),before);
  const oldAa=manifest.existingAaThreeRowUnchanged;assert.deepEqual(index.find(row=>row.id===oldAa.id),oldAa);assert.equal(sha(read('public'+oldAa.url)),sha(git('show',r.baselineSourceCommit+':public'+oldAa.url)));
@@ -31,6 +34,6 @@ export function verifyWritingCopyAaRelease(read=readFileSync){
  const v=json(folder+'verification.json');for(const key of['types','lint','unit','existingModelGradingPreserved','sourceRevisionVerified','wordAudioCoverage','wordLibraryIndexUnchanged','allOldRowsAndAaThreePreserved','appearancePreserved','localOnly'])assert.equal(v[key],true,key);assert.equal(v.humanNt2ReviewPerformed,false);assert.equal(v.humanListeningPerformed,false);
  const design=json(folder+'design-basis-check.json');assert.equal(design.bookGoalCode,'SC-01');assert.equal(design.learnerGoalId,'overschrijven');assert(design.driveAndCanonicalLocalTextIdentical&&design.observations.length===3&&design.openAtGroupLevel.length);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return {...r,historicalMetadata};
+ return {...r,historicalMetadata,successor};
 }
-export function readBeforeWritingCopyAa(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):r.historicalMetadata.files.some(entry=>entry.file===file)?git('show',r.historicalMetadata.historicalCommit+':'+file):read(file);}
+export function readBeforeWritingCopyAa(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):r.historicalMetadata.files.some(entry=>entry.file===file)?git('show',r.historicalMetadata.historicalCommit+':'+file):readBeforeHandwriting(file,r.successor,read);}

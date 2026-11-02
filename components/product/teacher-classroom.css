@@ -463,13 +463,6 @@
 .kpd-tool-dialog .kpd-sounds {
   margin: 25px 0;
 }
-.kpd-writing {
-  width: 100%;
-  max-height: 45vh;
-  background: var(--canvas);
-  border: 1px solid var(--line);
-  touch-action: none;
-}
 .kpd-type input {
   font-size: 46px;
 }
@@ -718,9 +711,6 @@
   body:has(.kpd) .kpd-observation h2 {
     font-size: 24px;
   }
-}
-.kpd-writing {
-  height: min(45vh, 450px);
 }
 .kpd-script {
   white-space: pre-line;

@@ -1,0 +1,24 @@
+.kpd-writing {
+  width: 100%;
+  max-height: 45vh;
+  height: min(45vh, 450px);
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  touch-action: none;
+}
+.kpd-writing.is-handwriting {
+  flex-shrink: 0;
+  width: min(100%, 500px, 100vh);
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1000 / 450;
+}
+.cp-handwriting-input {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+  gap: inherit;
+}
+.cp-handwriting-input > .kpd-writing {
+  justify-self: center;
+}
