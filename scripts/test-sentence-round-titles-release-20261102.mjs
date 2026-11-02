@@ -2,11 +2,11 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { verifySentenceRoundTitlesRelease, readBeforeSentenceRoundTitles } from './check-sentence-round-titles-release-20261102.mjs';
-import { verifyKlink10GrammarRelease } from './check-klink10-grammar-release-20261102.mjs';
+import { verifyKlink10ListeningRelease } from './check-klink10-listening-release-20261102.mjs';
 const owner = 'docs/klink-owner-release-sentence-round-titles-20261102.json', folder = 'docs/sentence-round-titles-20261102/';
-void test('Only the 20 sentence titles change and the preceding grammar release stays approved', () => {
+void test('Only the 20 sentence titles change and the preceding listening release stays approved', () => {
   const r = verifySentenceRoundTitlesRelease(); assert.equal(r.approvedBy, 'Nico');
-  assert.equal(verifyKlink10GrammarRelease().approvedBy, 'Nico');
+  assert.equal(verifyKlink10ListeningRelease().approvedBy, 'Nico');
   assert(readBeforeSentenceRoundTitles('lib/learner-copy.ts', r).toString().includes('const shortReadingTitles'));
 });
 for (const { file, mutate } of [
