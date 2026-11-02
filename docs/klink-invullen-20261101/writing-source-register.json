@@ -15,13 +15,14 @@
     "independentHumanReview": false,
     "scope": "Actueel bronregister met afzonderlijke gecontroleerde publicatiebatches; een audiobestand of lokale voorbereiding telt niet automatisch als aangesloten bronopdracht.",
     "verifiedThroughSuccessorSourceCommit": "ded58bb090a90c87f6a5881b35830fa44f3b4de2",
-    "lastVerifiedLiveSourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
-    "lastVerifiedAt": "2026-11-01T20:56:17.308870+00:00",
+    "lastVerifiedLiveSourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+    "lastVerifiedAt": "2026-11-02T00:50:30.213Z",
     "onlineSourceRecords": 103,
     "directSourceRecords": 103,
     "verifiedReusedSourceRecords": 0,
     "openReuseCriteria": 17,
-    "remainingSourceRecords": 760
+    "remainingSourceRecords": 760,
+    "lastRegisteredAt": "2026-11-02T01:10:43.330815+00:00"
   },
   "documents": [
     {
@@ -10219,6 +10220,508 @@
         }
       ],
       "verifiedThroughSourceCommit": "1069f8ac11730d313b4afdf7ccf4b886229c7882"
+    },
+    {
+      "id": "word-audio",
+      "sequence": 2,
+      "title": "Woordaudio",
+      "status": "PUBLISHED_VERIFIED",
+      "sourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+      "canonicalDocumentationSuccessor": "cccb740fed7eb0331397ac9e0de4546e7afb9645",
+      "previousLiveCommit": "7d1adc5192d265e50362833d5bbbfe2e3c10dacc",
+      "workerVersion": "95e93a21-beef-4791-b6fb-876dda0dfef8",
+      "verifiedAt": "2026-11-02T00:50:30.213Z",
+      "registeredAt": "2026-11-02T01:10:43.330815+00:00",
+      "normalPublicationRoute": "npm run deploy",
+      "ownerEvidence": "docs/word-listening-20261101/postflight.json",
+      "selectedNewWordModels": 5651,
+      "packedMp3Models": 5648,
+      "audioBundles": 53,
+      "standaloneWordModels": 3,
+      "additionalUnlockAudioFiles": 1,
+      "exactListeningForms": 12283,
+      "reviewedPredecessorRecordingsRetained": 20,
+      "sourceRecordsAdded": 0,
+      "newCanonicalQuestions": 0,
+      "existingPublicMediaModifiedOrDeleted": 0,
+      "storagePreserved": true,
+      "existingDesignPreservedExceptExplicitlyApprovedWordListeningOutline": true,
+      "appearanceAuthority": "docs/klink-owner-release-word-listening-20261101.json",
+      "appearancePixelComparisons": 24,
+      "localWordBrowserCases": 44,
+      "localNativeWordCases": 10,
+      "localMockedWordCases": 34,
+      "nativeSpaceCases": 4,
+      "recorderCases": 13,
+      "grammarBrowserCases": 36,
+      "liveWordBrowserCases": 44,
+      "liveNativeTeacherCases": 18,
+      "allWordModelsReadFromActualLiveBytes": true,
+      "liveHttp200CompleteBundleFallbacks": 53,
+      "liveHttp206PartialResponses": 0,
+      "actualDelivery": "Complete validated HTTP200 bundles; existing client extracts the exact complete MP3. HTTP206 is also supported, but was not returned by live hosting in these53requests.",
+      "staticAssetFiles": 19720,
+      "freeAssetLimit": 20000,
+      "includedCreditUpperBound": 44500,
+      "hearTypeReserve": 500,
+      "actualHearTypeCueCreditsAcknowledged": 139,
+      "keyCreditLimit": 60000,
+      "paidBudget": 0,
+      "githubActionWorkflows": 0,
+      "completeHumanPronunciationReviewPerformed": false,
+      "physicalPhoneTested": false,
+      "backup": {
+        "verified": true,
+        "fullReadback": true,
+        "zipIntegrity": true,
+        "allMemberHashesVerified": true,
+        "driveId": "18I3tRNZQfMJl60jg9BwK49IjVbMiA7Yf",
+        "url": "https://drive.google.com/file/d/18I3tRNZQfMJl60jg9BwK49IjVbMiA7Yf/view?usp=drivesdk",
+        "projectFolderId": "1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR",
+        "sha256": "32306ef7f12a2801c655860f11e2cd23936ba72eaa45eff95eca12bd962d4d4d",
+        "bytes": 3553683,
+        "memberCount": 35,
+        "publishedSourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+        "workerVersionId": "95e93a21-beef-4791-b6fb-876dda0dfef8",
+        "applicationSourceUnchangedAfterDeployment": true,
+        "finalAuthorityAndPredecessorProofsPassed": true,
+        "runtimeSourceAndImmutableMedia": "backup.json contains the separately verified complete source overlay, selected audio and original production recovery archives. This final sidecar contains the exact owner record, source/asset backup proof, complete dossier, actual live checks and publication register. No credential is included.",
+        "everyArchivedFileCompared": true
+      },
+      "runtimeRecovery": {
+        "source": {
+          "driveId": "1w2kSvmAw-DNQfb976HnsMgr8IFEnhMwn",
+          "url": "https://drive.google.com/file/d/1w2kSvmAw-DNQfb976HnsMgr8IFEnhMwn/view?usp=drivesdk",
+          "sha256": "9f9d1abc71df6b098abd9422f131952800e9f5379d8864bda947daa85739b90e",
+          "bytes": 4734652,
+          "memberCount": 103,
+          "verified": true,
+          "fullReadback": true,
+          "zipIntegrity": true
+        },
+        "assets": [
+          {
+            "driveId": "1p5VPjHiVpI8LehZF1lCnuoYDUtpwHFk3",
+            "url": "https://drive.google.com/file/d/1p5VPjHiVpI8LehZF1lCnuoYDUtpwHFk3/view?usp=drivesdk",
+            "sha256": "c7953a0d75c3d83eadf611a6caa1a97f35fcbf11506337446e7417b4c6eae80a",
+            "bytes": 90301166,
+            "files": [
+              {
+                "path": "public/package-audio/word-listening-20261101/listen-ready.wav",
+                "bytes": 1944,
+                "sha256": "a85119ba442dddbad9b5c050010684ab5c836c35eb63c3f0591dab3f7bc3fd8e"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/repair-ei.wav",
+                "bytes": 63698,
+                "sha256": "1d42ef46dac963fab23c8e56a4950ee465b8ebdb54547d6837a71555b62ecbac"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/repair-pijn.wav",
+                "bytes": 65732,
+                "sha256": "8fd0867a6df67f8a9f99165eb8d94e4b54e36db6ecfc42a44db41e79724fe0e0"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/repair-pit.wav",
+                "bytes": 68108,
+                "sha256": "17358df912902c77d6413cf2e1feadf0dc51106de90c3ed9a76f82904034a172"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-00d9f1b0698ee546.bin",
+                "bytes": 2079600,
+                "sha256": "00d9f1b0698ee54604e70eed3096f48d1b14ea06efb95300344845bab46ce358"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-01e8fb031abee2f5.bin",
+                "bytes": 2077842,
+                "sha256": "01e8fb031abee2f5d6d8a02a0f536283d86ea1511ee38c0b08acb7e8d9c03bf2"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-079ba688d5cb019f.bin",
+                "bytes": 2092397,
+                "sha256": "079ba688d5cb019f205915eb3a2e7eaf28f8c5da74b2c38a800238f9614ccf4c"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-0d885438f56102f4.bin",
+                "bytes": 2090436,
+                "sha256": "0d885438f56102f4d38c3108503582b0b4146b9a91c8fb7d984bbdd63d8650b8"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-1520401c1a08acc0.bin",
+                "bytes": 2082361,
+                "sha256": "1520401c1a08acc0cf39a9ad082b9696861194a9ed74e7055ff9462e808ccbf5"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-162d796ddb57d20c.bin",
+                "bytes": 2091915,
+                "sha256": "162d796ddb57d20c13adca1fb6d0fdf0cd2e5e282c4699ed782746b82ebdc888"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-168e26c136c3987c.bin",
+                "bytes": 2080872,
+                "sha256": "168e26c136c3987c3b22acd3bb560589e900a747c3e5673aa20453480c227f88"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-16a04cb9d3ef3d73.bin",
+                "bytes": 2080776,
+                "sha256": "16a04cb9d3ef3d7317d71c5f3df645587b7e4bdf81368c4696c47e3e4f44c333"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-18b08c03a5a60944.bin",
+                "bytes": 2094311,
+                "sha256": "18b08c03a5a60944be165787fad42ff563d4b3a49a592805f3fc1a835e870625"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-240cc836f20a4fa7.bin",
+                "bytes": 2079818,
+                "sha256": "240cc836f20a4fa7638a740db29032a83e9a608ea9c44eeafcd2f816779bf3fa"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-252647bc97ad8587.bin",
+                "bytes": 2096124,
+                "sha256": "252647bc97ad85872c354fb70b5ae4e70d4e3b9aeb231e8f212b96ce345dbe0d"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-27d04010ad03fa75.bin",
+                "bytes": 2094825,
+                "sha256": "27d04010ad03fa75ee99615cb53f79d84cf0c9632daa7244d7e1f0e7619ef8bd"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-2e51a21e1c2a840f.bin",
+                "bytes": 2077265,
+                "sha256": "2e51a21e1c2a840fcc1eb2dc61fd9a25da9748696f78df74e5d30dace09d35c0"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-313e295d8ae31342.bin",
+                "bytes": 983816,
+                "sha256": "313e295d8ae31342e2535f8f49a9ef63ffa30e288f22f6b7a13db3fa14dae19e"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-3553d82ed884d307.bin",
+                "bytes": 2081161,
+                "sha256": "3553d82ed884d307ca5111efc29256566a1428720934e4221a30e06374058135"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-414d105c85732155.bin",
+                "bytes": 2092222,
+                "sha256": "414d105c85732155b25e0239794473b7b79bac3b3a5d5efeb8ceb70b7fb21942"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-443ae3f74d8fa476.bin",
+                "bytes": 2076660,
+                "sha256": "443ae3f74d8fa476821801eb1362e4ebd09b1ae9fd511a46e2d33b057a6b51af"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-465fb0c7e1a74f98.bin",
+                "bytes": 2092446,
+                "sha256": "465fb0c7e1a74f989ce08437d2da9b60dadb250124d500f09ac8e450bb7497a8"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-46b278921441bacf.bin",
+                "bytes": 2093051,
+                "sha256": "46b278921441bacf0d08a693dc47b5821280c1492ea638ed66715f90369adc38"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-4bd194f137054349.bin",
+                "bytes": 2078667,
+                "sha256": "4bd194f13705434997b4a2a559d136d20d8e4481e0f3c09d6b9cde93ee969f70"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-5b1329d6dfa733e9.bin",
+                "bytes": 2096134,
+                "sha256": "5b1329d6dfa733e9d17ef53146c10e017e451c8e6848385a5d4537b6116b066a"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-5ff27d0990b06602.bin",
+                "bytes": 2087523,
+                "sha256": "5ff27d0990b066028c107564ab68c314b124f6810d6cc5fc1713476f62a50e53"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-60b2f1008eeefa7e.bin",
+                "bytes": 2083734,
+                "sha256": "60b2f1008eeefa7e0d44eb85b437cea3de81a28f444ba565fa32cd04de1b148c"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-682a9e8238ca4a6a.bin",
+                "bytes": 2096383,
+                "sha256": "682a9e8238ca4a6a26ca2b045ccd4aa3eedd92dddd7cf0bd601bc1d9ea4c7565"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-683f21afce8ea044.bin",
+                "bytes": 2081259,
+                "sha256": "683f21afce8ea0443b14dfd439691fb9df3f54fd262c2238ae5557481633d557"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-6f785f08edd121a3.bin",
+                "bytes": 2092616,
+                "sha256": "6f785f08edd121a301e1deaff7dcabc1ffc69905f5d6dca75bc1c3427f6ddb5f"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-70e48ff350098b65.bin",
+                "bytes": 2090592,
+                "sha256": "70e48ff350098b65c09cbb18853219519e3a12ec65163c0627f5d64ef79b9612"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-7297ff3a7d8c3423.bin",
+                "bytes": 2081248,
+                "sha256": "7297ff3a7d8c3423fd145f9c044f0f68f3397a632c7f0c928fb3a5ee855d1730"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-7342add387de8d27.bin",
+                "bytes": 2095011,
+                "sha256": "7342add387de8d27e02d281ce2c855d57813f040df22928dfe6d0c5d65e0409a"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-74fdeb42f7af890d.bin",
+                "bytes": 2085675,
+                "sha256": "74fdeb42f7af890d2bd33f2898539d8187e5073d3baa2c3371b4852d11829862"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-764854afae9fdb65.bin",
+                "bytes": 2079890,
+                "sha256": "764854afae9fdb6501087ba5198147229d81266e4b01a29322c407443c8f0b7d"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-7902156e99b122d4.bin",
+                "bytes": 2085930,
+                "sha256": "7902156e99b122d412c6e870385896332a04f12c23fa82320a99ff507388d3cc"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-8116b95ee7b9b060.bin",
+                "bytes": 2085264,
+                "sha256": "8116b95ee7b9b060a35269179f4779df8428ddf2635aae7663f748b4e4cd7b15"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-8b960bd296225f54.bin",
+                "bytes": 2082047,
+                "sha256": "8b960bd296225f54713246f998be8a0d37f1da5be21f707e2efcded5b8dfa78f"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-910815cee56caba7.bin",
+                "bytes": 2084610,
+                "sha256": "910815cee56caba70cc668f53be8cb543d3812a593624599fcb874968b92e099"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-a487194b025d8c76.bin",
+                "bytes": 2087750,
+                "sha256": "a487194b025d8c76168a5d8d69a2d07a2c55213682d1e978bd709d7343f7f8f8"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-a4b8c5247a072b5a.bin",
+                "bytes": 2084600,
+                "sha256": "a4b8c5247a072b5a4898e8be3f9b2dcf2ca0a3e1eb62b241f2bdd41ab479c680"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-a9c069288d7eb6c5.bin",
+                "bytes": 2085352,
+                "sha256": "a9c069288d7eb6c5d098f71b814af4b82e493eca9655f4d9affcf5ac5ec32453"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-aac9622f674324f3.bin",
+                "bytes": 2086190,
+                "sha256": "aac9622f674324f3c071d9100a23a7c3939e4e1e2f69fc608d7138fdc2985cc6"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-ab1bcc1000dcc4e9.bin",
+                "bytes": 2092842,
+                "sha256": "ab1bcc1000dcc4e93d7011a064aaf9305fe152bc3e05ce77c7869cc1a60a683e"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-ae331c9fbc486726.bin",
+                "bytes": 2093389,
+                "sha256": "ae331c9fbc486726b8c8f5eac13f4b54275a38bb44e7367ec32dd6a2b58ce440"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-b08943eb72aa8078.bin",
+                "bytes": 2089367,
+                "sha256": "b08943eb72aa80785f79b8152e0df119bc57f53da2eb91eaebdadc9b3dc41789"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-b1d2a72eff728642.bin",
+                "bytes": 2094766,
+                "sha256": "b1d2a72eff728642615d1a525f66ebbe4d73bd29482609089e5a81919bd7b6a2"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-c7a4f1917aaffee9.bin",
+                "bytes": 2076340,
+                "sha256": "c7a4f1917aaffee95d16e8785599bc7a9dc5a2c58e7e093a89fab99b8928c90f"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-d87dfc17172def3c.bin",
+                "bytes": 2079104,
+                "sha256": "d87dfc17172def3ce384b8a057de2416bcc4101f7adefb8695549ee97c568ade"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-dbae801fc84d2d5c.bin",
+                "bytes": 2092945,
+                "sha256": "dbae801fc84d2d5c8cb2ade1ec7c070cbdb446a174af0f14feb3a791e8910bde"
+              }
+            ],
+            "verified": true,
+            "fullReadback": true,
+            "zipIntegrity": true
+          },
+          {
+            "driveId": "1N8n6pwBEoawaTPh2WDuJjGHxRqfr_Udx",
+            "url": "https://drive.google.com/file/d/1N8n6pwBEoawaTPh2WDuJjGHxRqfr_Udx/view?usp=drivesdk",
+            "sha256": "88d15449dbfc45e43751a76133c1eb734cac6a0228ae23656bfba6cb9c3707ce",
+            "bytes": 13838307,
+            "files": [
+              {
+                "path": "public/package-audio/word-listening-20261101/words-e3e4794cb87f32b9.bin",
+                "bytes": 2077433,
+                "sha256": "e3e4794cb87f32b94c9443fa5a02f5d8c8eaddb2f7e9684fc922fbc82c7992ca"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-e78105a8ad1e9323.bin",
+                "bytes": 2079580,
+                "sha256": "e78105a8ad1e93236ec43d64a410d76cb425cc7f1a68a50274a1207956e07d58"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-ea2ed9727291a6c0.bin",
+                "bytes": 2084715,
+                "sha256": "ea2ed9727291a6c09b05820754be4647e807a6dd6b54749a2f825488b0c570b4"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",
+                "bytes": 2088877,
+                "sha256": "ed42a726f3e40c9835dbbb4b8136a2fb6ac0c85811fad724c4f99e45bcfbe578"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-eeb24e578c22d302.bin",
+                "bytes": 2082635,
+                "sha256": "eeb24e578c22d30241d43dc736f70a8c20b26b3c3be879294b587bd5d334ae8d"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-f19d65bb9a2a3dc1.bin",
+                "bytes": 2088007,
+                "sha256": "f19d65bb9a2a3dc1e1b9d3db755f46e788c06b50889d5aff034ba828244b9754"
+              },
+              {
+                "path": "public/package-audio/word-listening-20261101/words-ffcb5cc33e5d1f65.bin",
+                "bytes": 2073892,
+                "sha256": "ffcb5cc33e5d1f653498a919ea5a1273c7d7932ea838870944c34e793882a445"
+              }
+            ],
+            "verified": true,
+            "fullReadback": true,
+            "zipIntegrity": true
+          }
+        ],
+        "privateOriginals": [
+          {
+            "part": 1,
+            "driveId": "1zwTRW-A5KrdEDr5GVXr_3uO0R5_TrK7O",
+            "url": "https://drive.google.com/file/d/1zwTRW-A5KrdEDr5GVXr_3uO0R5_TrK7O/view?usp=drivesdk",
+            "sha256": "4aa5d6d5b0c3ce63e58b0c3765f5227175d4bb0f6fa4aadc05319d25e1e115f2",
+            "bytes": 57614674,
+            "files": 35,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 2,
+            "driveId": "1o-yR3_80QweSezYXX3FXSU0_9FPaom7_",
+            "url": "https://drive.google.com/file/d/1o-yR3_80QweSezYXX3FXSU0_9FPaom7_/view?usp=drivesdk",
+            "sha256": "d93679e4be8da64509a4a4440a2965c46af2c7a9a292f8544703c236b60a677f",
+            "bytes": 67731567,
+            "files": 18,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 3,
+            "driveId": "17UgdhVOK3tmyJFP7dQPFeEwWXY4XmtVv",
+            "url": "https://drive.google.com/file/d/17UgdhVOK3tmyJFP7dQPFeEwWXY4XmtVv/view?usp=drivesdk",
+            "sha256": "1a0e8b1ddfd9a3fd77d3e0090cf5f51b739135fedb19274b3d11ecfe80ac87c2",
+            "bytes": 69012767,
+            "files": 18,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 4,
+            "driveId": "1qaTVd6Ebo4gC7KLdmOz2EoHTQfgTBShK",
+            "url": "https://drive.google.com/file/d/1qaTVd6Ebo4gC7KLdmOz2EoHTQfgTBShK/view?usp=drivesdk",
+            "sha256": "7f1d65f92d6d19dfd7bb613ca41610e1b344ef4031481d704336f183901e3405",
+            "bytes": 61825780,
+            "files": 17,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 5,
+            "driveId": "1QlYk-96N8JylGj4lEr74N8JEiU3k8Wai",
+            "url": "https://drive.google.com/file/d/1QlYk-96N8JylGj4lEr74N8JEiU3k8Wai/view?usp=drivesdk",
+            "sha256": "4974738423f7d143ff527435f0466d740cc129dfdb605e6e473d8a6f4ff6233f",
+            "bytes": 59640654,
+            "files": 437,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 6,
+            "driveId": "1x4FpqZ5dJIGAYMht7bb2RaSccjlEf-xK",
+            "url": "https://drive.google.com/file/d/1x4FpqZ5dJIGAYMht7bb2RaSccjlEf-xK/view?usp=drivesdk",
+            "sha256": "3bc446c979d8c5c4d21e3748ad63e795bc5e5c40441571afb9e6db0325bd329e",
+            "bytes": 71892841,
+            "files": 2087,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 7,
+            "driveId": "1Hnl3dgpJP-CFw_5PzkVQNdO73slkzotG",
+            "url": "https://drive.google.com/file/d/1Hnl3dgpJP-CFw_5PzkVQNdO73slkzotG/view?usp=drivesdk",
+            "sha256": "656474d8319854640d0df84887d840624ea7dc1bfb08447c613e2529cffc57d2",
+            "bytes": 71428566,
+            "files": 1904,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 8,
+            "driveId": "1PPIIYs1IoKZA37XNNv99CFlR7D7dKUG6",
+            "url": "https://drive.google.com/file/d/1PPIIYs1IoKZA37XNNv99CFlR7D7dKUG6/view?usp=drivesdk",
+            "sha256": "4a7cf443dc51c92d487878477696a34a318464866d24965844209de23de0a95a",
+            "bytes": 73525966,
+            "files": 2083,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 9,
+            "driveId": "1lBD1_YHC_83wb4c8GprF5JZooei75Csh",
+            "url": "https://drive.google.com/file/d/1lBD1_YHC_83wb4c8GprF5JZooei75Csh/view?usp=drivesdk",
+            "sha256": "6a804b9586b400b6169efa95eff009adfcc331628a7aa3fd1c4c8d12b5dcddee",
+            "bytes": 97927690,
+            "files": 5296,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          },
+          {
+            "part": 10,
+            "driveId": "1nxo89CDxLgpGYhQ3ILi0M2tY7FBxMJvk",
+            "url": "https://drive.google.com/file/d/1nxo89CDxLgpGYhQ3ILi0M2tY7FBxMJvk/view?usp=drivesdk",
+            "sha256": "3964f2aa1a62d89bf63f263ded669b46cb8047cc6b14d66455159d2ef64422da",
+            "bytes": 33055493,
+            "files": 8461,
+            "fullReadback": true,
+            "zipIntegrity": true,
+            "memberHashesVerified": true
+          }
+        ]
+      },
+      "independentBundleCheck": "docs/ordered-publication-20261101/02-word-audio-independent-bytes.json"
     }
   ],
   "orderedPublicationPlan": {
@@ -10240,18 +10743,24 @@
       {
         "id": "word-audio",
         "title": "Woordaudio",
-        "status": "PREPARING"
+        "status": "PUBLISHED_VERIFIED",
+        "sourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+        "selectedNewWordModels": 5651,
+        "exactListeningForms": 12283
       },
       {
         "id": "hear-and-type",
         "title": "Hoor en typ",
-        "status": "PREPARING",
+        "status": "PUBLISHING",
         "sourcePositions": 100,
         "existingCanonicalReferences": 54,
         "newCanonicalQuestionsPlanned": 46,
-        "sourcePositionsPublished": 0
+        "sourcePositionsPublished": 100,
+        "sourceCommit": "5ac4187aa98a1eb19f74fa42c291247d2b62078c",
+        "sourcePositionsVerifiedOnline": 0,
+        "runtimeRounds": 15
       }
     ],
-    "updatedAt": "2026-11-01T20:56:17.308870+00:00"
+    "updatedAt": "2026-11-02T01:10:43.330815+00:00"
   }
 }

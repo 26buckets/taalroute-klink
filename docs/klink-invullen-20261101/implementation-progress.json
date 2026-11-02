@@ -15,8 +15,8 @@
     "requested": true,
     "newAppPublished": true,
     "newRuntimeImported": true,
-    "liveSource": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
-    "canonicalMain": "6d335687ef7c0fb01b55332935ddcbdde160d6f3",
+    "liveSource": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+    "canonicalMain": "cccb740fed7eb0331397ac9e0de4546e7afb9645",
     "ancestryVerified": true,
     "mainOnlyDocumentationSuccessor": true,
     "existingAppearancePreserved": true,
@@ -40,7 +40,7 @@
       "governanceCommit": "48e79661f4a9ce06983ae1b3b15dbcb657cd104d",
       "initialLiveSource": "76a8c365a83fd0181e79ca67077a891c1ae2a286"
     },
-    "lastVerifiedAt": "2026-11-01T20:56:17.308870+00:00"
+    "lastVerifiedAt": "2026-11-02T00:50:30.213Z"
   },
   "scopeLimits": [
     "858 directe Drive-mapitems geïnventariseerd; niet alle historische submappen en bestanden inhoudelijk geaudit.",
@@ -378,7 +378,7 @@
     "repositoryPath": "26buckets/taalroute-klink/AGENTS.md"
   },
   "sourceBaselineAtInitialIntake": "08a44807052370ce16277edb2ac00adfcbdd0d2e",
-  "updatedAt": "2026-11-01T20:56:17.308870+00:00",
+  "updatedAt": "2026-11-02T01:10:43.330815+00:00",
   "orderedPublicationPlan": {
     "userRequest": "Prima, ga door met de loadertekst, woordaudio en Hoor en typ in deze volgorde. Publiceer gecontroleerde batches, werk het bronregister bij en voorkom dubbele inhoud. Behoud de huidige vormgeving en voortgang.",
     "order": [
@@ -398,18 +398,24 @@
       {
         "id": "word-audio",
         "title": "Woordaudio",
-        "status": "PREPARING"
+        "status": "PUBLISHED_VERIFIED",
+        "sourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+        "selectedNewWordModels": 5651,
+        "exactListeningForms": 12283
       },
       {
         "id": "hear-and-type",
         "title": "Hoor en typ",
-        "status": "PREPARING",
+        "status": "PUBLISHING",
         "sourcePositions": 100,
         "existingCanonicalReferences": 54,
         "newCanonicalQuestionsPlanned": 46,
-        "sourcePositionsPublished": 0
+        "sourcePositionsPublished": 100,
+        "sourceCommit": "5ac4187aa98a1eb19f74fa42c291247d2b62078c",
+        "sourcePositionsVerifiedOnline": 0,
+        "runtimeRounds": 15
       }
     ],
-    "updatedAt": "2026-11-01T20:56:17.308870+00:00"
+    "updatedAt": "2026-11-02T01:10:43.330815+00:00"
   }
 }
