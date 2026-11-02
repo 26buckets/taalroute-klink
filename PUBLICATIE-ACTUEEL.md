@@ -1,3 +1,17 @@
+## Actuele publicatie — Klink tien: tien A1-tekstbewijsopdrachten — 2 november 2026
+
+Livebron `e3ce253798375049f0dbc7478b5133963205f0a6`, schone canonieke main; Worker `f8db2549-84df-4c3b-8c90-90cec2c775d2`. Gewone `npm run deploy`, volledige publicatiepoort en bouw geslaagd; opvolger van `9518708b3ddd764ec830c151965bae3503977868`.
+
+Tien brongebonden opdrachten onder Teksten → Zoek het antwoord, in de bestaande markeerspeler. De cursist kiest alle woorden van de juiste zin. Concrete vragen, ongewijzigde leesteksten, verkeerde en onvolledige selecties afgewezen, handmatig verdergaan en hervatten behouden. Geen wijziging aan uiterlijk, navigatie of runtimecomponenten.
+
+Tien gecombineerde instructie-/vraagopnamen met Roland en één woordmodel voor apotheker met de aparte doelstem Roos. Afgekeurde takes blijven offline; het geselecteerde woord is zonder hercodering uit een gecontroleerde contextopname gehaald, met exact behouden audiopakketten en twee onafhankelijke blinde transcripties. Elf aangeboden audiobestanden hebben gecontroleerde Taalroute-merkmetadata.
+
+Lokaal en live: 40 antwoord-/opslag-/hervatstromen, 22 native audiodecodes en vier echte afspeelstromen in Chromium/WebKit; twaalf volledige livebestandsteruglezingen. Lokaal ook veertien bestaande weergave-/opslagcontroles, elf kerntests, types, lint, volledige woordaudiodekking en zes negatieve vrijgaveproeven. Geen GitHub-workflows of extra Actions-kosten. Een aanvullende brede oude weergavetest liep tegen een directe asynchrone toestandassertie aan; geen volledige oude browsermatrix geclaimd. De verplichte gerichte behoudcontroles zijn geslaagd.
+
+Door deze taak nu 470 bronposities nieuw aangesloten; twintig bestaande bronposities hergebruikt en tien bestaande bingokaarten herzien. Nog 3110 bronposities niet gereconcilieerd, geen aantal unieke ontbrekende vragen. Teksten: tien van 210 bronposities in deze batch, overige 200 open. Historische bron-HOLD en niet-uitgevoerde menselijke NT2-/luisterreview, fysieke-apparatentest en klasproef blijven apart geregistreerd. Volledige bronnen, code, originelen en herstel: Drive `12qlVEm68p4vjmQMRrer5CNP6sLyXDKCa`, 121 leden teruggelezen. Definitief livebewijs in `docs/klink10-text-evidence-20261102/`.
+
+---
+
 ## Actuele publicatie — Klink tien: tien Alfa C-woordbingokaarten — 2 november 2026
 
 Livebron `9518708b3ddd764ec830c151965bae3503977868`, schone canonieke main; Worker `c8418fb5-eda2-40e6-910b-b94a8e58feca`. Gewone `npm run deploy`, volledige publicatiepoort en bouw geslaagd; opvolger van `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`.
