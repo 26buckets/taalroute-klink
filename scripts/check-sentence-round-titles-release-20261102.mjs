@@ -1,27 +1,25 @@
-import {verifyOpeningLoaderLabelRelease,readBeforeOpeningLoaderLabel} from './check-opening-loader-label-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-const base = 'bf3980e588ad23606839d192a5fb441ea3eb4fb8', live = '6c634ca4c5756ab29fad386d6d40ff90321438b6', folder = 'docs/sentence-round-titles-20261102/';
+const base = '3886eac47226b1071ca02ef6b7c0efc2bc5b87be', live = 'eb8c54c5ee1c5fb60cfa629f5bd0eda231669ec9', folder = 'docs/sentence-round-titles-20261102/';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sort = values => values.sort((a, b) => a.localeCompare(b));
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts', 'db', 'drizzle', '.github', 'AGENTS.md', 'PUBLICATIE.md', 'VORMGEVING-VASTGEZET.md', 'docs/appearance-floor-20261031', 'docs/KLINK-DOCENTHANDLEIDING.md', 'vite.config.ts', 'next.config.ts', 'package.json', 'package-lock.json', 'wrangler.jsonc'];
 export function verifySentenceRoundTitlesRelease(read = readFileSync) {
-  const successor=verifyOpeningLoaderLabelRelease(read),currentRead=read;read=file=>readBeforeOpeningLoaderLabel(file,successor,currentRead);
   const json = file => JSON.parse(read(file)), r = json('docs/klink-owner-release-sentence-round-titles-20261102.json');
   assert.equal(r.approvedBy, 'Nico'); assert(r.publicationApproved && r.appearanceChangeApproved);
   assert.equal(r.baselineSourceCommit, base); assert.equal(r.liveSourceCommit, live);
   assert(r.userRequest.includes('Doe dit ook bij Luister en lees mee'));
   assert(r.publicationRequest.includes('zet deze versie nu live in Klink'));
   git('merge-base', '--is-ancestor', live, base); git('merge-base', '--is-ancestor', base, 'HEAD');
-  const changed = sort(lines(git('diff', '--name-only', base, successor.baselineSourceCommit, '--', ...roots)));
+  const changed = sort([...new Set([...lines(git('diff', '--name-only', base, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])]);
   assert.deepEqual(changed, r.changedFiles); assert.deepEqual(sort(Object.keys(r.files)), changed);
   for (const [file, hash] of Object.entries({ ...r.files, ...r.evidenceFiles })) assert.equal(sha(read(file)), hash, file);
   assert.deepEqual(changed.filter(f => /^(app|components|hooks|data|lib|public|db|drizzle)\//.test(f)), ['components/product/practice-chapters.tsx', 'lib/learner-copy.ts']);
-  assert.equal(git('diff', '--name-only', base, successor.baselineSourceCommit, '--', 'app', 'hooks', 'data', 'public', 'db', 'drizzle', '.github', 'package.json', 'package-lock.json', 'vite.config.ts').length, 0);
+  assert.equal(git('diff', '--name-only', base, '--', 'app', 'hooks', 'data', 'public', 'db', 'drizzle', '.github', 'package.json', 'package-lock.json', 'vite.config.ts').length, 0);
   for (const file of ['hooks/use-practice-keyboard.ts', 'app/learner-ui.css', 'components/product/teacher-classroom.css']) assert.equal(sha(read(file)), sha(git('show', base + ':' + file)), file);
   const renderer = 'components/product/practice-chapters.tsx';
   const expectedRenderer = git('show', base + ':' + renderer).toString().replace('learnerCollectionLabel(collection.title).title', 'learnerCollectionLabel(collection.title, collection.id).title').replace('const label = learnerCollectionLabel(item.title);', 'const label = learnerCollectionLabel(item.title, item.sourceId ?? item.id);');
@@ -43,8 +41,8 @@ export function verifySentenceRoundTitlesRelease(read = readFileSync) {
   const p = json(folder + 'verification.json'); for (const key of ['types', 'lint', 'unit', 'build', 'sourceSentenceReview', 'desktopMobile', 'progressPreserved', 'nonSentenceTitlesUnchanged', 'localOnly']) assert.equal(p[key], true, key);
   const backup = json(folder + 'backup.json'); assert(backup.verified && backup.fullReadback && backup.zipIntegrity && backup.driveId);
   assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
-  return {...r,successor};
+  return r;
 }
 export function readBeforeSentenceRoundTitles(file, r, read = readFileSync) {
-  return r.changedFiles.includes(file) ? git('show', base + ':' + file) : readBeforeOpeningLoaderLabel(file,r.successor,read);
+  return r.changedFiles.includes(file) ? git('show', base + ':' + file) : read(file);
 }
