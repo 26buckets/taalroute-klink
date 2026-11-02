@@ -22,5 +22,5 @@
   "speechStressVerified": true,
   "specificClipHumanListening": true,
   "humanApprovalEvidence": "pronunciation-review.json",
-  "testHarnessCorrections": "Full speech flows now use real audio. Existing recorder waits for target end, not preceding instruction. Broad old view matrix had an asynchronous toggle assertion; targeted 14 preference checks pass. No runtime change for test timing."
+  "testHarnessCorrections": "Full speech flows now use real audio. Existing recorder waits for target end, not preceding instruction. Broad old view matrix had an asynchronous toggle assertion; targeted 14 preference checks pass. Instruction text click originally triggered individual word audio; the existing data-practice-listen exclusion now prevents interference. Verified actual text clicks in both engines."
 }

@@ -499,7 +499,7 @@ function PackageExercisePlayer({
   } : undefined);
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
-              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
+              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button data-practice-listen className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button data-practice-previous aria-keyshortcuts="ArrowLeft" title="Vorige oefening (←)" onClick={() => { if (!audioPending && !recording && !practiceBusy(keyboard.ref.current)) { if (guided) openGuidedAt(guidedIndex - 1); else openAt(recordIndex - 1); } }} disabled={audioPending || recording || (guided ? guidedIndex <= 0 : recordIndex === 0)} aria-label="Vorige oefening"><ArrowLeft /></button>
