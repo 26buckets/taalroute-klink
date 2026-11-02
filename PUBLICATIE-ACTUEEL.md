@@ -1,3 +1,11 @@
+## Actuele publicatie — eerste tien Zo schrijf je het Alfa A — 2 november 2026
+
+Livebron `c2aa17c4a3b4d7f1f37aefdd4fc8142d000e058f`, schone canonieke main, via gewone `npm run deploy`. Tien bestaande bronposities behouden hun veertig canonieke deelvragen; tien herhaalvragen sluiten nu aan op de bestaande 1/3/7-dagenplanner. Pointerantwoord wordt niet terugwerkend als geholpen geteld door daaropvolgende woordaudio. Geen nieuwe vragen, media of vormgeving.
+
+Bron-, antwoord-, feedback-, niveau- en integratiecontrole uitgevoerd door Codex. 24 gerichte behoudtests, 26 browserstromen lokaal en live, 44 bestaande woordluisterproeven, 26 native audiodecodes en zes negatieve vrijgaveproeven geslaagd. Beide oude bronbanken en 13 audio-assets volledig bytegelijk online teruggelezen; Taalroute-metadata behouden. Back-upbron op Drive `1qH_aCODKyrBMCt4KiXSGVxIIsXBH2hFo` volledig teruggelezen. Menselijke luisterreview, onafhankelijke NT2-review, fysieke apparaten en klasproef niet uitgevoerd. Spreken-appel-hold blijft afzonderlijk; geen algemene handmatige reviewwacht voor zelf controleerbaar werk.
+
+---
+
 ## Actuele publicatie — tien A2-tekstbewijsopdrachten — 2 november 2026
 
 Livebron `d52a891e9129b6664ec5ed72759a5f402f736ca7`, schone canonieke main; Worker `cf99418f-c5ac-44bb-a643-15caf07b5da4`. Normale `npm run deploy` geslaagd, opvolger van `e3ce253798375049f0dbc7478b5133963205f0a6`.
