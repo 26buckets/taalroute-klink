@@ -1,3 +1,13 @@
+## Actuele publicatie — Klink tien: 120 luisteropdrachten — 2 november 2026
+
+Livebron `eb8c54c5ee1c5fb60cfa629f5bd0eda231669ec9`, schone canonieke main; Worker `f93c6be8-8b2c-4c01-a6c3-8ab591f870ef`. Gewone `npm run deploy`, volledige normale publicatiepoort en bouw geslaagd. Twaalf rondes met 120 bronposities voor A1/A2 en Alfa C/B1, in de bestaande luisterroutes. 457 nieuwe geselecteerde opnamen en 93 verschillende bestaande opnamen; nieuwe opnamen staan in zes onveranderlijke compacte bundels. Twee nieuwe instructies gebruiken Roland; doeltekst en personages behouden aparte stemmen. De tekst verschijnt na een antwoord en blijft vooraf op verzoek beschikbaar via de bestaande tekstknop.
+
+Alle twaalf banken en 550 opnamen zijn volledig online bytegelijk gecontroleerd (111 fysieke bestanden); twaalf bereikproeven bewijzen ook de correcte volledige-responsefallback van de bestaande speler. Lokaal én live: 480 opdrachtstromen op mobiel/desktop in Chromium/WebKit, 1100 native audiodecodes en zes echte afspeelstromen. Daarnaast 14 bestaande weergave-/opslagproeven, acht vroege-tekst-/themaproeven en 31 audio-/navigatie-eenheidstests. Bestaande inhoud, media, lokale voortgang, routes en uiterlijk behouden. Geen GitHub-workflows of extra Actions-kosten.
+
+80 Alfa A/B-posities blijven open wegens verplichte beelden; beeldgeneratie blijft gestopt. Samen met de grammatica zijn door deze taak nu 240 bronposities gecontroleerd online gezet. Dit is geen volledige oplevering van alle tien pakketten en de bronposities zijn geen bewijs van unieke ontbrekende oefeningen. Menselijke uitspraakgoedkeuring, fysieke apparaten, onafhankelijke ERK-beoordeling en klasproef blijven apart open. Dossier `docs/klink10-listening-20261102/`; volledige bron-/code-/opnamen-/herstelkopie Drive `1JZVpuiChDNenYvtoiOulxoo2uNvKZ69c`, 65.136.961 bytes en 1646 archiefleden volledig teruggelezen.
+
+---
+
 ## Actuele publicatie — Klink tien: 120 grammaticaopdrachten — 2 november 2026
 
 Livebron `6c634ca4c5756ab29fad386d6d40ff90321438b6`, schone canonieke main; Worker `aeaa66dc-8572-4ff6-b5f8-8b29311aba1e`. Gepubliceerd via de gewone `npm run deploy`, na de volledige normale vrijgaveketen en bouw. 120 actuele bronopdrachten in twaalf rondes voor Alfa B/C, A2 en B1, binnen de bestaande grammatica-opzet. 169 nieuwe compacte audiobestanden plus 61 bestaande modellen; zestien modellen bestaan bewust uit exacte losse woordopnamen om grammaticale afleiders te behouden. De afzonderlijke instructiestem blijft gehandhaafd.
