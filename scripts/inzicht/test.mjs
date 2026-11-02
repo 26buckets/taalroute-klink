@@ -712,7 +712,13 @@ test('KI035: 30 × 100 computed matrix, documented local synthetic timing', asyn
   const elapsed = performance.now() - t;
   assertStatus(result, 200);
   assert.equal(result.data.rows.length, 30);
+  assert.equal(result.data.group.id, 'school-a:klas');
   assert.equal(result.data.skills.length, 100);
+  assert(result.data.rows.every((r) => Object.keys(r.cells).length === 100));
+  const processed = await s.request('classes/school-a:klas/matrix', {});
+  assertStatus(processed, 200);
+  assert.deepEqual(processed.data.rows, result.data.rows);
+  assert.deepEqual(processed.data.skills, result.data.skills);
   assert(elapsed < 2000, `local SQLite matrix ${elapsed}ms`);
   console.log(
     `30x100 SQLite service: ${elapsed.toFixed(1)}ms, no network, warm runtime; not a production SLO`,

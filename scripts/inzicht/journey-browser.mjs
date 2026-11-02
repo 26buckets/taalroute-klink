@@ -340,6 +340,13 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       'Matrix links to individual history; observations and successful practice do not become mastery',
     );
 
+    await teacher.goto(`${classUrl}/vaardigheden?school=school-a`);
+    await teacher
+      .getByRole('region', { name: 'Vaardighedenmatrix', exact: true })
+      .waitFor();
+    assert.equal(await teacher.locator('.ki-table tbody tr').count(), 2);
+    passed('Existing vaardigheden route alias renders the same matrix');
+
     await teacher.goto(`${classUrl}/advies?school=school-a`);
     const preview = await saveResponse(
       teacher,

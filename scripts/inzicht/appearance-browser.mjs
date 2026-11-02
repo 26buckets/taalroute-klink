@@ -23,14 +23,24 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
             (i) => i.complete && i.naturalWidth > 0,
           ),
       );
-      const images = await page
-        .locator('header img')
-        .evaluateAll((els) =>
-          els.map((i) => ({
-            source: new URL(i.currentSrc).pathname,
-            width: i.naturalWidth,
-          })),
-        );
+      const images = await page.locator('header img').evaluateAll((els) =>
+        els.map((i) => ({
+          source: new URL(i.currentSrc).pathname,
+          width: i.naturalWidth,
+        })),
+      );
+      await page.locator('summary[aria-label="Menu"]').click();
+      const inzicht = page.getByRole('link', {
+        name: 'Klink Inzicht',
+        exact: true,
+      });
+      assert.equal(
+        await inzicht.getAttribute('href'),
+        'https://inzicht.taalroute.nl/',
+      );
+      await inzicht.focus();
+      assert(await inzicht.evaluate((el) => el === document.activeElement));
+      await page.locator('summary[aria-label="Menu"]').click();
       const overflow = await page.evaluate(
         () => document.documentElement.scrollWidth > innerWidth + 1,
       );
@@ -45,6 +55,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         dark,
         all_header_logos_loaded: true,
         no_horizontal_page_overflow: true,
+        inzicht_menu_destination_and_keyboard: true,
         images,
       });
     }

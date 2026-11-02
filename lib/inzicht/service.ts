@@ -241,8 +241,8 @@ async function evidence(c: Context, group: string, id: string, skill: string) {
     id: String(e.id),
     revoked: Boolean(
       e.revoked ||
-      (e.source_type === 'observation' &&
-        e.current_revision !== e.source_revision),
+        (e.source_type === 'observation' &&
+          e.current_revision !== e.source_revision),
     ),
     source_id: e.source_id,
     source_revision: e.source_revision,
@@ -269,8 +269,8 @@ async function classEvidence(c: Context, group: string) {
       id: String(e.id),
       revoked: Boolean(
         e.revoked ||
-        (e.source_type === 'observation' &&
-          e.current_revision !== e.source_revision),
+          (e.source_type === 'observation' &&
+            e.current_revision !== e.source_revision),
       ),
     });
     grouped.set(key, list);
@@ -278,21 +278,23 @@ async function classEvidence(c: Context, group: string) {
   return grouped;
 }
 async function matrix(c: Context, group: string, process = false) {
-  const defs = await skills(c.db);
-  const learners = await rows(
-    c.db,
-    "SELECT l.* FROM school_learners l JOIN group_memberships gm ON gm.organization_id=l.organization_id AND gm.learner_id=l.id WHERE gm.organization_id=? AND gm.group_id=? AND gm.status='active' ORDER BY l.display_name,l.id",
-    c.org,
-    group,
-  );
-  const queued = await rows(
-    c.db,
-    "SELECT id FROM outbox_events WHERE organization_id=? AND group_id=? AND status<>'processed' ORDER BY id",
-    c.org,
-    group,
-  );
+  const [defs, learners, queued, allEvidence] = await Promise.all([
+    skills(c.db),
+    rows(
+      c.db,
+      "SELECT l.* FROM school_learners l JOIN group_memberships gm ON gm.organization_id=l.organization_id AND gm.learner_id=l.id WHERE gm.organization_id=? AND gm.group_id=? AND gm.status='active' ORDER BY l.display_name,l.id",
+      c.org,
+      group,
+    ),
+    rows(
+      c.db,
+      "SELECT id FROM outbox_events WHERE organization_id=? AND group_id=? AND status<>'processed' ORDER BY id",
+      c.org,
+      group,
+    ),
+    classEvidence(c, group),
+  ]);
   const calculated = now();
-  const allEvidence = await classEvidence(c, group);
   const result = [];
   const writes: D1PreparedStatement[] = [];
   for (const l of learners) {
@@ -1151,7 +1153,7 @@ export async function handleInzicht(
           201,
         );
       if (path[2] === 'matrix')
-        return response(await matrix(c, group, writing));
+        return response({ ...(await matrix(c, group, writing)), group: g });
       if (path[2] === 'catalog' && !writing) return response(await catalog(c));
       if (path[2] === 'policy') {
         const target = string(
@@ -1666,8 +1668,8 @@ export async function handleInzicht(
         source_revision: Number(e.source_revision),
         revoked: Boolean(
           e.revoked ||
-          (e.source_type === 'observation' &&
-            e.current_revision !== e.source_revision),
+            (e.source_type === 'observation' &&
+              e.current_revision !== e.source_revision),
         ),
       }));
       const catalog = await skills(db);

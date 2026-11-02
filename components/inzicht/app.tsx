@@ -78,6 +78,7 @@ type Profile = {
 };
 type ClassDetail = { group: Group; learners: Learner[]; policy: Policy };
 type Matrix = {
+  group: Group;
   skills: Skill[];
   rows: { id: string; name: string; cells: Record<string, Mastery> }[];
   processing: string;
@@ -555,12 +556,15 @@ function Workspace({
       ? route[1]
       : (search.get('class') ?? '');
   const section = route[0] === 'klassen' ? (route[2] ?? 'cursisten') : route[0];
+  const matrixSection = section === 'matrix' || section === 'vaardigheden';
   useEffect(() => {
     let active = true;
     Promise.all([
-      api<Group[]>('classes', school),
-      gid ? api<ClassDetail>(`classes/${gid}`, school) : Promise.resolve(null),
-      gid && section === 'matrix'
+      gid ? Promise.resolve([]) : api<Group[]>('classes', school),
+      gid && !matrixSection
+        ? api<ClassDetail>(`classes/${gid}`, school)
+        : Promise.resolve(null),
+      gid && matrixSection
         ? api<Matrix>(`classes/${gid}/matrix`, school)
         : Promise.resolve(null),
     ])
@@ -577,7 +581,7 @@ function Workspace({
     return () => {
       active = false;
     };
-  }, [school, gid, section]);
+  }, [school, gid, matrixSection]);
   if (error)
     return (
       <section className="ki-card">
@@ -658,7 +662,8 @@ function Workspace({
         </div>
       </>
     );
-  if (!detail) return <output>Klas openen…</output>;
+  const group = matrixSection ? matrix?.group : detail?.group;
+  if (!group) return <output>Klas openen…</output>;
   const go = (part = '') => href(`/klassen/${gid}${part ? `/${part}` : ''}`);
   return (
     <>
@@ -668,15 +673,14 @@ function Workspace({
       </Link>
       <div className="ki-actions">
         <div>
-          <h2>{detail.group.name}</h2>
+          <h2>{group.name}</h2>
           <p>
-            {detail.group.start_level} ·{' '}
-            {
-              detail.learners.filter((l) => l.enrollment_status === 'active')
-                .length
-            }{' '}
-            cursisten ·{' '}
-            {detail.group.status === 'active' ? 'Actief' : 'Gearchiveerd'}
+            {group.start_level} ·{' '}
+            {matrixSection
+              ? matrix?.rows.length
+              : detail?.learners.filter((l) => l.enrollment_status === 'active')
+                  .length}{' '}
+            cursisten · {group.status === 'active' ? 'Actief' : 'Gearchiveerd'}
           </p>
         </div>
         <Link prefetch={false} href={go('bewerken')}>
@@ -735,93 +739,102 @@ function Workspace({
           </a>
         </details>
       </nav>
-      {section === 'rapportages' ? (
-        <Reports
-          key={school + gid}
-          school={school}
-          group={gid}
-          learners={detail.learners}
-          initialLearner={search.get('learner') ?? ''}
-          go={go}
-        />
-      ) : section === 'toevoegen' ? (
-        <AddLearner
-          school={school}
-          group={gid}
-          done={(id) => router.push(go(`profiel/${id}`))}
-          cancel={go()}
-        />
-      ) : section === 'bewerken' ? (
-        <EditClass
-          school={school}
-          group={detail.group}
-          done={() => router.push(go())}
-        />
-      ) : section === 'observeren' &&
-        !search.get('correction') &&
-        !search.get('general') ? (
-        <>
-          <Link prefetch={false} href={go('observeren') + '&general=1'}>
-            Algemene vaardigheidsobservatie
-          </Link>
-          <SourceObservationForm
-            school={school}
-            group={gid}
-            learners={detail.learners}
-            selected={search.get('learner') ?? ''}
-            originalId={search.get('source') ?? ''}
-          />
-        </>
-      ) : section === 'observeren' ? (
-        <ObservationForm
-          school={school}
-          group={gid}
-          learners={detail.learners}
-          selected={search.get('learner') ?? ''}
-          correction={search.get('correction') ?? ''}
-          done={(id) => router.push(go(`profiel/${id}`) + '&saved=1')}
-        />
-      ) : section === 'profiel' ? (
-        <LearnerProfile school={school} group={gid} id={route[3]} go={go} />
-      ) : section === 'matrix' || section === 'vaardigheden' ? (
-        matrix && (
-          <MatrixView school={school} group={gid} go={go} initial={matrix} />
-        )
-      ) : section === 'bewijs' ? (
-        <EvidenceView
-          school={school}
-          group={gid}
-          learner={search.get('learner') ?? ''}
-          skill={search.get('skill') ?? ''}
-          go={go}
-        />
-      ) : section === 'toegang' ? (
-        <AccessForm school={school} group={gid} learners={detail.learners} />
-      ) : section === 'opdrachten' ? (
-        <Assignments school={school} group={gid} learners={detail.learners} />
-      ) : section === 'advies' ? (
-        <Advice school={school} group={gid} />
-      ) : section === 'observaties' ? (
-        <section className="ki-card">
-          <h3>Observaties per cursist</h3>
-          <p>
-            Kies een cursist om de volledige historie te bekijken of een nieuwe
-            observatie toe te voegen.
-          </p>
-          <Learners learners={detail.learners} go={go} />
-        </section>
-      ) : (
-        <>
-          <Learners learners={detail.learners} go={go} />
-          <Link
-            prefetch={false}
-            className="primary-button ki-advice"
-            href={go('advies')}
-          >
-            Wat heeft mijn groep morgen nodig?
-          </Link>
-        </>
-      )}
+      {matrixSection
+        ? matrix && (
+            <MatrixView school={school} group={gid} go={go} initial={matrix} />
+          )
+        : detail &&
+          (section === 'rapportages' ? (
+            <Reports
+              key={school + gid}
+              school={school}
+              group={gid}
+              learners={detail.learners}
+              initialLearner={search.get('learner') ?? ''}
+              go={go}
+            />
+          ) : section === 'toevoegen' ? (
+            <AddLearner
+              school={school}
+              group={gid}
+              done={(id) => router.push(go(`profiel/${id}`))}
+              cancel={go()}
+            />
+          ) : section === 'bewerken' ? (
+            <EditClass
+              school={school}
+              group={detail.group}
+              done={() => router.push(go())}
+            />
+          ) : section === 'observeren' &&
+            !search.get('correction') &&
+            !search.get('general') ? (
+            <>
+              <Link prefetch={false} href={go('observeren') + '&general=1'}>
+                Algemene vaardigheidsobservatie
+              </Link>
+              <SourceObservationForm
+                school={school}
+                group={gid}
+                learners={detail.learners}
+                selected={search.get('learner') ?? ''}
+                originalId={search.get('source') ?? ''}
+              />
+            </>
+          ) : section === 'observeren' ? (
+            <ObservationForm
+              school={school}
+              group={gid}
+              learners={detail.learners}
+              selected={search.get('learner') ?? ''}
+              correction={search.get('correction') ?? ''}
+              done={(id) => router.push(go(`profiel/${id}`) + '&saved=1')}
+            />
+          ) : section === 'profiel' ? (
+            <LearnerProfile school={school} group={gid} id={route[3]} go={go} />
+          ) : section === 'bewijs' ? (
+            <EvidenceView
+              school={school}
+              group={gid}
+              learner={search.get('learner') ?? ''}
+              skill={search.get('skill') ?? ''}
+              go={go}
+            />
+          ) : section === 'toegang' ? (
+            <AccessForm
+              school={school}
+              group={gid}
+              learners={detail.learners}
+            />
+          ) : section === 'opdrachten' ? (
+            <Assignments
+              school={school}
+              group={gid}
+              learners={detail.learners}
+            />
+          ) : section === 'advies' ? (
+            <Advice school={school} group={gid} />
+          ) : section === 'observaties' ? (
+            <section className="ki-card">
+              <h3>Observaties per cursist</h3>
+              <p>
+                Kies een cursist om de volledige historie te bekijken of een
+                nieuwe observatie toe te voegen.
+              </p>
+              <Learners learners={detail.learners} go={go} />
+            </section>
+          ) : (
+            <>
+              <Learners learners={detail.learners} go={go} />
+              <Link
+                prefetch={false}
+                className="primary-button ki-advice"
+                href={go('advies')}
+              >
+                Wat heeft mijn groep morgen nodig?
+              </Link>
+            </>
+          ))}
     </>
   );
 }

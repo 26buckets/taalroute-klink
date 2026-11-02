@@ -190,6 +190,11 @@ try {
           )
             prefetched.push(url.pathname);
         });
+        const matrixApiPaths = [];
+        page.on('request', (request) => {
+          const path = new URL(request.url()).pathname;
+          if (path.startsWith('/api/inzicht/')) matrixApiPaths.push(path);
+        });
         const start = performance.now();
         const document = await page.goto(
           `${base}/inzicht/klassen/${org}:klas/matrix?school=${org}`,
@@ -199,6 +204,11 @@ try {
         assert.equal(await page.locator('.ki-table tbody tr').count(), 30);
         assert.equal(await page.locator('.ki-table thead th').count(), 21);
         const elapsed_ms = Math.round(performance.now() - start);
+        assert.deepEqual(
+          matrixApiPaths.sort(),
+          ['/api/inzicht/me', `/api/inzicht/classes/${org}:klas/matrix`].sort(),
+          'Matrix needs only identity and its own authorized data',
+        );
         assert.equal(
           prefetched.length,
           0,
@@ -230,16 +240,6 @@ try {
             .getEntriesByType('resource')
             .map((e) => e.toJSON()),
         }));
-        const classRequest = timing.resources.find(
-          (r) => new URL(r.name).pathname === '/api/inzicht/classes',
-        );
-        const matrixRequest = timing.resources.find((r) =>
-          new URL(r.name).pathname.endsWith('/matrix'),
-        );
-        assert(
-          matrixRequest.startTime < classRequest.responseEnd,
-          'Matrix must start before class details finish',
-        );
         assert(
           !timing.resources.some((r) =>
             new URL(r.name).pathname.includes('/package-exercise-browser-'),
