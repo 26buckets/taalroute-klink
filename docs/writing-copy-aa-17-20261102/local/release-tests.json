@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "name": "Word-audio and HT parent gates validate the exact-copy successor",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-writing-copy-aa-17-20261102.json: rejects publicationApproved",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-writing-copy-aa-17-20261102.json: rejects appearanceUnchanged",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-writing-copy-aa-17-20261102.json: rejects newWordModels",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-writing-copy-aa-17-20261102.json: rejects handwritingAdded",
+      "passed": true
+    },
+    {
+      "name": "docs/writing-copy-aa-17-20261102/source-revision.json: rejects unchanged",
+      "passed": true
+    },
+    {
+      "name": "docs/writing-copy-aa-17-20261102/backup.json: rejects fullReadback",
+      "passed": true
+    },
+    {
+      "name": "public/practice-content/klink-writing-20261101/ksw-aa-tn-001-005-exact-18560d9eae176c2b.json: rejects changed new or existing bank bytes",
+      "passed": true
+    },
+    {
+      "name": "public/practice-content/klink-writing-20261101/ksw-aa-tn-unique-c89d5fd205683ac5.json: rejects changed new or existing bank bytes",
+      "passed": true
+    }
+  ],
+  "parentGatePassed": true,
+  "negativeProofCases": 8
+}
