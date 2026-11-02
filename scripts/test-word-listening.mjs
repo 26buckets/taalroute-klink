@@ -89,9 +89,10 @@ test('Packed recordings require the exact byte range and retain a full-response 
   assert.deepEqual(Buffer.from(await (await fetchWordRecording(source, controller.signal)).arrayBuffer()), bytes);
   globalThis.fetch = async () => new Response(Buffer.concat([Buffer.alloc(12),bytes]));
   assert.deepEqual(Buffer.from(await (await fetchWordRecording(source, controller.signal)).arrayBuffer()), bytes);
+  let invalidResponse = 0;
   for (const response of [new Response(bytes,{status:206}),new Response(bytes,{status:206,headers:{'Content-Range':'bytes 0-3/4'}}),new Response('ID3short'),new Response(bytes,{status:404}),new Response(Buffer.alloc(bytes.length),{status:206,headers:{'Content-Range':`bytes 12-${11+bytes.length}/${12+bytes.length}`}})]) {
     globalThis.fetch = async () => response;
-    await assert.rejects(fetchWordRecording(source, controller.signal));
+    await assert.rejects(fetchWordRecording({...source, src: `/package-audio/word-listening-20261101/words-${(++invalidResponse).toString(16).padStart(16, '0')}.bin`}, controller.signal));
   }
   let fetched = false;
   globalThis.fetch = async () => { fetched = true; throw new Error('unexpected fetch'); };
