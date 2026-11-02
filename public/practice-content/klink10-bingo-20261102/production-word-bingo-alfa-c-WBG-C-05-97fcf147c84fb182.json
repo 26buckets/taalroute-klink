@@ -1,0 +1,998 @@
+{
+  "id": "production:word-bingo:alfa-c:WBG-C-05",
+  "exercises": [
+    {
+      "exerciseId": "WBG-C-05-001:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-001:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-001:turn:1",
+      "boardId": "WBG-C-05-001",
+      "sourceExerciseId": "WBG-C-05-001",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-fiets.wav",
+          "audioId": "klink-woord-fiets"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-001:cell:0",
+          "text": "bus",
+          "feedback": "Je hoort fiets, niet bus."
+        },
+        {
+          "cellId": "WBG-C-05-001:cell:1",
+          "text": "fiets",
+          "feedback": "Je hoort fiets."
+        },
+        {
+          "cellId": "WBG-C-05-001:cell:2",
+          "text": "auto",
+          "feedback": "Je hoort fiets, niet auto."
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-05-001:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-001:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-001:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-001:turn:2",
+      "boardId": "WBG-C-05-001",
+      "sourceExerciseId": "WBG-C-05-001",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-auto.wav",
+          "audioId": "klink-woord-auto"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-001:cell:0",
+          "text": "bus",
+          "feedback": "Je hoort auto, niet bus."
+        },
+        {
+          "cellId": "WBG-C-05-001:cell:1",
+          "text": "fiets",
+          "feedback": "Je hoort auto, niet fiets."
+        },
+        {
+          "cellId": "WBG-C-05-001:cell:2",
+          "text": "auto",
+          "feedback": "Je hoort auto."
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-001:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-001:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-001:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-001:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-001:turn:3",
+      "boardId": "WBG-C-05-001",
+      "sourceExerciseId": "WBG-C-05-001",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-bus.wav",
+          "audioId": "klink-woord-bus"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-001:cell:0",
+          "text": "bus",
+          "feedback": "Je hoort bus."
+        },
+        {
+          "cellId": "WBG-C-05-001:cell:1",
+          "text": "fiets",
+          "feedback": "Je hoort bus, niet fiets."
+        },
+        {
+          "cellId": "WBG-C-05-001:cell:2",
+          "text": "auto",
+          "feedback": "Je hoort bus, niet auto."
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-001:cell:1",
+        "WBG-C-05-001:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-001:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-002:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-002:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-002:turn:1",
+      "boardId": "WBG-C-05-002",
+      "sourceExerciseId": "WBG-C-05-002",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1577.mp3",
+          "audioId": "TL1577"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-002:cell:0",
+          "text": "trein"
+        },
+        {
+          "cellId": "WBG-C-05-002:cell:1",
+          "text": "tram"
+        },
+        {
+          "cellId": "WBG-C-05-002:cell:2",
+          "text": "boot"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-05-002:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-002:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-002:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-002:turn:2",
+      "boardId": "WBG-C-05-002",
+      "sourceExerciseId": "WBG-C-05-002",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-boot.wav",
+          "audioId": "klink-woord-boot"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-002:cell:0",
+          "text": "trein"
+        },
+        {
+          "cellId": "WBG-C-05-002:cell:1",
+          "text": "tram"
+        },
+        {
+          "cellId": "WBG-C-05-002:cell:2",
+          "text": "boot"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-002:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-002:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-002:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-002:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-002:turn:3",
+      "boardId": "WBG-C-05-002",
+      "sourceExerciseId": "WBG-C-05-002",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-trein.wav",
+          "audioId": "klink-woord-trein"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-002:cell:0",
+          "text": "trein"
+        },
+        {
+          "cellId": "WBG-C-05-002:cell:1",
+          "text": "tram"
+        },
+        {
+          "cellId": "WBG-C-05-002:cell:2",
+          "text": "boot"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-002:cell:1",
+        "WBG-C-05-002:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-002:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-003:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-003:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-003:turn:1",
+      "boardId": "WBG-C-05-003",
+      "sourceExerciseId": "WBG-C-05-003",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1451.mp3",
+          "audioId": "TL1451"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-003:cell:0",
+          "text": "halte"
+        },
+        {
+          "cellId": "WBG-C-05-003:cell:1",
+          "text": "station"
+        },
+        {
+          "cellId": "WBG-C-05-003:cell:2",
+          "text": "kaart"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-05-003:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-003:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-003:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-003:turn:2",
+      "boardId": "WBG-C-05-003",
+      "sourceExerciseId": "WBG-C-05-003",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0746.mp3",
+          "audioId": "TL0746"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-003:cell:0",
+          "text": "halte"
+        },
+        {
+          "cellId": "WBG-C-05-003:cell:1",
+          "text": "station"
+        },
+        {
+          "cellId": "WBG-C-05-003:cell:2",
+          "text": "kaart"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-003:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-003:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-003:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-003:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-003:turn:3",
+      "boardId": "WBG-C-05-003",
+      "sourceExerciseId": "WBG-C-05-003",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1087.mp3",
+          "audioId": "TL1087"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-003:cell:0",
+          "text": "halte"
+        },
+        {
+          "cellId": "WBG-C-05-003:cell:1",
+          "text": "station"
+        },
+        {
+          "cellId": "WBG-C-05-003:cell:2",
+          "text": "kaart"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-003:cell:1",
+        "WBG-C-05-003:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-003:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-004:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-004:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-004:turn:1",
+      "boardId": "WBG-C-05-004",
+      "sourceExerciseId": "WBG-C-05-004",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0702.mp3",
+          "audioId": "TL0702"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-004:cell:0",
+          "text": "kaartje"
+        },
+        {
+          "cellId": "WBG-C-05-004:cell:1",
+          "text": "overstappen"
+        },
+        {
+          "cellId": "WBG-C-05-004:cell:2",
+          "text": "centrum"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-05-004:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-004:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-004:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-004:turn:2",
+      "boardId": "WBG-C-05-004",
+      "sourceExerciseId": "WBG-C-05-004",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-centrum.wav",
+          "audioId": "klink-woord-centrum"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-004:cell:0",
+          "text": "kaartje"
+        },
+        {
+          "cellId": "WBG-C-05-004:cell:1",
+          "text": "overstappen"
+        },
+        {
+          "cellId": "WBG-C-05-004:cell:2",
+          "text": "centrum"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-004:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-004:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-004:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-004:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-004:turn:3",
+      "boardId": "WBG-C-05-004",
+      "sourceExerciseId": "WBG-C-05-004",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1554.mp3",
+          "audioId": "TL1554"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-004:cell:0",
+          "text": "kaartje"
+        },
+        {
+          "cellId": "WBG-C-05-004:cell:1",
+          "text": "overstappen"
+        },
+        {
+          "cellId": "WBG-C-05-004:cell:2",
+          "text": "centrum"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-004:cell:1",
+        "WBG-C-05-004:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-004:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-005:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-005:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-005:turn:1",
+      "boardId": "WBG-C-05-005",
+      "sourceExerciseId": "WBG-C-05-005",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-rechts.wav",
+          "audioId": "klink-woord-rechts"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-005:cell:0",
+          "text": "links"
+        },
+        {
+          "cellId": "WBG-C-05-005:cell:1",
+          "text": "rechts"
+        },
+        {
+          "cellId": "WBG-C-05-005:cell:2",
+          "text": "lopen"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-05-005:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-005:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-005:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-005:turn:2",
+      "boardId": "WBG-C-05-005",
+      "sourceExerciseId": "WBG-C-05-005",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0893.mp3",
+          "audioId": "TL0893"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-005:cell:0",
+          "text": "links"
+        },
+        {
+          "cellId": "WBG-C-05-005:cell:1",
+          "text": "rechts"
+        },
+        {
+          "cellId": "WBG-C-05-005:cell:2",
+          "text": "lopen"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-005:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-005:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-005:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-005:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-005:turn:3",
+      "boardId": "WBG-C-05-005",
+      "sourceExerciseId": "WBG-C-05-005",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0883.mp3",
+          "audioId": "TL0883"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-005:cell:0",
+          "text": "links"
+        },
+        {
+          "cellId": "WBG-C-05-005:cell:1",
+          "text": "rechts"
+        },
+        {
+          "cellId": "WBG-C-05-005:cell:2",
+          "text": "lopen"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-005:cell:1",
+        "WBG-C-05-005:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-005:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-006:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-006:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-006:turn:1",
+      "boardId": "WBG-C-05-006",
+      "sourceExerciseId": "WBG-C-05-006",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-bus.wav",
+          "audioId": "klink-woord-bus"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-006:cell:0",
+          "text": "vertrekken"
+        },
+        {
+          "cellId": "WBG-C-05-006:cell:1",
+          "text": "bus"
+        },
+        {
+          "cellId": "WBG-C-05-006:cell:2",
+          "text": "station"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-05-006:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-006:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-006:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-006:turn:2",
+      "boardId": "WBG-C-05-006",
+      "sourceExerciseId": "WBG-C-05-006",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1451.mp3",
+          "audioId": "TL1451"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-006:cell:0",
+          "text": "vertrekken"
+        },
+        {
+          "cellId": "WBG-C-05-006:cell:1",
+          "text": "bus"
+        },
+        {
+          "cellId": "WBG-C-05-006:cell:2",
+          "text": "station"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-006:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-006:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-05-006:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-05-006:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-05-006:turn:3",
+      "boardId": "WBG-C-05-006",
+      "sourceExerciseId": "WBG-C-05-006",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1737.mp3",
+          "audioId": "TL1737"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-05-006:cell:0",
+          "text": "vertrekken"
+        },
+        {
+          "cellId": "WBG-C-05-006:cell:1",
+          "text": "bus"
+        },
+        {
+          "cellId": "WBG-C-05-006:cell:2",
+          "text": "station"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-05-006:cell:1",
+        "WBG-C-05-006:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-05-006:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    }
+  ]
+}

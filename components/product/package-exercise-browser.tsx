@@ -1122,7 +1122,7 @@ function SequenceSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHe
 }
 
 function BoardSurface({ exercise, onAudio, onFinish, canAnswer }: SurfaceProps & { canAnswer: boolean }) {
-  const cells = asArray<{ cellId: string; text?: string; image?: ExerciseImage }>(exercise.cells);
+  const cells = asArray<{ cellId: string; text?: string; image?: ExerciseImage; feedback?: string }>(exercise.cells);
   const marked = asArray<string>(exercise.markedCellIds);
   const targetId = asString(asRecord(exercise.answer).correctCellId);
   const [selected, setSelected] = useState('');
@@ -1130,7 +1130,7 @@ function BoardSurface({ exercise, onAudio, onFinish, canAnswer }: SurfaceProps &
   function chooseCell(cellId: string) {
     if (!canAnswer || complete || marked.includes(cellId)) return;
     setSelected(cellId);
-    onFinish(cellId, cellId === targetId, cellId === targetId ? marked.length + 1 === cells.length ? 'De kaart is vol!' : 'Goed. Luister naar het volgende woord.' : 'Luister opnieuw. Kies een ander vak.');
+    onFinish(cellId, cellId === targetId, cells.find(cell => cell.cellId === cellId)?.feedback ?? (cellId === targetId ? marked.length + 1 === cells.length ? 'De kaart is vol!' : 'Goed. Luister naar het volgende woord.' : 'Luister opnieuw. Kies een ander vak.'));
   }
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><p className="cp-round-progress">{marked.length + (complete ? 1 : 0)} / {cells.length}</p><div className="cp-board-grid">{cells.map(cell => {
     const done = marked.includes(cell.cellId) || (complete && cell.cellId === selected);
