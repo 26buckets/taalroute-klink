@@ -16,7 +16,7 @@ export function MotionFeedback() {
     const source = (event: Event) => {
       releaseAudio();
       const audio = (event as CustomEvent<HTMLAudioElement>).detail;
-      const control = clicked?.matches('[data-practice-listen], [aria-label^="Luister"], .cp-sound-play, .cp-sound-word') || clicked?.querySelector('.lucide-volume-2')
+      const control = audio.dataset.wordListening === 'true' ? null : clicked?.matches('[data-practice-listen], [aria-label^="Luister"], .cp-sound-play, .cp-sound-word') || clicked?.querySelector('.lucide-volume-2')
         ? clicked : document.querySelector<HTMLElement>('[data-practice-listen]');
       const active = () => { if (control?.isConnected) control.dataset.audioActive = 'true'; };
       const clear = () => { control?.removeAttribute('data-audio-active'); };

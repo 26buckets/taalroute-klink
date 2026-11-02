@@ -5,8 +5,10 @@ import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import ts from 'typescript';
 import {renderToStaticMarkup} from 'react-dom/server';
-const source=readFileSync('components/product/grammar-instruction-example.tsx','utf8');
-const js=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.ESNext}}).outputText.replace('"react/jsx-runtime"',JSON.stringify(pathToFileURL(resolve('node_modules/react/jsx-runtime.js')).href));
+const fileUrl=file=>pathToFileURL(resolve(file)).href;
+const compile=file=>ts.transpileModule(readFileSync(file,'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.ESNext}}).outputText.replace('"react/jsx-runtime"',JSON.stringify(fileUrl('node_modules/react/jsx-runtime.js'))).replaceAll("from 'react'",'from '+JSON.stringify(fileUrl('node_modules/react/index.js'))).replace(/from ['"]@\/lib\/([^'"]+)['"]/g,(_,name)=>'from '+JSON.stringify(fileUrl('lib/'+name+'.ts')));
+const child='data:text/javascript;base64,'+Buffer.from(compile('components/product/word-audio-text.tsx')).toString('base64');
+const js=compile('components/product/grammar-instruction-example.tsx').replace("'./word-audio-text'",JSON.stringify(child));
 const {renderGrammarInstructionExample:render}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
 const items=JSON.parse(readFileSync('data/klink-imported-practice.json')).items;
 const words=s=>s.replaceAll('&#x27;',"'").replaceAll('&amp;','&').match(/[\p{L}\p{N}]+/gu).join(' ');
@@ -20,7 +22,7 @@ void test('All 89 numbered grammar instructions keep every source word, number a
   const n=(phase.learnerText.at(-1).match(/^\d+\. /gm)||[]).length;
   assert.equal((html.match(/class="cp-instruction-step"/g)||[]).length,n,item.id);
   assert.equal((html.match(/class="cp-instruction-number"/g)||[]).length,n,item.id);
-  assert(!html.includes('<button'));assert(!html.includes('<details'));assert(!html.includes('hidden'));
+  assert(!/<button(?![^>]*class="cp-inline-word")/.test(html));assert(!html.includes('<details'));assert(!html.includes('hidden'));
  }
  assert.equal(count,89);assert.deepEqual(levels,{A1:23,A2:39,B1:27});
 });
@@ -31,5 +33,5 @@ void test('Reading texts, short Alfa sources and unsupported numbering use the u
 });
 void test('Times and exercise examples remain complete, and application instructions stay separate',()=>{
  const text=['Een afspraak','De les is om 18.00 uur. Je komt op tijd.','1. Lees: De les begint om 18.00 uur.\n2. Schrijf de tijd.\nToepassing: Vraag hoe laat de les begint.'];
- const html=renderToStaticMarkup(render({kind:'grammar',texts:text}));assert(html.includes('De les begint om 18.00 uur.'));assert(html.includes('aria-label="Toepassing"'));
+ const html=renderToStaticMarkup(render({kind:'grammar',texts:text}));assert(words(html.replace(/<[^>]+>/g,' ')).includes('De les begint om 18 00 uur'));assert(html.includes('aria-label="Toepassing"'));
 });

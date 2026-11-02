@@ -12,6 +12,11 @@ function useSoundPlayback() {
   const [playing, setPlaying] = useState<string>();
   const [error, setError] = useState(false);
   const playback = useRef(0);
+  useEffect(() => {
+    const interrupt = () => { playback.current++; setPlaying(undefined); setError(false); };
+    window.addEventListener('klink-word-audio-start', interrupt);
+    return () => window.removeEventListener('klink-word-audio-start', interrupt);
+  }, []);
   useEffect(() => () => { playback.current++; stopMedia(); }, []);
   const stop = useCallback(() => { playback.current++; stopMedia(); setPlaying(undefined); setError(false); }, []);
   async function listen(source: string, playbackRate?: number) {

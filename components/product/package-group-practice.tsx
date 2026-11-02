@@ -1,6 +1,7 @@
 'use client';
 import { LearnerExerciseInfo } from './learner-exercise-info';
 import { usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
+import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { recordRoundSteps } from '@/lib/round-progress';
 import { RoundProgressNotice } from './round-progress';
 
@@ -156,6 +157,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
   useEffect(() => { if (result === 'right' && !playing && row.current?.closest('[data-practice-keyboard="true"]')) row.current.focus({ preventScroll: true }); }, [result, playing]);
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
+  useWordListeningHelp(row, phase => { if (phase === 'end' || phase === 'browse') return; if (phase === 'request') metrics.current.helpUsed = true; playback.current?.abort(); setPlaying(false); });
   const model = exercise.componentId === 'ALF-CMP-001';
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
   function finish(answer: string, correct: boolean) {
@@ -194,10 +196,19 @@ function BuildWorksheet({ showTitle, exercises, onAudio, onAttempt, initialId, o
   const [instructionError, setInstructionError] = useState(false);
   const [instructionPlaying, setInstructionPlaying] = useState(false);
   const keyboard = usePracticeKeyboard({ busy: instructionPlaying });
+  const instructionPlayback = useRef<AbortController | null>(null);
+  useWordListeningHelp(keyboard.ref, phase => { if (phase === 'end' || phase === 'browse') return; instructionPlayback.current?.abort(); setInstructionPlaying(false); });
+  useEffect(() => () => instructionPlayback.current?.abort(), []);
   useEffect(() => { keyboard.ref.current?.querySelector<HTMLElement>('[data-practice-item]')?.focus({ preventScroll: true }); }, [page, keyboard.ref]);
   return <section {...keyboard} className="cp-word-worksheet cp-page-workspace" aria-label="Meer woorden maken">
     {showTitle && <h2>Meer woorden maken</h2>}
-    {isInstructionAudioEnabled(instruction) && <button className="secondary-button" onClick={async () => { setInstructionPlaying(true); try { setInstructionError(await onAudio(instruction!, { waitUntilEnd: true }) === false); } catch { setInstructionError(true); } finally { setInstructionPlaying(false); } }}><Volume2 />Luister naar de opdracht</button>}
+    {isInstructionAudioEnabled(instruction) && <button data-practice-listen className="secondary-button" onClick={async () => {
+      instructionPlayback.current?.abort(); const controller = new AbortController(); instructionPlayback.current = controller;
+      setInstructionPlaying(true);
+      try { const played = await onAudio(instruction!, { waitUntilEnd: true, signal: controller.signal }); if (!controller.signal.aborted) setInstructionError(played === false); }
+      catch { if (!controller.signal.aborted) setInstructionError(true); }
+      finally { if (instructionPlayback.current === controller) setInstructionPlaying(false); }
+    }}><Volume2 />Luister naar de opdracht</button>}
     {instructionError && <p role="alert">Het geluid lukt niet. Probeer opnieuw.</p>}
     <div className="cp-worksheet-grid">{rows.map(exercise => <WorksheetRow key={exercise.exerciseId} completed={done.includes(exercise.exerciseId)} exercise={exercise} onAudio={onAudio} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
     <button data-practice-previous aria-keyshortcuts="ArrowLeft" className="secondary-button" disabled={page === 0 || instructionPlaying} onClick={() => { stopMedia(); setPage(page - 1); onPosition(exercises[(page - 1) * 4].exerciseId); }}><ArrowLeft />Vorige</button>
@@ -215,6 +226,7 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { com
   useEffect(() => { if (result === 'right' && !playing && row.current?.closest('[data-practice-keyboard="true"]')) row.current.focus({ preventScroll: true }); }, [result, playing]);
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
+  useWordListeningHelp(row, phase => { if (phase === 'end' || phase === 'browse') return; if (phase === 'request') metrics.current.helpUsed = true; playback.current?.abort(); setPlaying(false); });
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
   return <ExerciseAudioProvider><article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
     <ExerciseAudioSlot info={<LearnerExerciseInfo exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; }} />} />

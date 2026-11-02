@@ -1,8 +1,10 @@
 import type { AudioOptions } from './package-content';
 import { isWithdrawnAudio } from './audio-policy.ts';
+import { repairedAudioSource } from './audio-repairs.ts';
 
 let activeAudio: HTMLAudioElement | undefined;
 let cancelPlayback: (() => void) | undefined;
+let audioUnlocked = false;
 
 export const DEFAULT_AUDIO_RATE = 0.85;
 export const SLOW_AUDIO_RATE = 0.65;
@@ -50,13 +52,25 @@ export function stopMedia() {
   activeAudio?.pause();
 }
 
+export function unlockMedia() {
+  stopMedia();
+  if (audioUnlocked) return Promise.resolve();
+  const audio = activeAudio ??= new Audio();
+  audio.src = '/package-audio/word-listening-20261101/listen-ready.wav';
+  return audio.play().then(() => { audioUnlocked = true; });
+}
+
 export function playMedia(source: string, options: AudioOptions = {}): Promise<boolean> {
   stopMedia();
+  if (isWithdrawnAudio(source)) return Promise.resolve(false);
+  source = repairedAudioSource(source);
   if (isWithdrawnAudio(source)) return Promise.resolve(false);
   if (options.signal?.aborted) return Promise.resolve(false);
   // Reuse the element unlocked by the learner's gesture, including on mobile.
   const audio = activeAudio ??= new Audio();
   audio.src = source;
+  audio.dataset.klinkSource = options.wordSourceKey ?? source;
+  audio.dataset.wordListening = options.wordSourceKey ? 'true' : 'false';
   if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('klink-audio-source', { detail: audio }));
   applyDefaultAudioRate(audio, options.playbackRate);
   return new Promise((resolve, reject) => {
@@ -91,6 +105,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
     options.signal?.addEventListener('abort', cancel, { once: true });
     audio.play().then(() => {
       if (settled) return;
+      audioUnlocked = true;
       options.onStarted?.();
       if (options.onProgress) progress();
       if (!options.waitUntilEnd) finish(true);

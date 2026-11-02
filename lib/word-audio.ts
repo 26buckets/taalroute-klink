@@ -2,19 +2,20 @@ import { allPackageWords, type PackageWord } from './package-content.ts';
 import { isWithdrawnAudio } from './audio-policy.ts';
 import supplementalAudio from '../data/klink-inline-word-audio.json' with { type: 'json' };
 import publishedAudio from '../data/klink-word-audio-publication-20261101.json' with { type: 'json' };
+import { normalizeSpokenWord, spokenWords } from './word-listening-text.ts';
 import reviewedAudio from '../data/klink-word-audio-twenty-reviewed-20261101.json' with { type: 'json' };
 
 type WordAudioBinding = { src?: string; status: 'available' | 'missing' | 'blocked' | 'ambiguous'; reviewOpen?: boolean; localOnly?: boolean };
 type SupplementalAudio = { word: string; src: string; voiceId: string; role: string; metadataApproved: boolean; localOnly: boolean; humanReview?: string };
 
-export const wordAudioKey = (text: string) => text.normalize('NFC').toLocaleLowerCase('nl').replaceAll('’', "'");
+export const wordAudioKey = normalizeSpokenWord;
 export function wordAudioParts(text: string) {
   const parts: { text: string; word?: string; start: number }[] = [];
   let at = 0;
-  for (const match of text.matchAll(/[\p{L}\p{M}\p{N}]+(?:['’-][\p{L}\p{M}\p{N}]+)*/gu)) {
-    if (match.index > at) parts.push({ text: text.slice(at, match.index), start: at });
-    parts.push({ text: match[0], word: wordAudioKey(match[0]), start: match.index });
-    at = match.index + match[0].length;
+  for (const word of spokenWords(text)) {
+    if (word.start > at) parts.push({ text: text.slice(at, word.start), start: at });
+    parts.push({ text: word.text, word: word.key, start: word.start });
+    at = word.end;
   }
   if (at < text.length) parts.push({ text: text.slice(at), start: at });
   return parts;

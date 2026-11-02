@@ -8,6 +8,7 @@ import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
 
 import { useId } from 'react';
 import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
+import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { wordWithArticle } from '@/lib/word-articles';
 
 import { DialogueSurface, type DialogueControls } from './dialogue-surface';
@@ -186,6 +187,7 @@ function PackageExercisePlayer({
   const [paceSeconds, setPaceSeconds] = useState(0);
   const [pageVisible, setPageVisible] = useState(true);
   const [audioPending, setAudioPending] = useState(false);
+  const [wordAudioPending, setWordAudioPending] = useState(false);
   const [instructionFailed, setInstructionFailed] = useState(false);
   const [speakingOptionId, setSpeakingOptionId] = useState('');
   const playback = useRef<AbortController | null>(null);
@@ -247,11 +249,21 @@ function PackageExercisePlayer({
   const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);
   const firstLetterGuide = exercise && hasFirstLetterGuide(exercise, guided);
   const manualAdvance = exercise?.mode === 'connected-dialogue' || exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));
-  const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !keyboardMode && !holdFeedback && !audioPending && !recording;
+  const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !keyboardMode && !holdFeedback && !audioPending && !wordAudioPending && !recording;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   const keyboard = usePracticeKeyboard({ enabled: !exerciseMenuOpen, busy: audioPending || recording, allowAudioNext: result === 'right' && !recording,
     onUse: () => { keyboardUsed.current = true; setKeyboardMode(true); },
     onListen: () => { const source = stimulus ?? findAudioSource(exercise); if (source) void listen(source); },
+  });
+  useWordListeningHelp(keyboard.ref, phase => {
+    if (phase === 'browse') { if (result === 'right') setHoldFeedback(true); return; }
+    if (phase === 'end') { setWordAudioPending(false); return; }
+    if (phase === 'request') metrics.current.helpUsed = true;
+    setWordAudioPending(phase === 'start');
+    playback.current?.abort();
+    setAudioPending(false);
+    setSpeakingOptionId('');
+    if (phase === 'request' && result === 'right') setHoldFeedback(true);
   });
   useEffect(() => { advancing.current = false; }, [exerciseId, completed]);
   useEffect(() => {
@@ -390,6 +402,7 @@ function PackageExercisePlayer({
   }
 
   function resetExercise() {
+    setWordAudioPending(false);
     setReturnedToUnfinished(false);
     resetResult();
     setHeard(false);
@@ -661,7 +674,7 @@ function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer 
   const showGapDemo = showDemo && gapLetter && gapParts?.length === 2;
   useEffect(() => { if (showDemo) scrollDemoIntoView(choices.current); }, [showDemo]);
   useEffect(() => { if (demoAvailable && !showDemo && canAnswer) choices.current?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true }); }, [demoAvailable, showDemo, canAnswer]);
-  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{showDemo && <p className="cp-letter-cue">Kijk eerst</p>}{maskedWord && (showGapDemo ? <figure className="cp-missing-word cp-gap-demo" aria-label={`Voorbeeld: ${gapLetter} vult de lege plek. Het woord is ${gapParts.join(gapLetter)}.`}><span>{maskedWord}</span><ArrowRight aria-hidden="true" /><span>{gapParts[0]}<mark><b className="cp-demo-arrival">{gapLetter}</b></mark>{gapParts[1]}</span></figure> : <p className="cp-missing-word" aria-label={`Woord met een lege plek: ${maskedWord}`}>{maskedWord}</p>)}{exercise.prompt?.image && <ExerciseImageView optional image={exercise.prompt.image} />}<div className="cp-choice-grid" ref={choices}>{options.map((option) => <button key={option.id} disabled={showDemo || !canAnswer} className={(showDemo ? correct.includes(option.id) : selected === option.id) ? 'selected' : ''} data-speaking={speakingOptionId === option.id ? 'true' : undefined} aria-pressed={showDemo ? correct.includes(option.id) : selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} word={option.label ?? wordLabels.get(option.id)} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}{showDemo && correct.includes(option.id) && <Hand className="cp-demo-hand" aria-hidden="true" />}{Boolean(option.audio) && <Volume2 className="cp-option-audio" aria-hidden="true" />}</button>)}</div>{demoAvailable && (showDemo ? <button data-practice-check className="primary-button" disabled={!canAnswer} onClick={() => { onHelp?.(); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" disabled={correct.includes(selected)} onClick={() => { onHelp?.(); setShowDemo(true); }}>Kijk nog eens</button>)}</>;
+  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{showDemo && <p className="cp-letter-cue">Kijk eerst</p>}{maskedWord && (showGapDemo ? <figure className="cp-missing-word cp-gap-demo" aria-label={`Voorbeeld: ${gapLetter} vult de lege plek. Het woord is ${gapParts.join(gapLetter)}.`}><span data-word-listening-units="sound">{maskedWord}</span><ArrowRight aria-hidden="true" /><span>{gapParts[0]}<mark><b className="cp-demo-arrival">{gapLetter}</b></mark>{gapParts[1]}</span></figure> : <p className="cp-missing-word" aria-label={`Woord met een lege plek: ${maskedWord}`}>{maskedWord}</p>)}{exercise.prompt?.image && <ExerciseImageView optional image={exercise.prompt.image} />}<div className="cp-choice-grid" ref={choices} data-word-listening-units={exercise.mode === 'missing-grapheme' ? 'sound' : undefined}>{options.map((option) => <button key={option.id} disabled={showDemo || !canAnswer} className={(showDemo ? correct.includes(option.id) : selected === option.id) ? 'selected' : ''} data-speaking={speakingOptionId === option.id ? 'true' : undefined} aria-pressed={showDemo ? correct.includes(option.id) : selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} word={option.label ?? wordLabels.get(option.id)} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}{showDemo && correct.includes(option.id) && <Hand className="cp-demo-hand" aria-hidden="true" />}{Boolean(option.audio) && <Volume2 className="cp-option-audio" aria-hidden="true" />}</button>)}</div>{demoAvailable && (showDemo ? <button data-practice-check className="primary-button" disabled={!canAnswer} onClick={() => { onHelp?.(); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" disabled={correct.includes(selected)} onClick={() => { onHelp?.(); setShowDemo(true); }}>Kijk nog eens</button>)}</>;
   return nested ? <div className="cp-linked-choice">{content}</div> : <section className={`cp-task-card${demoAvailable ? ' cp-beginner-choice' : ''}${demoAvailable && exercise.mode === 'missing-grapheme' ? ' cp-gap-choice' : ''}${showDemo ? ' cp-exercise-demo' : ''}`} aria-label={showDemo ? 'Voorbeeld' : undefined}>{content}</section>;
 }
 
@@ -669,7 +682,7 @@ function ContrastSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps 
   const [selected, setSelected] = useState('');
   const choices = asArray<ChoiceOption>(exercise.choices);
   const answer = asRecord(exercise.answer);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-large-options">{choices.map((choice) => <button key={choice.id} className={selected === choice.id ? 'selected' : ''} aria-pressed={selected === choice.id} onClick={() => { setSelected(choice.id); onReset(); }}>{choice.grapheme ?? choice.label ?? choice.id}</button>)}</div><button data-practice-check className="primary-button" disabled={!selected} onClick={() => onFinish(selected, selected === answer.correctSoundId)}>Controleer<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-large-options" data-word-listening-units="sound">{choices.map((choice) => <button key={choice.id} className={selected === choice.id ? 'selected' : ''} aria-pressed={selected === choice.id} onClick={() => { setSelected(choice.id); onReset(); }}>{choice.grapheme ?? choice.label ?? choice.id}</button>)}</div><button data-practice-check className="primary-button" disabled={!selected} onClick={() => onFinish(selected, selected === answer.correctSoundId)}>Controleer<Check /></button></section>;
 }
 
 function MatchingSurface({ exercise, onAudio, onFinish, onReset, demoAvailable = false, showDemoInitially = false, onHelp }: SurfaceProps & { onReset: () => void; demoAvailable?: boolean; showDemoInitially?: boolean; onHelp?: () => void }) {

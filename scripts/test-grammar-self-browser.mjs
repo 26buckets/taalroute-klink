@@ -10,7 +10,7 @@ for(const [engineName,engine]of Object.entries({chromium,webkit})){
  const browser=await engine.launch();try{
  for(const width of [390,1366])for(const theme of ['light','dark']){
  const page=await browser.newPage({viewport:{width,height:950},colorScheme:theme});page.setDefaultTimeout(15000);page.on('pageerror',e=>errors.push(e.message));
- await page.addInitScript(theme=>{localStorage.setItem('taalroute-klink-appearance-v1',theme);localStorage.setItem('grammar-preserve','old-answer');window.__played=[];window.Audio=class extends EventTarget{constructor(src){super();this.src=src;} play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();}pause(){clearTimeout(this.timer)}};},theme);
+ await page.addInitScript(theme=>{localStorage.setItem('taalroute-klink-appearance-v1',theme);localStorage.setItem('grammar-preserve','old-answer');window.__played=[];window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.dataset={};} play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();}pause(){clearTimeout(this.timer)}};},theme);
  for(const {activity,c}of samples){
   assert(c);await page.goto(base+'/'+chapterHash({chapter:'grammar',activity,collection:c.id,level:c.level,help:'practice'}));await ready(page);
   assert.equal(await page.getByRole('button',{name:'Begin samen',exact:true}).count(),0);

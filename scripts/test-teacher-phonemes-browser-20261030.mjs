@@ -9,7 +9,12 @@ for(const [engine,type] of Object.entries({chromium,webkit})){
  for(const width of [1366,390]){
   const page=await browser.newPage({viewport:{width,height:950}});page.setDefaultTimeout(15000);page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>{window.__soundEvents=[];const original=Reflect.get(HTMLMediaElement.prototype,'play');HTMLMediaElement.prototype.play=function(){this.addEventListener('ended',()=>window.__soundEvents.push({src:this.currentSrc,rate:this.playbackRate,duration:this.duration}),{once:true});return original.call(this);};});
-  await page.goto(base+'/#teacher/plus',{waitUntil:'domcontentloaded'});await page.getByRole('button',{name:'Les openen: mat',exact:true}).click();await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button',{name:'3 Klanken',exact:true}).click();
+  await page.goto(base+'/#teacher/plus',{waitUntil:'domcontentloaded'});await page.getByRole('button',{name:'Les openen: mat',exact:true}).click();
+  await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button',{name:'2 Luisteren',exact:true}).click();
+  await page.locator('.kpd-stage [data-practice-listen]').click();
+  await page.waitForFunction(()=>window.__soundEvents.some(e=>e.src.endsWith('/package-audio/taalroute/klink-woord-mat.wav')));
+  checks.push({engine,width,nativeWordCommand:true,expectedWord:'mat'});
+  await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button',{name:'3 Klanken',exact:true}).click();
   for(const id of ['m','a','t']){
    const button=page.locator('.kpd-stage').getByRole('button',{name:`Luister naar de klank ${id==='a'?'korte a':id}`,exact:true});await button.click();
    await page.waitForFunction(id=>window.__soundEvents.some(e=>e.src.endsWith(`/docent/${id}-20261030.mp3`)),id);

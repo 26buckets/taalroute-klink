@@ -532,6 +532,7 @@ export function TeacherClassroom({
   );
   const wordAudio = (
     <button
+      data-practice-listen
       className="primary-button"
       disabled={audio.status.word !== "ready"}
       onClick={() => void audio.listen("word")}

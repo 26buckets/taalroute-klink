@@ -1,4 +1,5 @@
 'use client';
+import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordDailyRounds } from '@/lib/alfa-c-round-progress';
@@ -44,6 +45,12 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
   const [chosen, setChosen] = useState<string[]>([]), [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
   const [busy, setBusy] = useState(false), [audioError, setAudioError] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null), current = useRef(record), playback = useRef(new AbortController());
+  const root = useRef<HTMLElement>(null);
+  useWordListeningHelp(root, phase => {
+    if (phase === 'end' || phase === 'browse') return;
+    if (phase === 'request') { current.current = { ...current.current, support: { ...current.current.support, content: current.current.support.content + 1 } }; onRecord(current.current); }
+    playback.current.abort(); stopMedia(); setBusy(false);
+  });
   useEffect(() => { heading.current?.focus({ preventScroll: true }); return () => { playback.current.abort(); stopMedia(); }; }, []);
   function support(kind: keyof Support) {
     current.current = { ...current.current, support: { ...current.current.support, [kind]: current.current.support[kind] + 1 } };
@@ -62,7 +69,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
     setChosen(response); setResult(current.current.last!.correct ? 'right' : 'wrong');
     support('feedback'); void play([current.current.last!.correct ? step.audio.G : step.audio.F]);
   }
-  return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-daily-step={step.id}>
+  return <section ref={root} className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-daily-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div></header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">

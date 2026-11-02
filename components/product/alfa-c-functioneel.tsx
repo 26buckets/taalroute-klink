@@ -1,4 +1,5 @@
 'use client';
+import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordFunctionalRounds } from '@/lib/alfa-c-round-progress';
 import { FunctionalResponseFields } from './alfa-c-response';
@@ -75,6 +76,8 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ tries: record?.tries ?? 0, helpUsed: record?.helpUsed ?? false });
   const title = useRef<HTMLHeadingElement>(null);
+  const root = useRef<HTMLElement>(null);
+  useWordListeningHelp(root, phase => { if (phase === 'end' || phase === 'browse') return; if (phase === 'request') metrics.current.helpUsed = true; playback.current?.abort(); stopMedia(); setBusy(false); });
   useEffect(() => {
     title.current?.focus({ preventScroll: true });
     document.querySelector('.learner-main')?.scrollTo({ top: 0 });
@@ -133,7 +136,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
     {step.presentation.filter(view => view.kind === 'audioOnly').map((view, n) => <p className="ac-task-context" key={n}>{view.text}</p>)}
     {step.dictationTexts.length > 0 && <div className="ac-dictation-controls">{step.dictationTexts.map((text, n) => <ExerciseListen key={n} inline={n > 0 || model} label={step.dictationTexts.length > 1 ? `Luister ${n + 1}` : step.id.endsWith('formulier-08') ? 'Luister naar het nummer' : 'Luister naar de zin'} disabled={busy} onClick={() => void play([{ role: 'target', text }], n)} />)}</div>}
   </div>;
-  return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-functional-step={step.id}>
+  return <section ref={root} className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-functional-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head">
         <h2 ref={title} tabIndex={-1}>{step.screen}</h2>

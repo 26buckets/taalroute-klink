@@ -2,6 +2,7 @@
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordPilotRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import {
   ArrowLeft,
   ArrowRight,
@@ -239,6 +240,8 @@ function PilotPlayer({
   const metrics = useRef({ tries: 0, helpUsed: firstExample }),
     playback = useRef<AbortController | null>(null),
     title = useRef<HTMLHeadingElement>(null);
+  const root = useRef<HTMLElement>(null);
+  useWordListeningHelp(root, phase => { if (phase === 'end' || phase === 'browse') return; if (phase === 'request') metrics.current.helpUsed = true; playback.current?.abort(); stopMedia(); setBusy(false); });
   const participation = step.exercise.assessment === 'participation';
   useEffect(() => {
     title.current?.focus({ preventScroll: true });
@@ -311,6 +314,7 @@ function PilotPlayer({
   return (
     <section
       className="cp-exercise-browser is-mixed-round pilot-player"
+      ref={root}
       data-pilot-step={step.id}
     >
       <div className="cp-exercise-workspace">
