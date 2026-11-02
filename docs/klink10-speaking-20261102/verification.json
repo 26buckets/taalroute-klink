@@ -1,0 +1,26 @@
+{
+  "types": true,
+  "lint": true,
+  "coreTests": 4,
+  "wordAudioCoverage": true,
+  "missingWordAudio": 0,
+  "sourceReview": true,
+  "screensVisuallyReviewed": true,
+  "screens": [
+    "local/screens/chromium-390.png",
+    "local/screens/webkit-1280.png"
+  ],
+  "existingPublicBytesPreserved": true,
+  "humanListening": false,
+  "independentNT2Review": false,
+  "physicalDeviceTested": false,
+  "classroomTrial": false,
+  "newAudio": 11,
+  "newQuestions": 10,
+  "githubWorkflowFiles": [],
+  "publicationReady": true,
+  "speechStressVerified": true,
+  "specificClipHumanListening": true,
+  "humanApprovalEvidence": "pronunciation-review.json",
+  "testHarnessCorrections": "Full speech flows now use real audio. Existing recorder waits for target end, not preceding instruction. Broad old view matrix had an asynchronous toggle assertion; targeted 14 preference checks pass. No runtime change for test timing."
+}

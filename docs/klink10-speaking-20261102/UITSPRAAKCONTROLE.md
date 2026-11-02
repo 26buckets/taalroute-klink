@@ -1,0 +1,11 @@
+# Uitspraakcontrole — Nico, 2 november 2026
+
+Nico noemt appel (fruit) tegenover appèl als voorbeeld van een betekenis- en klemtoonverschil dat ElevenLabs correct moet onderscheiden. Dit is een kwaliteitsopdracht, geen wijziging van de goedgekeurde stemmen, betaalde limieten of beeldproductiestop.
+
+Leg vóór nieuwe generatie per dubbelzinnig woord de bronbetekenis, bedoelde klemtoon, eventuele andere uitspraak, de volledige contextzin en exacte voice-ID vast. Houd de geschreven cursistenbron apart van eventuele uitspraaksturing voor ElevenLabs. Gebruik voor het huidige Multilingual v2 uitsluitend ondersteunde uitspraaksturing; een fonetische tag of accent is op zichzelf geen bewijs dat de opname goed klinkt. Bewaar gebruikte uitspraakregels met model, stem, teksthash en opnamehash. Wissel niet globaal alle gelijkgeschreven woorden om: dezelfde spelling kan meerdere betekenissen hebben.
+
+Controleer de werkelijk gegenereerde opname op de bedoelde klanken, klemtoon en woordgrenzen. Alleen een juiste automatische transcriptie, correcte spelling, metadata of technisch afspelen bewijst geen juiste klemtoon. Registreer de gebruikte controle en beperkingen eerlijk. Een gemeld of aantoonbaar onzeker uitspraakcontrast blijft alleen voor de betreffende opname geblokkeerd tot er passende akoestische/luistercontrole is; herstel brongebonden en controleer de nieuwe opname opnieuw. Geen stilzwijgende menselijke luistergoedkeuring. Hergebruik aantoonbaar goede opnamen; geen brede hergeneratie.
+
+Lopende batch: SPK-AA-ZDZ-02 bevat “Ik wil een appel.” en bedoelt fruit: nadruk op de eerste lettergreep, niet de uitspraak appèl. Elf opnamen waren al gemaakt vóór deze aanvulling. Hun automatische transcriptie is exact, maar het specifieke klemtooncontrast is nog niet afzonderlijk bevestigd. Deze tien-reeks is nog niet gepubliceerd. Bestaande live-opnamen zijn niet op grond van dit voorbeeld blind vervangen.
+
+Controleer actuele officiële ElevenLabs-documentatie vóór het toevoegen van nieuwe uitspraaksturing. Normalisatie in lib/word-listening-text.ts behoudt accenten; de huidige losse sleutel appel verwijst naar /package-audio/taalroute/klink-woord-appel.wav. Er is in deze woordindex geen aparte appèl-opname. Dit bewijst niet dat alle gelijkgeschreven betekenissen auditief goed zijn.

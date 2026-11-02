@@ -940,7 +940,7 @@ function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onF
     } catch {
       stream.current?.getTracks().forEach(track => track.stop());
       stream.current = null;
-      if (mounted.current) setMessage('De microfoon werkt niet. Zeg het woord hardop. Tik daarna op Klaar.');
+      if (mounted.current) setMessage('De microfoon werkt niet. Zeg je antwoord hardop. Tik daarna op Klaar.');
     } finally {
       if (mounted.current) setRequesting(false);
     }

@@ -10,7 +10,7 @@ async function listen(page,row){
  const e=JSON.parse(read('public'+row.url)).exercises[0];
  await page.getByRole('button',{name:'Luister naar '+e.displayWord,exact:true}).first().click();
  await page.waitForFunction(()=>window.__modelAudio?.some(a=>!a.paused&&Number.isFinite(a.duration)));
- await page.waitForFunction(()=>window.__modelAudio?.at(-1)?.ended);
+ await page.waitForFunction(src=>window.__modelAudio?.some(a=>a.currentSrc.endsWith(src)&&a.ended),e.prompt.audio.src);
 }
 const trackModels=()=>{window.__modelAudio=[];window.addEventListener('klink-audio-source',e=>window.__modelAudio.push(e.detail));};
 const browser=await chromium.launch({channel:'chrome',args:['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']});
@@ -67,7 +67,7 @@ for(const engine of [chromium,webkit]){
   await page.addInitScript(trackModels);
   await page.addInitScript(()=>{Object.defineProperty(navigator,'mediaDevices',{value:{getUserMedia:async()=>{throw new DOMException('Denied','NotAllowedError');}},configurable:true});});
   const row=rows.find(r=>r.level==='a1');await page.goto(path(row));await page.locator('.cp-recorder').waitFor({timeout:60000});await listen(page,row);
-  await page.getByRole('button',{name:'Neem op',exact:true}).click();await page.getByText('De microfoon werkt niet. Zeg het woord hardop. Tik daarna op Klaar.',{exact:true}).waitFor();
+  await page.getByRole('button',{name:'Neem op',exact:true}).click();await page.getByText('De microfoon werkt niet. Zeg je antwoord hardop. Tik daarna op Klaar.',{exact:true}).waitFor();
   assert(!(await page.getByRole('button',{name:'Klaar',exact:true}).isDisabled()));
   await page.getByRole('button',{name:'Klaar',exact:true}).click();await page.locator('.cp-exercise-feedback.right').waitFor();assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Luister zelf of samen met je docent'));
   checks.push({engine:engine.name(),deniedMicrophoneFallback:true,participationOnly:true});

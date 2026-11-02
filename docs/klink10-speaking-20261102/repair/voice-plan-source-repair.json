@@ -1,0 +1,46 @@
+{
+  "application": "Klink",
+  "authorization": "Nico 2 November 2026 first-ten completion including necessary ElevenLabs audio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "7qdUFMklKPaaAVMsBTBt",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 100,
+  "buyExtraCredits": false,
+  "clips": [
+    {
+      "id": "k10sp-appel-fruit-repair-fc40508f431c",
+      "text": "Ik wil een appel.",
+      "title": "Ik wil een appel.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-speaking-20261102/k10sp-appel-fruit-repair-fc40508f431c.mp3",
+      "textSha256": "5117c856a41b547358f772533c762c85b2589dda2e8bfa32673a3e8ce8b05d1a",
+      "requestText": "Ik wil een APpel."
+    }
+  ],
+  "characters": 17,
+  "seed": 1,
+  "pronunciationRepair": {
+    "sourceId": "SPK-AA-ZDZ-02",
+    "meaning": "fruit",
+    "stress": "first syllable",
+    "requestSteering": "Capitalized AP only in generation request; learner text unchanged.",
+    "rejectedSha256": "af38cd9db052420336ebeeffdee32630b25319acf183f0b1ec9059f33f474164",
+    "humanApprovalRequiredForThisReplacement": true,
+    "docSource": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices.md",
+    "maxClipsThisAttempt": 1,
+    "publicationReady": false
+  }
+}
