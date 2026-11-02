@@ -1,0 +1,130 @@
+{
+  "prHead": "660b81f46e7928733768c2a54a610356a92c1a41",
+  "productionCommit": "629d1f243ee25ce227ff508bd87d138bf09487b7",
+  "remoteQueries": 0,
+  "personalDataRead": false,
+  "migrations": {
+    "production": {
+      "files": [
+        {
+          "name": "0001_inzicht.sql",
+          "sha256": "abc3508cfea85ad3b25873d3a103a02563be4be60725b41497e1b0df97938856"
+        },
+        {
+          "name": "0002_accounts.sql",
+          "sha256": "9ac935aeaaa338c58bfe13dd5a9da4080d3aeeed6ed4f32e8e205fd667c90e1e"
+        },
+        {
+          "name": "0003_observation_dimensions.sql",
+          "sha256": "70574a0cd4a2395ac3ec6948f9e769f0a9324cc45d150e7c85e67faeaaa60ef6"
+        },
+        {
+          "name": "0004_fixed_observations.sql",
+          "sha256": "c14b1688a800ddc3bc9368942ffbc35b6fe8cc9e5b0a11defa979cdda1495219"
+        },
+        {
+          "name": "0005_pilot_norms.sql",
+          "sha256": "c4db9aeeef0f7ddc7998329f33d3a9bc21ce84bc3c682a98e88db53676ded2e2"
+        },
+        {
+          "name": "0006_password_reset.sql",
+          "sha256": "20744eb4557919eee09f21d21b70be23e06dcedd2df524a51911ef608c265fc7"
+        }
+      ],
+      "tables": [
+        "insight_audit",
+        "insight_auth_limits",
+        "insight_class_teachers",
+        "insight_classes",
+        "insight_credentials",
+        "insight_enrolments",
+        "insight_invitations",
+        "insight_learners",
+        "insight_observation_sheets",
+        "insight_observations",
+        "insight_password_resets",
+        "insight_pilot_assessments",
+        "insight_school_memberships",
+        "insight_schools",
+        "insight_sessions",
+        "insight_users"
+      ],
+      "count": 16
+    },
+    "pr8": {
+      "files": [
+        {
+          "name": "0001_inzicht.sql",
+          "sha256": "4fde2d4604032169657047a549ca60f87df4eb9324c363c807c578afa03b25d6"
+        },
+        {
+          "name": "0002_school_attempts.sql",
+          "sha256": "7d86f14b288d5db3b2d2be34e824f71e7119f681f9aee62aaf051317eb54f8cc"
+        },
+        {
+          "name": "0003_staging_accounts.sql",
+          "sha256": "35e2972b12e89b9778717f16d4a1530ee403b21a5b92f7a36f965bc789ce290f"
+        },
+        {
+          "name": "0004_mfa.sql",
+          "sha256": "5a019ab8236b5dd76d6c2ed25761b7a6bb542bd399aa3b925608e19b80048872"
+        },
+        {
+          "name": "0005_processing_retries.sql",
+          "sha256": "ca3bf5e89b745846333efa1591b2f87f0bfe7cac3cfa76882665903b8da39217"
+        },
+        {
+          "name": "0006_original_observations.sql",
+          "sha256": "8df9f81e886bac7a8d3b3c401aa42f59e9c3896f9562064851e09260264afc78"
+        },
+        {
+          "name": "0007_learning_hours.sql",
+          "sha256": "aaf041a6d9431fc2c5b64a1b14950f05ef7ac9e9044ab2ce9dc226a4e9d3d47a"
+        }
+      ],
+      "tables": [
+        "account_links",
+        "approved_lesson_plans",
+        "assignment_recipients",
+        "assignments",
+        "audit_events",
+        "class_access_policies",
+        "content_versions",
+        "evidence_events",
+        "evidence_revocations",
+        "group_memberships",
+        "group_teachers",
+        "groups",
+        "inzicht_auth_events",
+        "inzicht_credentials",
+        "inzicht_mfa",
+        "inzicht_mfa_challenges",
+        "inzicht_mfa_recovery",
+        "inzicht_mfa_sessions",
+        "inzicht_outbox_retries",
+        "inzicht_rate_limits",
+        "inzicht_requests",
+        "inzicht_schema",
+        "inzicht_sessions",
+        "inzicht_write_guards",
+        "learning_hour_revisions",
+        "learning_hours",
+        "mastery_snapshots",
+        "memberships",
+        "observation_revisions",
+        "organizations",
+        "outbox_events",
+        "recommendation_previews",
+        "school_attempts",
+        "school_invites",
+        "school_learners",
+        "skill_definitions",
+        "source_observation_revisions",
+        "source_observations",
+        "teacher_observations",
+        "users"
+      ],
+      "count": 40
+    }
+  }
+}

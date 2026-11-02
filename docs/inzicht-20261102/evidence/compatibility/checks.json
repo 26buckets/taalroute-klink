@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-11-02T11:17:45.793228+00:00",
+  "productionSource": "629d1f243ee25ce227ff508bd87d138bf09487b7",
+  "prContractSource": "660b81f46e7928733768c2a54a610356a92c1a41",
+  "checks": [
+    {
+      "command": "node --test test/auth.test.mjs test/password-reset.test.mjs",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "command": "python3 test/schema.py",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "check": "full runtime digest vs public release",
+      "passed": true
+    },
+    {
+      "check": "separate local migrations",
+      "productionTables": 16,
+      "prTables": 40,
+      "foreignKeyErrors": 0
+    },
+    {
+      "command": "node --experimental-strip-types check-catalog.mjs",
+      "passed": true,
+      "initialHarnessCorrection": "PR8 marks additionally contain numeric value; compare that explicitly"
+    }
+  ],
+  "productionWrites": 0,
+  "productionDatabaseQueries": 0,
+  "productionLearnerRecordsRead": false,
+  "productionBrowserAuthenticationPerformed": false,
+  "cloudflareAdminMappingRechecked": false,
+  "integrationImplemented": false
+}

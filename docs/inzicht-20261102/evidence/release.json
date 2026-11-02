@@ -1,8 +1,8 @@
 {
-  "at": "2026-11-02T10:48:41.803751+00:00",
-  "source_commit": "127787fa6920697a1e9c70212ea906da77da691b",
-  "source_parent": "c57fef126cd972fefa8f52b6a4c81c9d6b3111a8",
-  "deployment": "f9bf3d6a-9165-4e6a-9d33-e185b9ab27e6",
+  "at": "2026-11-02T11:36:11.921833+00:00",
+  "source_commit": "afa33da93d5b9aa5745a21b643cc5da7735f7354",
+  "source_parent": "660b81f46e7928733768c2a54a610356a92c1a41",
+  "deployment": "bcaaafd9-07b9-475e-afe2-5cdd9217edfa",
   "schema": 7,
   "database": "95f1de18-0c61-46ca-b2af-5ee36543f67f",
   "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
@@ -10,7 +10,7 @@
   "production_published": false,
   "merged": false,
   "local_tests": {
-    "unit_api_auth_mfa_source_reports_preflight": 80,
+    "unit_api_auth_mfa_source_reports_preflight": 85,
     "failed": 0,
     "skipped": 0,
     "teacher_unit_regressions": 27,
@@ -20,9 +20,21 @@
     "typecheck": "pass",
     "lint": "pass",
     "normal_build": "pass; not deployed",
-    "staging_build": "pass"
+    "staging_build": "pass",
+    "teacher_browser_note": "Previous full proof on same unchanged teacher code; not repeated in this targeted round"
   },
   "online_tests": [
+    {
+      "suite": "delayed account reads after MFA and reload; explicit retry; native auth/CSRF/tenant/logout; full30x100matrix scale",
+      "deployment": "bcaaafd9-07b9-475e-afe2-5cdd9217edfa",
+      "browsers": [
+        "Chromium",
+        "WebKit"
+      ],
+      "functional_result": "passed",
+      "speed_gate": "not met",
+      "MFA_confirmation_posts_per_delay_journey": 1
+    },
     {
       "suite": "full teacher/student journey, alias, SQL audit, HTML/CSV safety, appearance/menu, performance",
       "deployment": "f9bf3d6a-9165-4e6a-9d33-e185b9ab27e6",
@@ -52,7 +64,7 @@
   ],
   "migration_evidence": "../../inzicht-20261101/evidence/visual/migration.json",
   "portable_restore": {
-    "at": "2026-11-02T10:46:16.181Z",
+    "at": "2026-11-02T11:31:27.754Z",
     "schema": 7,
     "tables": 28,
     "sqliteRestore": "all rows equal",
@@ -62,7 +74,7 @@
     "credentials": "omitted",
     "productionRestore": "not approved; synthetic only"
   },
-  "performance": "performance-comparison.json",
+  "performance": "latency/comparison.json",
   "acceptance_counts": {
     "GETEST": 53,
     "DEELS": 16,
@@ -81,11 +93,11 @@
     },
     {
       "path": "components/inzicht/app.tsx",
-      "sha256": "ff1a6933e2d8fe5664bd737c824a233188d1a96e1ef11d24e1a06ebb175ce56e"
+      "sha256": "787c1b81ca86f0d2442cd46490e59ad8889d2e765e87ad17cbc8e5d935deab82"
     },
     {
       "path": "components/inzicht/client.ts",
-      "sha256": "7aa4003b6458d668f2e5e4e304640481dcf5fe533f8d90bd78bf17e60aaf98f0"
+      "sha256": "af41853651c58376252834a291f67263486ed4b98024e9f29e88e7d10fee5f82"
     },
     {
       "path": "components/inzicht/inzicht.css",
@@ -169,7 +181,7 @@
     },
     {
       "path": "lib/inzicht/worker.ts",
-      "sha256": "fe6fed0bb4043f91dd380cf56ca7c462c29691a336b2132c479c5f677a49995a"
+      "sha256": "3c53580463740c445935be419db714718c05422f3b25866564ca80b58f0341fa"
     },
     {
       "path": "scripts/inzicht/online-config.json",
@@ -179,5 +191,8 @@
       "path": "vite.config.ts",
       "sha256": "bab2f4c50a4726f3980f810d13ff8eb19000794b1c480f6f87671897d28bb946"
     }
-  ]
+  ],
+  "compatibility": "compatibility/AANSLUITING-ACTUELE-INZICHT.md",
+  "schema_identity_auth_restore_contracts_unchanged_since": "660b81f46e7928733768c2a54a610356a92c1a41",
+  "later_heavy_online_runs": "blocked by account reserve61163rolling24h; no bypass"
 }

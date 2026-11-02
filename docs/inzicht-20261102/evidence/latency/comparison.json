@@ -1,0 +1,291 @@
+{
+  "before": {
+    "at": "2026-11-02T10:37:47.045Z",
+    "n": 6,
+    "runs_ms": [
+      4662,
+      3242,
+      2381,
+      1222,
+      3890,
+      1240
+    ],
+    "median_ms": 2811.5,
+    "range_ms": [
+      1222,
+      4662
+    ],
+    "under_2000": 2,
+    "api_runs_ms": [
+      360,
+      432,
+      372,
+      479,
+      415
+    ]
+  },
+  "after": {
+    "at": "2026-11-02T11:22:24.433Z",
+    "n": 6,
+    "runs_ms": [
+      2609,
+      3766,
+      5415,
+      1338,
+      1179,
+      2990
+    ],
+    "median_ms": 2799.5,
+    "range_ms": [
+      1179,
+      5415
+    ],
+    "under_2000": 2,
+    "api_runs_ms": [
+      484,
+      659,
+      487,
+      385,
+      408
+    ]
+  },
+  "meaningful_speed_improvement_proven": false,
+  "two_second_gate": "not met",
+  "server_timing_limit": "Measures Worker handler until Response creation, excludes module startup and streamed rendering/transfer; not end-to-end server CPU time.",
+  "components": [
+    {
+      "engine": "chromium",
+      "run": 1,
+      "html_ttfb_ms": 1468.9000000059605,
+      "api": [
+        {
+          "path": "me",
+          "browser_duration_ms": 177.7999999821186,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 88,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "path": "matrix",
+          "browser_duration_ms": 467.40000000596046,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 211,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "run": 2,
+      "html_ttfb_ms": 2655.0999999940395,
+      "api": [
+        {
+          "path": "me",
+          "browser_duration_ms": 181.59999999403954,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 92,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "path": "matrix",
+          "browser_duration_ms": 389.7999999821186,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 264,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "run": 3,
+      "html_ttfb_ms": 2258.7000000178814,
+      "api": [
+        {
+          "path": "me",
+          "browser_duration_ms": 2102.5,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 72,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "path": "matrix",
+          "browser_duration_ms": 407.2000000178814,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 227,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "run": 1,
+      "html_ttfb_ms": 151,
+      "api": [
+        {
+          "path": "me",
+          "browser_duration_ms": 117,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 74,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "path": "matrix",
+          "browser_duration_ms": 311,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 167,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "run": 2,
+      "html_ttfb_ms": 98,
+      "api": [
+        {
+          "path": "me",
+          "browser_duration_ms": 134,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 86,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "path": "matrix",
+          "browser_duration_ms": 422,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 283,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "run": 3,
+      "html_ttfb_ms": 1384,
+      "api": [
+        {
+          "path": "me",
+          "browser_duration_ms": 447,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 402,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        },
+        {
+          "path": "matrix",
+          "browser_duration_ms": 495,
+          "server_timing": [
+            {
+              "name": "inzicht",
+              "duration": 394,
+              "description": ""
+            },
+            {
+              "name": "cfExtPri",
+              "duration": 0,
+              "description": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

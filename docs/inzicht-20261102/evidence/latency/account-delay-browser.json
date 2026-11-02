@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-02T11:21:52.843Z",
+  "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "synthetic_only": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "delayed_post_mfa_read": "bounded and recovered",
+      "delayed_reload_read": "bounded and recovered",
+      "login_form_not_repeated_while_waiting": true,
+      "mfa_posts": 1,
+      "reads": 5,
+      "logout": "passed"
+    },
+    {
+      "engine": "webkit",
+      "delayed_post_mfa_read": "bounded and recovered",
+      "delayed_reload_read": "bounded and recovered",
+      "login_form_not_repeated_while_waiting": true,
+      "mfa_posts": 1,
+      "reads": 5,
+      "logout": "passed"
+    }
+  ]
+}

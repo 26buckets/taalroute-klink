@@ -1,5 +1,7 @@
 # Voorstel: één Klink Inzicht op inzicht.taalroute.nl
 
+> Nadere actualisering 2 november 2026: de rapportagechat heeft de629d1f24-runtime inmiddels bronhashgelijk gecontroleerd; actuele schema16tabellen,11auth/herstel- en4schematests geslaagd, materialen/criteria gelijk. Zie `../inzicht-20261102/evidence/compatibility/AANSLUITING-ACTUELE-INZICHT.md`. Bestaand wachtwoordherstel/migratie0006 behouden; integratiekandidaat, MFA-/sessieovergang en datamigratie nog niet uitgevoerd. De actuele negenstappenstatus blijft uitsluitend in PROJECTVERSLAG.md.
+
 > Actualisering 2 november 2026 door de stagingproefchat, afgestemd met de rapportagechat: de publieke productiebron is nu 629d1f243ee25ce227ff508bd87d138bf09487b7 (wachtwoordherstel/migratie0006 toegevoegd). De onderstaande a6a64445-bronvergelijking is historisch. Compatibiliteit en aantallen opnieuw vaststellen vóór integratie. De actuele staginguitkomst en status van dezelfde negen stappen staan uitsluitend in PROJECTVERSLAG.md; dit blijft een bewijs-/voorstelbijlage, geen liveakkoord.
 
 Datum: 1 november 2026. Status: reviewvoorstel, geen uitvoerings- of liveakkoord.

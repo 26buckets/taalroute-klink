@@ -1,0 +1,303 @@
+{
+  "liveCommit": "629d1f243ee25ce227ff508bd87d138bf09487b7",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "blob": "21e007d5059b40f0b4f6df548fa0aa7940f31967",
+      "sha256": "867dee074033e21f09781b3231efefe7f172e1bf31f4ab0f0e916ef18fcc323b",
+      "bytes": 1206
+    },
+    {
+      "path": "PUBLICATIE.md",
+      "blob": "30410f15a9521b4cd4e6a5eb0214363e51443c0c",
+      "sha256": "206e11d3cf62ce885ffcdf2129a25bcd6811f9cabf6e0c3a48c9a5032d165a6b",
+      "bytes": 1272
+    },
+    {
+      "path": "migrations/0001_inzicht.sql",
+      "blob": "3d9f81ad37ad98a2c28ef824858891b0a5b9825b",
+      "sha256": "abc3508cfea85ad3b25873d3a103a02563be4be60725b41497e1b0df97938856",
+      "bytes": 2832
+    },
+    {
+      "path": "migrations/0002_accounts.sql",
+      "blob": "6b0c291efd54a978dfcbba1bbacb2fa0a03ae768",
+      "sha256": "9ac935aeaaa338c58bfe13dd5a9da4080d3aeeed6ed4f32e8e205fd667c90e1e",
+      "bytes": 1627
+    },
+    {
+      "path": "migrations/0003_observation_dimensions.sql",
+      "blob": "873cc67a14cca952f6ccaae260db77acfebac0b2",
+      "sha256": "70574a0cd4a2395ac3ec6948f9e769f0a9324cc45d150e7c85e67faeaaa60ef6",
+      "bytes": 1734
+    },
+    {
+      "path": "migrations/0004_fixed_observations.sql",
+      "blob": "f23ba571688ee5cb67c701bd7a7dd02e5747318b",
+      "sha256": "c14b1688a800ddc3bc9368942ffbc35b6fe8cc9e5b0a11defa979cdda1495219",
+      "bytes": 1086
+    },
+    {
+      "path": "migrations/0005_pilot_norms.sql",
+      "blob": "80d984c1a13e20649b74c5c5270118ead99c6834",
+      "sha256": "c4db9aeeef0f7ddc7998329f33d3a9bc21ce84bc3c682a98e88db53676ded2e2",
+      "bytes": 491
+    },
+    {
+      "path": "migrations/0006_password_reset.sql",
+      "blob": "4276c8004034dfd8eae4c2b1e9b1dbb01089e571",
+      "sha256": "20744eb4557919eee09f21d21b70be23e06dcedd2df524a51911ef608c265fc7",
+      "bytes": 252
+    },
+    {
+      "path": "package.json",
+      "blob": "e8355a6c548190e9c8e685b8d7630ae9ae450bec",
+      "sha256": "10101ca998ff708a9ab33f6f3ab17b5cf15be08ef571ba86622bbe5bdec839d6",
+      "bytes": 452
+    },
+    {
+      "path": "public/app.js",
+      "blob": "71b1bf6757832361565a9c113d7f6ecc17d492d8",
+      "sha256": "acaaa1411cf40ada4229f2a98ff35bf63597251efdeae6fbb7531a1c7d038f4d",
+      "bytes": 49409
+    },
+    {
+      "path": "scripts/check-publication.mjs",
+      "blob": "507a788dbcc33f6d41811aa10d34424a193592b6",
+      "sha256": "570d7ea4acb670ee438309b3d9858ba257887800b78b134363cc4c468b8e4de1",
+      "bytes": 1871
+    },
+    {
+      "path": "src/auth.mjs",
+      "blob": "a31da3ed617f1190fce26ac8ca43319dd2901f77",
+      "sha256": "5a8ea7bc0367e00aac719565d4b5db2319cc9d9d64bd06c63f11fdb3120e552b",
+      "bytes": 6339
+    },
+    {
+      "path": "src/worker.mjs",
+      "blob": "454e86ec4b07c2a6549651bdc35dfc7296b9b123",
+      "sha256": "9763d6b99624650009bdda12dc9b03bb5bd031720395ed5ca67d5fbda36bbac0",
+      "bytes": 32601
+    },
+    {
+      "path": "test/auth.test.mjs",
+      "blob": "a9028b12a2c2cf92170792fe5cbf6455ca742dc9",
+      "sha256": "5de98ceb1f9d5cb71b585457b0143c71f1e316f3bd0f6d182d3b5ea26e483534",
+      "bytes": 3161
+    },
+    {
+      "path": "test/password-reset.test.mjs",
+      "blob": "f66e5110aa8a48e45afcb3f169a2815c591f23ba",
+      "sha256": "57be7c91f6ea4b6109a5053a26da77aecfd3bb06ef5ee53f45ba4af70714dd98",
+      "bytes": 5405
+    },
+    {
+      "path": "test/schema.py",
+      "blob": "cbae0da0b296e83f83836ba83f3669d8c6f03059",
+      "sha256": "1a8c700f730b6f477a5e3a66d99b53d2bebf8c299349b24496ddf18eb47850e2",
+      "bytes": 2438
+    },
+    {
+      "path": "wrangler.jsonc",
+      "blob": "42aedb483d36424b88acf2b8b1ddc58c819806ad",
+      "sha256": "3ba38e3be8cdac4ef9328a1b8910f561bc62ba5cbb9b1d786a21956edaab4b58",
+      "bytes": 789
+    },
+    {
+      "path": "public/catalog.json",
+      "blob": "7b5b35cf081a8d91a16e204471bf28fd85a53e5d",
+      "sha256": "ce6fabaaf2e57d0781f370f6f6c6640429469e57611b16555a9d413d60a969dd",
+      "bytes": 8690
+    },
+    {
+      "path": "public/pilot.json",
+      "blob": "1e6a845c903c5fee786b4559d56ac31590d39daa",
+      "sha256": "0e566c1cd6de4fcf3abb56c36267cf24aafed8d5063cb97df090f9538a7cf9a8",
+      "bytes": 386
+    },
+    {
+      "path": "public/skills.js",
+      "blob": "e85dc9de9203d55e3cf92e012c24c52ddf4f449d",
+      "sha256": "d6f573c0c6ef2832d223b9946acfd27e805a493c0f5f6d9ad4baf8c8740b2e1c",
+      "bytes": 6234
+    },
+    {
+      "path": "scripts/create-password-reset.mjs",
+      "blob": "19a6c981274817addbfb4f25e8c0a8dbac06e52e",
+      "sha256": "032af2d1a3c6859dc74474903e26c801dae9c0de9f40f3465a09887403869aa1",
+      "bytes": 3511
+    },
+    {
+      "path": "scripts/source-digest.mjs",
+      "blob": "f4b518c92d0bf0f15e1816194306f4a4472765bb",
+      "sha256": "5ae8005879f57e86989bd0ec7ba2ac32ae23dfdcb137145c292be77b91ffbf2e",
+      "bytes": 478
+    },
+    {
+      "path": "public/NotoSans-OFL.txt",
+      "blob": "c82d72e422e2d08c5ab439b6bac7c2177ea0c565",
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+      "bytes": 4377
+    },
+    {
+      "path": "public/NotoSans.ttf",
+      "blob": "d55220958aa51eeeb85048d746eabe43d2cd9f14",
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+      "bytes": 569208
+    },
+    {
+      "path": "public/actief.svg",
+      "blob": "33f0c71a9f5ddeca97383826c6bb099733ba8fd8",
+      "sha256": "fd1d3e9e931ebec54bc7eea11d6b0718319a413ed70c334a8f4599bf24c64e79",
+      "bytes": 5233
+    },
+    {
+      "path": "public/app-chooser.css",
+      "blob": "d69448b56fbcc3d61f57816db87b146204301013",
+      "sha256": "f9dae2aa74e5451a3bdf97ebf05d0439541356676eb364f1567f6a3630506109",
+      "bytes": 4361
+    },
+    {
+      "path": "public/app.css",
+      "blob": "f922ae375bbfbe551671fbe469966f6d6e3d28d3",
+      "sha256": "50bb9ae7b44b5d0b88682223107714b623a6bccab76a3f456ada60360b30debf",
+      "bytes": 17769
+    },
+    {
+      "path": "public/appearance.js",
+      "blob": "bf6efcf2f508eee4262cc6f7b72650041f4dfcf6",
+      "sha256": "7b45b09d5f4ed7ae637437588a9b33d6e633136f316fdc8e00ba577f00a7ce95",
+      "bytes": 1969
+    },
+    {
+      "path": "public/chevron-down.svg",
+      "blob": "93c1b9cbed307bbbbf442f21fa78c847c39d9e3c",
+      "sha256": "6a076c02c4a06dae07165839ebd80a9f036bdd8d67d87b77f7a71b8e8337e1f6",
+      "bytes": 186
+    },
+    {
+      "path": "public/digibord.svg",
+      "blob": "670f8a88c03eb6db26de08fcf1cd0f26b0fa8db4",
+      "sha256": "29129fded1df0de1f2099169c9057be6f2f8e0fa7ad5abeb50a687cced7162e5",
+      "bytes": 5235
+    },
+    {
+      "path": "public/favicon.svg",
+      "blob": "4d71c4b9be385eaf6e2bfd10e04313adf1cacd38",
+      "sha256": "bd5a040d349c0fc0d728ed6bafefa0e4a027c1a8cf698f6e99ec7d53eafc768c",
+      "bytes": 2407
+    },
+    {
+      "path": "public/header-controls.css",
+      "blob": "bd74cfc58f29479ea24f89c2fa4091b559a16c3d",
+      "sha256": "7a112a7c52de029bc327c64bc69bb0a2be7827c7de3d17fa85f10e06399a75ea",
+      "bytes": 3497
+    },
+    {
+      "path": "public/index.html",
+      "blob": "535b9cda221c947436c4c23084cc3dc7f1482234",
+      "sha256": "d133d736704ddef648f279ac61ea63a4ccded005410cfd2402ce0f4ed77a69b3",
+      "bytes": 2926
+    },
+    {
+      "path": "public/jspdf.js",
+      "blob": "0e600d49d2b2bf81dd97c1509e22d108c2ddd3b4",
+      "sha256": "e6551fcdc32f09d6853b2c5126d18d01d9447e0da618a41a11ebeee0f6c20d54",
+      "bytes": 420165
+    },
+    {
+      "path": "public/klankstudio.svg",
+      "blob": "7290d537f3805052ff3414b6f9df51ba32f897fb",
+      "sha256": "6e7654d8f3d155557e80d6dc5b095c3b8faab033bfb97748a226fce592831053",
+      "bytes": 5238
+    },
+    {
+      "path": "public/klink-brand.svg",
+      "blob": "af360cbeb196c508c1830c244a64df194642727c",
+      "sha256": "dfbeab52f771fddcc52cb25256e8ca031cf93063361f12163d18a19ec1d973f1",
+      "bytes": 5169
+    },
+    {
+      "path": "public/klink-dark.svg",
+      "blob": "5bdc0924949cd47cbb4095773c065e93be208df2",
+      "sha256": "fa0836b9916b4367efee65d152f72ca4917ef6f1fe060a9b9e62b1ac2c112e90",
+      "bytes": 2407
+    },
+    {
+      "path": "public/klink-wordmark-dark.svg",
+      "blob": "b0e2fae21c3a890968677092840f80ff323aae88",
+      "sha256": "b2719ca24b195ea75da4f82d38305cf1ee04dc60c5efe6299bac06acc6684c8f",
+      "bytes": 19216
+    },
+    {
+      "path": "public/klink.svg",
+      "blob": "06edae3c329738329eac9e546a871894c27e5a3f",
+      "sha256": "5023b49161943c385f7384916e5b9678578dcad6b156fef2d5e519e9934acfaf",
+      "bytes": 19216
+    },
+    {
+      "path": "public/menu-controls.css",
+      "blob": "3c28a62c83beeb9d26938c9d55918688cbdd7104",
+      "sha256": "401065595592d84ff8bacf79a98a9f972040fb6810910eb8989837091d25b918",
+      "bytes": 10593
+    },
+    {
+      "path": "public/menu-controls.js",
+      "blob": "2505bbeac9d4026a14d252ed98bdf5c1de01c3fb",
+      "sha256": "b01fcf4ad586e68b024e075bfb4d1508bb1aba1dd54b9ce6899599d8e39e867d",
+      "bytes": 12760
+    },
+    {
+      "path": "public/missies.svg",
+      "blob": "4130ff47ee581406990458e36c44393088f10ce4",
+      "sha256": "49a320791e0857322eb891d454bf90fe6f81ef07ad3788896daaf3c7f1131d3c",
+      "bytes": 5234
+    },
+    {
+      "path": "public/muziek.svg",
+      "blob": "e8ddc970845fb9b853f9961eb7be8123187c5aaf",
+      "sha256": "02fe42b79f65d181a4f627592ee1232703a1373266de2f7491ce0c3737659b42",
+      "bytes": 5197
+    },
+    {
+      "path": "public/oppad.svg",
+      "blob": "e25f4c31000f8d06323ed8d9c3b543cdc20c561f",
+      "sha256": "8684ddaf4b5883667c2188d9d5c6ac6ecb2c6eb6e30933d5d95d0cdc7e5ddb51",
+      "bytes": 3408
+    },
+    {
+      "path": "public/spreektijd.svg",
+      "blob": "33c5734d0697f9c7290795b3148fe80fbf7add1c",
+      "sha256": "8ea135d175b7762c45317e892a0a14947c0c840194100a9bae7f38e07d082d64",
+      "bytes": 5237
+    },
+    {
+      "path": "public/studio.svg",
+      "blob": "617fc52c6739f1c43f5d155e444b6501c6b7f265",
+      "sha256": "56a167248fb18e934b74be11e1481bfc25148e3867530eae6beddef679d872c3",
+      "bytes": 5169
+    },
+    {
+      "path": "public/taalroute-logo.svg",
+      "blob": "65a8c4daa52622aa9275b06141b3ed24ea2394b4",
+      "sha256": "caf9668e4c2237b5c4b66a32ecde8f9bf4264a3b62a6d579b77b25c3467d31ac",
+      "bytes": 5133
+    },
+    {
+      "path": "public/theaterlezen.svg",
+      "blob": "876954e8a66045dd2d1ea1ce7e5a130a5e4a9276",
+      "sha256": "3a9d5bdfbf60459bf7195be3e316f5bc536810a0ada68b0fb2d7c13fd76eb91f",
+      "bytes": 667225
+    },
+    {
+      "path": "public/zinnen.svg",
+      "blob": "77dbdccdf250b9c30a4e69d44a58e026fff03582",
+      "sha256": "e73cb98cc177a0f2d16a957ff697e40fb65e382c327cbe0b51a6dc2c23bf8a9c",
+      "bytes": 5159
+    }
+  ],
+  "runtimeSourceSha256": "48e8dc29c570945753af6313b11a4f56b210810f22024e85fff4b36e4fbd5a6f",
+  "publicReleaseMatchesSource": true,
+  "currentMain": "ccbbc318b4c2dee02f1f8fa87d74066d0642979f",
+  "mainRuntimeDelta": false
+}

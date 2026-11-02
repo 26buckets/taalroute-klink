@@ -216,7 +216,7 @@
       "id": "KI035",
       "requirement": "30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.",
       "status": "DEELS",
-      "evidence_or_gap": "Actueel 30×100/3000 TRAIN, zes browserruns 1222–4662 ms, mediaan2811,5ms. Vandaag vóór reparatie3654,5; historische eerdere2400,5. API360–479ms. Twee-secondennorm niet gehaald; DEELS. Zie ../inzicht-20261102/evidence/performance-comparison.json."
+      "evidence_or_gap": "Gerichte vervolgproef2november:30×100/3000TRAIN,6browserruns1179–5415ms,mediaan2799,5ms versus2811,5ms vorige reeks; geen betekenisvolle versnelling. API385–659ms. Norm niet gehaald. Zie ../inzicht-20261102/evidence/latency/comparison.json."
     },
     {
       "id": "KI036",

@@ -1,0 +1,183 @@
+{
+  "at": "2026-11-02T10:48:41.803751+00:00",
+  "source_commit": "127787fa6920697a1e9c70212ea906da77da691b",
+  "source_parent": "c57fef126cd972fefa8f52b6a4c81c9d6b3111a8",
+  "deployment": "f9bf3d6a-9165-4e6a-9d33-e185b9ab27e6",
+  "schema": 7,
+  "database": "95f1de18-0c61-46ca-b2af-5ee36543f67f",
+  "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "synthetic_only": true,
+  "production_published": false,
+  "merged": false,
+  "local_tests": {
+    "unit_api_auth_mfa_source_reports_preflight": 80,
+    "failed": 0,
+    "skipped": 0,
+    "teacher_unit_regressions": 27,
+    "teacher_browser_journeys": 8,
+    "teacher_phase_views": 192,
+    "teacher_tools": 40,
+    "typecheck": "pass",
+    "lint": "pass",
+    "normal_build": "pass; not deployed",
+    "staging_build": "pass"
+  },
+  "online_tests": [
+    {
+      "suite": "full teacher/student journey, alias, SQL audit, HTML/CSV safety, appearance/menu, performance",
+      "deployment": "f9bf3d6a-9165-4e6a-9d33-e185b9ab27e6",
+      "browsers": [
+        "Chromium",
+        "WebKit"
+      ],
+      "functional_result": "passed",
+      "speed_gate": "not met",
+      "transient_failure": "one WebKit school selector timeout after MFA; diagnostic and complete repeat passed; preserved in journey-login-timeout.json"
+    },
+    {
+      "suite": "source observations, revisions, report filters/drilldowns, 3 PDF modes, accessibility",
+      "deployment": "9f3a7993-87e0-4919-9fea-1120274bb431",
+      "browsers": [
+        "Chromium",
+        "WebKit"
+      ],
+      "result": "passed; source-observation and report code unchanged in final deployment"
+    },
+    {
+      "suite": "MFA bad/replay/recovery/race; shared device; native auth/CSRF/tenant probe",
+      "deployment": "9f3a7993-87e0-4919-9fea-1120274bb431",
+      "result": "passed; auth/MFA code unchanged in final deployment; fresh login/MFA also in final journey",
+      "new_enrollment_repeated": false
+    }
+  ],
+  "migration_evidence": "../../inzicht-20261101/evidence/visual/migration.json",
+  "portable_restore": {
+    "at": "2026-11-02T10:46:16.181Z",
+    "schema": 7,
+    "tables": 28,
+    "sqliteRestore": "all rows equal",
+    "postgresRestore": "all rows equal",
+    "corruption": "rejected",
+    "overwrite": "rejected",
+    "credentials": "omitted",
+    "productionRestore": "not approved; synthetic only"
+  },
+  "performance": "performance-comparison.json",
+  "acceptance_counts": {
+    "GETEST": 53,
+    "DEELS": 16,
+    "OPEN": 3
+  },
+  "workflows": [],
+  "extra_actions_cost_incurred": false,
+  "files": [
+    {
+      "path": "app/api/inzicht/[...path]/route.ts",
+      "sha256": "4ff1099bae91deb1f821486f96d6fabf30334e904d770d149b4eabe077553562"
+    },
+    {
+      "path": "app/inzicht/[[...path]]/page.tsx",
+      "sha256": "b382a45f2834e9addbaa836f1df35ee4b844af62583332747c6e5edcd6112a4f"
+    },
+    {
+      "path": "components/inzicht/app.tsx",
+      "sha256": "ff1a6933e2d8fe5664bd737c824a233188d1a96e1ef11d24e1a06ebb175ce56e"
+    },
+    {
+      "path": "components/inzicht/client.ts",
+      "sha256": "7aa4003b6458d668f2e5e4e304640481dcf5fe533f8d90bd78bf17e60aaf98f0"
+    },
+    {
+      "path": "components/inzicht/inzicht.css",
+      "sha256": "61c989470a78781f8da88e080fc9b23be25bd00d64ce79f24c76e866605c826d"
+    },
+    {
+      "path": "components/inzicht/national-comparison.tsx",
+      "sha256": "bf51920d04bef01a3e28f0260842ce62b104a845e313db2e6ce57b36f381dad9"
+    },
+    {
+      "path": "components/inzicht/reports.tsx",
+      "sha256": "6af4c55201640fceebbf30cd626a34b256e025d73233217731b0f6a0153bbfc2"
+    },
+    {
+      "path": "components/inzicht/school.tsx",
+      "sha256": "3fe6b6555c51a16a681dd8a051234659a34cc89e623742c71c6c8c6dd06f3a3b"
+    },
+    {
+      "path": "components/inzicht/source-observation.tsx",
+      "sha256": "b9b7cbd57fa91dff5ea7862992713ed69350146d6ab9e7d8206b6c6efcbbd87e"
+    },
+    {
+      "path": "db/migrations/inzicht/0001_inzicht.sql",
+      "sha256": "4fde2d4604032169657047a549ca60f87df4eb9324c363c807c578afa03b25d6"
+    },
+    {
+      "path": "db/migrations/inzicht/0002_school_attempts.sql",
+      "sha256": "7d86f14b288d5db3b2d2be34e824f71e7119f681f9aee62aaf051317eb54f8cc"
+    },
+    {
+      "path": "db/migrations/inzicht/0003_staging_accounts.sql",
+      "sha256": "35e2972b12e89b9778717f16d4a1530ee403b21a5b92f7a36f965bc789ce290f"
+    },
+    {
+      "path": "db/migrations/inzicht/0004_mfa.sql",
+      "sha256": "5a019ab8236b5dd76d6c2ed25761b7a6bb542bd399aa3b925608e19b80048872"
+    },
+    {
+      "path": "db/migrations/inzicht/0005_processing_retries.sql",
+      "sha256": "ca3bf5e89b745846333efa1591b2f87f0bfe7cac3cfa76882665903b8da39217"
+    },
+    {
+      "path": "db/migrations/inzicht/0006_original_observations.sql",
+      "sha256": "8df9f81e886bac7a8d3b3c401aa42f59e9c3896f9562064851e09260264afc78"
+    },
+    {
+      "path": "db/migrations/inzicht/0007_learning_hours.sql",
+      "sha256": "aaf041a6d9431fc2c5b64a1b14950f05ef7ac9e9044ab2ce9dc226a4e9d3d47a"
+    },
+    {
+      "path": "lib/inzicht/auth.ts",
+      "sha256": "c8df531003bb2d708ca7321f0c3ea38b5b24923903b2c08d8a1304fa24245b95"
+    },
+    {
+      "path": "lib/inzicht/descriptors.ts",
+      "sha256": "492fe62fd6d304e40d6a8a507950ea4de498873089dc07aa755460544ce02e5b"
+    },
+    {
+      "path": "lib/inzicht/frame.tsx",
+      "sha256": "c3e699602f1a6e1b07f7e3c82c4f2671fc98cd7fa96e4312f166ffa37beabbf3"
+    },
+    {
+      "path": "lib/inzicht/mfa.ts",
+      "sha256": "54ac2987f0b72a018adb0ee86cd3f8b62a7b4379de624e6bfe17d014d257e13c"
+    },
+    {
+      "path": "lib/inzicht/reports.ts",
+      "sha256": "97bcee0496a4e978bf3aa9edbd04b80972d3f3ece03752bb4526a76a5f672c61"
+    },
+    {
+      "path": "lib/inzicht/rules.ts",
+      "sha256": "bf5efa85f5994c8f8fb66a1c194445b747f854811a7fb70d68d35c5bac5e1b48"
+    },
+    {
+      "path": "lib/inzicht/service.ts",
+      "sha256": "16729786305bc8b18ecf7158b7253287a9b4624064a8bbfe843333342f16872e"
+    },
+    {
+      "path": "lib/inzicht/source-observation.ts",
+      "sha256": "7faaf71d9ba95cbf8d46cb3cc91abf4516ac5213558e6968791378f49ceaf239"
+    },
+    {
+      "path": "lib/inzicht/worker.ts",
+      "sha256": "fe6fed0bb4043f91dd380cf56ca7c462c29691a336b2132c479c5f677a49995a"
+    },
+    {
+      "path": "scripts/inzicht/online-config.json",
+      "sha256": "5fb93204e7c235c1625fdd5af49690997f6bfde6ae8a09915e292ea7c3863232"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "bab2f4c50a4726f3980f810d13ff8eb19000794b1c480f6f87671897d28bb946"
+    }
+  ]
+}
