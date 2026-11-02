@@ -4,6 +4,7 @@ import meaningContexts from '../data/klink-meaning-contexts.json' with { type: '
 import type { ChapterCollection } from './practice-chapters';
 import index from '../data/klink-production-index.json' with { type: 'json' };
 import type { PackageDefinition, PackageExercise } from './package-content';
+import { sourceSpellingRecallIds } from './source-spelling-review.ts';
 
 export const productionIndex = index;
 export function productionPack(row: Pick<typeof index[number], 'id' | 'title' | 'level' | 'activity' | 'count'>, exercises: PackageExercise[] = []): PackageDefinition {
@@ -26,7 +27,7 @@ export function validateProductionCollection(value: unknown, id: string, count: 
     }
     ids.add(exercise.exerciseId);
   }
-  return data.exercises;
+  return data.exercises.map(exercise => sourceSpellingRecallIds.has(exercise.exerciseId) ? { ...exercise, reviewEligible: true } : exercise);
 }
 
 // Keep the complete source available to old links and share its completion records.

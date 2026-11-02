@@ -1,0 +1,83 @@
+✔ Every new rule is reachable; intact short paths retain source references and honest scope (515.153833ms)
+✔ Sound positions use transparent words and no isolated rejected sound; no visible target leak (0.88825ms)
+✔ Spelling gaps rebuild exactly the canonical form; longer forms keep their prerequisites (0.202292ms)
+✔ Grammar sources, dialogue turns, writing goals and text evidence are reused rather than rewritten (0.391292ms)
+✔ Review plans only encountered retrieval items, resets on help/error, and never inflates in one session (0.234458ms)
+✔ Current release points to the cumulative instruction; historical approval retains its original published hashes (100.548167ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (9282.787958ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.497834ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (12.612708ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (56.478084ms)
+✔ All 576 stable positions resolve to unchanged canonical source content and media (33.102917ms)
+✔ Repeat rounds remain available independently of original completion or review deadlines (459.167875ms)
+✔ Broken source references and ambiguous position lists fail closed (0.395166ms)
+✔ 225 pairs and 900 options have three blind independent reviews and final approval for all 86 changes (2.177417ms)
+✔ only reviewed context fields change; all words, answers, levels, source IDs and inactive decisions remain intact (29.664666ms)
+✔ all 200 questions work in both directions and three modes, retain one answer, hide listened words and preserve repetition (429.438583ms)
+✖ publication rejects missing owner approval, stale or incomplete reviews, altered audio and unverified backup (5665.717ms)
+✔ Dutch word boundaries preserve accents, contractions and compounds (8.764208ms)
+✔ A phrase recording is never presented as the sound of an individual word (0.094916ms)
+✔ All twenty newly published reviewed word forms keep their native recording (54.600208ms)
+✔ Image words retain their exact source and account for contained image margins (5.031458ms)
+✔ All existing single-word recordings remain available without stemming or guessed spellings (11.063667ms)
+✔ The index is reproducible and contains only existing allowed recording paths (67.152333ms)
+✔ Packed recordings require the exact byte range and retain a full-response fallback (9.214875ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 23
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9658.398292
+
+✖ failing tests:
+
+test at scripts/test-synonym-independent-review-20261101.mjs:35:6
+✖ publication rejects missing owner approval, stale or incomplete reviews, altered audio and unverified backup (5665.717ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+  +   'components/product/word-listening.tsx',
+      'data/klink-production-index.json',
+      'data/klink-production-instructions.json',
+      'data/klink-word-listening-audio.json',
+      'data/klink-word-listening.json',
+  +   'data/klink10-spelling-review-aa-20261102.json',
+  +   'lib/learning-review.ts',
+  +   'lib/practice-chapters.ts',
+  +   'lib/production-practice.ts',
+  +   'lib/source-spelling-review.ts',
+      'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1244d912e6811f1a.mp3',
+      'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1fe5859fc7166df3.mp3',
+      'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-77363185c5596cdd.mp3',
+      'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-950156eda8960ace.mp3',
+      'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-a262fc2d799183fb.mp3',
+  ...
+      'scripts/check-klink10-text-evidence-release-20261102.mjs',
+  +   'scripts/test-klink10-spelling-review-aa.mjs',
+      'scripts/test-klink10-text-a2-evidence-20261102.mjs',
+      'scripts/test-klink10-text-a2-evidence-browser-20261102.mjs',
+      'scripts/test-klink10-text-a2-evidence-media-20261102.mjs',
+      'scripts/test-klink10-text-a2-evidence-release-20261102.mjs',
+      'scripts/test-practice-chapters.mjs'
+  
+      at verifyKlink10TextA2EvidenceRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-klink10-text-a2-evidence-release-20261102.mjs:11:190)
+      at verifyKlink10TextEvidenceRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-klink10-text-evidence-release-20261102.mjs:9:13)
+      at verifyKlink10BingoRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-klink10-bingo-release-20261102.mjs:9:13)
+      at verifyKlink10SentencesRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-klink10-sentences-release-20261102.mjs:9:13)
+      at verifySentenceRoundTitlesRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-sentence-round-titles-release-20261102.mjs:13:14)
+      at verifyKlink10ListeningRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-klink10-listening-release-20261102.mjs:9:18)
+      at verifyKlink10GrammarRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-klink10-grammar-release-20261102.mjs:9:13)
+      at verifyHandwritingShortScreenRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-handwriting-short-screen-release-20261102.mjs:8:13)
+      at verifyHandwritingRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-handwriting-release-20261102.mjs:9:20)
+      at verifyWritingCopyAaRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-spelling-review-20261102/scripts/check-writing-copy-aa-17-release-20261102.mjs:10:18) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'components/product/word-listening.tsx', 'data/klink-production-index.json', 'data/klink-production-instructions.json', 'data/klink-word-listening-audio.json', 'data/klink-word-listening.json', 'data/klink10-spelling-review-aa-20261102.json', 'lib/learning-review.ts', 'lib/practice-chapters.ts', 'lib/production-practice.ts', 'lib/source-spelling-review.ts', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1244d912e6811f1a.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1fe5859fc7166df3.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-77363185c5596cdd.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-950156eda8960ace.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-a262fc2d799183fb.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-d4987f0448e31a97.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-e1ab70814ff39ee8.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-e95fd1248a31f4dc.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-repair-77cee99633457e85.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-repair-d6cdae6a1efe7705.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-taalklas-retake-27e297f292614701.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-103ced2da8023135.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-2c47adf74d747af6.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-676bdbb2cc57d556.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-9ccd83a5a775deac.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-a1f458f3eaa5b9a7.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-dea5ab371e040ae4.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/klaarligt-f6ed68829e2f3156.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/regenbui-b4abdd2e505bb80c.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/retourlabel-2e3d372c740166f3.mp3', 'public/practice-content/klink10-text-a2-evidence-20261102/a2-text-evidence-208e11537ac2449f.json', 'scripts/check-klink10-text-a2-evidence-release-20261102.mjs', 'scripts/check-klink10-text-evidence-release-20261102.mjs', 'scripts/test-klink10-spelling-review-aa.mjs', 'scripts/test-klink10-text-a2-evidence-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-browser-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-media-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-release-20261102.mjs', 'scripts/test-practice-chapters.mjs' ],
+    expected: [ 'data/klink-production-index.json', 'data/klink-production-instructions.json', 'data/klink-word-listening-audio.json', 'data/klink-word-listening.json', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1244d912e6811f1a.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1fe5859fc7166df3.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-77363185c5596cdd.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-950156eda8960ace.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-a262fc2d799183fb.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-d4987f0448e31a97.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-e1ab70814ff39ee8.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-e95fd1248a31f4dc.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-repair-77cee99633457e85.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-repair-d6cdae6a1efe7705.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-taalklas-retake-27e297f292614701.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-103ced2da8023135.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-2c47adf74d747af6.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-676bdbb2cc57d556.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-9ccd83a5a775deac.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-a1f458f3eaa5b9a7.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-dea5ab371e040ae4.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/klaarligt-f6ed68829e2f3156.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/regenbui-b4abdd2e505bb80c.mp3', 'public/package-audio/klink10-text-a2-evidence-20261102/retourlabel-2e3d372c740166f3.mp3', 'public/practice-content/klink10-text-a2-evidence-20261102/a2-text-evidence-208e11537ac2449f.json', 'scripts/check-klink10-text-a2-evidence-release-20261102.mjs', 'scripts/check-klink10-text-evidence-release-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-browser-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-media-20261102.mjs', 'scripts/test-klink10-text-a2-evidence-release-20261102.mjs', 'scripts/test-practice-chapters.mjs' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

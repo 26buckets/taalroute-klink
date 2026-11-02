@@ -13,6 +13,7 @@ import { contentById } from './connected-content.ts';
 import { learnerListName } from './learner-copy.ts';
 import { contentLevels, contentHelp, exerciseContentLevel, exerciseVocabularyLevels, exerciseSetLevel, exerciseSetHelp, matchesContent, type ContentHelp } from './content-levels.ts';
 import type { LearningReview } from './learning-review';
+import { sourceSpellingReview, sourceSpellingRecallExercises } from './source-spelling-review.ts';
 import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
@@ -168,6 +169,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
   }));
   if (activity === 'learning-review') {
     result.push(...wordUseCollections);
+    result.push({ id: sourceSpellingReview.collectionId, title: sourceSpellingReview.title, level: 'alfa-a', help: 'guided', pack: productionPack({ id: sourceSpellingReview.collectionId, title: sourceSpellingReview.title, level: 'alfa-a', activity, count: sourceSpellingRecallExercises.length }), exercises: sourceSpellingRecallExercises });
     result.push(...sourceRepeatRounds.map(round => ({ id: round.id, title: round.title, level: round.level as ChapterLevel, help: 'practice' as const, pack: productionPack({ ...round, activity, count: 12 }), exercises: [], sourceRepeat: round, exerciseCount: 12 })));
   }
   cache.set(activity, result);
