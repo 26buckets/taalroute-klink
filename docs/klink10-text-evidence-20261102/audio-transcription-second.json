@@ -1,0 +1,81 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10te-09f6239e1572f2a3",
+      "src": "/package-audio/klink10-text-evidence-20261102/k10te-09f6239e1572f2a3.mp3",
+      "expected": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat pakt Sara voordat ze naar school fietst?",
+      "recognized": " Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat pakt Sarah voordat ze naar school fietst?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.88,
+          "text": " Lees de vraag. Tik op alle woorden van de zin met het antwoord.",
+          "tokens": [
+            50365,
+            1456,
+            279,
+            368,
+            46485,
+            13,
+            15613,
+            999,
+            5430,
+            6020,
+            19058,
+            3161,
+            368,
+            710,
+            259,
+            1131,
+            3639,
+            2511,
+            6120,
+            765,
+            13,
+            50559
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08932866805639023,
+          "compression_ratio": 1.1473684210526316,
+          "no_speech_prob": 0.030227700248360634
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 4.66,
+          "end": 6.7,
+          "text": " Wat pakt Sarah voordat ze naar school fietst?",
+          "tokens": [
+            50598,
+            12593,
+            280,
+            5886,
+            9519,
+            1650,
+            765,
+            267,
+            5277,
+            12762,
+            1395,
+            283,
+            1684,
+            372,
+            30,
+            50700
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08932866805639023,
+          "compression_ratio": 1.1473684210526316,
+          "no_speech_prob": 0.030227700248360634
+        }
+      ]
+    }
+  ]
+}

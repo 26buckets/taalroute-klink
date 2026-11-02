@@ -2,13 +2,15 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyKlink10TextEvidenceRelease,readBeforeKlink10TextEvidence} from './check-klink10-text-evidence-release-20261102.mjs';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifyKlink10BingoRelease(read=readFileSync){
+ const next=verifyKlink10TextEvidenceRelease(read),currentRead=read;read=file=>readBeforeKlink10TextEvidence(file,next,currentRead);
  const json=p=>JSON.parse(read(p)),dir='docs/klink10-bingo-20261102/',r=json('docs/klink-owner-release-ten-bingo-20261102.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.existingAppearancePreserved&&r.progressPreserved);
  assert.equal(r.baselineSourceCommit,'f2e4b754e636fa9bab8ef7c316d0e4e515dd53ce');assert.equal(r.liveSourceCommit,'5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3');git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,next.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  const allowed=['scripts/test-practice-chapters.mjs','components/product/package-exercise-browser.tsx','data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-klink10-sentences-release-20261102.mjs','scripts/check-klink10-bingo-release-20261102.mjs','scripts/test-klink10-bingo-20261102.mjs','scripts/test-klink10-bingo-browser-20261102.mjs','scripts/test-klink10-bingo-media-20261102.mjs','scripts/test-klink10-bingo-release-20261102.mjs'];
  assert(changed.every(p=>allowed.includes(p)||p.startsWith('public/practice-content/klink10-bingo-20261102/')));assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
@@ -20,6 +22,6 @@ export function verifyKlink10BingoRelease(read=readFileSync){
  const b=json(dir+'local/browser.json');assert.equal(b.checks.length,120);assert.deepEqual(b.errors,[]);assert(b.oldProgressAndResumePreserved);assert.equal(json(dir+'local/content.json').checks.length,30);
  const native=json(dir+'local/native-media.json');assert.equal(native.checks.length,62);assert.equal(native.flows.length,12);const media=json(dir+'selected-media-verification.json');assert.equal(media.checks.length,31);assert(media.checks.every(x=>x.fullDecode&&x.targetTitleMatch));assert.equal(json(dir+'local/existing-view/checks.json').checks.length,14);
  const v=json(dir+'verification.json');for(const key of['types','lint','wordAudioCoverage','screensVisuallyReviewed','sourceReview','oldFallbackTested','existingPublicBytesPreserved'])assert(v[key]);assert.equal(v.humanListening,false);
- const backup=json(dir+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
+ const backup=json(dir+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,next};
 }
-export function readBeforeKlink10Bingo(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeKlink10Bingo(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeKlink10TextEvidence(file,r.next,read);}

@@ -1,0 +1,35 @@
+{
+  "application": "Klink",
+  "authorization": "Nico 2 November 2026: finish first ten source-bound exercises, including necessary ElevenLabs audio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "7qdUFMklKPaaAVMsBTBt",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 26,
+  "clips": [
+    {
+      "id": "k10te-word-context-aa0e5e7293d29633",
+      "text": "De apotheker geeft uitleg.",
+      "title": "De apotheker geeft uitleg.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-text-evidence-20261102/k10te-word-context-aa0e5e7293d29633.mp3",
+      "textSha256": "aa0e5e7293d296333e1ac691b0f9356cd4de9547d2a0125df9876176ba530754"
+    }
+  ],
+  "supersedesPreliminary11ClipPlan": "Ten combined instruction+question recordings use the existing header player; no new UI or separate unused question recordings.",
+  "reason": "Two isolated takes fail blind ASR; generate one contextual Dutch target sentence, retain full original, extract only a verified apotheker word with safe boundaries for word control."
+}

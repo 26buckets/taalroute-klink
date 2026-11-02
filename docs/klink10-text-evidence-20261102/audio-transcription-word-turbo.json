@@ -1,0 +1,35 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10te-word-d79cc3d508ecf2f4",
+      "src": "/package-audio/klink10-text-evidence-20261102/k10te-word-d79cc3d508ecf2f4.mp3",
+      "expected": "apotheker",
+      "recognized": " Appotaker",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Appotaker",
+          "tokens": [
+            50365,
+            3132,
+            310,
+            4003,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8102929592132568,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 5.5650466873613524e-11
+        }
+      ]
+    }
+  ]
+}
