@@ -1,0 +1,91 @@
+{
+  "task": "Nico 2 november 2026: eerste tien uit tien KLINK-chats volledig afronden en publiceren, inclusief audio",
+  "state": "in-progress",
+  "worktree": "/Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-20261102",
+  "branch": "main",
+  "baseMain": "5542367d083aa4658403459accee7401c6cc0324",
+  "observedLive": "6c634ca4c5756ab29fad386d6d40ff90321438b6",
+  "mustRefreshBaseBeforePublish": true,
+  "publishedByThisTask": [
+    {
+      "completedAt": "2026-11-02T11:30:25.866513+00:00",
+      "sourceCommit": "6c634ca4c5756ab29fad386d6d40ff90321438b6",
+      "workerVersion": "aeaa66dc-8572-4ff6-b5f8-8b29311aba1e",
+      "liveRelease": {
+        "application": "Klink",
+        "builtAt": "2026-11-02T11:23:04.050Z",
+        "sourceCommit": "6c634ca4c5756ab29fad386d6d40ff90321438b6",
+        "branch": "main",
+        "sourceClean": true,
+        "curriculumEdition": "klink-leerlijn-20261016-v1",
+        "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+        "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+        "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+        "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+      },
+      "sourcePositions": 120,
+      "rounds": 12,
+      "liveBanksAndAudioFullReadback": 242,
+      "browserFlows": 480,
+      "nativeAudioDecodes": 460,
+      "nativePlayerPlaybacks": 6,
+      "normalDeploySucceeded": true,
+      "existingProgressPreserved": true,
+      "humanListeningPerformed": false,
+      "physicalDeviceTested": false,
+      "blockedSourcePositions": 40
+    }
+  ],
+  "audioGeneratedByThisTask": [
+    {
+      "package": "grammatica",
+      "selectedNewFiles": 169,
+      "reusedFiles": 61,
+      "ledger": "docs/klink10-grammar-20261102/recordings/"
+    }
+  ],
+  "sources": "sources/; snapshots chats/; spelling supporting documents retrieved",
+  "scopeCountsToValidate": {
+    "schrijven": 540,
+    "grammatica": 160,
+    "teksten": 210,
+    "klanken": 120,
+    "praktijk": 1200,
+    "spreken": 260,
+    "spelling": 430,
+    "samenHerhalen": 260,
+    "zinnen": 230,
+    "luisteren": 200
+  },
+  "constraints": [
+    "Preserve current appearance, content, audio and progress",
+    "Image generation stopped",
+    "Use existing players and immutable new assets",
+    "No runtime publication until source and media checks pass",
+    "Canonical main and normal npm run deploy only",
+    "Drive backup and readback required"
+  ],
+  "next": "Continue 120 listening candidates without mandatory missing images; retain remaining source scope and image stop.",
+  "updatedAt": "2026-11-02T11:30:25.866513+00:00",
+  "phase": "listening-source-review",
+  "grammar": {
+    "preparedPositions": 120,
+    "preparedRounds": 12,
+    "blockedImagePositions": 40,
+    "newAudio": 169,
+    "reusedAudio": 61,
+    "browserChecks": 480,
+    "nativeDecodes": 460,
+    "published": true
+  },
+  "totals": {
+    "sourcePositions": 3610,
+    "liveVerifiedThisTask": 120,
+    "notYetVerifiedThisTask": 3490
+  },
+  "coordinationCursors": {
+    "01a197d3-df65-77d2-95ac-2d6b5ff0f210": "a7e90ed0-b8a3-42b7-863a-583740ba9d21:2",
+    "01a1983d-1509-7f03-bfd1-e073544830c0": "579b310f-3beb-4c74-91d8-bb0971068e71:1",
+    "01a196c0-a185-73f0-90f1-6feffffd4e7b": "448ae7c1-3dbc-4c11-9352-c78329bb0847:1"
+  }
+}

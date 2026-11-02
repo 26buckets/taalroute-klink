@@ -1,3 +1,13 @@
+## Actuele publicatie — Klink tien: 120 grammaticaopdrachten — 2 november 2026
+
+Livebron `6c634ca4c5756ab29fad386d6d40ff90321438b6`, schone canonieke main; Worker `aeaa66dc-8572-4ff6-b5f8-8b29311aba1e`. Gepubliceerd via de gewone `npm run deploy`, na de volledige normale vrijgaveketen en bouw. 120 actuele bronopdrachten in twaalf rondes voor Alfa B/C, A2 en B1, binnen de bestaande grammatica-opzet. 169 nieuwe compacte audiobestanden plus 61 bestaande modellen; zestien modellen bestaan bewust uit exacte losse woordopnamen om grammaticale afleiders te behouden. De afzonderlijke instructiestem blijft gehandhaafd.
+
+Alle 12 banken en 230 gekoppelde opnamen zijn volledig online bytegelijk teruggelezen. Lokaal én live: 480 antwoordstromen op mobiel/desktop in Chromium/WebKit, 460 native audiodecodes en zes echte afspeelstromen. Bestaande inhoud, woordmodellen, voortgang, uiterlijk en media behouden. Types, gerichte lint, speler-/hoofdstuktests en zes negatieve vrijgaveproeven slagen. Geen GitHub Actions-workflows of extra cloudcontroles. De ontbrekende historische previewcommit is via de bestaande tag teruggehaald, zonder wijziging van de beveiliging.
+
+40 Alfa A-bronposities blijven open wegens ontbrekende verplichte beelden; beeldgeneratie is niet hervat. De overige negen tien-pakketten worden afzonderlijk afgewerkt. Dit is geen volledige oplevering van alle 3610 bronposities. Menselijke uitspraakgoedkeuring, fysieke telefoon en klasproef blijven apart open. Dossier `docs/klink10-grammar-20261102/`; herstelarchief Drive `1oFmBYlsbeRRDwQOKMdiv_-gPNcz7woN5` volledig teruggelezen: 836 bron-, code-, opname- en bewijsbestanden.
+
+---
+
 ## Actuele publicatie —100 Hoor-en-schrijf-opdrachten —2 november2026
 
 Livebron `ea847e63a452dac67577da3e34a73a9255e7eca0`, schone canonieke main; Worker `122aa1ba-3dd7-4ee1-b825-6db3fab0a15e`. Gewone `npm run deploy`, volledige normale poort en bouw geslaagd. Opvolger van `c67c6f73518626c212adacf7e3a672856c697f84`; geen alternatieve publicatieroute.100 actuele Alfa C-bronopdrachten in15 korte rondes, via de bestaande Schrijven-route. Eigen inkt wordt lokaal bewaard als concept, eerste en laatste inzending. Vergelijken volgt pas na een geslaagde opslag; eigen inzending wordt nooit door een model ingevuld. Geen OCR of automatische spelling-/handschriftbeoordeling, uitsluitend deelname. Alle eerdere inhoud, voortgang, modellen, media en vormgeving behouden. De24 bestaande docentenschermvergelijkingen zijn pixelgelijk.
