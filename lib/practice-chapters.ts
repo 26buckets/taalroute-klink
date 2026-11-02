@@ -105,7 +105,7 @@ function productionCollections(activity: GroupActivity): ChapterCollection[] {
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
   if (activity === 'synonyms') return synonymCollections;
-  if (wordUseActivities.some(id => id === activity)) return wordUseCollections.filter(collection => collection.pack.practiceActivities?.includes(activity));
+  if (wordUseActivities.some(id => id === activity)) return [...wordUseCollections.filter(collection => collection.pack.practiceActivities?.includes(activity)), ...productionCollections(activity)];
   if (activity.startsWith('content-')) {
     const existing = cache.get(activity);
     if (existing) return existing;

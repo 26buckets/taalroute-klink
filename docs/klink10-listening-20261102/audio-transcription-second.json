@@ -1,0 +1,890 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10l-82424116ef708c93",
+      "src": "/package-audio/klink10-listening-20261102/k10l-82424116ef708c93.mp3",
+      "expected": "Je fiets en je jas",
+      "recognized": " Je fiets aan je jas?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.96,
+          "text": " Je fiets aan je jas?",
+          "tokens": [
+            50365,
+            2588,
+            15848,
+            1385,
+            9904,
+            1506,
+            361,
+            296,
+            30,
+            50413
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.15800183469598944,
+          "compression_ratio": 0.7142857142857143,
+          "no_speech_prob": 0.03651249781250954
+        }
+      ]
+    },
+    {
+      "id": "k10l-d07992d9ad1c118f",
+      "src": "/package-audio/klink10-listening-20261102/k10l-d07992d9ad1c118f.mp3",
+      "expected": "Wanneer moet de patiënt de tabletten nemen?",
+      "recognized": " Wanneer moet de patiënt de tabletten nemen?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.84,
+          "text": " Wanneer moet de patiënt de tabletten nemen?",
+          "tokens": [
+            50365,
+            343,
+            12674,
+            260,
+            12677,
+            368,
+            1947,
+            72,
+            15101,
+            580,
+            368,
+            14136,
+            1147,
+            408,
+            2558,
+            30,
+            50457
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06190641721089681,
+          "compression_ratio": 0.8979591836734694,
+          "no_speech_prob": 0.07676390558481216
+        }
+      ]
+    },
+    {
+      "id": "k10l-a45247b20b47f47b",
+      "src": "/package-audio/klink10-listening-20261102/k10l-a45247b20b47f47b.mp3",
+      "expected": "Het product is niet op voorraad; we kunnen het vrijdag laten bezorgen.",
+      "recognized": " Het product is niet op voorraad. We kunnen het vrijdag laten bezorgen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.24,
+          "text": " Het product is niet op voorraad. We kunnen het vrijdag laten bezorgen.",
+          "tokens": [
+            50365,
+            12045,
+            1674,
+            307,
+            6899,
+            999,
+            7358,
+            424,
+            345,
+            13,
+            492,
+            18377,
+            3639,
+            45547,
+            39877,
+            36335,
+            10782,
+            284,
+            1766,
+            13,
+            50527
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06577400727705522,
+          "compression_ratio": 0.9722222222222222,
+          "no_speech_prob": 0.0007146262796595693
+        }
+      ]
+    },
+    {
+      "id": "k10l-8276fa6e8df39a54",
+      "src": "/package-audio/klink10-listening-20261102/k10l-8276fa6e8df39a54.mp3",
+      "expected": "De maat.",
+      "recognized": " De maat.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.58,
+          "text": " De maat.",
+          "tokens": [
+            50365,
+            1346,
+            463,
+            267,
+            13,
+            50394
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.382868903023856,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.41521981358528137
+        }
+      ]
+    },
+    {
+      "id": "k10l-58316aa74dcbd1f1",
+      "src": "/package-audio/klink10-listening-20261102/k10l-58316aa74dcbd1f1.mp3",
+      "expected": "Het haar alleen kammen.",
+      "recognized": " Het haar alleen kammen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.04,
+          "text": " Het haar alleen kammen.",
+          "tokens": [
+            50365,
+            12045,
+            39371,
+            32259,
+            9727,
+            2558,
+            13,
+            50417
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2065204249487983,
+          "compression_ratio": 0.7419354838709677,
+          "no_speech_prob": 0.012193640694022179
+        }
+      ]
+    },
+    {
+      "id": "k10l-15d614f29e780435",
+      "src": "/package-audio/klink10-listening-20261102/k10l-15d614f29e780435.mp3",
+      "expected": "Tien minuten",
+      "recognized": " 10 minuten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.86,
+          "text": " 10 minuten.",
+          "tokens": [
+            50365,
+            1266,
+            923,
+            7886,
+            13,
+            50408
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.41694246019635883,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 0.4264053702354431
+        }
+      ]
+    },
+    {
+      "id": "k10l-148b52fa2bd8654e",
+      "src": "/package-audio/klink10-listening-20261102/k10l-148b52fa2bd8654e.mp3",
+      "expected": "Ja, als jij maandag mijn dienst overneemt.",
+      "recognized": " Ja, als jij maandag mijn dienst overneemt.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.9000000000000001,
+          "text": " Ja, als jij maandag mijn dienst overneemt.",
+          "tokens": [
+            50365,
+            3530,
+            11,
+            3907,
+            28002,
+            463,
+            474,
+            559,
+            19884,
+            1026,
+            268,
+            372,
+            670,
+            716,
+            443,
+            83,
+            13,
+            50460
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08687951690272282,
+          "compression_ratio": 0.84,
+          "no_speech_prob": 0.014441238716244698
+        }
+      ]
+    },
+    {
+      "id": "k10l-71ccb64c82bde879",
+      "src": "/package-audio/klink10-listening-20261102/k10l-71ccb64c82bde879.mp3",
+      "expected": "Nee, ik houd deze te kleine schoenen.",
+      "recognized": " Nee, ik hou deze te kleine schoenen.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.72,
+          "text": " Nee, ik hou deze te kleine schoenen.",
+          "tokens": [
+            50365,
+            22067,
+            11,
+            4320,
+            36621,
+            18040,
+            535,
+            22278,
+            956,
+            78,
+            20317,
+            13,
+            50451
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06845474243164062,
+          "compression_ratio": 0.8181818181818182,
+          "no_speech_prob": 0.004894318524748087
+        }
+      ]
+    },
+    {
+      "id": "k10l-d9d7470f8fbe4c18",
+      "src": "/package-audio/klink10-listening-20261102/k10l-d9d7470f8fbe4c18.mp3",
+      "expected": "De muur meteen schilderen",
+      "recognized": " De muur meteen schilderen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.16,
+          "text": " De muur meteen schilderen.",
+          "tokens": [
+            50365,
+            1346,
+            2992,
+            374,
+            1131,
+            10685,
+            956,
+            793,
+            5170,
+            13,
+            50423
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1322972575823466,
+          "compression_ratio": 0.7647058823529411,
+          "no_speech_prob": 0.10116975754499435
+        }
+      ]
+    },
+    {
+      "id": "k10l-c42ab9a63fc68ac8",
+      "src": "/package-audio/klink10-listening-20261102/k10l-c42ab9a63fc68ac8.mp3",
+      "expected": "Na een verkeerde bestelling spreekt het team af om zowel het ordernummer als het product te controleren.",
+      "recognized": " Na een verkeerde bestelling spreekt het team af om zowel het ordennummer als het product te controleren.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.2,
+          "text": " Na een verkeerde bestelling spreekt het team af om zowel het ordennummer als het product te controleren.",
+          "tokens": [
+            50365,
+            6056,
+            3881,
+            1306,
+            330,
+            260,
+            1479,
+            1151,
+            11073,
+            637,
+            701,
+            2320,
+            3639,
+            1469,
+            3238,
+            3406,
+            710,
+            305,
+            338,
+            3639,
+            4792,
+            1857,
+            30906,
+            3907,
+            3639,
+            1674,
+            535,
+            1583,
+            1918,
+            268,
+            13,
+            50575
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05601562153209339,
+          "compression_ratio": 1.1954022988505748,
+          "no_speech_prob": 0.00022681907285004854
+        }
+      ]
+    },
+    {
+      "id": "k10l-6b12e01417d7091b",
+      "src": "/package-audio/klink10-listening-20261102/k10l-6b12e01417d7091b.mp3",
+      "expected": "Zowel ordernummer als product controleren",
+      "recognized": " Zowel ordernummer als product controleren,",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.2,
+          "text": " Zowel ordernummer als product controleren,",
+          "tokens": [
+            50365,
+            1176,
+            305,
+            338,
+            1668,
+            77,
+            30906,
+            3907,
+            1674,
+            1583,
+            1918,
+            268,
+            11,
+            50475
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3086672782897949,
+          "compression_ratio": 0.84,
+          "no_speech_prob": 0.0020502922125160694
+        }
+      ]
+    },
+    {
+      "id": "k10l-9ef92b8abd768b42",
+      "src": "/package-audio/klink10-listening-20261102/k10l-9ef92b8abd768b42.mp3",
+      "expected": "Het magazijn verwacht om negen uur een levering, maar de vrachtwagen komt pas om elf uur. De teamleider verandert de planning. Twee medewerkers controleren eerst de voorraad. Wanneer de vrachtwagen aankomt, helpen ze bij het uitladen.",
+      "recognized": " Het magazijn verwacht om 9 uur een levering, maar de vrachtwagen komt pas om 11 uur. De teamleider verandert de planning. Twee medewerkers controleren eerst de voorraad. Wanneer de vrachtwagen aankomt, helpen ze bij het uitladen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.4,
+          "text": " Het magazijn verwacht om 9 uur een levering, maar de vrachtwagen komt pas om 11 uur.",
+          "tokens": [
+            50365,
+            12045,
+            9044,
+            6041,
+            24615,
+            3589,
+            3406,
+            1722,
+            344,
+            374,
+            3881,
+            12451,
+            278,
+            11,
+            10314,
+            368,
+            371,
+            81,
+            3589,
+            28717,
+            27760,
+            1736,
+            3406,
+            2975,
+            344,
+            374,
+            13,
+            50585
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05761950274547899,
+          "compression_ratio": 1.440251572327044,
+          "no_speech_prob": 0.0005525445449166
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 5.24,
+          "end": 6.640000000000001,
+          "text": " De teamleider verandert de planning.",
+          "tokens": [
+            50627,
+            1346,
+            1469,
+            306,
+            1438,
+            1306,
+            474,
+            911,
+            368,
+            5038,
+            13,
+            50697
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05761950274547899,
+          "compression_ratio": 1.440251572327044,
+          "no_speech_prob": 0.0005525445449166
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 7.42,
+          "end": 9.48,
+          "text": " Twee medewerkers controleren eerst de voorraad.",
+          "tokens": [
+            50736,
+            47763,
+            68,
+            1205,
+            1023,
+            10608,
+            433,
+            1583,
+            1918,
+            268,
+            308,
+            16398,
+            368,
+            7358,
+            424,
+            345,
+            13,
+            50839
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05761950274547899,
+          "compression_ratio": 1.440251572327044,
+          "no_speech_prob": 0.0005525445449166
+        },
+        {
+          "id": 3,
+          "seek": 0,
+          "start": 10.18,
+          "end": 12.84,
+          "text": " Wanneer de vrachtwagen aankomt, helpen ze bij het uitladen.",
+          "tokens": [
+            50874,
+            343,
+            12674,
+            260,
+            368,
+            371,
+            81,
+            3589,
+            28717,
+            257,
+            657,
+            298,
+            83,
+            11,
+            854,
+            268,
+            5277,
+            10317,
+            3639,
+            12528,
+            9290,
+            268,
+            13,
+            51007
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05761950274547899,
+          "compression_ratio": 1.440251572327044,
+          "no_speech_prob": 0.0005525445449166
+        }
+      ]
+    },
+    {
+      "id": "k10l-759cc9140fc99c8f",
+      "src": "/package-audio/klink10-listening-20261102/k10l-759cc9140fc99c8f.mp3",
+      "expected": "Een klant krijgt een verkeerd product. De medewerkers onderzoeken hoe dat kon gebeuren. Ze ontdekken dat het ordernummer niet is gecontroleerd. Het team spreekt af om bij volgende bestellingen zowel het nummer als het product te controleren.",
+      "recognized": " Een klant krijgt een verkeerd product. De medewerkers onderzoeken hoe dat kon gebeuren. Ze ontdekken dat het ordennummer niet is gecontroleerd. Het team spreekt af om bij volgende bestellingen zowel het nummer als het product te controleren.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.7,
+          "text": " Een klant krijgt een verkeerd product. De medewerkers onderzoeken hoe dat kon gebeuren.",
+          "tokens": [
+            50365,
+            25374,
+            9671,
+            394,
+            27027,
+            10463,
+            3881,
+            1306,
+            330,
+            7783,
+            1674,
+            13,
+            1346,
+            1205,
+            1023,
+            10608,
+            433,
+            20756,
+            4765,
+            41021,
+            19709,
+            1137,
+            5897,
+            29073,
+            9873,
+            13,
+            50600
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.058010916960866826,
+          "compression_ratio": 1.5253164556962024,
+          "no_speech_prob": 0.00043042897596023977
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 5.58,
+          "end": 7.72,
+          "text": " Ze ontdekken dat het ordennummer niet is gecontroleerd.",
+          "tokens": [
+            50644,
+            4853,
+            6592,
+            67,
+            916,
+            2653,
+            1137,
+            3639,
+            4792,
+            1857,
+            30906,
+            6899,
+            307,
+            1519,
+            9000,
+            29114,
+            7783,
+            13,
+            50751
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.058010916960866826,
+          "compression_ratio": 1.5253164556962024,
+          "no_speech_prob": 0.00043042897596023977
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 8.76,
+          "end": 12.82,
+          "text": " Het team spreekt af om bij volgende bestellingen zowel het nummer als het product te controleren.",
+          "tokens": [
+            50803,
+            12045,
+            1469,
+            637,
+            701,
+            2320,
+            3238,
+            3406,
+            10317,
+            1996,
+            27429,
+            1151,
+            11073,
+            268,
+            710,
+            305,
+            338,
+            3639,
+            1031,
+            936,
+            3907,
+            3639,
+            1674,
+            535,
+            1583,
+            1918,
+            268,
+            13,
+            51006
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.058010916960866826,
+          "compression_ratio": 1.5253164556962024,
+          "no_speech_prob": 0.00043042897596023977
+        }
+      ]
+    },
+    {
+      "id": "k10l-d8c7b2d1af70c94b",
+      "src": "/package-audio/klink10-listening-20261102/k10l-d8c7b2d1af70c94b.mp3",
+      "expected": "Ja, op hetzelfde tijdstip.",
+      "recognized": " Ja, op hetzelfde tijdstip.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.34,
+          "text": " Ja, op hetzelfde tijdstip.",
+          "tokens": [
+            50365,
+            3530,
+            11,
+            999,
+            3639,
+            34686,
+            1479,
+            26966,
+            372,
+            647,
+            13,
+            50432
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.25632363099318284,
+          "compression_ratio": 0.7647058823529411,
+          "no_speech_prob": 0.010296029038727283
+        }
+      ]
+    },
+    {
+      "id": "k10l-15a59858197e0ec0",
+      "src": "/package-audio/klink10-listening-20261102/k10l-15a59858197e0ec0.mp3",
+      "expected": "Stuur alstublieft de foto’s mee.",
+      "recognized": " Stuur alstublieft de foto's mee.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.44,
+          "text": " Stuur alstublieft de foto's mee.",
+          "tokens": [
+            50365,
+            745,
+            18470,
+            419,
+            372,
+            836,
+            6302,
+            844,
+            368,
+            19176,
+            311,
+            24442,
+            13,
+            50437
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.14002145131429036,
+          "compression_ratio": 0.8,
+          "no_speech_prob": 0.002321368083357811
+        }
+      ]
+    },
+    {
+      "id": "k10l-2c2ed1d773b3b7a0",
+      "src": "/package-audio/klink10-listening-20261102/k10l-2c2ed1d773b3b7a0.mp3",
+      "expected": "Het ordernummer is niet gecontroleerd.",
+      "recognized": " Het ordernummer is niet gecontroleerd.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.92,
+          "text": " Het ordernummer is niet gecontroleerd.",
+          "tokens": [
+            50365,
+            12045,
+            1668,
+            77,
+            30906,
+            307,
+            6899,
+            1519,
+            9000,
+            29114,
+            7783,
+            13,
+            50461
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.16093717302594865,
+          "compression_ratio": 0.8444444444444444,
+          "no_speech_prob": 0.002756479661911726
+        }
+      ]
+    },
+    {
+      "id": "k10l-e8715b4ea3f13224",
+      "src": "/package-audio/klink10-listening-20261102/k10l-e8715b4ea3f13224.mp3",
+      "expected": "De arts beoordeelt of onderzoek nodig is.",
+      "recognized": " de arts beoordeelt of onderzoek nodig is.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.2,
+          "text": " de arts beoordeelt of onderzoek nodig is.",
+          "tokens": [
+            50365,
+            368,
+            8609,
+            312,
+            78,
+            15127,
+            2018,
+            295,
+            20756,
+            4765,
+            916,
+            43409,
+            307,
+            13,
+            50475
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2062261998653412,
+          "compression_ratio": 0.8367346938775511,
+          "no_speech_prob": 0.0284123457968235
+        }
+      ]
+    },
+    {
+      "id": "k10l-0910d0c745459fef",
+      "src": "/package-audio/klink10-listening-20261102/k10l-0910d0c745459fef.mp3",
+      "expected": "Ja, ik stuur ze mee met het ordernummer.",
+      "recognized": " Ja, ik stuur ze mee met het ordernummer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.72,
+          "text": " Ja, ik stuur ze mee met het ordernummer.",
+          "tokens": [
+            50365,
+            3530,
+            11,
+            4320,
+            342,
+            18470,
+            5277,
+            24442,
+            1131,
+            3639,
+            4792,
+            1248,
+            30906,
+            13,
+            50451
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10821576416492462,
+          "compression_ratio": 0.9090909090909091,
+          "no_speech_prob": 0.0009845435852184892
+        }
+      ]
+    },
+    {
+      "id": "k10l-2024bcd9a60ccb97",
+      "src": "/package-audio/klink10-listening-20261102/k10l-2024bcd9a60ccb97.mp3",
+      "expected": "We controleren voortaan het ordernummer en het product.",
+      "recognized": " We controleren voortaan het ordernummer en het product.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.46,
+          "text": " We controleren voortaan het ordernummer en het product.",
+          "tokens": [
+            50365,
+            492,
+            1583,
+            1918,
+            268,
+            1650,
+            477,
+            21326,
+            3639,
+            1668,
+            77,
+            30906,
+            465,
+            3639,
+            1674,
+            13,
+            50488
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09026410844590929,
+          "compression_ratio": 0.9482758620689655,
+          "no_speech_prob": 0.002978114178404212
+        }
+      ]
+    }
+  ]
+}

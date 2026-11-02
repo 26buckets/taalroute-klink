@@ -1,0 +1,36 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10l-douchekop-hyphen-20261102",
+      "src": "/package-audio/klink10-listening-20261102/k10l-douchekop-hyphen-20261102.mp3",
+      "expected": "douchekop",
+      "recognized": " Toeskap.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.52,
+          "text": " Toeskap.",
+          "tokens": [
+            50365,
+            1407,
+            279,
+            34334,
+            13,
+            50391
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.46915044103349957,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.2889612019062042
+        }
+      ]
+    }
+  ]
+}

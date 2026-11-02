@@ -1,0 +1,64 @@
+{
+  "application": "Klink",
+  "authorization": "Nico, 2 november 2026: tien chats volledig afronden inclusief audio en publiceren",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "roleVoices": {
+    "question": "h6uBOiAjLKklte8hdYio",
+    "narrator": "0qLmDzgqulxcvv0yf3kg",
+    "option": "7qdUFMklKPaaAVMsBTBt",
+    "female": "7qdUFMklKPaaAVMsBTBt",
+    "male": "60CwgZt94Yf7yYIXMDDe",
+    "optionRepair": "0qLmDzgqulxcvv0yf3kg",
+    "narratorRepair": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 400,
+  "clips": [
+    {
+      "id": "k10lr-711a8350a48011a2",
+      "text": "Je fiets en je jas",
+      "title": "Je fiets en je jas",
+      "role": "optionRepair",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "src": "/package-audio/klink10-listening-20261102/k10lr-711a8350a48011a2.mp3",
+      "textSha256": "4ce245a1d662582d2abe1a69acd48cba9e53f6a7cd6c18f80e47eeda12273b7e"
+    },
+    {
+      "id": "k10lr-b1fb70acb40d300f",
+      "text": "Nee, ik houd deze te kleine schoenen.",
+      "title": "Nee, ik houd deze te kleine schoenen.",
+      "role": "optionRepair",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "src": "/package-audio/klink10-listening-20261102/k10lr-b1fb70acb40d300f.mp3",
+      "textSha256": "e5be3df64762c2815b4a827498f30a5c48be3d6d97ac0ebf19132fc89bb41c5c"
+    },
+    {
+      "id": "k10lr-adfb8b44768f543e",
+      "text": "Na een verkeerde bestelling spreekt het team af om zowel het ordernummer als het product te controleren.",
+      "title": "Na een verkeerde bestelling spreekt het team af om zowel het ordernummer als het product te controleren.",
+      "role": "narratorRepair",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "src": "/package-audio/klink10-listening-20261102/k10lr-adfb8b44768f543e.mp3",
+      "textSha256": "949f86ccf58fd0d480254dec635846ad906830c3c01e2b0ba891b33896f028dd"
+    },
+    {
+      "id": "k10lr-64d2a23f118aeda6",
+      "text": "Een klant krijgt een verkeerd product. De medewerkers onderzoeken hoe dat kon gebeuren. Ze ontdekken dat het ordernummer niet is gecontroleerd. Het team spreekt af om bij volgende bestellingen zowel het nummer als het product te controleren.",
+      "title": "Een klant krijgt een verkeerd product. De medewerkers onderzoeken hoe dat kon gebeuren. Ze ontdekken dat het ordernummer niet is gecontroleerd. Het team spreekt af om bij volgende bestellingen zowel het nummer als het product te controleren.",
+      "role": "narratorRepair",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "src": "/package-audio/klink10-listening-20261102/k10lr-64d2a23f118aeda6.mp3",
+      "textSha256": "25a5d90ce37f4e0edfac227acadd0907aac4afc0f3752785d794f42b0e906bfa"
+    }
+  ]
+}

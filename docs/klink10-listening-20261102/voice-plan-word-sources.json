@@ -1,0 +1,56 @@
+{
+  "application": "Klink",
+  "authorization": "Nico, 2 november 2026: tien chats volledig afronden inclusief audio en publiceren",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "roleVoices": {
+    "question": "h6uBOiAjLKklte8hdYio",
+    "narrator": "0qLmDzgqulxcvv0yf3kg",
+    "option": "7qdUFMklKPaaAVMsBTBt",
+    "female": "7qdUFMklKPaaAVMsBTBt",
+    "male": "60CwgZt94Yf7yYIXMDDe"
+  },
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 129,
+  "clips": [
+    {
+      "id": "k10l-word-source-e6480e0663597d74",
+      "word": "tasje",
+      "text": "Ik draag een klein tasje. Tasje.",
+      "title": "Ik draag een klein tasje. Tasje.",
+      "role": "option",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "src": "/package-audio/klink10-listening-20261102/k10l-word-source-e6480e0663597d74.mp3",
+      "textSha256": "efd1aaf9abddd5a6648e7757a67299eada72f29d12481a9b16d9c39244e8e611"
+    },
+    {
+      "id": "k10l-word-source-5d9a0591807c3d73",
+      "word": "douchekop",
+      "text": "De douche heeft een nieuwe douchekop. Douchekop.",
+      "title": "De douche heeft een nieuwe douchekop. Douchekop.",
+      "role": "option",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "src": "/package-audio/klink10-listening-20261102/k10l-word-source-5d9a0591807c3d73.mp3",
+      "textSha256": "210f13fedf25c2b8d995f896c0ed00c5d3a06f2895a26ef355e0785f7fcfbd1a"
+    },
+    {
+      "id": "k10l-word-source-617279d6905cb270",
+      "word": "afmeldt",
+      "text": "Als je je afmeldt, krijg je een bericht. Afmeldt.",
+      "title": "Als je je afmeldt, krijg je een bericht. Afmeldt.",
+      "role": "option",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "src": "/package-audio/klink10-listening-20261102/k10l-word-source-617279d6905cb270.mp3",
+      "textSha256": "02db987e1f1051d1a5621ccef79b55bb079e8ac3d5d90086f3dded5f8a95a0b1"
+    }
+  ]
+}

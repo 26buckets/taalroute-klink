@@ -39,7 +39,7 @@ void test('Twelve independent chapters cover all registered activities without c
       if (collection.contentUrl) {
         assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
         assert(collection.exerciseCount > 0);
-        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101|klink-handwriting-20261102|b1-review-20261101|klink10-grammar-20261102)\//.test(collection.contentUrl));
+        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101|klink-handwriting-20261102|b1-review-20261101|klink10-grammar-20261102|klink10-listening-20261102)\//.test(collection.contentUrl));
         continue;
       }
       assert(collection.exercises.length);
@@ -75,7 +75,7 @@ void test('Source levels are honest, never inferred from matching words or a com
   assert.equal(chapterExerciseLevel({ exerciseId: 'unknown', componentId: '', contractVersion: '', mode: '' }), 'support');
   assert(chapterCollections('texts').some(item => item.level === 'a2'));
   assert.equal(new Set(chapterCollections('texts').flatMap(item => item.exercises.map(exercise => exercise.contextId))).size, 192);
-  assert.equal(chapterCollections('text-question').length, 268);
+  assert.equal(chapterCollections('text-question').length, 270);
   assert.equal(chapterCollections('dialogues').length, 128);
 });
 

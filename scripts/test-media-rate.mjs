@@ -23,7 +23,7 @@ void test('Default playback uses 0.85; isolated models retain their natural rate
   const played = [];
   let audio;
   globalThis.Audio = class extends EventTarget {
-    constructor() { super(); audio = this; }
+    constructor() { super(); this.dataset = {}; audio = this; }
     play() { played.push({ src: this.src, rate: this.playbackRate, defaultRate: this.defaultPlaybackRate, pitch: this.preservesPitch }); return Promise.resolve(); }
     pause() { this.paused = true; }
   };

@@ -1,0 +1,353 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "initialPrompt": null,
+  "diagnostic": "Three byte-identical decoded copies separated by silence; the delivered recording is unchanged.",
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10lw-cd8b86608b197453",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-cd8b86608b197453.mp3",
+      "sourceSha256": "18a21d0eaa0305b99aa586c9e106cae5850df91d6cbdb097c7d52c5f5764d682",
+      "expected": "tasje",
+      "repeatedExpected": "tasje tasje tasje",
+      "recognized": " Tassie. Tassie. Tassie.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.12,
+          "text": " Tassie.",
+          "tokens": [
+            50365,
+            314,
+            640,
+            414,
+            13,
+            50421
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7267775284616571,
+          "compression_ratio": 1.2777777777777777,
+          "no_speech_prob": 0.43492743372917175
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 1.6400000000000001,
+          "end": 2.54,
+          "text": " Tassie.",
+          "tokens": [
+            50447,
+            314,
+            640,
+            414,
+            13,
+            50492
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7267775284616571,
+          "compression_ratio": 1.2777777777777777,
+          "no_speech_prob": 0.43492743372917175
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 3.38,
+          "end": 3.94,
+          "text": " Tassie.",
+          "tokens": [
+            50534,
+            314,
+            640,
+            414,
+            13,
+            50562
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7267775284616571,
+          "compression_ratio": 1.2777777777777777,
+          "no_speech_prob": 0.43492743372917175
+        }
+      ]
+    },
+    {
+      "id": "k10lw-5dabce2f85363564",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-5dabce2f85363564.mp3",
+      "sourceSha256": "0fc11895493966a9fca5defecd35e8be556f68ba25304b8e1c5d86215abce714",
+      "expected": "douchekop",
+      "repeatedExpected": "douchekop douchekop douchekop",
+      "recognized": " Toeskop.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.96,
+          "text": " Toeskop.",
+          "tokens": [
+            50365,
+            1407,
+            279,
+            43855,
+            13,
+            50413
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5780854906354632,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.5038045644760132
+        }
+      ]
+    },
+    {
+      "id": "k10lw-a759e5721a27ac9f",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-a759e5721a27ac9f.mp3",
+      "sourceSha256": "4820ab79ed740311965a9f76e7b88af52983485aad61b91b4bc2bc4732cf6ef6",
+      "expected": "afmeldt",
+      "repeatedExpected": "afmeldt afmeldt afmeldt",
+      "recognized": " Afmeld. Afmeld. Afmeld.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.12,
+          "text": " Afmeld.",
+          "tokens": [
+            50365,
+            3325,
+            76,
+            5957,
+            13,
+            50421
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4757370195890728,
+          "compression_ratio": 1.2777777777777777,
+          "no_speech_prob": 0.6854785680770874
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.02,
+          "end": 2.62,
+          "text": " Afmeld.",
+          "tokens": [
+            50466,
+            3325,
+            76,
+            5957,
+            13,
+            50496
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4757370195890728,
+          "compression_ratio": 1.2777777777777777,
+          "no_speech_prob": 0.6854785680770874
+        },
+        {
+          "id": 2,
+          "seek": 0,
+          "start": 3.58,
+          "end": 4.08,
+          "text": " Afmeld.",
+          "tokens": [
+            50544,
+            3325,
+            76,
+            5957,
+            13,
+            50569
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4757370195890728,
+          "compression_ratio": 1.2777777777777777,
+          "no_speech_prob": 0.6854785680770874
+        }
+      ]
+    },
+    {
+      "id": "k10lw-3330099f779f5192",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-3330099f779f5192.mp3",
+      "sourceSha256": "e7d9747248b54815d5488c1228066f9d9593c96bc69ee620318e886b3e6de0b6",
+      "expected": "ordernummer",
+      "repeatedExpected": "ordernummer ordernummer ordernummer",
+      "recognized": " Waternummer, waternummer, waternummer.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.7800000000000002,
+          "text": " Waternummer, waternummer, waternummer.",
+          "tokens": [
+            50365,
+            8772,
+            77,
+            30906,
+            11,
+            1281,
+            77,
+            30906,
+            11,
+            1281,
+            77,
+            30906,
+            13,
+            50554
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.21550865173339845,
+          "compression_ratio": 1.52,
+          "no_speech_prob": 0.5135945081710815
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-7eaddcf0fa93b2b3",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-7eaddcf0fa93b2b3.mp3",
+      "sourceSha256": "eae683a093d00bf5ba9e9489145b0a6298838ecda0f55cb02c9927c23a9eb36a",
+      "expected": "tasje",
+      "repeatedExpected": "tasje tasje tasje",
+      "recognized": " Tassie, Tassie, Tassie.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.22,
+          "text": " Tassie, Tassie, Tassie.",
+          "tokens": [
+            50365,
+            314,
+            640,
+            414,
+            11,
+            314,
+            640,
+            414,
+            11,
+            314,
+            640,
+            414,
+            13,
+            50576
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3464203834533691,
+          "compression_ratio": 1.2105263157894737,
+          "no_speech_prob": 0.46994107961654663
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-bfb8049b4b020949",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-bfb8049b4b020949.mp3",
+      "sourceSha256": "37792179039dbfc7f197043415ec8146106ff09980986132ca9a9d572c877c60",
+      "expected": "douchekop",
+      "repeatedExpected": "douchekop douchekop douchekop",
+      "recognized": " Duskop.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.12,
+          "text": " Duskop.",
+          "tokens": [
+            50365,
+            17916,
+            43855,
+            13,
+            50421
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.751738707224528,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 0.21485212445259094
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-54434ec4104ebcc2",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-54434ec4104ebcc2.mp3",
+      "sourceSha256": "264803ffafad73b9bfdded71fb1cf7da46d94a0575f2d4e87bdb86cf56113140",
+      "expected": "afmeldt",
+      "repeatedExpected": "afmeldt afmeldt afmeldt",
+      "recognized": " Au mild. Au mild. Au mild.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.24,
+          "text": " Au mild. Au mild. Au mild.",
+          "tokens": [
+            50365,
+            12160,
+            15154,
+            13,
+            12160,
+            15154,
+            13,
+            12160,
+            15154,
+            13,
+            50577
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.33796167373657227,
+          "compression_ratio": 1.3,
+          "no_speech_prob": 0.3939049541950226
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-414eef2f0b9198cb",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-414eef2f0b9198cb.mp3",
+      "sourceSha256": "854ccd1317b7e85f45b76491b6f7a636b903abf08aca546f1ef0943c6da42146",
+      "expected": "ordernummer",
+      "repeatedExpected": "ordernummer ordernummer ordernummer",
+      "recognized": " Ordennummer, ordennummer, ordennummer.",
+      "repeatedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.4,
+          "text": " Ordennummer, ordennummer, ordennummer.",
+          "tokens": [
+            50365,
+            1610,
+            1556,
+            77,
+            30906,
+            11,
+            28615,
+            77,
+            30906,
+            11,
+            28615,
+            77,
+            30906,
+            13,
+            50585
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3830205500125885,
+          "compression_ratio": 1.52,
+          "no_speech_prob": 0.39554134011268616
+        }
+      ]
+    }
+  ]
+}

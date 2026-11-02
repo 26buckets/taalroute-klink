@@ -1,0 +1,148 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10lw-cd8b86608b197453",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-cd8b86608b197453.mp3",
+      "expected": "tasje",
+      "recognized": " Tassie!",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.56,
+          "text": " Tassie!",
+          "tokens": [
+            50365,
+            314,
+            640,
+            414,
+            0,
+            50393
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6730917521885463,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 0.16481652855873108
+        }
+      ]
+    },
+    {
+      "id": "k10lw-888865e4938d9df7",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-888865e4938d9df7.mp3",
+      "expected": "tabletten",
+      "recognized": " Tabletten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.76,
+          "text": " Tabletten.",
+          "tokens": [
+            50365,
+            14106,
+            2631,
+            1147,
+            13,
+            50403
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.403371913092477,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 0.3036040663719177
+        }
+      ]
+    },
+    {
+      "id": "k10lw-5dabce2f85363564",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-5dabce2f85363564.mp3",
+      "expected": "douchekop",
+      "recognized": " Toeskop.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.46,
+          "text": " Toeskop.",
+          "tokens": [
+            50365,
+            1407,
+            279,
+            43855,
+            13,
+            50388
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5484730856759208,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.1516244262456894
+        }
+      ]
+    },
+    {
+      "id": "k10lw-a759e5721a27ac9f",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-a759e5721a27ac9f.mp3",
+      "expected": "afmeldt",
+      "recognized": " Afmeld!",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Afmeld!",
+          "tokens": [
+            50365,
+            3325,
+            76,
+            5957,
+            0,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3728361129760742,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 0.3038850724697113
+        }
+      ]
+    },
+    {
+      "id": "k10lw-3330099f779f5192",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-3330099f779f5192.mp3",
+      "expected": "ordernummer",
+      "recognized": " Waternummer.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.56,
+          "text": " Waternummer.",
+          "tokens": [
+            50365,
+            8772,
+            77,
+            30906,
+            13,
+            50393
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.32467031478881836,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 0.7105730772018433
+        }
+      ]
+    }
+  ]
+}

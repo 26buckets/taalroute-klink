@@ -1,10 +1,12 @@
 import type { AudioOptions } from './package-content';
 import { isWithdrawnAudio } from './audio-policy.ts';
 import { repairedAudioSource } from './audio-repairs.ts';
+import { fetchWordRecording } from './word-listening.ts';
 
 let activeAudio: HTMLAudioElement | undefined;
 let cancelPlayback: (() => void) | undefined;
 let audioUnlocked = false;
+let releasePackedSource: (() => void) | undefined;
 
 export const DEFAULT_AUDIO_RATE = 0.85;
 export const SLOW_AUDIO_RATE = 0.65;
@@ -50,6 +52,7 @@ export function applyDefaultAudioRate(audio: HTMLMediaElement | null, rate = DEF
 export function stopMedia() {
   cancelPlayback?.();
   activeAudio?.pause();
+  releasePackedSource?.();
 }
 
 export function unlockMedia() {
@@ -61,6 +64,36 @@ export function unlockMedia() {
 }
 
 export function playMedia(source: string, options: AudioOptions = {}): Promise<boolean> {
+  if (!source.includes('#bytes=')) return playResolvedMedia(source, options);
+  stopMedia();
+  if (isWithdrawnAudio(source) || options.signal?.aborted) return Promise.resolve(false);
+  const packed = source.match(/^(.+)#bytes=(\d+),(\d+)$/);
+  if (!packed) return Promise.reject(new Error('Invalid packed recording'));
+  const unlocked = unlockMedia(), controller = new AbortController();
+  const cancel = () => controller.abort();
+  cancelPlayback = cancel;
+  options.signal?.addEventListener('abort', cancel, { once: true });
+  const timeout = setTimeout(cancel, 15000);
+  return Promise.all([unlocked, fetchWordRecording({src: packed[1], offset: Number(packed[2]), length: Number(packed[3])}, controller.signal)]).then(([, blob]) => {
+    clearTimeout(timeout);
+    if (controller.signal.aborted) return false;
+    if (cancelPlayback === cancel) cancelPlayback = undefined;
+    const url = URL.createObjectURL(blob), playing = playResolvedMedia(url, options, source), audio = activeAudio!;
+    const release = () => {
+      URL.revokeObjectURL(url);
+      audio.removeEventListener('ended', release); audio.removeEventListener('error', release);
+      if (releasePackedSource === release) releasePackedSource = undefined;
+    };
+    releasePackedSource = release;
+    audio.addEventListener('ended', release, { once: true }); audio.addEventListener('error', release, { once: true });
+    return playing.then(played => { if (!played) release(); return played; }, error => { release(); throw error; });
+  }).catch(error => { if (controller.signal.aborted) return false; throw error; }).finally(() => {
+    clearTimeout(timeout); options.signal?.removeEventListener('abort', cancel);
+    if (cancelPlayback === cancel) cancelPlayback = undefined;
+  });
+}
+
+function playResolvedMedia(source: string, options: AudioOptions = {}, originalSource = source): Promise<boolean> {
   stopMedia();
   if (isWithdrawnAudio(source)) return Promise.resolve(false);
   source = repairedAudioSource(source);
@@ -69,7 +102,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
   // Reuse the element unlocked by the learner's gesture, including on mobile.
   const audio = activeAudio ??= new Audio();
   audio.src = source;
-  audio.dataset.klinkSource = options.wordSourceKey ?? source;
+  audio.dataset.klinkSource = options.wordSourceKey ?? originalSource;
   audio.dataset.wordListening = options.wordSourceKey ? 'true' : 'false';
   if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('klink-audio-source', { detail: audio }));
   applyDefaultAudioRate(audio, options.playbackRate);

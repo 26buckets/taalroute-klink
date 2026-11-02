@@ -12,7 +12,8 @@ export function recordingForWord(word: string, preferredSource?: string) {
 
 export async function fetchWordRecording(recording: PackedWordRecording, signal: AbortSignal) {
   const { src, offset, length } = recording;
-  if (!/^\/package-audio\/word-listening-20261101\/words-[a-f0-9]{16}\.bin$/.test(src) || !Number.isSafeInteger(offset) || offset < 0 || !Number.isSafeInteger(length) || length < 10 || length > 262144) throw new Error('Invalid word recording');
+  const lesson = /^\/package-audio\/klink10-[a-z-]+-\d{8}\/audio-[a-f0-9]{16}\.bin$/.test(src);
+  if ((!lesson && !/^\/package-audio\/word-listening-20261101\/words-[a-f0-9]{16}\.bin$/.test(src)) || !Number.isSafeInteger(offset) || offset < 0 || !Number.isSafeInteger(length) || length < 10 || length > (lesson ? 524288 : 262144)) throw new Error('Invalid word recording');
   const end = offset + length - 1;
   const response = await fetch(src, { headers: { Range: `bytes=${offset}-${end}` }, signal });
   if (response.status !== 200 && response.status !== 206) throw new Error('Word recording unavailable');

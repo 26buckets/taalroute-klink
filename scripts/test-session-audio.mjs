@@ -8,7 +8,7 @@ void test('Session tempo changes active and later audio without restarting; rest
  const recording={};globalThis.window=new EventTarget();
  globalThis.sessionStorage={getItem:key=>stored.get(key)??null,setItem:(key,value)=>stored.set(key,value),removeItem:key=>stored.delete(key)};
  globalThis.document={querySelectorAll:()=>[recording]}; // oxlint-disable-line typescript/no-deprecated -- Minimal DOM test double, not a deprecated browser API.
- globalThis.Audio=class extends EventTarget{constructor(){super();audio=this;}play(){starts++;return Promise.resolve();}pause(){}};
+ globalThis.Audio=class extends EventTarget{constructor(){super();this.dataset={};audio=this;}play(){starts++;return Promise.resolve();}pause(){}};
  const unsubscribe=subscribeSlowAudio(()=>notifications++);
  try{
   assert.equal(getSlowAudio(),false);applyDefaultAudioRate(recording);

@@ -1,0 +1,638 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10lw-cd8b86608b197453",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-cd8b86608b197453.mp3",
+      "expected": "tasje",
+      "recognized": " Taas je.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.58,
+          "text": " Taas je.",
+          "tokens": [
+            50365,
+            6551,
+            296,
+            1506,
+            13,
+            50394
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6269172940935407,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 1.5025790611744583e-09
+        }
+      ]
+    },
+    {
+      "id": "k10lw-fb9ee1c65e04da99",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-fb9ee1c65e04da99.mp3",
+      "expected": "pasfoto",
+      "recognized": " Pas foto!",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.54,
+          "text": " Pas foto!",
+          "tokens": [
+            50365,
+            14199,
+            19176,
+            0,
+            50392
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6087541580200195,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 1.4067044751264746e-10
+        }
+      ]
+    },
+    {
+      "id": "k10lw-fb8ae15dcf925f3a",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-fb8ae15dcf925f3a.mp3",
+      "expected": "ketel",
+      "recognized": " Ketel.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.62,
+          "text": " Ketel.",
+          "tokens": [
+            50365,
+            591,
+            302,
+            338,
+            13,
+            50396
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.40696832111903597,
+          "compression_ratio": 0.42857142857142855,
+          "no_speech_prob": 1.7325879619889406e-10
+        }
+      ]
+    },
+    {
+      "id": "k10lw-a9e79903044788d9",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-a9e79903044788d9.mp3",
+      "expected": "zaterdagcursus",
+      "recognized": " zaterdagcursus",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " zaterdagcursus",
+          "tokens": [
+            50365,
+            710,
+            771,
+            39877,
+            66,
+            2156,
+            301,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5213283962673612,
+          "compression_ratio": 0.6363636363636364,
+          "no_speech_prob": 4.9446948272025004e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-888865e4938d9df7",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-888865e4938d9df7.mp3",
+      "expected": "tabletten",
+      "recognized": " Tableten.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Tableten.",
+          "tokens": [
+            50365,
+            14106,
+            2631,
+            268,
+            13,
+            50405
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3524922643389021,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 1.5753588711309163e-10
+        }
+      ]
+    },
+    {
+      "id": "k10lw-363a6bcd9f67c4e1",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-363a6bcd9f67c4e1.mp3",
+      "expected": "schoenmaat",
+      "recognized": " Schoenmaat.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.72,
+          "text": " Schoenmaat.",
+          "tokens": [
+            50365,
+            2065,
+            78,
+            268,
+            1696,
+            267,
+            13,
+            50401
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23099369472927517,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 5.006593230272305e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-2a3512dfac6e4fbd",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-2a3512dfac6e4fbd.mp3",
+      "expected": "lievelingseten",
+      "recognized": " lievelings eten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.88,
+          "text": " lievelings eten.",
+          "tokens": [
+            50365,
+            4544,
+            779,
+            1109,
+            1030,
+            268,
+            13,
+            50409
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.43971649805704754,
+          "compression_ratio": 0.6666666666666666,
+          "no_speech_prob": 7.095928445527422e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-5dabce2f85363564",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-5dabce2f85363564.mp3",
+      "expected": "douchekop",
+      "recognized": " Toeskop.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " Toeskop.",
+          "tokens": [
+            50365,
+            1407,
+            279,
+            43855,
+            13,
+            50387
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4487451825823103,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 9.047158022745805e-10
+        }
+      ]
+    },
+    {
+      "id": "k10lw-693c47e6480c92f4",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-693c47e6480c92f4.mp3",
+      "expected": "bibliotheekboek",
+      "recognized": " bibliotheekboek,",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.16,
+          "text": " bibliotheekboek,",
+          "tokens": [
+            50365,
+            34344,
+            24863,
+            916,
+            1763,
+            916,
+            11,
+            50423
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.40950849321153426,
+          "compression_ratio": 0.6666666666666666,
+          "no_speech_prob": 2.836082584056765e-11
+        }
+      ]
+    },
+    {
+      "id": "k10lw-e887060680dcdff6",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-e887060680dcdff6.mp3",
+      "expected": "verlenging",
+      "recognized": " Verlenging!",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Verlenging!",
+          "tokens": [
+            50365,
+            4281,
+            75,
+            1501,
+            278,
+            0,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4266364574432373,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 2.2094671578432035e-11
+        }
+      ]
+    },
+    {
+      "id": "k10lw-a15ab177b0924ce5",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-a15ab177b0924ce5.mp3",
+      "expected": "maandagdienst",
+      "recognized": " Maandagdienst.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Maandagdienst.",
+          "tokens": [
+            50365,
+            4042,
+            474,
+            559,
+            67,
+            27366,
+            13,
+            50405
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.29107846154106987,
+          "compression_ratio": 0.6363636363636364,
+          "no_speech_prob": 6.687313463399347e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-9378edda8c88f88b",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-9378edda8c88f88b.mp3",
+      "expected": "dichtgedraaid",
+      "recognized": " dichtgedraaid.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8200000000000001,
+          "text": " dichtgedraaid.",
+          "tokens": [
+            50365,
+            48774,
+            3004,
+            424,
+            17810,
+            13,
+            50406
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.45093822479248047,
+          "compression_ratio": 0.6363636363636364,
+          "no_speech_prob": 5.361059252778633e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-715de40f3a4d53be",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-715de40f3a4d53be.mp3",
+      "expected": "marktstraat",
+      "recognized": " Marktstraat.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.72,
+          "text": " Marktstraat.",
+          "tokens": [
+            50365,
+            39774,
+            19639,
+            267,
+            13,
+            50401
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3415600912911551,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 5.237790669937459e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-19a7a5fd441efec7",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-19a7a5fd441efec7.mp3",
+      "expected": "bestelsysteem",
+      "recognized": " Bestelsysteem.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Bestelsysteem.",
+          "tokens": [
+            50365,
+            9752,
+            1625,
+            88,
+            2941,
+            443,
+            13,
+            50405
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2982087665134006,
+          "compression_ratio": 0.7,
+          "no_speech_prob": 5.2962959538882526e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-daeff2fa98e56dd3",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-daeff2fa98e56dd3.mp3",
+      "expected": "drieëntwintig",
+      "recognized": " 23",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " 23",
+          "tokens": [
+            50365,
+            6673,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.782052755355835,
+          "compression_ratio": 0.2,
+          "no_speech_prob": 1.02113612704402e-11
+        }
+      ]
+    },
+    {
+      "id": "k10lw-40d41dee2c7e7396",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-40d41dee2c7e7396.mp3",
+      "expected": "lesgeld",
+      "recognized": " Lesgeld!",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Lesgeld!",
+          "tokens": [
+            50365,
+            6965,
+            49591,
+            0,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4537200133005778,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 4.202261802421781e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-a759e5721a27ac9f",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-a759e5721a27ac9f.mp3",
+      "expected": "afmeldt",
+      "recognized": " Afmeld.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Afmeld.",
+          "tokens": [
+            50365,
+            3325,
+            76,
+            5957,
+            13,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.414823055267334,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 3.947223797817756e-11
+        }
+      ]
+    },
+    {
+      "id": "k10lw-3330099f779f5192",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-3330099f779f5192.mp3",
+      "expected": "ordernummer",
+      "recognized": " Word er nummer.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.62,
+          "text": " Word er nummer.",
+          "tokens": [
+            50365,
+            8725,
+            1189,
+            1031,
+            936,
+            13,
+            50396
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.46327275037765503,
+          "compression_ratio": 0.6521739130434783,
+          "no_speech_prob": 2.694354288290679e-11
+        }
+      ]
+    },
+    {
+      "id": "k10lw-902141e5b329f64e",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-902141e5b329f64e.mp3",
+      "expected": "vervolgstappen",
+      "recognized": " vervolgstappen,",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9,
+          "text": " vervolgstappen,",
+          "tokens": [
+            50365,
+            1306,
+            9646,
+            70,
+            372,
+            1746,
+            268,
+            11,
+            50410
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2991809844970703,
+          "compression_ratio": 0.6521739130434783,
+          "no_speech_prob": 3.572037847801579e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-4a71abc5f5e71e68",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-4a71abc5f5e71e68.mp3",
+      "expected": "afleverbon",
+      "recognized": " Afleverbon.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.68,
+          "text": " Afleverbon.",
+          "tokens": [
+            50365,
+            3325,
+            38099,
+            4351,
+            13,
+            50399
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.31692675181797575,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 7.33087982679459e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-2808980b559404e2",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-2808980b559404e2.mp3",
+      "expected": "controleafspraak",
+      "recognized": " controleafspraak,",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " controleafspraak,",
+          "tokens": [
+            50365,
+            46215,
+            2792,
+            4952,
+            424,
+            514,
+            11,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4242560068766276,
+          "compression_ratio": 0.68,
+          "no_speech_prob": 3.742223111252718e-12
+        }
+      ]
+    },
+    {
+      "id": "k10lw-b2aac143f0efe058",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-b2aac143f0efe058.mp3",
+      "expected": "reserveer",
+      "recognized": " Reserveer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.76,
+          "text": " Reserveer.",
+          "tokens": [
+            50365,
+            26049,
+            260,
+            13,
+            50403
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4564626216888428,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 7.996499296059056e-12
+        }
+      ]
+    }
+  ]
+}
