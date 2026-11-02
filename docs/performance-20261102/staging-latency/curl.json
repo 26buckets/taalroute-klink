@@ -1,0 +1,485 @@
+{
+  "measuredAt": 1793635408.624727,
+  "rows": [
+    {
+      "http_code": 401,
+      "time_namelookup": 0.001643,
+      "time_connect": 0.320929,
+      "time_appconnect": 0.798975,
+      "time_pretransfer": 0.799123,
+      "time_starttransfer": 2.023748,
+      "time_total": 2.02398,
+      "size_download": 43,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/api/inzicht/me",
+      "repeat": 0,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445dc55d7e74a1-SYD"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002909,
+      "time_connect": 0.015934,
+      "time_appconnect": 0.040492,
+      "time_pretransfer": 0.040588,
+      "time_starttransfer": 1.437551,
+      "time_total": 1.439894,
+      "size_download": 21415,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/inzicht",
+      "repeat": 0,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445dcc6a2c6d07-AMS"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.003115,
+      "time_connect": 0.024449,
+      "time_appconnect": 0.061103,
+      "time_pretransfer": 0.061153,
+      "time_starttransfer": 0.391337,
+      "time_total": 0.393484,
+      "size_download": 2407,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/favicon.svg",
+      "repeat": 0,
+      "headers": [
+        "cf-cache-status: MISS",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445dd5a83bb6bc-CDG"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.043816,
+      "time_connect": 0.955783,
+      "time_appconnect": 1.46062,
+      "time_pretransfer": 1.460706,
+      "time_starttransfer": 2.002154,
+      "time_total": 2.00278,
+      "size_download": 2926,
+      "remote_ip": "188.114.97.0",
+      "http_version": "2",
+      "app": "production",
+      "path": "/",
+      "repeat": 0,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445de1eee32def-SYD"
+      ]
+    },
+    {
+      "http_code": 401,
+      "time_namelookup": 0.002341,
+      "time_connect": 0.980381,
+      "time_appconnect": 1.030384,
+      "time_pretransfer": 1.030444,
+      "time_starttransfer": 3.990984,
+      "time_total": 3.991184,
+      "size_download": 43,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/api/inzicht/me",
+      "repeat": 1,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445deae812ecbb-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002255,
+      "time_connect": 0.02116,
+      "time_appconnect": 0.133712,
+      "time_pretransfer": 0.133779,
+      "time_starttransfer": 1.995027,
+      "time_total": 1.995617,
+      "size_download": 21415,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/inzicht",
+      "repeat": 1,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445dfe4d8bc875-AMS"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002893,
+      "time_connect": 0.979822,
+      "time_appconnect": 1.018151,
+      "time_pretransfer": 1.018267,
+      "time_starttransfer": 1.119504,
+      "time_total": 1.121705,
+      "size_download": 2407,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/favicon.svg",
+      "repeat": 1,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e1068ca0747-MAN"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002077,
+      "time_connect": 0.026543,
+      "time_appconnect": 0.05661,
+      "time_pretransfer": 0.056667,
+      "time_starttransfer": 0.177142,
+      "time_total": 0.179327,
+      "size_download": 2926,
+      "remote_ip": "188.114.97.0",
+      "http_version": "2",
+      "app": "production",
+      "path": "/",
+      "repeat": 1,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e117bccd142-CDG"
+      ]
+    },
+    {
+      "http_code": 401,
+      "time_namelookup": 0.003785,
+      "time_connect": 0.038785,
+      "time_appconnect": 0.097024,
+      "time_pretransfer": 0.097104,
+      "time_starttransfer": 0.659705,
+      "time_total": 0.65998,
+      "size_download": 43,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/api/inzicht/me",
+      "repeat": 2,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e12fc14ee3f-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002428,
+      "time_connect": 0.038729,
+      "time_appconnect": 0.081146,
+      "time_pretransfer": 0.08121,
+      "time_starttransfer": 1.452798,
+      "time_total": 1.456218,
+      "size_download": 21415,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/inzicht",
+      "repeat": 2,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e17186ef56d-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002295,
+      "time_connect": 0.03487,
+      "time_appconnect": 0.081232,
+      "time_pretransfer": 0.081368,
+      "time_starttransfer": 0.524665,
+      "time_total": 0.525153,
+      "size_download": 2407,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/favicon.svg",
+      "repeat": 2,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e204c0cef1a-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.003558,
+      "time_connect": 0.032276,
+      "time_appconnect": 0.072359,
+      "time_pretransfer": 0.072458,
+      "time_starttransfer": 0.173657,
+      "time_total": 0.175882,
+      "size_download": 2926,
+      "remote_ip": "188.114.97.0",
+      "http_version": "2",
+      "app": "production",
+      "path": "/",
+      "repeat": 2,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e239a51220e-MAN"
+      ]
+    },
+    {
+      "http_code": 401,
+      "time_namelookup": 0.003049,
+      "time_connect": 0.035906,
+      "time_appconnect": 0.082048,
+      "time_pretransfer": 0.082157,
+      "time_starttransfer": 2.409185,
+      "time_total": 2.409398,
+      "size_download": 43,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/api/inzicht/me",
+      "repeat": 3,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e24ee53bbe4-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.001658,
+      "time_connect": 0.03484,
+      "time_appconnect": 0.094312,
+      "time_pretransfer": 0.094358,
+      "time_starttransfer": 1.626389,
+      "time_total": 1.630571,
+      "size_download": 21415,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/inzicht",
+      "repeat": 3,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e34192c2648-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.001642,
+      "time_connect": 0.280391,
+      "time_appconnect": 0.49474,
+      "time_pretransfer": 0.494798,
+      "time_starttransfer": 1.739906,
+      "time_total": 1.740393,
+      "size_download": 2407,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/favicon.svg",
+      "repeat": 3,
+      "headers": [
+        "cf-cache-status: MISS",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e4158346eb1-GRU"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.003591,
+      "time_connect": 0.199158,
+      "time_appconnect": 0.419276,
+      "time_pretransfer": 0.419361,
+      "time_starttransfer": 0.831717,
+      "time_total": 0.833719,
+      "size_download": 2926,
+      "remote_ip": "188.114.97.0",
+      "http_version": "2",
+      "app": "production",
+      "path": "/",
+      "repeat": 3,
+      "headers": [
+        "cf-cache-status: MISS",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e4bea265b29-GRU"
+      ]
+    },
+    {
+      "http_code": 401,
+      "time_namelookup": 0.003256,
+      "time_connect": 0.133332,
+      "time_appconnect": 0.403777,
+      "time_pretransfer": 0.403903,
+      "time_starttransfer": 2.103496,
+      "time_total": 2.104239,
+      "size_download": 43,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/api/inzicht/me",
+      "repeat": 4,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e508cde4f72-AMS"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.003225,
+      "time_connect": 0.470515,
+      "time_appconnect": 1.021918,
+      "time_pretransfer": 1.022034,
+      "time_starttransfer": 1.983386,
+      "time_total": 1.983726,
+      "size_download": 21415,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/inzicht",
+      "repeat": 4,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e620db80d4d-WAW"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.001781,
+      "time_connect": 1.033456,
+      "time_appconnect": 1.45427,
+      "time_pretransfer": 1.454424,
+      "time_starttransfer": 2.00197,
+      "time_total": 2.004102,
+      "size_download": 2407,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/favicon.svg",
+      "repeat": 4,
+      "headers": [
+        "cf-cache-status: MISS",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e71be433779-SYD"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.003713,
+      "time_connect": 0.02354,
+      "time_appconnect": 0.081215,
+      "time_pretransfer": 0.081272,
+      "time_starttransfer": 0.252742,
+      "time_total": 0.254898,
+      "size_download": 2926,
+      "remote_ip": "188.114.97.0",
+      "http_version": "2",
+      "app": "production",
+      "path": "/",
+      "repeat": 4,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e74da23f5bc-AMS"
+      ]
+    },
+    {
+      "http_code": 401,
+      "time_namelookup": 0.002465,
+      "time_connect": 0.754616,
+      "time_appconnect": 0.801326,
+      "time_pretransfer": 0.801517,
+      "time_starttransfer": 2.757976,
+      "time_total": 2.75855,
+      "size_download": 43,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/api/inzicht/me",
+      "repeat": 5,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e7b293482b2-ARN"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.00359,
+      "time_connect": 0.542306,
+      "time_appconnect": 0.986598,
+      "time_pretransfer": 0.986735,
+      "time_starttransfer": 2.306268,
+      "time_total": 2.333431,
+      "size_download": 21415,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/inzicht",
+      "repeat": 5,
+      "headers": [
+        "cache-control: no-store, private",
+        "server-timing: inzicht;dur=0.0",
+        "cf-ray: a5445e8e8d152fb0-SYD"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.003389,
+      "time_connect": 0.035786,
+      "time_appconnect": 0.074709,
+      "time_pretransfer": 0.074902,
+      "time_starttransfer": 0.166937,
+      "time_total": 0.169155,
+      "size_download": 2407,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "app": "staging",
+      "path": "/favicon.svg",
+      "repeat": 5,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e96ad9d79a6-ARN"
+      ]
+    },
+    {
+      "http_code": 200,
+      "time_namelookup": 0.002316,
+      "time_connect": 0.022717,
+      "time_appconnect": 0.054488,
+      "time_pretransfer": 0.05455,
+      "time_starttransfer": 0.147337,
+      "time_total": 0.149459,
+      "size_download": 2926,
+      "remote_ip": "188.114.97.0",
+      "http_version": "2",
+      "app": "production",
+      "path": "/",
+      "repeat": 5,
+      "headers": [
+        "cf-cache-status: HIT",
+        "cache-control: public, max-age=0, must-revalidate",
+        "cf-ray: a5445e979b73d0a7-CDG"
+      ]
+    }
+  ]
+}
