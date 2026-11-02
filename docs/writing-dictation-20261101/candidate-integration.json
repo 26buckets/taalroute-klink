@@ -1,0 +1,21 @@
+{
+  "integratedCandidate": "9b610fff8de0612cd4c444dc42191f67fd8fe7d9",
+  "integratedAt": "2026-11-02T00:44:25.863823+00:00",
+  "previousTestedCandidate": "f0b36d3c3a619019911d3a0587e0b37eeca526dd",
+  "changedComparedWithTestedFiles": [
+    "components/product/word-listening.tsx",
+    "lib/word-audio.ts",
+    "data/klink-word-listening.json",
+    "data/klink-word-listening-audio.json"
+  ],
+  "allWritingRenderersAndStorageByteIdentical": true,
+  "all107WritingMediaByteIdentical": true,
+  "upstreamRuntimeChanges": "Teacher native-phoneme exclusions plus priority for20 genuinely owner-reviewed word recordings and rebuilt word index/bundles. No writing renderer, answer, instruction or storage change.",
+  "supplementalChecksRequired": [
+    "whole-word source coverage",
+    "native Help interaction",
+    "types",
+    "current release gate after formal live handoff"
+  ],
+  "publicationStatus": "NOT_PUBLISHED"
+}
