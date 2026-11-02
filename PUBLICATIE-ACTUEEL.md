@@ -1,3 +1,15 @@
+## Actuele publicatie — Klink tien: tien Alfa C-woordbingokaarten — 2 november 2026
+
+Livebron `9518708b3ddd764ec830c151965bae3503977868`, schone canonieke main; Worker `c8418fb5-eda2-40e6-910b-b94a8e58feca`. Gewone `npm run deploy`, volledige publicatiepoort en bouw geslaagd; opvolger van `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`.
+
+Tien bestaande bronkaarten met dertig bestaande beurten geven nu de uitgewerkte feedback bij de gekozen optie. Geen nieuwe vragen, opnamen of beelden. De 31 bestaande opnamen, vraag-ID’s, antwoorden, vorige banken en voortgangsleutels blijven behouden. Geen wijziging aan de vormgeving of navigatie.
+
+Live: 51 volledige bestandsteruglezingen, inclusief tien oude banken en 31 audiobestanden met gecontroleerde Taalroute-metadata; 120 antwoord-/opslag-/hervatstromen op mobiel en desktop in Chromium/WebKit, 62 native audiodecodes en twaalf echte afspeelstromen. Lokaal ook oude feedbackfallback, veertien weergave-/opslagcontroles, kerntests, types, lint, woordaudiodekking en zes negatieve vrijgaveproeven geslaagd. Geen GitHub-workflows of extra Actions-kosten.
+
+Dit zijn herzieningen, geen dertig nieuwe opdrachten. Samen herhalen: twintig bestaande bronposities gecontroleerd hergebruikt plus tien bestaande kaarten herzien; 230 bronposities nog te vergelijken. A1/A2-bingo’s met bron-/niveauproblemen blijven apart. Originele bron-HOLD en ontbrekende onafhankelijke menselijke NT2-/luisterreview blijven eerlijk geregistreerd; geen fysieke apparaten of klasproef. Volledige bronnen, code, bestaande audio en herstelgegevens: Drive `1JvwJ81rZXh1YWi1SEsN7oDDxobvSb9ef`, 78 leden teruggelezen. Definitief livebewijs staat in `docs/klink10-bingo-20261102/`; Drive `173MoTMLDH8rO_5Hpsk9W0_GDoWW8EKZ5`, alle 39 leden volledig teruggelezen.
+
+---
+
 ## Actuele publicatie — Klink tien: 220 zinnenopdrachten — 2 november 2026
 
 Livebron `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`, schone canonieke main; Worker `f2a9db3d-a8dc-4470-8b67-fbc1ff76d1be`. Gewone `npm run deploy`, normale volledige publicatiepoort en bouw geslaagd. Opvolger van de actuele inhoudelijke rondetitels `eb6270430997e84ffbb3428d4f1fbdfe06e52546`; deze titels en de overige bestaande vormgeving, inhoud, audio, routes en voortgang blijven behouden.
