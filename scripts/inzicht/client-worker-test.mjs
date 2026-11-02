@@ -1,0 +1,167 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { build } from 'esbuild';
+import { api } from '../../components/inzicht/client.ts';
+
+test('reads have a deadline; writes retain their idempotency key without cancellation', async () => {
+  const original = globalThis.fetch;
+  const requests = [];
+  globalThis.fetch = async (url, init) => {
+    requests.push({ url, init });
+    return Response.json({ ok: true });
+  };
+  try {
+    await api('me', 'school-a');
+    await api('observations', 'school-a', { outcome: 'yes' }, 'same-write');
+    assert(requests[0].init.signal instanceof AbortSignal);
+    assert.equal(requests[0].init.cache, 'no-store');
+    assert.equal(requests[1].init.signal, undefined);
+    assert.equal(requests[1].init.headers['Idempotency-Key'], 'same-write');
+    assert.equal(requests[1].init.method, 'POST');
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+test('read timeout is actionable, while expired sessions remain distinguishable', async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => {
+      throw new DOMException('deadline', 'TimeoutError');
+    };
+    await assert.rejects(() => api('me', ''), /Ophalen duurt te lang/);
+    globalThis.fetch = async () =>
+      Response.json({ error: 'Meld je aan.' }, { status: 401 });
+    await assert.rejects(
+      () => api('me', ''),
+      (e) => e.status === 401 && e.message === 'Meld je aan.',
+    );
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test('WebKit generic abort after our deadline still gives the same recovery message', async () => {
+  const original = globalThis.fetch,
+    timeout = AbortSignal.timeout;
+  try {
+    AbortSignal.timeout = () => AbortSignal.abort();
+    globalThis.fetch = async () => {
+      throw new DOMException('Fetch is aborted', 'AbortError');
+    };
+    await assert.rejects(() => api('me', ''), /Ophalen duurt te lang/);
+  } finally {
+    globalThis.fetch = original;
+    AbortSignal.timeout = timeout;
+  }
+});
+
+const compiled = await build({
+  stdin: {
+    contents: readFileSync('lib/inzicht/worker.ts', 'utf8'),
+    resolveDir: `${process.cwd()}/lib/inzicht`,
+    loader: 'ts',
+  },
+  bundle: true,
+  platform: 'node',
+  format: 'esm',
+  write: false,
+  plugins: [
+    {
+      name: 'page-renderer-only',
+      setup(b) {
+        b.onResolve({ filter: /^vinext\/server\/fetch-handler$/ }, () => ({
+          path: 'renderer',
+          namespace: 'test',
+        }));
+        b.onLoad({ filter: /.*/, namespace: 'test' }, () => ({
+          contents:
+            "export default {fetch: async () => new Response('rendered page', {headers:{'X-Test-Renderer':'yes'}})}",
+        }));
+      },
+    },
+  ],
+});
+const { default: worker } = await import(
+  `data:text/javascript;base64,${Buffer.from(compiled.outputFiles[0].text).toString('base64')}`
+);
+const origin = 'https://klink-inzicht-pr8-staging.nico-554.workers.dev';
+const env = {
+  INZICHT_MODE: 'synthetic-online',
+  INZICHT_ORIGIN: origin,
+  INZICHT_DB: {},
+  ASSETS: { fetch: async () => new Response('asset') },
+};
+test('staging API calls the real security handler without the page renderer', async () => {
+  const r = await worker.fetch(
+    new Request(`${origin}/api/inzicht/me`),
+    env,
+    {},
+  );
+  assert.equal(r.status, 401);
+  assert.equal(r.headers.get('X-Test-Renderer'), null);
+  assert.equal(r.headers.get('Cache-Control'), 'no-store, private');
+  assert.match(r.headers.get('Server-Timing'), /^inzicht;dur=\d/);
+  assert.match(
+    r.headers.get('Content-Security-Policy'),
+    /frame-ancestors 'none'/,
+  );
+  assert.equal(
+    (
+      await worker.fetch(
+        new Request(`${origin}/api/inzicht/me`, { method: 'DELETE' }),
+        env,
+        {},
+      )
+    ).status,
+    405,
+  );
+  assert.equal(
+    (
+      await worker.fetch(
+        new Request(`${origin}/api/inzicht/login`, {
+          method: 'POST',
+          headers: {
+            origin: 'https://invalid.example',
+            'content-type': 'application/json',
+          },
+          body: '{}',
+        }),
+        env,
+        {},
+      )
+    ).status,
+    403,
+  );
+});
+test('page renderer and assets stay separate, with exact staging origin/mode guards', async () => {
+  const page = await worker.fetch(new Request(`${origin}/inzicht`), env, {});
+  assert.equal(await page.text(), 'rendered page');
+  assert.equal(page.headers.get('Cache-Control'), 'no-store, private');
+  assert.equal(
+    await (
+      await worker.fetch(new Request(`${origin}/favicon.svg`), env, {})
+    ).text(),
+    'asset',
+  );
+  assert.equal(
+    (
+      await worker.fetch(
+        new Request('https://inzicht.taalroute.nl/api/inzicht/me'),
+        env,
+        {},
+      )
+    ).status,
+    404,
+  );
+  assert.equal(
+    (
+      await worker.fetch(
+        new Request(`${origin}/api/inzicht/me`),
+        { ...env, INZICHT_MODE: 'production' },
+        {},
+      )
+    ).status,
+    404,
+  );
+});

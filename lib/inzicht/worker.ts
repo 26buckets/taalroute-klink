@@ -1,5 +1,5 @@
 import app from 'vinext/server/fetch-handler';
-import { processPending, type InzichtEnv } from './service';
+import { handleInzicht, processPending, type InzichtEnv } from './service';
 // This entry point is exclusively for the separately authorized synthetic staging.
 const worker = {
   async fetch(
@@ -15,14 +15,20 @@ const worker = {
       return new Response('Niet beschikbaar.', { status: 404 });
     if (url.pathname === '/')
       return Response.redirect(`${url.origin}/inzicht`, 302);
+    const started = performance.now();
+    const api = url.pathname.startsWith('/api/inzicht/');
     const application =
-      url.pathname === '/inzicht' ||
-      url.pathname.startsWith('/inzicht/') ||
-      url.pathname.startsWith('/api/inzicht/');
-    const response = application
-      ? await app.fetch(request, env, ctx)
-      : await env.ASSETS.fetch(request);
+      url.pathname === '/inzicht' || url.pathname.startsWith('/inzicht/');
+    const response = api
+      ? await handleInzicht(request, env)
+      : application
+        ? await app.fetch(request, env, ctx)
+        : await env.ASSETS.fetch(request);
     const secured = new Response(response.body, response);
+    secured.headers.set(
+      'Server-Timing',
+      `inzicht;dur=${(performance.now() - started).toFixed(1)}`,
+    );
     secured.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
     secured.headers.set('Referrer-Policy', 'no-referrer');
     secured.headers.set('X-Content-Type-Options', 'nosniff');

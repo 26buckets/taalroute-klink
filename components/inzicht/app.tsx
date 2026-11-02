@@ -180,6 +180,7 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
       null,
     ),
     [checking, setChecking] = useState(true),
+    [accountRetry, setAccountRetry] = useState(false),
     [loginError, setLoginError] = useState('');
   const [token, setToken] = useState('');
   const [email, setEmail] = useState('');
@@ -195,13 +196,20 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
       document.getElementById('ki-login-step')?.focus();
   }, [mfa, recoveryCodes.length]);
   function openAccount() {
+    setChecking(true);
+    setAccountRetry(false);
+    setLoginError('');
     setMfa(null);
     setCode('');
     setRecoveryCodes([]);
     setToken('');
     api<{ user: string; schools: School[] }>('me', '')
       .then(setMe)
-      .catch((e) => setLoginError(e.message));
+      .catch((e) => {
+        setLoginError(e.message);
+        setAccountRetry(e.status !== 401);
+      })
+      .finally(() => setChecking(false));
   }
   const login = useSave();
   const school = search.get('school') ?? me?.schools[0]?.id ?? '';
@@ -215,7 +223,12 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
       .then((value) => {
         if (current) setMe(value);
       })
-      .catch(() => {})
+      .catch((e) => {
+        if (current && e.status !== 401) {
+          setLoginError(e.message);
+          setAccountRetry(true);
+        }
+      })
       .finally(() => {
         if (current) setChecking(false);
       });
@@ -275,6 +288,13 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
       </header>
       {checking ? (
         <output>Toegang controleren…</output>
+      ) : accountRetry ? (
+        <section className="ki-card">
+          <ErrorText text={loginError} />
+          <button className="primary-button" onClick={openAccount}>
+            Toegang opnieuw controleren
+          </button>
+        </section>
       ) : !me ? (
         <section className="ki-card">
           {recoveryCodes.length ? (
