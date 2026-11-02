@@ -1,3 +1,13 @@
+## Actuele publicatie — tien dagelijkse Spreken-zinnen — 3 november 2026
+
+Livebron `c401dab88da45a3ee41874f95a1c18bf8796d261` op schone canonieke main, via gewone `npm run deploy`. Tien nieuwe Alfa A-zinnen met elf opnamen. Nico heeft de vervangende fruit-appel expliciet goedgekeurd; de afgekeurde hash wordt niet aangeboden. Spreken blijft begeleid oefenen zonder automatische uitspraakbeoordeling.
+
+De volledige instructie blijft afspelen bij een tekstklik door toepassing van de bestaande uitsluiting voor woordaudio. Geen vormgevingswijziging. Lokaal veertig antwoord-/voortgangsstromen, 22 native decodes, recorder-/opslagcontroles en acht negatieve vrijgaveproeven; live elf volledige audioteruglezingen met Taalroute-metadata, de volledige vraagbank, 22 decodes en vier echte afspeelstromen inclusief tekstklik gecontroleerd. Geen Actions-workflows.
+
+Volledige bron en herstelgegevens: Drive `1ojry8DmKN62l-sioHgFPEx2x974gbd4V`, volledig teruggelezen. Niet alle opnamen handmatig beluisterd; geen onafhankelijke menselijke NT2-review, fysieke apparaten of klasproef geclaimd.
+
+---
+
 ## Actuele publicatie — eerste tien Zo schrijf je het Alfa A — 2 november 2026
 
 Livebron `c2aa17c4a3b4d7f1f37aefdd4fc8142d000e058f`, schone canonieke main, via gewone `npm run deploy`. Tien bestaande bronposities behouden hun veertig canonieke deelvragen; tien herhaalvragen sluiten nu aan op de bestaande 1/3/7-dagenplanner. Pointerantwoord wordt niet terugwerkend als geholpen geteld door daaropvolgende woordaudio. Geen nieuwe vragen, media of vormgeving.
