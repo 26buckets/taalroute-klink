@@ -1,0 +1,33 @@
+{
+  "types": true,
+  "lint": true,
+  "wordAudioCoverage": true,
+  "coreTests": true,
+  "screensVisuallyReviewed": true,
+  "humanListening": false,
+  "physicalDeviceTested": false,
+  "checks": {
+    "browserFlows": 480,
+    "nativeAudioDecodes": 460,
+    "nativePlayerPlaybacks": 6,
+    "sourceAnswerChecks": 120,
+    "newAudio": 169,
+    "reusedAudio": 61
+  },
+  "visualSamples": [
+    "chromium-390-klink10-grammar-alfa-c-sentence-build.png",
+    "webkit-1280-klink10-grammar-alfa-b-verb-choice.png",
+    "webkit-390-klink10-grammar-b1-content-grammatica.png",
+    "chromium-1280-klink10-grammar-alfa-c-content-grammatica.png"
+  ],
+  "workflowInspection": {
+    "workflowFiles": 0,
+    "extraActionsRuns": 0
+  },
+  "limits": [
+    "Automatische lokale transcriptie is geen onafhankelijke menselijke uitspraakgoedkeuring.",
+    "Geen fysieke telefoon of klasproef.",
+    "40 Alfa A-bronopdrachten wachten op vereiste goedgekeurde beelden; geen beeldproductie gestart.",
+    "Oude test-production-content verwacht achterhaalde bronstatus; dit is geen nieuwe regressie. Actuele broncontrole en normale vrijgaveketen blijven vereist."
+  ]
+}

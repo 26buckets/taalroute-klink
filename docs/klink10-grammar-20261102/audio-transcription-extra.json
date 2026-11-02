@@ -1,0 +1,273 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10-question-8fa35d9ef612e3f7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-question-8fa35d9ef612e3f7.mp3",
+      "expected": "Kies het werkwoord dat op de lege plek past.",
+      "recognized": " Kies het werkwoord dat op de lege plek past.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Kies het werkwoord dat op de lege plek past.",
+          "tokens": [
+            50365,
+            591,
+            530,
+            3639,
+            37585,
+            6120,
+            765,
+            1137,
+            999,
+            368,
+            476,
+            432,
+            3362,
+            74,
+            1791,
+            13,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.0868929492102729,
+          "compression_ratio": 0.8461538461538461,
+          "no_speech_prob": 4.358040404245367e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-word-e891e2447b917902",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-e891e2447b917902.mp3",
+      "expected": "Samir",
+      "recognized": " Samir?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.42,
+          "text": " Samir?",
+          "tokens": [
+            50365,
+            4832,
+            347,
+            30,
+            50386
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3374515374501546,
+          "compression_ratio": 0.42857142857142855,
+          "no_speech_prob": 2.7857396944774848e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-word-a614cdc22181245c",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-a614cdc22181245c.mp3",
+      "expected": "uitloopt",
+      "recognized": " Uitloopt.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.7000000000000001,
+          "text": " Uitloopt.",
+          "tokens": [
+            50365,
+            624,
+            270,
+            752,
+            5747,
+            13,
+            50400
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.32486623525619507,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 5.047508851857563e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-word-a8bee0acab7ce972",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-a8bee0acab7ce972.mp3",
+      "expected": "hoewel-zin",
+      "recognized": " Hoe welzin...",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.12,
+          "text": " Hoe welzin...",
+          "tokens": [
+            50365,
+            33979,
+            2214,
+            23584,
+            485,
+            50421
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.767787252153669,
+          "compression_ratio": 0.6190476190476191,
+          "no_speech_prob": 6.00029010852654e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-word-145983e1db13b52e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-145983e1db13b52e.mp3",
+      "expected": "informeer",
+      "recognized": " Informeer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Informeer.",
+          "tokens": [
+            50365,
+            34301,
+            68,
+            260,
+            13,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23725278036934988,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 1.4540312530397781e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-word-a64acbc799975589",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-a64acbc799975589.mp3",
+      "expected": "klantgesprek",
+      "recognized": " Klantgesprek.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Klantgesprek.",
+          "tokens": [
+            50365,
+            16053,
+            394,
+            2880,
+            3712,
+            74,
+            13,
+            50405
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2643444538116455,
+          "compression_ratio": 0.6190476190476191,
+          "no_speech_prob": 5.445941007181654e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-word-f27564627617b8e2",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-f27564627617b8e2.mp3",
+      "expected": "voordat-zin",
+      "recognized": " Voor dat zin...",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " Voor dat zin...",
+          "tokens": [
+            50365,
+            43114,
+            1137,
+            710,
+            259,
+            485,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4530370235443115,
+          "compression_ratio": 0.6521739130434783,
+          "no_speech_prob": 5.3974311998994384e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-word-2c69e7457f262481",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-2c69e7457f262481.mp3",
+      "expected": "dat-zin",
+      "recognized": " Dat zijn...",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Dat zijn...",
+          "tokens": [
+            50365,
+            9315,
+            8004,
+            485,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.65401824315389,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 2.2751589501268654e-10
+        }
+      ]
+    },
+    {
+      "id": "k10-word-3123fa8707f52e96",
+      "src": "/package-audio/klink10-grammar-20261102/k10-word-3123fa8707f52e96.mp3",
+      "expected": "spraken",
+      "recognized": " Spraken.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.76,
+          "text": " Spraken.",
+          "tokens": [
+            50365,
+            1738,
+            424,
+            2653,
+            13,
+            50403
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3372575896126883,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 1.0873873849959192e-11
+        }
+      ]
+    }
+  ]
+}

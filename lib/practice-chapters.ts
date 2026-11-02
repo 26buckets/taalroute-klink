@@ -99,13 +99,17 @@ export function chapterExerciseCount(chapter: string, selection: ChapterLocation
   return ordinary + sequences + guided;
 }
 
+function productionCollections(activity: GroupActivity): ChapterCollection[] {
+  return productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined }));
+}
+
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
   if (activity === 'synonyms') return synonymCollections;
   if (wordUseActivities.some(id => id === activity)) return wordUseCollections.filter(collection => collection.pack.practiceActivities?.includes(activity));
   if (activity.startsWith('content-')) {
     const existing = cache.get(activity);
     if (existing) return existing;
-    const result = importedCollections(activity as ImportedActivity, undefined, contentPackages);
+    const result = [...importedCollections(activity as ImportedActivity, undefined, contentPackages), ...productionCollections(activity)];
     cache.set(activity, result);return result;
   }
   const cached = cache.get(activity);
@@ -156,7 +160,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
       }
     }
   }
-  result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined })));
+  result.push(...productionCollections(activity));
   if (activity === 'dictation') result.push(...writingDictationRounds.map(round => ({ id: round.id, title: round.title, level: 'alfa-c' as const, help: 'practice' as const, pack: productionPack({ ...round, level: 'alfa-c', activity, count: round.exercises.length }), exercises: round.exercises })));
   if (activity === 'learning-review' || synonymActivities.some(id => id === activity)) result.push(...synonymCollections.flatMap(collection => {
     const exercises = groupExercises(collection.pack, activity);

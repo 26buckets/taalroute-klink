@@ -1,0 +1,29 @@
+{
+  "application": "Klink",
+  "authorization": "Nico, 2 november 2026: tien chats volledig afronden inclusief audio en publiceren",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "0qLmDzgqulxcvv0yf3kg",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 50000,
+  "buyExtraCredits": false,
+  "characters": 44,
+  "clips": [
+    {
+      "id": "k10-question-8fa35d9ef612e3f7",
+      "text": "Kies het werkwoord dat op de lege plek past.",
+      "title": "Kies het werkwoord dat op de lege plek past.",
+      "role": "question",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "src": "/package-audio/klink10-grammar-20261102/k10-question-8fa35d9ef612e3f7.mp3",
+      "textSha256": "f9f8fcaf10470c7818a7c18c5cf829f3c9f69a3d02fcaf016f36ae36d8451a52"
+    }
+  ]
+}

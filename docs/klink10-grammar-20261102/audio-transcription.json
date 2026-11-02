@@ -1,0 +1,6386 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10-64219caa1da20209",
+      "src": "/package-audio/klink10-grammar-20261102/k10-64219caa1da20209.mp3",
+      "expected": "Jij leest een boek.",
+      "recognized": " Jij leest een boek.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Jij leest een boek.",
+          "tokens": [
+            50365,
+            508,
+            1718,
+            476,
+            377,
+            3881,
+            748,
+            916,
+            13,
+            50405
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.21591398932717062,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 5.3311513190101856e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1f6ae1f3df26a588",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1f6ae1f3df26a588.mp3",
+      "expected": "Over wie of wat gaat de zin?",
+      "recognized": " Over wie of wat gaat de zin?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.28,
+          "text": " Over wie of wat gaat de zin?",
+          "tokens": [
+            50365,
+            4886,
+            3355,
+            295,
+            6858,
+            17829,
+            368,
+            710,
+            259,
+            30,
+            50429
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1452107826868693,
+          "compression_ratio": 0.8235294117647058,
+          "no_speech_prob": 6.882705343158602e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-6435c47d4ed3a8de",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6435c47d4ed3a8de.mp3",
+      "expected": "een boek",
+      "recognized": " Een boek?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " Een boek?",
+          "tokens": [
+            50365,
+            25374,
+            748,
+            916,
+            30,
+            50387
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23329128537859237,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 5.203497008277047e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-d4d8cafb4262a00f",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d4d8cafb4262a00f.mp3",
+      "expected": "Hij wacht op de bus.",
+      "recognized": " Hij wacht op de bus.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.86,
+          "text": " Hij wacht op de bus.",
+          "tokens": [
+            50365,
+            27832,
+            261,
+            3589,
+            999,
+            368,
+            1255,
+            13,
+            50408
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07705817222595215,
+          "compression_ratio": 0.7142857142857143,
+          "no_speech_prob": 4.495007231014592e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-96f36447af156702",
+      "src": "/package-audio/klink10-grammar-20261102/k10-96f36447af156702.mp3",
+      "expected": "op de bus",
+      "recognized": " op de beurs.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " op de beurs.",
+          "tokens": [
+            50365,
+            999,
+            368,
+            312,
+            2156,
+            13,
+            50390
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.33808839321136475,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 6.79110153528617e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-443fb44c22d99aba",
+      "src": "/package-audio/klink10-grammar-20261102/k10-443fb44c22d99aba.mp3",
+      "expected": "Wij wonen in Rotterdam.",
+      "recognized": " Wij wonen in Rotterdam.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.96,
+          "text": " Wij wonen in Rotterdam.",
+          "tokens": [
+            50365,
+            46721,
+            1582,
+            268,
+            294,
+            17681,
+            391,
+            10170,
+            13,
+            50413
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07767382535067471,
+          "compression_ratio": 0.7419354838709677,
+          "no_speech_prob": 4.600891282541264e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-ca715c24a869f731",
+      "src": "/package-audio/klink10-grammar-20261102/k10-ca715c24a869f731.mp3",
+      "expected": "in Rotterdam",
+      "recognized": " in Rotterdam",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " in Rotterdam",
+          "tokens": [
+            50365,
+            294,
+            17681,
+            391,
+            10170,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5199878896985736,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 6.282515740280159e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-6b1c0bf96497b82e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6b1c0bf96497b82e.mp3",
+      "expected": "De docent schrijft een woord.",
+      "recognized": " De docent schrijft een woord.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.2,
+          "text": " De docent schrijft een woord.",
+          "tokens": [
+            50365,
+            1346,
+            360,
+            2207,
+            956,
+            11105,
+            844,
+            3881,
+            6020,
+            765,
+            13,
+            50425
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.04302420982947716,
+          "compression_ratio": 0.7837837837837838,
+          "no_speech_prob": 4.077773275296126e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-e650a6a1030b47f4",
+      "src": "/package-audio/klink10-grammar-20261102/k10-e650a6a1030b47f4.mp3",
+      "expected": "De docent",
+      "recognized": " De docent.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.56,
+          "text": " De docent.",
+          "tokens": [
+            50365,
+            1346,
+            360,
+            2207,
+            13,
+            50393
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.27830430439540316,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 6.884994310785153e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-649f449761beaf18",
+      "src": "/package-audio/klink10-grammar-20261102/k10-649f449761beaf18.mp3",
+      "expected": "een woord",
+      "recognized": " Een woord...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.92,
+          "text": " Een woord...",
+          "tokens": [
+            50365,
+            25374,
+            6020,
+            765,
+            485,
+            50411
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.47343649183000835,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 8.538877938057965e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-22b4e19998ecf767",
+      "src": "/package-audio/klink10-grammar-20261102/k10-22b4e19998ecf767.mp3",
+      "expected": "Fatima gaat naar school.",
+      "recognized": " Fatima gaat naar school.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9400000000000001,
+          "text": " Fatima gaat naar school.",
+          "tokens": [
+            50365,
+            16948,
+            4775,
+            17829,
+            12762,
+            1395,
+            13,
+            50412
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1161248419019911,
+          "compression_ratio": 0.75,
+          "no_speech_prob": 4.96801341384745e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-de92fa16a05df769",
+      "src": "/package-audio/klink10-grammar-20261102/k10-de92fa16a05df769.mp3",
+      "expected": "naar school",
+      "recognized": " naar school.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.52,
+          "text": " naar school.",
+          "tokens": [
+            50365,
+            12762,
+            1395,
+            13,
+            50391
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5444099108378092,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 8.200030932048463e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9c2bd52cdc8ffc90",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9c2bd52cdc8ffc90.mp3",
+      "expected": "De kinderen spelen buiten.",
+      "recognized": " De kinderen spelen buiten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.08,
+          "text": " De kinderen spelen buiten.",
+          "tokens": [
+            50365,
+            1346,
+            48935,
+            637,
+            14818,
+            758,
+            6009,
+            13,
+            50419
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.21786942481994628,
+          "compression_ratio": 0.8125,
+          "no_speech_prob": 5.525801170802591e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-a7b78c55a195a749",
+      "src": "/package-audio/klink10-grammar-20261102/k10-a7b78c55a195a749.mp3",
+      "expected": "De kinderen",
+      "recognized": " de kinderen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " de kinderen.",
+          "tokens": [
+            50365,
+            368,
+            48935,
+            13,
+            50390
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.43632415930430096,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 5.351492252808621e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-897ad83deea39537",
+      "src": "/package-audio/klink10-grammar-20261102/k10-897ad83deea39537.mp3",
+      "expected": "Mijn broer kookt rijst.",
+      "recognized": " Mijn broer kokt rijst.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.02,
+          "text": " Mijn broer kokt rijst.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            2006,
+            260,
+            28376,
+            83,
+            47237,
+            372,
+            13,
+            50416
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23793244361877441,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 5.347179730247342e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-81e5226e314fef19",
+      "src": "/package-audio/klink10-grammar-20261102/k10-81e5226e314fef19.mp3",
+      "expected": "Mijn broer",
+      "recognized": " Mijn broer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.52,
+          "text": " Mijn broer.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            2006,
+            260,
+            13,
+            50391
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1807665228843689,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 6.2678885519307226e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0fd16fa707eae765",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0fd16fa707eae765.mp3",
+      "expected": "Ik stuur een bericht.",
+      "recognized": " Ik stuur een bericht.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8200000000000001,
+          "text": " Ik stuur een bericht.",
+          "tokens": [
+            50365,
+            8316,
+            342,
+            18470,
+            3881,
+            5948,
+            1405,
+            13,
+            50406
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.13068222999572754,
+          "compression_ratio": 0.7241379310344828,
+          "no_speech_prob": 4.056825621961968e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0c34dabe3957f8c1",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0c34dabe3957f8c1.mp3",
+      "expected": "een bericht",
+      "recognized": " Een bericht?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.54,
+          "text": " Een bericht?",
+          "tokens": [
+            50365,
+            25374,
+            5948,
+            1405,
+            30,
+            50392
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.36990935461861746,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 6.209578424370976e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-c2b0495beef45b43",
+      "src": "/package-audio/klink10-grammar-20261102/k10-c2b0495beef45b43.mp3",
+      "expected": "De vrouw opent de deur.",
+      "recognized": " De vrouw opent de deur.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.98,
+          "text": " De vrouw opent de deur.",
+          "tokens": [
+            50365,
+            1346,
+            371,
+            13122,
+            86,
+            999,
+            317,
+            368,
+            368,
+            374,
+            13,
+            50414
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08149620202871469,
+          "compression_ratio": 0.7931034482758621,
+          "no_speech_prob": 3.655637424715419e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-907ad956d5a875d1",
+      "src": "/package-audio/klink10-grammar-20261102/k10-907ad956d5a875d1.mp3",
+      "expected": "de deur",
+      "recognized": " De der.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " De der.",
+          "tokens": [
+            50365,
+            1346,
+            1163,
+            13,
+            50387
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6605474948883057,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 1.1570845670494379e-10
+        }
+      ]
+    },
+    {
+      "id": "k10-6bda041cfa0a2d59",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6bda041cfa0a2d59.mp3",
+      "expected": "De vrouw",
+      "recognized": " De vrouw...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.88,
+          "text": " De vrouw...",
+          "tokens": [
+            50365,
+            1346,
+            371,
+            13122,
+            86,
+            485,
+            50409
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4288943409919739,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 5.6459021485766314e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-6121784a03e8f2dd",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6121784a03e8f2dd.mp3",
+      "expected": "De trein vertrekt om acht uur.",
+      "recognized": " De trein vertrekt om 8 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " De trein vertrekt om 8 uur.",
+          "tokens": [
+            50365,
+            1346,
+            2192,
+            259,
+            1306,
+            3599,
+            2320,
+            3406,
+            1649,
+            344,
+            374,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.13619167464120047,
+          "compression_ratio": 0.8181818181818182,
+          "no_speech_prob": 3.859202887812607e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0fb00d90e67f94db",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0fb00d90e67f94db.mp3",
+      "expected": "De trein",
+      "recognized": " de trein.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.54,
+          "text": " de trein.",
+          "tokens": [
+            50365,
+            368,
+            2192,
+            259,
+            13,
+            50392
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.49553472655160086,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 5.566667786449653e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-63874d58384ddb65",
+      "src": "/package-audio/klink10-grammar-20261102/k10-63874d58384ddb65.mp3",
+      "expected": "om acht uur",
+      "recognized": " om 8 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.7000000000000001,
+          "text": " om 8 uur.",
+          "tokens": [
+            50365,
+            3406,
+            1649,
+            344,
+            374,
+            13,
+            50400
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.275429368019104,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 5.058218600917375e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-670cb446382e9b2f",
+      "src": "/package-audio/klink10-grammar-20261102/k10-670cb446382e9b2f.mp3",
+      "expected": "een boek. Jij. leest",
+      "recognized": " Een boek jij leest.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.76,
+          "text": " Een boek jij leest.",
+          "tokens": [
+            50365,
+            25374,
+            748,
+            916,
+            28002,
+            476,
+            377,
+            13,
+            50453
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.18819565773010255,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 5.858127784946765e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2f3c6cbebf763e4b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2f3c6cbebf763e4b.mp3",
+      "expected": "Hij staat bij de bushalte en wacht.",
+      "recognized": " Hij staat bij de bushalte en wacht.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.48,
+          "text": " Hij staat bij de bushalte en wacht.",
+          "tokens": [
+            50365,
+            27832,
+            28836,
+            10317,
+            368,
+            1255,
+            4947,
+            975,
+            465,
+            261,
+            3589,
+            13,
+            50439
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05553010531834194,
+          "compression_ratio": 0.8536585365853658,
+          "no_speech_prob": 3.7413084783000095e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-eab42dc410a8d6ec",
+      "src": "/package-audio/klink10-grammar-20261102/k10-eab42dc410a8d6ec.mp3",
+      "expected": "op de bus. Hij. wacht",
+      "recognized": " op de bus. Hey, wacht.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " op de bus. Hey, wacht.",
+          "tokens": [
+            50365,
+            999,
+            368,
+            1255,
+            13,
+            1911,
+            11,
+            261,
+            3589,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4577895402908325,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 7.42777887807744e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-16fabb4a426c5c1e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-16fabb4a426c5c1e.mp3",
+      "expected": "Wij hebben een huis in Rotterdam.",
+      "recognized": " Wij hebben een huis in Rotterdam.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.28,
+          "text": " Wij hebben een huis in Rotterdam.",
+          "tokens": [
+            50365,
+            46721,
+            12116,
+            3881,
+            46526,
+            294,
+            17681,
+            391,
+            10170,
+            13,
+            50429
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11981447537740071,
+          "compression_ratio": 0.8461538461538461,
+          "no_speech_prob": 4.596238754178694e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-cd5e3065c0298ac1",
+      "src": "/package-audio/klink10-grammar-20261102/k10-cd5e3065c0298ac1.mp3",
+      "expected": "in Rotterdam. Wij. wonen",
+      "recognized": " in Rotterdam. Wij wonen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.34,
+          "text": " in Rotterdam. Wij wonen.",
+          "tokens": [
+            50365,
+            294,
+            17681,
+            391,
+            10170,
+            13,
+            46721,
+            1582,
+            268,
+            13,
+            50432
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2846715450286865,
+          "compression_ratio": 0.75,
+          "no_speech_prob": 7.349594023653427e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9062e7503cf21cb5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9062e7503cf21cb5.mp3",
+      "expected": "De docent schrijft op het bord.",
+      "recognized": " De docent schrijft op het bord.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.26,
+          "text": " De docent schrijft op het bord.",
+          "tokens": [
+            50365,
+            1346,
+            360,
+            2207,
+            956,
+            11105,
+            844,
+            999,
+            3639,
+            25872,
+            13,
+            50428
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.0649547943702111,
+          "compression_ratio": 0.7948717948717948,
+          "no_speech_prob": 4.444054933078201e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9462f3f78d43bb54",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9462f3f78d43bb54.mp3",
+      "expected": "schrijft. een woord. De docent",
+      "recognized": " Schrijft een woord de docent.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.04,
+          "text": " Schrijft een woord de docent.",
+          "tokens": [
+            50365,
+            2065,
+            11105,
+            844,
+            3881,
+            6020,
+            765,
+            368,
+            360,
+            2207,
+            13,
+            50467
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08418666399442233,
+          "compression_ratio": 0.7837837837837838,
+          "no_speech_prob": 4.358058618841865e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-66ea27e6d57ebed9",
+      "src": "/package-audio/klink10-grammar-20261102/k10-66ea27e6d57ebed9.mp3",
+      "expected": "Fatima loopt naar haar school.",
+      "recognized": " Fatima loopt naar haar school.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.18,
+          "text": " Fatima loopt naar haar school.",
+          "tokens": [
+            50365,
+            16948,
+            4775,
+            450,
+            5747,
+            12762,
+            39371,
+            1395,
+            13,
+            50424
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12284725362604315,
+          "compression_ratio": 0.8571428571428571,
+          "no_speech_prob": 4.505888284017656e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-8a68c498866372fc",
+      "src": "/package-audio/klink10-grammar-20261102/k10-8a68c498866372fc.mp3",
+      "expected": "naar school. Fatima. gaat",
+      "recognized": " naar school. Fatima, ga dan.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.92,
+          "text": " naar school. Fatima, ga dan.",
+          "tokens": [
+            50365,
+            12762,
+            1395,
+            13,
+            16948,
+            4775,
+            11,
+            5959,
+            3277,
+            13,
+            50461
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4487324158350627,
+          "compression_ratio": 0.7777777777777778,
+          "no_speech_prob": 8.774512366693799e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-ca4326f634e043d5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-ca4326f634e043d5.mp3",
+      "expected": "De kinderen zijn buiten aan het spelen.",
+      "recognized": " De kinderen zijn buiten aan het spelen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.58,
+          "text": " De kinderen zijn buiten aan het spelen.",
+          "tokens": [
+            50365,
+            1346,
+            48935,
+            8004,
+            758,
+            6009,
+            9904,
+            3639,
+            637,
+            14818,
+            13,
+            50444
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09127305104182316,
+          "compression_ratio": 0.8666666666666667,
+          "no_speech_prob": 4.459095852976658e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9a0918ffc75a4740",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9a0918ffc75a4740.mp3",
+      "expected": "spelen. buiten. De kinderen",
+      "recognized": " Spelen buiten de kinderen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.78,
+          "text": " Spelen buiten de kinderen.",
+          "tokens": [
+            50365,
+            1738,
+            14818,
+            758,
+            6009,
+            368,
+            48935,
+            13,
+            50454
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.21192712783813478,
+          "compression_ratio": 0.8125,
+          "no_speech_prob": 5.7232378558591535e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d7893cbfe4068fc2",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d7893cbfe4068fc2.mp3",
+      "expected": "Mijn broer maakt rijst klaar.",
+      "recognized": " Mijn broer maakt de reis klaar.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.24,
+          "text": " Mijn broer maakt de reis klaar.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            2006,
+            260,
+            463,
+            5886,
+            368,
+            319,
+            271,
+            33337,
+            289,
+            13,
+            50427
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.19014094670613607,
+          "compression_ratio": 0.7948717948717948,
+          "no_speech_prob": 4.973882850728417e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f966f4ae8d88ed6b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f966f4ae8d88ed6b.mp3",
+      "expected": "kookt. rijst. Mijn broer",
+      "recognized": " kookt rijst mijn broer",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.0,
+          "text": " kookt rijst mijn broer",
+          "tokens": [
+            50365,
+            350,
+            1212,
+            83,
+            47237,
+            372,
+            19884,
+            2006,
+            260,
+            50515
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.42429256439208984,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 7.1848933053120234e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-4fde2c597d8faf54",
+      "src": "/package-audio/klink10-grammar-20261102/k10-4fde2c597d8faf54.mp3",
+      "expected": "Ik verstuur een bericht op mijn telefoon.",
+      "recognized": " Ik verstuur een bericht op mijn telefoon.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.58,
+          "text": " Ik verstuur een bericht op mijn telefoon.",
+          "tokens": [
+            50365,
+            8316,
+            48960,
+            18470,
+            3881,
+            5948,
+            1405,
+            999,
+            19884,
+            40616,
+            4106,
+            13,
+            50444
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05531460898263114,
+          "compression_ratio": 0.8367346938775511,
+          "no_speech_prob": 4.355688552892811e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-5afd920c0ea19ac5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-5afd920c0ea19ac5.mp3",
+      "expected": "een bericht. Ik. stuur",
+      "recognized": " Een bericht, ik stuur.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.78,
+          "text": " Een bericht, ik stuur.",
+          "tokens": [
+            50365,
+            25374,
+            5948,
+            1405,
+            11,
+            4320,
+            342,
+            18470,
+            13,
+            50454
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.19919070330533115,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 6.120287002892022e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1a37db1fb00aa320",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1a37db1fb00aa320.mp3",
+      "expected": "De vrouw doet de deur open.",
+      "recognized": " De vrouw doet de deur open.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " De vrouw doet de deur open.",
+          "tokens": [
+            50365,
+            1346,
+            371,
+            13122,
+            86,
+            44138,
+            368,
+            368,
+            374,
+            1269,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07502255072960487,
+          "compression_ratio": 0.8181818181818182,
+          "no_speech_prob": 4.7617322411486196e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0bd475d0cdddd521",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0bd475d0cdddd521.mp3",
+      "expected": "opent. de deur. De vrouw",
+      "recognized": " Opent de deur de vrouw.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.6600000000000001,
+          "text": " Opent de deur de vrouw.",
+          "tokens": [
+            50365,
+            12011,
+            317,
+            368,
+            368,
+            374,
+            368,
+            371,
+            13122,
+            86,
+            13,
+            50448
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1322471178494967,
+          "compression_ratio": 0.8518518518518519,
+          "no_speech_prob": 4.097764662314152e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f66fa6dece3b17e5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f66fa6dece3b17e5.mp3",
+      "expected": "De trein rijdt om acht uur weg.",
+      "recognized": " De trein rijdt om 8 uur weg.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " De trein rijdt om 8 uur weg.",
+          "tokens": [
+            50365,
+            1346,
+            2192,
+            259,
+            367,
+            14675,
+            83,
+            3406,
+            1649,
+            344,
+            374,
+            15565,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08460855484008789,
+          "compression_ratio": 0.7777777777777778,
+          "no_speech_prob": 3.3672949411450714e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d009ccde2c0bfc88",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d009ccde2c0bfc88.mp3",
+      "expected": "vertrekt. om acht uur. De trein",
+      "recognized": " vertrekt om 8 uur de trein",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.92,
+          "text": " vertrekt om 8 uur de trein",
+          "tokens": [
+            50365,
+            1306,
+            3599,
+            2320,
+            3406,
+            1649,
+            344,
+            374,
+            368,
+            2192,
+            259,
+            50461
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3986630072960487,
+          "compression_ratio": 0.7878787878787878,
+          "no_speech_prob": 6.160775015140452e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-138ff1bab871a730",
+      "src": "/package-audio/klink10-grammar-20261102/k10-138ff1bab871a730.mp3",
+      "expected": "Jij puntje puntje puntje een boek.",
+      "recognized": " Jij puntje, puntje, puntje, een boek.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.48,
+          "text": " Jij puntje, puntje, puntje, een boek.",
+          "tokens": [
+            50365,
+            508,
+            1718,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            3881,
+            748,
+            916,
+            13,
+            50439
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11139718691507976,
+          "compression_ratio": 1.2758620689655173,
+          "no_speech_prob": 6.771679137568265e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-3b93b0dc6340194d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-3b93b0dc6340194d.mp3",
+      "expected": "Hij puntje puntje puntje op de bus.",
+      "recognized": " Hij puntje, puntje, puntje op de bus.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.62,
+          "text": " Hij puntje, puntje, puntje op de bus.",
+          "tokens": [
+            50365,
+            27832,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            999,
+            368,
+            1255,
+            13,
+            50446
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07840821146965027,
+          "compression_ratio": 1.1935483870967742,
+          "no_speech_prob": 4.929463087721686e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2aa17d1089765deb",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2aa17d1089765deb.mp3",
+      "expected": "wachtte",
+      "recognized": " Wachten.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.36,
+          "text": " Wachten.",
+          "tokens": [
+            50365,
+            343,
+            20806,
+            13,
+            50383
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.35224254926045734,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 1.5469297717785047e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-c6be0ca79c0db10b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-c6be0ca79c0db10b.mp3",
+      "expected": "Wij puntje puntje puntje in Rotterdam.",
+      "recognized": " bij Puntje Puntje Puntje in Rotterdam.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.58,
+          "text": " bij Puntje Puntje Puntje in Rotterdam.",
+          "tokens": [
+            50365,
+            10317,
+            430,
+            2760,
+            2884,
+            430,
+            2760,
+            2884,
+            430,
+            2760,
+            2884,
+            294,
+            17681,
+            391,
+            10170,
+            13,
+            50444
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23504220114813912,
+          "compression_ratio": 1.1875,
+          "no_speech_prob": 4.451981752001677e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9412ac5ae61e09dc",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9412ac5ae61e09dc.mp3",
+      "expected": "De docent puntje puntje puntje een woord.",
+      "recognized": " De docent puntje, puntje, puntje, een woord.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.16,
+          "text": " De docent puntje, puntje, puntje, een woord.",
+          "tokens": [
+            50365,
+            1346,
+            360,
+            2207,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            3881,
+            6020,
+            765,
+            13,
+            50473
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1163091408578973,
+          "compression_ratio": 1.2222222222222223,
+          "no_speech_prob": 4.094508586349743e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-e712504a7241df9e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-e712504a7241df9e.mp3",
+      "expected": "Fatima puntje puntje puntje naar school.",
+      "recognized": " Fatima puntje puntje puntje naar school.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.82,
+          "text": " Fatima puntje puntje puntje naar school.",
+          "tokens": [
+            50365,
+            16948,
+            4775,
+            18212,
+            2884,
+            18212,
+            2884,
+            18212,
+            2884,
+            12762,
+            1395,
+            13,
+            50456
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.17892871584211076,
+          "compression_ratio": 1.1764705882352942,
+          "no_speech_prob": 4.700903728782624e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-cfdb7ea976a3f2f0",
+      "src": "/package-audio/klink10-grammar-20261102/k10-cfdb7ea976a3f2f0.mp3",
+      "expected": "De kinderen puntje puntje puntje buiten.",
+      "recognized": " De kinderen puntje, puntje, puntje buiten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.78,
+          "text": " De kinderen puntje, puntje, puntje buiten.",
+          "tokens": [
+            50365,
+            1346,
+            48935,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            758,
+            6009,
+            13,
+            50454
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11612004041671753,
+          "compression_ratio": 1.1666666666666667,
+          "no_speech_prob": 4.765371691001219e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-8155d79de107abfa",
+      "src": "/package-audio/klink10-grammar-20261102/k10-8155d79de107abfa.mp3",
+      "expected": "Mijn broer puntje puntje puntje rijst.",
+      "recognized": " Mijn broer...reist.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.8,
+          "text": " Mijn broer...reist.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            2006,
+            260,
+            485,
+            265,
+            468,
+            13,
+            50455
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3317467949607156,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 5.207853679550789e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-4a7fc9a10c238130",
+      "src": "/package-audio/klink10-grammar-20261102/k10-4a7fc9a10c238130.mp3",
+      "expected": "Ik puntje puntje puntje een bericht.",
+      "recognized": " Ik puntje, puntje, puntje een bericht.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.6400000000000001,
+          "text": " Ik puntje, puntje, puntje een bericht.",
+          "tokens": [
+            50365,
+            8316,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            3881,
+            5948,
+            1405,
+            13,
+            50447
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09326410293579102,
+          "compression_ratio": 1.1875,
+          "no_speech_prob": 5.270209182256513e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-3af4c2a94c0d195d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-3af4c2a94c0d195d.mp3",
+      "expected": "De vrouw puntje puntje puntje de deur.",
+      "recognized": " De vrouw puntje, puntje, puntje, de deur.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.78,
+          "text": " De vrouw puntje, puntje, puntje, de deur.",
+          "tokens": [
+            50365,
+            1346,
+            371,
+            13122,
+            86,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            368,
+            368,
+            374,
+            13,
+            50454
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12874534130096435,
+          "compression_ratio": 1.28125,
+          "no_speech_prob": 4.059739090039871e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f5f00c2d79bf2fcb",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f5f00c2d79bf2fcb.mp3",
+      "expected": "De trein puntje puntje puntje om acht uur.",
+      "recognized": " De trein puntje puntje puntje om 8 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.16,
+          "text": " De trein puntje puntje puntje om 8 uur.",
+          "tokens": [
+            50365,
+            1346,
+            2192,
+            259,
+            18212,
+            2884,
+            18212,
+            2884,
+            18212,
+            2884,
+            3406,
+            1649,
+            344,
+            374,
+            13,
+            50473
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1648091989405015,
+          "compression_ratio": 1.1818181818181819,
+          "no_speech_prob": 4.3958461003190674e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-19d1ededca51e979",
+      "src": "/package-audio/klink10-grammar-20261102/k10-19d1ededca51e979.mp3",
+      "expected": "Kijk of luister naar de situatie. Welke zin past erbij én heeft de juiste werkwoordsvorm?",
+      "recognized": " Kijk of luister naar de situatie. Welke zin past erbij en heeft de juiste werkwoordsvorm?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.76,
+          "text": " Kijk of luister naar de situatie.",
+          "tokens": [
+            50365,
+            591,
+            6940,
+            295,
+            10438,
+            1964,
+            12762,
+            368,
+            2054,
+            16921,
+            13,
+            50453
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08945650042909564,
+          "compression_ratio": 1.072289156626506,
+          "no_speech_prob": 4.192736869496061e-12
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.56,
+          "end": 5.44,
+          "text": " Welke zin past erbij en heeft de juiste werkwoordsvorm?",
+          "tokens": [
+            50493,
+            3778,
+            330,
+            710,
+            259,
+            1791,
+            1189,
+            30418,
+            465,
+            17425,
+            368,
+            3649,
+            8375,
+            37585,
+            6120,
+            5703,
+            85,
+            687,
+            30,
+            50637
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08945650042909564,
+          "compression_ratio": 1.072289156626506,
+          "no_speech_prob": 4.192736869496061e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0bb9058bb2354a51",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0bb9058bb2354a51.mp3",
+      "expected": "Jij lees een boek.",
+      "recognized": " Jij leest een boek.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8200000000000001,
+          "text": " Jij leest een boek.",
+          "tokens": [
+            50365,
+            508,
+            1718,
+            476,
+            377,
+            3881,
+            748,
+            916,
+            13,
+            50406
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.18305171619762073,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 5.416211316250363e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2a05645fe3452b6d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2a05645fe3452b6d.mp3",
+      "expected": "Jij lezen een boek.",
+      "recognized": " Jij leest een boek?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8200000000000001,
+          "text": " Jij leest een boek?",
+          "tokens": [
+            50365,
+            508,
+            1718,
+            476,
+            377,
+            3881,
+            748,
+            916,
+            30,
+            50406
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2754956158724698,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 4.915905790076058e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-ab5c17d6f17ca43a",
+      "src": "/package-audio/klink10-grammar-20261102/k10-ab5c17d6f17ca43a.mp3",
+      "expected": "Hij wachten op de bus.",
+      "recognized": " Hij wachtte op de bus.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9,
+          "text": " Hij wachtte op de bus.",
+          "tokens": [
+            50365,
+            27832,
+            261,
+            3589,
+            975,
+            999,
+            368,
+            1255,
+            13,
+            50410
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08949002352627841,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 4.64831862237447e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d27f6b316d71e7fc",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d27f6b316d71e7fc.mp3",
+      "expected": "Hij wachtte op de bus.",
+      "recognized": " Hij wachtte op de bus.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.86,
+          "text": " Hij wachtte op de bus.",
+          "tokens": [
+            50365,
+            27832,
+            261,
+            3589,
+            975,
+            999,
+            368,
+            1255,
+            13,
+            50408
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08218006654219194,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 4.385107728321902e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9a3639898c61076e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9a3639898c61076e.mp3",
+      "expected": "Wij woont in Rotterdam.",
+      "recognized": " Wij woont in Rotterdam.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9400000000000001,
+          "text": " Wij woont in Rotterdam.",
+          "tokens": [
+            50365,
+            46721,
+            6020,
+            896,
+            294,
+            17681,
+            391,
+            10170,
+            13,
+            50412
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.15099963274869052,
+          "compression_ratio": 0.7419354838709677,
+          "no_speech_prob": 4.458199000939578e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1576f65c06d37c15",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1576f65c06d37c15.mp3",
+      "expected": "Wij woon in Rotterdam.",
+      "recognized": " Wij wonen in Rotterdam.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9,
+          "text": " Wij wonen in Rotterdam.",
+          "tokens": [
+            50365,
+            46721,
+            1582,
+            268,
+            294,
+            17681,
+            391,
+            10170,
+            13,
+            50410
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11242710460316051,
+          "compression_ratio": 0.7419354838709677,
+          "no_speech_prob": 4.594168361710116e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-98ecf2017d488c15",
+      "src": "/package-audio/klink10-grammar-20261102/k10-98ecf2017d488c15.mp3",
+      "expected": "De docent schrijf een woord.",
+      "recognized": " De docent schrijft een woord.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.16,
+          "text": " De docent schrijft een woord.",
+          "tokens": [
+            50365,
+            1346,
+            360,
+            2207,
+            956,
+            11105,
+            844,
+            3881,
+            6020,
+            765,
+            13,
+            50423
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07287102479201096,
+          "compression_ratio": 0.7837837837837838,
+          "no_speech_prob": 4.442829784623292e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-30a558c10577f7dd",
+      "src": "/package-audio/klink10-grammar-20261102/k10-30a558c10577f7dd.mp3",
+      "expected": "De docent schrijven een woord.",
+      "recognized": " De docent schrijven een woord.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.26,
+          "text": " De docent schrijven een woord.",
+          "tokens": [
+            50365,
+            1346,
+            360,
+            2207,
+            956,
+            11105,
+            553,
+            3881,
+            6020,
+            765,
+            13,
+            50428
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1329647944523738,
+          "compression_ratio": 0.8333333333333334,
+          "no_speech_prob": 4.303145947209819e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-62cf478dfe9bba84",
+      "src": "/package-audio/klink10-grammar-20261102/k10-62cf478dfe9bba84.mp3",
+      "expected": "Fatima gaan naar school.",
+      "recognized": " Fatima gaat naar school.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.92,
+          "text": " Fatima gaat naar school.",
+          "tokens": [
+            50365,
+            16948,
+            4775,
+            17829,
+            12762,
+            1395,
+            13,
+            50411
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.17796866099039713,
+          "compression_ratio": 0.75,
+          "no_speech_prob": 4.623173371909317e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1e81ac2ca26d9422",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1e81ac2ca26d9422.mp3",
+      "expected": "Fatima ga naar school.",
+      "recognized": " Fatima gaat naar school.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.98,
+          "text": " Fatima gaat naar school.",
+          "tokens": [
+            50365,
+            16948,
+            4775,
+            17829,
+            12762,
+            1395,
+            13,
+            50414
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.26555246777004665,
+          "compression_ratio": 0.75,
+          "no_speech_prob": 5.929652602265634e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-b53e186911f864ea",
+      "src": "/package-audio/klink10-grammar-20261102/k10-b53e186911f864ea.mp3",
+      "expected": "De kinderen speelt buiten.",
+      "recognized": " De kinderen speelt buiten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.08,
+          "text": " De kinderen speelt buiten.",
+          "tokens": [
+            50365,
+            1346,
+            48935,
+            768,
+            2018,
+            758,
+            6009,
+            13,
+            50419
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.22735538482666015,
+          "compression_ratio": 0.7647058823529411,
+          "no_speech_prob": 4.899785872175544e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-5127fff34d6865e0",
+      "src": "/package-audio/klink10-grammar-20261102/k10-5127fff34d6865e0.mp3",
+      "expected": "De kinderen speel buiten.",
+      "recognized": " De kinderen speel buiten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.04,
+          "text": " De kinderen speel buiten.",
+          "tokens": [
+            50365,
+            1346,
+            48935,
+            768,
+            338,
+            758,
+            6009,
+            13,
+            50417
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.24681291580200196,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 4.817644547183697e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-96f9f95796947ba4",
+      "src": "/package-audio/klink10-grammar-20261102/k10-96f9f95796947ba4.mp3",
+      "expected": "Mijn broer kook rijst.",
+      "recognized": " Mijn broer kookrijst.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Mijn broer kookrijst.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            2006,
+            260,
+            350,
+            1212,
+            11105,
+            372,
+            13,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1840463081995646,
+          "compression_ratio": 0.7241379310344828,
+          "no_speech_prob": 5.390945068822761e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2eeb82bd2864742f",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2eeb82bd2864742f.mp3",
+      "expected": "Mijn broer koken rijst.",
+      "recognized": " Mijn broer kooken rijst.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " Mijn broer kooken rijst.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            2006,
+            260,
+            350,
+            1212,
+            268,
+            47237,
+            372,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.21897415014413688,
+          "compression_ratio": 0.75,
+          "no_speech_prob": 4.352888275521716e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-67fdee981b41cec7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-67fdee981b41cec7.mp3",
+      "expected": "Ik stuurt een bericht.",
+      "recognized": " Ik stuur het een bericht.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.86,
+          "text": " Ik stuur het een bericht.",
+          "tokens": [
+            50365,
+            8316,
+            342,
+            18470,
+            3639,
+            3881,
+            5948,
+            1405,
+            13,
+            50408
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1521723053672097,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 4.469106074794782e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-929d25dbe7f058b3",
+      "src": "/package-audio/klink10-grammar-20261102/k10-929d25dbe7f058b3.mp3",
+      "expected": "Ik sturen een bericht.",
+      "recognized": " Ik stuur een bericht.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9400000000000001,
+          "text": " Ik stuur een bericht.",
+          "tokens": [
+            50365,
+            8316,
+            342,
+            18470,
+            3881,
+            5948,
+            1405,
+            13,
+            50412
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1687035083770752,
+          "compression_ratio": 0.7241379310344828,
+          "no_speech_prob": 4.2660644981873386e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1cf8bd0f0c0c61f9",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1cf8bd0f0c0c61f9.mp3",
+      "expected": "De vrouw open de deur.",
+      "recognized": " De vrouw opende deur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.96,
+          "text": " De vrouw opende deur.",
+          "tokens": [
+            50365,
+            1346,
+            371,
+            13122,
+            86,
+            999,
+            5445,
+            368,
+            374,
+            13,
+            50413
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07938941319783528,
+          "compression_ratio": 0.7241379310344828,
+          "no_speech_prob": 3.594662328215703e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d2aeec738053125b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d2aeec738053125b.mp3",
+      "expected": "De vrouw openen de deur.",
+      "recognized": " De vrouw opende de deur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " De vrouw opende de deur.",
+          "tokens": [
+            50365,
+            1346,
+            371,
+            13122,
+            86,
+            999,
+            5445,
+            368,
+            368,
+            374,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06381640067467323,
+          "compression_ratio": 0.8571428571428571,
+          "no_speech_prob": 4.376587200288773e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f7f07af703b3a999",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f7f07af703b3a999.mp3",
+      "expected": "De trein vertrek om acht uur.",
+      "recognized": " De trein vertrekt om 8 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.24,
+          "text": " De trein vertrekt om 8 uur.",
+          "tokens": [
+            50365,
+            1346,
+            2192,
+            259,
+            1306,
+            3599,
+            2320,
+            3406,
+            1649,
+            344,
+            374,
+            13,
+            50427
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12682451520647323,
+          "compression_ratio": 0.8181818181818182,
+          "no_speech_prob": 3.5651052422702723e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0ac825c4d1264741",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0ac825c4d1264741.mp3",
+      "expected": "De trein vertrekken om acht uur.",
+      "recognized": " De trein vertrekken om 8 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3800000000000001,
+          "text": " De trein vertrekken om 8 uur.",
+          "tokens": [
+            50365,
+            1346,
+            2192,
+            259,
+            1306,
+            3599,
+            74,
+            2653,
+            3406,
+            1649,
+            344,
+            374,
+            13,
+            50434
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.16194899876912436,
+          "compression_ratio": 0.8285714285714286,
+          "no_speech_prob": 4.485722990971164e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-93b7a5cb97b4dad9",
+      "src": "/package-audio/klink10-grammar-20261102/k10-93b7a5cb97b4dad9.mp3",
+      "expected": "Ik heb vandaag geen tijd.",
+      "recognized": " Ik heb vandaag geen tijd.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " Ik heb vandaag geen tijd.",
+          "tokens": [
+            50365,
+            8316,
+            8007,
+            41901,
+            21773,
+            26966,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11657863193088108,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 4.483920179598755e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-dfc203bcc7217bfc",
+      "src": "/package-audio/klink10-grammar-20261102/k10-dfc203bcc7217bfc.mp3",
+      "expected": "vandaag geen tijd",
+      "recognized": " Vandaag geen tijd.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.84,
+          "text": " Vandaag geen tijd.",
+          "tokens": [
+            50365,
+            691,
+            37033,
+            21773,
+            26966,
+            13,
+            50407
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.20758700370788574,
+          "compression_ratio": 0.6923076923076923,
+          "no_speech_prob": 4.847058952123229e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-eb1fe45566bfa6d7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-eb1fe45566bfa6d7.mp3",
+      "expected": "De bus komt vandaag niet.",
+      "recognized": " De bus komt vandaag niet.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " De bus komt vandaag niet.",
+          "tokens": [
+            50365,
+            1346,
+            1255,
+            27760,
+            41901,
+            6899,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1743217044406467,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 5.343451375816599e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-6e5bf7e27542192d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6e5bf7e27542192d.mp3",
+      "expected": "De bus",
+      "recognized": " De bush.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " De bush.",
+          "tokens": [
+            50365,
+            1346,
+            19910,
+            13,
+            50387
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.48638137181599933,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 1.2635019419615645e-10
+        }
+      ]
+    },
+    {
+      "id": "k10-56e8af720a55197c",
+      "src": "/package-audio/klink10-grammar-20261102/k10-56e8af720a55197c.mp3",
+      "expected": "vandaag niet",
+      "recognized": " Vandaag niet.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Vandaag niet.",
+          "tokens": [
+            50365,
+            691,
+            37033,
+            6899,
+            13,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.17862462997436523,
+          "compression_ratio": 0.6190476190476191,
+          "no_speech_prob": 4.222579751134159e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1e23ff1c4491133b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1e23ff1c4491133b.mp3",
+      "expected": "Na de les gaat Samir naar huis.",
+      "recognized": " Na de les gaat Samir naar huis.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3800000000000001,
+          "text": " Na de les gaat Samir naar huis.",
+          "tokens": [
+            50365,
+            6056,
+            368,
+            1512,
+            17829,
+            4832,
+            347,
+            12762,
+            46526,
+            13,
+            50434
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.13560211658477783,
+          "compression_ratio": 0.7948717948717948,
+          "no_speech_prob": 5.438570600813097e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2341c75b522b52d5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2341c75b522b52d5.mp3",
+      "expected": "Na de les",
+      "recognized": " Na de les",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Na de les",
+          "tokens": [
+            50365,
+            6056,
+            368,
+            1512,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.528484582901001,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 4.210584138297779e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d282659c13828638",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d282659c13828638.mp3",
+      "expected": "Samir",
+      "recognized": " Samir.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " Samir.",
+          "tokens": [
+            50365,
+            4832,
+            347,
+            13,
+            50387
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.26129873593648273,
+          "compression_ratio": 0.42857142857142855,
+          "no_speech_prob": 3.4225740297433305e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-d8df12005ea1d116",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d8df12005ea1d116.mp3",
+      "expected": "Wij gaan straks boodschappen doen.",
+      "recognized": " Wij gaan straks boodschappen doen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.24,
+          "text": " Wij gaan straks boodschappen doen.",
+          "tokens": [
+            50365,
+            46721,
+            14118,
+            2148,
+            1694,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            15159,
+            13,
+            50427
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.061265025820050924,
+          "compression_ratio": 0.8095238095238095,
+          "no_speech_prob": 4.7112591605724674e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d6eb5e9a3951aeca",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d6eb5e9a3951aeca.mp3",
+      "expected": "straks boodschappen doen",
+      "recognized": " Straks boodschappen doen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Straks boodschappen doen.",
+          "tokens": [
+            50365,
+            12875,
+            1694,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            15159,
+            13,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1365992228190104,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 4.8429650047199235e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-4372e41c57a6c146",
+      "src": "/package-audio/klink10-grammar-20261102/k10-4372e41c57a6c146.mp3",
+      "expected": "Er staat een fiets voor het huis.",
+      "recognized": " Daar staat een fiets voor het huis.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.2,
+          "text": " Daar staat een fiets voor het huis.",
+          "tokens": [
+            50365,
+            29883,
+            28836,
+            3881,
+            15848,
+            1385,
+            7358,
+            3639,
+            46526,
+            13,
+            50425
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11211117108662923,
+          "compression_ratio": 0.813953488372093,
+          "no_speech_prob": 5.807942668467625e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-5c82c87ef2c15f03",
+      "src": "/package-audio/klink10-grammar-20261102/k10-5c82c87ef2c15f03.mp3",
+      "expected": "Wat staat er?",
+      "recognized": " Wat staat er?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.66,
+          "text": " Wat staat er?",
+          "tokens": [
+            50365,
+            12593,
+            28836,
+            1189,
+            30,
+            50398
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2647925785609654,
+          "compression_ratio": 0.6842105263157895,
+          "no_speech_prob": 1.5119914001382462e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-fa31991ba3186acc",
+      "src": "/package-audio/klink10-grammar-20261102/k10-fa31991ba3186acc.mp3",
+      "expected": "een fiets",
+      "recognized": " Een fiets?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Een fiets?",
+          "tokens": [
+            50365,
+            25374,
+            15848,
+            1385,
+            30,
+            50390
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.418903078351702,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 8.29240842659118e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-af4bed37a02ac58e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-af4bed37a02ac58e.mp3",
+      "expected": "voor het huis",
+      "recognized": " Voor het huis.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.68,
+          "text": " Voor het huis.",
+          "tokens": [
+            50365,
+            43114,
+            3639,
+            46526,
+            13,
+            50399
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.278817926134382,
+          "compression_ratio": 0.6363636363636364,
+          "no_speech_prob": 4.803717753437686e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9910016e39a61319",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9910016e39a61319.mp3",
+      "expected": "morgen om negen uur",
+      "recognized": " Morgen om 9 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " Morgen om 9 uur.",
+          "tokens": [
+            50365,
+            35570,
+            3406,
+            1722,
+            344,
+            374,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.21795145670572916,
+          "compression_ratio": 0.6666666666666666,
+          "no_speech_prob": 4.706212416299982e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0f62c3e44463e652",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0f62c3e44463e652.mp3",
+      "expected": "De les",
+      "recognized": " De leers.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.42,
+          "text": " De leers.",
+          "tokens": [
+            50365,
+            1346,
+            476,
+            433,
+            13,
+            50386
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3648730686732701,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 1.6842885419698916e-10
+        }
+      ]
+    },
+    {
+      "id": "k10-a6cee6b5fb883557",
+      "src": "/package-audio/klink10-grammar-20261102/k10-a6cee6b5fb883557.mp3",
+      "expected": "Zij kan vandaag niet komen.",
+      "recognized": " Zij kan vandaag niet komen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.08,
+          "text": " Zij kan vandaag niet komen.",
+          "tokens": [
+            50370,
+            1176,
+            1718,
+            4608,
+            41901,
+            6899,
+            27190,
+            13,
+            50419
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.14347367286682128,
+          "compression_ratio": 0.7714285714285715,
+          "no_speech_prob": 5.21443738882299e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1b905868457b9118",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1b905868457b9118.mp3",
+      "expected": "vandaag niet komen",
+      "recognized": " vandaag niet komen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8200000000000001,
+          "text": " vandaag niet komen.",
+          "tokens": [
+            50365,
+            41901,
+            6899,
+            27190,
+            13,
+            50406
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.38962091718401226,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 5.766049096522785e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-83dd0a0458651000",
+      "src": "/package-audio/klink10-grammar-20261102/k10-83dd0a0458651000.mp3",
+      "expected": "Mijn collega helpt mij met de taak.",
+      "recognized": " Mijn collega helpt mij met de taak.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.48,
+          "text": " Mijn collega helpt mij met de taak.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            1263,
+            6335,
+            801,
+            662,
+            22953,
+            1131,
+            368,
+            1846,
+            514,
+            13,
+            50439
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1345693588256836,
+          "compression_ratio": 0.813953488372093,
+          "no_speech_prob": 5.230007833062489e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-83281cc42e5efe8c",
+      "src": "/package-audio/klink10-grammar-20261102/k10-83281cc42e5efe8c.mp3",
+      "expected": "Mijn collega",
+      "recognized": " Mijn collega.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Mijn collega.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            1263,
+            6335,
+            13,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23776161670684814,
+          "compression_ratio": 0.6190476190476191,
+          "no_speech_prob": 5.3761053768475175e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-cf2e0acc0ce07a29",
+      "src": "/package-audio/klink10-grammar-20261102/k10-cf2e0acc0ce07a29.mp3",
+      "expected": "mij met de taak",
+      "recognized": " Mij met de taak.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.86,
+          "text": " Mij met de taak.",
+          "tokens": [
+            50365,
+            376,
+            1718,
+            1131,
+            368,
+            1846,
+            514,
+            13,
+            50408
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2238905906677246,
+          "compression_ratio": 0.6666666666666666,
+          "no_speech_prob": 4.8587475189043605e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-98d692ca4b3f71d5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-98d692ca4b3f71d5.mp3",
+      "expected": "Mijn zoon moet morgen naar de dokter.",
+      "recognized": " Mijn zoon moet morgen naar de dokter.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.44,
+          "text": " Mijn zoon moet morgen naar de dokter.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            710,
+            4106,
+            12677,
+            36593,
+            12762,
+            368,
+            25037,
+            391,
+            13,
+            50437
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.04577800205775669,
+          "compression_ratio": 0.8604651162790697,
+          "no_speech_prob": 4.701540372298307e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1a1f92d753ca6efc",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1a1f92d753ca6efc.mp3",
+      "expected": "morgen naar de dokter",
+      "recognized": " Morgen naar de dokter.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.98,
+          "text": " Morgen naar de dokter.",
+          "tokens": [
+            50365,
+            35570,
+            12762,
+            368,
+            25037,
+            391,
+            13,
+            50414
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12450181113349067,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 5.805383951340559e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1a8f158460131d0a",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1a8f158460131d0a.mp3",
+      "expected": "Mijn zoon",
+      "recognized": " Bij zoon!",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Bij zoon!",
+          "tokens": [
+            50365,
+            41809,
+            710,
+            4106,
+            0,
+            50390
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7422736712864467,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 2.572385637833463e-10
+        }
+      ]
+    },
+    {
+      "id": "k10-5b0cb101b9b1d98e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-5b0cb101b9b1d98e.mp3",
+      "expected": "Ik zet de computer aan.",
+      "recognized": " Ik zet de computer aan.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.98,
+          "text": " Ik zet de computer aan.",
+          "tokens": [
+            50365,
+            8316,
+            710,
+            302,
+            368,
+            3820,
+            9904,
+            13,
+            50414
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12664856910705566,
+          "compression_ratio": 0.7419354838709677,
+          "no_speech_prob": 3.8174528642354044e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2ba936e1f3c90a4e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2ba936e1f3c90a4e.mp3",
+      "expected": "de computer",
+      "recognized": " de computer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " de computer.",
+          "tokens": [
+            50365,
+            368,
+            3820,
+            13,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6481367349624634,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 6.104031126039078e-13
+        }
+      ]
+    },
+    {
+      "id": "k10-61a41347b4898206",
+      "src": "/package-audio/klink10-grammar-20261102/k10-61a41347b4898206.mp3",
+      "expected": "Je zegt dat je vandaag geen tijd hebt.",
+      "recognized": " Je zegt dat je vandaag geen tijd hebt.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.44,
+          "text": " Je zegt dat je vandaag geen tijd hebt.",
+          "tokens": [
+            50365,
+            2588,
+            710,
+            18500,
+            1137,
+            1506,
+            41901,
+            21773,
+            26966,
+            28339,
+            13,
+            50437
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08507094016441932,
+          "compression_ratio": 0.8260869565217391,
+          "no_speech_prob": 4.725218046702784e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d86055313ac3c6ee",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d86055313ac3c6ee.mp3",
+      "expected": "vandaag. geen tijd. Ik. heb",
+      "recognized": " Vandaag geen tijd, ik heb...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.58,
+          "text": " Vandaag geen tijd, ik heb...",
+          "tokens": [
+            50365,
+            691,
+            37033,
+            21773,
+            26966,
+            11,
+            4320,
+            8007,
+            485,
+            50494
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.35361476378007367,
+          "compression_ratio": 0.7777777777777778,
+          "no_speech_prob": 5.602628604106652e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-768093d5ca56994d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-768093d5ca56994d.mp3",
+      "expected": "De bus rijdt vandaag niet.",
+      "recognized": " De bus rijdt vandaag niet.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.12,
+          "text": " De bus rijdt vandaag niet.",
+          "tokens": [
+            50365,
+            1346,
+            1255,
+            367,
+            14675,
+            83,
+            41901,
+            6899,
+            13,
+            50421
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10524901476773349,
+          "compression_ratio": 0.7647058823529411,
+          "no_speech_prob": 4.7532819694162676e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-3fbd871cbe24ca84",
+      "src": "/package-audio/klink10-grammar-20261102/k10-3fbd871cbe24ca84.mp3",
+      "expected": "komt. vandaag. niet. De bus",
+      "recognized": " Komt vandaag niet de bus.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.98,
+          "text": " Komt vandaag niet de bus.",
+          "tokens": [
+            50365,
+            14286,
+            83,
+            41901,
+            6899,
+            368,
+            1255,
+            13,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3236240863800049,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 6.3646796166771935e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-e753aaeb0c375946",
+      "src": "/package-audio/klink10-grammar-20261102/k10-e753aaeb0c375946.mp3",
+      "expected": "Samir vertrekt naar huis als de les klaar is.",
+      "recognized": " Samir vertrekt naar huis als de les klaar is.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.94,
+          "text": " Samir vertrekt naar huis als de les klaar is.",
+          "tokens": [
+            50365,
+            4832,
+            347,
+            1306,
+            3599,
+            2320,
+            12762,
+            46526,
+            3907,
+            368,
+            1512,
+            33337,
+            289,
+            307,
+            13,
+            50462
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06430754942052505,
+          "compression_ratio": 0.8823529411764706,
+          "no_speech_prob": 3.6087883983210167e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-44b54e890504dc13",
+      "src": "/package-audio/klink10-grammar-20261102/k10-44b54e890504dc13.mp3",
+      "expected": "naar huis. Na de les. gaat. Samir",
+      "recognized": " Naar huis, na de les. Gaat Samir.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.48,
+          "text": " Naar huis, na de les. Gaat Samir.",
+          "tokens": [
+            50365,
+            6056,
+            289,
+            46526,
+            11,
+            1667,
+            368,
+            1512,
+            13,
+            10384,
+            267,
+            4832,
+            347,
+            13,
+            50489
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.24923348426818848,
+          "compression_ratio": 0.8048780487804879,
+          "no_speech_prob": 9.407816539686031e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-87826e4e7ff21bf5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-87826e4e7ff21bf5.mp3",
+      "expected": "Wij doen straks boodschappen.",
+      "recognized": " Wij doen straks boodschappen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.1400000000000001,
+          "text": " Wij doen straks boodschappen.",
+          "tokens": [
+            50365,
+            46721,
+            15159,
+            2148,
+            1694,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            13,
+            50422
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11885151496300331,
+          "compression_ratio": 0.7837837837837838,
+          "no_speech_prob": 4.060279456402638e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-aaaed4685a2d6617",
+      "src": "/package-audio/klink10-grammar-20261102/k10-aaaed4685a2d6617.mp3",
+      "expected": "straks. boodschappen doen. Wij. gaan",
+      "recognized": " Straks boodschappen doen. Wij gaan...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.62,
+          "text": " Straks boodschappen doen. Wij gaan...",
+          "tokens": [
+            50365,
+            12875,
+            1694,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            15159,
+            13,
+            46721,
+            14118,
+            485,
+            50496
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3619081497192383,
+          "compression_ratio": 0.8222222222222222,
+          "no_speech_prob": 6.298457849024386e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1d4b1295047fd1f8",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1d4b1295047fd1f8.mp3",
+      "expected": "Voor het huis staat één fiets.",
+      "recognized": " Voor het huis staat één fiets.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.26,
+          "text": " Voor het huis staat één fiets.",
+          "tokens": [
+            50365,
+            43114,
+            3639,
+            46526,
+            28836,
+            39133,
+            15848,
+            1385,
+            13,
+            50428
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.14221976020119406,
+          "compression_ratio": 0.8,
+          "no_speech_prob": 4.263861833053717e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-47f0ccfbbd9d8e3b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-47f0ccfbbd9d8e3b.mp3",
+      "expected": "een fiets. voor het huis. Er. staat",
+      "recognized": " Een fiets voor het huis. Er staat.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.24,
+          "text": " Een fiets voor het huis. Er staat.",
+          "tokens": [
+            50365,
+            25374,
+            15848,
+            1385,
+            7358,
+            3639,
+            46526,
+            13,
+            3300,
+            28836,
+            13,
+            50477
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.20928404881403997,
+          "compression_ratio": 0.8095238095238095,
+          "no_speech_prob": 5.69003828429504e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-015f52aacda9575d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-015f52aacda9575d.mp3",
+      "expected": "De les start morgen om negen uur.",
+      "recognized": " De les start morgen om 9 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.48,
+          "text": " De les start morgen om 9 uur.",
+          "tokens": [
+            50365,
+            1346,
+            1512,
+            722,
+            36593,
+            3406,
+            1722,
+            344,
+            374,
+            13,
+            50439
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10764328638712566,
+          "compression_ratio": 0.7837837837837838,
+          "no_speech_prob": 4.634601730169052e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d3a8e5b91698611d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d3a8e5b91698611d.mp3",
+      "expected": "begint. morgen. om negen uur. De les",
+      "recognized": " begint morgen om 9 uur de les.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.94,
+          "text": " begint morgen om 9 uur de les.",
+          "tokens": [
+            50365,
+            4612,
+            686,
+            36593,
+            3406,
+            1722,
+            344,
+            374,
+            368,
+            1512,
+            13,
+            50512
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.18524441352257362,
+          "compression_ratio": 0.7894736842105263,
+          "no_speech_prob": 5.132812144065246e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-c34fd1f13642858d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-c34fd1f13642858d.mp3",
+      "expected": "Zij is vandaag verhinderd en kan niet komen.",
+      "recognized": " Zij is vandaag verhinderd en kan niet komen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.68,
+          "text": " Zij is vandaag verhinderd en kan niet komen.",
+          "tokens": [
+            50365,
+            1176,
+            1718,
+            307,
+            41901,
+            1306,
+            71,
+            5669,
+            67,
+            465,
+            4608,
+            6899,
+            27190,
+            13,
+            50449
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10083675384521484,
+          "compression_ratio": 0.8461538461538461,
+          "no_speech_prob": 4.978846328274056e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f652c91ea6366531",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f652c91ea6366531.mp3",
+      "expected": "vandaag. niet komen. Zij. kan",
+      "recognized": " Vandaag niet komen, zij kan.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.92,
+          "text": " Vandaag niet komen, zij kan.",
+          "tokens": [
+            50365,
+            691,
+            37033,
+            6899,
+            27190,
+            11,
+            49311,
+            4608,
+            13,
+            50511
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11233728582208807,
+          "compression_ratio": 0.7777777777777778,
+          "no_speech_prob": 3.860262803856429e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-b3c1e4e7457b0069",
+      "src": "/package-audio/klink10-grammar-20261102/k10-b3c1e4e7457b0069.mp3",
+      "expected": "Een collega helpt mij op het werk.",
+      "recognized": " Een collega helpt mij op het werk.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.44,
+          "text": " Een collega helpt mij op het werk.",
+          "tokens": [
+            50365,
+            25374,
+            1263,
+            6335,
+            801,
+            662,
+            22953,
+            999,
+            3639,
+            37585,
+            13,
+            50437
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11411626522357647,
+          "compression_ratio": 0.85,
+          "no_speech_prob": 4.970436822543389e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-7f292279d97aca1a",
+      "src": "/package-audio/klink10-grammar-20261102/k10-7f292279d97aca1a.mp3",
+      "expected": "helpt. mij. met de taak. Mijn collega",
+      "recognized": " helpt mij met de taak mijn collega.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.44,
+          "text": " helpt mij met de taak mijn collega.",
+          "tokens": [
+            50365,
+            801,
+            662,
+            22953,
+            1131,
+            368,
+            1846,
+            514,
+            19884,
+            1263,
+            6335,
+            13,
+            50487
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.34966949054173063,
+          "compression_ratio": 0.875,
+          "no_speech_prob": 5.542729036162042e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-93bddcff958ce80e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-93bddcff958ce80e.mp3",
+      "expected": "Mijn zoon heeft morgen een afspraak bij de dokter.",
+      "recognized": " Mijn zoon heeft morgen een afspraak bij de dokter.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Mijn zoon heeft morgen een afspraak bij de dokter.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            710,
+            4106,
+            17425,
+            36593,
+            3881,
+            3238,
+            4952,
+            424,
+            514,
+            10317,
+            368,
+            25037,
+            391,
+            13,
+            50465
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.029579363371196547,
+          "compression_ratio": 0.8928571428571429,
+          "no_speech_prob": 4.337618805805299e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-cc105bc7696bf906",
+      "src": "/package-audio/klink10-grammar-20261102/k10-cc105bc7696bf906.mp3",
+      "expected": "moet. morgen. naar de dokter. Mijn zoon",
+      "recognized": " Moet morgen naar de dokter. Mijn zoon.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.2,
+          "text": " Moet morgen naar de dokter.",
+          "tokens": [
+            50365,
+            3335,
+            302,
+            36593,
+            12762,
+            368,
+            25037,
+            391,
+            13,
+            50475
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3170575300852458,
+          "compression_ratio": 0.8260869565217391,
+          "no_speech_prob": 9.337247121321557e-12
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.64,
+          "end": 3.1,
+          "text": " Mijn zoon.",
+          "tokens": [
+            50497,
+            376,
+            6041,
+            710,
+            4106,
+            13,
+            50520
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3170575300852458,
+          "compression_ratio": 0.8260869565217391,
+          "no_speech_prob": 9.337247121321557e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-c16c99fe1f6beeee",
+      "src": "/package-audio/klink10-grammar-20261102/k10-c16c99fe1f6beeee.mp3",
+      "expected": "Ik start de computer.",
+      "recognized": " Ik start de computer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.86,
+          "text": " Ik start de computer.",
+          "tokens": [
+            50365,
+            8316,
+            722,
+            368,
+            3820,
+            13,
+            50408
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4584769606590271,
+          "compression_ratio": 0.7241379310344828,
+          "no_speech_prob": 1.3408776693146773e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-b584a818c2d5a071",
+      "src": "/package-audio/klink10-grammar-20261102/k10-b584a818c2d5a071.mp3",
+      "expected": "de computer. aan. Ik. zet",
+      "recognized": " de computer aan XZ.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3800000000000001,
+          "text": " de computer aan XZ.",
+          "tokens": [
+            50365,
+            368,
+            3820,
+            9904,
+            1783,
+            57,
+            13,
+            50434
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4588479995727539,
+          "compression_ratio": 0.7037037037037037,
+          "no_speech_prob": 5.50996010970084e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-49114ac0c150f99e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-49114ac0c150f99e.mp3",
+      "expected": "Ik puntje puntje puntje vandaag geen tijd.",
+      "recognized": " Ik puntje, puntje, puntje vandaag geen tijd.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.8,
+          "text": " Ik puntje, puntje, puntje vandaag geen tijd.",
+          "tokens": [
+            50365,
+            8316,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            41901,
+            21773,
+            26966,
+            13,
+            50455
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10302528738975525,
+          "compression_ratio": 1.1578947368421053,
+          "no_speech_prob": 5.121313529504734e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f7b42895ac4a6bf0",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f7b42895ac4a6bf0.mp3",
+      "expected": "De bus puntje puntje puntje vandaag niet.",
+      "recognized": " De bus puntje puntje puntje vandaag niet.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.76,
+          "text": " De bus puntje puntje puntje vandaag niet.",
+          "tokens": [
+            50365,
+            1346,
+            1255,
+            18212,
+            2884,
+            18212,
+            2884,
+            18212,
+            2884,
+            41901,
+            6899,
+            13,
+            50453
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11768712316240583,
+          "compression_ratio": 1.1714285714285715,
+          "no_speech_prob": 5.975021259013724e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f6570f1170486c2d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f6570f1170486c2d.mp3",
+      "expected": "Na de les puntje puntje puntje Samir naar huis.",
+      "recognized": " Na de les puntje, puntje, puntje Samir naar huis.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.52,
+          "text": " Na de les puntje, puntje, puntje Samir naar huis.",
+          "tokens": [
+            50365,
+            6056,
+            368,
+            1512,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            4832,
+            347,
+            12762,
+            46526,
+            13,
+            50491
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09970544513903166,
+          "compression_ratio": 1.1395348837209303,
+          "no_speech_prob": 4.015597316470165e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-01c2832084320069",
+      "src": "/package-audio/klink10-grammar-20261102/k10-01c2832084320069.mp3",
+      "expected": "Wij puntje puntje puntje straks boodschappen doen.",
+      "recognized": " Wij puntje, puntje, puntje straks boodschappen doen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.04,
+          "text": " Wij puntje, puntje, puntje straks boodschappen doen.",
+          "tokens": [
+            50365,
+            46721,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            2148,
+            1694,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            15159,
+            13,
+            50467
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08612137749081566,
+          "compression_ratio": 1.1304347826086956,
+          "no_speech_prob": 4.6942801208704754e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f2ffd6d4513fa864",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f2ffd6d4513fa864.mp3",
+      "expected": "Er puntje puntje puntje een fiets voor het huis.",
+      "recognized": " R... een fiets voor het huis.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.3000000000000003,
+          "text": " R... een fiets voor het huis.",
+          "tokens": [
+            50365,
+            497,
+            485,
+            3881,
+            15848,
+            1385,
+            7358,
+            3639,
+            46526,
+            13,
+            50480
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3058410882949829,
+          "compression_ratio": 0.7837837837837838,
+          "no_speech_prob": 6.928136883632696e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-108bd990d046a3d3",
+      "src": "/package-audio/klink10-grammar-20261102/k10-108bd990d046a3d3.mp3",
+      "expected": "De les puntje puntje puntje morgen om negen uur.",
+      "recognized": " De les puntje, puntje, puntje morgen om 9 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.72,
+          "text": " De les puntje, puntje, puntje morgen om 9 uur.",
+          "tokens": [
+            50365,
+            1346,
+            1512,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            36593,
+            3406,
+            1722,
+            344,
+            374,
+            13,
+            50501
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1004921511599892,
+          "compression_ratio": 1.15,
+          "no_speech_prob": 4.477013811760022e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-6059150cf259e4d9",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6059150cf259e4d9.mp3",
+      "expected": "Zij puntje puntje puntje vandaag niet komen.",
+      "recognized": " Zij puntje, puntje, puntje vandaag niet komen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.8800000000000001,
+          "text": " Zij puntje, puntje, puntje vandaag niet komen.",
+          "tokens": [
+            50365,
+            1176,
+            1718,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            41901,
+            6899,
+            27190,
+            13,
+            50459
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10602392869837143,
+          "compression_ratio": 1.15,
+          "no_speech_prob": 5.137167601032555e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-daf47a866ef96e9f",
+      "src": "/package-audio/klink10-grammar-20261102/k10-daf47a866ef96e9f.mp3",
+      "expected": "Mijn collega puntje puntje puntje mij met de taak.",
+      "recognized": " Mijn collega puntje, puntje, puntje mij met de taak.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.7,
+          "text": " Mijn collega puntje, puntje, puntje mij met de taak.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            1263,
+            6335,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            22953,
+            1131,
+            368,
+            1846,
+            514,
+            13,
+            50500
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1231530053274972,
+          "compression_ratio": 1.1304347826086956,
+          "no_speech_prob": 4.710415651282274e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-876ac50e65c0f903",
+      "src": "/package-audio/klink10-grammar-20261102/k10-876ac50e65c0f903.mp3",
+      "expected": "help",
+      "recognized": " Help!",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.32,
+          "text": " Help!",
+          "tokens": [
+            50365,
+            10773,
+            0,
+            50381
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.46631956100463867,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 2.1738852037933576e-11
+        }
+      ]
+    },
+    {
+      "id": "k10-dbd4518dc099625f",
+      "src": "/package-audio/klink10-grammar-20261102/k10-dbd4518dc099625f.mp3",
+      "expected": "Mijn zoon puntje puntje puntje morgen naar de dokter.",
+      "recognized": " Mijn zoon puntje puntje puntje morgen naar de dokter.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.74,
+          "text": " Mijn zoon puntje puntje puntje morgen naar de dokter.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            710,
+            4106,
+            18212,
+            2884,
+            18212,
+            2884,
+            18212,
+            2884,
+            36593,
+            12762,
+            368,
+            25037,
+            391,
+            13,
+            50502
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08138523603740491,
+          "compression_ratio": 1.127659574468085,
+          "no_speech_prob": 5.058130563700969e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d647e6362cc432b7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d647e6362cc432b7.mp3",
+      "expected": "Ik puntje puntje puntje de computer aan.",
+      "recognized": " Ik puntje, puntje, puntje de computer aan.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.8800000000000001,
+          "text": " Ik puntje, puntje, puntje de computer aan.",
+          "tokens": [
+            50365,
+            8316,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            11,
+            18212,
+            2884,
+            368,
+            3820,
+            9904,
+            13,
+            50459
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07684081792831421,
+          "compression_ratio": 1.1666666666666667,
+          "no_speech_prob": 4.407390685051693e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-a95a8bc0a34bed7b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-a95a8bc0a34bed7b.mp3",
+      "expected": "Welke zin past bij de situatie en heeft een goede woordvolgorde?",
+      "recognized": " Welke zin past bij de situatie en heeft een goede woordvolgorde?",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.38,
+          "text": " Welke zin past bij de situatie en heeft een goede woordvolgorde?",
+          "tokens": [
+            50365,
+            3778,
+            330,
+            710,
+            259,
+            1791,
+            10317,
+            368,
+            2054,
+            16921,
+            465,
+            17425,
+            3881,
+            352,
+            4858,
+            6020,
+            765,
+            9646,
+            70,
+            15127,
+            30,
+            50534
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.04666353308636209,
+          "compression_ratio": 0.9552238805970149,
+          "no_speech_prob": 4.5867966542989524e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0cef5553a665ba44",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0cef5553a665ba44.mp3",
+      "expected": "Ik vandaag heb geen tijd.",
+      "recognized": " Ik vandaag heb geen tijd.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.04,
+          "text": " Ik vandaag heb geen tijd.",
+          "tokens": [
+            50365,
+            8316,
+            41901,
+            8007,
+            21773,
+            26966,
+            13,
+            50417
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10226896074083117,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 4.580330472542249e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-72e8a43c3d4c243c",
+      "src": "/package-audio/klink10-grammar-20261102/k10-72e8a43c3d4c243c.mp3",
+      "expected": "Ik heeft vandaag geen tijd.",
+      "recognized": " Ik heeft vandaag geen tijd.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.1400000000000001,
+          "text": " Ik heeft vandaag geen tijd.",
+          "tokens": [
+            50365,
+            8316,
+            17425,
+            41901,
+            21773,
+            26966,
+            13,
+            50422
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.32267898983425564,
+          "compression_ratio": 0.7714285714285715,
+          "no_speech_prob": 4.3558308002178414e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-4c6b086be777650c",
+      "src": "/package-audio/klink10-grammar-20261102/k10-4c6b086be777650c.mp3",
+      "expected": "De bus vandaag komt niet.",
+      "recognized": " De bus vandaag komt niet.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.06,
+          "text": " De bus vandaag komt niet.",
+          "tokens": [
+            50365,
+            1346,
+            1255,
+            41901,
+            27760,
+            6899,
+            13,
+            50418
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10777944988674587,
+          "compression_ratio": 0.7575757575757576,
+          "no_speech_prob": 5.159662627707284e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-dce2582ea352112e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-dce2582ea352112e.mp3",
+      "expected": "De bus komen vandaag niet.",
+      "recognized": " De bus komen vandaag niet.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.1,
+          "text": " De bus komen vandaag niet.",
+          "tokens": [
+            50365,
+            1346,
+            1255,
+            27190,
+            41901,
+            6899,
+            13,
+            50420
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.19811195797390407,
+          "compression_ratio": 0.7647058823529411,
+          "no_speech_prob": 4.989354849410654e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-c228fe3217efc755",
+      "src": "/package-audio/klink10-grammar-20261102/k10-c228fe3217efc755.mp3",
+      "expected": "Na de les Samir gaat naar huis.",
+      "recognized": " Na de les Samia gaat naar huis.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3800000000000001,
+          "text": " Na de les Samia gaat naar huis.",
+          "tokens": [
+            50365,
+            6056,
+            368,
+            1512,
+            4832,
+            654,
+            17829,
+            12762,
+            46526,
+            13,
+            50434
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.26398686567942303,
+          "compression_ratio": 0.7948717948717948,
+          "no_speech_prob": 5.230605878980832e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-8f502639f53c1fb6",
+      "src": "/package-audio/klink10-grammar-20261102/k10-8f502639f53c1fb6.mp3",
+      "expected": "Na de les gaan Samir naar huis.",
+      "recognized": " Na de les gaan Samir naar huis.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " Na de les gaan Samir naar huis.",
+          "tokens": [
+            50365,
+            6056,
+            368,
+            1512,
+            14118,
+            4832,
+            347,
+            12762,
+            46526,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12500011920928955,
+          "compression_ratio": 0.7948717948717948,
+          "no_speech_prob": 4.667103509214954e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0fd15fc41576fb1b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0fd15fc41576fb1b.mp3",
+      "expected": "Wij straks gaan boodschappen doen.",
+      "recognized": " Wij straks gaan boodschappen doen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.28,
+          "text": " Wij straks gaan boodschappen doen.",
+          "tokens": [
+            50365,
+            46721,
+            2148,
+            1694,
+            14118,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            15159,
+            13,
+            50429
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10149063382829938,
+          "compression_ratio": 0.8095238095238095,
+          "no_speech_prob": 4.816987086986302e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-077713749edcb46d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-077713749edcb46d.mp3",
+      "expected": "Wij gaat straks boodschappen doen.",
+      "recognized": " Wij gaan straks boodschappen doen.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.22,
+          "text": " Wij gaan straks boodschappen doen.",
+          "tokens": [
+            50365,
+            46721,
+            14118,
+            2148,
+            1694,
+            748,
+            378,
+            6145,
+            1746,
+            268,
+            15159,
+            13,
+            50426
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10042463030133929,
+          "compression_ratio": 0.8095238095238095,
+          "no_speech_prob": 5.052633658686467e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-839c8e5441b29faf",
+      "src": "/package-audio/klink10-grammar-20261102/k10-839c8e5441b29faf.mp3",
+      "expected": "Er staan een fiets voor het huis.",
+      "recognized": " Er staat een fiets voor het huis.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.24,
+          "text": " Er staat een fiets voor het huis.",
+          "tokens": [
+            50365,
+            3300,
+            28836,
+            3881,
+            15848,
+            1385,
+            7358,
+            3639,
+            46526,
+            13,
+            50427
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.19417023658752441,
+          "compression_ratio": 0.8048780487804879,
+          "no_speech_prob": 6.4051494143291254e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-915dbe0b31f5e3ab",
+      "src": "/package-audio/klink10-grammar-20261102/k10-915dbe0b31f5e3ab.mp3",
+      "expected": "Er een fiets staat voor het huis.",
+      "recognized": " Er een fiets staat voor het huis.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " Er een fiets staat voor het huis.",
+          "tokens": [
+            50365,
+            3300,
+            3881,
+            15848,
+            1385,
+            28836,
+            7358,
+            3639,
+            46526,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1535500685373942,
+          "compression_ratio": 0.8048780487804879,
+          "no_speech_prob": 5.336657331322936e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-93f11350a9d6c411",
+      "src": "/package-audio/klink10-grammar-20261102/k10-93f11350a9d6c411.mp3",
+      "expected": "De les morgen begint om negen uur.",
+      "recognized": " De les morgen begint om 9 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.56,
+          "text": " De les morgen begint om 9 uur.",
+          "tokens": [
+            50365,
+            1346,
+            1512,
+            36593,
+            4612,
+            686,
+            3406,
+            1722,
+            344,
+            374,
+            13,
+            50443
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08797733600323017,
+          "compression_ratio": 0.7894736842105263,
+          "no_speech_prob": 3.947551053401499e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9b047ec6b7ec85fd",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9b047ec6b7ec85fd.mp3",
+      "expected": "De les beginnen morgen om negen uur.",
+      "recognized": " De les begint morgen om 9 uur.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.54,
+          "text": " De les begint morgen om 9 uur.",
+          "tokens": [
+            50365,
+            1346,
+            1512,
+            4612,
+            686,
+            36593,
+            3406,
+            1722,
+            344,
+            374,
+            13,
+            50442
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.14131003159743089,
+          "compression_ratio": 0.7894736842105263,
+          "no_speech_prob": 3.996077774237605e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9943e26c044288ff",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9943e26c044288ff.mp3",
+      "expected": "Zij vandaag kan niet komen.",
+      "recognized": " Zij vandaag kan niet komen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.12,
+          "text": " Zij vandaag kan niet komen.",
+          "tokens": [
+            50365,
+            1176,
+            1718,
+            41901,
+            4608,
+            6899,
+            27190,
+            13,
+            50421
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.15706710815429686,
+          "compression_ratio": 0.7714285714285715,
+          "no_speech_prob": 4.741410822989289e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-88e1e6a1573eb519",
+      "src": "/package-audio/klink10-grammar-20261102/k10-88e1e6a1573eb519.mp3",
+      "expected": "Zij kunnen vandaag niet komen.",
+      "recognized": " Zij kunnen vandaag niet komen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.1,
+          "text": " Zij kunnen vandaag niet komen.",
+          "tokens": [
+            50365,
+            1176,
+            1718,
+            18377,
+            41901,
+            6899,
+            27190,
+            13,
+            50420
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.15217208862304688,
+          "compression_ratio": 0.7894736842105263,
+          "no_speech_prob": 5.286009911037448e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-8c95f8f74133389f",
+      "src": "/package-audio/klink10-grammar-20261102/k10-8c95f8f74133389f.mp3",
+      "expected": "Mijn collega helpen mij met de taak.",
+      "recognized": " Mijn collega helpen mij met de taak.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.6,
+          "text": " Mijn collega helpen mij met de taak.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            1263,
+            6335,
+            854,
+            268,
+            22953,
+            1131,
+            368,
+            1846,
+            514,
+            13,
+            50445
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.12322441736857097,
+          "compression_ratio": 0.8181818181818182,
+          "no_speech_prob": 5.151437002665071e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-6234bf73b665ab72",
+      "src": "/package-audio/klink10-grammar-20261102/k10-6234bf73b665ab72.mp3",
+      "expected": "Mijn collega mij helpt met de taak.",
+      "recognized": " Mijn collega mij helpt met de taak.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.56,
+          "text": " Mijn collega mij helpt met de taak.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            1263,
+            6335,
+            22953,
+            801,
+            662,
+            1131,
+            368,
+            1846,
+            514,
+            13,
+            50443
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06837666829427083,
+          "compression_ratio": 0.813953488372093,
+          "no_speech_prob": 4.765762437464183e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f488d40f5ed23150",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f488d40f5ed23150.mp3",
+      "expected": "Mijn zoon morgen moet naar de dokter.",
+      "recognized": " Mijn zoon morgen moet naar de dokter.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.42,
+          "text": " Mijn zoon morgen moet naar de dokter.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            710,
+            4106,
+            36593,
+            12677,
+            12762,
+            368,
+            25037,
+            391,
+            13,
+            50436
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07446592194693429,
+          "compression_ratio": 0.8809523809523809,
+          "no_speech_prob": 5.2791724984568855e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-2620f03aa1528da1",
+      "src": "/package-audio/klink10-grammar-20261102/k10-2620f03aa1528da1.mp3",
+      "expected": "Mijn zoon moeten morgen naar de dokter.",
+      "recognized": " Mijn zoon moet er morgen naar de dokter.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.52,
+          "text": " Mijn zoon moet er morgen naar de dokter.",
+          "tokens": [
+            50365,
+            376,
+            6041,
+            710,
+            4106,
+            12677,
+            1189,
+            36593,
+            12762,
+            368,
+            25037,
+            391,
+            13,
+            50441
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09644565582275391,
+          "compression_ratio": 0.8695652173913043,
+          "no_speech_prob": 4.708131454145281e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-869db2a80d435c2b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-869db2a80d435c2b.mp3",
+      "expected": "Welke zin gebruikt het werkwoord 'aanzetten' goed?",
+      "recognized": " Welke zin gebruikt het werkwoord aanzetten? Goed.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.38,
+          "text": " Welke zin gebruikt het werkwoord aanzetten? Goed.",
+          "tokens": [
+            50365,
+            3778,
+            330,
+            710,
+            259,
+            33857,
+            9874,
+            3639,
+            37585,
+            6120,
+            765,
+            257,
+            3910,
+            30759,
+            30,
+            1037,
+            292,
+            13,
+            50484
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07351140975952149,
+          "compression_ratio": 0.8596491228070176,
+          "no_speech_prob": 4.4445302473106185e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-d1502f87e67b2c40",
+      "src": "/package-audio/klink10-grammar-20261102/k10-d1502f87e67b2c40.mp3",
+      "expected": "Ik aanzet de computer.",
+      "recognized": " Ik aanzet de computer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.92,
+          "text": " Ik aanzet de computer.",
+          "tokens": [
+            50365,
+            8316,
+            257,
+            3910,
+            302,
+            368,
+            3820,
+            13,
+            50411
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1067164421081543,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 3.2367613363865066e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-4dd3281df9008b5a",
+      "src": "/package-audio/klink10-grammar-20261102/k10-4dd3281df9008b5a.mp3",
+      "expected": "Ik zet aan de computer.",
+      "recognized": " Ik zet aan de computer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.88,
+          "text": " Ik zet aan de computer.",
+          "tokens": [
+            50365,
+            8316,
+            710,
+            302,
+            9904,
+            368,
+            3820,
+            13,
+            50409
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11587600708007813,
+          "compression_ratio": 0.7419354838709677,
+          "no_speech_prob": 3.9762347060767755e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9ab538bb5d403628",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9ab538bb5d403628.mp3",
+      "expected": "Je vertelt wat je morgen gaat doen.",
+      "recognized": " Je vertelt wat je morgen gaat doen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " Je vertelt wat je morgen gaat doen.",
+          "tokens": [
+            50365,
+            2588,
+            6509,
+            2018,
+            6858,
+            1506,
+            36593,
+            17829,
+            15159,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08565223217010498,
+          "compression_ratio": 0.8536585365853658,
+          "no_speech_prob": 5.129245552598638e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-75da6e974cba9cd8",
+      "src": "/package-audio/klink10-grammar-20261102/k10-75da6e974cba9cd8.mp3",
+      "expected": "Je vertelt wat je gisteren hebt gedaan.",
+      "recognized": " Je vertelt wat je gisteren hebt gedaan.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.48,
+          "text": " Je vertelt wat je gisteren hebt gedaan.",
+          "tokens": [
+            50365,
+            2588,
+            6509,
+            2018,
+            6858,
+            1506,
+            290,
+            1964,
+            268,
+            28339,
+            44419,
+            13,
+            50439
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07073286601475307,
+          "compression_ratio": 0.8297872340425532,
+          "no_speech_prob": 4.747642383395867e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-e1ea9d1f123f307e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-e1ea9d1f123f307e.mp3",
+      "expected": "Je vertelt wat je doet bij regen.",
+      "recognized": " Je vertelt wat je doet bij regen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.3,
+          "text": " Je vertelt wat je doet bij regen.",
+          "tokens": [
+            50365,
+            2588,
+            6509,
+            2018,
+            6858,
+            1506,
+            44138,
+            10317,
+            33909,
+            13,
+            50430
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.10135658582051595,
+          "compression_ratio": 0.8048780487804879,
+          "no_speech_prob": 4.4033938821630425e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-7e0d661d85b632f5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-7e0d661d85b632f5.mp3",
+      "expected": "Je bent met een collega. Jullie moeten direct weg en hebben geen tijd om te wachten.",
+      "recognized": " Je bent met een collega, jullie moeten direct weg en hebben geen tijd om te wachten.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.88,
+          "text": " Je bent met een collega, jullie moeten direct weg en hebben geen tijd om te wachten.",
+          "tokens": [
+            50365,
+            2588,
+            14075,
+            1131,
+            3881,
+            1263,
+            6335,
+            11,
+            29633,
+            26175,
+            2047,
+            15565,
+            465,
+            12116,
+            21773,
+            26966,
+            3406,
+            535,
+            261,
+            20806,
+            13,
+            50559
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.049883241238801376,
+          "compression_ratio": 1.105263157894737,
+          "no_speech_prob": 5.0740852491903965e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f70a69f778a5731a",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f70a69f778a5731a.mp3",
+      "expected": "Haar kind is ziek. Daarom belt zij de school.",
+      "recognized": " Haar kind is ziek, daarom belt zij de school.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.02,
+          "text": " Haar kind is ziek, daarom belt zij de school.",
+          "tokens": [
+            50365,
+            4064,
+            289,
+            733,
+            307,
+            16503,
+            74,
+            11,
+            12390,
+            298,
+            10750,
+            49311,
+            368,
+            1395,
+            13,
+            50466
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.04785661136402803,
+          "compression_ratio": 0.9,
+          "no_speech_prob": 4.526620397959924e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-23aeeba4d5662ab7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-23aeeba4d5662ab7.mp3",
+      "expected": "Hij start de computer.",
+      "recognized": " Hij start de computer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.9400000000000001,
+          "text": " Hij start de computer.",
+          "tokens": [
+            50365,
+            27832,
+            722,
+            368,
+            3820,
+            13,
+            50412
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2290835976600647,
+          "compression_ratio": 0.7333333333333333,
+          "no_speech_prob": 5.84363373662411e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-bac8dbefd952b7ac",
+      "src": "/package-audio/klink10-grammar-20261102/k10-bac8dbefd952b7ac.mp3",
+      "expected": "Je wilt een cursus volgen en moet jezelf inschrijven.",
+      "recognized": " Je wilt een cursus volgen en moet jezelf inschrijven.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.32,
+          "text": " Je wilt een cursus volgen en moet jezelf inschrijven.",
+          "tokens": [
+            50365,
+            2588,
+            45357,
+            3881,
+            13946,
+            301,
+            1996,
+            1766,
+            465,
+            12677,
+            1506,
+            34686,
+            1028,
+            339,
+            11105,
+            553,
+            13,
+            50481
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06208630612021998,
+          "compression_ratio": 0.9137931034482759,
+          "no_speech_prob": 4.27393710700219e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-060b53d2e25b303b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-060b53d2e25b303b.mp3",
+      "expected": "De buurvrouw krijgt de sleutel van ons.",
+      "recognized": " De buurvrouw krijgt de sleutel van ons.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.52,
+          "text": " De buurvrouw krijgt de sleutel van ons.",
+          "tokens": [
+            50365,
+            1346,
+            758,
+            374,
+            85,
+            13122,
+            86,
+            27027,
+            10463,
+            368,
+            2426,
+            325,
+            338,
+            3161,
+            18818,
+            13,
+            50441
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.0366819699605306,
+          "compression_ratio": 0.8297872340425532,
+          "no_speech_prob": 4.778317498621565e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-b7ccc3d57eb535ea",
+      "src": "/package-audio/klink10-grammar-20261102/k10-b7ccc3d57eb535ea.mp3",
+      "expected": "De afspraak stond eerst op dinsdag. Nu staat hij op vrijdag.",
+      "recognized": " De afspraak stond eerst op dinsdag, nu staat hij op vrijdag.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.56,
+          "text": " De afspraak stond eerst op dinsdag, nu staat hij op vrijdag.",
+          "tokens": [
+            50365,
+            1346,
+            3238,
+            4952,
+            424,
+            514,
+            342,
+            684,
+            308,
+            16398,
+            999,
+            274,
+            1292,
+            39877,
+            11,
+            3822,
+            28836,
+            10625,
+            999,
+            45547,
+            39877,
+            13,
+            50493
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.04611011346181234,
+          "compression_ratio": 0.9523809523809523,
+          "no_speech_prob": 3.816637544201695e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-79006bc3f3d46d34",
+      "src": "/package-audio/klink10-grammar-20261102/k10-79006bc3f3d46d34.mp3",
+      "expected": "Je vraagt naar de sluitingstijd van een winkel.",
+      "recognized": " Je vraagt naar de sluitingstijd van een winkel.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.8800000000000001,
+          "text": " Je vraagt naar de sluitingstijd van een winkel.",
+          "tokens": [
+            50365,
+            2588,
+            6070,
+            7665,
+            12762,
+            368,
+            1061,
+            84,
+            1748,
+            372,
+            14675,
+            3161,
+            3881,
+            1942,
+            7124,
+            13,
+            50459
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07899943987528484,
+          "compression_ratio": 0.8545454545454545,
+          "no_speech_prob": 3.97691818712631e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-b41ea80b023854e7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-b41ea80b023854e7.mp3",
+      "expected": "De vergadering duurt misschien langer. Dan informeer je de deelnemers.",
+      "recognized": " De vergadering duurt misschien langer, dan informeer je de deelnemers.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.88,
+          "text": " De vergadering duurt misschien langer, dan informeer je de deelnemers.",
+          "tokens": [
+            50365,
+            1346,
+            20209,
+            345,
+            1794,
+            1581,
+            6224,
+            42047,
+            2265,
+            260,
+            11,
+            3277,
+            1356,
+            68,
+            260,
+            1506,
+            368,
+            368,
+            9878,
+            443,
+            433,
+            13,
+            50509
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06659775972366333,
+          "compression_ratio": 1.044776119402985,
+          "no_speech_prob": 3.699169876664188e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1106dfb56d3c7fef",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1106dfb56d3c7fef.mp3",
+      "expected": "de deelnemers. Als de vergadering uitloopt,. een bericht. stuur ik",
+      "recognized": " De deelnemers. Als de vergadering uitloopt, een bericht stuur ik.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.76,
+          "text": " De deelnemers.",
+          "tokens": [
+            50365,
+            1346,
+            368,
+            9878,
+            443,
+            433,
+            13,
+            50403
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.13331127166748047,
+          "compression_ratio": 0.9558823529411765,
+          "no_speech_prob": 5.173054692941825e-12
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 1.6400000000000001,
+          "end": 4.1,
+          "text": " Als de vergadering uitloopt, een bericht stuur ik.",
+          "tokens": [
+            50447,
+            12948,
+            368,
+            20209,
+            345,
+            1794,
+            12528,
+            752,
+            5747,
+            11,
+            3881,
+            5948,
+            1405,
+            342,
+            18470,
+            4320,
+            13,
+            50570
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.13331127166748047,
+          "compression_ratio": 0.9558823529411765,
+          "no_speech_prob": 5.173054692941825e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-143d85d74fdef2ee",
+      "src": "/package-audio/klink10-grammar-20261102/k10-143d85d74fdef2ee.mp3",
+      "expected": "Je controleert gegevens voordat je een formulier verstuurt.",
+      "recognized": " Je controleert gegevens voordat je een formulier verstuurt.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.42,
+          "text": " Je controleert gegevens voordat je een formulier verstuurt.",
+          "tokens": [
+            50365,
+            2588,
+            46215,
+            911,
+            1519,
+            432,
+            33302,
+            1650,
+            765,
+            267,
+            1506,
+            3881,
+            49990,
+            811,
+            48960,
+            84,
+            6224,
+            13,
+            50486
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.05171642303466797,
+          "compression_ratio": 0.9833333333333333,
+          "no_speech_prob": 3.5582006091550156e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-7f632b7d8234b006",
+      "src": "/package-audio/klink10-grammar-20261102/k10-7f632b7d8234b006.mp3",
+      "expected": "het formulier. Ik controleer de gegevens. verstuur. voordat ik",
+      "recognized": " Het formulier. Ik controleer de gegevens. Verstuur. Voordat ik...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.94,
+          "text": " Het formulier. Ik controleer de gegevens.",
+          "tokens": [
+            50365,
+            12045,
+            49990,
+            811,
+            13,
+            8316,
+            46215,
+            260,
+            368,
+            1519,
+            432,
+            33302,
+            13,
+            50462
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.19054082723764273,
+          "compression_ratio": 0.9558823529411765,
+          "no_speech_prob": 5.257905656003148e-12
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.02,
+          "end": 3.34,
+          "text": " Verstuur. Voordat ik...",
+          "tokens": [
+            50466,
+            4281,
+            372,
+            18470,
+            13,
+            7518,
+            765,
+            267,
+            4320,
+            485,
+            50532
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.19054082723764273,
+          "compression_ratio": 0.9558823529411765,
+          "no_speech_prob": 5.257905656003148e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-608fac798194c9be",
+      "src": "/package-audio/klink10-grammar-20261102/k10-608fac798194c9be.mp3",
+      "expected": "Op het werk is het druk. Toch nemen we de tijd voor vragen.",
+      "recognized": " Op het werk is het druk, toch nemen we de tijd voor vragen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.7,
+          "text": " Op het werk is het druk, toch nemen we de tijd voor vragen.",
+          "tokens": [
+            50365,
+            12011,
+            3639,
+            37585,
+            307,
+            3639,
+            47995,
+            11,
+            22587,
+            408,
+            2558,
+            321,
+            368,
+            26966,
+            7358,
+            6070,
+            1766,
+            13,
+            50500
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.0608426570892334,
+          "compression_ratio": 0.9516129032258065,
+          "no_speech_prob": 4.547442717522943e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-ce2222f7d98af6f3",
+      "src": "/package-audio/klink10-grammar-20261102/k10-ce2222f7d98af6f3.mp3",
+      "expected": "de tijd. Hoewel het druk is,. voor vragen. nemen we",
+      "recognized": " De tijd. Hoewel het druk is voor vragen, nemen we...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.52,
+          "text": " De tijd. Hoewel het druk is voor vragen, nemen we...",
+          "tokens": [
+            50365,
+            1346,
+            26966,
+            13,
+            3631,
+            1023,
+            338,
+            3639,
+            47995,
+            307,
+            7358,
+            6070,
+            1766,
+            11,
+            408,
+            2558,
+            321,
+            485,
+            50541
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.26028170585632326,
+          "compression_ratio": 0.8666666666666667,
+          "no_speech_prob": 5.08857149125741e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-f48ae9780fe1836b",
+      "src": "/package-audio/klink10-grammar-20261102/k10-f48ae9780fe1836b.mp3",
+      "expected": "Je sprak gisteren met een medewerker. Hij beloofde morgen terug te bellen.",
+      "recognized": " Je sprak gisteren met een medewerker. Hij beloofde morgen terug te bellen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.6,
+          "text": " Je sprak gisteren met een medewerker.",
+          "tokens": [
+            50365,
+            2588,
+            637,
+            11272,
+            290,
+            1964,
+            268,
+            1131,
+            3881,
+            1205,
+            1023,
+            260,
+            5767,
+            13,
+            50445
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06599410942622594,
+          "compression_ratio": 1.0277777777777777,
+          "no_speech_prob": 4.1915759058097635e-12
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.16,
+          "end": 3.48,
+          "text": " Hij beloofde morgen terug te bellen.",
+          "tokens": [
+            50473,
+            27832,
+            13878,
+            2670,
+            1479,
+            36593,
+            35020,
+            535,
+            4549,
+            268,
+            13,
+            50539
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06599410942622594,
+          "compression_ratio": 1.0277777777777777,
+          "no_speech_prob": 4.1915759058097635e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-693d7c9bfb6903c4",
+      "src": "/package-audio/klink10-grammar-20261102/k10-693d7c9bfb6903c4.mp3",
+      "expected": "belt morgen. De medewerker. terug. met wie ik gisteren sprak,",
+      "recognized": " Beltmorgen, de medewerker, terug met wie ik gisteren sprak,",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.92,
+          "text": " Beltmorgen, de medewerker, terug met wie ik gisteren sprak,",
+          "tokens": [
+            50365,
+            38869,
+            40220,
+            1766,
+            11,
+            368,
+            1205,
+            1023,
+            260,
+            5767,
+            11,
+            35020,
+            1131,
+            3355,
+            4320,
+            290,
+            1964,
+            268,
+            637,
+            11272,
+            11,
+            50561
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1647026020547618,
+          "compression_ratio": 0.9516129032258065,
+          "no_speech_prob": 5.839642571586756e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-9e16872136c15f77",
+      "src": "/package-audio/klink10-grammar-20261102/k10-9e16872136c15f77.mp3",
+      "expected": "Je wilt een andere afspraak en doet een voorstel.",
+      "recognized": " Je wilt een andere afspraak en doet een voorstel.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.04,
+          "text": " Je wilt een andere afspraak en doet een voorstel.",
+          "tokens": [
+            50365,
+            2588,
+            45357,
+            3881,
+            10490,
+            3238,
+            4952,
+            424,
+            514,
+            465,
+            44138,
+            3881,
+            7358,
+            372,
+            338,
+            13,
+            50467
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06402036878797743,
+          "compression_ratio": 0.9607843137254902,
+          "no_speech_prob": 3.7125103338753185e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-7a880b76ad488626",
+      "src": "/package-audio/klink10-grammar-20261102/k10-7a880b76ad488626.mp3",
+      "expected": "de afspraak. Ik stel voor. verplaatsen. dat we",
+      "recognized": " de afspraak, ik stel voor verplaatsen, dat we",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.84,
+          "text": " de afspraak, ik stel voor verplaatsen, dat we",
+          "tokens": [
+            50365,
+            368,
+            3238,
+            4952,
+            424,
+            514,
+            11,
+            4320,
+            342,
+            338,
+            7358,
+            1306,
+            29684,
+            1720,
+            268,
+            11,
+            1137,
+            321,
+            50507
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3225602149963379,
+          "compression_ratio": 0.8823529411764706,
+          "no_speech_prob": 5.4862859047433155e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-5ece9ae6268eaff7",
+      "src": "/package-audio/klink10-grammar-20261102/k10-5ece9ae6268eaff7.mp3",
+      "expected": "Een medewerker controleert de apparaten elke ochtend.",
+      "recognized": " Een medewerker controleert de apparaten elke ochtend.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.46,
+          "text": " Een medewerker controleert de apparaten elke ochtend.",
+          "tokens": [
+            50365,
+            25374,
+            1205,
+            1023,
+            260,
+            5767,
+            46215,
+            911,
+            368,
+            45914,
+            7186,
+            806,
+            330,
+            3795,
+            83,
+            521,
+            13,
+            50488
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.062021958200555095,
+          "compression_ratio": 0.9137931034482759,
+          "no_speech_prob": 3.2776333730444307e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-1861440ec289c6b4",
+      "src": "/package-audio/klink10-grammar-20261102/k10-1861440ec289c6b4.mp3",
+      "expected": "elke ochtend. De apparaten. gecontroleerd. worden",
+      "recognized": " elke ochtend de apparaten gecontroleerd worden.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.96,
+          "text": " elke ochtend de apparaten gecontroleerd worden.",
+          "tokens": [
+            50365,
+            806,
+            330,
+            3795,
+            83,
+            521,
+            368,
+            45914,
+            7186,
+            1519,
+            9000,
+            29114,
+            7783,
+            14054,
+            13,
+            50613
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.2612638473510742,
+          "compression_ratio": 0.8867924528301887,
+          "no_speech_prob": 4.61792453235188e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0ebdb66de03a87ff",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0ebdb66de03a87ff.mp3",
+      "expected": "Gisteren had de bus vertraging. Je kwam daardoor te laat.",
+      "recognized": " Gisteren had de busvertraging, je kwam daardoor te laat.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.34,
+          "text": " Gisteren had de busvertraging, je kwam daardoor te laat.",
+          "tokens": [
+            50365,
+            460,
+            1964,
+            268,
+            632,
+            368,
+            1255,
+            3281,
+            424,
+            3249,
+            11,
+            1506,
+            23846,
+            335,
+            1120,
+            12850,
+            284,
+            535,
+            32769,
+            13,
+            50482
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06928808038884943,
+          "compression_ratio": 0.9180327868852459,
+          "no_speech_prob": 3.78738837167325e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-a6aa445d897e64d2",
+      "src": "/package-audio/klink10-grammar-20261102/k10-a6aa445d897e64d2.mp3",
+      "expected": "kwam ik. Omdat de bus. te laat. vertraging had,",
+      "recognized": " kwam ik omdat de bus te laat vertraging had",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.64,
+          "text": " kwam ik omdat de bus te laat vertraging had",
+          "tokens": [
+            50365,
+            23846,
+            335,
+            4320,
+            34982,
+            368,
+            1255,
+            535,
+            32769,
+            6509,
+            424,
+            3249,
+            632,
+            50547
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.23879537582397461,
+          "compression_ratio": 0.8775510204081632,
+          "no_speech_prob": 4.354517180865658e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-26f1ec1c841171e5",
+      "src": "/package-audio/klink10-grammar-20261102/k10-26f1ec1c841171e5.mp3",
+      "expected": "Je denkt terug aan een klantgesprek. De klant kreeg te laat informatie.",
+      "recognized": " Je denkt terug aan een klantgesprek. De klant kreeg te laat informatie.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.6,
+          "text": " Je denkt terug aan een klantgesprek. De klant kreeg te laat informatie.",
+          "tokens": [
+            50365,
+            2588,
+            38658,
+            35020,
+            9904,
+            3881,
+            9671,
+            394,
+            2880,
+            3712,
+            74,
+            13,
+            1346,
+            9671,
+            394,
+            350,
+            701,
+            70,
+            535,
+            32769,
+            1356,
+            16921,
+            13,
+            50545
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.08611003875732422,
+          "compression_ratio": 1.0441176470588236,
+          "no_speech_prob": 4.031275313565175e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-0541c69d2b844939",
+      "src": "/package-audio/klink10-grammar-20261102/k10-0541c69d2b844939.mp3",
+      "expected": "eerder moeten. We. informeren. hadden de klant",
+      "recognized": " Eerder moeten we informeren hadden de klant.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.48,
+          "text": " Eerder moeten we informeren hadden de klant.",
+          "tokens": [
+            50365,
+            462,
+            260,
+            1068,
+            26175,
+            321,
+            1356,
+            5170,
+            632,
+            1556,
+            368,
+            9671,
+            394,
+            13,
+            50489
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.0995320975780487,
+          "compression_ratio": 0.8979591836734694,
+          "no_speech_prob": 4.9903145851737385e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-ed578b2915eb4c9d",
+      "src": "/package-audio/klink10-grammar-20261102/k10-ed578b2915eb4c9d.mp3",
+      "expected": "Je bent je wachtwoord misschien vergeten. Via de website kun je een nieuw wachtwoord instellen.",
+      "recognized": " Je bent je wachtwoord misschien vergeten? Via de website kun je een nieuw wachtwoord instellen.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.22,
+          "text": " Je bent je wachtwoord misschien vergeten? Via de website kun je een nieuw wachtwoord instellen.",
+          "tokens": [
+            50365,
+            2588,
+            14075,
+            1506,
+            261,
+            3589,
+            6120,
+            765,
+            42047,
+            1306,
+            847,
+            268,
+            30,
+            49232,
+            368,
+            3144,
+            8215,
+            1506,
+            3881,
+            26829,
+            86,
+            261,
+            3589,
+            6120,
+            765,
+            1058,
+            8581,
+            13,
+            50576
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.038856919606526694,
+          "compression_ratio": 1.1728395061728396,
+          "no_speech_prob": 3.727226860483768e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-af9432112a162cf8",
+      "src": "/package-audio/klink10-grammar-20261102/k10-af9432112a162cf8.mp3",
+      "expected": "een nieuw wachtwoord. Als je het wachtwoord vergeet,. instellen. kun je",
+      "recognized": " Een nieuw wachtwoord. Als je het wachtwoord vergeet, instellen, kun je...",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.9,
+          "text": " Een nieuw wachtwoord. Als je het wachtwoord vergeet, instellen, kun je...",
+          "tokens": [
+            50365,
+            25374,
+            26829,
+            86,
+            261,
+            3589,
+            6120,
+            765,
+            13,
+            12948,
+            1506,
+            3639,
+            261,
+            3589,
+            6120,
+            765,
+            37164,
+            302,
+            11,
+            1058,
+            8581,
+            11,
+            8215,
+            1506,
+            485,
+            50610
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.1601801625004521,
+          "compression_ratio": 1.028169014084507,
+          "no_speech_prob": 4.156774750796455e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-872f2505fdafa8d2",
+      "src": "/package-audio/klink10-grammar-20261102/k10-872f2505fdafa8d2.mp3",
+      "expected": "Je hebt gisteren een document verstuurd, maar het staat nog niet in het overzicht.",
+      "recognized": " Je hebt gisteren een document verstuurd, maar het staat nog niet in het overzicht.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.34,
+          "text": " Je hebt gisteren een document verstuurd, maar het staat nog niet in het overzicht.",
+          "tokens": [
+            50365,
+            2588,
+            28339,
+            290,
+            1964,
+            268,
+            3881,
+            4166,
+            48960,
+            84,
+            10752,
+            11,
+            10314,
+            3639,
+            28836,
+            9638,
+            6899,
+            294,
+            3639,
+            670,
+            89,
+            1405,
+            13,
+            50532
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.04890348434448242,
+          "compression_ratio": 1.0649350649350648,
+          "no_speech_prob": 4.658058227330342e-12
+        }
+      ]
+    },
+    {
+      "id": "k10-17adf1143d1b0b7e",
+      "src": "/package-audio/klink10-grammar-20261102/k10-17adf1143d1b0b7e.mp3",
+      "expected": "ontbreekt. Het document. nog. dat je gisteren stuurde,",
+      "recognized": " ontbreekt het document nog dat je gisteren stuurde",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 5.58,
+          "text": " ontbreekt het document nog dat je gisteren stuurde",
+          "tokens": [
+            50365,
+            6592,
+            65,
+            701,
+            2320,
+            3639,
+            4166,
+            9638,
+            1137,
+            1506,
+            290,
+            1964,
+            268,
+            342,
+            18470,
+            1479,
+            50644
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.312823666466607,
+          "compression_ratio": 0.9615384615384616,
+          "no_speech_prob": 4.726006478522615e-12
+        }
+      ]
+    }
+  ]
+}

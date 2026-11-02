@@ -1,0 +1,73 @@
+✖ Twelve independent chapters cover all registered activities without changing Lexicon (5308.613375ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (124.892625ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (12.567625ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (807.185583ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'source-bound-editorial-review-20261101'
+- 'editorial-reviewed-20261031-reading-rounds'
+
+    at file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-20261102/scripts/test-production-content.mjs:23:110
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'source-bound-editorial-review-20261101',
+  expected: 'editorial-reviewed-20261031-reading-rounds',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ scripts/test-production-content.mjs (1462.891834ms)
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.638916ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.171125ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.314166ms)
+✔ Every attached precise mark task refers literally to its existing source and question (116.110209ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (94.332208ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (34.849666ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.317542ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.263834ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (5206.612167ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (2.00475ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (336.077833ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.882084ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 15
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6572.714708
+
+✖ failing tests:
+
+test at scripts/test-practice-chapters.mjs:15:6
+✖ Twelve independent chapters cover all registered activities without changing Lexicon (5308.613375ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101|klink-handwriting-20261102|b1-review-20261101)\//.test(collection.contentUrl))
+  
+      at TestContext.<anonymous> (file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-20261102/scripts/test-practice-chapters.mjs:42:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/test-production-content.mjs:1:1
+✖ scripts/test-production-content.mjs (1462.891834ms)
+  'test failed'

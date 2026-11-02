@@ -618,7 +618,7 @@ export function ExerciseSurface({
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-011': return <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-012': return exercise.handwritingOnly === true ? <HandwritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} /> : <TraceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} />;
-    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
+    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-014': return <BoardSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} canAnswer={canAnswer} />;
     case 'ALF-CMP-015': return <GameSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-016': return <CardsSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
@@ -1031,14 +1031,14 @@ function TraceSurface({ exercise, onAudio, onFinish, onReset, canAnswer }: Surfa
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Typ de letter hieronder.' : 'Typ dit woord hieronder.'} Papier is een extra.</span></div>{input}<button data-practice-check className="primary-button" disabled={!value.trim() || !canAnswer} onClick={() => onFinish(value, normalize(value) === normalize(target), 'Vergelijk jouw antwoord met het model.')}>Ik heb geschreven<Check /></button></section>;
 }
 
-function SequenceSurface({ exercise, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {
+function SequenceSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onAudio' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {
   const items = asArray<ExerciseItem>(exercise.items);
   const target = asArray<string>(exercise.targetOrderIds);
   const [chosen, setChosen] = useState<string[]>([]);
   const bank = useRef<HTMLDivElement>(null);
   const itemContent = (item: ExerciseItem) => <>{item.content?.image && <ExerciseImageView image={item.content.image} />}{item.text ?? item.content?.text}</>;
   function add(id: string) { if (!canAnswer || answeredCorrectly || chosen.includes(id) || !items.some(item => item.itemId === id)) return; setChosen([...chosen, id]); onReset(); requestAnimationFrame(() => bank.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus()); }
-  return <section className="cp-task-card cp-standard-task" data-standard-player="order"><Prompt exercise={exercise} />
+  return <section className="cp-task-card cp-standard-task" data-standard-player="order"><Prompt exercise={exercise} onAudio={onAudio} />
     {/* oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- Dropping supplements the keyboard/tap buttons below. */}
     <ol className="cp-sequence-result" aria-label="Jouw volgorde" onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); add(event.dataTransfer.getData('text/plain')); }}>{chosen.map(id => <li key={id}>{itemContent(items.find(item => item.itemId === id)!)}</li>)}</ol>
     <div className="cp-sequence-options" ref={bank}>{items.map(item => <button key={item.itemId} data-order-item={item.itemId} disabled={!canAnswer || answeredCorrectly || chosen.includes(item.itemId)} draggable={!chosen.includes(item.itemId) && canAnswer && !answeredCorrectly} onDragStart={event => event.dataTransfer.setData('text/plain', item.itemId)} onClick={() => add(item.itemId)}>{itemContent(item)}</button>)}</div>
