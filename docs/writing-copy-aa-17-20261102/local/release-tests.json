@@ -1,7 +1,11 @@
 {
   "checks": [
     {
-      "name": "Word-audio and HT parent gates validate the exact-copy successor",
+      "name": "Grammar, word-audio and HT parent gates validate the exact-copy successor",
+      "passed": true
+    },
+    {
+      "name": "All four current tracking/recovery records can advance while original grammar evidence stays exact",
       "passed": true
     },
     {
@@ -38,5 +42,6 @@
     }
   ],
   "parentGatePassed": true,
+  "historicalMetadataRegressionPassed": true,
   "negativeProofCases": 8
 }
