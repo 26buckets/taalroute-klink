@@ -11,3 +11,22 @@
 ✔ All 576 stable positions resolve to unchanged canonical source content and media (35.951916ms)
 ✔ Repeat rounds remain available independently of original completion or review deadlines (495.219834ms)
 ✔ Broken source references and ambiguous position lists fail closed (0.51525ms)
+✔ 225 pairs and 900 options have three blind independent reviews and final approval for all 86 changes (2.454625ms)
+✔ only reviewed context fields change; all words, answers, levels, source IDs and inactive decisions remain intact (13.789333ms)
+✔ all 200 questions work in both directions and three modes, retain one answer, hide listened words and preserve repetition (457.125208ms)
+✔ publication rejects missing owner approval, stale or incomplete reviews, altered audio and unverified backup (37137.824625ms)
+✔ Dutch word boundaries preserve accents, contractions and compounds (8.529375ms)
+✔ A phrase recording is never presented as the sound of an individual word (0.091083ms)
+✔ All twenty newly published reviewed word forms keep their native recording (59.416166ms)
+✔ Image words retain their exact source and account for contained image margins (4.458208ms)
+✔ All existing single-word recordings remain available without stemming or guessed spellings (11.755167ms)
+✔ The index is reproducible and contains only existing allowed recording paths (73.781292ms)
+✔ Packed recordings require the exact byte range and retain a full-response fallback (10.622459ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 37987.65925
