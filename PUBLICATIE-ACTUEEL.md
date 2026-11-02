@@ -1,3 +1,15 @@
+## Actuele publicatie — Klink tien: 220 zinnenopdrachten — 2 november 2026
+
+Livebron `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`, schone canonieke main; Worker `f2a9db3d-a8dc-4470-8b67-fbc1ff76d1be`. Gewone `npm run deploy`, normale volledige publicatiepoort en bouw geslaagd. Opvolger van de actuele inhoudelijke rondetitels `eb6270430997e84ffbb3428d4f1fbdfe06e52546`; deze titels en de overige bestaande vormgeving, inhoud, audio, routes en voortgang blijven behouden.
+
+22 complete rondes met 220 bronposities: 20 Luister en lees mee, 50 eigen zinnen, 50 luisterkeuzes, 50 zinnen bouwen en 50 overtypen/dictee. Negentien bouwopdrachten bewaren hun afzonderlijke zinsstappen. Eerste eigen antwoorden en verbeteringen blijven apart; eigen zinnen gebruiken eerlijke zelf-/docentcontrole, geen automatische grammaticabeoordeling. Dit zijn taakvarianten, geen 220 nieuwe bronteksten. 27 nieuwe geselecteerde ElevenLabs-opnamen in één onveranderlijke bundel en 256 verschillende bestaande opnamen; instructie- en doelstemmen gescheiden.
+
+Alle 22 banken en 283 opnamen zijn live volledig bytegelijk teruggelezen (279 fysieke bestanden). Lokaal en live: 880 antwoordstromen op mobiel/desktop in Chromium/WebKit, 566 native audiodecodes, zes echte afspeelstromen en 16 opslag-/hervat-/zelfcontrole-/kopieerproeven. Eerdere rondetitels lokaal opnieuw gecontroleerd: 24 lijstvarianten en acht audio-/voortgangsstromen; 14 bestaande weergave-/opslagproeven behouden. Types, gerichte lint, 15 kerntests, woordaudiodekking en zes negatieve vrijgaveproeven geslaagd. Geen GitHub-workflows of extra Actions-kosten.
+
+Tien Alfa C-leesposities blijven offline wegens onopgeloste uitspraak in één instructie, ook na retake. Door deze taak nu 460 bronposities nieuw aangesloten en live gecontroleerd; de overige pakketten lopen door. Menselijke luisterreview, onafhankelijke ERK-beoordeling, fysieke apparaten en klasproef zijn niet uitgevoerd. Dossier `docs/klink10-sentences-20261102/`; volledige bron-/code-/opnamen-/herstelkopie Drive `1hGDZvsgk5Hm8VSDqAfhLdSOMHwjTYOoi`, alle 303 leden volledig teruggelezen.
+
+---
+
 ## Actuele publicatie — Klink tien: 120 luisteropdrachten — 2 november 2026
 
 Livebron `eb8c54c5ee1c5fb60cfa629f5bd0eda231669ec9`, schone canonieke main; Worker `f93c6be8-8b2c-4c01-a6c3-8ab591f870ef`. Gewone `npm run deploy`, volledige normale publicatiepoort en bouw geslaagd. Twaalf rondes met 120 bronposities voor A1/A2 en Alfa C/B1, in de bestaande luisterroutes. 457 nieuwe geselecteerde opnamen en 93 verschillende bestaande opnamen; nieuwe opnamen staan in zes onveranderlijke compacte bundels. Twee nieuwe instructies gebruiken Roland; doeltekst en personages behouden aparte stemmen. De tekst verschijnt na een antwoord en blijft vooraf op verzoek beschikbaar via de bestaande tekstknop.
