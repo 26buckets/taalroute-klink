@@ -5,6 +5,7 @@ import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exer
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
+import { wordAudioParts } from '@/lib/word-audio';
 import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 
 import { useId } from 'react';
@@ -805,9 +806,10 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
 function WordHint({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () => void }) {
   const [shown, setShown] = useState(false);
   const hint = useRef<HTMLDivElement>(null);
+  const spellingUnits = asArray<number>(exercise.writingHintUnits);
   useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {

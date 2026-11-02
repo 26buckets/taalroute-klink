@@ -19,6 +19,7 @@ export const writingDictationRounds = data.rounds.map(round => ({ ...round, exer
     prompt: { audio: { src: position.audio } }, requiresAudio: true, audioOnly: true,
     assessment: 'answer', independentReading: false, reviewEligible: false,
     helpWord: position.target, feedback: position.feedback, correctFeedback: position.correctFeedback,
+    meaning: position.helpFeedback, writingHintUnits: position.hintUnits,
     meaningCue: position.meaningCue || undefined,
   } satisfies PackageExercise;
 }) }));

@@ -1,0 +1,46 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "files": [
+    {
+      "sourceId": "KSW-AC-HT-082",
+      "script": "Dit staat om een tuin. Luister en typ het woord.",
+      "text": " Dit staat om een tuin. Luister en typ het woord.",
+      "exactWords": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.46,
+          "text": " Dit staat om een tuin. Luister en typ het woord.",
+          "tokens": [
+            50365,
+            25270,
+            28836,
+            3406,
+            3881,
+            2604,
+            259,
+            13,
+            5047,
+            1964,
+            465,
+            2125,
+            3639,
+            6020,
+            765,
+            13,
+            50488
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06854828198750813,
+          "compression_ratio": 0.8888888888888888,
+          "no_speech_prob": 5.442854500437022e-12
+        }
+      ]
+    }
+  ]
+}

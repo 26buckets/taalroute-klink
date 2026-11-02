@@ -31,7 +31,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
  await c.addInitScript(seed=>{
   if(!localStorage.getItem('ht-seeded')){for(const[k,v]of Object.entries(seed))localStorage.setItem(k,v);localStorage.setItem('ht-seeded','1');}
   // State/answer tests use deterministic playback; the actual files need a separate native-audio check.
-  window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.paused=true;this.playbackRate=1;this.currentTime=0;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){clearTimeout(this.timer);this.paused=true;}};
+  window.Audio=class extends EventTarget{constructor(src){super();this.dataset={};this.src=src;this.paused=true;this.playbackRate=1;this.currentTime=0;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){clearTimeout(this.timer);this.paused=true;}};
  },old);
  const p=await c.newPage();p.on('pageerror',e=>errors.push({engine,message:e.message}));
  for(const round of writingDictationRounds){
@@ -50,8 +50,10 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    if(e.meaningCue)assert((await task.innerText()).includes(e.meaningCue));
    await input.fill('zzq');await task.getByRole('button',{name:'Controleer',exact:true}).click();
    assert.equal(await task.getAttribute('data-practice-ready'),'false');
+   assert.equal(await task.locator('.cp-word-hint strong,.cp-word-hint p').count(),0,'Wrong answers must not reveal the model or spelling hint');
+   assert((await p.locator('.cp-exercise-feedback').innerText()).includes(e.feedback));
    if(i===0&&e.helpWord.length>1){await input.fill(e.helpWord[0]+' '+e.helpWord.slice(1));await task.getByRole('button',{name:'Controleer',exact:true}).click();assert.equal(await task.getAttribute('data-practice-ready'),'false');}
-   if(i===6){await task.getByRole('button',{name:'Help',exact:true}).click();assert.equal(await task.locator('.cp-word-hint strong').innerText(),e.helpWord);assert.equal(await input.inputValue(),'zzq','Help is never copied into the learner answer');}
+   if(i===6){await task.getByRole('button',{name:'Help',exact:true}).click();assert.equal(await task.locator('.cp-word-hint strong').innerText(),e.helpWord);assert.equal(await task.locator('.cp-word-hint p').innerText(),e.meaning);assert.equal(await input.inputValue(),'zzq','Help is never copied into the learner answer');}
    await input.fill(i===0?'  '+e.helpWord.toLocaleUpperCase('nl-NL')+'  ':e.helpWord);
    await task.getByRole('button',{name:'Controleer',exact:true}).click();await p.locator('[data-practice-ready="true"]').waitFor();
    const attempts=await p.evaluate(()=>JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')||'[]'));const attempt=attempts.at(-1);
@@ -60,7 +62,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    assert.equal(attempt.support,i===6?'requested-help':'none');assert.equal(attempt.helpUsed,i===6);
    const answer=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)),writingAnswerKey(e.writingSourceId));assert.equal(answer.first,'zzq');assert.equal(answer.last,await input.inputValue());
    await p.locator('[data-practice-next]').click();
-   checks.push({engine,sourceId:e.writingSourceId,canonicalId:e.exerciseId,wrongRejected:true,correctAccepted:true,noAnswerModelBeforeHelp:true,noImage:true,noReadingOrReviewClaim:true,helpTracked:i===6});
+   checks.push({engine,sourceId:e.writingSourceId,canonicalId:e.exerciseId,wrongRejected:true,correctAccepted:true,noAnswerModelBeforeHelp:true,noHintAfterWrong:true,sourceHintBehindHelp:true,noImage:true,noReadingOrReviewClaim:true,helpTracked:i===6});
    if(i===4){await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();const draft=p.getByRole('textbox',{name:'Jouw antwoord',exact:true});await p.waitForFunction(()=>document.querySelector('.cp-text-entry input')?.disabled === false);await draft.fill('Mijn eigen concept');await p.reload();await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();}
   }
   await p.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();assert.equal(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).done.length,progressKey),round.exercises.length);

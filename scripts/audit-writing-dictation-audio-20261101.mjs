@@ -7,9 +7,11 @@ const folder='docs/writing-dictation-20261101/',json=file=>JSON.parse(readFileSy
 const whisper=json('audio-proof/existing-audio-asr.json'),ctc=json('audio-proof/uncertain-audio-dutch-ctc.json');
 const repairs=existsSync(folder+'audio-proof/target-repairs.json')?json('audio-proof/target-repairs.json'):[];
 const cuePlan=json('audio-proof/cues-production-plan.json'),cueFiles=json('audio-proof/cues-file-proof.json'),cueReview=json('audio-proof/cues-blind-asr-reviewed.json');
+const hekPlan=json('audio-proof/hek-cue-production-plan.json'),hekFile=json('audio-proof/hek-cue-file-proof.json'),hekReview=json('audio-proof/hek-cue-blind-asr.json');
 const targetsPlan=json('audio-proof/upstream-final-selection-plan.json'),voiceSupplement=json('audio-proof/target-voice-supplement.json');
 assert.equal(cuePlan.voiceId,'h6uBOiAjLKklte8hdYio');assert.equal(cuePlan.targetVoiceId,'0qLmDzgqulxcvv0yf3kg');assert.notEqual(cuePlan.voiceId,cuePlan.targetVoiceId);
 assert.equal(cueReview.spokenEquivalentFiles,5);assert.equal(cueFiles.files.length,5);assert(cueFiles.files.every(f=>f.audioDataIdentical));assert(cueFiles.files.reduce((n,f)=>n+Number(f.characterCost),0)<=500);
+assert.equal(hekPlan.voiceId,cuePlan.voiceId);assert.equal(hekPlan.targetVoiceId,cuePlan.targetVoiceId);assert.equal(hekPlan.languageCode,'nl');assert.equal(hekPlan.cues.length,1);assert.equal(hekFile.sourceId,'KSW-AC-HT-082');assert(hekFile.pcmIdentityVerified&&hekFile.voicePlanDeclaredBeforeGeneration);assert(Date.parse(hekFile.planPersistedAt)<=Date.parse(hekFile.startedAt));assert.equal(createHash('sha256').update(readFileSync(folder+'audio-proof/hek-cue-production-plan.json')).digest('hex'),hekFile.planSha256);assert(Number(hekFile.characterCost)<=50);assert.equal(hekReview.files.length,1);assert(hekReview.files[0].exactWords&&hekReview.initialPrompt===null);
 assert.equal(voiceSupplement.targetVoices.ei,'7qdUFMklKPaaAVMsBTBt');assert(voiceSupplement.eiVoiceDeclaredBeforeGeneration);
 const normalize=s=>s.trim().toLocaleLowerCase('nl-NL').replace(/[.!?]+$/,'');
 const exercises=writingDictationRounds.flatMap(r=>r.exercises),files=[];
@@ -30,7 +32,11 @@ const targets=exercises.map(e=>{
  return {sourceId:e.writingSourceId,canonicalId:e.exerciseId,target:e.helpWord,src:e.prompt.audio.src,spokenEvidence,metadataPassed:file?.metadataPassed===true,passed:Boolean(file?.metadataPassed&&spokenEvidence),humanListening:false};
 });
 const instructions=exercises.map(e=>e.instructionAudio.src),instructionSources=[...new Set(instructions)];
-const passed=targets.length===100&&targets.every(t=>t.passed)&&files.length===106&&files.every(f=>f.metadataPassed&&f.duration>0)&&instructionSources.length===6;
+for(const e of exercises.filter(e=>e.meaningCue)){
+ const planned=[...cuePlan.cues,...hekPlan.cues].find(c=>c.sourceId===e.writingSourceId),proof=[...cueFiles.files,hekFile].find(c=>c.sourceId===e.writingSourceId),spoken=[...cueReview.files,...hekReview.files].find(c=>c.sourceId===e.writingSourceId),file=files.find(f=>f.src===e.instructionAudio.src);
+ assert.equal(planned?.cue,e.meaningCue);assert.equal(planned?.script,spoken?.script);assert.equal(proof?.voiceId,cuePlan.voiceId);assert(proof?.audioDataIdentical);assert(spoken?.exactWords||spoken?.spokenWordsEquivalent);assert.equal(file?.sha256,proof?.sha256,e.writingSourceId);
+}
+const passed=targets.length===100&&targets.every(t=>t.passed)&&files.length===107&&files.every(f=>f.metadataPassed&&f.duration>0)&&instructionSources.length===7;
 writeFileSync(folder+'audio-audit.json',JSON.stringify({passed,targets,files,instructionSources,humanListeningPerformed:false,newVoiceRolesDeclaredBeforeGeneration:true,existingRecordingsPreserved:true},null,2)+'\n');
 console.log(JSON.stringify({passed,targets:targets.length,readyTargets:targets.filter(t=>t.passed).length,files:files.length,open:targets.filter(t=>!t.passed).map(t=>t.target)}));
 if(!passed)process.exitCode=1;

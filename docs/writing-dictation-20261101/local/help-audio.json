@@ -1,0 +1,32 @@
+{
+  "base": "http://127.0.0.1:19031",
+  "simulatedPlayback": false,
+  "checks": [
+    {
+      "engine": "chromium",
+      "sourceId": "KSW-AC-HT-082",
+      "realAudio": true,
+      "noHintAfterWrong": true,
+      "sourceHintBehindHelp": true,
+      "nativeHelpWordEnded": true,
+      "spellingFragmentExcluded": true,
+      "ownAnswerUnchangedByHelp": true,
+      "firstWrongRetained": true,
+      "helpTracked": true
+    },
+    {
+      "engine": "webkit",
+      "sourceId": "KSW-AC-HT-082",
+      "realAudio": true,
+      "noHintAfterWrong": true,
+      "sourceHintBehindHelp": true,
+      "nativeHelpWordEnded": true,
+      "spellingFragmentExcluded": true,
+      "ownAnswerUnchangedByHelp": true,
+      "firstWrongRetained": true,
+      "helpTracked": true
+    }
+  ],
+  "errors": [],
+  "humanListeningPerformed": false
+}

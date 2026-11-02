@@ -10,7 +10,7 @@ const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19031',out=process.env
 const copy=chapterCollections('copy').filter(r=>r.contentUrl).flatMap(row=>JSON.parse(readFileSync('public'+row.contentUrl)).exercises.map(e=>({row,e,activity:'copy'})));
 const samples=[{row:{...writingDictationRounds[0],level:'alfa-c',help:'practice'},e:writingDictationRounds[0].exercises[0],activity:'dictation'},...['KSW-AC-TN-001','KSW-AC-TN-097','KSW-AA-TN-006'].map(id=>{const row=copy.find(x=>x.e.exerciseId===id);assert(row,id);return row;})];
 const route=s=>base+'/'+chapterHash({chapter:'writing',activity:s.activity,collection:s.row.id,level:s.row.level,help:s.row.help});
-const mock=()=>{window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.paused=true;this.currentTime=0;this.playbackRate=1;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){this.paused=true;clearTimeout(this.timer);}};};
+const mock=()=>{window.Audio=class extends EventTarget{constructor(src){super();this.dataset={};this.src=src;this.paused=true;this.currentTime=0;this.playbackRate=1;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){this.paused=true;clearTimeout(this.timer);}};};
 try{for(const[engine,type]of Object.entries({chromium,webkit})){
  const b=await type.launch({headless:true,...(engine==='chromium'?{channel:'chrome'}:{})});
  try{

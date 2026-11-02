@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { allPackageWords, contentPackages } from '../lib/package-content.ts';
 import { groupExercises } from '../lib/group-practice.ts';
 import { writingDictationRounds } from '../lib/writing-dictation.ts';
@@ -8,6 +8,8 @@ import { displayedChapterCollections, chapterHash, parseChapterHash, selectedCha
 import { wordRoundDefinitions } from '../lib/word-rounds.ts';
 import { learningGoalFor } from '../lib/learning-goals.ts';
 import { isInstructionAudioEnabled } from '../lib/audio-policy.ts';
+import { wordAudioParts } from '../lib/word-audio.ts';
+import { recordingForWord } from '../lib/word-listening.ts';
 
 const data = JSON.parse(readFileSync('data/klink-writing-dictation-20261101.json'));
 const originals = new Map(contentPackages.flatMap(pack => groupExercises(pack,'dictation').map(e => [e.exerciseId,e])));
@@ -28,6 +30,9 @@ test('100 source positions retain the answer contract: 54 references, 46 new can
       assert(e.requiresAudio&&e.audioOnly);assert.equal(e.prompt.audio.src,position.audio);
       assert.equal(e.exampleWord,undefined);assert.equal(e.displayWord,undefined);assert.equal(e.prompt.image,undefined);
       assert.equal(e.helpWord,position.target);assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);
+      assert.equal(e.meaning,position.helpFeedback);assert.deepEqual(e.writingHintUnits,position.hintUnits);
+      assert(!wordAudioParts(e.feedback).some(part=>part.word===position.target));
+      assert(position.hintUnits.every(start=>wordAudioParts(position.helpFeedback).some(part=>part.word&&part.start===start)));
       if(position.wordId)assert.equal(allPackageWords.find(w=>w.id===position.wordId)?.word,position.target);
       assert(isInstructionAudioEnabled(e.instructionAudio.src));
       assert(learningGoalFor(e)?.learnerText);
@@ -62,9 +67,18 @@ test('fifteen short stable rounds open through both writing and spelling without
     assert.equal(displayedChapterCollections('dictation',{chapter,level:'alfa-c',help:'guided'}).some(row=>row.id.startsWith('ksw-ac-ht-')),false);
   }
 });
-test('five meaning cues identify the sense without displaying the spelling answer', () => {
+test('six meaning cues identify the sense without displaying the spelling answer', () => {
   const cues=writingDictationRounds.flatMap(r=>r.positions).filter(p=>p.meaningCue);
-  assert.deepEqual(cues.map(p=>p.id),['007','043','047','088','100'].map(id=>'KSW-AC-HT-'+id));
+  assert.deepEqual(cues.map(p=>p.id),['007','043','047','082','088','100'].map(id=>'KSW-AC-HT-'+id));
   for(const p of cues){assert(!p.meaningCue.toLocaleLowerCase('nl-NL').split(/\W+/).includes(p.target));assert(p.instructionAudio.includes(p.id));}
   assert.equal(data.rounds.length,15);
+});
+test('every full word in the new tasks, feedback and Help has an individual recording',()=>{
+  const words=new Set(),missing=[];
+  for(const round of writingDictationRounds)for(const e of round.exercises)for(const field of ['title','meaningCue','helpWord','feedback','correctFeedback','meaning'])for(const part of wordAudioParts(e[field]||'')){
+    if(!part.word||(field==='meaning'&&e.writingHintUnits.includes(part.start)))continue;
+    words.add(part.word);if(!recordingForWord(part.text))missing.push({sourceId:e.writingSourceId,field,word:part.text});
+  }
+  writeFileSync('docs/writing-dictation-20261101/local/word-audio-coverage.json',JSON.stringify({sourcePositions:100,distinctOrdinaryWords:words.size,missing,spellingUnitsExcluded:true},null,2)+'\n');
+  assert.deepEqual(missing,[]);
 });

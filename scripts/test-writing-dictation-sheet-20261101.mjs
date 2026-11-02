@@ -8,7 +8,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
  const b=await type.launch({headless:true,...(engine==='chromium'?{channel:'chrome'}:{})});
  try{
  const c=await b.newContext({viewport:{width:320,height:568}});
- await c.addInitScript(()=>{window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.paused=true;this.currentTime=0;this.playbackRate=1;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){this.paused=true;clearTimeout(this.timer);}};});
+ await c.addInitScript(()=>{window.Audio=class extends EventTarget{constructor(src){super();this.dataset={};this.src=src;this.paused=true;this.currentTime=0;this.playbackRate=1;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){this.paused=true;clearTimeout(this.timer);}};});
  const p=await c.newPage();p.on('pageerror',e=>errors.push({engine,message:e.message}));
  for(const round of writingDictationRounds){
   await p.goto(base+'/'+chapterHash({chapter:'writing',activity:'dictation',collection:round.id,level:'alfa-c',help:'practice'}));await p.getByRole('button',{name:'Op één blad',exact:true}).click();
@@ -19,12 +19,13 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    const listen=row.getByRole('button',{name:'Luister naar het woord',exact:true});await listen.click();await p.waitForFunction(id=>!document.querySelector(`[data-sheet-exercise="${CSS.escape(id)}"] .cp-text-entry input`).disabled,e.exerciseId);
    if(i===0)await listen.click();
    await input.fill('zzq');await row.getByRole('button',{name:'Controleer',exact:true}).click();assert.equal(await row.getAttribute('data-practice-ready'),'false');
-   if(i===6)await row.getByRole('button',{name:'Help',exact:true}).click();
+   assert.equal(await row.locator('.cp-word-hint strong,.cp-word-hint p').count(),0);assert((await row.locator(':scope > output').innerText()).includes(e.feedback));
+   if(i===6){await row.getByRole('button',{name:'Help',exact:true}).click();assert.equal(await row.locator('.cp-word-hint p').innerText(),e.meaning);assert.equal(await input.inputValue(),'zzq');}
    await input.fill(e.helpWord);await row.getByRole('button',{name:'Controleer',exact:true}).click();assert.equal(await row.getAttribute('data-practice-ready'),'true');
    assert((await row.locator(':scope > output').innerText()).includes(e.correctFeedback));
    const a=await p.evaluate(()=>JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));assert.equal(a.exerciseId,e.exerciseId);assert.equal(a.independentReading,false);assert.equal(a.reviewEligible,false);assert.equal(a.pictureSupport,undefined);assert.equal(a.helpUsed,i===0||i===6);
    assert((await p.evaluate(()=>document.documentElement.scrollWidth))<=321);
-   checks.push({engine,sourceId:e.writingSourceId,audioRequiredBeforeTyping:true,wrongRetried:true,correctAccepted:true,helpAndReplayTracked:true,correctExplanation:true,noAnswerOrImageBeforeHelp:true,noHorizontalOverflow:true});
+   checks.push({engine,sourceId:e.writingSourceId,audioRequiredBeforeTyping:true,wrongRetried:true,correctAccepted:true,helpAndReplayTracked:true,correctExplanation:true,noAnswerOrImageBeforeHelp:true,noHintAfterWrong:true,sourceHintBehindHelp:true,noHorizontalOverflow:true});
   }
   await c.clearCookies();
  }
