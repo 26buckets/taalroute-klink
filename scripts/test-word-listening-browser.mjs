@@ -231,7 +231,14 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
       const response = await native.request.get(base + source, typeof recording === 'string' ? {} : {headers:{Range:`bytes=${recording.offset}-${recording.offset+recording.length-1}`}});
       assert(response.ok());
       const original = readFileSync('public' + source);
-      assert((await response.body()).equals(typeof recording === 'string' ? original : original.subarray(recording.offset,recording.offset+recording.length)), 'The original recording bytes remain unchanged');
+      const body = await response.body();
+      if (typeof recording === 'object' && response.status() === 206) {
+        assert.equal(response.headers()['content-range'], `bytes ${recording.offset}-${recording.offset+recording.length-1}/${original.length}`);
+        assert(body.equals(original.subarray(recording.offset,recording.offset+recording.length)), 'The exact word range remains unchanged');
+      } else {
+        assert.equal(response.status(), 200);
+        assert(body.equals(original), 'The original recording or complete bundle fallback remains unchanged');
+      }
       checks.push({ engine, check: 'native audio reaches ended after a real mobile gesture, original bytes preserved', word });
     }
     const inlineNative=native.locator('button.cp-inline-word').first();

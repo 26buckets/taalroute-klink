@@ -1,0 +1,659 @@
+{
+  "verified": true,
+  "checkedAt": "2026-11-02T00:50:30.213Z",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-11-02T00:46:08.421Z",
+    "sourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "contentFingerprintsRetained": true,
+  "models": 5651,
+  "packedWords": 5648,
+  "bundles": [
+    {
+      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",
+      "sha256": "ed42a726f3e40c9835dbbb4b8136a2fb6ac0c85811fad724c4f99e45bcfbe578",
+      "bytes": 2088877,
+      "models": 111,
+      "rangeStatus": 200,
+      "rangeWord": "03",
+      "rangeSha256": "63af2598aa285ca2023e27db858254f778e88eae066de469a0fa3d4cf12beca2"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-6f785f08edd121a3.bin",
+      "sha256": "6f785f08edd121a301e1deaff7dcabc1ffc69905f5d6dca75bc1c3427f6ddb5f",
+      "bytes": 2092616,
+      "models": 110,
+      "rangeStatus": 200,
+      "rangeWord": "afnamesessie",
+      "rangeSha256": "01e5d948699699ed9b067945cd122b13a16bf785ef64d52f9d97398f9bd3fcfd"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-e78105a8ad1e9323.bin",
+      "sha256": "e78105a8ad1e93236ec43d64a410d76cb425cc7f1a68a50274a1207956e07d58",
+      "bytes": 2079580,
+      "models": 109,
+      "rangeStatus": 200,
+      "rangeWord": "aanvult",
+      "rangeSha256": "c0ff1b366096c3e2030c387bdd68a11b964ad4863a1d2e14cdb17eb5a7013107"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-60b2f1008eeefa7e.bin",
+      "sha256": "60b2f1008eeefa7e0d44eb85b437cea3de81a28f444ba565fa32cd04de1b148c",
+      "bytes": 2083734,
+      "models": 109,
+      "rangeStatus": 200,
+      "rangeWord": "beginhoofdletter",
+      "rangeSha256": "34b441e91496ec72a32fb4037514057685eb29f45224f161d8bfc56c53551493"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-70e48ff350098b65.bin",
+      "sha256": "70e48ff350098b65c09cbb18853219519e3a12ec65163c0627f5d64ef79b9612",
+      "bytes": 2090592,
+      "models": 107,
+      "rangeStatus": 200,
+      "rangeWord": "beschouwt",
+      "rangeSha256": "1e6e56409f6026dba62b1d8c0a919ced56338a8486836447c5ef3be7837ada60"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-b1d2a72eff728642.bin",
+      "sha256": "b1d2a72eff728642615d1a525f66ebbe4d73bd29482609089e5a81919bd7b6a2",
+      "bytes": 2094766,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "appelboom",
+      "rangeSha256": "6a2e6b6db717838d6fddc1d11072cd79ec120e7b95feecab64a75bdcbf86ad7f"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-c7a4f1917aaffee9.bin",
+      "sha256": "c7a4f1917aaffee95d16e8785599bc7a9dc5a2c58e7e093a89fab99b8928c90f",
+      "bytes": 2076340,
+      "models": 107,
+      "rangeStatus": 200,
+      "rangeWord": "claimen",
+      "rangeSha256": "951f78a618c58605c6543ab67ffc028b1be399cef447d6e0a66c9de36a06384d"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-74fdeb42f7af890d.bin",
+      "sha256": "74fdeb42f7af890d2bd33f2898539d8187e5073d3baa2c3371b4852d11829862",
+      "bytes": 2085675,
+      "models": 108,
+      "rangeStatus": 200,
+      "rangeWord": "deelneemt",
+      "rangeSha256": "d7cc6664d1096ae69bb8d56b5e38a0e92160bddc8e915e155c42be74930cadae"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-7342add387de8d27.bin",
+      "sha256": "7342add387de8d27e02d281ce2c855d57813f040df22928dfe6d0c5d65e0409a",
+      "bytes": 2095011,
+      "models": 102,
+      "rangeStatus": 200,
+      "rangeWord": "bewaartermijnen",
+      "rangeSha256": "5dc5197cfb6c38fd01077013dfbfcc127368ba35e09d1cf3491bab8fa66e9bac"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-168e26c136c3987c.bin",
+      "sha256": "168e26c136c3987c3b22acd3bb560589e900a747c3e5673aa20453480c227f88",
+      "bytes": 2080872,
+      "models": 103,
+      "rangeStatus": 200,
+      "rangeWord": "docentopdrachten",
+      "rangeSha256": "22b1fe48b60bf0774b73c317f2dd2bb69795bf3c953b871abf58c4fb0ba535ed"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-a9c069288d7eb6c5.bin",
+      "sha256": "a9c069288d7eb6c5d098f71b814af4b82e493eca9655f4d9affcf5ac5ec32453",
+      "bytes": 2085352,
+      "models": 115,
+      "rangeStatus": 200,
+      "rangeWord": "bloembakken",
+      "rangeSha256": "97c19b4835af88bd5e3c123ffa11b5e4a9282375b05be8ea8ee60e73b49f378d"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-465fb0c7e1a74f98.bin",
+      "sha256": "465fb0c7e1a74f989ce08437d2da9b60dadb250124d500f09ac8e450bb7497a8",
+      "bytes": 2092446,
+      "models": 103,
+      "rangeStatus": 200,
+      "rangeWord": "bronvolgorde",
+      "rangeSha256": "80e9363dc36036f500f419fa7bcd8efb03c8eb8d20bda01f95927da1e638943f"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-dbae801fc84d2d5c.bin",
+      "sha256": "dbae801fc84d2d5c8cb2ade1ec7c070cbdb446a174af0f14feb3a791e8910bde",
+      "bytes": 2092945,
+      "models": 110,
+      "rangeStatus": 200,
+      "rangeWord": "formulierbegrip",
+      "rangeSha256": "48d140182eb05fc9b2b96a35bba66628c076ac4be20c1ddf4ac51f34c9569178"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-8116b95ee7b9b060.bin",
+      "sha256": "8116b95ee7b9b060a35269179f4779df8428ddf2635aae7663f748b4e4cd7b15",
+      "bytes": 2085264,
+      "models": 112,
+      "rangeStatus": 200,
+      "rangeWord": "durft",
+      "rangeSha256": "3032952dc26a5e6ee72b04fd0baeac41885f3c87e0cc886fd17bd42e052330e0"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-240cc836f20a4fa7.bin",
+      "sha256": "240cc836f20a4fa7638a740db29032a83e9a608ea9c44eeafcd2f816779bf3fa",
+      "bytes": 2079818,
+      "models": 112,
+      "rangeStatus": 200,
+      "rangeWord": "eroverheen",
+      "rangeSha256": "7b651dbcb63bf25a9c49d190ac7e26719d29d638becce7274e9c7459849bff18"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-414d105c85732155.bin",
+      "sha256": "414d105c85732155b25e0239794473b7b79bac3b3a5d5efeb8ceb70b7fb21942",
+      "bytes": 2092222,
+      "models": 104,
+      "rangeStatus": 200,
+      "rangeWord": "geprint",
+      "rangeSha256": "df0fc51cfe9f7abde6d5f529bab678efba168a81bcf98909f9ec8f2f548232b9"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-3553d82ed884d307.bin",
+      "sha256": "3553d82ed884d307ca5111efc29256566a1428720934e4221a30e06374058135",
+      "bytes": 2081161,
+      "models": 115,
+      "rangeStatus": 200,
+      "rangeWord": "geworden",
+      "rangeSha256": "041bd00977be7f3e537f1bbfb4ba644dbd4046a008b2c145132acd5c259728ea"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-27d04010ad03fa75.bin",
+      "sha256": "27d04010ad03fa75ee99615cb53f79d84cf0c9632daa7244d7e1f0e7619ef8bd",
+      "bytes": 2094825,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "gegroeid",
+      "rangeSha256": "dc6797c182019ffa9f03fe64cf1507e610e719f27ec0dd568e1518702d41b9f4"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-ea2ed9727291a6c0.bin",
+      "sha256": "ea2ed9727291a6c09b05820754be4647e807a6dd6b54749a2f825488b0c570b4",
+      "bytes": 2084715,
+      "models": 119,
+      "rangeStatus": 200,
+      "rangeWord": "hassan",
+      "rangeSha256": "cf090e92ba7ac04448d23b60d6b9a48b7fa2f5918289e26c9493dc9cbd47741b"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-eeb24e578c22d302.bin",
+      "sha256": "eeb24e578c22d30241d43dc736f70a8c20b26b3c3be879294b587bd5d334ae8d",
+      "bytes": 2082635,
+      "models": 113,
+      "rangeStatus": 200,
+      "rangeWord": "klikroute",
+      "rangeSha256": "2195a3f7daff7437324af34460468c59952bd63d1e650f733b3085cbb28c48d7"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-5ff27d0990b06602.bin",
+      "sha256": "5ff27d0990b066028c107564ab68c314b124f6810d6cc5fc1713476f62a50e53",
+      "bytes": 2087523,
+      "models": 103,
+      "rangeStatus": 200,
+      "rangeWord": "inhoudspunten",
+      "rangeSha256": "01672a2b20a919d9d8ebd955550b39d47fd8311ee0cb26801885e29060a4b443"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-e3e4794cb87f32b9.bin",
+      "sha256": "e3e4794cb87f32b94c9443fa5a02f5d8c8eaddb2f7e9684fc922fbc82c7992ca",
+      "bytes": 2077433,
+      "models": 109,
+      "rangeStatus": 200,
+      "rangeWord": "hoorns",
+      "rangeSha256": "64ca66f0c4b0bba113e7fe45bef7152948a9b3026a06e2ce1586bce2adf0eca6"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-910815cee56caba7.bin",
+      "sha256": "910815cee56caba70cc668f53be8cb543d3812a593624599fcb874968b92e099",
+      "bytes": 2084610,
+      "models": 119,
+      "rangeStatus": 200,
+      "rangeWord": "kamers",
+      "rangeSha256": "c923f43bcea0af7f8036efd246385754be7ab61dc7e94e1b4fa7d338cf585b80"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-764854afae9fdb65.bin",
+      "sha256": "764854afae9fdb6501087ba5198147229d81266e4b01a29322c407443c8f0b7d",
+      "bytes": 2079890,
+      "models": 109,
+      "rangeStatus": 200,
+      "rangeWord": "laadzone",
+      "rangeSha256": "49f00c665e6fbc61ffcfe7786c3abd12e56f112d234a2550bd159cd9e4eea02a"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-ffcb5cc33e5d1f65.bin",
+      "sha256": "ffcb5cc33e5d1f653498a919ea5a1273c7d7932ea838870944c34e793882a445",
+      "bytes": 2073892,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "leestekst",
+      "rangeSha256": "91058b4f446cdaea9c10d23ea34c98417b6fd0bb897aa86dbcbe0be29a512158"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-8b960bd296225f54.bin",
+      "sha256": "8b960bd296225f54713246f998be8a0d37f1da5be21f707e2efcded5b8dfa78f",
+      "bytes": 2082047,
+      "models": 103,
+      "rangeStatus": 200,
+      "rangeWord": "lichaamswoord",
+      "rangeSha256": "952d422cda62d81876d36bef25e9c56a8fe779108e672905f019f22f899cd70e"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-683f21afce8ea044.bin",
+      "sha256": "683f21afce8ea0443b14dfd439691fb9df3f54fd262c2238ae5557481633d557",
+      "bytes": 2081259,
+      "models": 110,
+      "rangeStatus": 200,
+      "rangeWord": "nederlander",
+      "rangeSha256": "ff03f77753cfac565dceddfd4bdc7a4eb1026c50cb7f8a66bfb98f00feefccfd"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-162d796ddb57d20c.bin",
+      "sha256": "162d796ddb57d20c13adca1fb6d0fdf0cd2e5e282c4699ed782746b82ebdc888",
+      "bytes": 2091915,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "meaning",
+      "rangeSha256": "53504fe6dd3bb989ed5d71a2e96913a03f38119ff69cc3a984fbac80e5e2cf3c"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-4bd194f137054349.bin",
+      "sha256": "4bd194f13705434997b4a2a559d136d20d8e4481e0f3c09d6b9cde93ee969f70",
+      "bytes": 2078667,
+      "models": 106,
+      "rangeStatus": 200,
+      "rangeWord": "oefenplek",
+      "rangeSha256": "470a168d545ed75c8083bcdad2569134e39d95bc39eedc262bbdc717a1082658"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-443ae3f74d8fa476.bin",
+      "sha256": "443ae3f74d8fa476821801eb1362e4ebd09b1ae9fd511a46e2d33b057a6b51af",
+      "bytes": 2076660,
+      "models": 110,
+      "rangeStatus": 200,
+      "rangeWord": "mislukt",
+      "rangeSha256": "38dfecf923961e35c510eb1023b5c12588b67461e829be6cf125c20cff85b48b"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-d87dfc17172def3c.bin",
+      "sha256": "d87dfc17172def3ce384b8a057de2416bcc4101f7adefb8695549ee97c568ade",
+      "bytes": 2079104,
+      "models": 106,
+      "rangeStatus": 200,
+      "rangeWord": "openstelt",
+      "rangeSha256": "2b5715f8826e58f97566c342695ecea8aa9ec04609ffe9367342acc31e956b19"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-1520401c1a08acc0.bin",
+      "sha256": "1520401c1a08acc0cf39a9ad082b9696861194a9ed74e7055ff9462e808ccbf5",
+      "bytes": 2082361,
+      "models": 102,
+      "rangeStatus": 200,
+      "rangeWord": "ondubbelzinnige",
+      "rangeSha256": "fcdaebe706bf5051bc90bac57b766ae0d6226199e8265dec5c914ba09d0685e4"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-18b08c03a5a60944.bin",
+      "sha256": "18b08c03a5a60944be165787fad42ff563d4b3a49a592805f3fc1a835e870625",
+      "bytes": 2094311,
+      "models": 110,
+      "rangeStatus": 200,
+      "rangeWord": "overgenomen",
+      "rangeSha256": "fa34aa6bc34057d4a981c84e0fa158bf99714ae541b36cb8b56bfa7d53b57a6c"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-b08943eb72aa8078.bin",
+      "sha256": "b08943eb72aa80785f79b8152e0df119bc57f53da2eb91eaebdadc9b3dc41789",
+      "bytes": 2089367,
+      "models": 110,
+      "rangeStatus": 200,
+      "rangeWord": "pl",
+      "rangeSha256": "036a8b394caf23120ff71a583ac0dca2f71f35a01bbf7a6e54b11aae515539a0"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-252647bc97ad8587.bin",
+      "sha256": "252647bc97ad85872c354fb70b5ae4e70d4e3b9aeb231e8f212b96ce345dbe0d",
+      "bytes": 2096124,
+      "models": 109,
+      "rangeStatus": 200,
+      "rangeWord": "ruimtegebrek",
+      "rangeSha256": "62e848914c36ae35300744ad61049fc1a707863766b1da8deacf2885ae4ccd6f"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-a487194b025d8c76.bin",
+      "sha256": "a487194b025d8c76168a5d8d69a2d07a2c55213682d1e978bd709d7343f7f8f8",
+      "bytes": 2087750,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "reken",
+      "rangeSha256": "99af505e3be88242925f2bfd5f6b193cbfbb79daad4da424110dd1844de12e84"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-682a9e8238ca4a6a.bin",
+      "sha256": "682a9e8238ca4a6a26ca2b045ccd4aa3eedd92dddd7cf0bd601bc1d9ea4c7565",
+      "bytes": 2096383,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "smaak",
+      "rangeSha256": "7721f11f5c15a3de099a0f74ab5f59189845fb395ee908aee4508f80abb63e63"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-ab1bcc1000dcc4e9.bin",
+      "sha256": "ab1bcc1000dcc4e93d7011a064aaf9305fe152bc3e05ce77c7869cc1a60a683e",
+      "bytes": 2092842,
+      "models": 105,
+      "rangeStatus": 200,
+      "rangeWord": "productclaim",
+      "rangeSha256": "e836c28fb1b860c764826c89d79d8567c14b1df3f81e9024bf530a7933b7d76c"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-aac9622f674324f3.bin",
+      "sha256": "aac9622f674324f3c071d9100a23a7c3939e4e1e2f69fc608d7138fdc2985cc6",
+      "bytes": 2086190,
+      "models": 99,
+      "rangeStatus": 200,
+      "rangeWord": "schrijfgereedschap",
+      "rangeSha256": "1a683a8b814a2b383615b0f0d10405ae8dc04d8fd60506a8ec1e1e890ede36a0"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-7902156e99b122d4.bin",
+      "sha256": "7902156e99b122d412c6e870385896332a04f12c23fa82320a99ff507388d3cc",
+      "bytes": 2085930,
+      "models": 107,
+      "rangeStatus": 200,
+      "rangeWord": "staaf",
+      "rangeSha256": "59a02677cc10356500e299d644f1d3bfd44f045b4275fe8d5349d9421fdd6f12"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-46b278921441bacf.bin",
+      "sha256": "46b278921441bacf0d08a693dc47b5821280c1492ea638ed66715f90369adc38",
+      "bytes": 2093051,
+      "models": 112,
+      "rangeStatus": 200,
+      "rangeWord": "ter",
+      "rangeSha256": "46f49c6e64e5c3f717d00d6ee1e8eb98d85e64e451b489f3acffb11188adcf8b"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-f19d65bb9a2a3dc1.bin",
+      "sha256": "f19d65bb9a2a3dc1e1b9d3db755f46e788c06b50889d5aff034ba828244b9754",
+      "bytes": 2088007,
+      "models": 107,
+      "rangeStatus": 200,
+      "rangeWord": "sven",
+      "rangeSha256": "fd8612035dcfd66f07ae1b41d438d0c8d00b31d7b2fd775283ccd9baa8e4ce28"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-5b1329d6dfa733e9.bin",
+      "sha256": "5b1329d6dfa733e9d17ef53146c10e017e451c8e6848385a5d4537b6116b066a",
+      "bytes": 2096134,
+      "models": 108,
+      "rangeStatus": 200,
+      "rangeWord": "veraf",
+      "rangeSha256": "6e1d281b7f41453fd17612b07681cf22404f7f9ea9dac039059d9010a3b5ae9e"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-ae331c9fbc486726.bin",
+      "sha256": "ae331c9fbc486726b8c8f5eac13f4b54275a38bb44e7367ec32dd6a2b58ce440",
+      "bytes": 2093389,
+      "models": 115,
+      "rangeStatus": 200,
+      "rangeWord": "toekomstvormen",
+      "rangeSha256": "99e039f3a527346b3c8779ac51cf487ef5141c17f02cb0ca1776f39df42ae806"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-079ba688d5cb019f.bin",
+      "sha256": "079ba688d5cb019f205915eb3a2e7eaf28f8c5da74b2c38a800238f9614ccf4c",
+      "bytes": 2092397,
+      "models": 111,
+      "rangeStatus": 200,
+      "rangeWord": "uitlenen",
+      "rangeSha256": "668583d94ae3380fca39363b1c3c60e67a242a0b52b26630e6ce1d92a6bb382f"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-a4b8c5247a072b5a.bin",
+      "sha256": "a4b8c5247a072b5a4898e8be3f9b2dcf2ca0a3e1eb62b241f2bdd41ab479c680",
+      "bytes": 2084600,
+      "models": 106,
+      "rangeStatus": 200,
+      "rangeWord": "verlaging",
+      "rangeSha256": "7eef902a7aff860df9ff4517de13caeb528f9c58a90869c09e5b109835ed24cb"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-16a04cb9d3ef3d73.bin",
+      "sha256": "16a04cb9d3ef3d7317d71c5f3df645587b7e4bdf81368c4696c47e3e4f44c333",
+      "bytes": 2080776,
+      "models": 103,
+      "rangeStatus": 200,
+      "rangeWord": "vrijstaand",
+      "rangeSha256": "615951ad7d5c40fb92c14c3e20cd0132d2c6b664a1f20891ff7492b8405924a0"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-2e51a21e1c2a840f.bin",
+      "sha256": "2e51a21e1c2a840fcc1eb2dc61fd9a25da9748696f78df74e5d30dace09d35c0",
+      "bytes": 2077265,
+      "models": 104,
+      "rangeStatus": 200,
+      "rangeWord": "voorbeeldzin",
+      "rangeSha256": "169cb142a9e9039f4482715a6846947c5721bbd21defa7cd0472b1b665d86f22"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-7297ff3a7d8c3423.bin",
+      "sha256": "7297ff3a7d8c3423fd145f9c044f0f68f3397a632c7f0c928fb3a5ee855d1730",
+      "bytes": 2081248,
+      "models": 106,
+      "rangeStatus": 200,
+      "rangeWord": "verwoest",
+      "rangeSha256": "35f0ab60ba2f1dd9093b743843c55eb16eaf4cc26d198799ffc40eb21769786a"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-0d885438f56102f4.bin",
+      "sha256": "0d885438f56102f4d38c3108503582b0b4146b9a91c8fb7d984bbdd63d8650b8",
+      "bytes": 2090436,
+      "models": 103,
+      "rangeStatus": 200,
+      "rangeWord": "wegzakken",
+      "rangeSha256": "fc2d0fbd8b4715e6e6df578257ea93edd1c73e0e0c87eef7e5e82ac51eb65614"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-00d9f1b0698ee546.bin",
+      "sha256": "00d9f1b0698ee54604e70eed3096f48d1b14ea06efb95300344845bab46ce358",
+      "bytes": 2079600,
+      "models": 106,
+      "rangeStatus": 200,
+      "rangeWord": "wondbehandeling",
+      "rangeSha256": "3ef50114001ee633a45cc6e3b823b8fb4a27867abd38e3e22b9a6cf85029e9c3"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-01e8fb031abee2f5.bin",
+      "sha256": "01e8fb031abee2f5d6d8a02a0f536283d86ea1511ee38c0b08acb7e8d9c03bf2",
+      "bytes": 2077842,
+      "models": 100,
+      "rangeStatus": 200,
+      "rangeWord": "zaterdagochtend",
+      "rangeSha256": "135a79cc6a6608cd1fd77afb061a5be966ed2d72892afde5db5b27a7f068aaf7"
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/words-313e295d8ae31342.bin",
+      "sha256": "313e295d8ae31342e2535f8f49a9ef63ffa30e288f22f6b7a13db3fa14dae19e",
+      "bytes": 983816,
+      "models": 51,
+      "rangeStatus": 200,
+      "rangeWord": "zorgvuldiger",
+      "rangeSha256": "e11e871025990075d5f7b8187533f1b7d5921e745503abba8e2b60ef129bdb7d"
+    }
+  ],
+  "rangeResponses": 53,
+  "partialResponses": 0,
+  "fullBundleFallbacks": 53,
+  "standalones": [
+    {
+      "word": "ei",
+      "source": "/package-audio/word-listening-20261101/repair-ei.wav",
+      "sha256": "1d42ef46dac963fab23c8e56a4950ee465b8ebdb54547d6837a71555b62ecbac",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "ei"
+      }
+    },
+    {
+      "word": "pijn",
+      "source": "/package-audio/word-listening-20261101/repair-pijn.wav",
+      "sha256": "8fd0867a6df67f8a9f99165eb8d94e4b54e36db6ecfc42a44db41e79724fe0e0",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "pijn"
+      }
+    },
+    {
+      "word": "pit",
+      "source": "/package-audio/word-listening-20261101/repair-pit.wav",
+      "sha256": "17358df912902c77d6413cf2e1feadf0dc51106de90c3ed9a76f82904034a172",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "pit"
+      }
+    },
+    {
+      "word": "Luisteren",
+      "source": "/package-audio/word-listening-20261101/listen-ready.wav",
+      "sha256": "a85119ba442dddbad9b5c050010684ab5c836c35eb63c3f0591dab3f7bc3fd8e",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "title": "Luisteren"
+      }
+    }
+  ],
+  "latestTwentyReviewedRecordingsRetained": [
+    {
+      "word": "springt",
+      "src": "/package-audio/woordvormen-twintig-20261101/01-springt.wav",
+      "sha256": "ee36290ce08dc8ed8a37a48b4a2fefa1ac5dc4d049147e04f3d463b815d55eed"
+    },
+    {
+      "word": "kammen",
+      "src": "/package-audio/woordvormen-twintig-20261101/02-kammen.wav",
+      "sha256": "cdecd0a1bec213a4fd9cc84fbac48eea44dd9f68e711de362cd9439694bda2eb"
+    },
+    {
+      "word": "kamt",
+      "src": "/package-audio/woordvormen-twintig-20261101/03-kamt.wav",
+      "sha256": "5a352203a1c998d87eb71bc362467453933567589260d6edb49e4a21a6c6aed6"
+    },
+    {
+      "word": "strekt",
+      "src": "/package-audio/woordvormen-twintig-20261101/04-strekt.wav",
+      "sha256": "c0c6cfaed69098a82fefe84088f6f91c2b0f2852aae6119972a1ae27731a8959"
+    },
+    {
+      "word": "vouwt",
+      "src": "/package-audio/woordvormen-twintig-20261101/05-vouwt.wav",
+      "sha256": "79f1e56b659196065a64ea1f02cde1c914fda17c663f737cc6c1129c3ed5071f"
+    },
+    {
+      "word": "kleurt",
+      "src": "/package-audio/woordvormen-twintig-20261101/06-kleurt.wav",
+      "sha256": "862a06565bc44b6ec3943a4712ca9874a8f9ecc368b44c79775f9012174615e8"
+    },
+    {
+      "word": "breekt",
+      "src": "/package-audio/woordvormen-twintig-20261101/07-breekt.wav",
+      "sha256": "d69b89805f12d12cca647acf373a41cc72343fdf95af68d94b10b34c97e1f89b"
+    },
+    {
+      "word": "roert",
+      "src": "/package-audio/woordvormen-twintig-20261101/08-roert.wav",
+      "sha256": "8c8078157294e4566e5cef279048e8a05c13f4e108cebf74bcaacb2da783d5ed"
+    },
+    {
+      "word": "ruikt",
+      "src": "/package-audio/woordvormen-twintig-20261101/09-ruikt.wav",
+      "sha256": "888b6cdcc4e2e40d6e1b0abe3d1ed5820638b0c297f516e0aa1af33097426541"
+    },
+    {
+      "word": "verft",
+      "src": "/package-audio/woordvormen-twintig-20261101/10-verft.wav",
+      "sha256": "7812c207ffd2eb1f7c1edd97c44750b0df9e7eff62fb03e5555b729919320a08"
+    },
+    {
+      "word": "leert",
+      "src": "/package-audio/woordvormen-twintig-20261101/11-leert.wav",
+      "sha256": "20a5d91ad81591255f13bb4b5b24a6545affd4767411fbfd0b22503d5602e679"
+    },
+    {
+      "word": "speelt",
+      "src": "/package-audio/woordvormen-twintig-20261101/12-speelt.wav",
+      "sha256": "63092a23da2b3897f94342fe23a59c9e5ca09e88c2aeac920c9b4ee0669fd823"
+    },
+    {
+      "word": "verbetert",
+      "src": "/package-audio/woordvormen-twintig-20261101/13-verbetert.wav",
+      "sha256": "9aa03cb4be0c9e66e372e1a8cb75d9ace9edb7315b036146ac9383286404514b"
+    },
+    {
+      "word": "repareert",
+      "src": "/package-audio/woordvormen-twintig-20261101/14-repareert.wav",
+      "sha256": "abad95b6585cc9a58d387d7d66ccf7902bc6c848ab696240c5011b0775ad29c0"
+    },
+    {
+      "word": "leunen",
+      "src": "/package-audio/woordvormen-twintig-20261101/15-leunen.wav",
+      "sha256": "4cc579d2e39d9ef1a7ed34b05ec0a748c528b8fe163a6c9a298be3a7f4a5b44e"
+    },
+    {
+      "word": "leunt",
+      "src": "/package-audio/woordvormen-twintig-20261101/16-leunt.wav",
+      "sha256": "26265f79f8b1fbb719b03245905cda36589159e9ce37a4b31b4bed03783ece03"
+    },
+    {
+      "word": "poetst",
+      "src": "/package-audio/woordvormen-twintig-20261101/17-poetst.wav",
+      "sha256": "137814c8d105c0477c5d6b97e7188cb262ffdffdb7052d620fe5f5aecedbb126"
+    },
+    {
+      "word": "knoopt",
+      "src": "/package-audio/woordvormen-twintig-20261101/18-knoopt.wav",
+      "sha256": "31219397c101c72b25ee213b65367494d8aec167e224b335b1cb346b5f47a476"
+    },
+    {
+      "word": "smeert",
+      "src": "/package-audio/woordvormen-twintig-20261101/19-smeert.wav",
+      "sha256": "ed87c875e543fe93fc76e4ae75b51c6e159cb1acdbbe160dd9da30d310048cc7"
+    },
+    {
+      "word": "oefencursus",
+      "src": "/package-audio/woordvormen-twintig-20261101/20-oefencursus.wav",
+      "sha256": "259ab976db35f20c56173b57442d2c44139daca3b296f8c96ffb3a98bf21a66f"
+    }
+  ],
+  "method": "Every complete live bundle is SHA-256 checked; all individual MP3 bytes are reconstructed from those actual live bytes and their ID3 title/brand and original MPEG payload checked. An actual Range request from each of 53 bundles is independently fetched and its exact selected word checked, accepting validated HTTP206 or an unchanged complete HTTP200 bundle using the same fallback as the app. Three word WAVs and the unlock primer, plus all twenty predecessor recordings, are fully fetched and hashed.",
+  "humanPronunciationReview": "not performed; owner standing approval",
+  "physicalPhoneTested": false
+}

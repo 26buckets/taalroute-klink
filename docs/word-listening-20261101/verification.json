@@ -34,5 +34,10 @@
   "runtimeCandidateCommit": "9b610fff8de0612cd4c444dc42191f67fd8fe7d9",
   "baselineSourceCommit": "1bdd9ac0a7ec02bb7027ac3211648ef414b00b42",
   "finalRuntimeBuilt": true,
-  "releaseGuardTests": 2
+  "releaseGuardTests": 2,
+  "liveWordBrowserCases": 44,
+  "liveNativeTeacherCases": 18,
+  "fullBundleFallbackValidatedLive": true,
+  "publishedSourceCommit": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+  "postDeploymentChange": "Only the browser verification accepts complete HTTP200 bundles as well as HTTP206 ranges; application, data and media unchanged."
 }
