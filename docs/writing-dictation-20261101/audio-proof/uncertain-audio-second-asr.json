@@ -1,0 +1,495 @@
+{
+  "model": "mlx-community/whisper-small-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "files": [
+    {
+      "src": "/package-audio/taalroute/klink-woord-raam.wav",
+      "target": "raam",
+      "text": " Ram.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Ram.",
+          "tokens": [
+            50364,
+            9078,
+            13,
+            50414
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9753513336181641,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 0.2800859808921814
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-pijn.wav",
+      "target": "pijn",
+      "text": " Dang.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Dang.",
+          "tokens": [
+            50364,
+            29580,
+            13,
+            50404
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9905403137207032,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.1845337450504303
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-jas.wav",
+      "target": "jas",
+      "text": " Jaas.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Jaas.",
+          "tokens": [
+            50364,
+            3530,
+            296,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9977739651997884,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.13299931585788727
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-mes.wav",
+      "target": "mes",
+      "text": " Nes.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Nes.",
+          "tokens": [
+            50364,
+            426,
+            279,
+            13,
+            50394
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8693927129109701,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 0.17563720047473907
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL2045.mp3",
+      "target": "vest",
+      "text": " Fest!",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.8,
+          "text": " Fest!",
+          "tokens": [
+            50364,
+            12993,
+            0,
+            50404
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8908036231994629,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.09542408585548401
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-rok.wav",
+      "target": "rok",
+      "text": " Rock.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Rock.",
+          "tokens": [
+            50364,
+            6922,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9343189239501953,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.09679824113845825
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-ei.wav",
+      "target": "ei",
+      "text": " Aai.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Aai.",
+          "tokens": [
+            50364,
+            316,
+            1301,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -1.0412987073262532,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 0.11492177098989487
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-kat.mp3",
+      "target": "kat",
+      "text": " God.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " God.",
+          "tokens": [
+            50364,
+            1265,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7780466079711914,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 0.12449783086776733
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-oor.wav",
+      "target": "oor",
+      "text": " of",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " of",
+          "tokens": [
+            50364,
+            295,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7144654989242554,
+          "compression_ratio": 0.2,
+          "no_speech_prob": 0.33168381452560425
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-vinger.wav",
+      "target": "vinger",
+      "text": " Finger.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Finger.",
+          "tokens": [
+            50364,
+            37318,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8428013801574707,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 0.0662943571805954
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-pan.wav",
+      "target": "pan",
+      "text": " Bum!",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Bum!",
+          "tokens": [
+            50364,
+            363,
+            449,
+            0,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8822857538859049,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 0.24263712763786316
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-bloem.wav",
+      "target": "bloem",
+      "text": " Bloom.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Bloom.",
+          "tokens": [
+            50364,
+            25927,
+            13,
+            50414
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8877026557922363,
+          "compression_ratio": 0.42857142857142855,
+          "no_speech_prob": 0.32904163002967834
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-plein.wav",
+      "target": "plein",
+      "text": " Plang.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Plang.",
+          "tokens": [
+            50364,
+            2149,
+            656,
+            13,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -1.0661532878875732,
+          "compression_ratio": 0.42857142857142855,
+          "no_speech_prob": 0.2193639576435089
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TR-A1-K-336.mp3",
+      "target": "beker",
+      "text": " Baker.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Baker.",
+          "tokens": [
+            50364,
+            25780,
+            13,
+            50394
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7936878204345703,
+          "compression_ratio": 0.42857142857142855,
+          "no_speech_prob": 0.07108460366725922
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-hek.wav",
+      "target": "hek",
+      "text": " Heck.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Heck.",
+          "tokens": [
+            50364,
+            41948,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.8548078536987305,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.1406143307685852
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-611a3ab30ad0.mp3",
+      "target": "beek",
+      "text": " Bake.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.72,
+          "text": " Bake.",
+          "tokens": [
+            50364,
+            363,
+            619,
+            13,
+            50400
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9950620333353678,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.10211402177810669
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-d7c7225bb69e.mp3",
+      "target": "wolk",
+      "text": " Volk.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Volk.",
+          "tokens": [
+            50364,
+            8911,
+            74,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7697145144144694,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.2800006866455078
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-tuin.wav",
+      "target": "tuin",
+      "text": " Doen.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " Doen.",
+          "tokens": [
+            50364,
+            1144,
+            268,
+            13,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9539963404337565,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.07879753410816193
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-boot.wav",
+      "target": "boot",
+      "text": " boot",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " boot",
+          "tokens": [
+            50364,
+            11450,
+            50464
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.760572075843811,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 0.11892729997634888
+        }
+      ]
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-vader.wav",
+      "target": "vader",
+      "text": " Vaarde.",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Vaarde.",
+          "tokens": [
+            50364,
+            16822,
+            10866,
+            13,
+            50389
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -1.0440257390340169,
+          "compression_ratio": 0.4666666666666667,
+          "no_speech_prob": 0.22434809803962708
+        }
+      ]
+    }
+  ]
+}

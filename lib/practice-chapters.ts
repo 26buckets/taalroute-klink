@@ -1,5 +1,6 @@
 import { productionIndex, productionPack, readingSelections } from './production-practice.ts';
 import { sourceRepeatRounds, type SourceRepeat } from './source-repeat.ts';
+import { writingDictationRounds } from './writing-dictation.ts';
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
@@ -156,6 +157,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     }
   }
   result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined })));
+  if (activity === 'dictation') result.push(...writingDictationRounds.map(round => ({ id: round.id, title: round.title, level: 'alfa-c' as const, help: 'practice' as const, pack: productionPack({ ...round, level: 'alfa-c', activity, count: round.exercises.length }), exercises: round.exercises })));
   if (activity === 'learning-review' || synonymActivities.some(id => id === activity)) result.push(...synonymCollections.flatMap(collection => {
     const exercises = groupExercises(collection.pack, activity);
     return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
@@ -188,11 +190,12 @@ export function chapterExerciseChoices(location: ChapterLocation) {
   if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
   const source = selectedChapterCollection(location);
   if (source?.readingSelection && !source.wordRound) return [];
+  const selection = source?.exercises[0]?.writingSourceId ? { ...location, level: source.level, help: source.help ?? exerciseSetHelp(source.exercises) } : location;
   const words = source?.wordRound?.wordIds;
   const sourceId = source?.wordRound?.sourceId ?? location.collection;
   const wholeWords = source && !words && wordRoundActivities.has(location.activity) ? collectionWordIds(source) : undefined;
   return groupActivities.filter(activity => activity.id !== 'learning-review' && (!words || wordRoundActivities.has(activity.id))).flatMap(activity => {
-    const candidates = chapterCollections(activity.id).filter(item => matchesChapterSelection(item, location));
+    const candidates = chapterCollections(activity.id).filter(item => matchesChapterSelection(item, selection));
     const collection = words
       ? [...candidates.filter(item => item.id === sourceId), ...candidates.filter(item => item.id !== sourceId)].find(item => selectChapterWords(item, words))
       : candidates.find(item => {

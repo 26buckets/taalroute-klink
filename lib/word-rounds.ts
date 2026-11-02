@@ -30,7 +30,7 @@ export function wordRoundDefinitions(exercises: PackageExercise[], packWords: Pa
       const text = own ? [(item.text as { primary?: string } | undefined)?.primary, item.exampleWord, item.displayWord, item.target, item.helpWord].find(value => typeof value === 'string' && value) as string | undefined : undefined;
       const label = text ?? source?.label ?? option?.label ?? card?.back?.text ?? (byId.get(id) ?? words.get(id))?.word;
       const image = (own ? item.prompt?.image : undefined) ?? option?.image ?? card?.front?.image ?? (item.targets as { id: string; image?: { src: string; placeholderWord?: string } }[] | undefined)?.find(row => row.id === `image-${id}`)?.image;
-      if (label) labels.set(id, { label: wordLabel({ id, word: label }), image: image?.placeholderWord || (label === 'want' && typeof item.meaning === 'string' && item.meaning.startsWith('Verbindt') && item.meaning.includes('Voorbeeld:')) ? undefined : image?.src ?? (byId.get(id) ?? words.get(id))?.image, placeholder: Boolean(image?.placeholderWord) });
+      if (label) labels.set(id, { label: wordLabel({ id, word: label }), image: item.writingSourceId || image?.placeholderWord || (label === 'want' && typeof item.meaning === 'string' && item.meaning.startsWith('Verbindt') && item.meaning.includes('Voorbeeld:')) ? undefined : image?.src ?? (byId.get(id) ?? words.get(id))?.image, placeholder: Boolean(image?.placeholderWord) });
     }
   });
   if (targets.flat().some(id => !labels.has(id))) return [];

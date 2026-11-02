@@ -1,0 +1,27 @@
+{
+  "selection": {
+    "pit": {
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "model": "eleven_v4",
+      "source": "targeted/pit.json",
+      "ctc": "pit",
+      "whisperLarge": "Pit."
+    },
+    "pijn": {
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "model": "eleven_multilingual_v2",
+      "source": "targeted/pijn.json",
+      "ctc": "pijn",
+      "whisperLarge": "Bye. (inconclusive short-word ASR)"
+    },
+    "ei": {
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "model": "eleven_v4",
+      "source": "targeted/ei-roos/ei.json",
+      "ctc": "ei",
+      "reason": "Free-standing lexical target, not a character; other fixed Klink target voice provides a confirmed Dutch word model"
+    }
+  },
+  "humanReview": "not performed; owner standing approval",
+  "unusedCandidates": "retained separately, not released"
+}

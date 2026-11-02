@@ -1,0 +1,38 @@
+{
+  "integratedCandidate": "9b610fff8de0612cd4c444dc42191f67fd8fe7d9",
+  "integratedAt": "2026-11-02T00:44:25.863823+00:00",
+  "previousTestedCandidate": "f0b36d3c3a619019911d3a0587e0b37eeca526dd",
+  "changedComparedWithTestedFiles": [
+    "components/product/word-listening.tsx",
+    "lib/word-audio.ts",
+    "data/klink-word-listening.json",
+    "data/klink-word-listening-audio.json"
+  ],
+  "allWritingRenderersAndStorageByteIdentical": true,
+  "all107WritingMediaByteIdentical": true,
+  "upstreamRuntimeChanges": "Teacher native-phoneme exclusions plus priority for20 genuinely owner-reviewed word recordings and rebuilt word index/bundles. No writing renderer, answer, instruction or storage change.",
+  "supplementalChecksRequired": [
+    "whole-word source coverage",
+    "native Help interaction",
+    "types",
+    "current release gate after formal live handoff"
+  ],
+  "publicationStatus": "NOT_PUBLISHED",
+  "publishedCodeBasis": "427a3e57ee4c4f10cc6a7ba8eb0a1731fc5e2be3",
+  "publishedCodeRuntimeIdenticalToCandidate": true,
+  "supplementalChecksPassed": {
+    "wholeWordCoverage": true,
+    "globalWritingPositions": 100,
+    "globalMissingWords": 0,
+    "nativeHelpCases": 2,
+    "libraryCases": 4,
+    "oldLibraryCollectionsPreserved": 9488,
+    "types": true,
+    "targetedLint": true,
+    "reproducibleWordAndLibraryIndexes": true,
+    "imagesCheck": true
+  },
+  "formalSlotHandoff": "received from word-audio publisher after complete live and Drive verification",
+  "integratedPublishedMain": "cccb740fed7eb0331397ac9e0de4546e7afb9645",
+  "allPublishedRuntimeDataMediaIdenticalToTested9bCandidate": true
+}

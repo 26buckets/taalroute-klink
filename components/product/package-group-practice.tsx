@@ -3,6 +3,7 @@ import { LearnerExerciseInfo } from './learner-exercise-info';
 import { usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { recordRoundSteps } from '@/lib/round-progress';
+import { parseWritingAnswer, writingAnswerKey, writingAnswerSourceId } from '@/lib/writing-answer';
 import { RoundProgressNotice } from './round-progress';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -115,7 +116,7 @@ function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pa
     if (progressId && attempt.correct) recordRoundSteps(progressId, progressExerciseIds ?? exercises.map(e => e.exerciseId), [attempt.exerciseId]);
     onAttempt?.(attempt);
   }
-  function restart() { try { if (legacySessionId || storageKey !== legacyStorageKey) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
+  function restart() { try { if (legacySessionId || storageKey !== legacyStorageKey) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { const sourceId = writingAnswerSourceId(exercise); if (sourceId) { const key = writingAnswerKey(sourceId), answer = parseWritingAnswer(localStorage.getItem(key)); if (answer) localStorage.setItem(key, JSON.stringify({ ...answer, draft: '' })); } else localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
   if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section {...completionKeys} className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button data-practice-next aria-keyshortcuts="Enter ArrowRight" className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={recordAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
@@ -156,7 +157,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
   const row = useRef<HTMLElement>(null);
   useEffect(() => { if (result === 'right' && !playing && row.current?.closest('[data-practice-keyboard="true"]')) row.current.focus({ preventScroll: true }); }, [result, playing]);
   const playback = useRef<AbortController | null>(null);
-  const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
+  const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });
   useWordListeningHelp(row, phase => { if (phase === 'end' || phase === 'browse') return; if (phase === 'request') metrics.current.helpUsed = true; playback.current?.abort(); setPlaying(false); });
   const model = exercise.componentId === 'ALF-CMP-001';
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
@@ -164,8 +165,8 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,
-      support: model || typeof exercise.exampleWord === 'string' || (view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && pack.words.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: view.photo ? 'always' : 'request', elapsedMs: Date.now() - metrics.current.started,
-      objective: typeof exercise.objective === 'string' ? exercise.objective : `${exercise.mode}:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: model ? 'participation' : exercise.assessment ?? 'answer', independentReading: false });
+      support: model || typeof exercise.exampleWord === 'string' || (!exercise.audioOnly && view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && pack.words.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', ...(!exercise.audioOnly ? { pictureSupport: view.photo ? 'always' as const : 'request' as const } : {}), elapsedMs: Date.now() - metrics.current.started,
+      objective: typeof exercise.objective === 'string' ? exercise.objective : `${exercise.mode}:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: model ? 'participation' : exercise.assessment ?? 'answer', independentReading: false, ...(exercise.writingSourceId ? {reviewEligible:false} : {}) });
     setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
   }
   return <ExerciseAudioProvider><article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
@@ -173,6 +174,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
     <ExerciseSurface pack={pack} exercise={exercise} guided answeredCorrectly={result === 'right'} canAnswer={heard && result !== 'right'} speakingOptionId="" onOpenExercise={() => {}} onReset={() => setResult('idle')} onHelp={() => { metrics.current.helpUsed = true; }} onFinish={finish} onAudio={async source => {
       const controller = startPlayback(); playback.current = controller; setAudioError(false); setPlaying(true);
       if (exercise.readingTask) metrics.current.helpUsed = true;
+      if (exercise.writingSourceId && source === exercise.prompt?.audio?.src && ++metrics.current.plays > 1) metrics.current.helpUsed = true;
       try {
         const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal });
         if (controller.signal.aborted) return false;
@@ -182,7 +184,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
       } catch { if (!controller.signal.aborted) setAudioError(true); return false; }
       finally { if (playback.current === controller) setPlaying(false); }
     }} />
-    <output aria-live="polite">{audioError ? 'Luisteren lukt niet. Tik opnieuw.' : result === 'right' ? <><Check aria-hidden="true" />{model ? 'Beluisterd' : 'Goed'}</> : result === 'wrong' ? exercise.feedback || 'Probeer nog een keer.' : ''}</output>
+    <output aria-live="polite">{audioError ? 'Luisteren lukt niet. Tik opnieuw.' : result === 'right' ? <><Check aria-hidden="true" />{model ? 'Beluisterd' : typeof exercise.correctFeedback === 'string' ? 'Goed. ' + exercise.correctFeedback : 'Goed'}</> : result === 'wrong' ? exercise.feedback || 'Probeer nog een keer.' : ''}</output>
   </article></ExerciseAudioProvider>;
 }
 

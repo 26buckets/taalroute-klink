@@ -5,6 +5,8 @@ import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exer
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
+import { wordAudioParts } from '@/lib/word-audio';
+import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 
 import { useId } from 'react';
 import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
@@ -418,18 +420,19 @@ function PackageExercisePlayer({
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts,
-      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' || (view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && wordPictures.has(String(exercise.wordId)) && !exercise.contextId) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
-      pictureSupport: view.photo ? 'always' : 'request',
+      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' || (!exercise.audioOnly && view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && wordPictures.has(String(exercise.wordId)) && !exercise.contextId) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
+      ...(!exercise.audioOnly ? { pictureSupport: view.photo ? 'always' as const : 'request' as const } : {}),
       helpUsed: metrics.current.helpUsed, elapsedMs: Date.now() - metrics.current.started,
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
       ...(exercise.synonymPairId || exercise.wordUseId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
+      ...(exercise.writingSourceId ? { independentReading: false, reviewEligible: false } : {}),
       ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: exercise.access === 'self-practice' ? 'self-practice' : 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
     setMessage(feedback ?? (correct
-      ? selfPaced ? 'Je hebt geoefend.' : 'Goed gedaan.'
+      ? typeof exercise.correctFeedback === 'string' ? exercise.correctFeedback : selfPaced ? 'Je hebt geoefend.' : 'Goed gedaan.'
       : exercise.feedback ?? (exercise.mode.startsWith('heard') ? 'Luister nog een keer. Kies dan opnieuw.' : 'Kijk nog een keer. Probeer opnieuw.')));
     if (!correct && sentenceQuestion) {
       metrics.current.helpUsed = true;
@@ -630,7 +633,7 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   if (!source && typeof visibleWord !== 'string' && !children) return null;
   return (
     <div className={`cp-task-prompt${source && onAudio && typeof visibleWord !== 'string' ? ' cp-corner-prompt' : ''}`}>
-      {typeof visibleWord !== 'string' && (source && onAudio ? <ExerciseListen onClick={() => onAudio(source)} label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'} /> : <span><FileText /></span>)}
+      {typeof visibleWord !== 'string' && (source && onAudio ? <ExerciseListen onClick={() => onAudio(source)} label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId || exercise.mode === 'word-dictation' ? 'Luister naar het woord' : 'Luister naar de opdracht'} /> : <span><FileText /></span>)}
       <div>{typeof visibleWord === 'string' && (source && onAudio ? <><ExerciseListen onClick={() => onAudio(source)} label={`Luister naar ${visibleWord}`} /><button {...textView} className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}</button></> : <strong {...textView}><WordAudioText text={visibleWord} /></strong>)}{children}</div>
     </div>
   );
@@ -803,16 +806,39 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
 function WordHint({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () => void }) {
   const [shown, setShown] = useState(false);
   const hint = useRef<HTMLDivElement>(null);
+  const spellingUnits = asArray<number>(exercise.writingHintUnits);
   useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
   const fields = asArray<TextField>(exercise.fields);
   const [value, setValue] = useState('');
+  const writingId = writingAnswerSourceId(exercise);
+  const writing = useRef(emptyWritingAnswer());
+  const [writingReady, setWritingReady] = useState(!writingId);
+  const [writingError, setWritingError] = useState(false);
+  useEffect(() => {
+    if (!writingId) return;
+    const frame = requestAnimationFrame(() => {
+      let failed = false;
+      try { preserveAvailableCopyAnswers(localStorage); } catch { failed = true; }
+      try { writing.current = parseWritingAnswer(localStorage.getItem(writingAnswerKey(writingId))) ?? emptyWritingAnswer(); setValue(writing.current.draft); } catch { failed = true; }
+      setWritingError(failed);
+      setWritingReady(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [writingId]);
+  function change(next: string, submitted = false) {
+    setValue(next);
+    if (!writingId) return;
+    writing.current = updateWritingAnswer(writing.current, next, submitted);
+    try { localStorage.setItem(writingAnswerKey(writingId), JSON.stringify(writing.current)); setWritingError(false); }
+    catch { setWritingError(true); }
+  }
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /><form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value)), exercise.answerPolicy === 'exact-copy' && accepted[0] !== undefined ? copyDifferenceFeedback(accepted[0], value, exercise.feedback) : undefined); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && writingReady && value.trim()) { change(value, true); onFinish(value, accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value)), exercise.answerPolicy === 'exact-copy' && accepted[0] !== undefined ? copyDifferenceFeedback(accepted[0], value, exercise.feedback) : undefined); } }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {

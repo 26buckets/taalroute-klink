@@ -1,0 +1,44 @@
+{
+  "role": "instruction",
+  "voiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "0qLmDzgqulxcvv0yf3kg",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "format": "pcm_44100",
+  "maxIncludedCredits": 500,
+  "extraPaidUsageAuthorized": false,
+  "attemptsPerCue": 1,
+  "cues": [
+    {
+      "sourceId": "KSW-AC-HT-007",
+      "cue": "Je hebt het niet warm.",
+      "script": "Je hebt het niet warm. Luister en typ het woord."
+    },
+    {
+      "sourceId": "KSW-AC-HT-043",
+      "cue": "Dit is kleding.",
+      "script": "Dit is kleding. Luister en typ het woord."
+    },
+    {
+      "sourceId": "KSW-AC-HT-047",
+      "cue": "Dit kun je eten.",
+      "script": "Dit kun je eten. Luister en typ het woord."
+    },
+    {
+      "sourceId": "KSW-AC-HT-088",
+      "cue": "Je vaart hiermee op het water.",
+      "script": "Je vaart hiermee op het water. Luister en typ het woord."
+    },
+    {
+      "sourceId": "KSW-AC-HT-100",
+      "cue": "Je krijgt dit na een vraag.",
+      "script": "Je krijgt dit na een vraag. Luister en typ het woord."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "name": "parent word-audio gate validates writing successor and its unchanged historical release",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-writing-dictation-20261101.json: rejects publicationApproved",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-writing-dictation-20261101.json: rejects appearanceUnchanged",
+      "passed": true
+    },
+    {
+      "name": "docs/writing-dictation-20261101/local/browser.json: rejects checks",
+      "passed": true
+    },
+    {
+      "name": "docs/writing-dictation-20261101/local/help-audio.json: rejects checks",
+      "passed": true
+    },
+    {
+      "name": "docs/writing-dictation-20261101/backup.json: rejects verified",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-invullen-20261101/automatic-owner-approval.json: rejects mayInventHumanReviewEvidence",
+      "passed": true
+    },
+    {
+      "name": "lib/writing-dictation.ts: rejects modified own or upstream audio/code bytes",
+      "passed": true
+    },
+    {
+      "name": "public/package-audio/word-listening-20261101/repair-ei.wav: rejects modified own or upstream audio/code bytes",
+      "passed": true
+    }
+  ],
+  "parentGatePassed": true,
+  "negativeProofCases": 8
+}

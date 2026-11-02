@@ -1,0 +1,42 @@
+{
+  instances: 99853,
+  uniqueIds: 68103,
+  modes: 52,
+  goals: 108,
+  activities: 59,
+  variants: 143
+}
+✔ scripts/test-goal-audit-inventory-20261101.mjs (2961.831167ms)
+✔ all existing variants match the approved goal matrix; source exercises stay unchanged (2494.541458ms)
+✔ goal copy and light/dark label colors equal the approved matrix (1.6975ms)
+✔ unrecognised new tasks do not invent an objective (0.084ms)
+✔ published source learning content is unchanged (155.218666ms)
+✔ approved petrol logo uses master paths and retains the existing logo frames (5.668708ms)
+✔ browser and app icons share approved K geometry and retain six valid ICO sizes (0.308667ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (10751.305333ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.499209ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (14.749917ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (48.197917ms)
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+✔ scripts/test-unified-practice-navigation.mjs (2240.687875ms)
+PASS continuity: 1706 collections, 7475 small rounds, 49319 unchanged tasks, 1984 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (7711.616875ms)
+PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
+✔ scripts/test-word-rounds.mjs (1316.851625ms)
+✔ draft edits, a first incorrect submission and a later correction keep distinct user responses (0.945875ms)
+✔ damaged, unknown or oversized stored records cannot become learner answers (0.155167ms)
+✔ imported position drafts stay separate from canonical questions and cover the published exact-copy batches (0.072333ms)
+✔ available old copy answers survive the rolling history without replacing existing drafts or treating models as answers (0.265791ms)
+✔ 100 source positions retain the answer contract: 54 references, 46 new canonical questions (7.501041ms)
+✔ fifteen short stable rounds open through both writing and spelling without changing old collections (1849.7ms)
+✔ six meaning cues identify the sense without displaying the spelling answer (0.316583ms)
+✔ every full word in the new tasks, feedback and Help has an individual recording (4.097125ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11172.383666

@@ -14,6 +14,7 @@ import { PracticeChapters } from '@/components/product/practice-chapters';
 import { contentLevels, type ContentLevel } from '@/lib/content-levels';
 import { chapterCollections, chapterHash } from '@/lib/practice-chapters';
 import { learningReviewKey, parseLearningReview, updateLearningReview } from '@/lib/learning-review';
+import { preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
   allPackageWords,
@@ -130,6 +131,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
       try { localStorage.setItem(learningReviewKey, JSON.stringify(updateLearningReview(parseLearningReview(localStorage.getItem(learningReviewKey)), attempt))); } catch { /* Optional on-device scheduling never prevents practice. */ }
     }
     try {
+      preserveAvailableCopyAnswers(window.localStorage);
       const raw: unknown = JSON.parse(window.localStorage.getItem('klink.taalroute.attempts.v1') ?? '[]');
       const previous = Array.isArray(raw) ? raw.slice(-199) : [];
       window.localStorage.setItem('klink.taalroute.attempts.v1', JSON.stringify([...previous, attempt]));
