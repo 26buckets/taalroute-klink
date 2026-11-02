@@ -1,0 +1,3381 @@
+{
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-11-02T06:19:01.882Z",
+    "sourceCommit": "8dd144b1f6ebebaa9a604df55bf5c0008f05ee07",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "baseline": {
+    "application": "Klink",
+    "builtAt": "2026-11-02T03:32:07.893Z",
+    "sourceCommit": "c67c6f73518626c212adacf7e3a672856c697f84",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "allFourPriorContentFingerprintsUnchanged": true,
+  "bankChecks": [
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-001-007",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-001-007-0b20cebb53724527.json",
+      "bytes": 10045,
+      "sha256": "0b20cebb5372452783fd6b0cb5b8bb4040ebbaa8b2a492d642e7ded61e073d63",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-008-014",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-008-014-61ce5b0ff8b91dff.json",
+      "bytes": 10077,
+      "sha256": "61ce5b0ff8b91dff47021ccda839f278c013cf3cb8f9a5aec08283a7deb53749",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-015-020",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-015-020-6dea3838919d4c0d.json",
+      "bytes": 8667,
+      "sha256": "6dea3838919d4c0da3edc01dc9b4dacea08b529a893aec2148eb3563393441eb",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-021-027",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-021-027-fea50518f23ff47f.json",
+      "bytes": 10036,
+      "sha256": "fea50518f23ff47fcb87688d67735fcf3bcb8221a90cf4fe9d6b015458612604",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-028-034",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-028-034-b7c0fcb3bd9f3b33.json",
+      "bytes": 10038,
+      "sha256": "b7c0fcb3bd9f3b33c9d09061b1defb8a2db65ebf248dbe5da50bfab39291efe9",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-035-040",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-035-040-b7e6256a8a2f6e49.json",
+      "bytes": 8769,
+      "sha256": "b7e6256a8a2f6e4948f8bd9bf6417afc1582cf269487ba130c2e80d75bbf8f53",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-041-047",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-041-047-3cdab9f29a4a4b77.json",
+      "bytes": 9773,
+      "sha256": "3cdab9f29a4a4b77dbf3306612d4cf1167513e3aa70a3bf58c63034e3c5f37d5",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-048-054",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-048-054-8ddb33cb02fe4a01.json",
+      "bytes": 9744,
+      "sha256": "8ddb33cb02fe4a01dcaaa89fb6fd70e0f485282214ea2584d2b4c317486a88d3",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-055-060",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-055-060-c5100a7e8071b93d.json",
+      "bytes": 8508,
+      "sha256": "c5100a7e8071b93d726893a284f413985c16b848146439390cc475b6864ca145",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-061-067",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-061-067-014d33916b00bf87.json",
+      "bytes": 9811,
+      "sha256": "014d33916b00bf87f2631f92b2954decdc985b4bf3e143f9eac01a53ee10f40c",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-068-074",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-068-074-4319e650d8ef2c20.json",
+      "bytes": 9846,
+      "sha256": "4319e650d8ef2c20409e3dfbfd63e34d2a075fa2e7f64c4e7dc0ef4a2b9e2f4c",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-075-080",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-075-080-6d6f4cc67a77957f.json",
+      "bytes": 8570,
+      "sha256": "6d6f4cc67a77957fd58d20525c7fde22e466e9fed0355abd181873d6f3a92a34",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-081-087",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-081-087-2e59ac40a72736ce.json",
+      "bytes": 9921,
+      "sha256": "2e59ac40a72736cefa6ede995185297d055c4972749596c466c31c59e278fd57",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-088-094",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-088-094-c787b2c9bb3bb25a.json",
+      "bytes": 9951,
+      "sha256": "c787b2c9bb3bb25a9ec537a3b2d40deda180f76a551ece74c69fcef024a1aa70",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:paper-dictation:alfa-c:KSW-AC-HS-095-100",
+      "url": "/practice-content/klink-handwriting-20261102/ksw-ac-hs-095-100-7de9cc4937bdd353.json",
+      "bytes": 8705,
+      "sha256": "7de9cc4937bdd3539e9216bea85970a15df75bc988c39f59168ca94f5558ddd4",
+      "completeByteIdentity": true
+    },
+    {
+      "id": "production:copy:alfa-a:KSW-AA-TN-001-020",
+      "url": "/practice-content/klink-writing-20261101/ksw-aa-tn-unique-c89d5fd205683ac5.json",
+      "bytes": 3346,
+      "sha256": "c89d5fd205683ac545fd041961941937fb87b60b421f751da8104134ee80d64b",
+      "completeByteIdentity": true
+    }
+  ],
+  "mediaChecks": [
+    {
+      "src": "/package-audio/taalroute/klink-woord-kat.mp3",
+      "status": 200,
+      "bytes": 22720,
+      "sha256": "584718b25d26ebcdad8cb99f5acf14dc4254eafed0e9a9f32c76e2e1d49b18af",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "kat",
+        "encoder": "Lavf62.12.102"
+      },
+      "pcmSha256": "422e302015cace8d707c066f0c175102bf1f592b122236f1873678f7869fc613",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-mes.wav",
+      "status": 200,
+      "bytes": 77808,
+      "sha256": "7ffe6ca23e587b16a1d98c34eb84e17f583c29dd4bdb13e437f777a79336f8e0",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "mes",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "58dbc61b1e90b215f3425b3a36ae6913c7d086e75cbae0fb60f057e979ad8aae",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-sok.wav",
+      "status": 200,
+      "bytes": 70752,
+      "sha256": "93a55b047401f1db1b6d7a272f4a5981079abeb2547e8c4050c0dd8efb91655b",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "sok",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "8e7a9e76ed3986a0d3874e8f37deeefd599eea710e4c2f60cb1c4f8061a29edb",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-pet.wav",
+      "status": 200,
+      "bytes": 63696,
+      "sha256": "841219c906db7ccba5f31932ba3c43905435487a2016535c5591af49f398144c",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "pet",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "e85bbec822ee095bfee4e04fabd3dc92a65d27cdf9ea5be16b615ca90e574e0c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-zeep.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "68124c491c15cd2a0143ae4bdcbd1dba249eaaa2b12157b844bd36aee51c9e28",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "zeep",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "1d4d6b1aeeed11e7a0a4d2576eaaa6c0661ac84653533f41cda5903056ea6fb4",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-boot.wav",
+      "status": 200,
+      "bytes": 63698,
+      "sha256": "ce414d5208e49900954ccac04fb96b9ab0c24e16044d4b7980a5e1df7a799c49",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "boot",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "6e6848d56bb6033de4b7fcbda35bdf785cabbda5a697cda07148b643596378b8",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-jas.wav",
+      "status": 200,
+      "bytes": 70752,
+      "sha256": "6ffa7a9b1713ee74bc9397eb00d9d9d61317bd630be2d6be1e09269e790708dc",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "jas",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "b57c118711ed41d88bf5f1a1a95202573130544abb18f7c727d1c88e7daee6df",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-zout.wav",
+      "status": 200,
+      "bytes": 63698,
+      "sha256": "1536f19421cc30663fb7d1ed040ec38db835b6d1335c692fc04fe8e7126f4e0a",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "zout",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "17fc7b31b8696f779e664355b3e8104a9f98e008cfe564982ae50255e8dfaf7b",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-muur.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "0d5e58d11915dc177d4470fae2c38af9bee3140cdc5b1dfb3b84b6100abe97e9",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "muur",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "5e9e351fcf7ea11f77676fca1a32d92abb8f56859266f292f38b29e640a3a644",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0389.mp3",
+      "status": 200,
+      "bytes": 16448,
+      "sha256": "120e18e09cca0f9011c33debcd71e92e73eb5ae3217a668fecb427c3725f01aa",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "doos",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "b798fa6b84e3d27ab4d31042fea8746ba239705d3ce48a9e0e47afe382ea8ead",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-brief.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "ec2cdface1c61f475efc0184e5c8865948c0680b732715f73736536cbcd0eac2",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "brief",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "f66df2be58abdbf06c49316fc0fea65dafb3e3be9c2086590b12ffb575d4c7fa",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-broek.wav",
+      "status": 200,
+      "bytes": 63698,
+      "sha256": "e0be75e5fb959c0b3982fd0bb0b93a1effe957fada2e321637fa94366501443b",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "broek",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "62226941d80df1601baaa1942eea6f2102ee625466a3d8e6746baffb45ba244e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-straat.wav",
+      "status": 200,
+      "bytes": 84868,
+      "sha256": "01a91a28a7e5e55c820671f556a4681a4ac1e19646a9d25ad30b84717049fcdb",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "straat",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "089b6ffb98f39021ad9a540cc0da88f8fa0d02a8ce9b02abc5fa36bc5c19b15f",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-jurk.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "3e155c761175d806cf30a5f1e376517569217708ba31e0b30483c9c4a36ddaf3",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "jurk",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "21971c44111f6df1a057d4bb7d78d3d41913c98f37170106e54fd6d924465fe9",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-lepel.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "6b7ae5bc43560e1d8bf51c37eb4b3d3815cdb1476ba995302a5d1fb315b98416",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "lepel",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "c2014fc3c3393c2b7714147e410969e08f05c487ad8bef8cae9290fd056dde9e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-vader.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "80197828a2e60e681766f46cace368c0ff09696195db91b32606faab24064b1e",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "vader",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "529db99bc296e6937c17b7b81205b23b229472df87218cde2cf48fad8fbe82bd",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-moeder.wav",
+      "status": 200,
+      "bytes": 56644,
+      "sha256": "51db4c9babec5787c0f3bfbea579bd7f3d355a80c034703bf7a9e74eede28502",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "moeder",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "aeef402eb6274861dde12a2aaeec2f2aa89f9276b4ebf9cbef00a5891b9d1e4f",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-water.wav",
+      "status": 200,
+      "bytes": 84866,
+      "sha256": "b299445e980c2b8304e9343d229107a8d64f3761ad8e62267f2c549b40afa22c",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "water",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "08a95c6b4d1cd273283a6cfff70d985e763dc5bc73d58cb9bedc891f28b5e86f",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-winkel.wav",
+      "status": 200,
+      "bytes": 77812,
+      "sha256": "58a77e534e1a58fa4e258a7900895b46536fbb66d9ab5aeeecfe9878c010d2a5",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "winkel",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "6da117af5268f60a200eda5656bcdc68ef3d5930a43170bdd6041ba3f02fd592",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1520.mp3",
+      "status": 200,
+      "bytes": 16452,
+      "sha256": "5cd39f28c3d0599772c0952e44986a93ae5f42714915fa7426ba20373b03aa97",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "telefoon",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "1c01efc95596e2657521fdb540b4e81fc3c423bfa5409e432b49eb6c44c1b0f7",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-tas.wav",
+      "status": 200,
+      "bytes": 56640,
+      "sha256": "04fcd9987d3d440d1d090a1c179346f6485d75afe8cd7d33d19439f79a8e2c41",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "tas",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "f3f199d584f4b6d15fd05f81fdd63ae70c709b53076878e2b2d77fc4efe545d4",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-pen.wav",
+      "status": 200,
+      "bytes": 56640,
+      "sha256": "13757437f16e810ba29aef6275708e8279ea35abe3d884d4599d398702f9cf95",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "pen",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "d18a7259b86e315dc6d0258dcb4fd3cd558e16d62cf10ab62aa4864695a669b7",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-bus.wav",
+      "status": 200,
+      "bytes": 63696,
+      "sha256": "43c23b0422bda3d67d0949185298be1355f7aa178bcb32093581c6944e8bf236",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "bus",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "e2030e8b440ea2eb702867843da770a1ab2528345ee0a0c7dc5a57e55ede856e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-kop.wav",
+      "status": 200,
+      "bytes": 56640,
+      "sha256": "cd1c90a63cd78c0c7a24f8538c651f156522feabd85e07e22aad6132101f44a3",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "kop",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "c3d4b8988440c02b34794fd51d57f1382738999af272d9ef6a3d592200112afb",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-hand.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "a0d66fd5d3cdf72e6a763c239cb928e848f3b8f6990c3bf5ffb158ad9a7e593e",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "hand",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "e1b265803b472b142bdd0ff8323e47f088f472e6d514533d5414d9c5f0d918a4",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-bord.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "0293759a45a52187fa53563bff1754c6770065b1e9b340dd1c2176b72286ccd7",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "bord",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "9b591ee329ec7297800e38447487b195261c851d934305f63e78b227ffac8385",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-melk.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "5af575318003a2beef2e32718fd94436fa158ee5527386d34d95f3d4970fd795",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "melk",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "595798b83c040f2ef30e0d0aa88f0e094901f09f6ab856229e1fc0cd1bb1bb76",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-kaas.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "860452b8eb20f3e61be73e0ca1c0345ef3efa5c824e416b96112b734697571f2",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "kaas",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "71d9a3892533b24d2b0d0b41194a4b4d3e4b2401313567fc9fde229731c35af4",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-raam.wav",
+      "status": 200,
+      "bytes": 84866,
+      "sha256": "c998b33f2f3f96ef927415cb19e0ec785ef5988acade403fa16e7ee8d6bd9ee9",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "raam",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "77fcc60b5aeca56f65b583cee7a494bb8edc52b94572e85cb4b7a7a4b84a79bb",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1468.mp3",
+      "status": 200,
+      "bytes": 13941,
+      "sha256": "703cd8ece0e97f54c0165f7e3efd8e6e7e5f3b2ecba1daad38ec493b0c868056",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "stoel",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "e04cc1785338d132cb4fb90f9ea775aff843a719c1567e5b3b39185f4dd60a80",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-deur.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "5e2e12535f50ab0619e3218b0682629091ff5aa1bdac79517f5e8bc70c724e55",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "deur",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "b2fa9d8e54c7a4e42fc4d774533497595867dabf38d3cc6742ca0278b69d58c9",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-vork.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "74fe020b5fa7c41fd5108af0c0a3cb263f02ecf042901e85edc1202471f356bc",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "vork",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "3d4ca9b6532a8ed5f261266cb3243b19f9418f5d962fa3238098c41f08ed5856",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-fiets.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "923f45a1ef16944bdf7c317808367113f80af68d7259e65661ecd3eb248b3fef",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "fiets",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "fd88a53616ce9cb9d3c35ab1aa1d79083eeb058fb28bc9bd6aed3b267d8e95ad",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-trein.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "2f809662c9a6bbc275f5423958202fe20e003e9060203ff9d0a2b0c9431f29bd",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "trein",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "ba913371f6ccd9ea7f3f289958ed0e156255999502637293e46b02f8a053fd97",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-sleutel.wav",
+      "status": 200,
+      "bytes": 70756,
+      "sha256": "83b151d9129462eb0720891f72a38261f70865bb8b08230baf5bfbc64f9744ab",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "sleutel",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "70af53f5f5e265a78af57908d1a03ad19fcce8c19ca680a0bc923bd2b4bb1f5a",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-spiegel.wav",
+      "status": 200,
+      "bytes": 84868,
+      "sha256": "4c45062303768e14652d7fb859a089e4d5b80f26b195adad02ab54f1fe508625",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "spiegel",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "3ba80d41cca8ad4da94eac5bcd4972b28ceca9b7b5e6f097e4c923e9f305551f",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-keuken.wav",
+      "status": 200,
+      "bytes": 63700,
+      "sha256": "f8c38c5e1cf0420f4aaa420f1ebf32d71fb5c9d7bb833c7ec94ea65201d51dbd",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "keuken",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "114327d84399fb27ecb4b37f8487464ceb8b42bdfb528e30e586c9ed6842ac25",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0058.mp3",
+      "status": 200,
+      "bytes": 15198,
+      "sha256": "a6026301dfe2bf583304b1e2e303a683816171ddc623a96b18106cc14d440e12",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "afspraak",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "ba7928da06d2fc3739b4af8593ba72a20c2de4d31536e1c65e99c4fa48ff6832",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0645.mp3",
+      "status": 200,
+      "bytes": 13944,
+      "sha256": "41a0b0bc736f04306a0037aa291c585456e56215cbeed32f4db8943d3636c57c",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "handdoek",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "5fc80d016ba8222584721bb81378ffb526cc34af114575cd26d67e7d76ca7980",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-stoplicht.wav",
+      "status": 200,
+      "bytes": 91926,
+      "sha256": "02da6a01f62db71aa296001287034babbd39d434441eefb6c4e7506ef74f3845",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "stoplicht",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "7a1549c3e99be620b7457402bbef5941004829531faa1e911b60e4a4dca0266f",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/word-listening-20261101/repair-ei.wav",
+      "status": 200,
+      "bytes": 63698,
+      "sha256": "1d42ef46dac963fab23c8e56a4950ee465b8ebdb54547d6837a71555b62ecbac",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "ei"
+      },
+      "pcmSha256": "161251fa86310c0942416b57a332c725d48f42e9b5828ac04bcea9456c4865dd",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1114.mp3",
+      "status": 200,
+      "bytes": 13939,
+      "sha256": "9185267abf45585f072e4f878fb997249287369f3dacd665b782049ed906ca20",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "oog",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "ea19a7e9e6cd7e16dac9a6966406480b337ba7eabf460350a62f5bd9802e918e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-oor.wav",
+      "status": 200,
+      "bytes": 70752,
+      "sha256": "57246c707a331378057639c63e4bfbc4bfc74631e7b6d7d7bfc4393fa53ab3e5",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "oor",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "5cd3d4449c139361e7274fc6c8746f13dcaf21a7f0023696781ab81f97b543ce",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0104.mp3",
+      "status": 200,
+      "bytes": 13939,
+      "sha256": "072ef7ad52ddee2ca52652582d4fced676157bc0175d0f34a90940e2e943ee6a",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "arm",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "b9f8e1bea3ebdcc325e08b011bd4e5b02da925029327eda7c6546f7567c6c3ac",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-tand.wav",
+      "status": 200,
+      "bytes": 63698,
+      "sha256": "4d277aaf7d283e0bec15a9d9a74fb6b04897b5023b9d263b5a9b021990ff07cd",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "tand",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "dfa0ea3656196651f14c3b2627ed9b98a2f6ba8ad80b54c19ccac30d23e21d07",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0795.mp3",
+      "status": 200,
+      "bytes": 12686,
+      "sha256": "c93cbf0e88074847b5e8bf59633feba96ba91f493f4dae24a21e1d2ed3ce6c55",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "knie",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "53afbef6a761e09896c72d8081d0abdfbf74ecadec4bf46b3a0364101f67395e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-vinger.wav",
+      "status": 200,
+      "bytes": 77812,
+      "sha256": "007769565073cd23e0606c725d9d521ac219b863626ba5dbfb198038e75a486e",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "vinger",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "2570bc87fdd3bd8ad3c5b057442b7aa42f71e253ed6235f916550a379e1590fb",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0654.mp3",
+      "status": 200,
+      "bytes": 15194,
+      "sha256": "08e26fc08680f8a2ca2c3b9cff5631831090a58b68657e81bbe7263a3e549680",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "hond",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "34882d70fb666bcdf7c373bba233faf0d1e82c2042af6b2f98cc0192855c7b73",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-fles.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "0f435b7657fb6a29101c6ee5163a1c1d5bf864f259b5aef6914f3b162f68f4c1",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "fles",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "e22d7f8ab5b3d135832ec225e67be6aef6e38b8e4adf4bd65dd7f974fa7ee329",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0572.mp3",
+      "status": 200,
+      "bytes": 15194,
+      "sha256": "2604f2aabd7af4e22612e96acc15401f91e8b29500f972e2ce3dfa713f0e5ece",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "glas",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "a738361280167ca712eae22a8a9ae49d04a3a58ec6ae04abbbc9d16e1c4032be",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-klok.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "5d259fee13ef27b8ae5fb5a76107835757e2f0bf45a0604fc104c045a0aa2103",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "klok",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "2966c51f85e05086d8d01183abe4dcab770ee8b03014de7aab704a58e9247475",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-oven.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "3ada3b14084ca99ae25256ccd531039bbc677420c6bddd5cbe8e81222e653107",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "oven",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "344b239fca6ed68263477860c43bce2a8da1eb5344f66f0f9e1285654668f05e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-koelkast.wav",
+      "status": 200,
+      "bytes": 77814,
+      "sha256": "8e3ae2bab599647ff66362f07f7a669cbb8df02968af70b9057ba6cce17f8e92",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "koelkast",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "5820d6c296c8f11ce97898a84981b4c8c48f1d2de86603371ac8d0f9b21c80b3",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1585.mp3",
+      "status": 200,
+      "bytes": 15194,
+      "sha256": "2c99f9c4a9c483ebd9d89dba174b6bb1e5f81592bcaa8ca43a579ce423183469",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "trui",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "1b200cf1b59997066cc83136811bf938668ad61befb9ae4ffbe33b8698057cc8",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL2045.mp3",
+      "status": 200,
+      "bytes": 13940,
+      "sha256": "98bc18877540f94db1038f8f51140c34ca60980649c2e54cbf7231458100d44a",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "vest",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "b0055d5d3c6124f8c9c6a01dea7a899a7156e44a67d0b7ccdfb6a522cf4cb930",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0393.mp3",
+      "status": 200,
+      "bytes": 12688,
+      "sha256": "60161c02959faf24146dc156a0e515cd7199447d5f23076601f3e2e6a79432c5",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "douche",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "5cb2e352ab699c6c0e13e5312da8ae40a8a4e1138a88ce0f8d34818e29d241fa",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL2006.mp3",
+      "status": 200,
+      "bytes": 15196,
+      "sha256": "5cfc8a4feaf52e0039ecfb1d3e8a948ea946d83cada6b6cdfb3e2208f53c373e",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "toilet",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "83005ccf2e0a5c945b5498ca939648b9e82e2b034ff60cab3aa036ba0249a503",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1451.mp3",
+      "status": 200,
+      "bytes": 16451,
+      "sha256": "2bd057a09585b48d058e1dc455f86423d9f496010fe28601430a1a437473dffd",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "station",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "627300a705e520a407d9e105c83d9ef0ba70f6a1c4f64458e24f3eee6b9776b3",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0219.mp3",
+      "status": 200,
+      "bytes": 20217,
+      "sha256": "cff2a7496fcf099132f3a998e1c2b20970f2bae0814a37196235fea94f18af49",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "bibliotheek",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "d8828abac8965a3975cc520174a3b0ffc3daee464ec604787384f3ad2653055c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-aardappel.wav",
+      "status": 200,
+      "bytes": 77814,
+      "sha256": "22acade07c9491beba7464c1d1c6e48ad9074c75d37c12b58f7a163bd2a77bfb",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "aardappel",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "01ae5b02b710b335821fa9333e86653550bfaed9abb4090928138b1aeb4faa1e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1251.mp3",
+      "status": 200,
+      "bytes": 12685,
+      "sha256": "a6c90691b4031749b92a3548d98f7ec9cd1666b479cafc572d403a5c94c79467",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "pot",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "ae6ab1566809f881b721d6341e75e60dfcfb9941249abc55733134a4a23f249e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-kip.wav",
+      "status": 200,
+      "bytes": 56640,
+      "sha256": "3b6a199d5d980b3e4a226766351546ad14651beb4caa11c25808033ff817fa9e",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "kip",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "ad34107d6dbcea35e1469df6ee82fa8658d19ceab3ccc27f55e8c58c7f7f0b75",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1021.mp3",
+      "status": 200,
+      "bytes": 13939,
+      "sha256": "c50be24e61157963543a02389a5a7f8347d5f747c9277bdecda84c53e0811f07",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "net",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "75f1d5f31a3e9def10e523230cf3a4f1446a3de3b751addabf8745823e27a370",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-touw.wav",
+      "status": 200,
+      "bytes": 70754,
+      "sha256": "3a994de3c7c64373e105024ab6c120af0406b968f879ed0a76ced5a7c2b4f042",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "touw",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "be8f17fa06142265436c0307c16896eeec1d631d1c8dda8c5a11d2c708483414",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-061-7d0821299fd7ed93.wav",
+      "status": 200,
+      "bytes": 41168,
+      "sha256": "7d0821299fd7ed93f4712f5176f6683a9f0ce1b0a57202886da7e4a1b2bb8f8e",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "mop.",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "e642bef4cf5db6bf21416c22a62e88d2fa436924952a54d2fa3a3703d94a0a2c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-hout.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "3054e9d6e72a491fec1e6478180bc98067f9589e5af083af7af69116f64d3231",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "hout",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "4f79406ce09fbe28f1d4679d54aa6189828ae9623206ec7f4444166badeda04e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-383584731604.mp3",
+      "status": 200,
+      "bytes": 15194,
+      "sha256": "1c32b9c24ffd4e8f71ed508c7f7962d911c925e1d569817c535c4b822c75ce33",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "geit",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "350f23b23519d3a1603a3a2c7aacbd7b737d5d2a78fabc482f213c9107e1d34a",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-fruit.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "56d8d995010f602fd1242429c47dabeea200ab67a9a443e8ff8648a12e6559dc",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "fruit",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "da19129a5f351ee465b1dc2d976d05fc075ab05290066066cdc8a3a1a481080d",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1197.mp3",
+      "status": 200,
+      "bytes": 16450,
+      "sha256": "8afaf38df2c675377e9ddfddea419da0db2026a1f97dcb58dbeaa94e7eb60a18",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "papier",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "a5e34e01b99ee5b9bdee7f8e82d7b20f41d215311b7c7c8b073d601246eec70c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL2042.mp3",
+      "status": 200,
+      "bytes": 12687,
+      "sha256": "33be626da894a88854c0afffc662768985d4600ac0d795a725574b4c7a2b77c3",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "taart",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "bb8722b05814c16f5d3e51ea52f06d2eaf51f1a933a3cb6c82fcc8e25fa07dfa",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0921.mp3",
+      "status": 200,
+      "bytes": 13941,
+      "sha256": "aaedf464e2780eaa95d7b4b9a501dea12e69b51cccee61df91da6009a6fc822f",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "markt",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "9bede31b2f4ed6dd763642b62a7c02ef36166c679d298bfc1137e57c7843c6a5",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0796.mp3",
+      "status": 200,
+      "bytes": 11433,
+      "sha256": "1c670990d898c1f2c197e80414a177c9c58c2f7a68713156cf00ebf53703a519",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "knoop",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "a9ce1f9a9a594fbbf7aba4bbd76751fadddc2d428ec5ddc2e546b05b4dffc01e",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-b5100979af6f.mp3",
+      "status": 200,
+      "bytes": 13943,
+      "sha256": "a9399ad3d577174b1610bcaed5ff614667336d6943b0fd4ae46dae83e3aa5bc2",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "stempel",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "fda436feb96e86bde0b5d50e0aa7f3e86b67aa6a28736bd27836de14f6536390",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1195.mp3",
+      "status": 200,
+      "bytes": 15196,
+      "sha256": "efc8335eae4baa0b6a430d2d2d15109461e6cb22501256074c00c3ea14cdd5e3",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "pakket",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "25a36a123590f7ab917af5128bc53c11e7e868b12ba61af778c03f1e8bd9a24c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-485a7d0a5efe.mp3",
+      "status": 200,
+      "bytes": 17706,
+      "sha256": "3adef8e1d7ba448942ca6f76e5141e31616fd5354c34494010636fc721324eb1",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "betaling",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "e8c6cb02b241471b176bdfac0bc224fa62345358de712d63b465dcd3147e4d0c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-072-e0e2d10cbe6e8a42.wav",
+      "status": 200,
+      "bytes": 73938,
+      "sha256": "e0e2d10cbe6e8a42324df5f4148c7fba46b82bad1fb3ba9fdc373902005b6888",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "spijker",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "bc864e88681f6afee1e4c79aa6e281708eb52868bba088329ca3abe6e141a1b0",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1202.mp3",
+      "status": 200,
+      "bytes": 18962,
+      "sha256": "8156ce2c8ec2f5847795ef6a1b507b5af89786978c1edf8708f5ba0bf57c4716",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "verjaardag",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "da78cb2b1d5f1c91e3c674712d9c10f0837d9dbf5275471144b3b7660a89df19",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woordgebruik-20261101/WU-faaec56fdc503fd180e7.mp3",
+      "status": 200,
+      "bytes": 16482,
+      "sha256": "5ea47ec414f6c0066cb694b4dd8512aa2dda4f663b3d0a4968c056659ca959db",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink Woordgebruik",
+        "title": "boodschappen",
+        "copyright": "Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "pcmSha256": "7da0968962a291ce7357a94c3b2e5847fd33e31b7b6ab18d26a7eaa4ef58f1cc",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-077-283cc763b4c51f38.wav",
+      "status": 200,
+      "bytes": 98518,
+      "sha256": "283cc763b4c51f38e01c91f23d03c4dff8f82a31eac9348964af01516050efd2",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "sleutelbos",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "177dee3c938d7a6f9002de40fa663a5a63d7285df7e6958fee2a6b50757ca214",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-078-d2a397efcb95b520.wav",
+      "status": 200,
+      "bytes": 79202,
+      "sha256": "d2a397efcb95b520d39a5f75ce63ced2212d30a964e3a391b696a7a93312b1dc",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "schutting",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "7e2aeb007d60ffa4536912ea921c5659515a622dc5739489d9d45339c0b1f510",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-kam.wav",
+      "status": 200,
+      "bytes": 70752,
+      "sha256": "9d51429c331fd061e31791f052ed94581a6e22d8c44e9d1edddd3491f4f5b005",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "kam",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "4f937701deb1d7dc5922f454cccad45d08bcf70292018daab09e385b7e1b8df7",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-zak.wav",
+      "status": 200,
+      "bytes": 70752,
+      "sha256": "defd1181955190d559b541d7a26a158527cfba224e84ee2e437aa55cac6777fe",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "zak",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "ef13f34070a162a4967ab5b629e94ab23a123dfaaedca4ec42d701651b2a36ae",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-bel.wav",
+      "status": 200,
+      "bytes": 70752,
+      "sha256": "a6fba57b25fe3a2407640a0aef9c8ef54a52c432ac05a408c5b31886e85b1688",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "bel",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "7eae78d37b547eb8c5a0b277702b8122221ba7a06aae44f3601e826c96fa0377",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1498.mp3",
+      "status": 200,
+      "bytes": 12685,
+      "sha256": "34795eb454badebdfa0c957db4dfe403cd4d3058fa4e79737f181d4cf9c43080",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "tak",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "2a3d63ea2501e5331c20751c59bdc59bb35cf90e5d1f71076178df70090b8e33",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0177.mp3",
+      "status": 200,
+      "bytes": 15194,
+      "sha256": "b7fff869744ac383478a5b3eff8a03dea819114ca83fadeebc75cc6612a33930",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "berg",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "7cc0546b0e264b2d1bf1dba764533bd934fbc08c93ef42c87181b590d79a7e0d",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-084-1b7014c55125687e.wav",
+      "status": 200,
+      "bytes": 50644,
+      "sha256": "1b7014c55125687e7a8784607d3646ca73437c42aaf8494ce841f98981668d65",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "mug",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "435171505c04e5e491351eda6381d5b4b473dfa50c57974ae79b45cb70675fe3",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-2f9ac7a83457.mp3",
+      "status": 200,
+      "bytes": 12686,
+      "sha256": "efbcedbb7aad3fcfb489fddd535e671bc45b6bb580cfeb8a52d8c9d897d59836",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "hemd",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "5b9c04b8e209d73d340120ebca4569a2be6353a725312bf873ebeb29ee279b38",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL0589.mp3",
+      "status": 200,
+      "bytes": 12686,
+      "sha256": "fe521a2ea720c8bb3016bcce5dbb509f37e11eb6f7de99e14e7249e3873893d5",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "gras",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "e5b7943d562f0b791af2372fdb73305901f7a4626a6467554e54a5dc83e3ae42",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-dfcc8fbf0de5.mp3",
+      "status": 200,
+      "bytes": 15194,
+      "sha256": "fd9c534ef6817e90c21ea9cb2223c705efc8111d79c86ed4f09501be3600db36",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "vlag",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "be6f13c1ba2f60684097e0b201a7fec28b090bf10ec45a25882e28c56b09463c",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-zand.wav",
+      "status": 200,
+      "bytes": 77810,
+      "sha256": "c14bc76aef5b11f401da3465825a0c1a93e53b949ccf8d8721330d543340deaf",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "zand",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "9d302f293be62b7ba6a40b76b81f27e5bd2e9b6cb959a491bc94f61275dead72",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-sneeuw.wav",
+      "status": 200,
+      "bytes": 70756,
+      "sha256": "ab4b943074f8686da44335df69e258f85b3d73f72bfa54e3217e682ec0c87bbb",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "sneeuw",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "7826af3ead3f075c218f8328f17abc2b3dc6850f07004edc9c68a5e1d534ee76",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-091-354115685b0b708e.wav",
+      "status": 200,
+      "bytes": 94418,
+      "sha256": "354115685b0b708ead3754781a933a270ca63a19bb0fc8861a5823470d171249",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "schild",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "61f4c898fb5a1d3503bfa7c42035079658a1a75775366fa490596d3fcb1eccb3",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-090-883f425fa1010461.wav",
+      "status": 200,
+      "bytes": 69840,
+      "sha256": "883f425fa1010461812a82c5b20c9c6bfd56030fd14942a69f076b6c41b06bfc",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "kruik",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "49de1f55b8219d90bcdeb6d046d0485a26d830768c21bca16aecdb385de8120a",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/taalroute/klink-woord-speelgoed.wav",
+      "status": 200,
+      "bytes": 84870,
+      "sha256": "1f94d30aff05d490b474ab541c7b4df85d3a6c650f2694ba8e5e8bf4a9e04c1f",
+      "metadata": {
+        "artist": "Taalroute",
+        "title": "speelgoed",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "41e01e668f3694d6ae76559d755abd281e8453a0f78ab4f25e39534f7a85ddcd",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/B5R-bc825a060946.mp3",
+      "status": 200,
+      "bytes": 13943,
+      "sha256": "0631cb07f6d5ec4d7457f83f2da5ed2069adeec476b913beb2ce0d230ffbb521",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "voetbal",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "c4b00e5e85585cd772d0e65027fb8baed76a0183d20e4d53bb93357a58a80393",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-094-409f76e88a86054a.mp3",
+      "status": 200,
+      "bytes": 16447,
+      "sha256": "409f76e88a86054ae61f420e3725802fb1754126e15e9d5660113b26eedddc52",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "schooltas"
+      },
+      "pcmSha256": "5207e71d59ceb1ce2f0cceb781b25288807c550c198c5047df9dac7a0c08a3c6",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-098-fcc9e1f4bf169ee0.mp3",
+      "status": 200,
+      "bytes": 16029,
+      "sha256": "fcc9e1f4bf169ee09fec07fa3182555dfc41589edc14d104bc40ec6436e59fca",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "fietsslot"
+      },
+      "pcmSha256": "d6097f0a1c1614efe0ee7fd64188befc493d2edecc30a7167852c6c6fb896376",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-095-2ac51221cacd4c0b.wav",
+      "status": 200,
+      "bytes": 73942,
+      "sha256": "2ac51221cacd4c0b1029bc038d732afe037b4224e04ecef9ba6d47cc62234535",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "pannenkoek",
+        "album": "Taalroute - Klink - Hoor en schrijf",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "pcmSha256": "65d5572d996bbe77404362bd1432256c099b53484cf01d91e4967382bafa54c3",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1715.mp3",
+      "status": 200,
+      "bytes": 15200,
+      "sha256": "7a884c043aaa7cac30c72e0dc9838e445f6ce6f16e46d6da242c3ff720527cce",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "verpakking",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "dfb7a9b155d259b4fd27f652ebcbfabc8a053633392573a78b2fd1de8cadfaa6",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/woorden-20261025/TL1215.mp3",
+      "status": 200,
+      "bytes": 16453,
+      "sha256": "ff323faa1de8e7cb875d5f1d224f16e8cfc1130c3da93a8fd32c79fd744380f2",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Taalroute",
+        "title": "woonkamer",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "8bdf9d6dabee1ed95b92b15232f18d95ef1e3c92510da5ea2b7732f700bebea9",
+      "fullFileReadback": true
+    },
+    {
+      "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+      "status": 200,
+      "bytes": 40725,
+      "sha256": "c7689f211a34271e9acb367b444c48794e1bcbbd203150328d743154c174e664",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Oefeninstructies",
+        "title": "Luister. Schrijf het hele woord.",
+        "copyright": "Taalroute"
+      },
+      "pcmSha256": "86cc02ae4ef66fa7fb0fd0c3e72509c7de84dee88bbf5cd907d07000eb796f0a",
+      "fullFileReadback": true
+    }
+  ],
+  "native": [
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-kat.mp3",
+      "duration": 0.8819791666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-sok.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-pet.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-mes.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-jas.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-zeep.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-boot.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-muur.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-zout.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0389.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-brief.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-broek.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-straat.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-jurk.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-lepel.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-vader.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-moeder.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-water.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-winkel.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1520.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-tas.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-pen.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-bus.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-kop.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-hand.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-bord.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-melk.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-kaas.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-raam.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1468.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-deur.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-vork.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-fiets.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-trein.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-sleutel.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-spiegel.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-keuken.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0058.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0645.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-stoplicht.wav",
+      "duration": 1.04,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/word-listening-20261101/repair-ei.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1114.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-oor.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0104.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-tand.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0795.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-vinger.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0654.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-fles.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0572.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-klok.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-oven.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-koelkast.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1585.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL2045.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0393.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL2006.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1451.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0219.mp3",
+      "duration": 1.2,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-aardappel.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-061-7d0821299fd7ed93.wav",
+      "duration": 0.46439583333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1251.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-kip.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1021.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-touw.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-hout.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/B5R-383584731604.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-fruit.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1197.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL2042.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0921.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-072-e0e2d10cbe6e8a42.wav",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0796.mp3",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/B5R-b5100979af6f.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1195.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/B5R-485a7d0a5efe.mp3",
+      "duration": 1.04,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-077-283cc763b4c51f38.wav",
+      "duration": 1.1145416666666668,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-078-d2a397efcb95b520.wav",
+      "duration": 0.8955625,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1202.mp3",
+      "duration": 1.12,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woordgebruik-20261101/WU-faaec56fdc503fd180e7.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-kam.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-zak.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-bel.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-084-1b7014c55125687e.wav",
+      "duration": 0.5718541666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1498.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0177.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/B5R-2f9ac7a83457.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL0589.mp3",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/B5R-dfcc8fbf0de5.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-090-883f425fa1010461.wav",
+      "duration": 0.7894583333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-091-354115685b0b708e.wav",
+      "duration": 1.0681041666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-zand.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-sneeuw.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-094-409f76e88a86054a.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-095-2ac51221cacd4c0b.wav",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/taalroute/klink-woord-speelgoed.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/B5R-bc825a060946.mp3",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-098-fcc9e1f4bf169ee0.mp3",
+      "duration": 0.9353541666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1715.mp3",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/woorden-20261025/TL1215.mp3",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "chromium",
+      "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+      "duration": 2.48,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-kat.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-sok.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-pet.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-mes.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-jas.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-zeep.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-boot.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-muur.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-zout.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0389.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-brief.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-broek.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-straat.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-jurk.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-lepel.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-vader.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-moeder.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-water.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-winkel.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1520.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-tas.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-pen.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-bus.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-kop.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-hand.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-bord.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-melk.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-kaas.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-raam.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1468.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-deur.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-vork.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-fiets.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-trein.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-sleutel.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-spiegel.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-keuken.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0058.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0645.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-stoplicht.wav",
+      "duration": 1.04,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/word-listening-20261101/repair-ei.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1114.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-oor.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0104.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-tand.wav",
+      "duration": 0.72,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0795.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-vinger.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0654.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-fles.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0572.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-klok.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-oven.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-koelkast.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1585.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL2045.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0393.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL2006.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1451.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0219.mp3",
+      "duration": 1.22775,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-aardappel.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-061-7d0821299fd7ed93.wav",
+      "duration": 0.46439583333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1251.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-kip.wav",
+      "duration": 0.64,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1021.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-touw.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-hout.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/B5R-383584731604.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-fruit.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1197.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL2042.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0921.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-072-e0e2d10cbe6e8a42.wav",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0796.mp3",
+      "duration": 0.6791666666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/B5R-b5100979af6f.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1195.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/B5R-485a7d0a5efe.mp3",
+      "duration": 1.071,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-077-283cc763b4c51f38.wav",
+      "duration": 1.1145416666666668,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-078-d2a397efcb95b520.wav",
+      "duration": 0.8955625,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1202.mp3",
+      "duration": 1.149375,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woordgebruik-20261101/WU-faaec56fdc503fd180e7.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-kam.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-zak.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-bel.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-084-1b7014c55125687e.wav",
+      "duration": 0.5718541666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1498.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0177.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/B5R-2f9ac7a83457.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL0589.mp3",
+      "duration": 0.7575416666666667,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/B5R-dfcc8fbf0de5.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-090-883f425fa1010461.wav",
+      "duration": 0.7894583333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-091-354115685b0b708e.wav",
+      "duration": 1.0681041666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-zand.wav",
+      "duration": 0.88,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-sneeuw.wav",
+      "duration": 0.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-094-409f76e88a86054a.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-095-2ac51221cacd4c0b.wav",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/taalroute/klink-woord-speelgoed.wav",
+      "duration": 0.96,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/B5R-bc825a060946.mp3",
+      "duration": 0.8359166666666666,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/klink-handwriting-20261102/KSW-AC-HS-098-fcc9e1f4bf169ee0.mp3",
+      "duration": 0.9665208333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1715.mp3",
+      "duration": 0.9142708333333334,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/woorden-20261025/TL1215.mp3",
+      "duration": 0.9926458333333333,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    },
+    {
+      "engine": "webkit",
+      "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f1e80ab41f43.mp3",
+      "duration": 2.50775,
+      "sampleRate": 48000,
+      "channels": 1,
+      "nativeDecode": true
+    }
+  ],
+  "allOfferedAudioTagsAndPcmPreserved": true,
+  "humanListeningPerformed": false,
+  "checkedAt": "2026-11-02T06:21:52.537Z"
+}

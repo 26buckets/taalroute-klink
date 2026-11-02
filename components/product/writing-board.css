@@ -8,7 +8,7 @@
 }
 .kpd-writing.is-handwriting {
   flex-shrink: 0;
-  width: min(100%, 500px, 100vh);
+  width: min(100%, 500px, 100vh, calc((100cqh - 56px) * 1000 / 450));
   height: auto;
   max-height: none;
   aspect-ratio: 1000 / 450;

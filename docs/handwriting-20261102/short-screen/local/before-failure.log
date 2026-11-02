@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(g.ink.bottom<=g.stage.bottom-1)
+
+    at reach (file:///private/tmp/klink-implementatie-20261101/scripts/test-handwriting-short-screen-20261102.mjs:15:63)
+    at async file:///private/tmp/klink-implementatie-20261101/scripts/test-handwriting-short-screen-20261102.mjs:19:956 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

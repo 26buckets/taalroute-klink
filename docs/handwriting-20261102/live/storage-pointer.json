@@ -1,0 +1,101 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "case": "unknown-stored-format",
+      "originalRecordNotOverwritten": true
+    },
+    {
+      "engine": "chromium",
+      "case": "write-failure-and-retry",
+      "simulatedStorageFailure": true,
+      "ownInkStayedVisible": true,
+      "completionWaitedForRealCommit": true
+    },
+    {
+      "engine": "chromium",
+      "case": "two-real-tabs",
+      "firstSubmissionImmutableAcrossTabs": true,
+      "lastActualSubmissionUpdated": true
+    },
+    {
+      "engine": "chromium",
+      "case": "resize",
+      "originalCoordinatesAndLetterProportionsRetained": true,
+      "widths": [
+        1280,
+        320,
+        390
+      ]
+    },
+    {
+      "engine": "chromium",
+      "case": "explicit-next",
+      "noAutomaticAdvanceAfterComparison": true
+    },
+    {
+      "engine": "chromium",
+      "case": "actual-http503-and-retry",
+      "actualNativeMediaRequestFailed": true,
+      "writingStayedLockedUntilPlaybackSucceeded": true
+    },
+    {
+      "engine": "chromium",
+      "case": "touch-browser-protocol",
+      "nativeTrustedPointerEvents": true,
+      "secondaryTouchDidNotCreateExtraStroke": true,
+      "physicalDeviceUsed": false
+    },
+    {
+      "engine": "chromium",
+      "case": "pen-browser-protocol",
+      "nativeTrustedPointerEvents": true,
+      "secondaryTouchDidNotCreateExtraStroke": false,
+      "physicalDeviceUsed": false
+    },
+    {
+      "engine": "webkit",
+      "case": "unknown-stored-format",
+      "originalRecordNotOverwritten": true
+    },
+    {
+      "engine": "webkit",
+      "case": "write-failure-and-retry",
+      "simulatedStorageFailure": true,
+      "ownInkStayedVisible": true,
+      "completionWaitedForRealCommit": true
+    },
+    {
+      "engine": "webkit",
+      "case": "two-real-tabs",
+      "firstSubmissionImmutableAcrossTabs": true,
+      "lastActualSubmissionUpdated": true
+    },
+    {
+      "engine": "webkit",
+      "case": "resize",
+      "originalCoordinatesAndLetterProportionsRetained": true,
+      "widths": [
+        1280,
+        320,
+        390
+      ]
+    },
+    {
+      "engine": "webkit",
+      "case": "explicit-next",
+      "noAutomaticAdvanceAfterComparison": true
+    },
+    {
+      "engine": "webkit",
+      "case": "actual-http503-and-retry",
+      "actualNativeMediaRequestFailed": true,
+      "writingStayedLockedUntilPlaybackSucceeded": true
+    }
+  ],
+  "errors": [],
+  "physicalPhoneOrPenTested": false,
+  "humanListeningPerformed": false,
+  "audioMocked": false
+}

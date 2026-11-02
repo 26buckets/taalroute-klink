@@ -1,0 +1,5 @@
+# Klink — bereikbaar schrijfvlak op korte schermen
+
+De nieuwe handschrift-SVG was bij320×568 hoger dan de vrije ruimte onder de vaste audiobalk. De fout is met de nieuwe echte scroll-/hitproef op de daadwerkelijk gepubliceerde bron8dd144b1 gereproduceerd. Alleen de maximale afmeting van de nieuwe handschrift-SVG wordt nu begrensd door de bestaande oefenruimte; beeldverhouding en oorspronkelijke inktcoördinaten blijven gelijk. Geen wijziging van schermindeling, knoppen, tekst, docentenscherm, inhoud, voortgang, app-logica of media.
+
+Zestien lokale korte schermgevallen in Chromium/WebKit, licht/donker, twee lange bronwoorden en vraag-/modelstaat: alle vier hoeken echt aanraakbaar na muiswielscrollen, zonder overlap van toolbar of afgeknipte ruimte. Daarnaast72 layoutgevallen en vier exacte geometrievergelijkingen tegen de gepubliceerde versie op normale desktop-/telefoonhoogte. De oorspronkelijke200 live schrijf-/audio-/opslagstromen en101 audio-teruglezingen horen aantoonbaar bij bron8dd144b1; de reparatie wijzigt uitsluitend de nieuwe canvasmaat. Fysieke telefoon/pen, onafhankelijke menselijke luisterreview en klasproef zijn niet uitgevoerd.
