@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const folder='docs/writing-copy-aa-17-20261102/';
+const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
+const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
+export function verifyWritingCopyAaRelease(read=readFileSync){
+ const json=file=>JSON.parse(read(file)),r=json('docs/klink-owner-release-writing-copy-aa-17-20261102.json');
+ assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.newWordModels,0);assert.equal(r.handwritingAdded,false);
+ assert(r.userRequest.includes('overige Klink-invulbatches zelfstandig af')&&r.userRequest.includes('zonder opnieuw om akkoord te vragen'));
+ const policy=json('docs/klink-invullen-20261101/automatic-owner-approval.json');assert(policy.automaticOwnerApproval&&policy.automaticPublicationApproval&&!policy.mayInventHumanReviewEvidence&&!policy.mayBypassPublicationGate);
+ git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
+ const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ for(const[file,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),h,file);
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','app','components','hooks','lib','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','next.config.ts','wrangler.jsonc').length,0);
+ assert.deepEqual(changed.filter(f=>f.startsWith('data/')),['data/klink-production-index.json']);assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0);
+ const manifest=json(folder+'import-manifest.json'),ids=new Set(manifest.newRows.map(item=>item.row.id)),index=json('data/klink-production-index.json'),before=JSON.parse(git('show',r.baselineSourceCommit+':data/klink-production-index.json'));
+ assert.equal(manifest.newRows.length,3);assert.equal(manifest.sourcePositions,17);assert.equal(manifest.newWordModels,0);assert(manifest.noHandwritingClaim);assert.deepEqual(index.filter(row=>!ids.has(row.id)),before);
+ const oldAa=manifest.existingAaThreeRowUnchanged;assert.deepEqual(index.find(row=>row.id===oldAa.id),oldAa);assert.equal(sha(read('public'+oldAa.url)),sha(git('show',r.baselineSourceCommit+':public'+oldAa.url)));
+ assert.deepEqual(changed.filter(f=>f.startsWith('public/')),sort(manifest.newRows.map(item=>'public'+item.row.url)));
+ const seen=new Set();for(const item of manifest.newRows){assert.deepEqual(index.find(row=>row.id===item.row.id),item.row);assert.equal(item.row.level,'alfa-a');assert.equal(item.row.help,'guided');assert([5,6].includes(item.row.count));const bytes=read('public'+item.row.url);assert.equal(sha(bytes),item.sha256);const bank=JSON.parse(bytes);assert.equal(bank.id,item.row.id);assert.equal(bank.exercises.length,item.row.count);for(const e of bank.exercises){assert(!seen.has(e.exerciseId));seen.add(e.exerciseId);assert(e.exerciseId.startsWith('KSW-AA-TN-'));assert.equal(e.componentId,'ALF-CMP-006');assert.equal(e.mode,'copy-word');assert.equal(e.answerPolicy,'exact-copy');assert.equal(e.assessment,'answer');assert.equal(e.access,'teacher-supported');assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);assert.equal(e.notForPublication,undefined);assert.deepEqual(e.fields,[{id:'copy',acceptedAnswers:[e.exampleWord]}]);}}
+ assert.equal(seen.size,17);const revision=json(folder+'source-revision.json');assert(revision.unchanged&&revision.actual===revision.expected);
+ const words=json(folder+'local/word-coverage/source-coverage.json');assert.deepEqual(words.missing,[]);assert.equal(words.writingSourcePositions,100);
+ const browser=json(folder+'local/browser.json');assert.equal(browser.checks.length,68);assert.equal(browser.rounds.length,12);assert.equal(browser.native.length,8);assert.deepEqual(browser.errors,[]);assert.equal(browser.simulatedPlayback,false);assert(browser.checks.every(c=>c.wrongCaseRejected&&c.correctAccepted&&c.firstWrongAndLastCorrectRetained&&c.oldAaThreeProgressAndAnswersUnchanged&&c.noReadingOrHandwritingClaim&&c.noHorizontalOverflow));assert(browser.native.every(c=>c.actualNativePlaybackEnded));
+ const layout=json(folder+'local/layout.json');assert.equal(layout.checks.length,24);assert.deepEqual(layout.errors,[]);assert(layout.checks.every(c=>c.noHorizontalOverflow&&c.modelVisible&&c.inputVisible));
+ const v=json(folder+'verification.json');for(const key of['types','lint','unit','existingModelGradingPreserved','sourceRevisionVerified','wordAudioCoverage','wordLibraryIndexUnchanged','allOldRowsAndAaThreePreserved','appearancePreserved','localOnly'])assert.equal(v[key],true,key);assert.equal(v.humanNt2ReviewPerformed,false);assert.equal(v.humanListeningPerformed,false);
+ const design=json(folder+'design-basis-check.json');assert.equal(design.bookGoalCode,'SC-01');assert.equal(design.learnerGoalId,'overschrijven');assert(design.driveAndCanonicalLocalTextIdentical&&design.observations.length===3&&design.openAtGroupLevel.length);
+ const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
+ return r;
+}
+export function readBeforeWritingCopyAa(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}

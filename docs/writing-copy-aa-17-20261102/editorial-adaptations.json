@@ -1,0 +1,22 @@
+{
+  "sourceTargetsAndAnswerContractsUnchanged": true,
+  "changes": [
+    {
+      "sourceId": "KSW-AA-TN-002",
+      "field": "feedback",
+      "before": "Kijk goed naar het voorbeeld en typ a. De vorm hangt af van het gebruikte lettertype.",
+      "after": "Typ de kleine a.",
+      "reason": "Short plain learner cue for the actual lowercase-copy error. The source note about typographic variation is retained for the teacher/editor, not presented as a handwriting or font-matching criterion.",
+      "previousCandidate": "Kijk goed naar het voorbeeld en typ a. De vorm kan anders zijn. Het blijft een kleine a.",
+      "previousCandidateReasonReplaced": "The long feedback exceeded the comfortable visible phone feedback area; retain a short actionable lowercase cue.",
+      "teacherNote": "De vorm van een kleine a kan per lettertype verschillen; de gevraagde kleine letter blijft dezelfde. Bespreek dit zo nodig naast het zichtbare model."
+    },
+    {
+      "sourceId": "KSW-AA-TN-012",
+      "field": "feedback",
+      "before": "Neem m, a en t over. Dit vervangt het eerdere informele doelwoord mam.",
+      "after": "Neem m, a en t over.",
+      "reason": "Internal history about the former target mam belongs in editorial provenance, not learner feedback. Target mat is unchanged."
+    }
+  ]
+}

@@ -2,22 +2,24 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyWritingCopyAaRelease,readBeforeWritingCopyAa} from './check-writing-copy-aa-17-release-20261102.mjs';
 const folder='docs/writing-dictation-20261101/';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
 const sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 
 export function verifyWritingDictationRelease(read=readFileSync){
+ const successor=verifyWritingCopyAaRelease(read),currentRead=read;read=file=>readBeforeWritingCopyAa(file,successor,currentRead);
  const json=file=>JSON.parse(read(file)),r=json('docs/klink-owner-release-writing-dictation-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.handwritingAdded,false);
  assert(r.userRequest.includes('overige Klink-invulbatches zelfstandig af'));assert(r.userRequest.includes('zonder opnieuw om akkoord te vragen'));
  const standing=json('docs/klink-invullen-20261101/automatic-owner-approval.json');assert.equal(standing.owner,'Nico');assert(standing.automaticOwnerApproval&&standing.automaticPublicationApproval);assert.equal(standing.mayInventHumanReviewEvidence,false);assert.equal(standing.mayBypassPublicationGate,false);
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[file,hash]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),hash,file);
- assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','next.config.ts','wrangler.jsonc').length,0,'Preserve appearance, routes, dependencies, database and deployment configuration');
- assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')),[],'All previously published media remain byte-identical');
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts','next.config.ts','wrangler.jsonc').length,0,'Preserve appearance, routes, dependencies, database and deployment configuration');
+ assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,successor.baselineSourceCommit,'--','public')),[],'All previously published media remain byte-identical');
  assert.deepEqual(changed.filter(f=>f.startsWith('components/')),['components/product/learner-app.tsx','components/product/package-exercise-browser.tsx','components/product/package-group-practice.tsx','components/product/practice-chapters.tsx']);
  assert.deepEqual(changed.filter(f=>f.startsWith('lib/')),['lib/practice-chapters.ts','lib/word-rounds.ts','lib/writing-answer.ts','lib/writing-dictation.ts']);
  assert.deepEqual(changed.filter(f=>f.startsWith('data/')),['data/klink-production-instructions.json','data/klink-word-library-index.json','data/klink-writing-dictation-20261101.json']);
@@ -42,6 +44,6 @@ export function verifyWritingDictationRelease(read=readFileSync){
  const media=json(folder+'local/media-checks.json');assert.equal(media.simulatedPlayback,false);assert.equal(media.hashes.length,107);assert.equal(media.decoded.length,2);assert(media.decoded.every(c=>c.files.length===107));assert.equal(media.played.length,36);assert(media.played.every(c=>c.nativeElement&&c.ended&&c.playedThroughExistingControl));assert.deepEqual(media.errors,[]);
  const verified=json(folder+'verification.json');for(const key of['types','lint','coreTests','realSourceRevisions','answerContracts','appearancePreserved','publishedCopyDraftsPreserved','sourceProgressPreserved','reactReview','localOnly'])assert.equal(verified[key],true,key);assert.equal(verified.humanListeningPerformed,false);assert.equal(verified.humanNt2ReviewPerformed,false);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return r;
+ return {...r,successor};
 }
-export function readBeforeWritingDictation(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeWritingDictation(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeWritingCopyAa(file,r.successor,read);}

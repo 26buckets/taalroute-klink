@@ -1,0 +1,15 @@
+# Alfa A — zeventien aanvullende exacte naschrijfcriteria
+
+De actuele native Typ-na-bron is op revisie bevestigd. Zeventien bronposities hergebruiken aantoonbaar bestaande modellen: vijf lettermodellen met deelnamebeoordeling en twaalf woordmodellen met de oudere normaliserende beoordeling. Die oefeningen en hun beoordeling blijven geheel behouden. De nieuwe brongebonden vragen beoordelen uitsluitend precies overtypen: hoofdletters, extra letters, binnenspaties en extra leestekens verschillen van het model. Buitenste spaties blijven volgens de reeds gepubliceerde kopieerregel optioneel. Een getypt antwoord is geen handschriftbewijs.
+
+Drie nieuwe bronbanken bevatten vijf, zes en zes vragen. Ze staan begeleid op Alfa A, in bronvolgorde naast de bestaande drie Alfa A-vragen. Alle oude indexrijen, relatieve volgorde, bronbestanden, links, antwoorden en voortgang blijven intact. De oorspronkelijke zeventien letter-/woordmodellen worden niet opnieuw gemaakt of herbeoordeeld. De woordbibliotheekindex en de e150-woordpool blijven exact gelijk; er zijn geen nieuwe beelden of opnamen.
+
+Twee redactionele ingrepen zijn apart vastgelegd: de foutfeedback bij de kleine a is kort en concreet; de uitleg over lettertypen blijft bij de docent-/redactiegegevens; de interne herstelnotitie over het voormalige doelwoord mam blijft buiten de cursistenfeedback. Alle oorspronkelijke bronrecords blijven bewaard. Het actuele doelwoord mat en alle overige doelwoorden en antwoordvoorwaarden veranderen niet.
+
+Lokaal geslaagd: vijftien bron-/behoud-/leerdoel-/bibliotheektests, typen en gerichte lint; 68 echte antwoord-/opslagstromen en twaalf korte rondecontroles, inclusief zes herladen concepten en acht native modelwoordafspeelproeven in Chromium/WebKit. Vierentwintig schermvarianten op 1280/390/320px, licht/donker. De bestaande drie Alfa A-antwoorden en voortgang blijven bytegelijk. De globale woordaudit controleert 68.120 canonieke vragen, behoudt alle honderd HT-bronposities en vindt geen ontbrekende woorden. De indexen zijn reproduceerbaar; de bestaande beeldencontrole slaagt.
+
+De Drive-ontwerpbasis en de canonieke lokale kopie zijn tekstgelijk. Doel SC-01/overschrijven is gekoppeld aan de bestaande docenthandleiding, het lesplansjabloon en de toepasbare concrete docent-/cursisthandelingen in het bestaande lesblok. Boekeditie/pagina, werkelijk groepsrooster en praktijkresultaten blijven groepsgebonden open; dit is geen nieuw of volledig uitgevoerd cursusprogramma.
+
+Dit is nog geen publicatieclaim. De gewone brongebonden opvolgende vrijgave, volledig teruggelezen herstelkopie, canonieke main, normale publicatiepoort en online nacontrole blijven nodig. Doorlopend eigenaarsakkoord vervangt geen uitgevoerde menselijke NT2-, luister- of klasreview; die zijn niet uitgevoerd. Geen fysieke telefoon getest, geen vormgevingswijziging, geen nieuwe dependencies/database of zware GitHub Actions.
+
+Twee actuele voorbeeldschermen zijn daarnaast visueel bekeken. Modelverwijzingen zijn herkomst, geen herindeling van bestaande woorden of lessen naar een ander niveau.
