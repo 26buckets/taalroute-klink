@@ -16,7 +16,7 @@ De vaste wachttijd is verwijderd. Het bestaande laadscherm wacht nog wel op hers
 
 Bij drie afspeelacties uit dezelfde audiobundel daalt de opgehaalde hoeveelheid van 6.266.631 naar 2.088.877 bytes: één download in plaats van drie. Dit is in twaalf sessies per versie gecontroleerd, in beide browsers en schermmaten, met daadwerkelijke native afspeelstart. Het testmodel reproduceert de eerder geverifieerde HTTP200-terugval met dezelfde originele audiobytes en 100ms vaste antwoordvertraging; dit is geen gemeten mobiel internetprofiel. De eerste download blijft circa 2,1 MB. Geluiden en metadata zijn niet gewijzigd of opnieuw gecodeerd.
 
-De cache bewaart maximaal 8 MiB complete, publiek toegankelijke, van een hash voorziene audiobundels. Exacte bereik-/lengte-/ID3-controles blijven actief; gedeeltelijke antwoorden worden niet als complete bundels bewaard. Annulering, opnamebescherming, maximale bestandsgrootte, verlopen afspeelacties en herstel na beschadigde gegevens zijn gecontroleerd. Geen privégegevens of API-antwoorden worden gecachet.
+De cache bewaart maximaal 8 MiB complete, publiek toegankelijke, van een hash voorziene audiobundels. Exacte bereik-/lengte-/ID3-controles blijven actief; gedeeltelijke antwoorden worden niet als complete bundels bewaard. Annulering, opnamebescherming, maximale bestandsgrootte, verlopen afspeelacties, gelijktijdige downloads en herstel na beschadigde gegevens zijn gecontroleerd. Geen privégegevens of API-antwoorden worden gecachet.
 
 ## Inzicht apart gehouden
 
@@ -31,7 +31,7 @@ Dit toont dat de wisselende vertraging ook vóór MFA kan optreden. Het bewijst 
 ## Controle en behoud
 
 - Iedere inhoudelijke stap kreeg dezelfde meting opnieuw: oorspronkelijke nulmeting, alleen wachttijd, alleen aanvullend apart laden, daarna audiocache. Na de nieuwe main-inhoud is nogmaals een passende nulmeting en eindmeting gedaan.
-- 43 gerichte bron-, route-, audio-, cache-, annulerings-, voortgangs- en modulehersteltests; typen, gerichte lint en productiebuild geslaagd.
+- 44 gerichte bron-, route-, audio-, cache-, annulerings-, voortgangs- en modulehersteltests; typen, gerichte lint en productiebuild geslaagd.
 - 16 browsercontroles voor traag geladen code, kapotte decoratieve afbeelding, veilige projectieweergave, verkeerd adres/herladen en behoud van de eigen geschreven zin.
 - 44 bestaande woordbedienings-/opname-/toetsenbord-/antwoord-/annuleringscontroles in Chromium/WebKit geslaagd. De twee benodigde model-/markeerfixtures zijn rechtstreeks uit de bron geselecteerd.
 - De oorspronkelijke én de vergelijking op de gemeten inhoudsbasis gaven elk 24 pixelgelijke schermparen: desktop/mobiel, licht/donker, Start/oefenomgeving/Klink+docent. De vergelijking op de gemeten main-basis staat in `appearance/comparison.json`; alleen nul afwijkende pixels geldt als geslaagd.
@@ -40,7 +40,7 @@ Dit toont dat de wisselende vertraging ook vóór MFA kan optreden. Het bewijst 
 
 ## Laatste aansluiting op parallel contentwerk
 
-Tijdens het afronden is ook de volgende zinnenbatch gepubliceerd (live `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`, main `f2e4b754e636fa9bab8ef7c316d0e4e515dd53ce`). De reviewbranch is daarop gerebased; de gemeten cijfervergelijking hierboven blijft eerlijk gekoppeld aan de vaste eb8-inhoudsbasis. De nieuwe inhoud wordt niet teruggedraaid. De laatste build en gerichte behoudtests moeten opnieuw slagen op deze aansluiting; zie de bijbehorende logs.
+Tijdens het afronden is ook de volgende zinnenbatch gepubliceerd (live `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`, main `f2e4b754e636fa9bab8ef7c316d0e4e515dd53ce`). De reviewbranch is daarop gerebased; de gemeten cijfervergelijking hierboven blijft eerlijk gekoppeld aan de vaste eb8-inhoudsbasis. De nieuwe inhoud wordt niet teruggedraaid. De laatste build, typen, 44 gerichte tests, 16 laad-/behoudproeven en 44 woordbedieningsproeven slagen op deze aansluiting. De audiotest behoudt bewust de oorspronkelijke leesbewijstaak; nieuwe luister-eerst-zinnen vergrendelen antwoorden terecht tot na beluisteren.
 
 ## Open en nodig voor publicatie
 

@@ -34,3 +34,9 @@ test('A later word revealing a truncated cached bundle can recover on retry',asy
  await assert.rejects(fetchWordRecording(source(501,320),signal()));
  await fetchWordRecording(source(501,320),signal());assert.equal(calls,2);
 });
+test('Concurrent complete downloads count a retained bundle only once',async t=>{
+ const original=fetch;t.after(()=>globalThis.fetch=original);let calls=0;
+ globalThis.fetch=async()=>{calls++;return new Response(bundle(4*1024*1024))};
+ await Promise.all([1,2,3].map(()=>fetchWordRecording(source(601),signal())));
+ await fetchWordRecording(source(601),signal());assert.equal(calls,3);
+});

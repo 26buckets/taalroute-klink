@@ -39,6 +39,8 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
   const header = new Uint8Array(bytes, 0, 3);
   if (header[0] !== 73 || header[1] !== 68 || header[2] !== 51) throw new Error('Invalid word audio');
   if (complete) {
+    const previous = bundles.get(src);
+    if (previous) bundleBytes -= previous.byteLength;
     bundleBytes += body.byteLength;
     bundles.set(src, body);
     while (bundleBytes > maxBundleBytes) {
