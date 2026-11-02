@@ -2,7 +2,7 @@
 
 import { KlinkOpeningLoader } from './klink-opening-loader';
 
-import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useState, type ReactNode } from 'react';
+import { lazy, Suspense, useEffect, useLayoutEffect, useState, type ReactNode } from 'react';
 import {
   classroomHash,
   classroomMaterialsHash,
@@ -18,9 +18,7 @@ const TeacherMaterials = lazy(() => loadTeacher().then(m => ({ default: m.Teache
 
 // Check before showing any route: Back and reload must not reveal teacher-only material.
 export function ClassroomBoundary({ children }: { children: ReactNode }) {
-  const [openingComplete, setOpeningComplete] = useState(false);
   const [workspaceLoaded, setWorkspaceLoaded] = useState(false);
-  const finishOpening = useCallback(() => setOpeningComplete(true), []);
   useEffect(() => {
     let cancelled = false;
     const loaded = () => { if (!cancelled) setWorkspaceLoaded(true); };
@@ -57,7 +55,7 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
       window.removeEventListener('pageshow', restore);
     };
   }, []);
-  if (classroom === null || !openingComplete || !workspaceLoaded) return <KlinkOpeningLoader onComplete={finishOpening} />;
+  if (classroom === null || !workspaceLoaded) return <KlinkOpeningLoader />;
   return (
     <>
       <TaalrouteHeader classroom={projecting && !materials} />
