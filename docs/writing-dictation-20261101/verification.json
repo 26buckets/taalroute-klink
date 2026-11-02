@@ -1,0 +1,27 @@
+{
+  "types": true,
+  "lint": true,
+  "coreTests": true,
+  "realSourceRevisions": true,
+  "answerContracts": true,
+  "appearancePreserved": true,
+  "publishedCopyDraftsPreserved": true,
+  "sourceProgressPreserved": true,
+  "reactReview": true,
+  "localOnly": true,
+  "coreTestsPassed": 22,
+  "wordLibraryTestsPassed": 4,
+  "humanListeningPerformed": false,
+  "humanNt2ReviewPerformed": false,
+  "physicalPhoneTested": false,
+  "classroomPilotPerformed": false,
+  "reactReviewScope": [
+    "WordHint keeps existing hook order and stable source-derived spelling-unit markers.",
+    "Input and group players retain existing audio gates and shared error handling.",
+    "Writing drafts and initial answers are independent of Help and round restart.",
+    "No CSS, route, dependency, database or approved appearance file changes."
+  ],
+  "normalBuild": "required during ordinary canonical deployment",
+  "normalPublicationGate": "requires verified full Drive backup and current main before deployment",
+  "publicationStatus": "NOT_PUBLISHED"
+}

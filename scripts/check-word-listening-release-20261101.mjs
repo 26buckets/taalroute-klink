@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { verifyWritingDictationRelease, readBeforeWritingDictation } from './check-writing-dictation-release-20261101.mjs';
 
 export const wordListeningBase = '1bdd9ac0a7ec02bb7027ac3211648ef414b00b42';
 const live = '7d1adc5192d265e50362833d5bbbfe2e3c10dacc';
@@ -31,6 +32,9 @@ export function checkedWordMp3(bytes, word, expectedPayload) {
 }
 
 export function verifyWordListeningRelease(read=readFileSync) {
+  const successor = verifyWritingDictationRelease(read);
+  const currentRead = read;
+  read = file => readBeforeWritingDictation(file, successor, currentRead);
   const json=file=>JSON.parse(read(file));
   const r=json('docs/klink-owner-release-word-listening-20261101.json');
   assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.layoutAndStylePreserved&&r.wordListeningOutlineRemoved&&r.progressPreserved);
@@ -39,7 +43,7 @@ export function verifyWordListeningRelease(read=readFileSync) {
   assert(r.publicationRequest.includes('Publiceer gecontroleerde batches'));
   const policy=json('docs/klink-invullen-20261101/automatic-owner-approval.json');assert(policy.automaticOwnerApproval&&policy.automaticPublicationApproval&&!policy.mayInventHumanReviewEvidence&&!policy.mayBypassPublicationGate);
   git('merge-base','--is-ancestor',live,wordListeningBase);git('merge-base','--is-ancestor',wordListeningBase,'HEAD');
-  const changed=sort([...new Set([...lines(git('diff','--name-only',wordListeningBase,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed=sort(lines(git('diff','--name-only',wordListeningBase,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
   for (const [file,hash] of Object.entries({...r.files,...r.evidenceFiles})) assert.equal(sha(read(file)),hash,file);
   const wordCss='components/product/word-audio-text.css';
@@ -51,7 +55,7 @@ export function verifyWordListeningRelease(read=readFileSync) {
   const border=json(approval);assert(border.appearanceChangeApproved&&border.publicationApproved&&!border.layoutChanged&&!border.referenceImagesChanged);
   assert(border.userRequest.includes('zonder selectierand')&&border.userRequest.includes('Behoud de selectie'));
   for(const [file,hash] of Object.entries(border.files))assert.equal(sha(read(file)),hash,file);
-  assert(!lines(git('diff','--name-only','--diff-filter=D',wordListeningBase,'--','public')).length,'Existing media retained');
+  assert(!lines(git('diff','--name-only','--diff-filter=D',wordListeningBase,successor.baselineSourceCommit,'--','public')).length,'Existing media retained');
   for(const file of changed.filter(file=>file.startsWith('public/'))) assert(file.startsWith('public/package-audio/word-listening-20261101/')&&!lines(git('ls-tree','-r','--name-only',wordListeningBase,'--',file)).length,'Only new audio assets');
   const registry=json('data/klink-word-listening-audio.json'),manifest=json(folder+'audio-manifest.json');
   assert.equal(Object.keys(registry).length,5651);assert.equal(manifest.records.length,5651);
@@ -81,7 +85,7 @@ export function verifyWordListeningRelease(read=readFileSync) {
   const v=json(folder+'verification.json');for(const key of ['types','lint','unit','sourceCoverage','nativeAudio','answerSelection','recording','appearance','existingContentRetained','normalBuild','localOnly']) assert.equal(v[key],true,key);
   assert(v.staticAssetFiles<20000&&v.includedCreditUpperBound<=60000&&v.paidBudget===0);
   const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
-  return r;
+  return { ...r, successor };
 }
 
-export function readBeforeWordListening(file,r,read=readFileSync) {return r.changedFiles.includes(file)?git('show',wordListeningBase+':'+file):read(file);}
+export function readBeforeWordListening(file,r,read=readFileSync) {return r.changedFiles.includes(file)?git('show',wordListeningBase+':'+file):readBeforeWritingDictation(file,r.successor,read);}
