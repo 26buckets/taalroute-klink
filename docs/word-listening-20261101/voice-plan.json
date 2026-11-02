@@ -1,0 +1,44 @@
+{
+  "authorization": "Nico 2026-11-01: all visible words individually recorded, reuse existing recordings; temporary API access 1 day, cap 60000 included credits, no paid usage",
+  "voices": [
+    {
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "name": "Remko",
+      "gender": "male",
+      "role": "isolated target word"
+    },
+    {
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "name": "Roos",
+      "gender": "female",
+      "role": "isolated target word"
+    }
+  ],
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 0.9
+  },
+  "models": [
+    "eleven_v4",
+    "eleven_multilingual_v2 (targeted pijn only)"
+  ],
+  "scope": "Standalone word models, separate from instructions and character speech; earlier approved recordings reused",
+  "rolesRecordedBeforeGeneration": true,
+  "subplans": [
+    "production-plan.json",
+    "individual/plan.json",
+    "supplement/plan.json",
+    "delta/plan.json",
+    "repair-final/plan.json",
+    "visible-final/plan.json",
+    "letter-labels/plan.json",
+    "targeted/final/selection-plan.json",
+    "latest-main/plan.json"
+  ],
+  "humanReview": "niet uitgevoerd; eigenaar automatisch akkoord",
+  "paidBudget": 0,
+  "keyCreditLimit": 60000,
+  "reuse": "Existing 5127 wordcards, earlier approved registries, 1377 published word forms and the twenty newly reviewed models take precedence; 1342 duplicate candidates remain private recovery only."
+}
