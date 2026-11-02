@@ -51,7 +51,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         await page.goto(`${base}/${chapterHash(location)}`);
         const expected = collections.slice(0, 12).map(c => c.id);
         await page.waitForFunction(ids => JSON.stringify([...document.querySelectorAll('[data-collection]')].map(e => e.dataset.collection)) === JSON.stringify(ids), expected);
-        assert.deepEqual(await page.locator('[data-collection] strong').allTextContents(), collections.slice(0, 12).map(c => learnerCollectionLabel(c.title).title));
+        assert.deepEqual(await page.locator('[data-collection] strong').allTextContents(), collections.slice(0, 12).map(c => learnerCollectionLabel(c.title, c.id).title));
         assert.deepEqual(await page.locator('[data-collection] .cp-beta-count').allTextContents(), collections.slice(0, 12).map(c => {
           const n = c.wordRound?.wordIds.length ?? c.readingSelection?.exerciseIds.length ?? c.exerciseCount ?? c.exercises.length;
           return `${n} ${c.wordRound ? n === 1 ? 'woord' : 'woorden' : n === 1 ? 'oefening' : 'oefeningen'}`;
@@ -59,7 +59,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         const metadata = await page.locator('[data-collection] .cp-collection-meta').allTextContents();
         for (const [n, c] of collections.slice(0, 12).entries()) {
           assert((c.levels ?? [c.level]).every(l => metadata[n].includes(levelLabel(l))));
-          const round = learnerCollectionLabel(c.title).round ?? c.id.match(/~words-(\d+)$/)?.[1];
+          const round = learnerCollectionLabel(c.title, c.id).round ?? c.id.match(/~words-(\d+)$/)?.[1];
           if (round) assert(metadata[n].startsWith(`Ronde ${round} · `));
         }
         await equal('[data-collection]', `${engine}/${width}/${location.activity}/${location.level}/${location.help}`);

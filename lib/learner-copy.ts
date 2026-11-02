@@ -88,8 +88,32 @@ const shortReadingTitles: Record<string, string> = {
   'Twee tijden voor de leesgroep': 'De leesgroep',
 };
 
+// Round names repeat across levels, so their topic labels follow the original collection IDs.
+const shortSentenceTitles: Record<string, string> = {
+  'klink-zinnen-zelf-a1-20261031-r1': 'Werk, winkel en buurt',
+  'klink-zinnen-zelf-a1-20261031-r2': 'Winkel, tandarts en bus',
+  'klink-zinnen-zelf-a1-20261031-r3': 'Tafel, school en feest',
+  'klink-zinnen-zelf-a1-20261031-r4': 'Koken, wassen en kleding',
+  'klink-zinnen-zelf-a1-20261031-r5': 'Reizen, lezen en buiten',
+  'klink-zinnen-zelf-a1-20261031-r6': 'Opruimen, eten en geld',
+  'klink-zinnen-zelf-a1-20261031-r7': 'Betalen, bellen en opruimen',
+  'klink-zinnen-zelf-a1-20261031-r8': 'Keuken, fietsen en balkon',
+  'klink-zinnen-zelf-a1-20261031-r9': 'Eten, water en inpakken',
+  'klink-zinnen-zelf-a1-20261031-r10': 'Verf, pleister en rugzak',
+  'klink-zinnen-zelf-a2-20261031-r1': 'Lichaam, licht en les',
+  'klink-zinnen-zelf-a2-20261031-r2': 'Werk, lezen en zingen',
+  'klink-zinnen-zelf-a2-20261031-r3': 'Veiligheid, routes en zorg',
+  'klink-zinnen-zelf-a2-20261031-r4': 'Kleding, pijn en licht',
+  'klink-zinnen-zelf-a2-20261031-r5': 'Eten, betalen en spullen',
+  'klink-zinnen-zelf-a2-20261031-r6': 'Thuis, werk en afspraken',
+  'klink-zinnen-zelf-a2-20261031-r7': 'Buiten, eten en spelen',
+  'klink-zinnen-zelf-a2-20261031-r8': 'Koken, haar en kleding',
+  'klink-zinnen-zelf-a2-20261031-r9': 'Tuin, buurt en reizen',
+  'klink-zinnen-zelf-a2-20261031-r10': 'Weer, tijd en in de keuken',
+};
+
 // Display labels only; authored titles, links and completion IDs remain source-bound.
-export function learnerCollectionLabel(source: string) {
+export function learnerCollectionLabel(source: string, collectionId?: string) {
   let title = source.trim(), round: string | undefined, support: string | undefined;
   const selection = title.match(/^(Basis|Uitbreiding met je docent) · (.+)$/);
   if (selection) { support = selection[1]; title = selection[2]; }
@@ -97,7 +121,7 @@ export function learnerCollectionLabel(source: string) {
   const sentences = title.match(/^Zinnenronde\s+(\d+)(?:\s*·\s*(.+))?$/i);
   if (reading || sentences) {
     round = (reading ?? sentences)![1];
-    title = reading ? shortReadingTitles[reading[2]] ?? reading[2] ?? 'Lees een tekst' : sentences![2] ?? 'Zinnen oefenen';
+    title = reading ? shortReadingTitles[reading[2]] ?? reading[2] ?? 'Lees een tekst' : shortSentenceTitles[collectionId ?? ''] ?? sentences![2] ?? 'Zinnen oefenen';
   } else {
     const numbered = title.match(/^(.*?)(?:\s*·\s*(?:Ronde\s*)?|\s+Ronde\s+)(\d+)$/i) ?? title.match(/^(Spelling)\s+(\d+)$/);
     if (numbered) { title = numbered[1].trim(); round = String(Number(numbered[2])); }

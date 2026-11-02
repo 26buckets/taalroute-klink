@@ -22,7 +22,7 @@ void test('Short labels separate authored rounds, levels and support without cli
 void test('All visible collection labels separate round and level prefixes', () => {
   let checked = 0;
   for (const activity of groupActivities) for (const collection of displayedChapterCollections(activity.id, { level: 'all' })) {
-    const result = label(collection.title);
+    const result = label(collection.title, collection.id);
     assert(result.title.trim(), collection.id);
     assert(!/^(Leesronde|Zinnenronde)\s+\d|·\s*Ronde\s+\d/.test(result.title), collection.title);
     assert(!/·\s*(?:Alfa [ABC]|[AB][12])(?:\s*·|$)/.test(result.title), collection.title);

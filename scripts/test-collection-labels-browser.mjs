@@ -29,7 +29,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         const source = displayedChapterCollections(route.activity, route);
         assert.equal(await cards.count(), Math.min(12, source.length));
         assert.deepEqual(await cards.evaluateAll(nodes => nodes.map(n => n.dataset.collection)), source.slice(0, 12).map(c => c.id));
-        assert.deepEqual(await cards.locator('strong').allTextContents(), source.slice(0, 12).map(c => learnerCollectionLabel(c.title).title));
+        assert.deepEqual(await cards.locator('strong').allTextContents(), source.slice(0, 12).map(c => learnerCollectionLabel(c.title, c.id).title));
         const sizes = await cards.evaluateAll(nodes => nodes.map(n => {
           const r = n.getBoundingClientRect(), text = n.querySelector('.cp-collection-copy');
           return { width: r.width, height: r.height, fits: text.getBoundingClientRect().right <= r.right && text.scrollWidth <= text.clientWidth + 1 };
