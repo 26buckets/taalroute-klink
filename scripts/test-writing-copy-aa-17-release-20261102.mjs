@@ -3,7 +3,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {verifyGrammarPublication} from './check-grammar-publication-20261101.mjs';
 const folder='docs/writing-copy-aa-17-20261102/',owner='docs/klink-owner-release-writing-copy-aa-17-20261102.json',checks=[];
 const current=verifyGrammarPublication();assert(current.twentyWordAudio);checks.push({name:'Grammar, word-audio and HT parent gates validate the exact-copy successor',passed:true});
-const tracker='docs/klink-invullen-20261101/implementation-progress.json',tracking=JSON.parse(readFileSync(tracker));assert.doesNotThrow(()=>verifyGrammarPublication(path=>path===tracker?Buffer.from(JSON.stringify({...tracking,updatedAt:'later documentary update'})):readFileSync(path)));checks.push({name:'Current tracking metadata can advance while the original grammar evidence stays exact',passed:true});
+const metadata=JSON.parse(readFileSync(folder+'historical-metadata-transition.json')),trackers=new Set(metadata.files.map(entry=>entry.file));assert.doesNotThrow(()=>verifyGrammarPublication(path=>trackers.has(path)?Buffer.from(JSON.stringify({...JSON.parse(readFileSync(path)),updatedAt:'later documentary update'})):readFileSync(path)));checks.push({name:'All four current tracking/recovery records can advance while original grammar evidence stays exact',passed:true});
 for(const{file,patch}of[
  {file:owner,patch:{publicationApproved:false}},
  {file:owner,patch:{appearanceUnchanged:false}},
