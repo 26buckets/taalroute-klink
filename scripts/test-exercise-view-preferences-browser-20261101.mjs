@@ -17,7 +17,7 @@ for(const[name,engine]of Object.entries({chromium,webkit})){
    await page.addInitScript(({legacy,routeKey,key,mode})=>{
     localStorage.setItem(routeKey,legacy);localStorage.setItem('klink.view-test.old-progress','{"completed":["behouden"],"position":3}');
     if(mode==='malformed'&&localStorage.getItem(key)===null)localStorage.setItem(key,'{broken');
-    window.Audio=class extends EventTarget{paused=true;play(){this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),10);return Promise.resolve();}pause(){clearTimeout(this.timer);}};
+    window.Audio=class extends EventTarget{dataset={};paused=true;play(){this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),10);return Promise.resolve();}pause(){clearTimeout(this.timer);}};
     if(mode==='blocked'){Storage.prototype.getItem=()=>{throw Error('Blocked storage');};Storage.prototype.setItem=()=>{throw Error('Blocked storage');};}
    },{legacy,routeKey:routeSettingsKey,key,mode});
    await page.goto(base+'/'+hash);const photo=page.locator('[data-view-toggle="photo"]'),text=page.locator('[data-view-toggle="text"]');await photo.waitFor();await page.waitForTimeout(100);
@@ -42,7 +42,7 @@ for(const[name,engine]of Object.entries({chromium,webkit})){
   assert(await page.evaluate(()=>!window.__viewPlaying.paused&&!window.__viewPlaying.error&&window.__viewAudio.length===window.__viewCount),'Visibility switches leave the original audio playing');
   checks.push({engine:name,nativeAudioContinues:true});await page.close();
   const replay=await browser.newPage({viewport:{width:390,height:844}});replay.on('pageerror',e=>errors.push(e.message));
-  await replay.addInitScript(()=>{window.Audio=class extends EventTarget{play(){this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),20);return Promise.resolve();}pause(){clearTimeout(this.timer);}};});
+  await replay.addInitScript(()=>{window.Audio=class extends EventTarget{dataset={};play(){this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),20);return Promise.resolve();}pause(){clearTimeout(this.timer);}};});
   await replay.goto(base+'/#learner/chapters/speaking/dialogues/klink-dialogue-32f962399de8f4c3?level=a2&help=practice');
   const mainListen=replay.locator('.cp-listen-slot button');await mainListen.waitFor();
   for(let n=0;n<2;n++){await mainListen.click();await replay.waitForFunction(()=>document.querySelector('.cp-listen-slot button')?.getAttribute('data-audio-active')!=='true');}

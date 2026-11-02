@@ -1,0 +1,36 @@
+{
+  "application": "Klink",
+  "authorization": "Nico, 2 november 2026: tien chats volledig afronden inclusief audio en publiceren",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "roleVoices": {
+    "question": "h6uBOiAjLKklte8hdYio",
+    "narrator": "0qLmDzgqulxcvv0yf3kg",
+    "option": "7qdUFMklKPaaAVMsBTBt",
+    "female": "7qdUFMklKPaaAVMsBTBt",
+    "male": "60CwgZt94Yf7yYIXMDDe"
+  },
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 20,
+  "clips": [
+    {
+      "id": "k10lr2-e3ba797f46ea4cc0",
+      "text": "Je fiets en je jas",
+      "title": "Je fiets en je jas",
+      "role": "male",
+      "voiceId": "60CwgZt94Yf7yYIXMDDe",
+      "src": "/package-audio/klink10-listening-20261102/k10lr2-e3ba797f46ea4cc0.mp3",
+      "textSha256": "4ce245a1d662582d2abe1a69acd48cba9e53f6a7cd6c18f80e47eeda12273b7e",
+      "requestText": "Je fiets, en je jas."
+    }
+  ]
+}

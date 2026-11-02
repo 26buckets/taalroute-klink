@@ -1,0 +1,1565 @@
+{
+  "id": "klink10-listening-a2-dialogue-question",
+  "exercises": [
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-001",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-001",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-3d1891ea7407e773",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-1",
+          "text": "Deze laars zit te strak. Hebt u een grotere maat?",
+          "audio": {
+            "audioId": "k10l-3d1891ea7407e773",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-1.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-2",
+          "text": "Ja. Wilt u hetzelfde model?",
+          "audio": {
+            "audioId": "k10l-120c131f5740b3cc",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-2.mp3"
+          },
+          "speaker": "Medewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-3",
+          "text": "Graag, als dat er nog is.",
+          "audio": {
+            "audioId": "k10l-d2a926bdb2175f3e",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-3.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-4",
+          "text": "Ik kijk even in het magazijn.",
+          "audio": {
+            "audioId": "k10l-b11c8e41edd3abfd",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-4.mp3"
+          },
+          "speaker": "Medewerker"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-1",
+          "text": "Deze laars zit te strak. Hebt u een grotere maat?",
+          "audio": {
+            "audioId": "k10l-3d1891ea7407e773",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-1.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-2",
+          "text": "Ja. Wilt u hetzelfde model?",
+          "audio": {
+            "audioId": "k10l-120c131f5740b3cc",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-2.mp3"
+          },
+          "speaker": "Medewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-3",
+          "text": "Graag, als dat er nog is.",
+          "audio": {
+            "audioId": "k10l-d2a926bdb2175f3e",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-3.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-source-4",
+          "text": "Ik kijk even in het magazijn.",
+          "audio": {
+            "audioId": "k10l-b11c8e41edd3abfd",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-a976bff5b61e3cdb-4.mp3"
+          },
+          "speaker": "Medewerker"
+        }
+      ],
+      "sourceText": "Deze laars zit te strak. Hebt u een grotere maat?\nJa. Wilt u hetzelfde model?\nGraag, als dat er nog is.\nIk kijk even in het magazijn.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Wat wil Elena veranderen?",
+      "questionAudio": {
+        "audioId": "k10l-38fe2aa91b06e3f9",
+        "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=710827,23599"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-A",
+          "label": "Het model.",
+          "audio": {
+            "audioId": "k10l-e28c1ead61136e4c",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=1647149,15225"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-B",
+          "label": "De maat.",
+          "audio": {
+            "audioId": "k10l-8276fa6e8df39a54",
+            "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=1372486,13969"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-001-C",
+          "label": "De kleur.",
+          "audio": {
+            "audioId": "k10l-1d7539a9804fc7be",
+            "src": "/package-audio/klink10-listening-20261102/audio-6fc1915e0c1e07df.bin#bytes=2089897,14388"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-001-B"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-001-A": "Niet goed. Je hoort: “Hebt u een grotere maat”. Daarom past “Het model” niet. Het juiste antwoord is “De maat”.",
+        "KLINK-LUI-P01-A2-dialogue-question-001-B": "Goed. Je hoort: “Hebt u een grotere maat”. Daarom is “De maat” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-001-C": "Niet goed. Je hoort: “Hebt u een grotere maat”. Daarom past “De kleur” niet. Het juiste antwoord is “De maat”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-a976bff5b61e3cdb",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-002",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-002",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-0fb940ca70ac6afa",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-1",
+          "text": "Ik wil mijn haar iets korter, maar niet heel kort.",
+          "audio": {
+            "audioId": "k10l-0fb940ca70ac6afa",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-1.mp3"
+          },
+          "speaker": "Youssef"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-2",
+          "text": "Ongeveer twee centimeter eraf?",
+          "audio": {
+            "audioId": "k10l-ec312b130eaca58d",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-2.mp3"
+          },
+          "speaker": "Kapper"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-3",
+          "text": "Ja, dat lijkt me goed.",
+          "audio": {
+            "audioId": "k10l-c1c40b2f4869506c",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-3.mp3"
+          },
+          "speaker": "Youssef"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-4",
+          "text": "Dan beginnen we daarmee.",
+          "audio": {
+            "audioId": "k10l-61a4449912ef9c09",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-4.mp3"
+          },
+          "speaker": "Kapper"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-1",
+          "text": "Ik wil mijn haar iets korter, maar niet heel kort.",
+          "audio": {
+            "audioId": "k10l-0fb940ca70ac6afa",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-1.mp3"
+          },
+          "speaker": "Youssef"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-2",
+          "text": "Ongeveer twee centimeter eraf?",
+          "audio": {
+            "audioId": "k10l-ec312b130eaca58d",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-2.mp3"
+          },
+          "speaker": "Kapper"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-3",
+          "text": "Ja, dat lijkt me goed.",
+          "audio": {
+            "audioId": "k10l-c1c40b2f4869506c",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-3.mp3"
+          },
+          "speaker": "Youssef"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-source-4",
+          "text": "Dan beginnen we daarmee.",
+          "audio": {
+            "audioId": "k10l-61a4449912ef9c09",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-fcdc7e9ea05435ac-4.mp3"
+          },
+          "speaker": "Kapper"
+        }
+      ],
+      "sourceText": "Ik wil mijn haar iets korter, maar niet heel kort.\nOngeveer twee centimeter eraf?\nJa, dat lijkt me goed.\nDan beginnen we daarmee.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Wat spreken zij af?",
+      "questionAudio": {
+        "audioId": "k10l-7f2dd0d6119d76ef",
+        "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=1223538,21086"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-A",
+          "label": "Het haar alleen kammen.",
+          "audio": {
+            "audioId": "k10l-58316aa74dcbd1f1",
+            "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=2021042,20672"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-B",
+          "label": "Ongeveer twee centimeter korter.",
+          "audio": {
+            "audioId": "k10l-1268e96fc25533bd",
+            "src": "/package-audio/klink10-listening-20261102/audio-6fc1915e0c1e07df.bin#bytes=1259750,27786"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-002-C",
+          "label": "Al het haar eraf.",
+          "audio": {
+            "audioId": "k10l-8ae3f7dd27f79e44",
+            "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=2082084,19830"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-002-B"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-002-A": "Niet goed. Je hoort: “Ongeveer twee centimeter eraf”. Daarom past “Het haar alleen kammen” niet. Het juiste antwoord is “Ongeveer twee centimeter korter”.",
+        "KLINK-LUI-P01-A2-dialogue-question-002-B": "Goed. Je hoort: “Ongeveer twee centimeter eraf”. Daarom is “Ongeveer twee centimeter korter” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-002-C": "Niet goed. Je hoort: “Ongeveer twee centimeter eraf”. Daarom past “Al het haar eraf” niet. Het juiste antwoord is “Ongeveer twee centimeter korter”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-fcdc7e9ea05435ac",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-003",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-003",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-de6d52a1322560d0",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-1",
+          "text": "De verpakking van deze pil is anders. Kunt u dat uitleggen?",
+          "audio": {
+            "audioId": "k10l-de6d52a1322560d0",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-1.mp3"
+          },
+          "speaker": "Nora"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-2",
+          "text": "Ja, ik kijk eerst welke verpakking u eerder had.",
+          "audio": {
+            "audioId": "k10l-a1e9ec39a9bf03b9",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-2.mp3"
+          },
+          "speaker": "Apotheekmedewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-3",
+          "text": "Wilt u het daarna rustig uitleggen?",
+          "audio": {
+            "audioId": "k10l-3ea883e39181333f",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-3.mp3"
+          },
+          "speaker": "Nora"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-4",
+          "text": "Natuurlijk. En u kunt vragen stellen.",
+          "audio": {
+            "audioId": "k10l-c26bc33d6f8d50f3",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-4.mp3"
+          },
+          "speaker": "Apotheekmedewerker"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-1",
+          "text": "De verpakking van deze pil is anders. Kunt u dat uitleggen?",
+          "audio": {
+            "audioId": "k10l-de6d52a1322560d0",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-1.mp3"
+          },
+          "speaker": "Nora"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-2",
+          "text": "Ja, ik kijk eerst welke verpakking u eerder had.",
+          "audio": {
+            "audioId": "k10l-a1e9ec39a9bf03b9",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-2.mp3"
+          },
+          "speaker": "Apotheekmedewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-3",
+          "text": "Wilt u het daarna rustig uitleggen?",
+          "audio": {
+            "audioId": "k10l-3ea883e39181333f",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-3.mp3"
+          },
+          "speaker": "Nora"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-source-4",
+          "text": "Natuurlijk. En u kunt vragen stellen.",
+          "audio": {
+            "audioId": "k10l-c26bc33d6f8d50f3",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-3c5bcf8119e04e9d-4.mp3"
+          },
+          "speaker": "Apotheekmedewerker"
+        }
+      ],
+      "sourceText": "De verpakking van deze pil is anders. Kunt u dat uitleggen?\nJa, ik kijk eerst welke verpakking u eerder had.\nWilt u het daarna rustig uitleggen?\nNatuurlijk. En u kunt vragen stellen.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Wat vraagt Nora aan de medewerker?",
+      "questionAudio": {
+        "audioId": "k10l-d812aeb9f8b88f48",
+        "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=1030563,30296"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-A",
+          "label": "Of de medewerker rustig wil uitleggen.",
+          "audio": {
+            "audioId": "k10l-d261a93985670692",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=307706,33225"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-B",
+          "label": "Of de medewerker sneller wil praten.",
+          "audio": {
+            "audioId": "k10l-2496a68382099197",
+            "src": "/package-audio/klink10-listening-20261102/audio-6fc1915e0c1e07df.bin#bytes=2508748,31552"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-003-C",
+          "label": "Of de medewerker niets hoeft uit te leggen.",
+          "audio": {
+            "audioId": "k10l-2dbcd26bdbc4a260",
+            "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=146029,35320"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-003-A"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-003-A": "Goed. Je hoort: “Wilt u het daarna rustig uitleggen”. Daarom is “Of de medewerker rustig wil uitleggen” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-003-B": "Niet goed. Je hoort: “Wilt u het daarna rustig uitleggen”. Daarom past “Of de medewerker sneller wil praten” niet. Het juiste antwoord is “Of de medewerker rustig wil uitleggen”.",
+        "KLINK-LUI-P01-A2-dialogue-question-003-C": "Niet goed. Je hoort: “Wilt u het daarna rustig uitleggen”. Daarom past “Of de medewerker niets hoeft uit te leggen” niet. Het juiste antwoord is “Of de medewerker rustig wil uitleggen”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-3c5bcf8119e04e9d",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-004",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-004",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-66257d0a50168595",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-1",
+          "text": "Mag ik hier zitten? Ik wil even in mijn boek lezen.",
+          "audio": {
+            "audioId": "k10l-66257d0a50168595",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-1.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-2",
+          "text": "Ja. De stoel bij het raam is ook vrij.",
+          "audio": {
+            "audioId": "k10l-4c523935e7c0a625",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-2.mp3"
+          },
+          "speaker": "Nora"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-3",
+          "text": "Daar zit ik liever, want daar is meer licht.",
+          "audio": {
+            "audioId": "k10l-30086f7188abfc30",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-3.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-4",
+          "text": "Goed, ik zet mijn tas even opzij.",
+          "audio": {
+            "audioId": "k10l-40aec5b4f5aaa97e",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-4.mp3"
+          },
+          "speaker": "Nora"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-1",
+          "text": "Mag ik hier zitten? Ik wil even in mijn boek lezen.",
+          "audio": {
+            "audioId": "k10l-66257d0a50168595",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-1.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-2",
+          "text": "Ja. De stoel bij het raam is ook vrij.",
+          "audio": {
+            "audioId": "k10l-4c523935e7c0a625",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-2.mp3"
+          },
+          "speaker": "Nora"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-3",
+          "text": "Daar zit ik liever, want daar is meer licht.",
+          "audio": {
+            "audioId": "k10l-30086f7188abfc30",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-3.mp3"
+          },
+          "speaker": "Elena"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-source-4",
+          "text": "Goed, ik zet mijn tas even opzij.",
+          "audio": {
+            "audioId": "k10l-40aec5b4f5aaa97e",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-4.mp3"
+          },
+          "speaker": "Nora"
+        }
+      ],
+      "sourceText": "Mag ik hier zitten? Ik wil even in mijn boek lezen.\nJa. De stoel bij het raam is ook vrij.\nDaar zit ik liever, want daar is meer licht.\nGoed, ik zet mijn tas even opzij.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Waarom kiest Elena de stoel bij het raam?",
+      "questionAudio": {
+        "audioId": "k10l-dff718ff54dd2f97",
+        "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=1508232,35318"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-A",
+          "label": "Daar is het warmer.",
+          "audio": {
+            "audioId": "k10l-94c330644206bef3",
+            "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=2793329,19832"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-B",
+          "label": "Daar is het stiller.",
+          "audio": {
+            "audioId": "k10l-6bb2b30ea5369d61",
+            "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=173806,21087"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-004-C",
+          "label": "Daar is meer licht.",
+          "audio": {
+            "audioId": "k10l-ff6dd6953a7278c5",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=3016044,20668"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-004-C"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-004-A": "Niet goed. Je hoort: “Daar zit ik liever, want daar is meer licht”. Daarom past “Daar is het warmer” niet. Het juiste antwoord is “Daar is meer licht”.",
+        "KLINK-LUI-P01-A2-dialogue-question-004-B": "Niet goed. Je hoort: “Daar zit ik liever, want daar is meer licht”. Daarom past “Daar is het stiller” niet. Het juiste antwoord is “Daar is meer licht”.",
+        "KLINK-LUI-P01-A2-dialogue-question-004-C": "Goed. Je hoort: “Daar zit ik liever, want daar is meer licht”. Daarom is “Daar is meer licht” het juiste antwoord."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-d0a263adf67c1b3c",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-005",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-005",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-2f11b3f5d040e6f1",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-1",
+          "text": "Woensdag lukt mij niet. Kan onze afspraak een dag later?",
+          "audio": {
+            "audioId": "k10l-2f11b3f5d040e6f1",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-1.mp3"
+          },
+          "speaker": "Rachid"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-2",
+          "text": "Donderdag kan ik na zes uur.",
+          "audio": {
+            "audioId": "k10l-624066ec0647ccbf",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-2.mp3"
+          },
+          "speaker": "Lotte"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-3",
+          "text": "Zullen we dan om zeven uur afspreken?",
+          "audio": {
+            "audioId": "k10l-2f1e1adb7023b559",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-3.mp3"
+          },
+          "speaker": "Rachid"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-4",
+          "text": "Ja, ik zet het in mijn agenda.",
+          "audio": {
+            "audioId": "k10l-bc2002162a4473a5",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-4.mp3"
+          },
+          "speaker": "Lotte"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-1",
+          "text": "Woensdag lukt mij niet. Kan onze afspraak een dag later?",
+          "audio": {
+            "audioId": "k10l-2f11b3f5d040e6f1",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-1.mp3"
+          },
+          "speaker": "Rachid"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-2",
+          "text": "Donderdag kan ik na zes uur.",
+          "audio": {
+            "audioId": "k10l-624066ec0647ccbf",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-2.mp3"
+          },
+          "speaker": "Lotte"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-3",
+          "text": "Zullen we dan om zeven uur afspreken?",
+          "audio": {
+            "audioId": "k10l-2f1e1adb7023b559",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-3.mp3"
+          },
+          "speaker": "Rachid"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-source-4",
+          "text": "Ja, ik zet het in mijn agenda.",
+          "audio": {
+            "audioId": "k10l-bc2002162a4473a5",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-2a0adf55f7bb05f6-4.mp3"
+          },
+          "speaker": "Lotte"
+        }
+      ],
+      "sourceText": "Woensdag lukt mij niet. Kan onze afspraak een dag later?\nDonderdag kan ik na zes uur.\nZullen we dan om zeven uur afspreken?\nJa, ik zet het in mijn agenda.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Welke nieuwe dag kiezen ze?",
+      "questionAudio": {
+        "audioId": "k10l-b715499239029072",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1987910,23601"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-A",
+          "label": "Woensdag.",
+          "audio": {
+            "audioId": "k10l-74f363c67720c99d",
+            "src": "/package-audio/woorden-20261025/TL1925.mp3"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-B",
+          "label": "Donderdag.",
+          "audio": {
+            "audioId": "k10l-c5f6f25b1014cbdb",
+            "src": "/package-audio/woorden-20261025/TL0378.mp3"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-005-C",
+          "label": "Dinsdag.",
+          "audio": {
+            "audioId": "k10l-f786b031e83f525c",
+            "src": "/package-audio/woorden-20261025/TL0365.mp3"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-005-B"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-005-A": "Niet goed. Je hoort: “Donderdag kan ik na zes uur”. Daarom past “Woensdag” niet. Het juiste antwoord is “Donderdag”.",
+        "KLINK-LUI-P01-A2-dialogue-question-005-B": "Goed. Je hoort: “Donderdag kan ik na zes uur”. Daarom is “Donderdag” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-005-C": "Niet goed. Je hoort: “Donderdag kan ik na zes uur”. Daarom past “Dinsdag” niet. Het juiste antwoord is “Donderdag”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-2a0adf55f7bb05f6",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-006",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-006",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-e774f203340400fb",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-1",
+          "text": "Mijn bus komt later. Ik ben dus ook later bij jou.",
+          "audio": {
+            "audioId": "k10l-e774f203340400fb",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-1.mp3"
+          },
+          "speaker": "Abel"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-2",
+          "text": "Weet je ongeveer hoe laat?",
+          "audio": {
+            "audioId": "k10l-b4c91bc49e27da4a",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-2.mp3"
+          },
+          "speaker": "Fatima"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-3",
+          "text": "Nog niet. Ik stuur een bericht als de bus er is.",
+          "audio": {
+            "audioId": "k10l-22c3d3ef10a6f771",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-3.mp3"
+          },
+          "speaker": "Abel"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-4",
+          "text": "Goed, dan wacht ik op je bericht.",
+          "audio": {
+            "audioId": "k10l-8c18eab535d3d4bc",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-4.mp3"
+          },
+          "speaker": "Fatima"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-1",
+          "text": "Mijn bus komt later. Ik ben dus ook later bij jou.",
+          "audio": {
+            "audioId": "k10l-e774f203340400fb",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-1.mp3"
+          },
+          "speaker": "Abel"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-2",
+          "text": "Weet je ongeveer hoe laat?",
+          "audio": {
+            "audioId": "k10l-b4c91bc49e27da4a",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-2.mp3"
+          },
+          "speaker": "Fatima"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-3",
+          "text": "Nog niet. Ik stuur een bericht als de bus er is.",
+          "audio": {
+            "audioId": "k10l-22c3d3ef10a6f771",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-3.mp3"
+          },
+          "speaker": "Abel"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-source-4",
+          "text": "Goed, dan wacht ik op je bericht.",
+          "audio": {
+            "audioId": "k10l-8c18eab535d3d4bc",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-0f5bd37ffaa2169c-4.mp3"
+          },
+          "speaker": "Fatima"
+        }
+      ],
+      "sourceText": "Mijn bus komt later. Ik ben dus ook later bij jou.\nWeet je ongeveer hoe laat?\nNog niet. Ik stuur een bericht als de bus er is.\nGoed, dan wacht ik op je bericht.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Wanneer stuurt Abel weer een bericht?",
+      "questionAudio": {
+        "audioId": "k10l-03f2ee31f645e0fb",
+        "src": "/package-audio/klink10-listening-20261102/audio-6fc1915e0c1e07df.bin#bytes=226948,32388"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-A",
+          "label": "Over een uur.",
+          "audio": {
+            "audioId": "k10l-3f28029e91d0c8eb",
+            "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=783131,17736"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-B",
+          "label": "Als hij thuiskomt.",
+          "audio": {
+            "audioId": "k10l-b32bb333cb4d2f70",
+            "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1565656,19831"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-006-C",
+          "label": "Als de bus er is.",
+          "audio": {
+            "audioId": "k10l-986a0da860f791a1",
+            "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=3073757,17740"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-006-C"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-006-A": "Niet goed. Je hoort: “Nog niet”. Daarom past “Over een uur” niet. Het juiste antwoord is “Als de bus er is”.",
+        "KLINK-LUI-P01-A2-dialogue-question-006-B": "Niet goed. Je hoort: “Nog niet”. Daarom past “Als hij thuiskomt” niet. Het juiste antwoord is “Als de bus er is”.",
+        "KLINK-LUI-P01-A2-dialogue-question-006-C": "Goed. Je hoort: “Nog niet”. Daarom is “Als de bus er is” het juiste antwoord."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-0f5bd37ffaa2169c",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-007",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-007",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-6aeddd0897cb8713",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-1",
+          "text": "Het hek hier is dicht. Kunnen we wel naar binnen?",
+          "audio": {
+            "audioId": "k10l-6aeddd0897cb8713",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-1.mp3"
+          },
+          "speaker": "Sofia"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-2",
+          "text": "Ja, aan de zijkant is nog een hek.",
+          "audio": {
+            "audioId": "k10l-d2e3b0629ddeaea5",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-2.mp3"
+          },
+          "speaker": "Abel"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-3",
+          "text": "Moeten we links om het gebouw lopen?",
+          "audio": {
+            "audioId": "k10l-db06f7bc1d808f80",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-3.mp3"
+          },
+          "speaker": "Sofia"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-4",
+          "text": "Ja, daar zie je de ingang.",
+          "audio": {
+            "audioId": "k10l-595b569330969928",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-4.mp3"
+          },
+          "speaker": "Abel"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-1",
+          "text": "Het hek hier is dicht. Kunnen we wel naar binnen?",
+          "audio": {
+            "audioId": "k10l-6aeddd0897cb8713",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-1.mp3"
+          },
+          "speaker": "Sofia"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-2",
+          "text": "Ja, aan de zijkant is nog een hek.",
+          "audio": {
+            "audioId": "k10l-d2e3b0629ddeaea5",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-2.mp3"
+          },
+          "speaker": "Abel"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-3",
+          "text": "Moeten we links om het gebouw lopen?",
+          "audio": {
+            "audioId": "k10l-db06f7bc1d808f80",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-3.mp3"
+          },
+          "speaker": "Sofia"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-source-4",
+          "text": "Ja, daar zie je de ingang.",
+          "audio": {
+            "audioId": "k10l-595b569330969928",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-5e32514fb6f64108-4.mp3"
+          },
+          "speaker": "Abel"
+        }
+      ],
+      "sourceText": "Het hek hier is dicht. Kunnen we wel naar binnen?\nJa, aan de zijkant is nog een hek.\nMoeten we links om het gebouw lopen?\nJa, daar zie je de ingang.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Waar moeten zij naartoe lopen?",
+      "questionAudio": {
+        "audioId": "k10l-94136fde01aabaac",
+        "src": "/package-audio/klink10-listening-20261102/audio-5bb6e12cc96caad9.bin#bytes=2765963,27366"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-A",
+          "label": "Links om het gebouw.",
+          "audio": {
+            "audioId": "k10l-e03b7ee4793e5b01",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=1585306,21922"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-B",
+          "label": "Rechts om het gebouw.",
+          "audio": {
+            "audioId": "k10l-5fa6705e7f13a07a",
+            "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=2449939,21088"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-007-C",
+          "label": "Door het gesloten hek.",
+          "audio": {
+            "audioId": "k10l-e68d2a3dcd5f71ab",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=1884053,20671"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-007-A"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-007-A": "Goed. Je hoort: “Moeten we links om het gebouw lopen”. Daarom is “Links om het gebouw” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-007-B": "Niet goed. Je hoort: “Moeten we links om het gebouw lopen”. Daarom past “Rechts om het gebouw” niet. Het juiste antwoord is “Links om het gebouw”.",
+        "KLINK-LUI-P01-A2-dialogue-question-007-C": "Niet goed. Je hoort: “Moeten we links om het gebouw lopen”. Daarom past “Door het gesloten hek” niet. Het juiste antwoord is “Links om het gebouw”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-5e32514fb6f64108",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-008",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-008",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-2ca538e49c862fed",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-1",
+          "text": "In de kastdeur die ik kreeg zit een deuk.",
+          "audio": {
+            "audioId": "k10l-2ca538e49c862fed",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-1.mp3"
+          },
+          "speaker": "Kofi"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-2",
+          "text": "Kunt u een foto sturen?",
+          "audio": {
+            "audioId": "k10l-22070abf577f5d6e",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-2.mp3"
+          },
+          "speaker": "Winkelmedewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-3",
+          "text": "Ja. Naar welk adres kan die?",
+          "audio": {
+            "audioId": "k10l-d23546edf1fad99a",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-3.mp3"
+          },
+          "speaker": "Kofi"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-4",
+          "text": "Ik geef u onze contactgegevens.",
+          "audio": {
+            "audioId": "k10l-6a1fb281cbc79436",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-4.mp3"
+          },
+          "speaker": "Winkelmedewerker"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-1",
+          "text": "In de kastdeur die ik kreeg zit een deuk.",
+          "audio": {
+            "audioId": "k10l-2ca538e49c862fed",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-1.mp3"
+          },
+          "speaker": "Kofi"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-2",
+          "text": "Kunt u een foto sturen?",
+          "audio": {
+            "audioId": "k10l-22070abf577f5d6e",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-2.mp3"
+          },
+          "speaker": "Winkelmedewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-3",
+          "text": "Ja. Naar welk adres kan die?",
+          "audio": {
+            "audioId": "k10l-d23546edf1fad99a",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-3.mp3"
+          },
+          "speaker": "Kofi"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-source-4",
+          "text": "Ik geef u onze contactgegevens.",
+          "audio": {
+            "audioId": "k10l-6a1fb281cbc79436",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-6ad301b07b8f3f97-4.mp3"
+          },
+          "speaker": "Winkelmedewerker"
+        }
+      ],
+      "sourceText": "In de kastdeur die ik kreeg zit een deuk.\nKunt u een foto sturen?\nJa. Naar welk adres kan die?\nIk geef u onze contactgegevens.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Wat vraagt de medewerker?",
+      "questionAudio": {
+        "audioId": "k10l-4d67016e27c01516",
+        "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=1576320,23599"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-A",
+          "label": "Een foto van de aankoopbon.",
+          "audio": {
+            "audioId": "k10l-cb9d775b871a40b3",
+            "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=2791729,26527"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-B",
+          "label": "Een foto van de beschadiging.",
+          "audio": {
+            "audioId": "k10l-b07495ee0187458a",
+            "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1483819,24857"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-008-C",
+          "label": "Een foto van de winkel.",
+          "audio": {
+            "audioId": "k10l-fa11ba5c2b484f9a",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=2786650,21925"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-008-B"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-008-A": "Niet goed. Je hoort: “Kunt u een foto sturen”. Daarom past “Een foto van de aankoopbon” niet. Het juiste antwoord is “Een foto van de beschadiging”.",
+        "KLINK-LUI-P01-A2-dialogue-question-008-B": "Goed. Je hoort: “Kunt u een foto sturen”. Daarom is “Een foto van de beschadiging” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-008-C": "Niet goed. Je hoort: “Kunt u een foto sturen”. Daarom past “Een foto van de winkel” niet. Het juiste antwoord is “Een foto van de beschadiging”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-6ad301b07b8f3f97",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-009",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-009",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-91ba32764afc28c0",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-1",
+          "text": "Mijn afspraak loopt uit. Kun jij mijn kind ophalen?",
+          "audio": {
+            "audioId": "k10l-91ba32764afc28c0",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-1.mp3"
+          },
+          "speaker": "Daan"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-2",
+          "text": "Ja. Hoe laat moet ik er zijn?",
+          "audio": {
+            "audioId": "k10l-25d3e85d01480d99",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-2.mp3"
+          },
+          "speaker": "Zijn moeder"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-3",
+          "text": "Om drie uur. Ik bel de opvang dat jij komt.",
+          "audio": {
+            "audioId": "k10l-8ad4969ac7b36550",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-3.mp3"
+          },
+          "speaker": "Daan"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-4",
+          "text": "Goed, dan ga ik op tijd weg.",
+          "audio": {
+            "audioId": "k10l-673b03539d372a47",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-4.mp3"
+          },
+          "speaker": "Zijn moeder"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-1",
+          "text": "Mijn afspraak loopt uit. Kun jij mijn kind ophalen?",
+          "audio": {
+            "audioId": "k10l-91ba32764afc28c0",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-1.mp3"
+          },
+          "speaker": "Daan"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-2",
+          "text": "Ja. Hoe laat moet ik er zijn?",
+          "audio": {
+            "audioId": "k10l-25d3e85d01480d99",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-2.mp3"
+          },
+          "speaker": "Zijn moeder"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-3",
+          "text": "Om drie uur. Ik bel de opvang dat jij komt.",
+          "audio": {
+            "audioId": "k10l-8ad4969ac7b36550",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-3.mp3"
+          },
+          "speaker": "Daan"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-source-4",
+          "text": "Goed, dan ga ik op tijd weg.",
+          "audio": {
+            "audioId": "k10l-673b03539d372a47",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-4923b03beca4ec86-4.mp3"
+          },
+          "speaker": "Zijn moeder"
+        }
+      ],
+      "sourceText": "Mijn afspraak loopt uit. Kun jij mijn kind ophalen?\nJa. Hoe laat moet ik er zijn?\nOm drie uur. Ik bel de opvang dat jij komt.\nGoed, dan ga ik op tijd weg.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Hoe laat moet Daans moeder bij de opvang zijn?",
+      "questionAudio": {
+        "audioId": "k10l-bf4cd5dda510ecc8",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=2295875,36995"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-A",
+          "label": "Om vier uur.",
+          "audio": {
+            "audioId": "k10l-2fcfee8726f3e8d3",
+            "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=213736,17735"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-B",
+          "label": "Om drie uur.",
+          "audio": {
+            "audioId": "k10l-1cf3ede31a18e8fe",
+            "src": "/package-audio/klink10-listening-20261102/audio-6fc1915e0c1e07df.bin#bytes=2072162,17735"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-009-C",
+          "label": "Om twee uur.",
+          "audio": {
+            "audioId": "k10l-eb7aa8bc24f73e43",
+            "src": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin#bytes=2031336,16899"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-009-B"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-009-A": "Niet goed. Je hoort: “Om drie uur”. Daarom past “Om vier uur” niet. Het juiste antwoord is “Om drie uur”.",
+        "KLINK-LUI-P01-A2-dialogue-question-009-B": "Goed. Je hoort: “Om drie uur”. Daarom is “Om drie uur” het juiste antwoord.",
+        "KLINK-LUI-P01-A2-dialogue-question-009-C": "Niet goed. Je hoort: “Om drie uur”. Daarom past “Om twee uur” niet. Het juiste antwoord is “Om drie uur”."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-4923b03beca4ec86",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    },
+    {
+      "exerciseId": "KLINK-LUI-P01-A2-dialogue-question-010",
+      "componentId": "KLINK-EXTENDED",
+      "contractVersion": "1.0",
+      "mode": "dialogue-question",
+      "groupActivity": "dialogue-question",
+      "contentLevel": "a2",
+      "vocabularyLevels": [
+        "a2"
+      ],
+      "title": "Luister goed. Kies het beste antwoord.",
+      "sourceStatus": "reviewed-source-adaptation-20261102",
+      "sourceRecordId": "KLINK-LUI-P01-A2-dialogue-question-010",
+      "assessment": "answer",
+      "access": "supported-listening",
+      "requiresAudio": true,
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "audioOnly": true,
+      "playAllBlocks": true,
+      "transcriptAfterAnswer": true,
+      "prompt": {
+        "audio": {
+          "audioId": "k10l-79f21221717a7f8f",
+          "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-1.mp3"
+        }
+      },
+      "sourceBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-1",
+          "text": "De boot gaat later. Kan ik ook een andere tocht kiezen?",
+          "audio": {
+            "audioId": "k10l-79f21221717a7f8f",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-1.mp3"
+          },
+          "speaker": "Eva"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-2",
+          "text": "Ik kijk welke tochten nog plaats hebben.",
+          "audio": {
+            "audioId": "k10l-7e82086ecfc58993",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-2.mp3"
+          },
+          "speaker": "Medewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-3",
+          "text": "Graag. Ik ben met mijn zoon, dus we hebben twee plaatsen nodig.",
+          "audio": {
+            "audioId": "k10l-863358f761a3a8d7",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-3.mp3"
+          },
+          "speaker": "Eva"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-4",
+          "text": "Ik controleer dat voor u.",
+          "audio": {
+            "audioId": "k10l-38cf4e1efa89d755",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-4.mp3"
+          },
+          "speaker": "Medewerker"
+        }
+      ],
+      "textBlocks": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-1",
+          "text": "De boot gaat later. Kan ik ook een andere tocht kiezen?",
+          "audio": {
+            "audioId": "k10l-79f21221717a7f8f",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-1.mp3"
+          },
+          "speaker": "Eva"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-2",
+          "text": "Ik kijk welke tochten nog plaats hebben.",
+          "audio": {
+            "audioId": "k10l-7e82086ecfc58993",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-2.mp3"
+          },
+          "speaker": "Medewerker"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-3",
+          "text": "Graag. Ik ben met mijn zoon, dus we hebben twee plaatsen nodig.",
+          "audio": {
+            "audioId": "k10l-863358f761a3a8d7",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-3.mp3"
+          },
+          "speaker": "Eva"
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-source-4",
+          "text": "Ik controleer dat voor u.",
+          "audio": {
+            "audioId": "k10l-38cf4e1efa89d755",
+            "src": "/package-audio/dialogue-repair/klink-dialogue-c91d9bde18dc7e9f-4.mp3"
+          },
+          "speaker": "Medewerker"
+        }
+      ],
+      "sourceText": "De boot gaat later. Kan ik ook een andere tocht kiezen?\nIk kijk welke tochten nog plaats hebben.\nGraag. Ik ben met mijn zoon, dus we hebben twee plaatsen nodig.\nIk controleer dat voor u.",
+      "instructionAudio": {
+        "audioId": "k10l-b4352d26f4170187",
+        "src": "/package-audio/klink10-listening-20261102/audio-3d70225b669935ef.bin#bytes=1646489,31136"
+      },
+      "question": "Hoeveel plaatsen heeft Eva nodig?",
+      "questionAudio": {
+        "audioId": "k10l-360f59ef26595fc7",
+        "src": "/package-audio/klink10-listening-20261102/audio-328ff835a9ffe4b3.bin#bytes=508568,30295"
+      },
+      "options": [
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-A",
+          "label": "Eén.",
+          "audio": {
+            "audioId": "k10l-b0bd7bf3cf2715b0",
+            "src": "/package-audio/woorden-20261025/TL2000.mp3"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-B",
+          "label": "Acht.",
+          "audio": {
+            "audioId": "k10l-50176763f8ded870",
+            "src": "/package-audio/taalroute/klink-woord-acht.wav"
+          }
+        },
+        {
+          "id": "KLINK-LUI-P01-A2-dialogue-question-010-C",
+          "label": "Twee.",
+          "audio": {
+            "audioId": "k10l-3da6ce8cae48cc6b",
+            "src": "/package-audio/woorden-20261025/TL1589.mp3"
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "KLINK-LUI-P01-A2-dialogue-question-010-C"
+        ]
+      },
+      "optionFeedback": {
+        "KLINK-LUI-P01-A2-dialogue-question-010-A": "Niet goed. Je hoort: “Ik ben met mijn zoon, dus we hebben twee plaatsen nodig”. Daarom past “Eén” niet. Het juiste antwoord is “Twee”.",
+        "KLINK-LUI-P01-A2-dialogue-question-010-B": "Niet goed. Je hoort: “Ik ben met mijn zoon, dus we hebben twee plaatsen nodig”. Daarom past “Acht” niet. Het juiste antwoord is “Twee”.",
+        "KLINK-LUI-P01-A2-dialogue-question-010-C": "Goed. Je hoort: “Ik ben met mijn zoon, dus we hebben twee plaatsen nodig”. Daarom is “Twee” het juiste antwoord."
+      },
+      "feedback": "Luister nog eens en probeer opnieuw.",
+      "originalSourceId": "klink-dialogue-c91d9bde18dc7e9f",
+      "sourceDoc": "https://drive.google.com/file/d/1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG",
+      "sourceDocumentId": "1JG-ZM3tVhQtEWu9_LlaX7PiKzkyh8HDG"
+    }
+  ]
+}

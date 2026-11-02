@@ -29,7 +29,7 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
       synonyms ? exercise.prompt?.audio?.src ? <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> : typeof exercise.synonymContext === 'string' && exercise.prompt?.text ? <p className="cp-synonym-word cp-synonym-context-card">{exercise.synonymContext.split(exercise.prompt.text)[0]}<strong>{exercise.prompt.text}</strong>{exercise.synonymContext.split(exercise.prompt.text)[1]}</p> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : wordUse ? <>
         {exercise.prompt?.audio?.src && <ExerciseListen label={exercise.mode === 'word-combinations' ? 'Luister naar de combinatie en de antwoorden' : 'Luister naar de ander en de antwoorden'} onClick={() => onAudio(exercise.prompt?.audio?.src)} />}
         <p className="cp-synonym-word cp-synonym-context-card"><strong>{exercise.prompt?.text}</strong></p>
-      </> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
+      </> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} initiallyHidden={exercise.transcriptAfterAnswer === true && !selected} />}
     {typeof exercise.question === 'string' && <h4><WordAudioText text={exercise.question} /></h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
@@ -46,9 +46,9 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   </section>;
 }
 
-export function SourceText({ exercise, onAudio, onHelp, corner = true }: { exercise: PackageExercise; onAudio: AudioPlayer; onHelp: () => void; corner?: boolean }) {
+export function SourceText({ exercise, onAudio, onHelp, corner = true, initiallyHidden = false }: { exercise: PackageExercise; onAudio: AudioPlayer; onHelp: () => void; corner?: boolean; initiallyHidden?: boolean }) {
   const blocks = (exercise.sourceBlocks ?? []) as Block[];
-  const textView = useExerciseViewTarget('text', blocks.length > 0);
+  const textView = useExerciseViewTarget('text', blocks.length > 0, initiallyHidden ? onHelp : undefined, initiallyHidden);
   if (!blocks.length) return null;
   return <div className="cp-source-text">{blocks.map((block, index) => <div key={block.id}>
     {block.speaker && <small>{block.speaker}</small>}<p {...textView}>{block.text}</p>

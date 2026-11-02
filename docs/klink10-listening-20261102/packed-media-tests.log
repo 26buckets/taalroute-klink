@@ -1,0 +1,13 @@
+✔ Packed lesson clips retain exact bytes, playback completion, cancellation and object URL cleanup (14.471584ms)
+✔ Read-along follows media time and releases its animation callback on cancellation and completion (1.086375ms)
+✔ Withdrawn explanation is blocked; task questions and words remain available (0.75275ms)
+✔ Default playback uses 0.85; isolated models retain their natural rate without changing other audio (0.919375ms)
+✔ Session tempo changes active and later audio without restarting; restores each original rate and survives denied storage (1.147709ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.993125

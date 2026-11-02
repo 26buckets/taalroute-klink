@@ -1,0 +1,117 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10lwr-7eaddcf0fa93b2b3",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-7eaddcf0fa93b2b3.mp3",
+      "expected": "tasje",
+      "recognized": " Dat is je...",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.0,
+          "text": " Dat is je...",
+          "tokens": [
+            50365,
+            9315,
+            307,
+            1506,
+            485,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.732337406703404,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 0.5206921100616455
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-bfb8049b4b020949",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-bfb8049b4b020949.mp3",
+      "expected": "douchekop",
+      "recognized": " Dus kop!",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Dus kop!",
+          "tokens": [
+            50365,
+            17916,
+            28920,
+            0,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5338793992996216,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.06038826331496239
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-54434ec4104ebcc2",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-54434ec4104ebcc2.mp3",
+      "expected": "afmeldt",
+      "recognized": " Au mild!",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.66,
+          "text": " Au mild!",
+          "tokens": [
+            50365,
+            12160,
+            15154,
+            0,
+            50398
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.7249083518981934,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.20456437766551971
+        }
+      ]
+    },
+    {
+      "id": "k10lwr-414eef2f0b9198cb",
+      "src": "/package-audio/klink10-listening-20261102/k10lwr-414eef2f0b9198cb.mp3",
+      "expected": "ordernummer",
+      "recognized": " Ordenummer",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.76,
+          "text": " Ordenummer",
+          "tokens": [
+            50365,
+            1610,
+            1556,
+            30906,
+            50403
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6705780029296875,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 0.45877256989479065
+        }
+      ]
+    }
+  ]
+}

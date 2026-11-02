@@ -8,7 +8,7 @@ void test('Read-along follows media time and releases its animation callback on 
   globalThis.cancelAnimationFrame = id => frames.delete(id);
   globalThis.Audio = class extends EventTarget {
     currentTime = 0;
-    constructor() { super(); audio = this; }
+    constructor() { super(); this.dataset = {}; audio = this; }
     play() { return Promise.resolve(); }
     pause() {}
   };

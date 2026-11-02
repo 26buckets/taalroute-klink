@@ -1,0 +1,44 @@
+{
+  "application": "Klink",
+  "authorization": "Nico, 2 november 2026: tien chats volledig afronden inclusief audio en publiceren",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "roleVoices": {
+    "question": "h6uBOiAjLKklte8hdYio",
+    "narrator": "0qLmDzgqulxcvv0yf3kg",
+    "option": "7qdUFMklKPaaAVMsBTBt",
+    "female": "7qdUFMklKPaaAVMsBTBt",
+    "male": "60CwgZt94Yf7yYIXMDDe"
+  },
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 242,
+  "clips": [
+    {
+      "id": "k10l-full-source-8bb7b62347f2da9a",
+      "text": "Je dienst begint donderdag een halfuur eerder: om half acht.",
+      "title": "Je dienst begint donderdag een halfuur eerder: om half acht.",
+      "role": "narrator",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "src": "/package-audio/klink10-listening-20261102/k10l-full-source-8bb7b62347f2da9a.mp3",
+      "textSha256": "8bb7b62347f2da9a143d0522a13adcd9126d070472cf488fd354459e7db3d2d2"
+    },
+    {
+      "id": "k10l-full-source-fc32801f289233ff",
+      "text": "Samira heeft dinsdag een sollicitatiegesprek. Op maandag ontvangt ze een bericht: de leidinggevende is ziek. Het gesprek wordt verplaatst naar donderdag. Samira past haar agenda aan.",
+      "title": "Samira heeft dinsdag een sollicitatiegesprek. Op maandag ontvangt ze een bericht: de leidinggevende is ziek. Het gesprek wordt verplaatst naar donderdag. Samira past haar agenda aan.",
+      "role": "narrator",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "src": "/package-audio/klink10-listening-20261102/k10l-full-source-fc32801f289233ff.mp3",
+      "textSha256": "fc32801f289233ff15a3935cde9554b45ef1afdc842ec5d63447b3c6da7d8090"
+    }
+  ]
+}

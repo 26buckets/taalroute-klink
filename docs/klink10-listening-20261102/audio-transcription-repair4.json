@@ -1,0 +1,92 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10lw-final-7b95eb469578ce93",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-final-7b95eb469578ce93.mp3",
+      "expected": "tasje",
+      "recognized": " Daag weer.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.42,
+          "text": " Daag weer.",
+          "tokens": [
+            50365,
+            3933,
+            559,
+            19662,
+            13,
+            50386
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.9271084921700614,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 0.04690206050872803
+        }
+      ]
+    },
+    {
+      "id": "k10lw-final-68fdf406714d28c5",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-final-68fdf406714d28c5.mp3",
+      "expected": "douchekop",
+      "recognized": " douchekap",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.48,
+          "text": " douchekap",
+          "tokens": [
+            50365,
+            274,
+            2220,
+            916,
+            569,
+            50489
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.5136269501277378,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 0.141349196434021
+        }
+      ]
+    },
+    {
+      "id": "k10lw-final-91d7af8b34404b3c",
+      "src": "/package-audio/klink10-listening-20261102/k10lw-final-91d7af8b34404b3c.mp3",
+      "expected": "ordernummer",
+      "recognized": " Ordernummer.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " Ordernummer.",
+          "tokens": [
+            50365,
+            16321,
+            77,
+            30906,
+            13,
+            50387
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3168001515524728,
+          "compression_ratio": 0.6,
+          "no_speech_prob": 0.03246690705418587
+        }
+      ]
+    }
+  ]
+}
