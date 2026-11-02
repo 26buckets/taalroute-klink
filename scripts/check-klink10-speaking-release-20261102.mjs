@@ -1,3 +1,4 @@
+import {verifyDictationApprovedRelease,readBeforeDictationApproved} from './check-klink10-dictation-approved-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -5,12 +6,13 @@ import {createHash} from 'node:crypto';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifyKlink10SpeakingRelease(read=readFileSync){
+ const next=verifyDictationApprovedRelease(read),currentRead=read;read=file=>readBeforeDictationApproved(file,next,currentRead);
  const json=p=>JSON.parse(read(p)),dir='docs/klink10-speaking-20261102/',r=json('docs/klink-owner-release-ten-speaking-20261102.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.existingAppearancePreserved&&r.progressPreserved);
  assert.equal(r.baselineSourceCommit,'7c585fa06be57118576d7a42378cb17a25b1a05b');assert.equal(r.liveSourceCommit,'c2aa17c4a3b4d7f1f37aefdd4fc8142d000e058f');git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,next.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  const allowed=['components/product/package-exercise-browser.tsx','data/klink-production-index.json','data/klink-production-instructions.json','scripts/test-practice-chapters.mjs','scripts/test-klink-complete-recorder-browser-20261101.mjs','scripts/check-klink10-spelling-review-release-20261102.mjs','scripts/check-klink10-speaking-release-20261102.mjs','scripts/test-klink10-speaking-20261102.mjs','scripts/test-klink10-speaking-browser-20261102.mjs','scripts/test-klink10-speaking-media-20261102.mjs','scripts/test-klink10-speaking-recorder-20261102.mjs','scripts/test-klink10-speaking-release-20261102.mjs'];
- assert(changed.every(p=>allowed.includes(p)||p.startsWith('public/practice-content/klink10-speaking-20261102/')||p.startsWith('public/package-audio/klink10-speaking-20261102/')));assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0);
+ assert(changed.every(p=>allowed.includes(p)||p.startsWith('public/practice-content/klink10-speaking-20261102/')||p.startsWith('public/package-audio/klink10-speaking-20261102/')));assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,next.baselineSourceCommit,'--','public').length,0);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
  const m=json(dir+'manifest.json'),old=p=>JSON.parse(git('show',r.baselineSourceCommit+':'+p));assert.equal(m.sourcePositions,10);assert.equal(m.newQuestions,10);assert.equal(m.newAudio,11);assert.equal(m.positions.length,10);assert.equal(m.row.help,'guided');assert.equal(m.row.level,'alfa-a');
  assert.deepEqual(json('data/klink-production-index.json').filter(x=>x.id!==m.row.id),old('data/klink-production-index.json'));assert.equal(sha(read('public'+m.row.url)),m.sha256);
@@ -26,6 +28,6 @@ export function verifyKlink10SpeakingRelease(read=readFileSync){
  assert.equal(pronunciation.sha256,'1ca448da960e9ae8529549abc5fa88454f43e5d5340730343dd95e797f45639a');
  const apple=bank.exercises.find(e=>e.exerciseId==='SPK-AA-ZDZ-02');assert.equal(m.media[apple.prompt.audio.src].sha256,pronunciation.sha256);assert(!Object.values(m.media).some(x=>x.sha256==='af38cd9db052420336ebeeffdee32630b25319acf183f0b1ec9059f33f474164'));
  assert.equal(pronunciation.userApproval,'Deze klinkt goed, als het fruit. Zet de Spreken-reeks nu online en ga door met de andere afgeronde pakketten.');
- const backup=json(dir+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
+ const backup=json(dir+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,next};
 }
-export function readBeforeKlink10Speaking(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeKlink10Speaking(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeDictationApproved(file,r.next,read);}

@@ -1,6 +1,7 @@
 import { productionIndex, productionPack, readingSelections } from './production-practice.ts';
 import { sourceRepeatRounds, type SourceRepeat } from './source-repeat.ts';
 import { writingDictationRounds } from './writing-dictation.ts';
+import { alfaADictationRound } from './klink10-writing-dictation-aa.ts';
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
@@ -167,6 +168,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     const exercises = groupExercises(collection.pack, activity);
     return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
   }));
+  if (activity === 'dictation') result.push({ id: alfaADictationRound.id, title: alfaADictationRound.title, level: 'alfa-a', help: 'practice', pack: productionPack({ ...alfaADictationRound, level: 'alfa-a', activity, count: alfaADictationRound.exercises.length }), exercises: alfaADictationRound.exercises });
   if (activity === 'learning-review') {
     result.push(...wordUseCollections);
     result.push({ id: sourceSpellingReview.collectionId, title: sourceSpellingReview.title, level: 'alfa-a', help: 'guided', pack: productionPack({ id: sourceSpellingReview.collectionId, title: sourceSpellingReview.title, level: 'alfa-a', activity, count: sourceSpellingRecallExercises.length }), exercises: sourceSpellingRecallExercises });

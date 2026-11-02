@@ -11,6 +11,7 @@ import { wordUseCollections } from '../lib/word-use.ts';
 import complete from '../docs/klink-complete-release-20261101/import-manifest.json' with {type:'json'};
 import reviewedB1 from '../docs/b1-reviewed-release-20261101/b1-release-manifest.json' with {type:'json'};
 import { writingDictationRounds } from '../lib/writing-dictation.ts';
+import { alfaADictationRound } from '../lib/klink10-writing-dictation-aa.ts';
 import { sourceSpellingReview, sourceSpellingRecallExercises } from '../lib/source-spelling-review.ts';
 
 void test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
@@ -23,6 +24,9 @@ void test('Twelve independent chapters cover all registered activities without c
     assert(collections.length, activity.id);
     assert.equal(new Set(collections.map(item => item.id)).size, collections.length, `${activity.id}: unique collections`);
     for (const collection of collections) {
+      if (collection.id === alfaADictationRound.id) {
+        assert.equal(activity.id, 'dictation');assert.equal(collection.level, 'alfa-a');assert.equal(collection.exercises.length, 10);assert.deepEqual(collection.exercises, alfaADictationRound.exercises);continue;
+      }
       if (collection.id === sourceSpellingReview.collectionId) {
         assert.equal(activity.id, 'learning-review');
         assert.deepEqual(collection.exercises, sourceSpellingRecallExercises);

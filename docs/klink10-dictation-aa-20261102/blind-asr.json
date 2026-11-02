@@ -1,0 +1,278 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "initialPrompt": null,
+  "actualHumanListening": false,
+  "paidCredits": 0,
+  "files": [
+    {
+      "sourceId": "KSW-N26-AA-HT-001",
+      "target": "maan",
+      "src": "/package-audio/taalroute/klink-woord-maan.wav",
+      "sha256": "bc4ca3e0e710b3710dca31c5731b12c41c1eb3d73963e0da553162287ec34838",
+      "text": "Man",
+      "exact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Man",
+          "tokens": [
+            50365,
+            2458,
+            50390
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.5128892660140991,
+          "compression_ratio": 0.2727272727272727,
+          "no_speech_prob": 2.012358613079357e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-002",
+      "target": "roos",
+      "src": "/package-audio/taalroute/klink-woord-roos.mp3",
+      "sha256": "295d12994769835c274fd0bd38187d380a18fb49eefafe75e07133f7d9182c52",
+      "text": "roos",
+      "exact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " roos",
+          "tokens": [
+            50365,
+            744,
+            329,
+            50465
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6609310150146485,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 2.3257992753933365e-11
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-003",
+      "target": "sok",
+      "src": "/package-audio/taalroute/klink-woord-sok.wav",
+      "sha256": "93a55b047401f1db1b6d7a272f4a5981079abeb2547e8c4050c0dd8efb91655b",
+      "text": "Sok.",
+      "exact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " Sok.",
+          "tokens": [
+            50365,
+            407,
+            74,
+            13,
+            50387
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.37063105901082355,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 1.18353868372445e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-004",
+      "target": "pen",
+      "src": "/package-audio/taalroute/klink-woord-pen.wav",
+      "sha256": "13757437f16e810ba29aef6275708e8279ea35abe3d884d4599d398702f9cf95",
+      "text": "Pen.",
+      "exact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.34,
+          "text": " Pen.",
+          "tokens": [
+            50365,
+            10571,
+            13,
+            50382
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6044912338256836,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 2.8518346018024943e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-005",
+      "target": "jas",
+      "src": "/package-audio/taalroute/klink-woord-jas.wav",
+      "sha256": "6ffa7a9b1713ee74bc9397eb00d9d9d61317bd630be2d6be1e09269e790708dc",
+      "text": "Yes.",
+      "exact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.36,
+          "text": " Yes.",
+          "tokens": [
+            50365,
+            1079,
+            13,
+            50383
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6104743957519532,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 2.0369406161790948e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-006",
+      "target": "tas",
+      "src": "/package-audio/taalroute/klink-woord-tas.wav",
+      "sha256": "04fcd9987d3d440d1d090a1c179346f6485d75afe8cd7d33d19439f79a8e2c41",
+      "text": "tas.",
+      "exact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " tas.",
+          "tokens": [
+            50365,
+            8023,
+            13,
+            50465
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.5866568565368653,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 1.2154224848792694e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-007",
+      "target": "bus",
+      "src": "/package-audio/taalroute/klink-woord-bus.wav",
+      "sha256": "43c23b0422bda3d67d0949185298be1355f7aa178bcb32093581c6944e8bf236",
+      "text": "Bus.",
+      "exact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.4,
+          "text": " Bus.",
+          "tokens": [
+            50365,
+            8006,
+            13,
+            50385
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.37874374389648435,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 7.779835803356505e-11
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-008",
+      "target": "vis",
+      "src": "/package-audio/taalroute/klink-woord-vis.wav",
+      "sha256": "28633f1c2bcf8c11984efb936acd53f10e4a8f31c38eabefc2000d56b68224ec",
+      "text": "FIS",
+      "exact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.0,
+          "text": " FIS",
+          "tokens": [
+            50365,
+            479,
+            2343,
+            50465
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8005989074707032,
+          "compression_ratio": 0.2727272727272727,
+          "no_speech_prob": 1.1592909965330023e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-009",
+      "target": "man",
+      "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+      "sha256": "7bae57c908ccda84ac992866cc4d94e4b65d2821dedb07e9aead5b640ca3b4e9",
+      "text": "Mon",
+      "exact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.36,
+          "text": " Mon",
+          "tokens": [
+            50365,
+            4713,
+            50383
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8807590007781982,
+          "compression_ratio": 0.2727272727272727,
+          "no_speech_prob": 1.1705275637652335e-10
+        }
+      ]
+    },
+    {
+      "sourceId": "KSW-N26-AA-HT-010",
+      "target": "mes",
+      "src": "/package-audio/taalroute/klink-woord-mes.wav",
+      "sha256": "7ffe6ca23e587b16a1d98c34eb84e17f583c29dd4bdb13e437f777a79336f8e0",
+      "text": "Nes.",
+      "exact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.44,
+          "text": " Nes.",
+          "tokens": [
+            50365,
+            426,
+            279,
+            13,
+            50387
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.35230310757954914,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 1.066085275613915e-10
+        }
+      ]
+    }
+  ]
+}
