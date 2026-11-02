@@ -1,0 +1,111 @@
+{
+  "scope": "Full network API and fresh browser-context navigation until 30 learner rows and 20 visible skill columns render, with all five skill pages and evidence navigation checked. MFA completed before the timer. No simultaneous-school or forced Worker cold-start guarantee.",
+  "rows": [
+    {
+      "label": "2026-11-01 oorspronkelijke basis",
+      "path": "docs/inzicht-20261101/evidence/speed/before.json",
+      "at": "2026-11-01T08:49:10.580Z",
+      "browser_runs_ms": [
+        3179,
+        7936,
+        5453,
+        3140,
+        4208,
+        5882
+      ],
+      "n": 6,
+      "median_ms": 4830.5,
+      "min_ms": 3140,
+      "max_ms": 7936,
+      "under_2000": 0,
+      "api_runs_ms": [
+        440,
+        587,
+        464,
+        405,
+        569
+      ],
+      "api_median_ms": 464
+    },
+    {
+      "label": "2026-11-01 eerdere verbetering",
+      "path": "docs/inzicht-20261101/evidence/speed/after.json",
+      "at": "2026-11-01T09:24:22.767Z",
+      "browser_runs_ms": [
+        2454,
+        5714,
+        2347,
+        2828,
+        2205,
+        2159
+      ],
+      "n": 6,
+      "median_ms": 2400.5,
+      "min_ms": 2159,
+      "max_ms": 5714,
+      "under_2000": 0,
+      "api_runs_ms": [
+        469,
+        432,
+        432,
+        697,
+        441
+      ],
+      "api_median_ms": 441
+    },
+    {
+      "label": "2026-11-02 gecombineerde rapportages v\u00f3\u00f3r verzoekreparatie",
+      "path": "docs/inzicht-20261102/evidence/performance-before-request-fix.json",
+      "at": "2026-11-02T10:24:02.682Z",
+      "browser_runs_ms": [
+        2625,
+        3929,
+        2222,
+        4024,
+        3380,
+        6798
+      ],
+      "n": 6,
+      "median_ms": 3654.5,
+      "min_ms": 2222,
+      "max_ms": 6798,
+      "under_2000": 0,
+      "api_runs_ms": [
+        309,
+        404,
+        318,
+        268,
+        503
+      ],
+      "api_median_ms": 318
+    },
+    {
+      "label": "2026-11-02 laatste kandidaat",
+      "path": "docs/inzicht-20261101/evidence/online-performance.json",
+      "at": "2026-11-02T10:37:47.045Z",
+      "browser_runs_ms": [
+        4662,
+        3242,
+        2381,
+        1222,
+        3890,
+        1240
+      ],
+      "n": 6,
+      "median_ms": 2811.5,
+      "min_ms": 1222,
+      "max_ms": 4662,
+      "under_2000": 2,
+      "api_runs_ms": [
+        360,
+        432,
+        372,
+        479,
+        415
+      ],
+      "api_median_ms": 415
+    }
+  ],
+  "guaranteed_improvement": false,
+  "two_second_gate": "not met"
+}

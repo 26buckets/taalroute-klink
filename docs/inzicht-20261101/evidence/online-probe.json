@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-01T03:32:30.764Z",
+  "at": "2026-11-02T10:33:01.368Z",
   "origin": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
   "checks": [
     {
@@ -25,6 +25,24 @@
     {
       "path": "/api/attempts",
       "status": 404
+    },
+    {
+      "path": "/_headers",
+      "status": 404
+    },
+    {
+      "path": "/.env",
+      "status": 404
+    },
+    {
+      "path": "/taalroute-menu/appearance.js",
+      "status": 200,
+      "asset_security_headers": true
+    },
+    {
+      "path": "/taalroute-menu/klink-brand.svg",
+      "status": 200,
+      "asset_security_headers": true
     }
   ],
   "real_password_login": true,

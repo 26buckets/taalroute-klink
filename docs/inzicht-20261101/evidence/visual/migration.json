@@ -1,13 +1,114 @@
 {
-  "checked_at": "2026-11-01T09:51:18.287Z",
+  "checked_at": "2026-11-02T10:12:50.862Z",
   "database": "klink-inzicht-pr8-staging",
   "jurisdiction": "eu",
   "from": 5,
   "to": 7,
   "local_all_existing_tables_unchanged": 35,
   "local_restore": true,
-  "remote_applied": false,
-  "remote_restore": false,
-  "preserved": [],
-  "private_backup": ".wrangler/observations-upgrade/run-xAxwkT"
+  "remote_applied": true,
+  "remote_restore": true,
+  "preserved": [
+    {
+      "table": "users",
+      "rows": 6,
+      "sha256": "d78c28e3dd9f3a07bec0fe25f9535c2d318491b7f5b84993e1a0793c78aae838"
+    },
+    {
+      "table": "organizations",
+      "rows": 2,
+      "sha256": "4d0e3d4127c8af79be46638326dbef3fb18e4fb33aed9351bb0e274c307f74e0"
+    },
+    {
+      "table": "memberships",
+      "rows": 12,
+      "sha256": "fb2755b1aec90084dce2b9959f551c4fecc4ce0eda3d42bc31e1d8fdec7a3913"
+    },
+    {
+      "table": "groups",
+      "rows": 41,
+      "sha256": "731fb9d900243c4c9f31c8bcb597376de5809e8ed31b1b161dbd9956115f9710"
+    },
+    {
+      "table": "group_teachers",
+      "rows": 41,
+      "sha256": "7eee962d2f1f4502274e37d825f5a39967be954eee14cd89e9ae8273939cd228"
+    },
+    {
+      "table": "school_learners",
+      "rows": 80,
+      "sha256": "1d8ecc9a0d53a89b23defa3886f0aa999eebd0b43edef6f1cda405d2e0a0c99d"
+    },
+    {
+      "table": "group_memberships",
+      "rows": 86,
+      "sha256": "44aa5a34ffefa963cd36dae07b3da308260d3fce47505c5428ef27001d834444"
+    },
+    {
+      "table": "account_links",
+      "rows": 19,
+      "sha256": "b317c7dfe67d702bab5769f25efdad0533fac8e8466e6020229f68d1e918b268"
+    },
+    {
+      "table": "skill_definitions",
+      "rows": 3,
+      "sha256": "e528a863c3265e6eff522ee4c8637bc0b79872f56569f4d72f03c9233347aeeb"
+    },
+    {
+      "table": "teacher_observations",
+      "rows": 35,
+      "sha256": "8ccd55bc8fa65733d0dbd1164f35947fdac134b36d1d77bc84486abd0e208743"
+    },
+    {
+      "table": "observation_revisions",
+      "rows": 53,
+      "sha256": "19f9b714a9b42cacc636cfb20f0e74e3f06a7ee4fd6aa8242a4da4fee69ec8a0"
+    },
+    {
+      "table": "evidence_events",
+      "rows": 70,
+      "sha256": "fa964bffd66c32f7926bed85decca16dfcd6e87a19e4204f9b04477d28f38529"
+    },
+    {
+      "table": "evidence_revocations",
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "table": "class_access_policies",
+      "rows": 41,
+      "sha256": "65edaad9e14e6ad1d058dfbecbd5ead6c1b6f49e599419da330e6dbe88aac80e"
+    },
+    {
+      "table": "content_versions",
+      "rows": 3,
+      "sha256": "6e818d0e3ecb34de4edfc6de3936f710c475f351a7e903fff65237b8be4c298e"
+    },
+    {
+      "table": "assignments",
+      "rows": 31,
+      "sha256": "924594e013cc3b699343c14d6dccc1b23a648d771dd927a05f42302434f44c55"
+    },
+    {
+      "table": "assignment_recipients",
+      "rows": 31,
+      "sha256": "899e7c37bebd6e1ad419e12feaed3dc064bf766bd6d77d8a1d1c8849f5560f29"
+    },
+    {
+      "table": "recommendation_previews",
+      "rows": 21,
+      "sha256": "287e7409bbe8820db33406fdf9bfff3340bea99f3c8f5d0e89766570b72b2580"
+    },
+    {
+      "table": "approved_lesson_plans",
+      "rows": 13,
+      "sha256": "5092ce5fc485e2b5aba4849998c82e9d4de72c4dadc2c3ec67991923acdc9ad8"
+    },
+    {
+      "table": "school_attempts",
+      "rows": 17,
+      "sha256": "1a69f8783cc08641ca1e48248cc5fa27c73cff4a3d220a4c714ec5fd0213fcf3"
+    }
+  ],
+  "private_backup": ".wrangler/observations-upgrade/run-6XHCYM"
 }

@@ -1,0 +1,565 @@
+{
+  "at": "2026-11-02T10:16:47.364Z",
+  "staging": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "synthetic_only": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "run": "2026-11-02T10-14-06-099Z",
+      "steps": [
+        "MFA login, class and two provisional learners through UI",
+        "Lost save response retried exactly once; correction and both historical versions persist",
+        "Registrar identity confirmation and student acceptance; role boundaries enforced",
+        "Teacher-confirmed individual assignment, mobile exercise, lost response retry, exactly one persisted attempt",
+        "Matrix links to individual history; observations and successful practice do not become mastery",
+        "Deterministic advice repeated unchanged; explicit teacher approval creates no unsolicited assignments",
+        "Fresh MFA sessions retain history and completed assignment; school isolation and automated accessibility checks"
+      ],
+      "group": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+      "learners": [
+        "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+        "fcb1ceb3-1610-482c-b320-ecc0c8ba5b08"
+      ],
+      "approved_plan": {
+        "assignments": [],
+        "id": "db618a96-4cba-4d41-9c13-2bd838d4b0e8"
+      },
+      "report": {
+        "format": "klink-inzicht-class-report",
+        "version": 1,
+        "exported_at": "2026-11-02T10:15:31.317Z",
+        "school": "school-a",
+        "group": {
+          "id": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+          "organization_id": "school-a",
+          "name": "Doorloop chromium 2026-11-02T10-14-06-099Z",
+          "start_level": "Alfa A",
+          "period": "",
+          "status": "active",
+          "version": 1,
+          "created_at": "2026-11-02T10:14:14.247Z"
+        },
+        "matrix": {
+          "skills": [
+            {
+              "id": "klank",
+              "label": "Letter en klank verbinden",
+              "measurement_approved": 0,
+              "rubric": {
+                "minimum_items": 5,
+                "pass_ratio": 0.8,
+                "stale_days": null,
+                "version": "draft-1"
+              }
+            },
+            {
+              "id": "woordbeeld",
+              "label": "Woordbeeld herkennen",
+              "measurement_approved": 0,
+              "rubric": {
+                "minimum_items": 5,
+                "pass_ratio": 0.8,
+                "stale_days": null,
+                "version": "draft-1"
+              }
+            },
+            {
+              "id": "woordlezen",
+              "label": "Woordlezen",
+              "measurement_approved": 0,
+              "rubric": {
+                "minimum_items": 5,
+                "pass_ratio": 0.8,
+                "stale_days": null,
+                "version": "draft-1"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+              "name": "Fenna chromium 2026-11-02T10-14-06-099Z (fictief)",
+              "cells": {
+                "klank": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordbeeld": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordlezen": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                }
+              }
+            },
+            {
+              "id": "fcb1ceb3-1610-482c-b320-ecc0c8ba5b08",
+              "name": "Omar chromium 2026-11-02T10-14-06-099Z (fictief)",
+              "cells": {
+                "klank": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordbeeld": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordlezen": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                }
+              }
+            }
+          ],
+          "processing": "processed",
+          "pending": 0,
+          "calculated_at": "2026-11-02T10:15:31.431Z",
+          "rule_version": "inzicht-r2-20261101"
+        },
+        "learners": [
+          {
+            "id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "organization_id": "school-a",
+            "display_name": "Fenna chromium 2026-11-02T10-14-06-099Z (fictief)",
+            "created_by": "school-a:docent",
+            "created_at": "2026-11-02T10:14:17.428Z",
+            "enrollment_status": "active"
+          },
+          {
+            "id": "fcb1ceb3-1610-482c-b320-ecc0c8ba5b08",
+            "organization_id": "school-a",
+            "display_name": "Omar chromium 2026-11-02T10-14-06-099Z (fictief)",
+            "created_by": "school-a:docent",
+            "created_at": "2026-11-02T10:14:20.576Z",
+            "enrollment_status": "active"
+          }
+        ],
+        "revisions": [
+          {
+            "id": "99399ad4-162e-405f-a5e4-14f69c5323a1",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "skill_id": "woordbeeld",
+            "current_revision": 2,
+            "organization_id": "school-a",
+            "observation_id": "99399ad4-162e-405f-a5e4-14f69c5323a1",
+            "revision": 1,
+            "payload": "{\"independence\":\"hint\",\"note\":\"\",\"observed_at\":\"2026-11-02T10:14:00.000Z\",\"outcome\":\"partial\",\"situation\":\"Kiest mat uit vier woordkaarten\",\"skill_version\":\"draft-1\"}",
+            "changed_by": "school-a:docent",
+            "reason": "Nieuwe observatie",
+            "recorded_at": "2026-11-02T10:14:25.251Z"
+          },
+          {
+            "id": "99399ad4-162e-405f-a5e4-14f69c5323a1",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "skill_id": "woordbeeld",
+            "current_revision": 2,
+            "organization_id": "school-a",
+            "observation_id": "99399ad4-162e-405f-a5e4-14f69c5323a1",
+            "revision": 2,
+            "payload": "{\"independence\":\"hint\",\"note\":\"\",\"observed_at\":\"2026-11-02T10:14:00.000Z\",\"outcome\":\"partial\",\"situation\":\"Kiest mat na één aanwijzing\",\"skill_version\":\"draft-1\"}",
+            "changed_by": "school-a:docent",
+            "reason": "De gegeven aanwijzing ontbrak in de eerste beschrijving",
+            "recorded_at": "2026-11-02T10:14:30.406Z"
+          }
+        ],
+        "source_revisions": [],
+        "attended_minutes_revisions": [],
+        "evidence": [
+          {
+            "id": "177efffd-2f11-4f55-a2bf-fe85504727e3",
+            "organization_id": "school-a",
+            "group_id": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "skill_id": "woordbeeld",
+            "source_type": "observation",
+            "source_id": "99399ad4-162e-405f-a5e4-14f69c5323a1",
+            "source_revision": 1,
+            "payload": "{\"correct\":0,\"day\":\"2026-11-02\",\"feedback_reused\":false,\"id\":\"177efffd-2f11-4f55-a2bf-fe85504727e3\",\"identity_valid\":true,\"independence\":\"hint\",\"independent\":false,\"item_set\":\"99399ad4-162e-405f-a5e4-14f69c5323a1\",\"occurred_at\":\"2026-11-02T10:14:00.000Z\",\"outcome\":\"partial\",\"relation\":\"TRAIN\",\"rubric_version\":\"draft-1\",\"session_id\":\"99399ad4-162e-405f-a5e4-14f69c5323a1\",\"source_valid\":true,\"total\":0,\"transfer\":false}",
+            "event_hash": "6dcf14679aa7f405e2a6774b4811b1967dda15c00d02c3414b8f4c682a4cd309",
+            "created_at": "2026-11-02T10:14:25.251Z",
+            "revocation_reason": null,
+            "revoked_at": null
+          },
+          {
+            "id": "ab5d874a-0151-4a19-bde4-c6882447e974",
+            "organization_id": "school-a",
+            "group_id": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "skill_id": "woordbeeld",
+            "source_type": "observation",
+            "source_id": "99399ad4-162e-405f-a5e4-14f69c5323a1",
+            "source_revision": 2,
+            "payload": "{\"correct\":0,\"day\":\"2026-11-02\",\"feedback_reused\":false,\"id\":\"ab5d874a-0151-4a19-bde4-c6882447e974\",\"identity_valid\":true,\"independence\":\"hint\",\"independent\":false,\"item_set\":\"99399ad4-162e-405f-a5e4-14f69c5323a1\",\"occurred_at\":\"2026-11-02T10:14:00.000Z\",\"outcome\":\"partial\",\"relation\":\"TRAIN\",\"rubric_version\":\"draft-1\",\"session_id\":\"99399ad4-162e-405f-a5e4-14f69c5323a1\",\"source_valid\":true,\"total\":0,\"transfer\":false}",
+            "event_hash": "55f6072e0348f0278f0697ae5711c86e849356955304b449bb69b3a14ce01efb",
+            "created_at": "2026-11-02T10:14:30.406Z",
+            "revocation_reason": null,
+            "revoked_at": null
+          },
+          {
+            "id": "ce0558f9-d28b-4073-9b82-f83353661e3a",
+            "organization_id": "school-a",
+            "group_id": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "skill_id": "woordbeeld",
+            "source_type": "assessment",
+            "source_id": "ce0558f9-d28b-4073-9b82-f83353661e3a",
+            "source_revision": 1,
+            "payload": "{\"content_hash\":\"580441d89b164c2bc6ee5f20aead277f8938ab887fc965a1d8de034e8fe2c6fd\",\"content_version_id\":\"word-mat\",\"correct\":1,\"day\":\"2026-11-02\",\"feedback_reused\":true,\"id\":\"ce0558f9-d28b-4073-9b82-f83353661e3a\",\"identity_valid\":true,\"independence\":\"unknown\",\"independent\":false,\"item_set\":\"580441d89b164c2bc6ee5f20aead277f8938ab887fc965a1d8de034e8fe2c6fd\",\"occurred_at\":\"2026-11-02T10:15:02.584Z\",\"outcome\":\"successful\",\"relation\":\"TRAIN\",\"rubric_version\":\"draft-1\",\"session_id\":\"ce0558f9-d28b-4073-9b82-f83353661e3a\",\"source_valid\":true,\"total\":1,\"transfer\":false}",
+            "event_hash": "06f08c4f65087a1107054184a31db7eb79a31a742bbf66a1d5e61d8d0268ef6e",
+            "created_at": "2026-11-02T10:15:02.584Z",
+            "revocation_reason": null,
+            "revoked_at": null
+          }
+        ],
+        "attempts": [
+          {
+            "id": "ce0558f9-d28b-4073-9b82-f83353661e3a",
+            "organization_id": "school-a",
+            "group_id": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "assignment_id": "48b0291e-3f03-4fbf-9194-b46c2dc9c237",
+            "content_version_id": "word-mat",
+            "answer": "klink-woord-mat",
+            "correct": 1,
+            "created_at": "2026-11-02T10:15:02.584Z"
+          }
+        ],
+        "assignments": [
+          {
+            "id": "48b0291e-3f03-4fbf-9194-b46c2dc9c237",
+            "organization_id": "school-a",
+            "group_id": "02e0d8ff-0b49-4883-95f9-d2a48d3361dd",
+            "content_version_id": "word-mat",
+            "created_by": "school-a:docent",
+            "starts_at": "2026-11-02T10:14:54.835Z",
+            "ends_at": null,
+            "instructions": "Kies hetzelfde woord. Alleen voor Fenna.",
+            "status": "active",
+            "created_at": "2026-11-02T10:14:55.138Z",
+            "learner_id": "17cbdf1d-e2f4-44e6-ae2c-4171d10c63b1",
+            "learner_status": "finished"
+          }
+        ],
+        "warning": "Observaties en TRAIN zijn geen gevalideerd beheersingsbewijs. Dit onderwijsrapport is geen databaseback-up."
+      },
+      "status": "passed"
+    },
+    {
+      "engine": "webkit",
+      "run": "2026-11-02T10-14-06-099Z",
+      "steps": [
+        "MFA login, class and two provisional learners through UI",
+        "Lost save response retried exactly once; correction and both historical versions persist",
+        "Registrar identity confirmation and student acceptance; role boundaries enforced",
+        "Teacher-confirmed individual assignment, mobile exercise, lost response retry, exactly one persisted attempt",
+        "Matrix links to individual history; observations and successful practice do not become mastery",
+        "Deterministic advice repeated unchanged; explicit teacher approval creates no unsolicited assignments",
+        "Fresh MFA sessions retain history and completed assignment; school isolation and automated accessibility checks"
+      ],
+      "group": "1cb2036c-a658-4cd9-8927-b810390cf545",
+      "learners": [
+        "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+        "c9b7ceed-18b6-40ef-86f1-6bcd19d63490"
+      ],
+      "approved_plan": {
+        "assignments": [],
+        "id": "130fe3a7-4179-4e08-a463-6dc707a7a350"
+      },
+      "report": {
+        "format": "klink-inzicht-class-report",
+        "version": 1,
+        "exported_at": "2026-11-02T10:16:46.194Z",
+        "school": "school-a",
+        "group": {
+          "id": "1cb2036c-a658-4cd9-8927-b810390cf545",
+          "organization_id": "school-a",
+          "name": "Doorloop webkit 2026-11-02T10-14-06-099Z",
+          "start_level": "Alfa A",
+          "period": "",
+          "status": "active",
+          "version": 1,
+          "created_at": "2026-11-02T10:15:39.634Z"
+        },
+        "matrix": {
+          "skills": [
+            {
+              "id": "klank",
+              "label": "Letter en klank verbinden",
+              "measurement_approved": 0,
+              "rubric": {
+                "minimum_items": 5,
+                "pass_ratio": 0.8,
+                "stale_days": null,
+                "version": "draft-1"
+              }
+            },
+            {
+              "id": "woordbeeld",
+              "label": "Woordbeeld herkennen",
+              "measurement_approved": 0,
+              "rubric": {
+                "minimum_items": 5,
+                "pass_ratio": 0.8,
+                "stale_days": null,
+                "version": "draft-1"
+              }
+            },
+            {
+              "id": "woordlezen",
+              "label": "Woordlezen",
+              "measurement_approved": 0,
+              "rubric": {
+                "minimum_items": 5,
+                "pass_ratio": 0.8,
+                "stale_days": null,
+                "version": "draft-1"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+              "name": "Fenna webkit 2026-11-02T10-14-06-099Z (fictief)",
+              "cells": {
+                "klank": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordbeeld": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordlezen": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                }
+              }
+            },
+            {
+              "id": "c9b7ceed-18b6-40ef-86f1-6bcd19d63490",
+              "name": "Omar webkit 2026-11-02T10-14-06-099Z (fictief)",
+              "cells": {
+                "klank": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordbeeld": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                },
+                "woordlezen": {
+                  "status": "UNKNOWN",
+                  "attention": false,
+                  "recheck": false,
+                  "stale": false,
+                  "evidence_ids": [],
+                  "measured": false,
+                  "latest_day": null,
+                  "rule_version": "inzicht-r2-20261101"
+                }
+              }
+            }
+          ],
+          "processing": "processed",
+          "pending": 0,
+          "calculated_at": "2026-11-02T10:16:46.251Z",
+          "rule_version": "inzicht-r2-20261101"
+        },
+        "learners": [
+          {
+            "id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "organization_id": "school-a",
+            "display_name": "Fenna webkit 2026-11-02T10-14-06-099Z (fictief)",
+            "created_by": "school-a:docent",
+            "created_at": "2026-11-02T10:15:42.780Z",
+            "enrollment_status": "active"
+          },
+          {
+            "id": "c9b7ceed-18b6-40ef-86f1-6bcd19d63490",
+            "organization_id": "school-a",
+            "display_name": "Omar webkit 2026-11-02T10-14-06-099Z (fictief)",
+            "created_by": "school-a:docent",
+            "created_at": "2026-11-02T10:15:44.889Z",
+            "enrollment_status": "active"
+          }
+        ],
+        "revisions": [
+          {
+            "id": "e9fcc4de-a422-4111-b78b-05413a1d149c",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "skill_id": "woordbeeld",
+            "current_revision": 2,
+            "organization_id": "school-a",
+            "observation_id": "e9fcc4de-a422-4111-b78b-05413a1d149c",
+            "revision": 1,
+            "payload": "{\"independence\":\"hint\",\"note\":\"\",\"observed_at\":\"2026-11-02T10:15:00.000Z\",\"outcome\":\"partial\",\"situation\":\"Kiest mat uit vier woordkaarten\",\"skill_version\":\"draft-1\"}",
+            "changed_by": "school-a:docent",
+            "reason": "Nieuwe observatie",
+            "recorded_at": "2026-11-02T10:15:49.777Z"
+          },
+          {
+            "id": "e9fcc4de-a422-4111-b78b-05413a1d149c",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "skill_id": "woordbeeld",
+            "current_revision": 2,
+            "organization_id": "school-a",
+            "observation_id": "e9fcc4de-a422-4111-b78b-05413a1d149c",
+            "revision": 2,
+            "payload": "{\"independence\":\"hint\",\"note\":\"\",\"observed_at\":\"2026-11-02T10:15:00.000Z\",\"outcome\":\"partial\",\"situation\":\"Kiest mat na één aanwijzing\",\"skill_version\":\"draft-1\"}",
+            "changed_by": "school-a:docent",
+            "reason": "De gegeven aanwijzing ontbrak in de eerste beschrijving",
+            "recorded_at": "2026-11-02T10:15:56.998Z"
+          }
+        ],
+        "source_revisions": [],
+        "attended_minutes_revisions": [],
+        "evidence": [
+          {
+            "id": "5eebbd04-eb0c-4ce7-a408-7088d0ad2a40",
+            "organization_id": "school-a",
+            "group_id": "1cb2036c-a658-4cd9-8927-b810390cf545",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "skill_id": "woordbeeld",
+            "source_type": "observation",
+            "source_id": "e9fcc4de-a422-4111-b78b-05413a1d149c",
+            "source_revision": 1,
+            "payload": "{\"correct\":0,\"day\":\"2026-11-02\",\"feedback_reused\":false,\"id\":\"5eebbd04-eb0c-4ce7-a408-7088d0ad2a40\",\"identity_valid\":true,\"independence\":\"hint\",\"independent\":false,\"item_set\":\"e9fcc4de-a422-4111-b78b-05413a1d149c\",\"occurred_at\":\"2026-11-02T10:15:00.000Z\",\"outcome\":\"partial\",\"relation\":\"TRAIN\",\"rubric_version\":\"draft-1\",\"session_id\":\"e9fcc4de-a422-4111-b78b-05413a1d149c\",\"source_valid\":true,\"total\":0,\"transfer\":false}",
+            "event_hash": "c53b4872fc20c454f3eb2d9a2765cb108f366ebd097eb9ea17879ceb19fe7ccb",
+            "created_at": "2026-11-02T10:15:49.777Z",
+            "revocation_reason": null,
+            "revoked_at": null
+          },
+          {
+            "id": "3967be51-f48a-4010-bb04-7acae913a632",
+            "organization_id": "school-a",
+            "group_id": "1cb2036c-a658-4cd9-8927-b810390cf545",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "skill_id": "woordbeeld",
+            "source_type": "observation",
+            "source_id": "e9fcc4de-a422-4111-b78b-05413a1d149c",
+            "source_revision": 2,
+            "payload": "{\"correct\":0,\"day\":\"2026-11-02\",\"feedback_reused\":false,\"id\":\"3967be51-f48a-4010-bb04-7acae913a632\",\"identity_valid\":true,\"independence\":\"hint\",\"independent\":false,\"item_set\":\"e9fcc4de-a422-4111-b78b-05413a1d149c\",\"occurred_at\":\"2026-11-02T10:15:00.000Z\",\"outcome\":\"partial\",\"relation\":\"TRAIN\",\"rubric_version\":\"draft-1\",\"session_id\":\"e9fcc4de-a422-4111-b78b-05413a1d149c\",\"source_valid\":true,\"total\":0,\"transfer\":false}",
+            "event_hash": "0f6040ae17f4f236ede39f28cbe9b4e4f31003a096623a0387bb3d7be0cc7d92",
+            "created_at": "2026-11-02T10:15:56.998Z",
+            "revocation_reason": null,
+            "revoked_at": null
+          },
+          {
+            "id": "e220fd99-8918-4433-b02d-31dc72555bc9",
+            "organization_id": "school-a",
+            "group_id": "1cb2036c-a658-4cd9-8927-b810390cf545",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "skill_id": "woordbeeld",
+            "source_type": "assessment",
+            "source_id": "e220fd99-8918-4433-b02d-31dc72555bc9",
+            "source_revision": 1,
+            "payload": "{\"content_hash\":\"580441d89b164c2bc6ee5f20aead277f8938ab887fc965a1d8de034e8fe2c6fd\",\"content_version_id\":\"word-mat\",\"correct\":1,\"day\":\"2026-11-02\",\"feedback_reused\":true,\"id\":\"e220fd99-8918-4433-b02d-31dc72555bc9\",\"identity_valid\":true,\"independence\":\"unknown\",\"independent\":false,\"item_set\":\"580441d89b164c2bc6ee5f20aead277f8938ab887fc965a1d8de034e8fe2c6fd\",\"occurred_at\":\"2026-11-02T10:16:23.870Z\",\"outcome\":\"successful\",\"relation\":\"TRAIN\",\"rubric_version\":\"draft-1\",\"session_id\":\"e220fd99-8918-4433-b02d-31dc72555bc9\",\"source_valid\":true,\"total\":1,\"transfer\":false}",
+            "event_hash": "1312fec7570952f9f6320100b9cb9a2f2325a41a78afdf2ae9006636bb6f7307",
+            "created_at": "2026-11-02T10:16:23.870Z",
+            "revocation_reason": null,
+            "revoked_at": null
+          }
+        ],
+        "attempts": [
+          {
+            "id": "e220fd99-8918-4433-b02d-31dc72555bc9",
+            "organization_id": "school-a",
+            "group_id": "1cb2036c-a658-4cd9-8927-b810390cf545",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "assignment_id": "def05e56-50c1-4dea-a6de-c1161cd788d3",
+            "content_version_id": "word-mat",
+            "answer": "klink-woord-mat",
+            "correct": 1,
+            "created_at": "2026-11-02T10:16:23.870Z"
+          }
+        ],
+        "assignments": [
+          {
+            "id": "def05e56-50c1-4dea-a6de-c1161cd788d3",
+            "organization_id": "school-a",
+            "group_id": "1cb2036c-a658-4cd9-8927-b810390cf545",
+            "content_version_id": "word-mat",
+            "created_by": "school-a:docent",
+            "starts_at": "2026-11-02T10:16:16.931Z",
+            "ends_at": null,
+            "instructions": "Kies hetzelfde woord. Alleen voor Fenna.",
+            "status": "active",
+            "created_at": "2026-11-02T10:16:17.249Z",
+            "learner_id": "ab303a1b-e6ea-463b-86c1-b47c67e37dfc",
+            "learner_status": "finished"
+          }
+        ],
+        "warning": "Observaties en TRAIN zijn geen gevalideerd beheersingsbewijs. Dit onderwijsrapport is geen databaseback-up."
+      },
+      "status": "passed"
+    }
+  ]
+}

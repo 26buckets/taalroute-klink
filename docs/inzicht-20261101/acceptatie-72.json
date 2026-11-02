@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "scope": "synthetic local and isolated online staging; not release approval",
   "priority": "R2 > R1 > v1.0",
   "counts": {
@@ -216,13 +216,13 @@
       "id": "KI035",
       "requirement": "30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.",
       "status": "DEELS",
-      "evidence_or_gap": "Schaalproef 30×100/3000 TRAIN: zes browserruns 2159–5714 ms, mediaan 2400,5 ms versus 4830,5 ms baseline. API 432–697 ms. Twee seconden niet gehaald. Laatste volledige online herhaling geblokkeerd door D1-dagquotum; evidence/speed/."
+      "evidence_or_gap": "Actueel 30×100/3000 TRAIN, zes browserruns 1222–4662 ms, mediaan2811,5ms. Vandaag vóór reparatie3654,5; historische eerdere2400,5. API360–479ms. Twee-secondennorm niet gehaald; DEELS. Zie ../inzicht-20261102/evidence/performance-comparison.json."
     },
     {
       "id": "KI036",
       "requirement": "bestaande Klink+Docent testregressie -> geen gewijzigde inhoud, routes of werkbladen.",
       "status": "GETEST",
-      "evidence_or_gap": "27 bestaande Klink+Docent-regressietests opnieuw lokaal geslaagd; oorspronkelijke productbestanden en vormgevingsvloer zijn ongewijzigd. Zie evidence/mfa-klink-docent-regressions.log."
+      "evidence_or_gap": "2 november: 27 bestaande lokale docentregressies en browserreeks8doorlopen/192faseweergaven/40hulpmiddelen geslaagd. Geen docentproductcode gewijzigd; normale build alleen oorspronkelijke DB, niet gedeployed. Zie ../inzicht-20261102/evidence/."
     },
     {
       "id": "KI037",
@@ -441,5 +441,6 @@
       "evidence_or_gap": "Alle 72 eisen met bewijs/gaps en prioriteit vastgelegd; bovenstaande zwaardere eisen nog niet allemaal gerealiseerd."
     }
   ],
-  "current_candidate_note": "Latest performance candidate: local checks passed; full online journey blocked by daily D1 write quota. Earlier online proofs are historical."
+  "current_candidate_note": "Latest performance candidate: local checks passed; full online journey blocked by daily D1 write quota. Earlier online proofs are historical.",
+  "current_evidence": "../inzicht-20261102/evidence/release.json"
 }

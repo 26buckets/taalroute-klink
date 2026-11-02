@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-02T10:46:45.473096+00:00",
+  "read_only": true,
+  "credentials_sent": false,
+  "deployments_changed": false,
+  "urllib_probe_403": [
+    {
+      "host": "inzicht.taalroute.nl",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "host": "klink.taalroute.nl",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "hosts": [
+    {
+      "host": "inzicht.taalroute.nl",
+      "status": 200,
+      "method": "curl without account credentials",
+      "release": {
+        "application": "Klink Inzicht",
+        "sourceCommit": "629d1f243ee25ce227ff508bd87d138bf09487b7",
+        "sourceSha256": "48e8dc29c570945753af6313b11a4f56b210810f22024e85fff4b36e4fbd5a6f",
+        "builtAt": "2026-11-02T01:40:37.422Z",
+        "database": "taalroute-klink-inzicht",
+        "accountModel": "school memberships and assigned groups"
+      }
+    },
+    {
+      "host": "klink.taalroute.nl",
+      "status": 200,
+      "method": "curl without account credentials",
+      "release": {
+        "application": "Klink",
+        "builtAt": "2026-11-02T06:45:41.690Z",
+        "sourceCommit": "ea847e63a452dac67577da3e34a73a9255e7eca0",
+        "branch": "main",
+        "sourceClean": true,
+        "curriculumEdition": "klink-leerlijn-20261016-v1",
+        "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+        "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+        "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+        "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+      }
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Voorstel: één Klink Inzicht op inzicht.taalroute.nl
 
+> Actualisering 2 november 2026 door de stagingproefchat, afgestemd met de rapportagechat: de publieke productiebron is nu 629d1f243ee25ce227ff508bd87d138bf09487b7 (wachtwoordherstel/migratie0006 toegevoegd). De onderstaande a6a64445-bronvergelijking is historisch. Compatibiliteit en aantallen opnieuw vaststellen vóór integratie. De actuele staginguitkomst en status van dezelfde negen stappen staan uitsluitend in PROJECTVERSLAG.md; dit blijft een bewijs-/voorstelbijlage, geen liveakkoord.
+
 Datum: 1 november 2026. Status: reviewvoorstel, geen uitvoerings- of liveakkoord.
 
 Nico heeft het eindadres vastgesteld en vraagt eerst de volledige stagingproef, afstemming tussen de twee chats en nog geen livepublicatie. Deze bijlage bevat alleen brononderzoek en een voorgestelde route. Er is niet in een Inzicht-productieaccount ingelogd, geen cursistrecord gelezen/gekopieerd en geen Cloudflare-instelling gewijzigd. PROJECTVERSLAG.md en het bestaande Drive-hoofdverslag blijven bij de stagingproefchat.
