@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "The complete grammar/word-audio/HT/AA chain accepts the source-bound handwriting successor",
+      "passed": true
+    },
+    {
+      "name": "All four tracking documents can advance without changing historical approvals",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-handwriting-20261102.json: rejects publicationApproved",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-handwriting-20261102.json: rejects existingAppearancePreserved",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-handwriting-20261102.json: rejects progressPreserved",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-handwriting-20261102.json: rejects automaticHandwritingScoring",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-handwriting-20261102.json: rejects newRecordings",
+      "passed": true
+    },
+    {
+      "name": "docs/klink-owner-release-handwriting-20261102.json: rejects humanListeningPerformed",
+      "passed": true
+    },
+    {
+      "name": "docs/handwriting-20261102/backup.json: rejects verified",
+      "passed": true
+    },
+    {
+      "name": "docs/handwriting-20261102/backup.json: rejects fullReadback",
+      "passed": true
+    },
+    {
+      "name": "docs/handwriting-20261102/backup.json: rejects zipIntegrity",
+      "passed": true
+    },
+    {
+      "name": "public/practice-content/klink-handwriting-20261102/ksw-ac-hs-001-007-0b20cebb53724527.json: rejects modified source or current/previous bank bytes",
+      "passed": true
+    },
+    {
+      "name": "public/practice-content/klink-writing-20261101/ksw-aa-tn-unique-c89d5fd205683ac5.json: rejects modified source or current/previous bank bytes",
+      "passed": true
+    },
+    {
+      "name": "docs/handwriting-20261102/source-records.jsonl: rejects modified source or current/previous bank bytes",
+      "passed": true
+    }
+  ],
+  "parentGatePassed": true,
+  "currentTrackingMetadataMayAdvance": true,
+  "negativeProofCases": 12
+}
