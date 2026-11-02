@@ -21,6 +21,10 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
   signal.throwIfAborted();
   const end = offset + length - 1;
   const cached = bundles.get(src);
+  if (cached) {
+    bundles.delete(src);
+    bundleBytes -= cached.byteLength;
+  }
   const response = cached ? undefined : await fetch(src, { headers: { Range: `bytes=${offset}-${end}` }, signal });
   if (response && response.status !== 200 && response.status !== 206) throw new Error('Word recording unavailable');
   if (response?.status === 206) {
@@ -35,8 +39,7 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
   const header = new Uint8Array(bytes, 0, 3);
   if (header[0] !== 73 || header[1] !== 68 || header[2] !== 51) throw new Error('Invalid word audio');
   if (complete) {
-    if (cached) bundles.delete(src);
-    else bundleBytes += body.byteLength;
+    bundleBytes += body.byteLength;
     bundles.set(src, body);
     while (bundleBytes > maxBundleBytes) {
       const oldest = bundles.keys().next().value!;

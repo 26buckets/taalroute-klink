@@ -42,6 +42,8 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
       };
       localStorage.setItem('klink.word-listening.retention', 'kept');
     });
+    const fetchedBundles = new Set();
+    page.on('request', request => { if (new URL(request.url()).pathname.endsWith('.bin')) fetchedBundles.add(request.url()); });
     page.on('pageerror', error => errors.push({ engine, kind: 'page', message: error.message }));
     await page.goto(base + '/#learner/chapters/sentences/sentences/klink-zinnen-zelf-a1-20261031-r1?level=a1&help=practice');
     const sentence = page.getByText('De kok werkt in de keuken.', { exact: true });
@@ -143,8 +145,12 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings[packedWords[1]][0]));
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), beforeRapid + 1);
     checks.push({engine,check:'a rapid second word cancels the pending first download without stale playback'});
+    // Test a pending download, not a bundle deliberately retained by earlier playback.
+    const navigationWord = Object.keys(recordings).find(word => typeof recordings[word][0] === 'object' && /^[a-z]{5,15}$/.test(word) && !fetchedBundles.has(new URL(recordings[word][0].src, base).href));
+    assert(navigationWord);
+    await page.locator('#packed-race-fixture').evaluate((p, word) => { p.textContent = word; }, navigationWord);
     const beforeNavigation = await page.evaluate(() => window.__wordAudioPlayed.length);
-    await clickWord(page, page.locator('#packed-race-fixture'), packedWords[0]);
+    await clickWord(page, page.locator('#packed-race-fixture'), navigationWord);
     await page.evaluate(() => { location.hash = '#learner/home'; });
     await page.locator('.cp-home').waitFor();
     await page.waitForTimeout(450);

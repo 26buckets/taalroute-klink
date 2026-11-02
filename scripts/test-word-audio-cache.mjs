@@ -27,3 +27,10 @@ test('Partial replies still require their exact range and never masquerade as a 
  globalThis.fetch=async()=>{calls++;return new Response(bundle().slice(0,24),{status:206,headers:{'Content-Range':'bytes 0-23/256'}})};
  await fetchWordRecording(source(401),signal());await assert.rejects(fetchWordRecording(source(401,64),signal()));assert.equal(calls,2);
 });
+test('A later word revealing a truncated cached bundle can recover on retry',async t=>{
+ const original=fetch;t.after(()=>globalThis.fetch=original);let calls=0;
+ globalThis.fetch=async()=>{calls++;const b=bundle(calls===1?256:512);if(calls>1)b.set([73,68,51],320);return new Response(b)};
+ await fetchWordRecording(source(501),signal());
+ await assert.rejects(fetchWordRecording(source(501,320),signal()));
+ await fetchWordRecording(source(501,320),signal());assert.equal(calls,2);
+});
