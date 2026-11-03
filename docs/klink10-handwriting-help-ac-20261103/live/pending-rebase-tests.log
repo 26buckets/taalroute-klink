@@ -1,0 +1,16 @@
+Ten exact source models, explicit variants, hidden targets, separate voices, audio slices and menu attachment verified.
+✔ scripts/test-klink10-dictation-ac.mjs (277.321666ms)
+Sentence copying/dictation distinctions and first-own-response validation passed.
+✔ scripts/test-sentence-answer.mjs (51.654167ms)
+✔ Real ink requires a line; empty or isolated taps do not complete handwriting (0.593458ms)
+✔ Draft, immutable first attempt and latest correction remain separate (0.479833ms)
+✔ Early model use is retained separately from participation and later correction (0.06975ms)
+✔ Malformed or oversized persisted records fail without replacing original data (0.331667ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 280.707

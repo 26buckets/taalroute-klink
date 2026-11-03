@@ -1,3 +1,17 @@
+## Actuele publicatie — hulpvolgorde Alfa C Hoor en schrijf — 3 november 2026
+
+Livebron `b0763872c76c319e02d4464b57b7afcb02d21ed3`, Worker `5aaf7b0d-b812-47ca-85b4-153097143e1d`. Uitsluitend tien bestaande bronopdrachten KSW-AC-HS-001 t/m 010 hersteld via actuele canonieke main, de volledige gewone publicatiepoort en `npm run deploy`. Help herhaalt de echte doelopname, toont de oorspronkelijke luisterhint en bewaart de eigen eerste poging vóór spellinghint/model. Spellinghints tellen eerlijk als modelgebruik. Geen OCR of automatische beheersingsscore. Dezelfde vragen, inktopslag, banken, opnamen, overige negentig handschrifttaken en vormgeving behouden.
+
+Live: 40 antwoord-/inkt-/herlaadstromen, 16 ongewijzigde handschriftstromen, acht volledige rondes en 136 native afspeelrecords geslaagd. Twee aangeboden bronbanken en elf opnamen volledig bytegelijk teruggelezen, met Taalroute-metadata en echte decodes. Lokale opslagfout-/oude-opslagcontroles, acht regressietests, zes negatieve poortproeven, types, lint en gewone bouw geslaagd. Acht lokale/live schermparen vóór publicatie: zes exact, twee uitsluitend 1/255 kleurafronding.
+
+Geen nieuwe audio of publieke bronbestanden. De schone canonieke eindbouw bood 20.000 assets; Wrangler bevestigde 15 geüpload + 19.985 al aanwezig. Geen limieten, configuratie, budget of oude publieke bytes gewijzigd. Geen actieve GitHub-workflows. Dit bewijst geen extra capaciteit voor andere kandidaten.
+
+Drive-eindbewijs `1PM_HDUi0NvWXKUbig1UKhmGiuF-iUWRj`: 79 buitenste en 238 geneste payloads volledig teruggelezen. Zie `docs/klink10-handwriting-help-ac-20261103/postflight.json`. Tien herziene bronposities, nul nieuwe unieke vragen. Geen onafhankelijke menselijke NT2-/luisterreview of fysieke telefoontest geclaimd.
+
+De ongepubliceerde dicteekandidaat is volledig bewaard in stash `46513ae2439b63d7b2df8e92afc89c2db2bafdb1` en Drive `1t3xToMaQalKTnc_S1wdSLrskZFsuitbB` (58 bestanden). De runtime is vervolgens op deze livebron herbaseerd in `/private/tmp/klink-dictation-ac-rebased-20261103`, uitsluitend ontwikkeling: de nieuwe handschrifthulp blijft bytegelijk. Herstelkopie `1sNittI6QLuhvu9eIdP7zSbwZG_MywuKh`, alle 57 bestanden teruggelezen. De brongebonden opvolgpoort moet bij vervolg opnieuw aan de actuele basis en bestanden worden gebonden; extra capaciteit blijft onbevestigd. Nooit uit deze ontwikkelwerkplek publiceren.
+
+---
+
 ## Actuele publicatie — tien bestaande Alfa C Typ na onder Zelf oefenen — 3 november 2026
 
 Livebron `8c597e0cda5f8339633b8a45b966f2a1e45417e4`, schone canonieke main; Worker `62aff438-204d-4726-863e-0eaa96edb530`. Via normale `npm run deploy`, voortbouwend op `986ad669012933025f2613543efb351f3e7e5118`. KSW-AC-TN-001 t/m 010 zijn nu ook bereikbaar onder Zelf oefenen. Dezelfde canonieke vragen, modellen, exacte criteria, bronhints en antwoordopslag; de bestaande begeleide twintig blijven ongewijzigd. Geen nieuwe unieke vragen, audio of vormgeving.
