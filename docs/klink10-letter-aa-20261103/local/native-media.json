@@ -1,0 +1,43 @@
+{
+  "base": "http://127.0.0.1:19046",
+  "checks": [
+    {
+      "engine": "chromium",
+      "instructionPlayedToEnd": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19046/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        },
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19046/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19046/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "instructionPlayedToEnd": true,
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19046/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        },
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19046/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19046/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        }
+      ]
+    }
+  ],
+  "fullAudioSha256": "11410b60e4e0fb2bbe191b205007879925261c533fa679c89fc610617b6b0a5a",
+  "humanListeningPerformed": false
+}

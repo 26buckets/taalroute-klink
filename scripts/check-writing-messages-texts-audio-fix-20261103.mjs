@@ -6,16 +6,16 @@ import {createHash} from 'node:crypto';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((x,y)=>x.localeCompare(y));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const folder='docs/writing-messages-texts-audio-fix-20261103/';
-export function verifyMessagesTextsAudioFix(read=readFileSync){
+export function verifyMessagesTextsAudioFix(read=readFileSync,end){
  const json=p=>JSON.parse(read(p)),r=json('docs/klink-owner-release-messages-texts-audio-fix-20261103.json'),m=json(folder+'import-manifest.json'),a=json(folder+'audio-review.json'),old=p=>git('show',r.baselineSourceCommit+':'+p);
  assert.equal(r.baselineSourceCommit,m.baselineSourceCommit);assert.equal(r.liveSourceCommit,r.baselineSourceCommit);assert.equal(json(folder+'baseline-live-release.json').sourceCommit,r.liveSourceCommit);
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved);assert.equal(r.standingPolicySha256,sha(read('docs/klink-invullen-20261101/automatic-owner-approval.json')));
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,...(end?[end]:[]),'--',...roots)),...(end?[]:lines(git('ls-files','--others','--exclude-standard','--',...roots)))])]);
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const [p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
- assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0);
- assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','app','components','lib','hooks','.github').length,0);
+ assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,...(end?[end]:[]),'--','public').length,0);
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,...(end?[end]:[]),'--','app','components','lib','hooks','.github').length,0);
  assert.equal(a.bundles.length,2);const packs=new Map(a.bundles.map(b=>{const data=read('public'+b.src);assert.equal(sha(data),b.sha256);assert.equal(data.length,b.bytes);assert(data.length<4*1024*1024);return [b.src,data];}));
  const historicalAudio=read('public'+a.supersededBundle.src);assert.equal(sha(historicalAudio),a.supersededBundle.sha256);assert(Buffer.concat([...packs.values()]).equals(historicalAudio));
  const prev=JSON.parse(old('docs/writing-messages-texts-20261103/audio-review.json'));assert.equal(a.selected.length,70);
