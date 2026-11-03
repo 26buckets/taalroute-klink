@@ -1,0 +1,78 @@
+{
+  "base": "http://127.0.0.1:19140",
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "target": "learner",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "target": "teacher/plus",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "target": "learner",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "target": "teacher/plus",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "target": "learner",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "target": "teacher/plus",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "target": "learner",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "target": "teacher/plus",
+      "delayedModuleRequests": 1,
+      "finalFrameKept": true,
+      "opens": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": []
+}
