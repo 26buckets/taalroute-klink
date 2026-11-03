@@ -1,3 +1,13 @@
+## Actuele publicatie — tien bestaande Alfa C Typ na onder Zelf oefenen — 3 november 2026
+
+Livebron `8c597e0cda5f8339633b8a45b966f2a1e45417e4`, schone canonieke main; Worker `62aff438-204d-4726-863e-0eaa96edb530`. Via normale `npm run deploy`, voortbouwend op `986ad669012933025f2613543efb351f3e7e5118`. KSW-AC-TN-001 t/m 010 zijn nu ook bereikbaar onder Zelf oefenen. Dezelfde canonieke vragen, modellen, exacte criteria, bronhints en antwoordopslag; de bestaande begeleide twintig blijven ongewijzigd. Geen nieuwe unieke vragen, audio of vormgeving.
+
+Lokaal en live: 40 afzonderlijke antwoordstromen, 20 bladopdrachten, vier overstappen vanuit de begeleide reeks met behouden concept/eerste antwoord, en twee echte woordaudio-afspeelproeven. De nieuwe en oorspronkelijke bank en de bestaande opname zijn volledig bytegelijk teruggelezen; audiometadata behouden. 16 regressietests, types, gerichte lint en vier negatieve publicatieproeven geslaagd. Geen GitHub Actions of extra betaald budget. Wrangler bevestigt 20.000 aangeboden assets: 16 geüpload plus 19.984 ongewijzigd; limieten en configuratie behouden.
+
+Drive-eindbewijs `1Db-ToTH10S3tVkPSb_DLfdEbSEDRfj8g`: 41 buitenste en 25 geneste bron-/herstelbestanden volledig teruggelezen. Bronkopie `10zaEeB4UVH8NayCLQpnEVanV5_LyYkbd`. Register: tien hergebruikte bronposities, geen nieuwe inhoud; extern schrijfregister 780/880 niet verhoogd. Geen onafhankelijke menselijke NT2-/luisterreview, fysieke apparaten of klasproef geclaimd.
+
+---
+
 ## Actuele publicatie — tien Alfa A Schrijf de letter — 3 november 2026
 
 Livebron `986ad669012933025f2613543efb351f3e7e5118`, schone canonieke main; Worker `05d0e20d-670c-40dd-b8f1-e4c2822e197a`. Normale `npm run deploy`, opvolger van `1fe8b8c041d65b74e3a4162b8ab0b235dffd7dfa`. Tien bronopdrachten met exact één kleine letter: m, a, s, o, t, n, r, e, i, k. Bestaande invoerspeler, instructieaudio, uiterlijk en opslag behouden; geen handschriftbeoordeling.
