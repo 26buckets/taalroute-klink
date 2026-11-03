@@ -48,7 +48,7 @@ export function SourceWritingText({ id, context, support, examples, criteria, la
     {error && <output role="alert">Bewaren lukt niet. Je invoer blijft in dit scherm. Houd deze oefening open.</output>}
     <button data-practice-check className="primary-button" disabled={!ready || !canAnswer || saving || !draft.trim()} onClick={() => void compare()}>Bewaar en vergelijk<Check /></button>
     {comparing && answer.first && answer.last && <>
-      <div className="cp-source-text"><p>Je eerste eigen tekst:</p><p>{answer.first.text}</p></div>
+      <div className="cp-source-text"><p>Je eerste eigen tekst:</p><p style={{ whiteSpace: 'pre-wrap', overflowWrap: 'anywhere' }}>{answer.first.text}</p></div>
       <div className="cp-source-text"><p>Voorbeelden</p>{examples.map(example => <div key={example.text}><p><WordAudioText text={example.text} /></p>{example.explanation && <p><WordAudioText text={example.explanation} /></p>}</div>)}<p>Jouw tekst mag anders zijn.</p></div>
       {criteria.length > 0 && <ul>{criteria.map(text => <li key={text}><WordAudioText text={text} /></li>)}</ul>}
       <p>Kijk zelf of samen met je docent na.</p>
