@@ -11,6 +11,7 @@ import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAns
 import { emptyWritingInk, hasWritingInk, loadWritingInk, openWritingInk, saveWritingInk, updateWritingInk, type WritingInk } from '@/lib/writing-ink';
 import { WritingBoard, type Stroke } from './writing-board';
 import './writing-form.css';
+import { SourceWritingText, type WritingExample } from './source-writing-text';
 import { checkWritingFormField, completeWritingForm, emptyWritingFormAnswer, loadWritingForm, openWritingForm, saveWritingForm, updateWritingFormAnswer, writingFormLiteralRanges, type SourceFormField, type WritingFormAnswer, type FormCheck } from '@/lib/writing-form';
 
 import { useId } from 'react';
@@ -604,6 +605,7 @@ export function ExerciseSurface({
   infoTarget?: HTMLElement | null;
 }) {
   const demo = beginnerExerciseDemo(pack, exercise, guided);
+  if (exercise.sourceFreeWriting === true) return <SourceWritingText key={exercise.exerciseId} id={exercise.exerciseId} context={asString(exercise.sourceWritingContext)} support={asArray<string>(exercise.sourceWritingSupport)} examples={asArray<WritingExample>(exercise.sourceWritingExamples)} criteria={asArray<string>(exercise.sourceWritingCriteria)} label={asString(exercise.sourceWritingLabel)} canAnswer={canAnswer} onReset={onReset} onHelp={onHelp} onFinish={onFinish}><Prompt exercise={exercise} onAudio={onAudio} /></SourceWritingText>;
   if (exercise.mode === 'open-sentence') return <OwnSentenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onRecordingChange={onRecordingChange} canAnswer={canAnswer} />;
   if (Array.isArray(exercise.sequenceStages)) return <StagedSequenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
   switch (exercise.componentId) {

@@ -1,7 +1,7 @@
 import { spokenWords } from './word-listening-text.ts';
 
 export type FormValues = Record<string, string>;
-export type SourceFormField = { id: string; label: string; acceptedAnswers: string[]; normalization: 'exact' | 'case' | 'case-space' | 'digits' | 'date' | 'time'; wrongExamples: string[]; feedback: { correct: string; retry: string } };
+export type SourceFormField = { id: string; label: string; acceptedAnswers: string[]; normalization: 'exact' | 'case' | 'case-space' | 'digits' | 'date' | 'time'; wrongExamples: string[]; feedback: { correct: string; retry: string }; maxLength?: number };
 export type FormCheck = 'missing' | 'matched' | 'retry' | 'review';
 export type WritingFormAnswer = { version: 1; draft: FormValues; first?: FormValues; last?: FormValues };
 export const writingFormDatabase = 'klink-writing-form-v1';
@@ -40,12 +40,13 @@ export function checkWritingFormField(value: string, field: SourceFormField): Fo
 
 export function validateWritingFormAnswer(value: unknown, fields: SourceFormField[]): WritingFormAnswer {
   if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid form record');
-  const row = value as Record<string, unknown>, ids = new Set(fields.map(field => field.id));
+  const row = value as Record<string, unknown>, ids = new Map(fields.map(field => [field.id, field.maxLength ?? 500]));
   if (!ids.size || ids.size !== fields.length || row.version !== 1 || Object.keys(row).some(key => !['version', 'draft', 'first', 'last'].includes(key))) throw new Error('Invalid form version');
+  if ([...ids.values()].some(limit => !Number.isSafeInteger(limit) || limit < 1 || limit > 10000)) throw new Error('Invalid writing limit');
   for (const key of ['draft', 'first', 'last']) {
     const values = row[key];
     if (key !== 'draft' && values === undefined) continue;
-    if (!values || typeof values !== 'object' || Array.isArray(values) || Object.entries(values).some(([id, text]) => !ids.has(id) || typeof text !== 'string' || text.length > 500)) throw new Error('Invalid form fields');
+    if (!values || typeof values !== 'object' || Array.isArray(values) || Object.entries(values).some(([id, text]) => !ids.has(id) || typeof text !== 'string' || text.length > (ids.get(id) ?? 0))) throw new Error('Invalid form fields');
     if (key !== 'draft' && !completeWritingForm(values as FormValues, fields)) throw new Error('Incomplete submitted form');
   }
   if ((row.first === undefined) !== (row.last === undefined)) throw new Error('Invalid form history');

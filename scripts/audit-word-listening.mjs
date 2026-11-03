@@ -33,6 +33,13 @@ for (const activity of groupActivities) for (const collection of chapterCollecti
     const source = { activity: activity.id, collection: collection.id, exerciseId: exercise.exerciseId, ...(exercise.sourceForm === true ? { sourceForm: true } : {}) };
     const units = exercise.writingSourceId ? exercise.writingHintUnits : undefined;
     read(exercise, '', source, units);
+    if (exercise.sourceFreeWriting === true) {
+      read(exercise.sourceWritingContext, 'text', source);
+      read(exercise.sourceWritingSupport, 'text', source);
+      read(exercise.sourceWritingCriteria, 'text', source);
+      read(exercise.sourceWritingLabel, 'label', source);
+      for (const example of exercise.sourceWritingExamples ?? []) read(example.explanation, 'feedback', source);
+    }
     if (exercise.writingSourceId) {
       writingPositions.add(exercise.writingSourceId);
       read(exercise.correctFeedback, 'feedback', source);
