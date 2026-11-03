@@ -4,10 +4,13 @@
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
   "preview_urls": false,
-  "routes": [],
+  "routes": [
+    { "pattern": "inzicht-staging.taalroute.nl", "custom_domain": true }
+  ],
   "vars": {
     "INZICHT_MODE": "synthetic-online",
-    "INZICHT_ORIGIN": "https://klink-inzicht-pr8-staging.nico-554.workers.dev"
+    "INZICHT_ORIGIN": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+    "INZICHT_STAGING_ORIGIN": "https://inzicht-staging.taalroute.nl"
   },
   "d1_databases": [
     {

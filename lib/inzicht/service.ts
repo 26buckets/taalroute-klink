@@ -34,6 +34,7 @@ export type InzichtEnv = {
   INZICHT_DB?: D1Database;
   INZICHT_MODE?: string;
   INZICHT_ORIGIN?: string;
+  INZICHT_STAGING_ORIGIN?: string;
   INZICHT_MFA_KEY?: string;
 };
 type Row = Record<string, string | number | null>;
@@ -707,8 +708,9 @@ export async function handleInzicht(
   try {
     const online = env.INZICHT_MODE === 'synthetic-online';
     const validHost = online
-      ? new URL(request.url).origin === env.INZICHT_ORIGIN &&
-        new URL(request.url).protocol === 'https:'
+      ? [env.INZICHT_ORIGIN, env.INZICHT_STAGING_ORIGIN].includes(
+          new URL(request.url).origin,
+        ) && new URL(request.url).protocol === 'https:'
       : loopback(request);
     if (!enabled(env) || !validHost)
       return response({ error: 'Niet beschikbaar.' }, 404);

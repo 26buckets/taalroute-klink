@@ -8,7 +8,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 export const base = process.env.KLINK_TEST_URL ?? 'http://127.0.0.1:18841';
 const config = JSON.parse(readFileSync('scripts/inzicht/online-config.json'));
-export const online = base === config.vars.INZICHT_ORIGIN;
+export const online = [
+  config.vars.INZICHT_ORIGIN,
+  config.vars.INZICHT_STAGING_ORIGIN,
+].includes(base);
 assert(
   online || /^http:\/\/127\.0\.0\.1:\d+$/.test(base),
   'Only the exact isolated staging or localhost may receive test credentials',

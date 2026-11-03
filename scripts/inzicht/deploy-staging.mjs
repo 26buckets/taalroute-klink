@@ -14,7 +14,15 @@ export function checkStaging(config) {
   );
   assert.equal(config.workers_dev, true);
   assert.equal(config.preview_urls, false);
-  assert.deepEqual(config.routes, []);
+  if (config.vars.INZICHT_STAGING_ORIGIN !== undefined) {
+    assert.equal(
+      config.vars.INZICHT_STAGING_ORIGIN,
+      'https://inzicht-staging.taalroute.nl',
+    );
+    assert.deepEqual(config.routes, [
+      { pattern: 'inzicht-staging.taalroute.nl', custom_domain: true },
+    ]);
+  } else assert.deepEqual(config.routes, []);
   assert.deepEqual(config.services ?? [], []);
   assert.deepEqual(
     config.d1_databases.map(({ binding, database_id }) => ({

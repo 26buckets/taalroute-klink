@@ -10,7 +10,7 @@ const worker = {
     const url = new URL(request.url);
     if (
       env.INZICHT_MODE !== 'synthetic-online' ||
-      url.origin !== env.INZICHT_ORIGIN
+      ![env.INZICHT_ORIGIN, env.INZICHT_STAGING_ORIGIN].includes(url.origin)
     )
       return new Response('Niet beschikbaar.', { status: 404 });
     if (url.pathname === '/')

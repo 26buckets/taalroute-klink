@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { build } from 'esbuild';
 import { api } from '../../components/inzicht/client.ts';
+import { checkStaging } from './deploy-staging.mjs';
 
 test('reads have a deadline; writes retain their idempotency key without cancellation', async () => {
   const original = globalThis.fetch;
@@ -43,7 +44,7 @@ test('read timeout is actionable, while expired sessions remain distinguishable'
 
 test('WebKit generic abort after our deadline still gives the same recovery message', async () => {
   const original = globalThis.fetch,
-    timeout = AbortSignal.timeout;
+    timeout = Object.getOwnPropertyDescriptor(AbortSignal, 'timeout');
   try {
     AbortSignal.timeout = () => AbortSignal.abort();
     globalThis.fetch = async () => {
@@ -52,7 +53,7 @@ test('WebKit generic abort after our deadline still gives the same recovery mess
     await assert.rejects(() => api('me', ''), /Ophalen duurt te lang/);
   } finally {
     globalThis.fetch = original;
-    AbortSignal.timeout = timeout;
+    Object.defineProperty(AbortSignal, 'timeout', timeout);
   }
 });
 
@@ -92,6 +93,79 @@ const env = {
   INZICHT_DB: {},
   ASSETS: { fetch: async () => new Response('asset') },
 };
+test('the optional test domain keeps exact host, CSRF and no-store boundaries', async () => {
+  const second = 'https://inzicht-staging.taalroute.nl';
+  const dual = { ...env, INZICHT_STAGING_ORIGIN: second };
+  assert.equal(
+    (await worker.fetch(new Request(second + '/api/inzicht/me'), env, {}))
+      .status,
+    404,
+  );
+  for (const host of [origin, second]) {
+    const r = await worker.fetch(
+      new Request(host + '/api/inzicht/me'),
+      dual,
+      {},
+    );
+    assert.equal(r.status, 401);
+    assert.equal(r.headers.get('Cache-Control'), 'no-store, private');
+    assert.equal(
+      await (
+        await worker.fetch(new Request(host + '/inzicht'), dual, {})
+      ).text(),
+      'rendered page',
+    );
+    for (const from of [origin, second, 'https://inzicht.taalroute.nl']) {
+      const write = await worker.fetch(
+        new Request(host + '/api/inzicht/observations', {
+          method: 'POST',
+          headers: { origin: from, 'content-type': 'application/json' },
+          body: '{}',
+        }),
+        dual,
+        {},
+      );
+      assert.equal(write.status, from === host ? 401 : 403);
+    }
+  }
+  for (const host of [
+    'https://inzicht.taalroute.nl',
+    'https://klink.taalroute.nl',
+    'https://inzicht-staging.taalroute.nl.evil.invalid',
+  ]) {
+    assert.equal(
+      (await worker.fetch(new Request(host + '/api/inzicht/me'), dual, {}))
+        .status,
+      404,
+    );
+  }
+});
+test('the deploy guard admits only the separate staging domain and existing EU database', () => {
+  const config = JSON.parse(readFileSync('scripts/inzicht/online-config.json'));
+  config.assets = {
+    binding: 'ASSETS',
+    run_worker_first: ['/', '/inzicht', '/inzicht/*', '/api/*'],
+  };
+  checkStaging(config);
+  for (const change of [
+    (c) => {
+      c.vars.INZICHT_STAGING_ORIGIN = 'https://inzicht.taalroute.nl';
+    },
+    (c) => {
+      c.routes[0].pattern = 'klink.taalroute.nl';
+    },
+    (c) => {
+      c.routes.push({ pattern: '*.taalroute.nl/*' });
+    },
+    (c) => {
+      c.d1_databases[0].database_id = 'production';
+    },
+  ]) {
+    const c = structuredClone(config);
+    change(c);
+    assert.throws(() => checkStaging(c));
+  }
+});
 test('staging API calls the real security handler without the page renderer', async () => {
   const r = await worker.fetch(
     new Request(`${origin}/api/inzicht/me`),

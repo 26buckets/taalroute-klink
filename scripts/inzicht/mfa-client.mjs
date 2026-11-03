@@ -2,10 +2,18 @@
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, existsSync, chmodSync } from 'node:fs';
 import { totp } from '../../lib/inzicht/mfa.ts';
-export const origin = JSON.parse(
-  readFileSync('scripts/inzicht/online-config.json'),
-).vars.INZICHT_ORIGIN;
-assert.equal(origin, 'https://klink-inzicht-pr8-staging.nico-554.workers.dev');
+const config = JSON.parse(readFileSync('scripts/inzicht/online-config.json'));
+const testOrigin = process.env.KLINK_TEST_URL;
+export const origin =
+  testOrigin && !/^http:\/\/127\.0\.0\.1:\d+$/.test(testOrigin)
+    ? testOrigin
+    : config.vars.INZICHT_ORIGIN;
+assert(
+  [
+    'https://klink-inzicht-pr8-staging.nico-554.workers.dev',
+    'https://inzicht-staging.taalroute.nl',
+  ].includes(origin),
+);
 const path = '.wrangler/inzicht-online-mfa.json';
 export const factors = () =>
   existsSync(path) ? JSON.parse(readFileSync(path)) : {};
