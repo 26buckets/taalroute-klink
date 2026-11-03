@@ -1,3 +1,13 @@
+## Actuele publicatie — tien Alfa A Schrijf de letter — 3 november 2026
+
+Livebron `986ad669012933025f2613543efb351f3e7e5118`, schone canonieke main; Worker `05d0e20d-670c-40dd-b8f1-e4c2822e197a`. Normale `npm run deploy`, opvolger van `1fe8b8c041d65b74e3a4162b8ab0b235dffd7dfa`. Tien bronopdrachten met exact één kleine letter: m, a, s, o, t, n, r, e, i, k. Bestaande invoerspeler, instructieaudio, uiterlijk en opslag behouden; geen handschriftbeoordeling.
+
+Lokaal en live elk 40 antwoordstromen op desktop/mobiel in Chrome/WebKit en twee echte instructieafspeelproeven. Hoofdletters en dubbele letters afgewezen, concepten en eerste/laatste antwoorden behouden. Bronbank en instructie volledig bytegelijk teruggelezen, Taalroute-metadata gecontroleerd. 16 regressietests, typecontrole, gerichte lint en negatieve vrijgaveproeven geslaagd. Exact één nieuwe publieke bank; geen bestaande publieke bytes gewijzigd, geen limiet- of budgetwijziging en geen GitHub Actions.
+
+Eindbewijs: Drive `1J0h2Z1Mn7cELLIiuICiffgb_iI7Y07Fm`, alle 37 buitenste bewijsbestanden en 23 ingebedde bron-/herstelbestanden volledig teruggelezen. Zie `docs/klink10-letter-aa-20261103/postflight.json`. Geen onafhankelijke menselijke NT2-/luisterreview, fysieke apparaten of klasproef geclaimd. Extern schrijfregister 780/880 blijft afzonderlijk; deze tien niet blind daarin optellen.
+
+---
+
 ## Actuele publicatie — 220 bronopdrachten Schrijf een bericht en Zelf schrijven — 3 november 2026
 
 Livebron `1fe8b8c041d65b74e3a4162b8ab0b235dffd7dfa`, schone canonieke main; Worker `21532a26-349f-411b-b24e-656950b11264`. Opvolger van `0a6028fb5da823b46bf49e49a3d6399a5a3ddf1c` via `npm run deploy`. 120 berichten en 100 eigen teksten, 33 rondes en 440 ongewijzigde bronvoorbeelden. Bewaar vóór vergelijking; eerste en laatste tekst blijven afzonderlijk bewaard.
