@@ -1,3 +1,13 @@
+## Actuele publicatie — 220 bronopdrachten Schrijf een bericht en Zelf schrijven — 3 november 2026
+
+Livebron `1fe8b8c041d65b74e3a4162b8ab0b235dffd7dfa`, schone canonieke main; Worker `21532a26-349f-411b-b24e-656950b11264`. Opvolger van `0a6028fb5da823b46bf49e49a3d6399a5a3ddf1c` via `npm run deploy`. 120 berichten en 100 eigen teksten, 33 rondes en 440 ongewijzigde bronvoorbeelden. Bewaar vóór vergelijking; eerste en laatste tekst blijven afzonderlijk bewaard.
+
+440 live browserstromen, 66 conceptherstellen, 16 schermvarianten en acht echte afspeelproeven. Alle 70 aangeboden WAV-fragmenten teruggelezen met ongewijzigde geluidsdata en Taalroute-metadata. De audio is na de eerste livecontrole bytegelijk gesplitst zodat ook een volledig serverantwoord onder de afspeellimiet past. 19998 fysieke bestanden. Geen visuele wijziging, extra betaald gebruik of GitHub Actions. Geen menselijke NT2-/luisterreview, echte apparaten of klasproef geclaimd.
+
+Register: 780 van 880 bronposities online, 726 rechtstreeks en 54 gecontroleerd hergebruikt. 100 beeldwoorden staan open.
+
+---
+
 ## Actuele publicatie — 100 bronopdrachten Typ de zin — 3 november 2026
 
 Livebron `c94f1a5bd49dc63b54491e930346b5fe3db4e626`, schone canonieke main; Worker `1d9fc007-7393-4f07-858d-734354211473`. Opvolger van `37bfa60c9c173cc95668fd0afa4469b30e310b45` via `npm run deploy`. 100 eigen zinnen, 15 rondes en 191 ongewijzigde bronvoorbeelden. Bewaar vóór vergelijking; eerste en laatste tekst blijven afzonderlijk bewaard. Alleen deelname, geen automatische taalbeoordeling.
