@@ -1,3 +1,13 @@
+## Actuele publicatie — 100 bronopdrachten Typ de zin — 3 november 2026
+
+Livebron `c94f1a5bd49dc63b54491e930346b5fe3db4e626`, schone canonieke main; Worker `1d9fc007-7393-4f07-858d-734354211473`. Opvolger van `37bfa60c9c173cc95668fd0afa4469b30e310b45` via `npm run deploy`. 100 eigen zinnen, 15 rondes en 191 ongewijzigde bronvoorbeelden. Bewaar vóór vergelijking; eerste en laatste tekst blijven afzonderlijk bewaard. Alleen deelname, geen automatische taalbeoordeling.
+
+Lokaal en live: 200 browserstromen, 30 exacte conceptherstellen, 16 schermvarianten, 6 extra opslagproeven en 6 afspeelproeven. Drie aangeboden WAV-fragmenten teruggelezen met ongewijzigde geluidsdata en Taalroute-metadata. 19.993 fysieke bestanden. Geen nieuwe visuele indeling, betaald meerverbruik of GitHub Actions. Geen menselijke NT2-/luisterreview, echte apparaten of klasproef geclaimd.
+
+Register: 560 van 880 schrijfbronnen online, waarvan 506 rechtstreeks en 54 gecontroleerd hergebruikt. 320 nog open.
+
+---
+
 ## Actuele publicatie — tien Alfa C Luister en lees mee — 3 november 2026
 
 Livebron `37bfa60c9c173cc95668fd0afa4469b30e310b45`, normale canonieke main en `npm run deploy`, voortbouwend op de actuele formulierenpublicatie en gecontroleerde Hoor-en-typ-correctie. Tien brongebonden woordaanwijsopdrachten sluiten de geselecteerde Zinnen-reeks van 230 posities af. De tien doelzinnen en hun audio zijn hergebruikt; tien voorbereide instructieopnamen zijn bytegelijk gebundeld. Geen wijziging aan uiterlijk, routes of bestaande voortgang.
