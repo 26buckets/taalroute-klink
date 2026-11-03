@@ -1,3 +1,15 @@
+## Actuele publicatie — tien Alfa C Luister en lees mee — 3 november 2026
+
+Livebron `37bfa60c9c173cc95668fd0afa4469b30e310b45`, normale canonieke main en `npm run deploy`, voortbouwend op de actuele formulierenpublicatie en gecontroleerde Hoor-en-typ-correctie. Tien brongebonden woordaanwijsopdrachten sluiten de geselecteerde Zinnen-reeks van 230 posities af. De tien doelzinnen en hun audio zijn hergebruikt; tien voorbereide instructieopnamen zijn bytegelijk gebundeld. Geen wijziging aan uiterlijk, routes of bestaande voortgang.
+
+Nico heeft exact de nieuwe instructie met ‘alstublieft, met u’ goedgekeurd; eerdere afgekeurde versies blijven buiten de app. Lokaal en live veertig antwoordstromen, veertig native audio-decodes en vier echte instructie-/doelafspeelcontroles. Twintig aangeboden audiofragmenten volledig teruggelezen, met Taalroute-metadata; behoud van de eerdere Spreken-bank gecontroleerd. Zeventien relevante regressietests, types, bron-/antwoordcontrole en woordaudio zonder ontbrekende kandidaten. Geen zware Actions of extra betaald budget.
+
+Eindbewijs: Drive 1YO8MhHoF9xJlASY_qnLFawxeJde9uxI8; alle 35 bewijsbestanden en 114 ingebedde bron-/herstelbestanden teruggelezen.
+
+Bron en herstelgegevens: Drive `1Kh4-apUYD0ssP49Ovuzm2upmNYPGs_H5`, volledig teruggelezen. Geen menselijke luisterronde van alle opnamen, onafhankelijke menselijke NT2-review, fysieke-apparaat- of klasproef geclaimd.
+
+---
+
 ## Actuele publicatie — 140 bronformulieren Vul gegevens in — 3 november 2026
 
 Livebron `f772babce64805160aad60a4a6ef5318c500aec8`, schone canonieke main; Worker `c419b479-35b6-47a3-85ea-47beabe86751`. Opvolger van `96bd4a87e075155deeaeed620afd749c824e58ad` via de gewone `npm run deploy`. 140 formulieren, 395 velden, 21 korte rondes. Eigen invoer wordt bewaard vóór feedback; de eerste en laatste inzending blijven apart. Onbekende schrijfwijzen vragen vergelijking. Geen zelfstandig leesbewijs of automatisch beheersingsresultaat.
