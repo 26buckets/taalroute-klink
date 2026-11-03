@@ -1,16 +1,20 @@
 import hashlib,json,os,pathlib,subprocess,tempfile
 
-base=os.environ.get('KLINK_TEST_BASE','http://127.0.0.1:19036')
+base=os.environ.get('KLINK_TEST_BASE','http://127.0.0.1:19038')
 out=pathlib.Path(os.environ.get('KLINK_TEST_OUTPUT','/tmp/klink-messages-texts-local'))
-d=pathlib.Path('docs/writing-messages-texts-20261103')
-a=json.loads((d/'audio-review.json').read_text());url=base+a['bundle']['src']
+d=pathlib.Path('docs/writing-messages-texts-audio-fix-20261103')
+a=json.loads((d/'audio-review.json').read_text())
 sha=lambda data:hashlib.sha256(data).hexdigest()
-packed=subprocess.check_output(['curl','-fsS',url])
-assert sha(packed)==a['bundle']['sha256'] and len(packed)==a['bundle']['bytes']
+packs={}
+for b in a['bundles']:
+ data=subprocess.check_output(['curl','-fsS',base+b['src']]);assert sha(data)==b['sha256'] and len(data)==b['bytes']<4*1024*1024
+ packs[b['src']]=data
+assert sha(b''.join(packs.values()))==a['supersededBundle']['sha256']
 checks=[]
 with tempfile.TemporaryDirectory() as tmp:
  p=pathlib.Path(tmp)/'clip.wav';headers=pathlib.Path(tmp)/'headers'
  for i,x in enumerate(a['selected']):
+  packed=packs[x['source']['src']];url=base+x['source']['src']
   start=x['offset'];end=start+x['length']-1
   data=packed[start:end+1];assert len(data)==x['length'] and sha(data)==x['record']['sha256'];p.write_bytes(data)
   tags=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format_tags','-of','json',str(p)]))['format']['tags']
@@ -26,5 +30,5 @@ with tempfile.TemporaryDirectory() as tmp:
   checks.append(dict(word=x['word'],role=x['role'],sha256=sha(data),pcmSha256=sha(pcm),metadata=tags,sampledHTTPRangeStatus=status))
 assert len(checks)==70
 out.mkdir(parents=True,exist_ok=True)
-(out/'media.json').write_text(json.dumps(dict(base=base,checks=checks,wholeBundleSha256=sha(packed)),indent=2)+'\n')
+(out/'media.json').write_text(json.dumps(dict(base=base,checks=checks,bundleSha256=[sha(x) for x in packs.values()]),indent=2)+'\n')
 print('70 decoded WAV fragments with preserved Taalroute metadata; 7 HTTP range checks.')

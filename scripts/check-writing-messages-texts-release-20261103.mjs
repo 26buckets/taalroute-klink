@@ -6,15 +6,15 @@ import {createHash} from 'node:crypto';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((x,y)=>x.localeCompare(y));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const folder='docs/writing-messages-texts-20261103/';
-export function verifyMessagesTextsRelease(read=readFileSync){
+export function verifyMessagesTextsRelease(read=readFileSync,end){
  const json=p=>JSON.parse(read(p)),r=json('docs/klink-owner-release-messages-texts-20261103.json'),m=json(folder+'import-manifest.json'),old=p=>git('show',r.baselineSourceCommit+':'+p);
  assert.equal(r.baselineSourceCommit,m.baselineSourceCommit);assert.equal(r.liveSourceCommit,m.actualPreviousLiveSourceCommit);assert.equal(json(folder+'baseline-live-release.json').sourceCommit,r.liveSourceCommit);
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved);assert.equal(r.standingPolicySha256,sha(read('docs/klink-invullen-20261101/automatic-owner-approval.json')));
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(end?lines(git('diff','--name-only',r.baselineSourceCommit,end,'--',...roots)):[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const [p,h] of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
- assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')),['public/.assetsignore']);
+ assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,...(end?[end]:[]),'--','public')),['public/.assetsignore']);
  const ignore='public/.assetsignore';assert(read(ignore).toString().startsWith(old(ignore).toString()));assert.deepEqual(read(ignore).toString().slice(old(ignore).length).split('\n').filter(l=>l&&!l.startsWith('#')),['/practice-content/klink-messages-texts-20261103/**']);
  const index='data/klink-production-index.json',instructions='data/klink-production-instructions.json',audio=json(folder+'audio-review.json');
  assert.deepEqual(json(index),[...JSON.parse(old(index)),...m.newRows.map(x=>x.row)]);assert.deepEqual(json(instructions),[...JSON.parse(old(instructions)),...Object.values(audio.instructions)]);

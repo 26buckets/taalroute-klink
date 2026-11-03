@@ -4,7 +4,7 @@ import {chromium,webkit} from 'playwright';
 import {chapterHash} from '../lib/practice-chapters.ts';
 import {recordingForWord,wordRecordingKey} from '../lib/word-listening.ts';
 import {spokenWords} from '../lib/word-listening-text.ts';
-const d='docs/writing-messages-texts-20261103/',base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19036',out=process.env.KLINK_TEST_OUTPUT||'/tmp/klink-messages-texts-local';
+const d='docs/writing-messages-texts-audio-fix-20261103/',base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19038',out=process.env.KLINK_TEST_OUTPUT||'/tmp/klink-messages-texts-local';
 const j=p=>JSON.parse(readFileSync(p)),a=j(d+'audio-review.json'),words=new Set(a.selected.filter(x=>x.word).map(x=>x.word));
 const rows=j(d+'import-manifest.json').newRows.map(x=>x.row),checks=[],played=[];
 const fixtures=['functional-message','write'].map(activity=>{
@@ -25,7 +25,7 @@ await Promise.all(Object.entries({chromium,webkit}).map(async([engine,type])=>{
    const task=p.locator('[data-source-writing-text="'+e.exerciseId+'"]'),own='  Mijn eerste zin.\n'+('langwoord'.repeat(50));
    await task.locator('textarea').fill(own);await task.getByRole('button',{name:'Bewaar en vergelijk',exact:true}).click();const finish=task.getByRole('button',{name:'Nagekeken en klaar',exact:true});await finish.waitFor();
    if(width===1280&&theme==='light'){
-    const button=task.locator('[data-word-audio="'+word+'"]').first();await button.click();const r=recordingForWord(word);assert.equal(r.src,a.bundle.src);await p.waitForFunction(key=>window.ended.some(x=>x.key===key&&x.native&&x.seconds>0),wordRecordingKey(r));played.push({engine,word,activity:row.activity,realAudio:true});
+    const button=task.locator('[data-word-audio="'+word+'"]').first();await button.click();const r=recordingForWord(word);assert(a.bundles.some(x=>x.src===r.src));await p.waitForFunction(key=>window.ended.some(x=>x.key===key&&x.native&&x.seconds>0),wordRecordingKey(r));played.push({engine,word,activity:row.activity,realAudio:true});
    }
    await finish.click();await p.locator('[data-practice-next]:not(:disabled)').waitFor();assert.equal(await task.locator('.cp-source-text').nth(1).locator('p').last().textContent(),own);
    const g=await task.evaluate(el=>({page:document.documentElement.scrollWidth,inner:el.scrollWidth,width:el.clientWidth,font:parseFloat(getComputedStyle(el.querySelector('textarea')).fontSize)}));
