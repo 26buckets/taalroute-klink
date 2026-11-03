@@ -1,0 +1,70 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10s-2221e5db17410321-r4-seed9",
+      "src": "/package-audio/klink10-sentences-20261103/k10s-2221e5db17410321-r4-seed9.mp3",
+      "expected": "Luister naar de hele zin en lees mee. Tik op het woord 'alstublieft'.",
+      "recognized": " Luister naar de hele zin en lees mee. Tik op het woord alsjeblieft.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.34,
+          "text": " Luister naar de hele zin en lees mee.",
+          "tokens": [
+            50365,
+            5047,
+            1964,
+            12762,
+            368,
+            16812,
+            710,
+            259,
+            465,
+            476,
+            279,
+            24442,
+            13,
+            50482
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11224429947989327,
+          "compression_ratio": 0.9710144927536232,
+          "no_speech_prob": 5.1966807593228914e-12
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.88,
+          "end": 4.62,
+          "text": " Tik op het woord alsjeblieft.",
+          "tokens": [
+            50509,
+            15613,
+            999,
+            3639,
+            6020,
+            765,
+            3907,
+            2884,
+            5199,
+            414,
+            844,
+            13,
+            50596
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.11224429947989327,
+          "compression_ratio": 0.9710144927536232,
+          "no_speech_prob": 5.1966807593228914e-12
+        }
+      ]
+    }
+  ]
+}

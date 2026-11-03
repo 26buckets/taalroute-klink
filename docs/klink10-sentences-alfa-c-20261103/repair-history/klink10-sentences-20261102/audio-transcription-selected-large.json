@@ -1,0 +1,107 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10s-64dfda0f3f685127-r3-seed7",
+      "src": "/package-audio/klink10-sentences-20261103/k10s-64dfda0f3f685127-r3-seed7.mp3",
+      "expected": "Zeg het nog een keer, alstublieft.",
+      "recognized": " Zeg het nog een keer, alstublieft.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 1.76,
+          "text": " Zeg het nog een keer, alstublieft.",
+          "tokens": [
+            50365,
+            1176,
+            1146,
+            3639,
+            9638,
+            3881,
+            31531,
+            11,
+            419,
+            372,
+            836,
+            6302,
+            844,
+            13,
+            50453
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07660427689552307,
+          "compression_ratio": 0.8095238095238095,
+          "no_speech_prob": 0.014208189211785793
+        }
+      ]
+    },
+    {
+      "id": "k10s-2221e5db17410321-r4-seed9",
+      "src": "/package-audio/klink10-sentences-20261103/k10s-2221e5db17410321-r4-seed9.mp3",
+      "expected": "Luister naar de hele zin en lees mee. Tik op het woord 'alstublieft'.",
+      "recognized": " Luister naar de hele zin en lees mee. Tik op het woord alsjeblieft.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 2.34,
+          "text": " Luister naar de hele zin en lees mee.",
+          "tokens": [
+            50365,
+            5047,
+            1964,
+            12762,
+            368,
+            16812,
+            710,
+            259,
+            465,
+            476,
+            279,
+            24442,
+            13,
+            50482
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09317518983568464,
+          "compression_ratio": 0.9710144927536232,
+          "no_speech_prob": 0.009063033387064934
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 2.88,
+          "end": 4.62,
+          "text": " Tik op het woord alsjeblieft.",
+          "tokens": [
+            50509,
+            15613,
+            999,
+            3639,
+            6020,
+            765,
+            3907,
+            2884,
+            5199,
+            414,
+            844,
+            13,
+            50596
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.09317518983568464,
+          "compression_ratio": 0.9710144927536232,
+          "no_speech_prob": 0.009063033387064934
+        }
+      ]
+    }
+  ]
+}

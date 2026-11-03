@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "id": "SZ-ALFA-C-LLM-001",
+      "sourceAndAnswerVerified": true,
+      "word": "Hallo",
+      "sourceSentence": "Hallo, ik heet Noor.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-002",
+      "sourceAndAnswerVerified": true,
+      "word": "alstublieft",
+      "sourceSentence": "Ik wil graag een brood, alstublieft.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": true
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-003",
+      "sourceAndAnswerVerified": true,
+      "word": "hoofd",
+      "sourceSentence": "Mijn hoofd doet pijn.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-004",
+      "sourceAndAnswerVerified": true,
+      "word": "water",
+      "sourceSentence": "Er ligt water op de vloer.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-005",
+      "sourceAndAnswerVerified": true,
+      "word": "begint",
+      "sourceSentence": "De les begint om negen uur.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-006",
+      "sourceAndAnswerVerified": true,
+      "word": "Sara",
+      "sourceSentence": "Dit is mijn zus Sara.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-007",
+      "sourceAndAnswerVerified": true,
+      "word": "vriend",
+      "sourceSentence": "Ik praat met mijn vriend.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-008",
+      "sourceAndAnswerVerified": true,
+      "word": "kamers",
+      "sourceSentence": "Mijn huis heeft twee kamers.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-009",
+      "sourceAndAnswerVerified": true,
+      "word": "badkamer",
+      "sourceSentence": "De badkamer is naast de keuken.",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    },
+    {
+      "id": "SZ-ALFA-C-LLM-010",
+      "sourceAndAnswerVerified": true,
+      "word": "appels",
+      "sourceSentence": "Mag ik een kilo appels?",
+      "wholeAudioRequired": true,
+      "humanInstructionApproved": false
+    }
+  ],
+  "independentHumanNT2Review": false,
+  "sourceHoldHistoryRetained": true,
+  "reviewPerformedBy": "Codex",
+  "scope": "Ten exact source sentences, questions, accepted words, feedback, supported reading and audio mappings reviewed; no independent reading assessment."
+}

@@ -2,25 +2,27 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyAlfaCSentencesRelease,readBeforeAlfaCSentences} from './check-klink10-sentences-alfa-c-release.mjs';
 
 const folder='docs/writing-forms-20261102/',approval='docs/klink-owner-release-writing-forms-20261102.json';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 
 export function verifyWritingFormsRelease(read=readFileSync){
+ const next=verifyAlfaCSentencesRelease(read),currentRead=read;read=file=>readBeforeAlfaCSentences(file,next,currentRead);
  const json=p=>JSON.parse(read(p)),r=json(approval),m=json(folder+'import-manifest.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearancePreserved&&r.progressPreserved);
  const policy='docs/klink-invullen-20261101/automatic-owner-approval.json';assert.equal(sha(read(policy)),r.standingPolicySha256);assert.equal(json(policy).mayInventHumanReviewEvidence,false);assert.equal(r.independentHumanNT2Review,false);assert.equal(r.humanListeningPerformed,false);
  assert.equal(m.baselineSourceCommit,r.baselineSourceCommit);assert.equal(m.actualPreviousLiveSourceCommit,r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const live=json(folder+'baseline-live-release.json');assert(live.sourceClean&&live.branch==='main');assert.equal(live.sourceCommit,r.liveSourceCommit);
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,next.baselineSourceCommit,'--',...roots)));
  const wordReview=json(folder+'word-audio-review.json'),instruction=json(folder+'audio-review.json').selectedInstruction;
  const files=['components/product/package-exercise-browser.tsx','components/product/word-audio-text.tsx','components/product/writing-form.css','data/klink-production-index.json','data/klink-production-instructions.json','data/klink-word-listening.json','data/klink-word-listening-audio.json','lib/word-listening.ts','lib/writing-form.ts','scripts/audit-word-listening.mjs','scripts/test-handwriting-teacher-preservation-20261102.mjs','scripts/test-learning-goals-20261101.mjs','scripts/test-practice-chapters.mjs','scripts/test-word-listening.mjs','scripts/test-writing-forms-20261102.mjs','scripts/test-writing-forms-browser-20261102.mjs','scripts/test-writing-forms-layout-storage-20261102.mjs','scripts/test-writing-forms-media-20261102.mjs','scripts/check-writing-forms-release-20261102.mjs','scripts/test-writing-forms-release-20261102.mjs'];
  assert.equal(r.upstreamGate,'scripts/check-klink10-dictation-approved-release.mjs');git('show',r.baselineSourceCommit+':'+r.upstreamGate);
  assert(/^\/practice-content\/bundles-20261103\/forms-[a-f0-9]{16}\.json$/.test(m.deliveryBundle.src));
  const historicalBounds=['grammar','sentences','bingo','text-evidence','text-a2-evidence'].map(name=>`scripts/check-klink10-${name}-release-20261102.mjs`);
  const allowed=new Set([...files,...historicalBounds,r.upstreamGate,'components/product/production-round.tsx','lib/production-practice.ts','public/.assetsignore','scripts/test-writing-forms-bundle-20261103.mjs','public'+m.deliveryBundle.src,...m.newRows.map(x=>'public'+x.row.url),...wordReview.bundles.map(x=>'public'+x.src),'public'+instruction.src]);
- assert(changed.every(p=>allowed.has(p)),'Forms must stay within the bounded runtime, content and test scope');assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')),['public/.assetsignore'],'All previous public assets must be retained');
+ assert(changed.every(p=>allowed.has(p)),'Forms must stay within the bounded runtime, content and test scope');assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,next.baselineSourceCommit,'--','public')),['public/.assetsignore'],'All previous public assets must be retained');
  const ignore='public/.assetsignore';assert.equal(read(ignore).toString(),git('show',r.baselineSourceCommit+':'+ignore).toString()+'# New source-form banks are served in one immutable bundle; retain the original JSON for source review.\n/practice-content/klink-forms-20261102/**\n');
  for(const file of historicalBounds){const before=git('show',r.baselineSourceCommit+':'+file).toString();assert.equal(read(file).toString(),before.replace("git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')","git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,next.baselineSourceCommit,'--','public')"),file);}
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
@@ -43,6 +45,6 @@ export function verifyWritingFormsRelease(read=readFileSync){
  const teacher=json(folder+'local/teacher-preservation.json');assert.equal(teacher.checks.length,24);assert(teacher.checks.every(x=>x.pixelIdentical));assert.deepEqual(teacher.errors,[]);
  const v=json(folder+'verification.json');for(const k of['types','targetedLint','coreTests','fullWordCoverage','sourceFormGoals','appearanceReviewed','priorPublicAssetsUnchanged','sourceIdentityAndCriteriaChecked','clockLimitationRecorded'])assert(v[k],k);assert.equal(v.independentHumanNT2Review,false);assert.equal(v.humanListeningPerformed,false);assert.equal(v.physicalDevicesAndClassroomTested,false);
  const backup=json(folder+'backup.json');assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity&&backup.secretScanPassed);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return r;
+ return {...r,next};
 }
-export function readBeforeWritingForms(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeWritingForms(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeAlfaCSentences(file,r.next,read);}
