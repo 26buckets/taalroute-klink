@@ -1,8 +1,11 @@
 import assert from 'node:assert/strict';
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium, webkit, expect } from 'playwright/test';
 import { base, online, login } from './browser-auth.mjs';
 assert(online, 'Only the authorized synthetic staging may receive credentials');
+const out =
+  process.env.KLINK_LATENCY_OUTPUT ?? 'docs/inzicht-20261102/evidence/latency';
+mkdirSync(out, { recursive: true });
 const results = [];
 for (const [engine, type] of Object.entries({ chromium, webkit })) {
   const browser = await type.launch();
@@ -80,7 +83,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       'A stalled reload must preserve the valid session',
     );
     await page.screenshot({
-      path: `docs/inzicht-20261102/evidence/latency/${engine}-account-recovered.png`,
+      path: `${out}/${engine}-account-recovered.png`,
     });
     await page.getByRole('button', { name: 'Afmelden', exact: true }).click();
     await page.getByLabel('E-mailadres', { exact: true }).waitFor();
@@ -99,7 +102,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
   }
 }
 writeFileSync(
-  'docs/inzicht-20261102/evidence/latency/account-delay-browser.json',
+  `${out}/account-delay-browser.json`,
   JSON.stringify(
     {
       at: new Date().toISOString(),

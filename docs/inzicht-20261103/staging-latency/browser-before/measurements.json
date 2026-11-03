@@ -1,0 +1,5275 @@
+{
+  "measuredAt": "2026-11-03T20:26:16.936Z",
+  "method": "Public anonymous login only; no credentials, form submission, MFA, protected reports or data writes; cold/warm browser cache does not prove a cold Worker",
+  "rows": [
+    {
+      "name": "current",
+      "engine": "chromium",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1b687e7bb12b-MAN",
+          "serverTiming": null,
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1b6c7f580cc3-ARN",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 896.6000000238419,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 275.80000001192093,
+            "duration": 894.1000000238419,
+            "dns": 42.39999997615814,
+            "connect": 77.60000002384186,
+            "request": 152.89999997615814,
+            "body": 2.100000023841858,
+            "serverTiming": []
+          }
+        ],
+        "resources": [
+          {
+            "path": "/appearance.js",
+            "start": 288.60000002384186,
+            "duration": 86.5,
+            "transfer": 1124,
+            "decoded": 1969,
+            "serverTiming": []
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 289.9000000357628,
+            "duration": 109.59999996423721,
+            "transfer": 1795,
+            "decoded": 4361,
+            "serverTiming": []
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 289.9000000357628,
+            "duration": 115.30000001192093,
+            "transfer": 1623,
+            "decoded": 3497,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.css",
+            "start": 290,
+            "duration": 92.90000003576279,
+            "transfer": 5220,
+            "decoded": 17769,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 290,
+            "duration": 120.5,
+            "transfer": 3102,
+            "decoded": 10593,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 290,
+            "duration": 294.4000000357628,
+            "transfer": 5263,
+            "decoded": 12760,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink.svg",
+            "start": 290.10000002384186,
+            "duration": 73.19999998807907,
+            "transfer": 6812,
+            "decoded": 19216,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.js",
+            "start": 290.10000002384186,
+            "duration": 84.80000001192093,
+            "transfer": 15150,
+            "decoded": 49409,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 290.10000002384186,
+            "duration": 105.10000002384186,
+            "transfer": 2130,
+            "decoded": 5133,
+            "serverTiming": []
+          },
+          {
+            "path": "/skills.js",
+            "start": 383.2000000476837,
+            "duration": 176.0999999642372,
+            "transfer": 2847,
+            "decoded": 6234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/catalog.json",
+            "start": 591.6000000238419,
+            "duration": 78,
+            "transfer": 1512,
+            "decoded": 8690,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/studio.svg",
+            "start": 591.7000000476837,
+            "duration": 91.89999997615814,
+            "transfer": 2165,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 591.8000000119209,
+            "duration": 77.90000003576279,
+            "transfer": 2208,
+            "decoded": 5237,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 591.8000000119209,
+            "duration": 91.60000002384186,
+            "transfer": 2214,
+            "decoded": 5235,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 591.8000000119209,
+            "duration": 91.69999998807907,
+            "transfer": 2190,
+            "decoded": 5197,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/actief.svg",
+            "start": 591.8000000119209,
+            "duration": 97.90000003576279,
+            "transfer": 2213,
+            "decoded": 5233,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/missies.svg",
+            "start": 591.9000000357628,
+            "duration": 90.80000001192093,
+            "transfer": 2213,
+            "decoded": 5234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 591.9000000357628,
+            "duration": 95.30000001192093,
+            "transfer": 2006,
+            "decoded": 3408,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 591.9000000357628,
+            "duration": 300.19999998807907,
+            "transfer": 2218,
+            "decoded": 5238,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 592,
+            "duration": 91.60000002384186,
+            "transfer": 2164,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/theaterlezen.svg",
+            "start": 592,
+            "duration": 213,
+            "transfer": 459188,
+            "decoded": 667225,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 592,
+            "duration": 264.9000000357628,
+            "transfer": 2157,
+            "decoded": 5159,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/pilot.json",
+            "start": 671.4000000357628,
+            "duration": 83.69999998807907,
+            "transfer": 571,
+            "decoded": 386,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/session",
+            "start": 755.6000000238419,
+            "duration": 53,
+            "transfer": 313,
+            "decoded": 13,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "chromium",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1b6d687f0cc3-ARN",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1b6f895b0cc3-ARN",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 430.80000001192093,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 79,
+            "duration": 305,
+            "dns": 0,
+            "connect": 0,
+            "request": 73.10000002384186,
+            "body": 0.30000001192092896,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/header-controls.css",
+            "start": 81.19999998807907,
+            "duration": 85.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 81.19999998807907,
+            "duration": 97.90000003576279,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/appearance.js",
+            "start": 81.19999998807907,
+            "duration": 98,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 81.19999998807907,
+            "duration": 116.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.css",
+            "start": 81.19999998807907,
+            "duration": 116.90000003576279,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 81.19999998807907,
+            "duration": 161.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.js",
+            "start": 81.30000001192093,
+            "duration": 95.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink.svg",
+            "start": 81.30000001192093,
+            "duration": 95.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 81.30000001192093,
+            "duration": 117,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/skills.js",
+            "start": 180,
+            "duration": 41.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/studio.svg",
+            "start": 243.10000002384186,
+            "duration": 50.299999952316284,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/actief.svg",
+            "start": 243.10000002384186,
+            "duration": 55.89999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 243.10000002384186,
+            "duration": 59.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 243.19999998807907,
+            "duration": 47.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 243.19999998807907,
+            "duration": 53.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 243.19999998807907,
+            "duration": 56.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/missies.svg",
+            "start": 243.30000001192093,
+            "duration": 47.89999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 243.30000001192093,
+            "duration": 53.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 243.30000001192093,
+            "duration": 56,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/theaterlezen.svg",
+            "start": 243.30000001192093,
+            "duration": 56.39999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 243.30000001192093,
+            "duration": 61.59999996423721,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/catalog.json",
+            "start": 243.69999998807907,
+            "duration": 47.60000002384186,
+            "transfer": 300,
+            "decoded": 8690,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/pilot.json",
+            "start": 291.69999998807907,
+            "duration": 52.40000003576279,
+            "transfer": 300,
+            "decoded": 386,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/session",
+            "start": 344.60000002384186,
+            "duration": 37.09999996423721,
+            "transfer": 313,
+            "decoded": 13,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "chromium",
+      "width": 390,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1b70bb1e0a34-ARN",
+          "serverTiming": null,
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1b73fd120a34-ARN",
+          "serverTiming": null,
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 715.7999999523163,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 229.5,
+            "duration": 634.8999999761581,
+            "dns": 0.800000011920929,
+            "connect": 75.10000002384186,
+            "request": 153.30000001192093,
+            "body": 0.3999999761581421,
+            "serverTiming": []
+          }
+        ],
+        "resources": [
+          {
+            "path": "/appearance.js",
+            "start": 232.29999995231628,
+            "duration": 105.70000004768372,
+            "transfer": 1124,
+            "decoded": 1969,
+            "serverTiming": []
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 232.39999997615814,
+            "duration": 81.19999998807907,
+            "transfer": 1623,
+            "decoded": 3497,
+            "serverTiming": []
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 232.5,
+            "duration": 63.5,
+            "transfer": 1795,
+            "decoded": 4361,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink.svg",
+            "start": 232.5999999642372,
+            "duration": 75.40000003576279,
+            "transfer": 6824,
+            "decoded": 19216,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 232.5999999642372,
+            "duration": 75.69999998807907,
+            "transfer": 2130,
+            "decoded": 5133,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.css",
+            "start": 232.5999999642372,
+            "duration": 94.90000003576279,
+            "transfer": 5220,
+            "decoded": 17769,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.js",
+            "start": 232.5999999642372,
+            "duration": 106,
+            "transfer": 15150,
+            "decoded": 49409,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 232.5999999642372,
+            "duration": 108,
+            "transfer": 3169,
+            "decoded": 10593,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 232.5999999642372,
+            "duration": 166.69999998807907,
+            "transfer": 5263,
+            "decoded": 12760,
+            "serverTiming": []
+          },
+          {
+            "path": "/skills.js",
+            "start": 342.5999999642372,
+            "duration": 80.30000001192093,
+            "transfer": 2847,
+            "decoded": 6234,
+            "serverTiming": []
+          },
+          {
+            "path": "/studio.svg",
+            "start": 424.5999999642372,
+            "duration": 81.10000002384186,
+            "transfer": 2165,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/catalog.json",
+            "start": 424.5999999642372,
+            "duration": 83.80000001192093,
+            "transfer": 1512,
+            "decoded": 8690,
+            "serverTiming": []
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 424.69999998807907,
+            "duration": 69.89999997615814,
+            "transfer": 2190,
+            "decoded": 5197,
+            "serverTiming": []
+          },
+          {
+            "path": "/actief.svg",
+            "start": 424.69999998807907,
+            "duration": 75.89999997615814,
+            "transfer": 2213,
+            "decoded": 5233,
+            "serverTiming": []
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 424.69999998807907,
+            "duration": 105.30000001192093,
+            "transfer": 2208,
+            "decoded": 5237,
+            "serverTiming": []
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 424.69999998807907,
+            "duration": 153.89999997615814,
+            "transfer": 2214,
+            "decoded": 5235,
+            "serverTiming": []
+          },
+          {
+            "path": "/missies.svg",
+            "start": 424.7999999523163,
+            "duration": 88.40000003576279,
+            "transfer": 2213,
+            "decoded": 5234,
+            "serverTiming": []
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 424.7999999523163,
+            "duration": 153.9000000357628,
+            "transfer": 2218,
+            "decoded": 5238,
+            "serverTiming": []
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 424.7999999523163,
+            "duration": 154.20000004768372,
+            "transfer": 2006,
+            "decoded": 3408,
+            "serverTiming": []
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 424.89999997615814,
+            "duration": 170.69999998807907,
+            "transfer": 2157,
+            "decoded": 5159,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 424.89999997615814,
+            "duration": 170.80000001192093,
+            "transfer": 2164,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/theaterlezen.svg",
+            "start": 424.89999997615814,
+            "duration": 196.10000002384186,
+            "transfer": 459336,
+            "decoded": 667225,
+            "serverTiming": []
+          },
+          {
+            "path": "/pilot.json",
+            "start": 508.89999997615814,
+            "duration": 83.30000001192093,
+            "transfer": 571,
+            "decoded": 386,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/session",
+            "start": 593,
+            "duration": 49.09999996423721,
+            "transfer": 313,
+            "decoded": 13,
+            "serverTiming": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "chromium",
+      "width": 390,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1b74cd760a34-ARN",
+          "serverTiming": null,
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1b777f020a34-ARN",
+          "serverTiming": null,
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 502,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 57.30000001192093,
+            "duration": 318.5,
+            "dns": 0,
+            "connect": 0,
+            "request": 56.5,
+            "body": 0.5999999642372131,
+            "serverTiming": []
+          }
+        ],
+        "resources": [
+          {
+            "path": "/appearance.js",
+            "start": 66.10000002384186,
+            "duration": 69.59999996423721,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 66.19999998807907,
+            "duration": 77.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 66.19999998807907,
+            "duration": 84.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.css",
+            "start": 66.30000001192093,
+            "duration": 77.59999996423721,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 66.30000001192093,
+            "duration": 91.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 66.39999997615814,
+            "duration": 84.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.js",
+            "start": 66.39999997615814,
+            "duration": 84.90000003576279,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink.svg",
+            "start": 66.39999997615814,
+            "duration": 88.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 66.39999997615814,
+            "duration": 129.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/skills.js",
+            "start": 151.69999998807907,
+            "duration": 52.40000003576279,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/studio.svg",
+            "start": 205,
+            "duration": 65.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 205.10000002384186,
+            "duration": 61.39999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 205.19999998807907,
+            "duration": 102,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/actief.svg",
+            "start": 205.19999998807907,
+            "duration": 104.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 205.30000001192093,
+            "duration": 65.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 205.30000001192093,
+            "duration": 91.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/missies.svg",
+            "start": 205.30000001192093,
+            "duration": 102.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 205.39999997615814,
+            "duration": 104.20000004768372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 205.5,
+            "duration": 95.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 205.5,
+            "duration": 103.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/theaterlezen.svg",
+            "start": 205.5,
+            "duration": 112.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/catalog.json",
+            "start": 206.30000001192093,
+            "duration": 105.59999996423721,
+            "transfer": 300,
+            "decoded": 8690,
+            "serverTiming": []
+          },
+          {
+            "path": "/pilot.json",
+            "start": 312.30000001192093,
+            "duration": 113.69999998807907,
+            "transfer": 300,
+            "decoded": 386,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/session",
+            "start": 426.89999997615814,
+            "duration": 59.10000002384186,
+            "transfer": 313,
+            "decoded": 13,
+            "serverTiming": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "webkit",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1b7e8d119045-BOS",
+          "serverTiming": null,
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1bad4f549045-BOS",
+          "serverTiming": null,
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 17193,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 1071,
+            "duration": 17190,
+            "dns": 0,
+            "connect": 0,
+            "request": 696,
+            "body": 1,
+            "serverTiming": []
+          }
+        ],
+        "resources": [
+          {
+            "path": "/header-controls.css",
+            "start": 1096,
+            "duration": 812,
+            "transfer": 1641,
+            "decoded": 3497,
+            "serverTiming": []
+          },
+          {
+            "path": "/appearance.js",
+            "start": 1096,
+            "duration": 813,
+            "transfer": 1142,
+            "decoded": 1969,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 1097,
+            "duration": 811,
+            "transfer": 3120,
+            "decoded": 10593,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.js",
+            "start": 1097,
+            "duration": 811,
+            "transfer": 15177,
+            "decoded": 49409,
+            "serverTiming": []
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 1097,
+            "duration": 811,
+            "transfer": 1813,
+            "decoded": 4361,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.css",
+            "start": 1097,
+            "duration": 812,
+            "transfer": 5175,
+            "decoded": 17769,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 1097,
+            "duration": 812,
+            "transfer": 5281,
+            "decoded": 12760,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink.svg",
+            "start": 1097,
+            "duration": 2187,
+            "transfer": 6830,
+            "decoded": 19216,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 1097,
+            "duration": 2214,
+            "transfer": 2148,
+            "decoded": 5133,
+            "serverTiming": []
+          },
+          {
+            "path": "/skills.js",
+            "start": 1944,
+            "duration": 1348,
+            "transfer": 2865,
+            "decoded": 6234,
+            "serverTiming": []
+          },
+          {
+            "path": "/actief.svg",
+            "start": 3297,
+            "duration": 881,
+            "transfer": 2231,
+            "decoded": 5233,
+            "serverTiming": []
+          },
+          {
+            "path": "/missies.svg",
+            "start": 3297,
+            "duration": 902,
+            "transfer": 2231,
+            "decoded": 5234,
+            "serverTiming": []
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 3297,
+            "duration": 903,
+            "transfer": 2226,
+            "decoded": 5237,
+            "serverTiming": []
+          },
+          {
+            "path": "/studio.svg",
+            "start": 3297,
+            "duration": 903,
+            "transfer": 2183,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 3297,
+            "duration": 914,
+            "transfer": 2175,
+            "decoded": 5159,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 3297,
+            "duration": 915,
+            "transfer": 2182,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 3297,
+            "duration": 915,
+            "transfer": 2208,
+            "decoded": 5197,
+            "serverTiming": []
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 3297,
+            "duration": 917,
+            "transfer": 2232,
+            "decoded": 5235,
+            "serverTiming": []
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 3297,
+            "duration": 1681,
+            "transfer": 2024,
+            "decoded": 3408,
+            "serverTiming": []
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 3297,
+            "duration": 3194,
+            "transfer": 2236,
+            "decoded": 5238,
+            "serverTiming": []
+          },
+          {
+            "path": "/theaterlezen.svg",
+            "start": 3297,
+            "duration": 13871,
+            "transfer": 459867,
+            "decoded": 667225,
+            "serverTiming": []
+          },
+          {
+            "path": "/catalog.json",
+            "start": 3299,
+            "duration": 879,
+            "transfer": 1530,
+            "decoded": 8690,
+            "serverTiming": []
+          },
+          {
+            "path": "/pilot.json",
+            "start": 4182,
+            "duration": 3671,
+            "transfer": 589,
+            "decoded": 386,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/session",
+            "start": 7855,
+            "duration": 9313,
+            "transfer": 331,
+            "decoded": 13,
+            "serverTiming": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "webkit",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1be9e9f49045-BOS",
+          "serverTiming": null,
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1c6c5b7f9045-BOS",
+          "serverTiming": null,
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 22012,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 5029,
+            "duration": 18647,
+            "dns": 0,
+            "connect": 0,
+            "request": 5028,
+            "body": 519,
+            "serverTiming": []
+          }
+        ],
+        "resources": [
+          {
+            "path": "/appearance.js",
+            "start": 5554,
+            "duration": 580,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 5554,
+            "duration": 580,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 5554,
+            "duration": 585,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 5554,
+            "duration": 588,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 5554,
+            "duration": 596,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.js",
+            "start": 5554,
+            "duration": 5140,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 5554,
+            "duration": 5140,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/app.css",
+            "start": 5554,
+            "duration": 5140,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink.svg",
+            "start": 5555,
+            "duration": 601,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/skills.js",
+            "start": 10696,
+            "duration": 1989,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 12687,
+            "duration": 272,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 12687,
+            "duration": 5686,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 12687,
+            "duration": 5686,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/missies.svg",
+            "start": 12687,
+            "duration": 5686,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 12687,
+            "duration": 5687,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/actief.svg",
+            "start": 12687,
+            "duration": 5687,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/studio.svg",
+            "start": 12687,
+            "duration": 5687,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 12687,
+            "duration": 5687,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 12687,
+            "duration": 5687,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 12687,
+            "duration": 5687,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/theaterlezen.svg",
+            "start": 12687,
+            "duration": 5958,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/catalog.json",
+            "start": 12688,
+            "duration": 5957,
+            "transfer": 1530,
+            "decoded": 8690,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink.svg",
+            "start": 12689,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/pilot.json",
+            "start": 18648,
+            "duration": 2584,
+            "transfer": 589,
+            "decoded": 386,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/session",
+            "start": 21233,
+            "duration": 319,
+            "transfer": 331,
+            "decoded": 13,
+            "serverTiming": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "webkit",
+      "width": 390,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1c747bb35609-BOS",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1c86ff225609-BOS",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 4112,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 686,
+            "duration": 0,
+            "dns": 0,
+            "connect": 0,
+            "request": 408,
+            "body": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/menu-controls.js",
+            "start": 693,
+            "duration": 285,
+            "transfer": 5316,
+            "decoded": 12760,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 693,
+            "duration": 303,
+            "transfer": 1625,
+            "decoded": 3497,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/appearance.js",
+            "start": 693,
+            "duration": 310,
+            "transfer": 1126,
+            "decoded": 1969,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.js",
+            "start": 693,
+            "duration": 327,
+            "transfer": 15155,
+            "decoded": 49409,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 693,
+            "duration": 807,
+            "transfer": 3176,
+            "decoded": 10593,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.css",
+            "start": 693,
+            "duration": 1107,
+            "transfer": 5162,
+            "decoded": 17769,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 693,
+            "duration": 2091,
+            "transfer": 1797,
+            "decoded": 4361,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink.svg",
+            "start": 693,
+            "duration": 2402,
+            "transfer": 6829,
+            "decoded": 19216,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 693,
+            "duration": 2959,
+            "transfer": 2132,
+            "decoded": 5133,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/skills.js",
+            "start": 1022,
+            "duration": 267,
+            "transfer": 2852,
+            "decoded": 6234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/studio.svg",
+            "start": 1294,
+            "duration": 2617,
+            "transfer": 2167,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 1294,
+            "duration": 2640,
+            "transfer": 2192,
+            "decoded": 5197,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 1294,
+            "duration": 2654,
+            "transfer": 2216,
+            "decoded": 5235,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 1294,
+            "duration": 2683,
+            "transfer": 2220,
+            "decoded": 5238,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 1294,
+            "duration": 2683,
+            "transfer": 2210,
+            "decoded": 5237,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/catalog.json",
+            "start": 1295,
+            "duration": 889,
+            "transfer": 1514,
+            "decoded": 8690,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/pilot.json",
+            "start": 2185,
+            "duration": 1134,
+            "transfer": 576,
+            "decoded": 386,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/session",
+            "start": 3322,
+            "duration": 328,
+            "transfer": 317,
+            "decoded": 13,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "current",
+      "engine": "webkit",
+      "width": 390,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/",
+          "status": 200,
+          "ray": "a54e1c8bfa045609-BOS",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "public, max-age=0, must-revalidate"
+        },
+        {
+          "path": "/api/session",
+          "status": 200,
+          "ray": "a54e1c9ecf445609-BOS",
+          "serverTiming": "cfExtPri",
+          "cacheControl": "no-store"
+        }
+      ],
+      "readyMs": 3672,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 347,
+            "duration": 0,
+            "dns": 0,
+            "connect": 0,
+            "request": 345,
+            "body": 950,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/app-chooser.css",
+            "start": 1301,
+            "duration": 284,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.css",
+            "start": 1301,
+            "duration": 286,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 1301,
+            "duration": 287,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/appearance.js",
+            "start": 1301,
+            "duration": 287,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.js",
+            "start": 1301,
+            "duration": 287,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink.svg",
+            "start": 1301,
+            "duration": 520,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 1301,
+            "duration": 523,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/menu-controls.css",
+            "start": 1301,
+            "duration": 544,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/menu-controls.js",
+            "start": 1301,
+            "duration": 560,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/header-controls.css",
+            "start": 1591,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app-chooser.css",
+            "start": 1591,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/app.css",
+            "start": 1591,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/skills.js",
+            "start": 1594,
+            "duration": 271,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/studio.svg",
+            "start": 1867,
+            "duration": 279,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/digibord.svg",
+            "start": 1867,
+            "duration": 283,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/muziek.svg",
+            "start": 1867,
+            "duration": 285,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klankstudio.svg",
+            "start": 1867,
+            "duration": 288,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/spreektijd.svg",
+            "start": 1867,
+            "duration": 289,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/actief.svg",
+            "start": 1867,
+            "duration": 587,
+            "transfer": 2218,
+            "decoded": 5233,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/missies.svg",
+            "start": 1867,
+            "duration": 587,
+            "transfer": 2218,
+            "decoded": 5234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/catalog.json",
+            "start": 1868,
+            "duration": 866,
+            "transfer": 1517,
+            "decoded": 8690,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/zinnen.svg",
+            "start": 1868,
+            "duration": 871,
+            "transfer": 2159,
+            "decoded": 5159,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/oppad.svg",
+            "start": 1868,
+            "duration": 876,
+            "transfer": 2008,
+            "decoded": 3408,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-brand.svg",
+            "start": 1868,
+            "duration": 1117,
+            "transfer": 2166,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink.svg",
+            "start": 1870,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/pilot.json",
+            "start": 2736,
+            "duration": 274,
+            "transfer": 576,
+            "decoded": 386,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/session",
+            "start": 3012,
+            "duration": 261,
+            "transfer": 317,
+            "decoded": 13,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "chromium",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1ca4b8aed274-FRA",
+          "serverTiming": "inzicht;dur=0.0",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1caf5c939852-WAW",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 4034.699999988079,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 1539.8999999761581,
+            "duration": 2093.399999976158,
+            "dns": 1.699999988079071,
+            "connect": 67.5,
+            "request": 1467.699999988079,
+            "body": 3.600000023841858,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 1553.6000000238419,
+            "duration": 77.5,
+            "transfer": 2165,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 1553.8999999761581,
+            "duration": 87.40000003576279,
+            "transfer": 2190,
+            "decoded": 5197,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 1553.8999999761581,
+            "duration": 270.4000000357628,
+            "transfer": 2213,
+            "decoded": 5233,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 1554,
+            "duration": 269.10000002384186,
+            "transfer": 2213,
+            "decoded": 5234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 1554,
+            "duration": 270.39999997615814,
+            "transfer": 2006,
+            "decoded": 3408,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 1554,
+            "duration": 296.30000001192093,
+            "transfer": 2208,
+            "decoded": 5237,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 1554,
+            "duration": 296.5,
+            "transfer": 2218,
+            "decoded": 5238,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 1554,
+            "duration": 538.1999999880791,
+            "transfer": 2214,
+            "decoded": 5235,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 1554.1000000238419,
+            "duration": 269.89999997615814,
+            "transfer": 12765,
+            "decoded": 19033,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 1554.300000011921,
+            "duration": 90.19999998807907,
+            "transfer": 23408,
+            "decoded": 23108,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 1554.300000011921,
+            "duration": 91.5,
+            "transfer": 29588,
+            "decoded": 29288,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 1555.6000000238419,
+            "duration": 86,
+            "transfer": 1124,
+            "decoded": 1969,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 1555.6000000238419,
+            "duration": 105,
+            "transfer": 2130,
+            "decoded": 5133,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 1555.6000000238419,
+            "duration": 124.29999995231628,
+            "transfer": 5309,
+            "decoded": 12760,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 1555.699999988079,
+            "duration": 280.5,
+            "transfer": 2157,
+            "decoded": 5159,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 1555.800000011921,
+            "duration": 54.30000001192093,
+            "transfer": 740,
+            "decoded": 716,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 1555.800000011921,
+            "duration": 105.5,
+            "transfer": 6824,
+            "decoded": 19216,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 1555.800000011921,
+            "duration": 105.69999998807907,
+            "transfer": 2671,
+            "decoded": 8025,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 1555.800000011921,
+            "duration": 117.59999996423721,
+            "transfer": 48494,
+            "decoded": 153995,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 1555.800000011921,
+            "duration": 124.30000001192093,
+            "transfer": 645,
+            "decoded": 496,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 1555.800000011921,
+            "duration": 124.19999998807907,
+            "transfer": 61098,
+            "decoded": 190038,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 1555.800000011921,
+            "duration": 127.59999996423721,
+            "transfer": 34682,
+            "decoded": 112265,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 1555.800000011921,
+            "duration": 144.69999998807907,
+            "transfer": 91461,
+            "decoded": 500175,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 1555.800000011921,
+            "duration": 280.19999998807907,
+            "transfer": 2164,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 1555.8999999761581,
+            "duration": 126.5,
+            "transfer": 1961,
+            "decoded": 3795,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 1556,
+            "duration": 51.10000002384186,
+            "transfer": 28023,
+            "decoded": 121382,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 1556,
+            "duration": 85.80000001192093,
+            "transfer": 2621,
+            "decoded": 5888,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 1556,
+            "duration": 104.19999998807907,
+            "transfer": 26273,
+            "decoded": 89541,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 1556,
+            "duration": 124.19999998807907,
+            "transfer": 5660,
+            "decoded": 13048,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 1756.3999999761581,
+            "duration": 2114.600000023842,
+            "transfer": 343,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "chromium",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cbd98149852-WAW",
+          "serverTiming": "inzicht;dur=0.0\ncfExtPri",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1cc019df9852-WAW",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 622.8000000119209,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 184.69999998807907,
+            "duration": 506.69999998807907,
+            "dns": 0,
+            "connect": 0,
+            "request": 184.39999997615814,
+            "body": 20.200000047683716,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 189.10000002384186,
+            "duration": 173.5999999642372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 189.19999998807907,
+            "duration": 173.9000000357628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 189.19999998807907,
+            "duration": 175,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 189.19999998807907,
+            "duration": 175.10000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 189.19999998807907,
+            "duration": 296,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 189.19999998807907,
+            "duration": 298.2000000476837,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 189.19999998807907,
+            "duration": 298.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 189.19999998807907,
+            "duration": 299,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 189.19999998807907,
+            "duration": 304.9000000357628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 189.19999998807907,
+            "duration": 309.9000000357628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 189.19999998807907,
+            "duration": 317.10000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 189.4000000357628,
+            "duration": 132.89999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 189.4000000357628,
+            "duration": 133.0999999642372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 189.4000000357628,
+            "duration": 133.29999995231628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 189.4000000357628,
+            "duration": 141,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 189.4000000357628,
+            "duration": 174.5999999642372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 189.4000000357628,
+            "duration": 287.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 189.4000000357628,
+            "duration": 316.5999999642372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 189.5,
+            "duration": 135,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 189.5,
+            "duration": 156.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 189.5,
+            "duration": 197.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 189.60000002384186,
+            "duration": 135.0999999642372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 189.60000002384186,
+            "duration": 174.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 189.60000002384186,
+            "duration": 174.89999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 189.60000002384186,
+            "duration": 178.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 189.69999998807907,
+            "duration": 173.20000004768372,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 189.69999998807907,
+            "duration": 194.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 189.69999998807907,
+            "duration": 197.10000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 189.69999998807907,
+            "duration": 204.9000000357628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 397.19999998807907,
+            "duration": 144.80000001192093,
+            "transfer": 343,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "chromium",
+      "width": 390,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cc229a5de5f-ARN",
+          "serverTiming": "inzicht;dur=0.0",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1ccb5b36dc91-FRA",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 3318.899999976158,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 1339.5999999642372,
+            "duration": 1621.3999999761581,
+            "dns": 1,
+            "connect": 71,
+            "request": 1267.199999988079,
+            "body": 2.199999988079071,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 1343,
+            "duration": 117,
+            "transfer": 2165,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 1343.0999999642372,
+            "duration": 116.40000003576279,
+            "transfer": 2190,
+            "decoded": 5197,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 1343.0999999642372,
+            "duration": 263.9000000357628,
+            "transfer": 2213,
+            "decoded": 5233,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 1343.199999988079,
+            "duration": 241.5,
+            "transfer": 2214,
+            "decoded": 5235,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 1343.199999988079,
+            "duration": 261.5999999642372,
+            "transfer": 2218,
+            "decoded": 5238,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 1343.199999988079,
+            "duration": 263.89999997615814,
+            "transfer": 2208,
+            "decoded": 5237,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 1343.199999988079,
+            "duration": 264.89999997615814,
+            "transfer": 2213,
+            "decoded": 5234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 1343.2999999523163,
+            "duration": 80.20000004768372,
+            "transfer": 23408,
+            "decoded": 23108,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 1343.2999999523163,
+            "duration": 161.60000002384186,
+            "transfer": 29588,
+            "decoded": 29288,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 1343.2999999523163,
+            "duration": 263.7000000476837,
+            "transfer": 2006,
+            "decoded": 3408,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 1343.2999999523163,
+            "duration": 277.10000002384186,
+            "transfer": 12765,
+            "decoded": 19033,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 1343.7999999523163,
+            "duration": 80,
+            "transfer": 1124,
+            "decoded": 1969,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 1343.7999999523163,
+            "duration": 116.40000003576279,
+            "transfer": 5307,
+            "decoded": 12760,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 1343.8999999761581,
+            "duration": 95.60000002384186,
+            "transfer": 2130,
+            "decoded": 5133,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 1343.8999999761581,
+            "duration": 106.80000001192093,
+            "transfer": 6824,
+            "decoded": 19216,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 1343.8999999761581,
+            "duration": 107.10000002384186,
+            "transfer": 2639,
+            "decoded": 8025,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 1343.8999999761581,
+            "duration": 165.30000001192093,
+            "transfer": 91461,
+            "decoded": 500175,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 1343.8999999761581,
+            "duration": 260.69999998807907,
+            "transfer": 2157,
+            "decoded": 5159,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 1343.8999999761581,
+            "duration": 264.19999998807907,
+            "transfer": 2164,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 1344,
+            "duration": 95.69999998807907,
+            "transfer": 34647,
+            "decoded": 112265,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 1344,
+            "duration": 115.39999997615814,
+            "transfer": 740,
+            "decoded": 716,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 1344,
+            "duration": 115.79999995231628,
+            "transfer": 645,
+            "decoded": 496,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 1344,
+            "duration": 165.29999995231628,
+            "transfer": 61098,
+            "decoded": 190038,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 1344,
+            "duration": 166.39999997615814,
+            "transfer": 1961,
+            "decoded": 3795,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 1344,
+            "duration": 166.5,
+            "transfer": 48494,
+            "decoded": 153995,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 1344.0999999642372,
+            "duration": 94.90000003576279,
+            "transfer": 2621,
+            "decoded": 5888,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 1344.0999999642372,
+            "duration": 107.10000002384186,
+            "transfer": 5592,
+            "decoded": 13048,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 1344.199999988079,
+            "duration": 116.19999998807907,
+            "transfer": 27974,
+            "decoded": 121382,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 1344.199999988079,
+            "duration": 166.39999997615814,
+            "transfer": 26273,
+            "decoded": 89541,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 1540.5999999642372,
+            "duration": 1532.199999988079,
+            "transfer": 343,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "chromium",
+      "width": 390,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cd678b6dc91-FRA",
+          "serverTiming": "inzicht;dur=0.0\ncfExtPri",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1cd7c969dc91-FRA",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 288.5,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 109.89999997615814,
+            "duration": 246.10000002384186,
+            "dns": 0,
+            "connect": 0,
+            "request": 109.59999996423721,
+            "body": 2.100000023841858,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 113.69999998807907,
+            "duration": 64.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 113.69999998807907,
+            "duration": 76.80000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 113.69999998807907,
+            "duration": 122.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 113.69999998807907,
+            "duration": 128.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 113.69999998807907,
+            "duration": 130.4000000357628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 113.69999998807907,
+            "duration": 130.4000000357628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 113.69999998807907,
+            "duration": 130.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 113.69999998807907,
+            "duration": 132.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 113.80000001192093,
+            "duration": 49.59999996423721,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 113.80000001192093,
+            "duration": 52.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 113.80000001192093,
+            "duration": 128,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 114,
+            "duration": 51.60000002384186,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 114,
+            "duration": 51.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 114,
+            "duration": 52.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 114,
+            "duration": 74.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 114,
+            "duration": 79.39999997615814,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 114,
+            "duration": 81.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 114,
+            "duration": 87.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 114,
+            "duration": 122.30000001192093,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 114,
+            "duration": 130,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 114.10000002384186,
+            "duration": 37,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 114.10000002384186,
+            "duration": 49.19999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 114.10000002384186,
+            "duration": 51.69999998807907,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 114.10000002384186,
+            "duration": 64,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 114.10000002384186,
+            "duration": 70.79999995231628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 114.10000002384186,
+            "duration": 74.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 114.10000002384186,
+            "duration": 81.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 114.10000002384186,
+            "duration": 87.29999995231628,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 114.10000002384186,
+            "duration": 87.5,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 217,
+            "duration": 31.19999998807907,
+            "transfer": 343,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "webkit",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cdb1ce12d89-ARN",
+          "serverTiming": "inzicht;dur=0.0",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1ce96fc12d89-ARN",
+          "serverTiming": "inzicht;dur=0.0",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 2529,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 2114,
+            "duration": 2499,
+            "dns": 0,
+            "connect": 0,
+            "request": 2011,
+            "body": 2,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 2125,
+            "duration": 65,
+            "transfer": 1142,
+            "decoded": 1969,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 2125,
+            "duration": 108,
+            "transfer": 2208,
+            "decoded": 5197,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 2125,
+            "duration": 121,
+            "transfer": 2183,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 2125,
+            "duration": 145,
+            "transfer": 5281,
+            "decoded": 12760,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 2125,
+            "duration": 178,
+            "transfer": 29633,
+            "decoded": 29288,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 2125,
+            "duration": 178,
+            "transfer": 23444,
+            "decoded": 23108,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 2125,
+            "duration": 235,
+            "transfer": 2148,
+            "decoded": 5133,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 2125,
+            "duration": 341,
+            "transfer": 2232,
+            "decoded": 5235,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 2125,
+            "duration": 352,
+            "transfer": 2182,
+            "decoded": 5169,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 2125,
+            "duration": 359,
+            "transfer": 2226,
+            "decoded": 5237,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 2125,
+            "duration": 361,
+            "transfer": 2024,
+            "decoded": 3408,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 2125,
+            "duration": 366,
+            "transfer": 2175,
+            "decoded": 5159,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 2125,
+            "duration": 368,
+            "transfer": 2231,
+            "decoded": 5234,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 2125,
+            "duration": 369,
+            "transfer": 2236,
+            "decoded": 5238,
+            "serverTiming": []
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 2125,
+            "duration": 369,
+            "transfer": 13038,
+            "decoded": 19033,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 2125,
+            "duration": 372,
+            "transfer": 2231,
+            "decoded": 5233,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 2126,
+            "duration": 106,
+            "transfer": 91542,
+            "decoded": 500175,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 2126,
+            "duration": 107,
+            "transfer": 2657,
+            "decoded": 8025,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 2126,
+            "duration": 118,
+            "transfer": 34701,
+            "decoded": 112265,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 2126,
+            "duration": 177,
+            "transfer": 61188,
+            "decoded": 190038,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 2126,
+            "duration": 177,
+            "transfer": 758,
+            "decoded": 716,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 2126,
+            "duration": 177,
+            "transfer": 48503,
+            "decoded": 153995,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 2126,
+            "duration": 271,
+            "transfer": 6842,
+            "decoded": 19216,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 2283,
+            "duration": 53,
+            "transfer": 1979,
+            "decoded": 3795,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 2283,
+            "duration": 65,
+            "transfer": 28019,
+            "decoded": 121382,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 2283,
+            "duration": 74,
+            "transfer": 26318,
+            "decoded": 89541,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 2283,
+            "duration": 87,
+            "transfer": 2639,
+            "decoded": 5888,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 2283,
+            "duration": 97,
+            "transfer": 663,
+            "decoded": 496,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 2283,
+            "duration": 97,
+            "transfer": 5610,
+            "decoded": 13048,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 2397,
+            "duration": 79,
+            "transfer": 361,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "webkit",
+      "width": 1280,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cea48412d89-ARN",
+          "serverTiming": "inzicht;dur=0.0",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1ceb591e2d89-ARN",
+          "serverTiming": "inzicht;dur=0.0",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 239,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 76,
+            "duration": 163,
+            "dns": 0,
+            "connect": 0,
+            "request": 75,
+            "body": 2,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 80,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 81,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 81,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 81,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 81,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 81,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 81,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 82,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 82,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 82,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 82,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 82,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 83,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 83,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 83,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 83,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 83,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 84,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 84,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 84,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 84,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 84,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 84,
+            "duration": 52,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 84,
+            "duration": 56,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 85,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 85,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 85,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 85,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 85,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": []
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 173,
+            "duration": 40,
+            "transfer": 361,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "webkit",
+      "width": 390,
+      "repeat": 0,
+      "visit": "cold",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cece94737b3-ARN",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1ceeaa3a37b3-ARN",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 389,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 114,
+            "duration": 0,
+            "dns": 0,
+            "connect": 0,
+            "request": 73,
+            "body": 1,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 121,
+            "duration": 50,
+            "transfer": 29593,
+            "decoded": 29288,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 121,
+            "duration": 54,
+            "transfer": 2195,
+            "decoded": 5197,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 121,
+            "duration": 81,
+            "transfer": 1126,
+            "decoded": 1969,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 121,
+            "duration": 91,
+            "transfer": 5311,
+            "decoded": 12760,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 121,
+            "duration": 92,
+            "transfer": 2170,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 121,
+            "duration": 106,
+            "transfer": 23410,
+            "decoded": 23108,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 121,
+            "duration": 205,
+            "transfer": 2218,
+            "decoded": 5233,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 121,
+            "duration": 211,
+            "transfer": 2135,
+            "decoded": 5133,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 121,
+            "duration": 211,
+            "transfer": 2219,
+            "decoded": 5235,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 121,
+            "duration": 250,
+            "transfer": 2213,
+            "decoded": 5237,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 121,
+            "duration": 258,
+            "transfer": 2218,
+            "decoded": 5234,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 121,
+            "duration": 258,
+            "transfer": 2223,
+            "decoded": 5238,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 121,
+            "duration": 258,
+            "transfer": 2011,
+            "decoded": 3408,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 122,
+            "duration": 78,
+            "transfer": 34721,
+            "decoded": 112265,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 122,
+            "duration": 78,
+            "transfer": 745,
+            "decoded": 716,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 122,
+            "duration": 91,
+            "transfer": 2641,
+            "decoded": 8025,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 122,
+            "duration": 122,
+            "transfer": 48529,
+            "decoded": 153995,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 122,
+            "duration": 129,
+            "transfer": 61175,
+            "decoded": 190038,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 122,
+            "duration": 130,
+            "transfer": 91475,
+            "decoded": 500175,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 122,
+            "duration": 210,
+            "transfer": 6832,
+            "decoded": 19216,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 122,
+            "duration": 257,
+            "transfer": 2169,
+            "decoded": 5169,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 214,
+            "duration": 43,
+            "transfer": 2626,
+            "decoded": 5888,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 214,
+            "duration": 43,
+            "transfer": 1966,
+            "decoded": 3795,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 214,
+            "duration": 52,
+            "transfer": 650,
+            "decoded": 496,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 214,
+            "duration": 68,
+            "transfer": 26299,
+            "decoded": 89541,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 214,
+            "duration": 70,
+            "transfer": 28052,
+            "decoded": 121382,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 214,
+            "duration": 74,
+            "transfer": 5600,
+            "decoded": 13048,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 329,
+            "duration": 41,
+            "transfer": 347,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "staging",
+      "engine": "webkit",
+      "width": 390,
+      "repeat": 0,
+      "visit": "warm",
+      "responses": [
+        {
+          "path": "/inzicht",
+          "status": 200,
+          "ray": "a54e1cef1a6b37b3-ARN",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 401,
+          "ray": "a54e1cf00af237b3-ARN",
+          "serverTiming": "inzicht;dur=0.0, cfExtPri",
+          "cacheControl": "no-store, private"
+        }
+      ],
+      "readyMs": 216,
+      "timing": {
+        "navigation": [
+          {
+            "ttfb": 49,
+            "duration": 136,
+            "dns": 0,
+            "connect": 0,
+            "request": 48,
+            "body": 2,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "start": 53,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "start": 53,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "start": 53,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "start": 54,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "start": 54,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "start": 54,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "start": 54,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "start": 54,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "start": 54,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "start": 55,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "start": 55,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "start": 55,
+            "duration": 40,
+            "transfer": 13028,
+            "decoded": 19033,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "start": 56,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "start": 56,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "start": 56,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "start": 56,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "start": 56,
+            "duration": 44,
+            "transfer": 2162,
+            "decoded": 5159,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/index-Clym80Lv.js",
+            "start": 57,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "start": 57,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "start": 57,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/vinext-goB71S0s.js",
+            "start": 57,
+            "duration": 1,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/app.Bg6EnOkf.css",
+            "start": 57,
+            "duration": 43,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/css/index.xoC4gP0Q.css",
+            "start": 57,
+            "duration": 55,
+            "transfer": 300,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/layout-segment-context-CD1LkAa8.js",
+            "start": 58,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/script-D8URCW3j.js",
+            "start": 58,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/frame-Y097g_Ee.js",
+            "start": 58,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/createLucideIcon-DUaMU4oH.js",
+            "start": 58,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/compact-image-k_lovLFf.js",
+            "start": 58,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/_next/static/chunks/app-BHCyHG5W.js",
+            "start": 58,
+            "duration": 0,
+            "transfer": 0,
+            "decoded": 0,
+            "serverTiming": [
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          },
+          {
+            "path": "/api/inzicht/me",
+            "start": 147,
+            "duration": 38,
+            "transfer": 347,
+            "decoded": 43,
+            "serverTiming": [
+              {
+                "name": "inzicht",
+                "duration": 0
+              },
+              {
+                "name": "cfExtPri",
+                "duration": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

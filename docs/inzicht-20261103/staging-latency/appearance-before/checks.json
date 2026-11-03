@@ -1,0 +1,63 @@
+{
+  "base": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "before": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "anonymousAccountRequests": 1,
+      "existingCookieStillValidated": false
+    }
+  ],
+  "errors": []
+}

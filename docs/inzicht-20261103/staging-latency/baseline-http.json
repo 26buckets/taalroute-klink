@@ -1,0 +1,257 @@
+{
+  "proxyEnvironmentPresent": false,
+  "rows": [
+    {
+      "at": "2026-11-03T20:22:17Z",
+      "path": "/api/inzicht/me",
+      "iteration": 0,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.034348,
+      "time_connect": 0.066131,
+      "time_appconnect": 0.105739,
+      "time_starttransfer": 1.158654,
+      "time_total": 1.158816,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e170fd986d86c-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:22:19Z",
+      "path": "/inzicht",
+      "iteration": 0,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.001899,
+      "time_connect": 0.037027,
+      "time_appconnect": 0.081923,
+      "time_starttransfer": 1.898017,
+      "time_total": 1.900302,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e17170a97ecb4-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:22:39Z",
+      "path": "/favicon.ico",
+      "iteration": 0,
+      "exit": 28,
+      "http_code": 200,
+      "time_namelookup": 0.001778,
+      "time_connect": 0.097677,
+      "time_appconnect": 0.888335,
+      "time_starttransfer": 8.420133,
+      "time_total": 20.004895,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "image/vnd.microsoft.icon",
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e17283980902f-BOS"
+      }
+    },
+    {
+      "at": "2026-11-03T20:22:41Z",
+      "path": "/api/inzicht/me",
+      "iteration": 1,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.002209,
+      "time_connect": 0.027904,
+      "time_appconnect": 0.510455,
+      "time_starttransfer": 2.265456,
+      "time_total": 2.265733,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e17a2cdb5b14c-MAN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:22:42Z",
+      "path": "/inzicht",
+      "iteration": 1,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003,
+      "time_connect": 0.036162,
+      "time_appconnect": 0.080908,
+      "time_starttransfer": 1.127215,
+      "time_total": 1.127592,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e17ae6fcde9c1-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:02Z",
+      "path": "/favicon.ico",
+      "iteration": 1,
+      "exit": 28,
+      "http_code": 200,
+      "time_namelookup": 0.003003,
+      "time_connect": 0.099909,
+      "time_appconnect": 0.684401,
+      "time_starttransfer": 3.246298,
+      "time_total": 20.00419,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "image/vnd.microsoft.icon",
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e17c12df1a369-BOS"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:04Z",
+      "path": "/api/inzicht/me",
+      "iteration": 2,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003018,
+      "time_connect": 0.035881,
+      "time_appconnect": 0.075517,
+      "time_starttransfer": 1.905233,
+      "time_total": 1.905386,
+      "remote_ip": "104.21.43.214",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e1832b804eeb2-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:06Z",
+      "path": "/inzicht",
+      "iteration": 2,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.001658,
+      "time_connect": 0.096513,
+      "time_appconnect": 0.423848,
+      "time_starttransfer": 2.21989,
+      "time_total": 2.233679,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e18434f87f8c7-BOS"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:10Z",
+      "path": "/favicon.ico",
+      "iteration": 2,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.002554,
+      "time_connect": 1.098451,
+      "time_appconnect": 3.056793,
+      "time_starttransfer": 3.385682,
+      "time_total": 3.392208,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "image/vnd.microsoft.icon",
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e185f9d739047-BOS"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:10Z",
+      "path": "/api/inzicht/me",
+      "iteration": 3,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.002954,
+      "time_connect": 0.032221,
+      "time_appconnect": 0.072108,
+      "time_starttransfer": 0.118132,
+      "time_total": 0.11844,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e18621eca9e07-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:11Z",
+      "path": "/inzicht",
+      "iteration": 3,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.002866,
+      "time_connect": 0.032615,
+      "time_appconnect": 0.071384,
+      "time_starttransfer": 1.336108,
+      "time_total": 1.351745,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e1862ea4d7656-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:23:15Z",
+      "path": "/favicon.ico",
+      "iteration": 3,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003746,
+      "time_connect": 1.097414,
+      "time_appconnect": 2.769458,
+      "time_starttransfer": 4.135704,
+      "time_total": 4.138013,
+      "remote_ip": "172.67.185.232",
+      "http_version": "2",
+      "num_connects": 1,
+      "headers": {
+        "content-type": "image/vnd.microsoft.icon",
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e18812bc477e4-BOS"
+      }
+    }
+  ]
+}

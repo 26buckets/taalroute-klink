@@ -1,0 +1,146 @@
+{
+  "base": "https://inzicht-staging.taalroute.nl",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "login": true,
+      "mfa": true,
+      "reload": true,
+      "tenantIsolation": true,
+      "logout": true,
+      "timings": [
+        {
+          "path": "/api/inzicht/login",
+          "status": 200,
+          "responseMs": 3437.514,
+          "ray": "a54e3203fa010e40-AMS"
+        },
+        {
+          "path": "/api/inzicht/mfa",
+          "status": 200,
+          "responseMs": 237.019,
+          "ray": "a54e321c1d010e40-AMS"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 160.349,
+          "ray": "a54e321d9d260e40-AMS"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 150.35399999999998,
+          "ray": "a54e32201d8d0e40-AMS"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "login": true,
+      "mfa": true,
+      "reload": true,
+      "tenantIsolation": true,
+      "logout": true,
+      "timings": [
+        {
+          "path": "/api/inzicht/login",
+          "status": 200,
+          "responseMs": 876.358,
+          "ray": "a54e32465eae3663-FRA"
+        },
+        {
+          "path": "/api/inzicht/mfa",
+          "status": 200,
+          "responseMs": 239.149,
+          "ray": "a54e324e98413663-FRA"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 138.84199999999998,
+          "ray": "a54e325018773663-FRA"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 131.44,
+          "ray": "a54e325409643663-FRA"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "login": true,
+      "mfa": true,
+      "reload": true,
+      "tenantIsolation": true,
+      "logout": true,
+      "timings": [
+        {
+          "path": "/api/inzicht/login",
+          "status": 200,
+          "responseMs": 1015.381,
+          "ray": "a54e32751afc8c31-LHR"
+        },
+        {
+          "path": "/api/inzicht/mfa",
+          "status": 200,
+          "responseMs": 268.74199999999996,
+          "ray": "a54e3280dc548c31-LHR"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 155.978,
+          "ray": "a54e32828d8c8c31-LHR"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 164.158,
+          "ray": "a54e3284ff638c31-LHR"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "login": true,
+      "mfa": true,
+      "reload": true,
+      "tenantIsolation": true,
+      "logout": true,
+      "timings": [
+        {
+          "path": "/api/inzicht/login",
+          "status": 200,
+          "responseMs": 995.169,
+          "ray": "a54e328fbcbb37f5-FRA"
+        },
+        {
+          "path": "/api/inzicht/mfa",
+          "status": 200,
+          "responseMs": 291.746,
+          "ray": "a54e32980dc337f5-FRA"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 164.411,
+          "ray": "a54e3299ee1b37f5-FRA"
+        },
+        {
+          "path": "/api/inzicht/me",
+          "status": 200,
+          "responseMs": 188.68300000000002,
+          "ray": "a54e329f5ec937f5-FRA"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

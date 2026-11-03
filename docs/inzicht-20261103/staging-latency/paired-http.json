@@ -1,0 +1,689 @@
+{
+  "method": "Alternating host order, same deployed Worker version and client network; separate curl connections",
+  "rows": [
+    {
+      "at": "2026-11-03T20:31:54Z",
+      "name": "workers",
+      "path": "/api/inzicht/me",
+      "round": 0,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.001606,
+      "time_connect": 0.032982,
+      "time_appconnect": 0.071266,
+      "time_starttransfer": 1.08897,
+      "time_total": 1.089364,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25256b80dd2c-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:31:56Z",
+      "name": "custom",
+      "path": "/api/inzicht/me",
+      "round": 0,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003035,
+      "time_connect": 0.028119,
+      "time_appconnect": 0.069988,
+      "time_starttransfer": 2.577907,
+      "time_total": 2.578275,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e252c5ea79195-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:31:56Z",
+      "name": "workers",
+      "path": "/inzicht",
+      "round": 0,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003021,
+      "time_connect": 0.021685,
+      "time_appconnect": 0.051524,
+      "time_starttransfer": 0.132574,
+      "time_total": 0.137093,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e253c6d52dc58-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:31:58Z",
+      "name": "custom",
+      "path": "/inzicht",
+      "round": 0,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003552,
+      "time_connect": 0.035146,
+      "time_appconnect": 0.078099,
+      "time_starttransfer": 1.283719,
+      "time_total": 1.285966,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e253d98b4f2ea-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:31:58Z",
+      "name": "workers",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 0,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003307,
+      "time_connect": 0.040552,
+      "time_appconnect": 0.085129,
+      "time_starttransfer": 0.156304,
+      "time_total": 0.158473,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e2545dd06d599-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:31:58Z",
+      "name": "custom",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 0,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.001794,
+      "time_connect": 0.03341,
+      "time_appconnect": 0.073229,
+      "time_starttransfer": 0.143589,
+      "time_total": 0.145719,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e2546dad6f3bd-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:31:59Z",
+      "name": "custom",
+      "path": "/api/inzicht/me",
+      "round": 1,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.002141,
+      "time_connect": 0.02551,
+      "time_appconnect": 0.073476,
+      "time_starttransfer": 1.319346,
+      "time_total": 1.319678,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e2547cff4ff10-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:01Z",
+      "name": "workers",
+      "path": "/api/inzicht/me",
+      "round": 1,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.002849,
+      "time_connect": 0.023348,
+      "time_appconnect": 0.05294,
+      "time_starttransfer": 1.489147,
+      "time_total": 1.489469,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25500cd2e7b4-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:02Z",
+      "name": "custom",
+      "path": "/inzicht",
+      "round": 1,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003049,
+      "time_connect": 0.036338,
+      "time_appconnect": 0.082731,
+      "time_starttransfer": 1.429785,
+      "time_total": 1.432041,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e2559bc1bddf9-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:04Z",
+      "name": "workers",
+      "path": "/inzicht",
+      "round": 1,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.001797,
+      "time_connect": 0.019829,
+      "time_appconnect": 0.057433,
+      "time_starttransfer": 1.567372,
+      "time_total": 1.570652,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25628fc5d2f6-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:04Z",
+      "name": "custom",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 1,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003215,
+      "time_connect": 0.038734,
+      "time_appconnect": 0.084676,
+      "time_starttransfer": 0.152933,
+      "time_total": 0.155069,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e256caa2f8b20-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:04Z",
+      "name": "workers",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 1,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.002774,
+      "time_connect": 0.034282,
+      "time_appconnect": 0.074403,
+      "time_starttransfer": 0.139921,
+      "time_total": 0.142059,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e256dbceb4434-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:05Z",
+      "name": "workers",
+      "path": "/api/inzicht/me",
+      "round": 2,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003214,
+      "time_connect": 0.036986,
+      "time_appconnect": 0.088047,
+      "time_starttransfer": 1.133158,
+      "time_total": 1.133442,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e256ec909fa44-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:06Z",
+      "name": "custom",
+      "path": "/api/inzicht/me",
+      "round": 2,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003094,
+      "time_connect": 0.035754,
+      "time_appconnect": 0.074083,
+      "time_starttransfer": 1.092895,
+      "time_total": 1.093188,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e2575e9ea8687-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:10Z",
+      "name": "workers",
+      "path": "/inzicht",
+      "round": 2,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003091,
+      "time_connect": 0.02833,
+      "time_appconnect": 0.070421,
+      "time_starttransfer": 3.062448,
+      "time_total": 3.068673,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e257cebeaf829-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:10Z",
+      "name": "custom",
+      "path": "/inzicht",
+      "round": 2,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003175,
+      "time_connect": 0.035746,
+      "time_appconnect": 0.080954,
+      "time_starttransfer": 0.202639,
+      "time_total": 0.204935,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25904a734e58-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:10Z",
+      "name": "workers",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 2,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003046,
+      "time_connect": 0.038383,
+      "time_appconnect": 0.086169,
+      "time_starttransfer": 0.168754,
+      "time_total": 0.169162,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e2591bbc1a58e-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:10Z",
+      "name": "custom",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 2,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003194,
+      "time_connect": 0.030496,
+      "time_appconnect": 0.071719,
+      "time_starttransfer": 0.128874,
+      "time_total": 0.131149,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e2592cd7146ac-MAN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:12Z",
+      "name": "custom",
+      "path": "/api/inzicht/me",
+      "round": 3,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003584,
+      "time_connect": 0.02419,
+      "time_appconnect": 0.059409,
+      "time_starttransfer": 1.387786,
+      "time_total": 1.388014,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e2593ad2fd344-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:14Z",
+      "name": "workers",
+      "path": "/api/inzicht/me",
+      "round": 3,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003032,
+      "time_connect": 0.026071,
+      "time_appconnect": 0.05899,
+      "time_starttransfer": 2.593491,
+      "time_total": 2.593847,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e259c69903804-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:14Z",
+      "name": "custom",
+      "path": "/inzicht",
+      "round": 3,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003337,
+      "time_connect": 0.035659,
+      "time_appconnect": 0.076437,
+      "time_starttransfer": 0.204959,
+      "time_total": 0.207226,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25acea33be94-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:16Z",
+      "name": "workers",
+      "path": "/inzicht",
+      "round": 3,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003085,
+      "time_connect": 0.033766,
+      "time_appconnect": 0.077525,
+      "time_starttransfer": 1.26938,
+      "time_total": 1.271594,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25ae5d18ab70-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:16Z",
+      "name": "custom",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 3,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003081,
+      "time_connect": 0.025967,
+      "time_appconnect": 0.066846,
+      "time_starttransfer": 0.157049,
+      "time_total": 0.157513,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e25b64bb2e4f5-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:16Z",
+      "name": "workers",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 3,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003332,
+      "time_connect": 0.034241,
+      "time_appconnect": 0.087344,
+      "time_starttransfer": 0.156907,
+      "time_total": 0.157131,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e25b79c5e70d8-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:16Z",
+      "name": "workers",
+      "path": "/api/inzicht/me",
+      "round": 4,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.001921,
+      "time_connect": 0.043864,
+      "time_appconnect": 0.095563,
+      "time_starttransfer": 0.277807,
+      "time_total": 0.278186,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25b8cee4b615-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:17Z",
+      "name": "custom",
+      "path": "/api/inzicht/me",
+      "round": 4,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.003265,
+      "time_connect": 0.044431,
+      "time_appconnect": 0.097996,
+      "time_starttransfer": 0.1524,
+      "time_total": 0.152744,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25ba9be3bdce-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:17Z",
+      "name": "workers",
+      "path": "/inzicht",
+      "round": 4,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003068,
+      "time_connect": 0.025162,
+      "time_appconnect": 0.07013,
+      "time_starttransfer": 0.19174,
+      "time_total": 0.194009,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25bb79ad8edc-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:17Z",
+      "name": "custom",
+      "path": "/inzicht",
+      "round": 4,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.002745,
+      "time_connect": 0.022359,
+      "time_appconnect": 0.059884,
+      "time_starttransfer": 0.171214,
+      "time_total": 0.173494,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25bcbb975d5f-FRA"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:17Z",
+      "name": "workers",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 4,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.002809,
+      "time_connect": 0.034543,
+      "time_appconnect": 0.074477,
+      "time_starttransfer": 0.131646,
+      "time_total": 0.133854,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e25be18f801ee-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:17Z",
+      "name": "custom",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 4,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003257,
+      "time_connect": 0.036906,
+      "time_appconnect": 0.07569,
+      "time_starttransfer": 0.135049,
+      "time_total": 0.135502,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e25bf0cc74435-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:20Z",
+      "name": "custom",
+      "path": "/api/inzicht/me",
+      "round": 5,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.002732,
+      "time_connect": 0.035,
+      "time_appconnect": 0.081995,
+      "time_starttransfer": 2.263647,
+      "time_total": 2.263971,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25c009420a33-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:20Z",
+      "name": "workers",
+      "path": "/api/inzicht/me",
+      "round": 5,
+      "exit": 0,
+      "http_code": 401,
+      "time_namelookup": 0.002832,
+      "time_connect": 0.03312,
+      "time_appconnect": 0.077891,
+      "time_starttransfer": 0.150034,
+      "time_total": 0.150386,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25ce4b3970d9-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:20Z",
+      "name": "custom",
+      "path": "/inzicht",
+      "round": 5,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.003141,
+      "time_connect": 0.044168,
+      "time_appconnect": 0.103055,
+      "time_starttransfer": 0.193012,
+      "time_total": 0.200201,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25cf9b57e13c-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:20Z",
+      "name": "workers",
+      "path": "/inzicht",
+      "round": 5,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.001574,
+      "time_connect": 0.038665,
+      "time_appconnect": 0.098482,
+      "time_starttransfer": 0.230783,
+      "time_total": 0.234062,
+      "http_version": "2",
+      "headers": {
+        "cache-control": "no-store, private",
+        "server-timing": "inzicht;dur=0.0",
+        "cf-ray": "a54e25d0cb4ade54-ARN"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:20Z",
+      "name": "custom",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 5,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.0019,
+      "time_connect": 0.03899,
+      "time_appconnect": 0.088089,
+      "time_starttransfer": 0.178713,
+      "time_total": 0.180938,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e25d248054c6b-WAW"
+      }
+    },
+    {
+      "at": "2026-11-03T20:32:20Z",
+      "name": "workers",
+      "path": "/taalroute-menu/klink-brand.svg",
+      "round": 5,
+      "exit": 0,
+      "http_code": 200,
+      "time_namelookup": 0.001951,
+      "time_connect": 0.037276,
+      "time_appconnect": 0.080275,
+      "time_starttransfer": 0.140792,
+      "time_total": 0.14099,
+      "http_version": "2",
+      "headers": {
+        "cf-cache-status": "HIT",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54e25d37a6ed42a-ARN"
+      }
+    }
+  ]
+}

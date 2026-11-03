@@ -40,6 +40,13 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           document.documentElement.classList.toggle('dark', theme === 'dark');
           await document.fonts.ready;
         }, theme);
+        await page.evaluate(async () => {
+          await Promise.all(
+            [...document.images]
+              .filter((img) => img.getBoundingClientRect().width > 0)
+              .map((img) => img.decode()),
+          );
+        });
         await page.waitForTimeout(200);
         assert.equal(reads, before ? 1 : 0);
         await page.screenshot({
@@ -57,19 +64,23 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
               sameSite: 'Strict',
             },
           ]);
-          let release, started;
+          let release;
           const held = new Promise((resolve) => {
             release = resolve;
           });
-          const requested = new Promise((resolve) => {
-            started = resolve;
-          });
-          await page.route('**/api/inzicht/me', async (route) => {
-            started();
-            await held;
-            await route.continue();
-          });
+          await page.route(
+            (url) => url.pathname === '/api/inzicht/me',
+            async (route) => {
+              await held;
+              await route.continue();
+            },
+          );
           try {
+            const requested = page.waitForRequest(
+              (request) =>
+                new URL(request.url()).pathname === '/api/inzicht/me',
+              { timeout: 20000 },
+            );
             await page.reload({ waitUntil: 'domcontentloaded' });
             await requested;
             assert.equal(

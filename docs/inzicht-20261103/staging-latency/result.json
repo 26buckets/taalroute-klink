@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-03",
+  "status": "anonymous-start-fixed; intermittent-transport-latency-still-open",
+  "baselinePrHead": "ef71a3784e5b46671ca440911aa821d3683e044f",
+  "baselineWorker": "bcaaafd9-07b9-475e-afe2-5cdd9217edfa",
+  "domainComparisonSource": "c03b4b0f",
+  "domainComparisonWorker": "4a3e1611-1b37-477f-b32a-6cd5ce98cacf",
+  "runtimeSourceCommit": "133791bc85b44e82795d6a5923edcc1b5e4c5675",
+  "workerVersion": "8c071c15-1aab-4afe-87ba-8cb1b3d97d1a",
+  "stagingUrl": "https://inzicht-staging.taalroute.nl/inzicht",
+  "existingUrl": "https://klink-inzicht-pr8-staging.nico-554.workers.dev/inzicht",
+  "databaseId": "95f1de18-0c61-46ca-b2af-5ee36543f67f",
+  "jurisdiction": "eu",
+  "schemaVersion": 7,
+  "migrationsRun": false,
+  "productionChanged": false,
+  "secondIndependentNetworkTested": false,
+  "physicalDevicesTested": false,
+  "anonymousMeRequestsBefore": 1,
+  "anonymousMeRequestsAfter": 0,
+  "comparison": [
+    {
+      "host": "workers",
+      "visit": "cold",
+      "nEach": 8,
+      "beforeMedianMs": 3094,
+      "afterMedianMs": 549,
+      "beforeMaxMs": 4744,
+      "afterMaxMs": 4246,
+      "medianReductionPercent": 82
+    },
+    {
+      "host": "workers",
+      "visit": "warm",
+      "nEach": 8,
+      "beforeMedianMs": 316,
+      "afterMedianMs": 160,
+      "beforeMaxMs": 588,
+      "afterMaxMs": 1806,
+      "medianReductionPercent": 49
+    },
+    {
+      "host": "custom",
+      "visit": "cold",
+      "nEach": 8,
+      "beforeMedianMs": 1679,
+      "afterMedianMs": 442,
+      "beforeMaxMs": 3074,
+      "afterMaxMs": 2124,
+      "medianReductionPercent": 74
+    },
+    {
+      "host": "custom",
+      "visit": "warm",
+      "nEach": 8,
+      "beforeMedianMs": 286,
+      "afterMedianMs": 161,
+      "beforeMaxMs": 1559,
+      "afterMaxMs": 310,
+      "medianReductionPercent": 44
+    }
+  ],
+  "readiness": "Password input visible and React submit handler ready; not a measurement of every optional image or every protected screen. Baseline form only appears after the account effect, so it is already hydrated. After additionally awaits installed React form handler.",
+  "limitations": [
+    "Small samples, eight observations per host/visit; median and maximum are descriptive, not an SLA.",
+    "Same Mac and network; alternate-domain comparison does not isolate the cause of routing/transport spikes.",
+    "One initial domain activation browser attempt timed out; comparison was restarted after endpoint verified.",
+    "A preliminary after-run overlapped other browser tests and was discarded; only browser-after-isolated is used.",
+    "One visual capture preceded logo decode; final screenshots await visible images and all eight pairs are pixel-identical."
+  ],
+  "checks": {
+    "unitSecurity": 28,
+    "serverPageBoundaryCases": 4,
+    "anonymousAndExistingCookieBrowserCases": 8,
+    "pixelIdenticalPairs": 8,
+    "nativeMfaJourneys": 4,
+    "delayedAccountRecoveryBrowsers": 2,
+    "types": true,
+    "lint": true,
+    "stagingBuild": true,
+    "normalAppBuild": true
+  },
+  "open": [
+    "Independent second-network measurement",
+    "Exact cause and elimination of remaining intermittent connection latency",
+    "No release of withheld PR10 or production Inzicht integration"
+  ]
+}
