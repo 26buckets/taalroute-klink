@@ -1,3 +1,4 @@
+import {verifyOpeningLoaderOnceRelease,readBeforeOpeningLoaderOnce} from './check-opening-loader-once-release-20261103.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -7,15 +8,16 @@ const root='docs/klink10-handwriting-help-ac-20261103/';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifyHandwritingHelpContent(read=readFileSync){
+ const successor=verifyOpeningLoaderOnceRelease(read),currentRead=read;read=file=>readBeforeOpeningLoaderOnce(file,successor,currentRead);
  const json=p=>JSON.parse(read(p)),r=json('docs/klink-owner-release-handwriting-help-ac-20261103.json'),m=json(root+'manifest.json'),old=p=>git('show',r.baselineSourceCommit+':'+p);
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearancePreserved&&r.progressPreserved);
  assert.equal(r.standingPolicySha256,sha(read('docs/klink-invullen-20261101/automatic-owner-approval.json')));
  assert.equal(r.baselineSourceCommit,m.baseMain);assert.equal(r.liveSourceCommit,json(root+'baseline-live-release.json').sourceCommit);
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
  assert.deepEqual(changed.filter(p=>!p.startsWith('scripts/')),['components/product/package-exercise-browser.tsx','data/klink-handwriting-help-20261103.json']);
- assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','public','app','lib','hooks','.github','wrangler.jsonc','package.json','package-lock.json').length,0);
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','public','app','lib','hooks','.github','wrangler.jsonc','package.json','package-lock.json').length,0);
  const path='components/product/package-exercise-browser.tsx',before=old(path).toString(),after=read(path).toString(),withoutHelp=s=>s.replace(/^import handwritingHints.*\n/m,'').replace(/function HandwritingSurface\([\s\S]*?(?=\nfunction )/,'');
  assert.equal(withoutHelp(after),withoutHelp(before),'Only HandwritingSurface and its bound data import may change');
  const hints=json('data/klink-handwriting-help-20261103.json'),source=json(root+'selected-source.json');assert.equal(hints.length,10);assert.deepEqual(hints.map(x=>x.sourceId),m.sourceIds);
@@ -26,11 +28,11 @@ export function verifyHandwritingHelpContent(read=readFileSync){
  const v=json(root+'verification.json');assert(v.typesPassed&&v.lintPassed&&v.normalBuildPassed);assert.equal(v.tests,8);assert(!v.humanNt2ReviewPerformed&&!v.humanListeningPerformed&&!v.physicalPhoneOrPenTested);
  const c=json(root+'capacity-review.json'),assets=json(root+'offered-build-assets.json');assert.equal(sha(read(root+'offered-build-assets.json')),c.manifestSha256);assert.equal(assets.count,assets.paths.length);assert.equal(assets.count,20000);assert(assets.paths.every(x=>x.bytes<=25*1024*1024));assert(c.noBudgetLimitOrConfigurationChange&&c.noNewPublicSourceFiles);assert.equal(c.previousOrdinaryDeployDemonstratedOfferedCount,20000);
  assert.deepEqual(hints.map(h=>h.listeningHintUnits.map(start=>h.listeningHint.slice(start).match(/^[a-z]+/)[0])),[['a'],['s','k'],[],[],[],['ee'],['oo'],['uu'],['z'],['oo']]);
- return r;
+ return {...r,successor};
 }
 export function verifyHandwritingHelpRelease(read=readFileSync){
  const r=verifyHandwritingHelpContent(read),json=p=>JSON.parse(read(p));
  const backup=json(root+'gate-backup.json');assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
  return r;
 }
-export function readBeforeHandwritingHelp(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeHandwritingHelp(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeOpeningLoaderOnce(file,r.successor,read);}
