@@ -1,0 +1,572 @@
+{
+  "id": "production:functional-form:alfa-c:KSW-AC-VGI-015-020",
+  "title": "Vul gegevens in · 3",
+  "level": "alfa-c",
+  "help": "practice",
+  "exercises": [
+    {
+      "exerciseId": "KSW-AC-VGI-015",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-015",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "sourceCard": {
+        "text": "MELDING BUITEN\nStraat: Lindeweg\nHuisnummer: 24\nProbleem: lamp kapot\nDatum: 13-06-2027"
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-015-F1",
+          "label": "Straat",
+          "acceptedAnswers": [
+            "Lindeweg"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "24"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Straat' hoort 'Lindeweg'.",
+            "retry": "Kijk nog eens naar 'Straat' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-015-F2",
+          "label": "Huisnummer",
+          "acceptedAnswers": [
+            "24"
+          ],
+          "normalization": "exact",
+          "wrongExamples": [
+            "Lindeweg"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Huisnummer' hoort '24'.",
+            "retry": "Kijk nog eens naar 'Huisnummer' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-015-F3",
+          "label": "Probleem",
+          "acceptedAnswers": [
+            "lamp kapot"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Lindeweg"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Probleem' hoort 'lamp kapot'.",
+            "retry": "Kijk nog eens naar 'Probleem' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-015-F4",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "13-06-2027"
+          ],
+          "normalization": "date",
+          "wrongExamples": [
+            "24"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Datum' hoort '13-06-2027'.",
+            "retry": "Kijk nog eens naar 'Datum' in de bronkaart."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-016",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-016",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "sourceCard": {
+        "text": "BERICHT\nHallo Eva,\nJe bent ingeschreven voor groep Spreken 2.\nJe komt op 20-06-2027 om 15:00 naar Buurthuis Oost."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-016-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Eva"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Spreken 2"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Naam' hoort 'Eva'.",
+            "retry": "Kijk nog eens naar 'Naam' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-016-F2",
+          "label": "Groep",
+          "acceptedAnswers": [
+            "Spreken 2"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Buurthuis Oost"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Groep' hoort 'Spreken 2'.",
+            "retry": "Kijk nog eens naar 'Groep' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-016-F3",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "20-06-2027"
+          ],
+          "normalization": "date",
+          "wrongExamples": [
+            "15:00"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Datum' hoort '20-06-2027'.",
+            "retry": "Kijk nog eens naar 'Datum' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-016-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "15:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "20-06-2027"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Tijd' hoort '15:00'.",
+            "retry": "Kijk nog eens naar 'Tijd' in de bronkaart."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-017",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-017",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "sourceCard": {
+        "text": "BERICHT\nHallo Lina,\nJe boek De lange weg ligt klaar.\nJe kunt het ophalen op 23-06-2027 om 14:00."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-017-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Lina"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "De lange weg"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Naam' hoort 'Lina'.",
+            "retry": "Kijk nog eens naar 'Naam' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-017-F2",
+          "label": "Titel",
+          "acceptedAnswers": [
+            "De lange weg"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Lina"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Titel' hoort 'De lange weg'.",
+            "retry": "Kijk nog eens naar 'Titel' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-017-F3",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "23-06-2027"
+          ],
+          "normalization": "date",
+          "wrongExamples": [
+            "14:00"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Datum' hoort '23-06-2027'.",
+            "retry": "Kijk nog eens naar 'Datum' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-017-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "14:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "23-06-2027"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Tijd' hoort '14:00'.",
+            "retry": "Kijk nog eens naar 'Tijd' in de bronkaart."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-018",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-018",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "sourceCard": {
+        "text": "WERKROOSTER\nYara werkt op 25-06-2027 van 07:30 tot 12:00.\nOmar werkt op 26-06-2027 van 08:00 tot 13:00."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-018-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Yara"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Omar"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Naam' hoort 'Yara'.",
+            "retry": "Kijk nog eens naar 'Naam' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-018-F2",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "25-06-2027"
+          ],
+          "normalization": "date",
+          "wrongExamples": [
+            "26-06-2027"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Datum' hoort '25-06-2027'.",
+            "retry": "Kijk nog eens naar 'Datum' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-018-F3",
+          "label": "Begint om",
+          "acceptedAnswers": [
+            "07:30"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "08:00"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Begint om' hoort '07:30'.",
+            "retry": "Kijk nog eens naar 'Begint om' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-018-F4",
+          "label": "Klaar om",
+          "acceptedAnswers": [
+            "12:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "13:00"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Klaar om' hoort '12:00'.",
+            "retry": "Kijk nog eens naar 'Klaar om' in de bronkaart."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-019",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-019",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "sourceCard": {
+        "text": "BERICHT\nSara is aangemeld voor groep 2.\nDe activiteit is op 02-07-2027 om 13:00 bij Buurthuis Zon."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-019-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Sara"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Buurthuis Zon"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Naam' hoort 'Sara'.",
+            "retry": "Kijk nog eens naar 'Naam' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-019-F2",
+          "label": "Groep",
+          "acceptedAnswers": [
+            "2"
+          ],
+          "normalization": "exact",
+          "wrongExamples": [
+            "13:00"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Groep' hoort '2'.",
+            "retry": "Kijk nog eens naar 'Groep' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-019-F3",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "02-07-2027"
+          ],
+          "normalization": "date",
+          "wrongExamples": [
+            "13:00"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Datum' hoort '02-07-2027'.",
+            "retry": "Kijk nog eens naar 'Datum' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-019-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "13:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "02-07-2027"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Tijd' hoort '13:00'.",
+            "retry": "Kijk nog eens naar 'Tijd' in de bronkaart."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-020",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-020",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "sourceCard": {
+        "text": "BERICHT\nHallo Karim,\nJe afspraak was op 12-07-2027 om 09:30.\nDe nieuwe afspraak is op 13-07-2027 om 10:00.\nJe zit in groep Alfa C4."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-020-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Karim"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Alfa C4"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Naam' hoort 'Karim'.",
+            "retry": "Kijk nog eens naar 'Naam' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-020-F2",
+          "label": "Groep",
+          "acceptedAnswers": [
+            "Alfa C4"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Karim"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Groep' hoort 'Alfa C4'.",
+            "retry": "Kijk nog eens naar 'Groep' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-020-F3",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "13-07-2027"
+          ],
+          "normalization": "date",
+          "wrongExamples": [
+            "12-07-2027"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Datum' hoort '13-07-2027'.",
+            "retry": "Kijk nog eens naar 'Datum' in de bronkaart."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-020-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "10:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "09:30"
+          ],
+          "feedback": {
+            "correct": "Goed! Bij 'Tijd' hoort '10:00'.",
+            "retry": "Kijk nog eens naar 'Tijd' in de bronkaart."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    }
+  ]
+}

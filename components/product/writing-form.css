@@ -1,0 +1,18 @@
+.product-root .learner-app.consistent-layout .learner-main .cp-exercise-stage .cp-task-card[data-writing-form-source] {
+display: grid;
+grid-template-columns: minmax(0, 1fr);
+align-content: start;
+align-items: stretch;
+height: auto;
+max-height: none;
+margin-block: 0;
+}
+.product-root .learner-app.consistent-layout .learner-main .cp-exercise-stage .cp-task-card[data-writing-form-source] > * {
+grid-column: 1;
+grid-row: auto;
+}
+.cp-task-card[data-writing-form-source] .cp-form-fields label {
+font-size: 20px;
+font-weight: 400;
+line-height: 1.4;
+}

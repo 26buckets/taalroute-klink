@@ -1,0 +1,572 @@
+{
+  "id": "production:functional-form:alfa-c:KSW-AC-VGI-055-060",
+  "title": "Vul gegevens in · 9",
+  "level": "alfa-c",
+  "help": "practice",
+  "exercises": [
+    {
+      "exerciseId": "KSW-AC-VGI-055",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-055",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Vul de gegevens van de bon in.",
+      "sourceCard": {
+        "text": "WINKELBON\nProduct: jas\nDatum: 25-08-2027\nPrijs: € 29,95\nBonnummer: 0057"
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-055-F1",
+          "label": "Product",
+          "acceptedAnswers": [
+            "jas"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "25-08-2027"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Product hoort jas.",
+            "retry": "Kijk in de bron naar product."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-055-F2",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "25-08-2027"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "€ 29,95"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Datum hoort 25-08-2027.",
+            "retry": "Kijk in de bron naar datum."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-055-F3",
+          "label": "Prijs",
+          "acceptedAnswers": [
+            "€ 29,95"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "0057"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Prijs hoort € 29,95.",
+            "retry": "Kijk in de bron naar prijs."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-055-F4",
+          "label": "Bonnummer",
+          "acceptedAnswers": [
+            "0057"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "jas"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Bonnummer hoort 0057.",
+            "retry": "Kijk in de bron naar bonnummer."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-056",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-056",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees het bericht. Gebruik de nieuwe tijd.",
+      "sourceCard": {
+        "text": "BERICHT\nHoi Laila, je zit in groep Schrijven 2.\nDe les is op woensdag. Eerst begon de les om 09:00.\nVanaf nu begint de les om 10:00."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-056-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Laila"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "Schrijven 2"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Naam hoort Laila.",
+            "retry": "Kijk in de bron naar naam."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-056-F2",
+          "label": "Groep",
+          "acceptedAnswers": [
+            "Schrijven 2"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "woensdag"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Groep hoort Schrijven 2.",
+            "retry": "Kijk in de bron naar groep."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-056-F3",
+          "label": "Dag",
+          "acceptedAnswers": [
+            "woensdag"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "10:00"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Dag hoort woensdag.",
+            "retry": "Kijk in de bron naar dag."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-056-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "10:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "Laila"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Tijd hoort 10:00.",
+            "retry": "Kijk in de bron naar tijd."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-057",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-057",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees het bericht. Vul de nieuwe kamer in.",
+      "sourceCard": {
+        "text": "BERICHT\nHallo Bram, je afspraak is op 27-08-2027 om 11:00.\nEerst moest je naar kamer 3. Je kunt nu naar kamer 8."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-057-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Bram"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "27-08-2027"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Naam hoort Bram.",
+            "retry": "Kijk in de bron naar naam."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-057-F2",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "27-08-2027"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "11:00"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Datum hoort 27-08-2027.",
+            "retry": "Kijk in de bron naar datum."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-057-F3",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "11:00"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "8"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Tijd hoort 11:00.",
+            "retry": "Kijk in de bron naar tijd."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-057-F4",
+          "label": "Kamer",
+          "acceptedAnswers": [
+            "8"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "Bram"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Kamer hoort 8.",
+            "retry": "Kijk in de bron naar kamer."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-058",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-058",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees het bericht. Vul de gegevens van de nieuwe afspraak in.",
+      "sourceCard": {
+        "text": "BERICHT\nHallo Farida, je afspraak bij dokter Hart was op 30-08-2027 om 14:00.\nDe nieuwe afspraak is op 31-08-2027 om 14:30."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-058-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Farida"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "dokter Hart"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Naam hoort Farida.",
+            "retry": "Kijk in de bron naar naam."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-058-F2",
+          "label": "Dokter",
+          "acceptedAnswers": [
+            "dokter Hart"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "31-08-2027"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Dokter hoort dokter Hart.",
+            "retry": "Kijk in de bron naar dokter."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-058-F3",
+          "label": "Datum",
+          "acceptedAnswers": [
+            "31-08-2027"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "14:30"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Datum hoort 31-08-2027.",
+            "retry": "Kijk in de bron naar datum."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-058-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "14:30"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "Farida"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Tijd hoort 14:30.",
+            "retry": "Kijk in de bron naar tijd."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-059",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-059",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Gebruik alleen de gegevens van Samira.",
+      "sourceCard": {
+        "text": "DEELNEMERS\nSamira: groep A2-1, maandag om 09:30.\nBoris: groep A2-2, dinsdag om 10:30."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-059-F1",
+          "label": "Naam",
+          "acceptedAnswers": [
+            "Samira"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "A2-1"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Naam hoort Samira.",
+            "retry": "Kijk in de bron naar naam."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-059-F2",
+          "label": "Groep",
+          "acceptedAnswers": [
+            "A2-1"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "maandag"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Groep hoort A2-1.",
+            "retry": "Kijk in de bron naar groep."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-059-F3",
+          "label": "Dag",
+          "acceptedAnswers": [
+            "maandag"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "09:30"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Dag hoort maandag.",
+            "retry": "Kijk in de bron naar dag."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-059-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "09:30"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "Samira"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Tijd hoort 09:30.",
+            "retry": "Kijk in de bron naar tijd."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    },
+    {
+      "exerciseId": "KSW-AC-VGI-060",
+      "componentId": "ALF-CMP-011",
+      "contractVersion": "1.0",
+      "mode": "functional-form",
+      "groupActivity": "functional-form",
+      "writingSourceId": "KSW-AC-VGI-060",
+      "sourceForm": true,
+      "sourceStatus": "standing-owner-approval",
+      "sourceWordId": null,
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "access": "self-practice",
+      "title": "Lees het bericht en gebruik de nieuwe tijd en het nieuwe spoor.",
+      "sourceCard": {
+        "text": "REISBERICHT\nTrein: Sprinter\nVertrek: Rotterdam\nEerst spoor 5 om 12:20.\nNu spoor 2 om 12:35."
+      },
+      "fields": [
+        {
+          "id": "KSW-AC-VGI-060-F1",
+          "label": "Trein",
+          "acceptedAnswers": [
+            "Sprinter"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "Rotterdam"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Trein hoort Sprinter.",
+            "retry": "Kijk in de bron naar trein."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-060-F2",
+          "label": "Vertrek",
+          "acceptedAnswers": [
+            "Rotterdam"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "2"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Vertrek hoort Rotterdam.",
+            "retry": "Kijk in de bron naar vertrek."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-060-F3",
+          "label": "Spoor",
+          "acceptedAnswers": [
+            "2"
+          ],
+          "normalization": "case",
+          "wrongExamples": [
+            "12:35"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Spoor hoort 2.",
+            "retry": "Kijk in de bron naar spoor."
+          }
+        },
+        {
+          "id": "KSW-AC-VGI-060-F4",
+          "label": "Tijd",
+          "acceptedAnswers": [
+            "12:35"
+          ],
+          "normalization": "time",
+          "wrongExamples": [
+            "Sprinter"
+          ],
+          "feedback": {
+            "correct": "Goed. Bij Tijd hoort 12:35.",
+            "retry": "Kijk in de bron naar tijd."
+          }
+        }
+      ],
+      "objective": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "assessment": "participation",
+      "independentReading": false,
+      "reviewEligible": false,
+      "requiresAudio": false,
+      "requiresExplicitCompletion": true,
+      "manualAdvance": true,
+      "instructionAudio": {
+        "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav"
+      },
+      "feedback": "Vergelijk dit veld met de kaart. Bespreek een andere schrijfwijze zo nodig met je docent.",
+      "correctFeedback": "Je hebt de gegevens ingevuld. Bespreek de velden zo nodig met je docent."
+    }
+  ]
+}

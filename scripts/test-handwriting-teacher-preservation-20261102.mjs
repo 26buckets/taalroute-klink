@@ -2,7 +2,7 @@ import assert from'node:assert/strict';
 import{mkdirSync,writeFileSync}from'node:fs';
 import{chromium,webkit}from'playwright';
 const folder='docs/handwriting-20261102/',candidate=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19031',baseline='https://klink.taalroute.nl',out=process.env.KLINK_TEST_OUTPUT||folder+'local';mkdirSync(out+'/teacher-preservation',{recursive:true});
-const before=await(await fetch(baseline+'/release.json')).json();assert.equal(before.sourceCommit,'c67c6f73518626c212adacf7e3a672856c697f84');const checks=[],errors=[];
+const before=await(await fetch(baseline+'/release.json')).json();assert.equal(before.sourceCommit,process.env.KLINK_TEST_BASELINE_COMMIT||'c67c6f73518626c212adacf7e3a672856c697f84');const checks=[],errors=[];
 try{for(const[engine,type]of Object.entries({chromium,webkit})){
  const browser=await type.launch({headless:true,...(engine==='chromium'?{channel:'chrome'}:{})});
  try{for(const width of[1280,390,320])for(const theme of['light','dark']){

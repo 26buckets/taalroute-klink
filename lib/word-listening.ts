@@ -24,7 +24,8 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
   const body = await response.arrayBuffer();
   const bytes = response.status === 200 ? body.slice(offset, end + 1) : body;
   if (bytes.byteLength !== length || body.byteLength > 4 * 1024 * 1024) throw new Error('Incomplete word recording');
-  const header = new Uint8Array(bytes, 0, 3);
-  if (header[0] !== 73 || header[1] !== 68 || header[2] !== 51) throw new Error('Invalid word audio');
-  return new Blob([bytes], { type: 'audio/mpeg' });
+  const header = new Uint8Array(bytes, 0, Math.min(12, bytes.byteLength));
+  if (header[0] === 73 && header[1] === 68 && header[2] === 51) return new Blob([bytes], { type: 'audio/mpeg' });
+  if (header[0] === 82 && header[1] === 73 && header[2] === 70 && header[3] === 70 && header[8] === 87 && header[9] === 65 && header[10] === 86 && header[11] === 69) return new Blob([bytes], { type: 'audio/wav' });
+  throw new Error('Invalid word audio');
 }

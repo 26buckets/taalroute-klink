@@ -1,0 +1,159 @@
+{
+  "designBasisDriveId": "1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz",
+  "internalObservationFrameworkSource": "/Users/nicoknoester/Documents/Codex/2026-10-15/ta/work/lexicon/docs/fundament-lesbezoek-20261017/bronnen/lessonVisitChecklistSeed.ts",
+  "frameworkSha256": "39c3a9d15af745fe7f342b42f92505963a317ecb6317600f3e22df9ad176f65b",
+  "referenceChecklistDriveId": "159x2piXWCvP0e17niB7Phs3hyld9_YMC",
+  "existingTeacherGuide": "docs/KLINK-DOCENTHANDLEIDING.md:391",
+  "learningGoalId": "formulier",
+  "learnerGoal": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+  "candidateActivitiesByLevel": {
+    "alfa-a": {
+      "sourceId": "KSW-AA-VG-001",
+      "instruction": "Typ de dag.",
+      "fields": [
+        "DAG"
+      ],
+      "support": "docent begeleidt bronkaart en invoer"
+    },
+    "alfa-b": {
+      "sourceId": "KSW-AB-VG-011",
+      "instruction": "Kijk naar de kaart. Vul de vakken in.",
+      "fields": [
+        "Naam",
+        "Groep",
+        "Lokaal"
+      ],
+      "support": "docent begeleidt bronkaart en invoer"
+    },
+    "alfa-c": {
+      "sourceId": "KSW-AC-VGI-011",
+      "instruction": "Lees de kaart of het bericht. Vul de juiste gegevens in.",
+      "fields": [
+        "Naam",
+        "Bedrijf",
+        "Datum",
+        "Tijd"
+      ],
+      "support": "cursist vult zelf in en kan gerichte woordsteun kiezen"
+    }
+  },
+  "plannedActiveMinutes": 10,
+  "plannedBreakMinutes": 0,
+  "separateIndependentPracticeMinutes": 0,
+  "timePlanIsProposalNotARealScheduledMeeting": true,
+  "timeBlocks": [
+    {
+      "minutes": "0–1",
+      "activity": "Kies één formulier dat aansluit bij het boekdoel.",
+      "teacherAction": "Benoem welk brongegeven op welke plek moet komen.",
+      "visibleLearnerBehavior": "Wijst het gevraagde veld op het formulier aan.",
+      "materials": "Gekozen bronkaart en lege velden",
+      "observationReferences": [
+        {
+          "domainOrder": 2,
+          "items": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "domainOrder": 14,
+          "items": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "minutes": "1–3",
+      "activity": "Zoek op de bronkaart één vergelijkbaar gegeven.",
+      "teacherAction": "Laat de cursist aanwijzen waar het gegeven staat en herhaal zo nodig de afzonderlijke gesproken instructie. Gebruik een andere kaart voor een voorbeeld.",
+      "visibleLearnerBehavior": "Wijst een brongegeven en het bijbehorende veld aan en zegt of toont wat de opdracht vraagt.",
+      "materials": "Bronkaart, instructieknop en een voorbeeldkaart",
+      "observationReferences": [
+        {
+          "domainOrder": 5,
+          "items": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "domainOrder": 14,
+          "items": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "minutes": "3–7",
+      "activity": "Vul het gekozen formulier met eigen invoer in.",
+      "teacherAction": "Laat voldoende schrijftijd; begeleid Alfa A/B en geef Alfa C tijd voor eigen invoer. Noteer gegeven hulp apart.",
+      "visibleLearnerBehavior": "Vult de lege velden in en kiest Controleer. De app bewaart de eerste inzending.",
+      "materials": "Klink-formulier, bronkaart en beschikbare woordsteun",
+      "observationReferences": [
+        {
+          "domainOrder": 4,
+          "items": [
+            2,
+            3
+          ]
+        },
+        {
+          "domainOrder": 9,
+          "items": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "minutes": "7–9",
+      "activity": "Vergelijk een veld en probeer zo nodig een verbeterde invoer.",
+      "teacherAction": "Vraag waar de cursist het brongegeven vond en bespreek een niet-herkende schrijfwijze zonder die automatisch fout te noemen.",
+      "visibleLearnerBehavior": "Wijst de bewijsplek aan, verklaart of verbetert het veld en bewaart eigen tekst.",
+      "materials": "Bronkaart, veldfeedback en eigen tekst in het formulier",
+      "observationReferences": [
+        {
+          "domainOrder": 10,
+          "items": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "domainOrder": 14,
+          "items": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "minutes": "9–10",
+      "activity": "Terugblik en vervolgstap.",
+      "teacherAction": "Vraag welk soort gegeven de cursist nu kan terugvinden; kies zo nodig een volgend kort formulier.",
+      "visibleLearnerBehavior": "Noemt of toont één veld met het passende gegeven.",
+      "materials": "Dezelfde bronkaart of een volgende korte opdracht",
+      "observationReferences": [
+        {
+          "domainOrder": 3,
+          "items": [
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "exactBookPageAndActualClassMeeting": "open",
+  "independentReadingOrMasteryInferred": false,
+  "humanLessonVisitOrClassroomTestPerformed": false,
+  "officialComplianceClaim": false
+}
