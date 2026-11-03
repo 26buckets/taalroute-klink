@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyMessagesTextsRelease,readBeforeMessagesTexts} from './check-writing-messages-texts-release-20261103.mjs';
 import {verifyTypedSentencesRelease,readBeforeTypedSentences} from './check-writing-typed-sentences-release-20261103.mjs';
 import {verifyAlfaCSentencesRelease,readBeforeAlfaCSentences} from './check-klink10-sentences-alfa-c-release.mjs';
 
@@ -10,7 +11,8 @@ const roots=['app','components','hooks','data','lib','public','scripts','db','dr
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 
 export function verifyWritingFormsRelease(read=readFileSync){
- const typed=verifyTypedSentencesRelease(read),currentRead=read,beforeTyped=file=>readBeforeTypedSentences(file,typed,currentRead);
+ const messagesTexts=verifyMessagesTextsRelease(read),currentRead=read,beforeMessages=file=>readBeforeMessagesTexts(file,messagesTexts,currentRead);
+ const typed=verifyTypedSentencesRelease(beforeMessages,messagesTexts.baselineSourceCommit),beforeTyped=file=>readBeforeTypedSentences(file,typed,beforeMessages);
  const next=verifyAlfaCSentencesRelease(beforeTyped,typed.baselineSourceCommit);read=file=>readBeforeAlfaCSentences(file,next,beforeTyped);
  const json=p=>JSON.parse(read(p)),r=json(approval),m=json(folder+'import-manifest.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearancePreserved&&r.progressPreserved);
@@ -47,6 +49,6 @@ export function verifyWritingFormsRelease(read=readFileSync){
  const teacher=json(folder+'local/teacher-preservation.json');assert.equal(teacher.checks.length,24);assert(teacher.checks.every(x=>x.pixelIdentical));assert.deepEqual(teacher.errors,[]);
  const v=json(folder+'verification.json');for(const k of['types','targetedLint','coreTests','fullWordCoverage','sourceFormGoals','appearanceReviewed','priorPublicAssetsUnchanged','sourceIdentityAndCriteriaChecked','clockLimitationRecorded'])assert(v[k],k);assert.equal(v.independentHumanNT2Review,false);assert.equal(v.humanListeningPerformed,false);assert.equal(v.physicalDevicesAndClassroomTested,false);
  const backup=json(folder+'backup.json');assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity&&backup.secretScanPassed);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return {...r,next,typed};
+ return {...r,next,typed,messagesTexts};
 }
-export function readBeforeWritingForms(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeAlfaCSentences(file,r.next,p=>readBeforeTypedSentences(p,r.typed,read));}
+export function readBeforeWritingForms(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeAlfaCSentences(file,r.next,p=>readBeforeTypedSentences(p,r.typed,q=>readBeforeMessagesTexts(q,r.messagesTexts,read)));}
