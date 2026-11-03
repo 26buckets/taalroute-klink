@@ -21,7 +21,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     (url) => url.pathname === '/api/inzicht/me',
     async (route) => {
       reads++;
-      if (reads === 2 || reads === 4) {
+      if (reads === 1 || reads === 3) {
         await new Promise((resolve) =>
           holds.push(() => {
             void route.abort('failed').catch(() => {});

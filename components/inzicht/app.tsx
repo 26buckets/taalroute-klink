@@ -172,14 +172,20 @@ function Status({ value }: { value: Mastery }) {
   );
 }
 
-export function InzichtApp({ online = false }: { online?: boolean }) {
+export function InzichtApp({
+  online = false,
+  initialAnonymous = false,
+}: {
+  online?: boolean;
+  initialAnonymous?: boolean;
+}) {
   const router = useRouter(),
     pathname = usePathname(),
     search = useSearchParams();
   const [me, setMe] = useState<{ user: string; schools: School[] } | null>(
       null,
     ),
-    [checking, setChecking] = useState(true),
+    [checking, setChecking] = useState(!initialAnonymous),
     [accountRetry, setAccountRetry] = useState(false),
     [loginError, setLoginError] = useState('');
   const [token, setToken] = useState('');
@@ -218,6 +224,8 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
   const href = (path: string, extra = '') =>
     `/inzicht${path}?school=${encodeURIComponent(school)}${extra}`;
   useEffect(() => {
+    // No session cookie means there is no account to look up before showing login.
+    if (initialAnonymous) return;
     let current = true;
     api<{ user: string; schools: School[] }>('me', '')
       .then((value) => {
@@ -235,7 +243,7 @@ export function InzichtApp({ online = false }: { online?: boolean }) {
     return () => {
       current = false;
     };
-  }, []);
+  }, [initialAnonymous]);
   useEffect(() => {
     const reset = (event: PageTransitionEvent) => {
       if (event.persisted) {
