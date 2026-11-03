@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": false,
+      "differingChannels": 1568,
+      "maxChannelDelta": 1
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": false,
+      "differingChannels": 1568,
+      "maxChannelDelta": 1
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "existingCanonicalId": "KSW-AC-HS-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    }
+  ],
+  "audioMocked": false,
+  "physicalPhoneTested": false
+}

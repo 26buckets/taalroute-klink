@@ -1,4 +1,5 @@
 'use client';
+import handwritingHints from '@/data/klink-handwriting-help-20261103.json';
 import { WordAudioText, isWordAudioClick } from './word-audio-text';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
@@ -1034,6 +1035,11 @@ function HandwritingSurface({ exercise, onAudio, onFinish, onReset, canAnswer, o
   const current = useRef(ink), db = useRef<IDBDatabase | null>(null);
   const [ready, setReady] = useState(false), [error, setError] = useState(false), [busy, setBusy] = useState(false), [revealed, setRevealed] = useState(false);
   const id = exercise.exerciseId;
+  const sourceHint = handwritingHints.find(row => row.sourceId === id && row.model === exercise.target);
+  const listeningHint = sourceHint?.listeningHint;
+  const [helpStep, setHelpStep] = useState(0);
+  const hint = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (helpStep) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [helpStep]);
   useEffect(() => {
     let active = true, connection: IDBDatabase | undefined;
     void (async () => {
@@ -1070,13 +1076,33 @@ function HandwritingSurface({ exercise, onAudio, onFinish, onReset, canAnswer, o
     if (!ready || busy) return;
     onHelp(); void save({ ...current.current, modelSeen: true });
   }
+  async function stagedHelp() {
+    if (!ready || !canAnswer || busy || (helpStep === 1 && !ink.first && !hasWritingInk(ink.draft))) return;
+    onHelp();
+    if (helpStep === 0) {
+      setBusy(true);
+      try { if (await onAudio(exercise.prompt?.audio?.src) !== false) setHelpStep(1); }
+      finally { setBusy(false); }
+    } else if (helpStep === 1) {
+      setBusy(true);
+      // The spelling hint contains the answer: preserve the attempt before revealing it.
+      const submitted = hasWritingInk(current.current.draft);
+      const next = updateWritingInk(current.current, current.current.draft, submitted);
+      if (await save({ ...next, modelSeen: true }, submitted)) setHelpStep(2);
+      setBusy(false);
+    } else setHelpStep(helpStep === 2 ? 3 : 0);
+  }
   return <section className="cp-task-card" data-handwriting-source={id}>
     <Prompt exercise={exercise} onAudio={onAudio} />
     <div className="cp-handwriting-input">{revealed && <strong className="cp-paper-model"><WordAudioText text={asString(exercise.target)} /></strong>}<WritingBoard strokes={ink.draft} onChange={change} handwritingOnly disabled={!ready || !canAnswer || busy} /></div>
     {error && <output role="alert">Bewaren lukt niet. Je schrijfwerk blijft in dit scherm. Houd deze oefening open.</output>}
     {revealed ? <button data-practice-check className="primary-button" disabled={busy || error} onClick={() => onFinish('Eigen schrijfwerk bewaard op dit apparaat.', true, 'Je hebt geoefend. Bespreek je schrijfwerk zo nodig met je docent.')}>Ik heb vergeleken<Check /></button>
       : <button data-practice-check className="primary-button" disabled={!ready || !canAnswer || busy || !hasWritingInk(ink.draft)} onClick={() => void compare()}>Vergelijk<Check /></button>}
-    {!revealed && <WordHint exercise={exercise} onHelp={help} disabled={!ready || busy} />}
+    {!revealed && (listeningHint ? <div className="cp-word-hint" ref={hint} data-handwriting-help-step={helpStep}>
+      {helpStep === 1 && <p>{wordAudioParts(listeningHint).map((part, index) => sourceHint?.listeningHintUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</p>}
+      {helpStep >= 2 && <>{helpStep === 3 && <strong><WordAudioText text={asString(exercise.target)} /></strong>}<p>{wordAudioParts(asString(exercise.meaning)).map((part, index) => asArray<number>(exercise.writingHintUnits).includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</p></>}
+      <button data-practice-listen={helpStep === 0 || undefined} className="secondary-button" disabled={!ready || !canAnswer || busy || (helpStep === 1 && !ink.first && !hasWritingInk(ink.draft))} aria-expanded={helpStep > 0} onClick={() => void stagedHelp()}>{helpStep === 3 ? 'Verberg voorbeeld' : 'Help'}</button>
+    </div> : <WordHint exercise={exercise} onHelp={help} disabled={!ready || busy} />)}
   </section>;
 }
 

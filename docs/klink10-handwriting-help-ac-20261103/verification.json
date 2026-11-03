@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-03T05:42:25.314149+00:00",
+  "state": "LOCAL_SOURCE_HELP_REPAIR_VERIFIED_PENDING_CANONICAL_GATE",
+  "live": false,
+  "answerInkStorageFlows": 40,
+  "unchangedOtherHandwritingFlows": 16,
+  "completeRounds": 8,
+  "nativePlaybackRecords": 136,
+  "storageFailureAndLegacyFlows": 4,
+  "finalSoundUnitFlows": 2,
+  "tests": 8,
+  "typesPassed": true,
+  "lintPassed": true,
+  "normalBuildPassed": true,
+  "screenPairs": 8,
+  "pixelIdenticalPairs": 6,
+  "maximumOtherChannelDelta": 1,
+  "offeredStandaloneBuildAssets": 20000,
+  "canonicalPendingFilesUnchanged": 16,
+  "newAudio": 0,
+  "newPublicSourceFiles": 0,
+  "ordinaryPublicationGateRun": false,
+  "humanNt2ReviewPerformed": false,
+  "humanListeningPerformed": false,
+  "physicalPhoneOrPenTested": false,
+  "postFlowChange": "Only literal sound-unit spans were added to original listening hints, with eight regression tests and two final native render/word-audio exclusion checks. All stage transitions, storage and hint strings unchanged.",
+  "repairedDuringLocalTesting": [
+    "Use existing prompt.audio.src directly; it has no audioId field.",
+    "First Help step uses existing data-practice-listen guard so generic word audio for Help cannot interrupt target replay."
+  ],
+  "next": "Preserve pending canonical candidates as complete patches, transfer only this fix onto current canonical main, prepare ordinary source-bound successor gate and full chain, coordinate window, recount actual final build, deploy normally and verify live/Drive. Never restore an older whole component over this fix when rebasing pending dictation. Other candidates still need separate capacity evidence."
+}
