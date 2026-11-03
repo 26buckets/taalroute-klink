@@ -54,6 +54,7 @@ try {
           .isVisible(),
       );
       await page.unroute('**/package-exercise-browser-*.js');
+      const started = performance.now();
       await page
         .getByRole('button', { name: 'Opnieuw openen', exact: true })
         .click();
@@ -63,6 +64,7 @@ try {
         console.log(engine, await page.locator('main').innerText());
         throw error;
       }
+      const recoveryMs = Math.round(performance.now() - started);
       assert.equal(
         await page
           .getByRole('alert')
@@ -81,6 +83,7 @@ try {
         back_available: true,
         full_reload_recovers: true,
         attempts_unchanged: true,
+        recoveryMs,
       });
     } finally {
       await browser.close();
@@ -90,7 +93,8 @@ try {
   await logoutSessions();
 }
 writeFileSync(
-  'docs/inzicht-20261101/evidence/speed/player-loading.json',
+  process.env.KLINK_PLAYER_RESULT ||
+    'docs/inzicht-20261101/evidence/speed/player-loading.json',
   JSON.stringify(results, null, 2),
 );
 console.log(

@@ -383,6 +383,8 @@ function SchoolPlayer({
   const [ExerciseSurface, setSurface] = useState<Surface | null>(null),
     [loadError, setLoadError] = useState(false);
   useEffect(() => {
+    // Keep the browser-only exercise bank out of the Worker module graph.
+    if (import.meta.env.SSR) return;
     let active = true;
     import('@/components/product/package-exercise-browser')
       .then((module) => {

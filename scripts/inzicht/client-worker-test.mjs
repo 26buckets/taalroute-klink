@@ -5,6 +5,29 @@ import { build } from 'esbuild';
 import { api } from '../../components/inzicht/client.ts';
 import { checkStaging } from './deploy-staging.mjs';
 
+test('exercise player remains available in the browser but absent from server imports', async () => {
+  for (const server of [true, false]) {
+    const result = await build({
+      entryPoints: ['components/inzicht/school.tsx'],
+      bundle: true,
+      platform: 'browser',
+      format: 'esm',
+      write: false,
+      packages: 'external',
+      external: ['@/*'],
+      define: { 'import.meta.env.SSR': String(server) },
+      minifySyntax: true,
+    });
+    const output = result.outputFiles[0].text;
+    if (server) assert.doesNotMatch(output, /package-exercise-browser/);
+    else
+      assert.match(
+        output,
+        /import\("@\/components\/product\/package-exercise-browser"\)/,
+      );
+  }
+});
+
 test('reads have a deadline; writes retain their idempotency key without cancellation', async () => {
   const original = globalThis.fetch;
   const requests = [];
