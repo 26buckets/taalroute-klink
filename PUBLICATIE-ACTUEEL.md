@@ -1,3 +1,13 @@
+## Actuele publicatie — 140 bronformulieren Vul gegevens in — 3 november 2026
+
+Livebron `f772babce64805160aad60a4a6ef5318c500aec8`, schone canonieke main; Worker `c419b479-35b6-47a3-85ea-47beabe86751`. Opvolger van `96bd4a87e075155deeaeed620afd749c824e58ad` via de gewone `npm run deploy`. 140 formulieren, 395 velden, 21 korte rondes. Eigen invoer wordt bewaard vóór feedback; de eerste en laatste inzending blijven apart. Onbekende schrijfwijzen vragen vergelijking. Geen zelfstandig leesbewijs of automatisch beheersingsresultaat.
+
+De 21 bronbanken zijn bytegelijk uit één compact bestand teruggelezen. Alle 76 nieuwe doelwoordmodellen en de afzonderlijke Roland-instructie zijn volledig gecontroleerd op aangeboden bytes, Taalroute-metadata en geluidsdata. Lokaal en live 280 formulierstromen in Chromium/WebKit, 42 rondes, 42 herladen concepten, 48 schermvarianten, zes opslaggevallen, 30 echte afspeelstromen en 304 native WAV-decodes. Eerdere inhoud, vormgeving en voortgang behouden. 24 bestaande docentenschermen vóór publicatie pixelgelijk.
+
+Register: 460 van 880 bronposities online, waarvan 406 rechtstreeks en 54 hergebruikt; 420 nog open. 1.087 inbegrepen audiocredits voor deze batch, waarvan 34 na sleutelvervanging. Geen extra betaald budget of GitHub Actions. Menselijke review, vijf naamuitspraken, fysieke apparaten, klasproef en concrete boek-/roosterkoppeling blijven afzonderlijk open. Bronherstel op Drive `1sYbAKHXgTtvNQuueL31w3-JIEmeAjlx8`. Definitief dossier `docs/writing-forms-20261102/`. Definitieve Drive-herstelkopie `1MyXtTYDAJcuO4eS6Bh3pN13unHHLSGQ5`: alle 25 buitenste en 770 geneste brononderdelen volledig teruggelezen.
+
+---
+
 ## Actuele publicatie — tien Alfa A Hoor en typ-bronvarianten — 3 november 2026
 
 Livebron `96bd4a87e075155deeaeed620afd749c824e58ad` via schone canonieke main en gewone `npm run deploy`, opvolger van de gecontroleerde Spreken-publicatie. Tien bestaande canonieke woorddictees zijn nu ook aangesloten volgens de Hoor en typ-bron, zonder geschreven antwoordmodel vooraf. Geen nieuwe unieke vragen, woorden of audio; bestaande standaarddictees en honderd Alfa C-posities behouden hun hulp, antwoorden en voortgang.
