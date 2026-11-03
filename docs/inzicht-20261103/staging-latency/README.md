@@ -1,5 +1,7 @@
 # Klink Inzicht — stagingvertraging, 3 november 2026
 
+**Vervolg op 4 november:** de onnodige serverimport van de browser-oefenmodule is verwijderd. In 64 nieuwe browserbezoeken en 48 HTTP-aanvragen komen de eerdere pieken boven één seconde niet terug. Zie `docs/inzicht-20261104/staging-peaks/README.md` voor de actuele bevinding, bron, meetgegevens en beperkingen. Onderstaand dossier blijft het historische bewijs van vóór die reparatie.
+
 **Gedeeltelijk verholpen.** Het anonieme inlogscherm wacht niet meer op een overbodig accountverzoek. Wisselende wachttijd buiten de gemeten serververwerking is nog niet volledig verklaard of verholpen. Productie en PR10 zijn ongewijzigd.
 
 ## Bereikbaar en gecontroleerd

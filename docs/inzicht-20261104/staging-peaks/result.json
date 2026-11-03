@@ -1,0 +1,212 @@
+{
+  "dateLocal": "2026-11-04",
+  "timezone": "Europe/Amsterdam",
+  "status": "observed staging spikes eliminated in controlled follow-up; no production release",
+  "baselineCommit": "43a4560957bd775052530e779397b17fb8254996",
+  "baselineWorker": "8c071c15-1aab-4afe-87ba-8cb1b3d97d1a",
+  "runtimeSourceCommit": "dcf0afb0369fc31bdb30e3cca5db1befe27dedeb",
+  "workerVersion": "df43bc2e-594a-4057-8d47-45febc92c1e6",
+  "stagingUrl": "https://inzicht-staging.taalroute.nl/inzicht",
+  "change": "Compile out the browser-only SchoolPlayer dynamic import from the server module graph; keep browser code and error recovery. No caching or auth changes.",
+  "serverBytesBefore": 24070070,
+  "serverBytesAfter": 2022018,
+  "serverReductionPercent": 91.6,
+  "removedExerciseServerBytes": 22047694,
+  "browserExerciseBytes": 22047769,
+  "browserExerciseContentPreservedExceptGeneratedImportHashes": true,
+  "reportedNewWorkerStartupMs": 20,
+  "browser": [
+    {
+      "host": "workers",
+      "visit": "cold",
+      "nEach": 8,
+      "before": {
+        "medianMs": 277,
+        "maxMs": 1425,
+        "over1s": 2
+      },
+      "after": {
+        "medianMs": 262,
+        "maxMs": 433,
+        "over1s": 0
+      },
+      "confirmation": {
+        "medianMs": 256,
+        "maxMs": 427,
+        "over1s": 0
+      }
+    },
+    {
+      "host": "workers",
+      "visit": "warm",
+      "nEach": 8,
+      "before": {
+        "medianMs": 148,
+        "maxMs": 177,
+        "over1s": 0
+      },
+      "after": {
+        "medianMs": 143,
+        "maxMs": 166,
+        "over1s": 0
+      },
+      "confirmation": {
+        "medianMs": 136,
+        "maxMs": 259,
+        "over1s": 0
+      }
+    },
+    {
+      "host": "custom",
+      "visit": "cold",
+      "nEach": 8,
+      "before": {
+        "medianMs": 263,
+        "maxMs": 1292,
+        "over1s": 1
+      },
+      "after": {
+        "medianMs": 241,
+        "maxMs": 297,
+        "over1s": 0
+      },
+      "confirmation": {
+        "medianMs": 210,
+        "maxMs": 293,
+        "over1s": 0
+      }
+    },
+    {
+      "host": "custom",
+      "visit": "warm",
+      "nEach": 8,
+      "before": {
+        "medianMs": 197,
+        "maxMs": 1243,
+        "over1s": 1
+      },
+      "after": {
+        "medianMs": 110,
+        "maxMs": 324,
+        "over1s": 0
+      },
+      "confirmation": {
+        "medianMs": 118,
+        "maxMs": 220,
+        "over1s": 0
+      }
+    }
+  ],
+  "browserSummary": {
+    "beforeN": 32,
+    "afterN": 64,
+    "beforeMaxMs": 1425,
+    "afterMaxMs": 433,
+    "beforeOver1s": 4,
+    "afterOver1s": 0
+  },
+  "http": {
+    "before": {
+      "n": 48,
+      "maxMs": 2199,
+      "over1s": 10,
+      "byKind": {
+        "api": {
+          "n": 8,
+          "medianMs": 96,
+          "maxMs": 2199
+        },
+        "html": {
+          "n": 8,
+          "medianMs": 92,
+          "maxMs": 1137
+        },
+        "compressed": {
+          "n": 8,
+          "medianMs": 118,
+          "maxMs": 1886
+        },
+        "head": {
+          "n": 8,
+          "medianMs": 96,
+          "maxMs": 2183
+        },
+        "rsc": {
+          "n": 8,
+          "medianMs": 88,
+          "maxMs": 1195
+        },
+        "asset": {
+          "n": 8,
+          "medianMs": 93,
+          "maxMs": 106
+        }
+      }
+    },
+    "after": {
+      "n": 48,
+      "maxMs": 462,
+      "over1s": 0,
+      "byKind": {
+        "api": {
+          "n": 8,
+          "medianMs": 85,
+          "maxMs": 250
+        },
+        "html": {
+          "n": 8,
+          "medianMs": 107,
+          "maxMs": 462
+        },
+        "compressed": {
+          "n": 8,
+          "medianMs": 195,
+          "maxMs": 397
+        },
+        "head": {
+          "n": 8,
+          "medianMs": 123,
+          "maxMs": 322
+        },
+        "rsc": {
+          "n": 8,
+          "medianMs": 91,
+          "maxMs": 204
+        },
+        "asset": {
+          "n": 8,
+          "medianMs": 95,
+          "maxMs": 131
+        }
+      }
+    }
+  },
+  "checks": {
+    "unitSecurityAndBoundary": 29,
+    "types": true,
+    "lint": true,
+    "normalAppBuild": true,
+    "stagingBuild": true,
+    "nativeMfaJourneys": 4,
+    "delayedAccountRecoveryBrowsers": 2,
+    "playerRecoveryBrowsersBeforeAndAfter": 2,
+    "pixelIdenticalScreenPairs": 8,
+    "productionReleasesByteEqual": 2
+  },
+  "migrationsRun": false,
+  "databaseId": "95f1de18-0c61-46ca-b2af-5ee36543f67f",
+  "schemaVersion": 7,
+  "d1WriteBudgetBeforeTests": 411,
+  "githubWorkflows": 0,
+  "productionChanged": false,
+  "pr10Changed": false,
+  "physicalDevicesTested": false,
+  "limitations": [
+    "Small samples from one current connection and one Mac; no guarantee all future cold starts or networks remain below a threshold.",
+    "The before/after experiment identifies unnecessary Worker code as an actionable contributor; exact Cloudflare module-distribution/initialization/transport substep is not individually timed.",
+    "First baseline tail began too late for its first API request:39/40 Worker requests matched; all40 after matched. Eight asset requests per round bypass the Worker.",
+    "RSC header-only diagnostic returns307; it is a routing control, not a hydrated RSC navigation. HEAD and assets are controls.",
+    "Forced exercise-download recovery took1558/1526ms before and2411/1406ms after. No exercise-download speedup claimed; existing browser payload retained and attempts unchanged.",
+    "No new full Klink/+docent production journey; normal build passed and both existing production releases remain byte-identical."
+  ]
+}

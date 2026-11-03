@@ -1,0 +1,39 @@
+✔ salted scrypt rejects wrong, oversized and malformed credentials (554.404625ms)
+✔ online login creates only hashed server session and a secure host cookie (157.765166ms)
+✔ incorrect and unknown account use identical errors; attempts are bounded (1532.836209ms)
+✔ host, scheme, origin, disabled account and local token are refused online (145.061ms)
+✔ logout revokes server session; expiry and user revocation apply immediately (422.572ms)
+✔ scheduled outbox retries safely and removes only expired limits and sessions (147.065542ms)
+✔ deployment guard rejects production names, bindings, routes and unprotected asset handling (1.38775ms)
+✔ password and MFA work without an implicit global Buffer (326.422ms)
+inzicht.database_daily_limit
+✔ D1 daily capacity failures stay private and provide a bounded retry time (0.714417ms)
+✔ remote scale tests reserve a shared account-wide D1 write budget (0.780709ms)
+✔ exercise player remains available in the browser but absent from server imports (37.730583ms)
+✔ reads have a deadline; writes retain their idempotency key without cancellation (8.736334ms)
+✔ read timeout is actionable, while expired sessions remain distinguishable (0.341ms)
+✔ WebKit generic abort after our deadline still gives the same recovery message (0.093208ms)
+✔ the optional test domain keeps exact host, CSRF and no-store boundaries (3.844917ms)
+✔ the deploy guard admits only the separate staging domain and existing EU database (1.241333ms)
+✔ staging API calls the real security handler without the page renderer (0.319125ms)
+✔ page renderer and assets stay separate, with exact staging origin/mode guards (0.196541ms)
+✔ RFC 6238 published SHA-1 vectors and narrow/replay-protected time window (1.001292ms)
+✔ factor encryption authenticates user, key and ciphertext; no plaintext at rest (0.462542ms)
+✔ password alone has no dossier access; enrollment needs a valid code and returns recovery codes once (302.190459ms)
+✔ OTP replay, concurrent confirmation and recovery reuse cannot issue two sessions (423.708458ms)
+✔ five attempts, expiry, cancellation and replacement challenge are enforced (703.456541ms)
+✔ MFA rate limit persists across fresh password challenges (282.247875ms)
+✔ password rotation, user disable, wrong origin, missing secret and factor reset fail closed (708.351458ms)
+inzicht.request_failed
+✔ failed session transaction preserves recovery code and does not leave partial authentication (282.114417ms)
+✔ migration revokes all legacy password-only sessions without deleting education data (3.70175ms)
+✔ legacy or fabricated password-only session remains unusable even after MFA enrollment (142.583167ms)
+✔ request bodies are bounded while streaming, including multibyte input and invalid UTF-8 (3.504292ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3686.82975
