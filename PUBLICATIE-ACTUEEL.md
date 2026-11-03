@@ -1,3 +1,15 @@
+## Actuele publicatie — loader speelt één keer — 3 november 2026
+
+Livebron `c66cee52a149a9059a181b77dff3a3d587e7e85f`, Worker `9228b7bf-b0c6-43b5-8c98-3d704dd99cf8`. PR #11 gepubliceerd op Nico’s expliciete opdracht via schone canonieke main en de gewone `npm run deploy`, inclusief de volledige bestaande publicatiepoort. Enige runtimewijziging: `components/product/klink-opening-loader.tsx`. De eerste loader speelt de bestaande animatie één keer af; volgende laadschermen binnen dezelfde geopende pagina tonen het bestaande eindbeeld. Een volledige paginaherlading begint opnieuw. Afbeeldingen, vormgeving, wachttijd, callbacks, inhoud, media, routes en opslag behouden.
+
+Lokaal: 16 componentgevallen, 32 volledige app-laadgevallen en acht navigatiegevallen. Live: acht navigatiestromen naar Klink en Klink+docent in Chromium/WebKit op desktop- en mobiel formaat, met daadwerkelijk vertraagde laadmodules; eindbeeld, openen en opslagbehoud geslaagd. Beide aangeboden loaderbestanden volledig bytegelijk teruggelezen. Alle vier inhoudsvingerafdrukken gelijk aan de vorige liveversie. Types, lint, normale bouw, zeven negatieve loaderproeven en zes bestaande negatieve handschriftproeven geslaagd.
+
+Wrangler bevestigt 16 geüpload + 19.984 ongewijzigd = 20.000 assets. Geen configuratie-, budget-, database- of audiowijziging. Geen GitHub Actions. PR #10 met overige snelheidswijzigingen en PR #8 met Inzicht niet meegenomen. Fysieke telefoons niet getest.
+
+Bron-/herstelkopie Drive `1VrYRGvyIEq0lOgmeNx7uhdM_TtiiwApZ` volledig teruggelezen: 42 gecontroleerde payloads. Livebewijs in `docs/opening-loader-once-20261103/publication.json`; eindbewijs Drive `1QaYCrIoQp3tz2ONEXNlGOtgWgCvvdLG9` volledig teruggelezen: 57 buitenste en 42 geneste payloads, vastgelegd in `postflight.json`.
+
+---
+
 ## Actuele publicatie — hulpvolgorde Alfa C Hoor en schrijf — 3 november 2026
 
 Livebron `b0763872c76c319e02d4464b57b7afcb02d21ed3`, Worker `5aaf7b0d-b812-47ca-85b4-153097143e1d`. Uitsluitend tien bestaande bronopdrachten KSW-AC-HS-001 t/m 010 hersteld via actuele canonieke main, de volledige gewone publicatiepoort en `npm run deploy`. Help herhaalt de echte doelopname, toont de oorspronkelijke luisterhint en bewaart de eigen eerste poging vóór spellinghint/model. Spellinghints tellen eerlijk als modelgebruik. Geen OCR of automatische beheersingsscore. Dezelfde vragen, inktopslag, banken, opnamen, overige negentig handschrifttaken en vormgeving behouden.
