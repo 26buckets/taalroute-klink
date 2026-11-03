@@ -1,3 +1,13 @@
+## Actuele publicatie — tien Alfa A Hoor en typ-bronvarianten — 3 november 2026
+
+Livebron `96bd4a87e075155deeaeed620afd749c824e58ad` via schone canonieke main en gewone `npm run deploy`, opvolger van de gecontroleerde Spreken-publicatie. Tien bestaande canonieke woorddictees zijn nu ook aangesloten volgens de Hoor en typ-bron, zonder geschreven antwoordmodel vooraf. Geen nieuwe unieke vragen, woorden of audio; bestaande standaarddictees en honderd Alfa C-posities behouden hun hulp, antwoorden en voortgang.
+
+Nico heeft de exacte maan-, man- en vis-opnamen goedgekeurd; de overige zeven hebben vastgelegde automatische uitspraakcontrole. Lokaal en live: twintig antwoord-/hervatstromen, twintig bladweergaven, 22 native decodes en twee echte afspeelstromen. Live elf volledige audiobestanden met Taalroute-metadata teruggelezen; de eerdere Spreken-bank behouden. Types, lint, twaalf regressietests en zeven negatieve vrijgaveproeven geslaagd; geen Actions-workflows.
+
+Bron en herstelgegevens: Drive `1V1FHQFdFFxLGefjaiCzrI_USDi3Y2Xjy`, volledig teruggelezen. Geen menselijke luisterronde van alle bestanden, onafhankelijke NT2-review, fysieke apparaten of klasproef geclaimd.
+
+---
+
 ## Actuele publicatie — tien dagelijkse Spreken-zinnen — 3 november 2026
 
 Livebron `c401dab88da45a3ee41874f95a1c18bf8796d261` op schone canonieke main, via gewone `npm run deploy`. Tien nieuwe Alfa A-zinnen met elf opnamen. Nico heeft de vervangende fruit-appel expliciet goedgekeurd; de afgekeurde hash wordt niet aangeboden. Spreken blijft begeleid oefenen zonder automatische uitspraakbeoordeling.
