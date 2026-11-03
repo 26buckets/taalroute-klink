@@ -14,7 +14,7 @@
   "schemaVersion": 7,
   "migrationsRun": false,
   "productionChanged": false,
-  "secondIndependentNetworkTested": false,
+  "secondIndependentNetworkTested": true,
   "physicalDevicesTested": false,
   "anonymousMeRequestsBefore": 1,
   "anonymousMeRequestsAfter": 0,
@@ -81,8 +81,8 @@
     "normalAppBuild": true
   },
   "open": [
-    "Independent second-network measurement",
     "Exact cause and elimination of remaining intermittent connection latency",
     "No release of withheld PR10 or production Inzicht integration"
-  ]
+  ],
+  "secondNetworkEvidence": "User-reported network switch; follow-up in network2/result.json. Same Mac, changed observed edge route; no physical phone test."
 }

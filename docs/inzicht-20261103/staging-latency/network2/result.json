@@ -1,0 +1,148 @@
+{
+  "date": "2026-11-03",
+  "status": "second-network-tested; intermittent-latency-not-resolved",
+  "networkEvidence": "User reported switching network; same Mac. All 32 second-run HTML rays end AMS; previous run WAW/ARN/CDG/MAN/BOS. No ISP, public IP or physical handset independently established.",
+  "sourceHead": "6feed7fe014a5f6aa7ca5d460679ddde16657c89",
+  "runtimeSourceCommit": "133791bc85b44e82795d6a5923edcc1b5e4c5675",
+  "workerVersion": "8c071c15-1aab-4afe-87ba-8cb1b3d97d1a",
+  "runtimeChanged": false,
+  "deploymentChanged": false,
+  "productionChanged": false,
+  "d1RowsWritten24hBeforeAuthTests": 262,
+  "migrationsRun": false,
+  "firstNetworkMeasuredAt": "2026-11-03T20:44:25.187Z",
+  "secondNetworkMeasuredAt": "2026-11-03T22:48:16.609Z",
+  "browserComparison": [
+    {
+      "host": "workers",
+      "visit": "cold",
+      "nEach": 8,
+      "firstNetworkMedianMs": 549,
+      "secondNetworkMedianMs": 240,
+      "firstNetworkMaxMs": 4246,
+      "secondNetworkMaxMs": 1855,
+      "firstNetworkOver1s": 3,
+      "secondNetworkOver1s": 2
+    },
+    {
+      "host": "workers",
+      "visit": "warm",
+      "nEach": 8,
+      "firstNetworkMedianMs": 160,
+      "secondNetworkMedianMs": 154,
+      "firstNetworkMaxMs": 1806,
+      "secondNetworkMaxMs": 1334,
+      "firstNetworkOver1s": 1,
+      "secondNetworkOver1s": 3
+    },
+    {
+      "host": "custom",
+      "visit": "cold",
+      "nEach": 8,
+      "firstNetworkMedianMs": 442,
+      "secondNetworkMedianMs": 280,
+      "firstNetworkMaxMs": 2124,
+      "secondNetworkMaxMs": 2393,
+      "firstNetworkOver1s": 3,
+      "secondNetworkOver1s": 3
+    },
+    {
+      "host": "custom",
+      "visit": "warm",
+      "nEach": 8,
+      "firstNetworkMedianMs": 161,
+      "secondNetworkMedianMs": 128,
+      "firstNetworkMaxMs": 310,
+      "secondNetworkMaxMs": 2047,
+      "firstNetworkOver1s": 0,
+      "secondNetworkOver1s": 1
+    }
+  ],
+  "authComparison": [
+    {
+      "path": "/api/inzicht/login",
+      "firstNetwork": {
+        "n": 4,
+        "medianMs": 1005,
+        "maxMs": 3438
+      },
+      "secondNetwork": {
+        "n": 4,
+        "medianMs": 583,
+        "maxMs": 605
+      }
+    },
+    {
+      "path": "/api/inzicht/mfa",
+      "firstNetwork": {
+        "n": 4,
+        "medianMs": 254,
+        "maxMs": 292
+      },
+      "secondNetwork": {
+        "n": 4,
+        "medianMs": 167,
+        "maxMs": 198
+      }
+    },
+    {
+      "path": "/api/inzicht/me",
+      "firstNetwork": {
+        "n": 8,
+        "medianMs": 158,
+        "maxMs": 189
+      },
+      "secondNetwork": {
+        "n": 8,
+        "medianMs": 110,
+        "maxMs": 113
+      }
+    }
+  ],
+  "checks": {
+    "anonymousVisits": 32,
+    "nativeMfaJourneys": 4,
+    "correlatedHttpWorkerPairs": 24,
+    "productionReleaseFilesByteEqual": 2,
+    "githubWorkflows": 0
+  },
+  "slowestCorrelatedRequest": {
+    "index": 1,
+    "host": "workers",
+    "path": "/inzicht",
+    "time": "2026-11-03T22:49:51.274167+00:00",
+    "exitCode": 0,
+    "status": 200,
+    "dnsMs": 2.053,
+    "connectMs": 13.476,
+    "tlsMs": 36.216,
+    "ttfbMs": 1995.325,
+    "totalMs": 1997.655,
+    "httpVersion": "2",
+    "ray": "a54eef33583ea94a-AMS",
+    "serverTiming": "inzicht;dur=0.0",
+    "cpuTime": 111,
+    "wallTime": 127,
+    "outcome": "ok",
+    "workerVersion": "8c071c15-1aab-4afe-87ba-8cb1b3d97d1a",
+    "colo": "AMS"
+  },
+  "physicalDevicesTested": false,
+  "testScripts": {
+    "scripts/inzicht/latency-browser.mjs": "f91c2aa09f3fa8efa667c2da84b5ca1116fabea27e7854b5ef64bdfa0ff1be32",
+    "scripts/inzicht/mfa-navigation-browser.mjs": "462402ac47d20a4a374dca5bc19f31257b01a4149a8ab62564de9104e9a1af80",
+    "scripts/inzicht/browser-auth.mjs": "2dfbf373a31528a26709b5bf8b9674b00212ca407af3baa17bdcaf847a7d3c9e",
+    "scripts/inzicht/online-budget.mjs": "383449b1ca8593abb3af12f35d4fb0548f8b9e9093c31425302b58cc3b53e4be"
+  },
+  "priorBackup": {
+    "driveFileId": "12FBKl5OsShSv7GkgnDnkrIwUP2bEi8rj",
+    "sha256": "35ec80b6df6b4648db80d2a77c99c231e51497e3b12a8812bbd2b78f7bbea5a4"
+  },
+  "limitations": [
+    "Network comparisons were about two hours apart, not randomized simultaneous networks; no causal network speedup claim.",
+    "Small samples; no SLA, reliable p95 or proof all future MFA attempts avoid delay.",
+    "No physical phone/tablet, throttled mobile network, full protected growth reports, or new full Klink/+docent regression in this follow-up.",
+    "Worker wall time excludes some startup/ingress/transport time; exact location of remaining delay unresolved.",
+    "Production release urllib request returned HTTP403; ordinary curl returned200 and byte-identical release JSON. No access protection bypassed."
+  ]
+}

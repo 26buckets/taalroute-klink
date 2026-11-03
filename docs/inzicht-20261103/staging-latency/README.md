@@ -33,8 +33,10 @@ Beide productie-releasebestanden zijn vóór en na bytegelijk teruggelezen. Geen
 
 ## Nog open
 
+**Aanvulling na de door Nico gemelde netwerkwisseling:** dezelfde runtime is opnieuw gemeten. Op het nieuwe stagingadres is de mediaan 280 ms bij eerste bezoek en 128 ms bij herhaling; de maxima blijven 2.393 en 2.047 ms. Alle 32 bezoeken en vier MFA-/herlaad-/schoolafschermings-/afmeldstromen slagen. Alle nieuwe HTML-rays lopen via AMS. Een aanvullende pagina-aanvraag van 1.998 ms is gekoppeld aan 127 ms Worker-walltime. Zie `network2/README.md` en de ongewijzigd bewaarde eerste metingen: gebruikelijke tijden lager, incidentele pieken nog niet opgelost. Geen runtime-/productiewijziging in deze vervolgmeting.
+
 - De onderliggende wisselende verbindings-/routeringsvertraging. Een nieuwe gecorreleerde anonieme aanvraag duurde 3.986 ms aan clientzijde versus 4 ms gemeten Worker-walltime. Ook zonder database is die piek aanwezig. Dit wijst op wachttijd buiten die handler, maar bewijst niet welke externe schakel verantwoordelijk is.
-- Een onafhankelijke tweede internetverbinding. Aan Nico is gevraagd of een telefoonhotspot beschikbaar is; nog niet uitgevoerd. Apparaten/browserengines op dezelfde Mac zijn géén onafhankelijke verbinding.
+- Tweede netwerkproef uitgevoerd na Nico's melding van een gewijzigde verbinding; het blijft dezelfde Mac. Een onafhankelijke fysieke telefoonproef is nog niet uitgevoerd. De netwerkwisseling alleen heeft de pieken niet weggenomen.
 - Nieuwe echte-apparaatmeting en eventueel Cloudflare-onderzoek met de geschoonde ray-ID's in `correlated.json` en `worker-timings.json`. Geen melding aan derden verzonden.
 - PR10 en productiecompatibele Inzicht-integratie blijven buiten deze vrijgave. Publicatie mag pas na afzonderlijke actuele afstemming; deze stagingreparatie is geen productieakkoord.
 
