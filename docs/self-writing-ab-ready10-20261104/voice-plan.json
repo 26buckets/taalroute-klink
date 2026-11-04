@@ -1,0 +1,30 @@
+{
+  "application": "Klink",
+  "authorization": "Nico: prepared source tasks online, missing necessary audio through ElevenLabs; current continue publication instruction; no duplicate media.",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "0qLmDzgqulxcvv0yf3kg",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 100,
+  "buyExtraCredits": false,
+  "characters": 8,
+  "seed": 42,
+  "scope": "Only missing isolated target word bedankje from source item 010; history 37 pages exhausted with no standalone recording; existing instruction and all prior recordings retained.",
+  "clips": [
+    {
+      "id": "bedankje",
+      "text": "bedankje",
+      "title": "bedankje",
+      "role": "target",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "textSha256": "e124a47290c27fba1a301c69ae2c7b71cbc3dfe0677ea4ae5f4271c4f71949aa"
+    }
+  ]
+}

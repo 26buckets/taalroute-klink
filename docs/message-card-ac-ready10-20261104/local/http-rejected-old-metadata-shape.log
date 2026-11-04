@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+[TypeError: Failed to parse URL from http://127.0.0.1:19107undefined] {
+  [cause]: TypeError: Invalid URL
+      at new URL (node:internal/url:840:25)
+      at new Request (node:internal/deps/undici/undici:12523:25)
+      at fetch (node:internal/deps/undici/undici:13487:25)
+      at fetch (node:internal/deps/undici/undici:18382:10)
+      at fetch (node:internal/bootstrap/web/exposed-window-or-worker:83:12)
+      at file:///private/tmp/klink-message-card-ac-ready10-20261104/scripts/test-message-card-ac-ready10-http.mjs:4:182
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    code: 'ERR_INVALID_URL',
+    input: 'http://127.0.0.1:19107undefined'
+  }
+}
+
+Node.js v26.4.0

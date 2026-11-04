@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:19164/#learner/chapters/writing/sentence-dictation/klink10%3Asentence-dictation%3Aalfa-c%3An26r2%3A20261103?level=alfa-c&help=practice
+Call log:
+[2m  - navigating to "http://127.0.0.1:19164/#learner/chapters/writing/sentence-dictation/klink10%3Asentence-dictation%3Aalfa-c%3An26r2%3A20261103?level=alfa-c&help=practice", waiting until "load"[22m
+
+    at /private/tmp/klink-dictation-ac-ready10-20261104/scripts/test-dictation-ac-ready10-browser.mjs:19:14 {
+  log: [
+    '  - navigating to "http://127.0.0.1:19164/#learner/chapters/writing/sentence-dictation/klink10%3Asentence-dictation%3Aalfa-c%3An26r2%3A20261103?level=alfa-c&help=practice", waiting until "load"'
+  ],
+  name: 'Error'
+}
+
+Node.js v26.4.0

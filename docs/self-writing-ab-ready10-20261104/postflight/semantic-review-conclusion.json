@@ -1,0 +1,53 @@
+{
+  "reviewer": "Codex",
+  "existingOpenWritingQuestions": 328,
+  "semanticallyRelatedCandidatesInspected": 106,
+  "basis": "Current situation, required meaning, source criteria, model help and task scope; shared topic/model is not sufficient for replacing a source contract.",
+  "decisions": [
+    {
+      "new": "001",
+      "existing": [
+        "KSW-AB-SB-001",
+        "KSW-AC-TZ-005"
+      ],
+      "reason": "Existing B message explicitly requires today as an assessed element; C task targets a state with ben. New B source criteria are ik/ben/ziek and short sentence with model help. Related illness situation, not claimed new."
+    },
+    {
+      "new": "003",
+      "existing": [
+        "KSW-AC-TZ-022"
+      ],
+      "reason": "Existing C criterion explicitly requires both rain and outside. New B source asks weather with het/regent only; do not silently add the outside requirement."
+    },
+    {
+      "new": "006",
+      "existing": [
+        "KSW-AB-SB-002",
+        "KSW-AC-SB-001",
+        "KSW-AC-TZ-079"
+      ],
+      "reason": "Existing tasks require a cause, a delay duration, or a work/today context. New source only reports later arrival."
+    },
+    {
+      "new": "008",
+      "existing": [
+        "KSW-AC-TZ-006",
+        "KSW-AC-TZ-065",
+        "KSW-N26R2-AC-SO-004"
+      ],
+      "reason": "Related drink requests; current B source fixes water and ik wil, whereas other source contracts require an infinitive, a glass/request, or any drink preference."
+    },
+    {
+      "new": "010",
+      "existing": [
+        "KSW-AB-SB-015",
+        "KSW-AC-SB-051",
+        "KSW-AC-TZ-091"
+      ],
+      "reason": "Existing B message criterion explicitly thanks for help; C examples specify yesterday or a present. Current B short-sentence source accepts a general short thank-you (Dank je wel), with no required reason/details. Keep the exact source scope, do not call it a new situation."
+    }
+  ],
+  "otherSources": "002,004,005,007,009 have no interchangeable candidate with the same task requirements in the inspected existing open-writing banks.",
+  "result": "Ten source-bound question contracts; related scenarios are acknowledged, no ten-new-situations claim.",
+  "humanNT2ReviewPerformed": false
+}

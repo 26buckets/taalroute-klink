@@ -1,0 +1,48 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "initialPrompt": null,
+  "humanListeningPerformed": false,
+  "stressApprovalClaimed": false,
+  "clips": [
+    {
+      "id": "KLINK-N26R2-AC-FB-RINA",
+      "expected": "Rina.",
+      "recognized": " Rina",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.34,
+          "text": " Rina",
+          "tokens": [
+            50365,
+            497,
+            1426,
+            50415
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6499643802642823,
+          "compression_ratio": 0.3333333333333333,
+          "no_speech_prob": 2.190687214964626e-11,
+          "words": [
+            {
+              "word": " Rina",
+              "start": 0.0,
+              "end": 0.34,
+              "probability": 0.759765625
+            }
+          ]
+        }
+      ],
+      "sha256": "4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70",
+      "duration": 0.7430625,
+      "peak": 0.5460997819900513,
+      "leadingSilence": 0.04,
+      "trailingSilence": 0.32,
+      "nonEmptyAudio": true,
+      "humanListeningPerformed": false
+    }
+  ]
+}

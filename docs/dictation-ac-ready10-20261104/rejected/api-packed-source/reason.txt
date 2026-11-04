@@ -1,0 +1,1 @@
+Packed-player validation intentionally permits only existing /package-audio/ sources. API-packed candidate was rejected before native playback and never published. Keep that validation unchanged. Offer the eleven exact original MP3 slices as individual content-hashed API assets instead. No audio re-encoding or new TTS.

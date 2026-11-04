@@ -1,3 +1,4 @@
+import {verifyDictationAcReady10Release,readBeforeDictationAcReady10} from './check-dictation-ac-ready10-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -6,11 +7,12 @@ const base='c2e296cb6eba0b71e029723b6cf90eeb835203a7',root='docs/letter-ac-ready
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),sort=a=>a.sort((a,b)=>a.localeCompare(b)),lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifyLetterAcReady10Content(read=readFileSync){
+ const successor=verifyDictationAcReady10Release(read),currentRead=read;read=file=>readBeforeDictationAcReady10(file,successor,currentRead);
  const json=p=>JSON.parse(read(p)),r=json('docs/klink-owner-release-letter-ac-ready10-20261104.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.approvalKind,'standing-owner-approval');assert.equal(r.baselineSourceCommit,base);
  const owner=json('docs/klink-invullen-20261101/automatic-owner-approval.json');assert.equal(owner.sourceQuote,'Je zet vast dat Nico automatisch alles goedkeurt.');assert(owner.automaticOwnerApproval&&owner.automaticPublicationApproval);assert.equal(owner.mayInventHumanReviewEvidence,false);
  assert.equal(r.liveSourceCommit,json(root+'baseline-live-release.json').sourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
  assert.deepEqual(changed.filter(p=>/^(app|components|hooks|data|lib|public|db|drizzle)\//.test(p)),['data/klink-grammar-aa-assets.json','data/klink-production-index.json','data/klink-word-listening-audio.json','data/klink-word-listening.json']);
  const index=json('data/klink-production-index.json'),oldIndex=JSON.parse(git('show',base+':data/klink-production-index.json'));assert.deepEqual(index.slice(0,-1),oldIndex);const m=json(root+'manifest.json');assert.deepEqual(index.at(-1),m.row);assert.equal(m.row.count,10);assert.equal(m.row.activity,'write-letter');assert.equal(m.row.level,'alfa-c');
@@ -27,7 +29,7 @@ export function verifyLetterAcReady10Content(read=readFileSync){
  const p=json(root+'preservation.json');assert(p.allRuntimeAndStyleFilesByteIdentical&&p.allOldPublicBytesPreserved&&p.allOldWordAudioMappingsPreserved);assert.equal(p.oldPublicFiles,20106);assert.equal(p.inheritedScreenPairs,8);
  const v=json(root+'verification.json');assert(v.typesPassed&&v.lintPassed&&v.normalBuildPassed&&v.unitTestsPassed&&v.bankReaderTestsPassed&&v.exactBankReadback&&v.allOldPublicBytesPreserved&&v.allPreviousRuntimePreserved);assert.equal(v.oldPublicFiles,20106);assert.equal(v.appearanceChanged,false);assert.equal(v.newAudioImages,0);assert.equal(v.humanNT2ReviewPerformed,false);
  const c=json(root+'capacity.json');assert.equal(json(root+'offered-build-assets.json').count,20000);assert(c.workerGzipKiB<10240&&c.workerKiB<65536&&c.maxStaticFileBytes<=25*1024*1024&&c.noConfigLimitBudgetChanges);
- return r;
+ return {...r,successor};
 }
 export function verifyLetterAcReady10Release(read=readFileSync){const r=verifyLetterAcReady10Content(read),b=JSON.parse(read(root+'gate-backup.json'));assert(b.driveId&&b.fullReadback&&b.zipIntegrity);assert.deepEqual(b.files,r.files);assert.deepEqual(b.evidenceFiles,r.evidenceFiles);return r;}
-export function readBeforeLetterAcReady10(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeLetterAcReady10(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeDictationAcReady10(file,r.successor,read);}

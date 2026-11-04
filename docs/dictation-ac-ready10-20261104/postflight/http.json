@@ -1,0 +1,53 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "src": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "case": "GET",
+      "bytes": 15150
+    },
+    {
+      "src": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "case": "HEAD",
+      "contentLength": "15150"
+    },
+    {
+      "src": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "case": "ETag304"
+    },
+    {
+      "src": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "case": "Range206"
+    },
+    {
+      "src": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "case": "Range416"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "case": "GET",
+      "bytes": 23599
+    },
+    {
+      "src": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "case": "HEAD",
+      "contentLength": "23599"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "case": "ETag304"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "case": "Range206"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "case": "Range416"
+    },
+    {
+      "case": "missing404"
+    }
+  ],
+  "exactBankAndPackedAudio": true
+}

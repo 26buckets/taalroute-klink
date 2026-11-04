@@ -1,3 +1,107 @@
+## Actuele publicatie — 36 woorddictees Spelling A1, A2 en B1 — 4 november 2026
+
+Livebron `1d053db52c07b02f8c3efe9dd86e7a6a16cbcee5`, Worker `8b44da9d-0cb0-4d02-a5d8-140ff3021eaf`, vanaf `a06134aa42fe8fe646e8abfa87709ff3bdaaa216` met behoud van de tien vernieuwde Alfa B-opdrachten. Zes rondes via Spelling → Hoor en typ en de bestaande dicteerroute van Schrijven. De 36 bron-ID’s zijn 1:1 de oefening- en antwoordsleutels. Bron, antwoordsleutel, feedback en criteria zijn vastgelegd in `docs/spelling-dictation-20261104`; de redactionele aanpassing voor ‘herinnering’ is afzonderlijk geregistreerd.
+
+Antwoord invoeren kan na afspelen. Bij een eerste fout antwoord verschijnt de bronfeedback met het juiste woord. Het eerste en laatste antwoord en concept blijven bewaard; opslag geeft geen beheersingsscore. Lokaal en live 144 antwoordstromen met native afspelen in twee browsers en twee schermbreedtes, plus 12 proeven op één blad. De eerdere dicteerbeoordeling en de tien Alfa B-bronvelden bleven behouden. Geen wijziging aan CSS, routeconfiguratie, Actions of database.
+
+De 37 bestaande opnamen zijn bytegelijk hergebruikt en live teruggelezen, inclusief merkmetadata en volledige audiodecode. Geen nieuwe opnamen of statische bestanden. 20000 statische bestanden aangeboden via de normale publicatieroute. De desktop-/mobiele controle heeft de lichte en donkere browserstand meegenomen; geen onafhankelijke menselijke NT2-/luisterreview of fysieke toestelproef geclaimd.
+
+Bron- en herstelback-up Drive `1DOdY-WNqnoR-59303dz4zIv4oSEgxm3W`: 2972501 bytes, 82 bestanden, SHA-256 `a0717c460888368aa4c8c267ad952b3e4e4687ab8a51e0d1880823dbd12ee056`. Eindbewijs Drive `1SslESG0KtJ7Z496pMY0NLEzZvO00uLpf`: 2986365 bytes, 17 bestanden, SHA-256 `5eda1af435c7120029a28ce263b1bfd0d54c09be6f739b2f21048c97dfb1d9c5`. Beide volledig teruggelezen met ZIP- en manifestcontrole. Deze bewijsopvolger niet opnieuw deployen.
+
+Spelling: 36/396 live en 360 open voor brongebonden afhandeling. Het zelfstandige Schrijven-register 140/540 en het eerdere 780/880-register zijn afzonderlijk; geen optelling. De 100 beeldgebonden schrijfopdrachten en overige bronreeksen staan in het afzonderlijke openwerkoverzicht.
+
+---
+
+## Actuele publicatie — tien Alfa B Schrijven oefenen — 4 november 2026
+
+Livebron `a06134aa42fe8fe646e8abfa87709ff3bdaaa216`, Worker `340d3e40-9eeb-4172-bc0c-32789395cff6`. KSW-N26R2-AB-SO-001 t/m 010 gepubliceerd via de volledige gewone publicatiepoort en `npm run deploy` vanuit schone canonieke main. Beide actuele Drive-documenten opnieuw volledig bytegelijk teruggelezen. Alle tien situatiegerichte instructies en voorbeeldfeedback vervangen de oude overschrijfinstructies; modellen en criteria behouden. De selectie bevat extra review-/slotmetadata, geen afwijkende taakvelden. 328 bestaande open schrijftaken vergeleken: tien nieuwe brongebonden vragen, geen claim van tien unieke nieuwe situaties.
+
+Eigen tekst eerst bewaren; voorbeelden pas daarna. Alternatieve formuleringen blijven toegestaan, eerste/laatste tekst en concepten blijven bewaard, zelf-/docentcontrole blijft nodig. Opslag geeft geen beheersingsscore. Lokaal en live veertig antwoord-/concept-/eerste-laatste-herlaadstromen, vier rondes, vier native instructieafrondingen en 22 native woordknopafrondingen. Twaalf betrokken audiobestanden exact aangeboden met Taalroute-metadata en volle decode; acht HTTP-/payloadgevallen geslaagd. Alle vier oorspronkelijke livecontexten geslaagd; geen herstart van afgeronde stromen.
+
+De gewone prebuild vond één ontbrekend woord: ‘bedankje’. Na uitgeputte zoeking door 37 ElevenLabs-historiepagina's zonder losse opname is uitsluitend dit woord eenmaal gemaakt: acht tekens, Remko `0qLmDzgqulxcvv0yf3kg`, gescheiden van Roland-instructie `h6uBOiAjLKklte8hdYio`. Bestaande opnamen volledig behouden; merkmetadata van het nieuwe afleverbestand verliesloos toegevoegd en audiopakketten gelijk gecontroleerd. Geen betaalde uitbreiding, geen nieuwe beelden. Eerste afgewezen buildlog en testnotitie over CRLF versus Python-tekstnormalisatie bewaard; daadwerkelijke Drive-bytes exact gelijk.
+
+Alle runtime, CSS, routes, opslagcode, oude woordaudio-koppelingen en 20.106 oude publicbestanden behouden. Alleen bronbank/menu, één woordopname via bestaande media-API en noodzakelijke bronregisters toegevoegd. Acht oude pixelgelijke schermparen blijven toepasbaar door exact behoud; nieuwe desktop-/mobielschermen apart gezien. Types, gerichte lint, inhoud/opslag, zes bank-/hoofdstuktests, gewone build/dry-run en zes negatieve vrijgaveproeven geslaagd. De 48 eerder bekende brede lintmeldingen niet opnieuw onderzocht; geen brede lintclaim. Geen config-, ignore-, limiet-, budget-, D1- of GitHub Actions-wijziging. Werkelijk 17 nieuw + 19983 behouden = 20.000 assets; Worker 36098.32 KiB / gzip 6121.86 KiB.
+
+Bronback-up Drive `1kkfbXOwNapHluID2Fc6O5c4NAm8tWeu4`: 3374122 bytes, 82 payloads exact teruggelezen. Eindbewijs Drive `1_HqEbI9zea0pTStRRMUomPk3YUzPlwF8`: 4095668 bytes, SHA `013ac51f224946acbc3846161f4846768f0d9cad18498c2f7be3c88d49ba260b`; hele ZIP, buitenste en geneste payloads plus manifesten exact teruggelezen. Bewijs in `docs/self-writing-ab-ready10-20261104/postflight`. Deze bewijsopvolger niet opnieuw deployen.
+
+Schrijven 140/540 bronposities behandeld: 78 nieuw, 52 hergebruikt en 10 herzien; extern 780/880 apart. Algemene categorieën: 594 liveVerifiedThisTask, 82 bestaande bronposities, 30 herziene bronposities, 10 pakketaliases en 2.894 nog niet geverifieerd; samen 3.610. De zeven voorbereide schrijfreeksen van elk tien zijn hiermee afgerond (68 nieuw, 2 hergebruik). Overige Drive-dossiers blijven in de brongebonden wachtrij; stem de B1-dicteevergelijking af met IMPLEMENTEREN om dubbelwerk te voorkomen. Aanvullende grammatica blijft 16/40 live en 24 open; woordbeeldenachterstand 232. Geen nieuwe menselijke luister-/NT2-review of fysieke-apparaatproef geclaimd.
+
+---
+
+## Actuele publicatie — tien Alfa B-berichtkaarten — 4 november 2026
+
+Livebron `3f022f07aecbd233b5f956c1dac474704e27efeb`, Worker `28465244-d5f0-4cf7-b2c7-35313558c924`. KSW-N26R2-AB-FB-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Beide actuele Drive-bronnen volledig gelezen en opnieuw identiek teruggelezen; de tien betrokken bronblokken zijn behouden. Met 150 bestaande formulieropdrachten vergeleken zonder equivalente koppeling. Tien bronposities en tien nieuwe vragen, geen claim van tien unieke nieuwe situaties.
+
+De bestaande formulier-speler controleert afzender en bericht afzonderlijk. Eerste en laatste antwoorden en concepten blijven bewaard; onbekende schrijfvarianten blijven bespreekwerk, opslag geeft geen beheersingsscore. Lokaal en live veertig antwoord-/herlaadstromen, vier rondes, vier native instructieafrondingen en twee native Rina-woordknopafrondingen. Twee bestaande aangeboden opnamen exact teruggelezen met Taalroute-metadata en volledige decode; elf HTTP-gevallen geslaagd. Alle vier oorspronkelijke livecontexten geslaagd; geen herstart van afgeronde stromen.
+
+Alle runtime, CSS, routes, opslagcode, woordaudio-koppelingen en 20.106 oude publicbestanden bytegelijk behouden. Acht bestaande pixelgelijke schermparen blijven daardoor toepasselijk; nieuwe schermen op desktop en mobiel apart gecontroleerd. Types, gerichte lint, inhouds-/antwoordtests, zes bank-/hoofdstuktests, gewone build/dry-run en zes negatieve vrijgaveproeven geslaagd. De eerdere 48 brede lintmeldingen in oude code niet opnieuw onderzocht; geen brede lintclaim. Geen nieuwe TTS, hercodering, beelden, configuratie-, ignore-, limiet-, budget-, D1- of Actions-wijzigingen. Werkelijk 15 nieuwe + 19985 behouden = 20.000 assets; Worker 36058.9 KiB / gzip 6102.56 KiB.
+
+Bronback-up Drive `1AfIz8DkNHvJ74j5Z6mnGXQjXyvo2nuSo`: 2318133 bytes, 53 payloads exact teruggelezen. Eindbewijs Drive `11QFMbJma_-2ypTVf8gznghhtHBQivwN1`: 2730805 bytes, SHA `86de056db8b4b9c28eeb7ec1a5abf08370c3de7f05baa851416b69a4dca7b3bf`; alle buitenste en geneste payloads plus manifesten en hele ZIP exact teruggelezen. Bewijs in `docs/message-card-ab-ready10-20261104/postflight`. Deze bewijsopvolger niet opnieuw deployen.
+
+Schrijven 130/540 bronposities behandeld: 68 nieuw, 52 hergebruikt en 10 herzien; extern 780/880 blijft apart. Algemene categorieën: 584 liveVerifiedThisTask, 82 bestaande bronposities, 30 herziene bronposities, 10 pakketaliases en 2.904 nog niet geverifieerd; samen 3.610. Nog tien voorbereide Alfa B Schrijven oefenen-opdrachten; actuele gewijzigde broninstructies en feedback eerst reconciliëren. Niet op de 24 resterende aanvullende grammaticaopdrachten wachten. Woordbeeldenachterstand 232 ongewijzigd. Geen nieuwe onafhankelijke menselijke luister-/NT2-review of fysieke-apparaatproef geclaimd.
+
+---
+
+## Actuele publicatie — tien Alfa C Schrijven oefenen-bronposities — 4 november 2026
+
+Livebron `14a1ba102cd464845222cfa6778319c596edf2fe`, Worker `97802d75-a115-4783-848b-78677f65961e`. KSW-N26R2-AC-SO-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Acht nieuwe vragen en twee broninhoudelijk equivalente bestaande vragen, KSW-AC-TZ-025 en KSW-AC-SB-002, met dezelfde antwoordopslag. Geen claim van tien unieke nieuwe situaties. Alle vier actuele Drive-bronnen volledig gelezen; betrokken instructies, modellen en criteria ongewijzigd. Vergelijking met 320 bestaande open schrijftaken uit 48 collecties en de eerdere inhoudelijke equivalentiecontrole vastgelegd.
+
+Eigen tekst wordt vóór vergelijking bewaard; voorbeelden blijven vooraf verborgen. Eerste en laatste teksten en concepten blijven apart. Natuurlijke alternatieven en zelf-/docentcontrole behouden; alleen deelname, geen automatische taalbeheersing of exclusieve modelstring. Bestaande speler, uiterlijk, routes, media, opslagcode en alle 20.106 oude publicbestanden bytegelijk. Acht eerder pixelgelijke schermparen blijven geldig wegens exact dezelfde runtime en oude inhoud; nieuwe schermen apart gecontroleerd. Geen nieuwe TTS, hercodering, beelden, configuratie, ignore-, limiet-, budget-, D1- of Actions-wijzigingen.
+
+Lokaal en live veertig antwoord-/concept-/eerste-laatste-herlaadstromen, vier rondes, acht overgangen naar de oorspronkelijke opdrachten en twaalf native instructieafrondingen. De drie werkelijk aangeboden oorspronkelijke Roland-opnamen exact teruggelezen met Taalroute-metadata en volledige decode; negen HTTP-/payloadgevallen geslaagd. Eerste livepoging voltooide tien mobiele Chrome-stromen, één ronde, drie afspeelbeurten en twee opslagovergangen; daarna timeout van 30 seconden bij het openen van de eerste desktopopdracht, zonder pageerrors. Alleen de overige dertig stromen daarna ongewijzigd voltooid, zonder ruimere timeout. Oorzaak eerste timeout onbekend; eerste logs en aanvullende diagnostiek behouden.
+
+Types, gerichte lint, inhouds-/banktests, gewone build, capaciteit en zes negatieve vrijgaveproeven geslaagd. De brede lint meldt 48 bestaande fouten in ongewijzigde gemelde code; dit is geen claim van een schone brede lint. Een test-only verwachting voor een historische parent-baseline is gecorrigeerd; productieguard onveranderd. Werkelijk 15 nieuwe + 19985 behouden = 20.000 assets; Worker 36030.54 KiB / gzip 6101.58 KiB.
+
+Bronback-up Drive `1Iu2a1Qh8RM12u9Rx3svjJqTLdd0Fl-vg`: 2.688.903 bytes, 60 payloads volledig teruggelezen. Eindbewijs Drive `1vnqH_4-ovtWe59l5YJ5fN7Od36qFYzLF`: 3.488.110 bytes, SHA `99d6603113924a6a4ad62248ce646e6085867e9b6fdce6bd707e77522865e032`; 26 buitenste en 60 geneste payloads, manifesten en hele ZIP exact gecontroleerd. Bewijs in `docs/self-writing-ac-ready10-20261104/postflight`. Deze bewijsopvolger niet opnieuw deployen.
+
+Schrijven 120/540 bronposities behandeld: 58 nieuw, 52 hergebruikt en 10 herzien. Extern 780/880 blijft apart. Algemene categorieën: 574 liveVerifiedThisTask, 82 bestaande bronposities, 30 herziene bronposities, 10 pakketaliases en 2.914 nog niet geverifieerd; samen 3.610. Nog twintig voorbereide schrijftaken: Alfa B-berichtkaarten en Alfa B Schrijven oefenen. Deze niet op de 24 resterende aanvullende grammaticaopdrachten laten wachten. Woordbeeldenachterstand 232 ongewijzigd. Geen onafhankelijke menselijke NT2-/luisterreview of fysieke-apparaatproef geclaimd.
+
+---
+
+## Actuele publicatie — tien Alfa C-berichtkaarten — 4 november 2026
+
+Livebron `71454640a28a44d0cae8439a96b3bd394f3b4883`, Worker `02b91966-21f7-4716-aa30-8a2a5e9cde55`. KSW-N26R2-AC-FB-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Vul een berichtkaart in gebruikt de bestaande bronformulier-speler: afzender en bericht worden afzonderlijk gecontroleerd, eerste en laatste invoer en concepten behouden. Andere schrijfwijzen blijven zo nodig bespreekwerk; opslag is geen beheersingsscore. Beide actuele Drive-bronnen volledig opnieuw gelezen en alle tien bronvelden ongewijzigd; 140 bestaande formuliertaken op equivalentie vergeleken.
+
+Lokaal en live veertig antwoord-/herlaadstromen, vier volledige rondes, vier native instructie-afrondingen en twee native Rina-woordknopafrondingen. Elf HTTP-gevallen en de twee rechtstreeks betrokken opnamen exact met Taalroute-metadata en decodes gecontroleerd. Geen nieuwe TTS, hercodering of beelden. Eerste lokale media-/HTTP-proeven gebruikten een oud metadataveld en zijn uitsluitend in de tests gecorrigeerd; oorspronkelijke logs behouden. Live voltooide de eerste poging tien mobiele Chromium-stromen, daarna tweemaal een timeout bij het openen van de eerste desktopopdracht, zonder pageerrors. Een afzonderlijke diagnostische opening slaagde; de oorzaak van de eerdere timeouts is niet vastgesteld. Alleen de overige dertig stromen daarna ongewijzigd afgerond, zonder ruimere timeout. Alle mislukte proeven behouden.
+
+Alle componenten, CSS, routes, opslagcode, bestaande banken, woordaudio-koppelingen en 20.106 oude publicbestanden bytegelijk. Acht eerder bewezen schermparen blijven toepasselijk wegens exact dezelfde runtime en oude inhoud; de nieuwe schermen zijn apart gecontroleerd. Gewone brongebonden opvolgpoort en zes negatieve manipulatieproeven geslaagd. Werkelijk 15 nieuwe + 19.985 behouden = 20.000 assets; Worker 36010.34 KiB / gzip 6099.76 KiB. Geen configuratie-, ignore-, limiet-, budget-, D1- of GitHub Actions-wijzigingen.
+
+Bronback-up Drive `1SZ2ZXxz3Vsbbg_9gztxlRBWoFHM-LbOR`: 3.902.524 bytes, 61 payloads volledig teruggelezen. Eindbewijs Drive `1sJp0-jqcyQfSNEeqjVmHP06UIEus4GtM`: 4.374.247 bytes, SHA `2c7190c7ca38858382c85c2dd499781ead4f110ae199d83971bfbe6910e493d9`; 30 buitenste en 61 geneste payloads plus manifesten en hele ZIP exact. Bewijs in `docs/message-card-ac-ready10-20261104/postflight`. Deze bewijsopvolger niet opnieuw deployen.
+
+Schrijven 110/540 bronposities behandeld: 50 nieuw, 50 hergebruikt en 10 herzien; externe 780/880 blijft apart. Nog dertig voorbereide schrijftaken: Alfa C Schrijven oefenen, Alfa B-berichtkaarten en Alfa B Schrijven oefenen. De actuele bronnen opnieuw reconciliëren, vooral gewijzigde instructies en feedback; geen oude kandidaat publiceren. Aanvullende grammatica 16/40 live, 24 open; woordbeeldenachterstand 232 ongewijzigd. Geen onafhankelijke menselijke luister-/NT2-review of fysieke-apparaatproef uitgevoerd.
+
+---
+
+## Actuele publicatie — tien Alfa C-zinnendictees — 4 november 2026
+
+Livebron `d22ac40961200ae8dbdc26a175e239d91ce8fed9`, Worker `b19d3cb2-f3b8-4eb1-8f98-886ec82b2a2c`. KSW-N26R2-AC-TZ-001 t/m 010 zijn gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. De doelzin blijft verborgen vóór het nakijken; expliciete toegestane antwoordvarianten worden geaccepteerd, inclusief acht/8 uitsluitend waar de bron dat toelaat. Eerste/laatste antwoorden en concepten blijven bewaard. De bestaande invoeropzet blijft staan. Dit zijn tien bronposities, geen claim van tien unieke nieuwe situaties of handschriftvaardigheid.
+
+Elf bestaande opnamen hergebruikt als exacte MP3-segmenten via de bestaande media-API; nul nieuwe TTS, hercodering of beelden. De oorspronkelijke bundel blijft herstelbron. Instructie Roland en doelstem Remko blijven verschillend. De oorspronkelijke controle op toegestane gebundelde audio-URL's is behouden. Een eerdere lokale kandidaat met een ongeschikte gebundelde API-URL is afgewezen en bewaard; die versie is nooit gepubliceerd.
+
+Lokaal en live veertig antwoord-/opslagstromen, waaronder vier concept-herlaadstromen, 22 native afspeelafrondingen, elf exacte aangeboden opnamen met Taalroute-metadata en elf HTTP-gevallen geslaagd. Lokaal acht oude schermparen pixelgelijk en zestien oude antwoord-/opslagstromen behouden. Eerste afwijkende opnamen vóór het einde van knoptransities zijn bewaard; gerichte vervolgvergelijkingen gebruiken geen masker of tolerantie. Alle 20.106 oude publicbestanden bytegelijk; uitsluitend de expliciete antwoordvariantreparatie raakt gedeelde runtime, alle overige componenten, CSS, routes, opslag en oude audio behouden. Vijf historische inhoudsmarkeringen live gelijk. Gewone opvolgpoort en zes negatieve mutatieproeven slagen; geen historisch akkoord gewijzigd.
+
+Werkelijk 17 nieuwe + 19.983 behouden = 20.000 aangeboden assets; Worker 35981.39 KiB / gzip 6098.46 KiB. Geen configuratie-, ignore-, limiet-, budget-, D1- of GitHub Actions-wijzigingen. Lokale start-/bouwfouten zijn behouden; uitsluitend de afgeronde gebouwde-Worker-proeven tellen.
+
+Bronback-up Drive `1Od5JiFHVV5YqnST0bL-DGSzhx2gSFp3D`: 3.723.764 bytes, 105 payloads exact teruggelezen. Eindbewijs Drive `19jjUQ_i7iQ6P-TjeBxumalZ2RUEbRfvb`: 4.195.176 bytes, 30 buitenste en 105 geneste payloads plus manifesten en hele ZIP exact teruggelezen. Zie `docs/dictation-ac-ready10-20261104/postflight/publication.json` en `backup-readback.json`. Deze docs-opvolger niet opnieuw deployen.
+
+Schrijven 100/540 bronposities behandeld: 40 nieuw, 50 hergebruikt en 10 herzien; externe 780/880 blijft apart. Nog veertig voorbereide schrijftaken; volgende reeks: Alfa C Vul een berichtkaart in. Aanvullende grammatica blijft 16/40 live, 24 open; woordbeeldenachterstand 232. Geen nieuwe onafhankelijke menselijke luister-/NT2-review of fysieke-apparaatproef uitgevoerd. Performance-PR10 en Inzicht-PR1 blijven buiten deze publicatie.
+
+---
+
+## Actuele publicatie — tien Alfa C-letteropdrachten — 4 november 2026
+
+Livebron `054739501d803509844d5c0c18e0e77ec7b8b098`, Worker `d0256c10-4a8d-4070-b272-311a42acdc92`. KSW-N26R2-AC-WL-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Schrijf de letter · Namen vraagt de eerste hoofdletter van de bestaande naam of plaats. Tien nieuwe brongebonden vragen; geen claim van nieuwe unieke namen, handschriftvaardigheid of zelfstandig lezen. Bestaande opnamen hergebruikt, inclusief de al voorbereide Rina-opname; nul nieuwe TTS, hercodering of beelden.
+
+Lokaal en live elk veertig antwoord-, concept-, eerste/laatste-poging- en herlaadstromen; afzonderlijk 22 native afspeelafrondingen en elf exacte audiobestanden met gecontroleerde Taalroute-metadata. Elf HTTP-gevallen voor de exacte bank en Rina-opname, inclusief HEAD/ETag/Range/404/416. De eerste live ETag-vergelijking gebruikte verschillende contentcoderingen; de gerichte proef met overal identity slaagt. Geen appwijziging voor deze testcorrectie. Antwoordproeven gebruiken gesimuleerde audio; native proeven gebruiken echte audio.
+
+Alle componenten, CSS, routes en opslagcode bytegelijk; acht eerder gecontroleerde schermparen blijven toepasselijk en nieuwe schermen afzonderlijk gecontroleerd. Alle 20.106 oude publicbestanden en bestaande woordaudio-koppelingen behouden. Werkelijk 17 geüpload + 19983 ongewijzigd = 20.000 assets; Worker 35579.65 KiB / gzip 5814.75 KiB. Geen configuratie-, limiet-, budget-, D1- of GitHub Actions-wijzigingen. De gewone afgeleide woordaudio-index is bijgewerkt; de historische poortlezers geven de eerdere bytes correct door. Oude akkoorden/hashes niet aangepast; negatieve en gerichte regressieproeven geslaagd.
+
+Bronback-up Drive `1avpZVkIuvSk2IAxgfBDalkPIDNgYHTox`: 2.631.084 bytes, 67 payloads volledig teruggelezen. Eindbewijs Drive `15LPaqT0ZdGQcbZKrYUjvngilgdii8tyl`: 3028784 bytes; 32 buitenste en 67 geneste payloads plus manifesten exact. Bewijs `docs/letter-ac-ready10-20261104/postflight/publication.json` en `backup-readback.json`. Deze docs-opvolger niet opnieuw deployen.
+
+Nog vijftig voorbereide schrijftaken, te beginnen met het Alfa C-zinnendictee. Schrijven 90/540 bronposities behandeld; externe registers blijven apart. Aanvullende grammatica blijft 16/40 live en 24 open; woordbeeldenachterstand 232. Geen nieuwe menselijke luister-/NT2-review of fysieke-apparaatproef uitgevoerd. Performance-PR10 en Inzicht-PR1 niet meegenomen.
+
+---
+
 ## Actuele publicatie — tien Alfa B-letteropdrachten — 4 november 2026
 
 Livebron `8fb4f0203861e8bf24142b7ded2cb6f566f119a3`, Worker `06d25f68-2bca-4814-bca4-2876de010d79`. Tien bronopdrachten KSW-N26R2-AB-WL-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. In Schrijf de letter · Letters in woorden typt de cursist de gevraagde kleine letter. Bestaande contextaudio en opnamebytes hergebruikt; nul nieuwe audio of beelden. Dit bewijst geen handschriftvaardigheid of nieuwe unieke letters.

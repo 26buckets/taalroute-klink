@@ -1,0 +1,2 @@
+Initial browser/media commands ran before the built local Worker accepted connections. No flows were completed. The local-only polling environment starts the same built Worker; production configuration was not changed. Retain these failed attempts; they are not successful checks.
+A rebuild overlapped the local Worker watching its generated dist directory and failed ENOTEMPTY; its follow-on dry run had no complete build. Stopped the local Worker before rebuilding. No production or configuration change.
