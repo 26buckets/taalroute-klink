@@ -18,8 +18,8 @@ for (const name of ['practice-workspace', 'teacher-classroom', 'learner-app', 's
   assert(client.some(file => workspaceModule.test(file)), `${name} must remain available in the browser`);
 }
 const hash = file => createHash('sha256').update(readFileSync(file)).digest('hex');
-// Build provenance changes for each source commit; media must remain identical.
-const publicFiles = files('public').filter(file => file !== 'release.json');
+// Build provenance and separately tested header policy are not media.
+const publicFiles = files('public').filter(file => !['release.json', '_headers'].includes(file));
 for (const file of publicFiles) {
   assert.equal(hash(`dist/client/${file}`), hash(`${before}/client/${file}`), `Preserve public media: ${file}`);
 }

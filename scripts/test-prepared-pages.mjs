@@ -20,7 +20,7 @@ assert(files.length <= 20000, `Asset budget exceeded: ${files.length}`);
 let preservedAssets = 0;
 for (const path of globSync('**/*', { cwd: baseline + '/client', dot: true })) {
   // Generated bundles and prepared responses change with the build; preserve source assets.
-  if (!statSync(baseline + '/client/' + path).isFile() || path.startsWith('_next/') || path.startsWith('_vinext/') || ['release.json', 'vinext-client-entry-manifest.json'].includes(path)) continue;
+  if (!statSync(baseline + '/client/' + path).isFile() || path.startsWith('_next/') || path.startsWith('_vinext/') || ['release.json', '_headers', 'vinext-client-entry-manifest.json'].includes(path)) continue;
   const hash = root => createHash('sha256').update(readFileSync(root + '/client/' + path)).digest('hex');
   assert.equal(hash('dist'), hash(baseline), `Changed existing content/media: ${path}`);
   preservedAssets++;
