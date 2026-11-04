@@ -64,11 +64,12 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         rows.push({ engine, width, scenario: scenario.name, repeat, visit, readyMs: ready, nextMs, ...stats });
         // Reset only the synthetic lesson choice, retain the browser HTTP cache.
         if (scenario.name === 'docent') await page.getByRole('button', { name: 'Lesoverzicht', exact: true }).click();
-        writeFileSync(out + '/measurements.json', JSON.stringify({ base, release, measuredAt: new Date().toISOString(), network: 'local loopback, no CPU/network emulation', readyClock: 'in-page MutationObserver after visible target and removed loader; nextMs includes automation interactions', rows, errors }, null, 2));
+        writeFileSync(out + '/measurements.json', JSON.stringify({ base, release, measuredAt: new Date().toISOString(), network: new URL(base).hostname === '127.0.0.1' ? 'local loopback, no CPU/network emulation' : 'real production network, no interception or CPU/network emulation; sequential before/after comparison', readyClock: 'in-page MutationObserver after visible target and removed loader; nextMs includes automation interactions', rows, errors }, null, 2));
       }
       await context.close();
     }
   } finally { await browser.close(); }
 }
 assert.deepEqual(errors, []);
+assert.deepEqual(await fetch(base + '/release.json').then(r => r.json()), release, 'The deployed source must remain stable throughout measurement');
 console.log(`PASS ${rows.length} cold/warm measurements; ${out}`);
