@@ -1,0 +1,50 @@
+{
+  "accountId": "5548b64f545259bf01dbaac8d8defd1b",
+  "workersSubdomain": {
+    "subdomain": "nico-554"
+  },
+  "workers": [
+    {
+      "id": "klink-inzicht-pr8-staging",
+      "modified_on": "2026-11-03T23:15:19.301973Z"
+    },
+    {
+      "id": "klink-legacy-redirect",
+      "modified_on": "2026-10-14T17:32:37.449194Z"
+    },
+    {
+      "id": "taalroute-klink",
+      "modified_on": "2026-11-04T19:17:24.644397Z"
+    },
+    {
+      "id": "taalroute-klink-inzicht",
+      "modified_on": "2026-11-04T18:52:20.8479Z"
+    }
+  ],
+  "databases": [
+    {
+      "uuid": "6bbdaabc-8098-4a75-91e5-96984382e7ee",
+      "name": "klink-inzicht-pr8-restore",
+      "jurisdiction": "eu",
+      "version": "production"
+    },
+    {
+      "uuid": "95f1de18-0c61-46ca-b2af-5ee36543f67f",
+      "name": "klink-inzicht-pr8-staging",
+      "jurisdiction": "eu",
+      "version": "production"
+    },
+    {
+      "uuid": "dc92506d-5bc3-465d-8a89-9d929b94208e",
+      "name": "taalroute-klink-inzicht",
+      "jurisdiction": "eu",
+      "version": "production"
+    },
+    {
+      "uuid": "0e67ae90-83e1-4506-af60-287a40bf08ef",
+      "name": "taalroute-klink",
+      "jurisdiction": null,
+      "version": "production"
+    }
+  ]
+}

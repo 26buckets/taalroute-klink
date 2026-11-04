@@ -19,7 +19,8 @@ const files = globSync('**/*', { cwd: 'dist/client', dot: true }).filter(p => st
 assert(files.length <= 20000, `Asset budget exceeded: ${files.length}`);
 let preservedAssets = 0;
 for (const path of globSync('**/*', { cwd: baseline + '/client', dot: true })) {
-  if (!statSync(baseline + '/client/' + path).isFile() || path.startsWith('_next/') || ['release.json', 'vinext-client-entry-manifest.json'].includes(path)) continue;
+  // Generated bundles and prepared responses change with the build; preserve source assets.
+  if (!statSync(baseline + '/client/' + path).isFile() || path.startsWith('_next/') || path.startsWith('_vinext/') || ['release.json', 'vinext-client-entry-manifest.json'].includes(path)) continue;
   const hash = root => createHash('sha256').update(readFileSync(root + '/client/' + path)).digest('hex');
   assert.equal(hash('dist'), hash(baseline), `Changed existing content/media: ${path}`);
   preservedAssets++;
@@ -59,5 +60,5 @@ for (const path of ['/api/attempts', '/api/review-items']) for (const method of 
 const head = await fetch(base + '/', { method: 'HEAD' });
 assert.equal(head.status, 200);
 assert.equal(await head.text(), '');
-writeFileSync('docs/document-wait-20261104/prepared-pages.json', JSON.stringify({ rendered, buildId: manifest.buildId, assets: files.length, preservedAssets, checks, head: true }, null, 2));
+writeFileSync(process.env.KLINK_PREPARED_PAGES_OUTPUT || 'docs/document-wait-20261104/prepared-pages.json', JSON.stringify({ rendered, buildId: manifest.buildId, assets: files.length, preservedAssets, checks, head: true }, null, 2));
 console.log(`PASS prepared pages: ${checks.length + 1} request checks; ${preservedAssets} existing assets byte-identical; ${files.length}/20000 assets`);

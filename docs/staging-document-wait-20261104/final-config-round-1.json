@@ -1,0 +1,80 @@
+[
+  {
+    "version": "baseline",
+    "root": "/Users/nicoknoester/.cache/klink-staging-baseline-source-20261104/dist",
+    "commit": "27b78204e2fa317cbf0cd650b45495d7430203a8",
+    "round": 1,
+    "assets": 19999,
+    "config": {
+      "name": "klink-pr12-baseline",
+      "main": "/Users/nicoknoester/.cache/klink-staging-baseline-source-20261104/dist/server/index.js",
+      "compatibility_date": "2026-05-15",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "no_bundle": true,
+      "rules": [
+        {
+          "type": "ESModule",
+          "globs": [
+            "**/*.js",
+            "**/*.mjs"
+          ]
+        }
+      ],
+      "assets": {
+        "directory": "/Users/nicoknoester/.cache/klink-staging-baseline-source-20261104/dist/client",
+        "binding": "ASSETS"
+      },
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "observability": {
+        "enabled": true
+      },
+      "vars": {
+        "KLINK_STAGING_ROUND": "final-1"
+      }
+    },
+    "configSha256": "72a955ac5edbd51da36e743c6187cfdbd4ff69a919c133eef716d4c8f3b7c6ae"
+  },
+  {
+    "version": "candidate",
+    "root": "/Users/nicoknoester/.cache/klink-network-peaks-20261104/dist",
+    "commit": "c266bef2739509be3dc08d606a461fc978d6c759",
+    "round": 1,
+    "assets": 20000,
+    "config": {
+      "name": "klink-pr12-candidate",
+      "main": "/Users/nicoknoester/.cache/klink-network-peaks-20261104/dist/server/index.js",
+      "compatibility_date": "2026-05-15",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "no_bundle": true,
+      "rules": [
+        {
+          "type": "ESModule",
+          "globs": [
+            "**/*.js",
+            "**/*.mjs"
+          ]
+        }
+      ],
+      "assets": {
+        "directory": "/Users/nicoknoester/.cache/klink-network-peaks-20261104/dist/client",
+        "binding": "ASSETS"
+      },
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "observability": {
+        "enabled": true
+      },
+      "vars": {
+        "KLINK_STAGING_ROUND": "final-1"
+      }
+    },
+    "configSha256": "5dedabbea090f5e14694c7815097f6b134a2d01fe12714bb0267b8e17bbf64f9"
+  }
+]

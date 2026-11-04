@@ -1,0 +1,31 @@
+{
+  "name": "klink-pr12-candidate",
+  "main": "/Users/nicoknoester/.cache/klink-network-peaks-20261104/dist/server/pr12-diagnostic.mjs",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": [
+        "**/*.js",
+        "**/*.mjs"
+      ]
+    }
+  ],
+  "assets": {
+    "directory": "/Users/nicoknoester/.cache/klink-network-peaks-20261104/dist/client",
+    "binding": "ASSETS"
+  },
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "KLINK_STAGING_ROUND": "diagnostic"
+  }
+}

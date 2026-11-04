@@ -1,0 +1,200 @@
+[
+  {
+    "id": "diag-candidate-0-ping",
+    "path": "/__staging-ping",
+    "repeat": 0,
+    "startedAt": 1793832407621,
+    "endedAt": 1793832409201,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 1570.7089999999998,
+    "tlsMs": 27.172,
+    "headers": {
+      "cache-control": "no-store",
+      "server-timing": "ping;dur=0",
+      "cf-ray": "a55728241c0bd919-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-0-page",
+    "path": "/",
+    "repeat": 0,
+    "startedAt": 1793832409202,
+    "endedAt": 1793832411094,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 1883.783,
+    "tlsMs": 25.076999999999998,
+    "headers": {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "server-timing": "appImport;dur=0.00, appHandler;dur=51.00",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a557282df99d9875-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-1-page",
+    "path": "/",
+    "repeat": 1,
+    "startedAt": 1793832411094,
+    "endedAt": 1793832414618,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 3513.14,
+    "tlsMs": 43.469,
+    "headers": {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "server-timing": "appImport;dur=0.00, appHandler;dur=88.00",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a5572839ee1b1c96-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-1-ping",
+    "path": "/__staging-ping",
+    "repeat": 1,
+    "startedAt": 1793832414619,
+    "endedAt": 1793832416437,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 1808.933,
+    "tlsMs": 29.003999999999998,
+    "headers": {
+      "cache-control": "no-store",
+      "server-timing": "ping;dur=0",
+      "cf-ray": "a557284fdd88339e-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-2-ping",
+    "path": "/__staging-ping",
+    "repeat": 2,
+    "startedAt": 1793832416437,
+    "endedAt": 1793832419622,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 3172.482,
+    "tlsMs": 34.048,
+    "headers": {
+      "cache-control": "no-store",
+      "server-timing": "ping;dur=0",
+      "cf-ray": "a557285b3e4a6704-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-2-page",
+    "path": "/",
+    "repeat": 2,
+    "startedAt": 1793832419622,
+    "endedAt": 1793832419839,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 205.683,
+    "tlsMs": 33.122,
+    "headers": {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "server-timing": "appImport;dur=0.00, appHandler;dur=65.00",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a557286f283c669d-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-3-page",
+    "path": "/",
+    "repeat": 3,
+    "startedAt": 1793832419839,
+    "endedAt": 1793832421923,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 2072.015,
+    "tlsMs": 27.466,
+    "headers": {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "server-timing": "appImport;dur=0.00, appHandler;dur=48.00",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a55728707e07d8cc-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-3-ping",
+    "path": "/__staging-ping",
+    "repeat": 3,
+    "startedAt": 1793832421923,
+    "endedAt": 1793832422004,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 72.727,
+    "tlsMs": 26.119,
+    "headers": {
+      "cache-control": "no-store",
+      "server-timing": "ping;dur=0",
+      "cf-ray": "a557287d7b03aee9-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-4-ping",
+    "path": "/__staging-ping",
+    "repeat": 4,
+    "startedAt": 1793832422004,
+    "endedAt": 1793832422083,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 71.322,
+    "tlsMs": 26.694,
+    "headers": {
+      "cache-control": "no-store",
+      "server-timing": "ping;dur=0",
+      "cf-ray": "a557287dfb82320a-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-4-page",
+    "path": "/",
+    "repeat": 4,
+    "startedAt": 1793832422083,
+    "endedAt": 1793832422167,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 75.996,
+    "tlsMs": 26.375,
+    "headers": {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "server-timing": "appImport;dur=0.00, appHandler;dur=4.00",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a557287e7fdaef92-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-5-page",
+    "path": "/",
+    "repeat": 5,
+    "startedAt": 1793832422167,
+    "endedAt": 1793832423808,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 1631.5729999999999,
+    "tlsMs": 25.63,
+    "headers": {
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "server-timing": "appImport;dur=0.00, appHandler;dur=47.00",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a557287ef929fb8f-AMS"
+    }
+  },
+  {
+    "id": "diag-candidate-5-ping",
+    "path": "/__staging-ping",
+    "repeat": 5,
+    "startedAt": 1793832423808,
+    "endedAt": 1793832425652,
+    "exitCode": 0,
+    "status": 200,
+    "ttfbMs": 1835.619,
+    "tlsMs": 27.186999999999998,
+    "headers": {
+      "cache-control": "no-store",
+      "server-timing": "ping;dur=0",
+      "cf-ray": "a55728894c2a68cb-AMS"
+    }
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "baseline": {
+    "page": {
+      "n": 24,
+      "medianMs": 1871.584,
+      "maxMs": 5450.0109999999995,
+      "over500Ms": 19,
+      "over1000Ms": 19
+    },
+    "firstPerVersion": {
+      "n": 3,
+      "medianMs": 1798.0510000000002,
+      "maxMs": 2179.096,
+      "over500Ms": 3,
+      "over1000Ms": 3
+    },
+    "staticControl": {
+      "n": 24,
+      "medianMs": 85.2155,
+      "maxMs": 143.275,
+      "over500Ms": 0,
+      "over1000Ms": 0
+    },
+    "hit": 5,
+    "miss": 19,
+    "byRound": [
+      {
+        "round": 1,
+        "n": 8,
+        "medianMs": 2116.6845000000003,
+        "maxMs": 3780.013,
+        "over500Ms": 7,
+        "over1000Ms": 7
+      },
+      {
+        "round": 2,
+        "n": 8,
+        "medianMs": 2011.4255000000003,
+        "maxMs": 5450.0109999999995,
+        "over500Ms": 7,
+        "over1000Ms": 7
+      },
+      {
+        "round": 3,
+        "n": 8,
+        "medianMs": 1492.3355,
+        "maxMs": 3756.488,
+        "over500Ms": 5,
+        "over1000Ms": 5
+      }
+    ]
+  },
+  "candidate": {
+    "page": {
+      "n": 24,
+      "medianMs": 355.3325,
+      "maxMs": 772.8249999999999,
+      "over500Ms": 7,
+      "over1000Ms": 0
+    },
+    "firstPerVersion": {
+      "n": 3,
+      "medianMs": 604.186,
+      "maxMs": 772.8249999999999,
+      "over500Ms": 3,
+      "over1000Ms": 0
+    },
+    "staticControl": {
+      "n": 24,
+      "medianMs": 100.0855,
+      "maxMs": 245.417,
+      "over500Ms": 0,
+      "over1000Ms": 0
+    },
+    "hit": 24,
+    "miss": 0,
+    "byRound": [
+      {
+        "round": 1,
+        "n": 8,
+        "medianMs": 400.0955,
+        "maxMs": 772.8249999999999,
+        "over500Ms": 3,
+        "over1000Ms": 0
+      },
+      {
+        "round": 2,
+        "n": 8,
+        "medianMs": 413.15250000000003,
+        "maxMs": 604.186,
+        "over500Ms": 3,
+        "over1000Ms": 0
+      },
+      {
+        "round": 3,
+        "n": 8,
+        "medianMs": 346.82899999999995,
+        "maxMs": 602.701,
+        "over500Ms": 1,
+        "over1000Ms": 0
+      }
+    ]
+  }
+}

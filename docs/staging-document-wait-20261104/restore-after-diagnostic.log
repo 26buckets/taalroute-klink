@@ -1,0 +1,41 @@
+
+ ⛅️ wrangler 4.92.0
+───────────────────
+╭ Deploy Worker Versions by splitting traffic between multiple versions
+│
+├ Fetching latest deployment
+│
+├ Your current deployment has 1 version(s):
+│
+│ (100%) becdb5c2-0950-407f-8c45-36c54d8cff20
+│       Created:  2026-11-04T22:50:39.560869Z
+│           Tag:  pr12-minimal-probe
+│       Message:  Temporary staging-only constant response diagnostic; no production or databases
+│
+├ Fetching versions
+│
+├ Which version(s) do you want to deploy?
+├ 1 Worker Version(s) selected
+│
+├     Worker Version 1:  219d8cc6-78ae-4622-a06b-8d0321ac4d89
+│              Created:  2026-11-04T22:40:42.703607Z
+│                  Tag:  pr12-candidate-r1
+│              Message:  Authorized isolated PR12 page latency trial; no production or databases
+│
+├ What percentage of traffic should Worker Version 1 receive?
+├ 100% of traffic
+├
+├ Add a deployment message (skipped)
+│
+├ Deploying 1 version(s)
+│
+├ Syncing non-versioned settings
+│
+│ Synced non-versioned settings:
+│                      logpush:  false
+│                observability:  enabled:             true
+│                                head_sampling_rate:  1
+│               tail_consumers:  <skipped>
+│     streaming_tail_consumers:  <skipped>
+│
+╰  SUCCESS  Deployed klink-pr12-candidate version 219d8cc6-78ae-4622-a06b-8d0321ac4d89 at 100% (2.60 sec)
