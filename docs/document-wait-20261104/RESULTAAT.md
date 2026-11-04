@@ -51,6 +51,10 @@ Ruwe gegevens: `origin.json`, `browser/measurements.json`, `mobile-desktop-netwo
 - Productiebouw, TypeScript, lockfile-validatie en lint van alle geraakte code slagen. De volledige repository-lint meldt 56 bestaande fouten in 18 ongewijzigde bestanden (`lint-existing.json`); die zijn niet stilzwijgend opgelost of als geslaagd gerapporteerd.
 - De bestaande publicatiecontrole blijft blokkeren omdat deze nieuwe scope buiten de historische vrijgave valt. De beveiliging is niet gewijzigd of omzeild. Geen GitHub Actions-workflows aanwezig op main of deze branch; alle zware controles lokaal.
 
+## Aanvullende lokale opstartproef
+
+De officiële geïnstalleerde Wrangler-opstartprofiler is één keer per versie lokaal uitgevoerd. Deze bouwt uitsluitend met `--dry-run` en profileert daarna de module-import in Miniflare. Beide profielen bevatten circa 11,4 ms niet-inactieve samples; de totale profielen van circa 228/230 ms bestaan grotendeels uit inactieve profilerwachttijd. Dit toont **geen extra winst of oorzaak van secondenlange vertraging bij de lokale module-initialisatie**. Het is geen meting van de volledige Cloudflare-opstart en wordt daar niet als vervanging voor gebruikt. Ruwe profielen en uitleg: `startup-before.cpuprofile`, `startup-after.cpuprofile`, `startup.json`.
+
 ## Open vóór publicatie
 
 1. Deze kandidaat in een afzonderlijk afgestemde stagingproef meten: meerdere verse serverinstanties, dezelfde cacheheaders, cliënt-TTFB én Worker-timing, over meerdere momenten/netwerken. Pas dan kan de resterende Cloudflare-/netwerkcomponent worden vastgesteld en de echte piekvermindering worden geclaimd.

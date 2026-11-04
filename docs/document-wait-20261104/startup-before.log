@@ -1,0 +1,17 @@
+
+ ⛅️ wrangler 4.92.0
+───────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1m🚧 `wrangler check startup` is an alpha command. Please report any issues to https://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+
+
+├ Building your Worker
+│ Worker Built! 🎉
+│
+├ Analysing
+│ Startup phase analysed
+│
+│ CPU Profile has been written to /tmp/klink-document-startup-before.cpuprofile. Load it into the Chrome DevTools profiler (or directly in VSCode) to view a flamegraph.
+│
+│ Note that the CPU Profile was measured on your Worker running locally on your machine, which has a different CPU than when your Worker runs on Cloudflare.
+│
+│ As such, CPU Profile can be used to understand where time is spent at startup, but the overall startup time in the profile should not be expected to exactly match what your Worker's startup time will be when deploying to Cloudflare.

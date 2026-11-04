@@ -1,0 +1,17 @@
+{
+  "method": "Official installed Wrangler check startup: automatic dry-run then local Miniflare CPU profile of dynamic Worker module import; no deployment. One sample per version. Includes profiler idle time; not an estimate of Cloudflare cold start.",
+  "rows": [
+    {
+      "version": "before",
+      "profileDurationMs": 227.645,
+      "sampledNonIdleMs": 11.373,
+      "samples": 11
+    },
+    {
+      "version": "after",
+      "profileDurationMs": 230.321,
+      "sampledNonIdleMs": 11.374,
+      "samples": 11
+    }
+  ]
+}
