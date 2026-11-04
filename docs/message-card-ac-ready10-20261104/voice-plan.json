@@ -1,0 +1,31 @@
+{
+  "authorization": "Nico 2-3 November 2026: complete reviewed first-ten source packages including missing ElevenLabs audio; no new user approval required.",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "0qLmDzgqulxcvv0yf3kg"
+  },
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 5,
+  "reason": "Normal prebuild found exactly one missing visible word: Rina. Source name retained; one exact word recording, no replacement or limiter bypass.",
+  "clips": [
+    {
+      "id": "KLINK-N26R2-AC-FB-RINA",
+      "text": "Rina.",
+      "title": "Rina",
+      "role": "target",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "textSha256": "965c55b44d526acb3684c5ef948db218268fdeab2abb32d66f476cfe106e93b4",
+      "src": "/package-audio/klink10-message-card-ac-20261103/rina-20261103.mp3"
+    }
+  ]
+}

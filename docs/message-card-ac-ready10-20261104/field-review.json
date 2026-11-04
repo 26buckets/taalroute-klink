@@ -1,0 +1,407 @@
+{
+  "cases": [
+    {
+      "sourceId": "KSW-N26R2-AC-FB-001",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Noor"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Ik kom tien minuten later."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Ik kom tien minuten later."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Noor"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-002",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Ali"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Wil je brood meenemen?"
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Wil je brood meenemen?"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Ali"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-003",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Sara"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Ik ben vandaag ziek."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Ik ben vandaag ziek."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Sara"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-004",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Omar"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "De les begint om negen uur."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "De les begint om negen uur."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Omar"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-005",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Rina"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Zien we elkaar morgen?"
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Zien we elkaar morgen?"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Rina"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-006",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Lina"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Mijn fiets is kapot."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Mijn fiets is kapot."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Lina"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-007",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Mila"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Ik ben onderweg naar school."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Ik ben onderweg naar school."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Mila"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-008",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Sam"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Ik heb je boek gevonden."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Ik heb je boek gevonden."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Sam"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-009",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Karim"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Ik ga vandaag naar de dokter."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Ik ga vandaag naar de dokter."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Karim"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-FB-010",
+      "fields": [
+        {
+          "id": "from",
+          "label": "Van",
+          "acceptedAnswers": [
+            "Mina"
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Bedankt voor je hulp."
+          ],
+          "feedback": {
+            "correct": "De afzender klopt.",
+            "retry": "Kijk bij Van in de bron."
+          }
+        },
+        {
+          "id": "message",
+          "label": "Bericht",
+          "acceptedAnswers": [
+            "Bedankt voor je hulp."
+          ],
+          "normalization": "case-space",
+          "wrongExamples": [
+            "Mina"
+          ],
+          "feedback": {
+            "correct": "Het bericht klopt.",
+            "retry": "Kijk bij Bericht in de bron."
+          }
+        }
+      ],
+      "missingAndSwappedRejected": true,
+      "caseAndSpacesAccepted": true,
+      "unknownVariantRequiresReview": true,
+      "firstAndLastPerFieldRecomputableAfterSerialization": true,
+      "checksStoredSeparately": false
+    }
+  ],
+  "realBrowser": false,
+  "indexedDbWriteChecked": false,
+  "sourceUnchanged": true
+}
