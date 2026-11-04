@@ -1,0 +1,101 @@
+{
+  "conditions": "fresh local Miniflare instance per version/repetition; no external network; first and repeated anonymous HTML GET; initialization includes local harness overhead, not a production cold-start estimate",
+  "rows": [
+    {
+      "version": "before",
+      "repeat": 0,
+      "visit": "first",
+      "initializedMs": 1749.335541,
+      "ttfbMs": 49.28912500000001,
+      "completeMs": 51.19312500000001
+    },
+    {
+      "version": "before",
+      "repeat": 0,
+      "visit": "repeat",
+      "initializedMs": 1749.335541,
+      "ttfbMs": 2.9833750000000236,
+      "completeMs": 3.375291000000061
+    },
+    {
+      "version": "after",
+      "repeat": 0,
+      "visit": "first",
+      "initializedMs": 1196.4509170000001,
+      "ttfbMs": 41.166833000000224,
+      "completeMs": 42.934999999999945
+    },
+    {
+      "version": "after",
+      "repeat": 0,
+      "visit": "repeat",
+      "initializedMs": 1196.4509170000001,
+      "ttfbMs": 2.896874999999909,
+      "completeMs": 3.321292000000085
+    },
+    {
+      "version": "after",
+      "repeat": 1,
+      "visit": "first",
+      "initializedMs": 1007.5203339999998,
+      "ttfbMs": 45.42762499999935,
+      "completeMs": 47.76545799999985
+    },
+    {
+      "version": "after",
+      "repeat": 1,
+      "visit": "repeat",
+      "initializedMs": 1007.5203339999998,
+      "ttfbMs": 3.8297920000004524,
+      "completeMs": 4.2667920000003505
+    },
+    {
+      "version": "before",
+      "repeat": 1,
+      "visit": "first",
+      "initializedMs": 956.8529999999992,
+      "ttfbMs": 34.39833300000009,
+      "completeMs": 36.110375000000204
+    },
+    {
+      "version": "before",
+      "repeat": 1,
+      "visit": "repeat",
+      "initializedMs": 956.8529999999992,
+      "ttfbMs": 2.5887919999995574,
+      "completeMs": 2.8563340000000608
+    },
+    {
+      "version": "before",
+      "repeat": 2,
+      "visit": "first",
+      "initializedMs": 898.4634159999996,
+      "ttfbMs": 36.747833999999784,
+      "completeMs": 38.63274999999976
+    },
+    {
+      "version": "before",
+      "repeat": 2,
+      "visit": "repeat",
+      "initializedMs": 898.4634159999996,
+      "ttfbMs": 2.8241670000006707,
+      "completeMs": 3.1061250000002474
+    },
+    {
+      "version": "after",
+      "repeat": 2,
+      "visit": "first",
+      "initializedMs": 921.5917079999999,
+      "ttfbMs": 40.88891599999988,
+      "completeMs": 43.14616600000045
+    },
+    {
+      "version": "after",
+      "repeat": 2,
+      "visit": "repeat",
+      "initializedMs": 921.5917079999999,
+      "ttfbMs": 3.4307079999998678,
+      "completeMs": 3.886666999999761
+    }
+  ]
+}

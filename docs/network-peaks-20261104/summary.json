@@ -1,0 +1,373 @@
+{
+  "local-before": {
+    "cold": {
+      "readyMs": {
+        "n": 12,
+        "median": 1625.050000011921,
+        "minimum": 1513.0999999642372,
+        "maximum": 1787
+      },
+      "nextMs": {
+        "n": 12,
+        "median": 46.14385449999918,
+        "minimum": 37.44841699999961,
+        "maximum": 94.24200000000019
+      }
+    },
+    "warm": {
+      "readyMs": {
+        "n": 12,
+        "median": 1349.2499999701977,
+        "minimum": 1147,
+        "maximum": 1620
+      },
+      "nextMs": {
+        "n": 12,
+        "median": 43.539042000000336,
+        "minimum": 32.64866699999948,
+        "maximum": 50.9239579999994
+      }
+    }
+  },
+  "json-only": {
+    "cold": {
+      "readyMs": {
+        "n": 12,
+        "median": 1602.4500000178814,
+        "minimum": 1559.699999988079,
+        "maximum": 1713
+      },
+      "nextMs": {
+        "n": 12,
+        "median": 44.926188000003094,
+        "minimum": 38.12212499999987,
+        "maximum": 66.06095799999957
+      }
+    },
+    "warm": {
+      "readyMs": {
+        "n": 12,
+        "median": 1315.199999988079,
+        "minimum": 1214,
+        "maximum": 1346.2000000476837
+      },
+      "nextMs": {
+        "n": 12,
+        "median": 40.01568700000007,
+        "minimum": 29.68841699999939,
+        "maximum": 45.386459000001196
+      }
+    }
+  },
+  "local-after": {
+    "cold": {
+      "readyMs": {
+        "n": 12,
+        "median": 1188.8499999940395,
+        "minimum": 1015.3000000119209,
+        "maximum": 1353
+      },
+      "nextMs": {
+        "n": 12,
+        "median": 46.404937499999505,
+        "minimum": 40.38625000000047,
+        "maximum": 93.76195900000016
+      }
+    },
+    "warm": {
+      "readyMs": {
+        "n": 12,
+        "median": 848.4000000357628,
+        "minimum": 824,
+        "maximum": 1320
+      },
+      "nextMs": {
+        "n": 12,
+        "median": 42.82033349999983,
+        "minimum": 33.13441700000112,
+        "maximum": 60.73829200000182
+      }
+    }
+  },
+  "parallel-only": {
+    "conditions": "fresh browser context; delay shared data request only; no bandwidth/CPU emulation; interception disables HTTP cache; alternating order; first visits only",
+    "groups": [
+      {
+        "version": "after",
+        "width": 1280,
+        "readyMs": {
+          "n": 6,
+          "median": 2905.0,
+          "minimum": 2826.100000023842,
+          "maximum": 3016.899999976158
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 59.1627084999991,
+          "minimum": 54.627416999999696,
+          "maximum": 75.33354099999997
+        },
+        "overlappingDownloads": 6
+      },
+      {
+        "version": "after",
+        "width": 390,
+        "readyMs": {
+          "n": 6,
+          "median": 2920.2000000178814,
+          "minimum": 2756.100000023842,
+          "maximum": 3071
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 62.79904200000237,
+          "minimum": 50.7110840000023,
+          "maximum": 79.50454200000968
+        },
+        "overlappingDownloads": 6
+      },
+      {
+        "version": "before",
+        "width": 1280,
+        "readyMs": {
+          "n": 6,
+          "median": 2947.0,
+          "minimum": 2884.7999999523163,
+          "maximum": 3049
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 70.30064599999969,
+          "minimum": 53.579124999998385,
+          "maximum": 99.16779099999985
+        },
+        "overlappingDownloads": 0
+      },
+      {
+        "version": "before",
+        "width": 390,
+        "readyMs": {
+          "n": 6,
+          "median": 2903.850000023842,
+          "minimum": 2778.199999988079,
+          "maximum": 2957
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 71.54477050000787,
+          "minimum": 53.51812500000233,
+          "maximum": 89.40512499999022
+        },
+        "overlappingDownloads": 0
+      }
+    ]
+  },
+  "waterfall": {
+    "conditions": "fresh browser context; delay shared data request only; no bandwidth/CPU emulation; interception disables HTTP cache; alternating order; first visits only",
+    "groups": [
+      {
+        "version": "after",
+        "width": 1280,
+        "readyMs": {
+          "n": 6,
+          "median": 2379.050000011921,
+          "minimum": 2242.399999976158,
+          "maximum": 2495
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 61.6190830000005,
+          "minimum": 42.30445899999995,
+          "maximum": 69.89674999999988
+        },
+        "overlappingDownloads": 6
+      },
+      {
+        "version": "after",
+        "width": 390,
+        "readyMs": {
+          "n": 6,
+          "median": 2373.600000023842,
+          "minimum": 2220.900000035763,
+          "maximum": 2511
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 60.94368750000103,
+          "minimum": 49.705541999999696,
+          "maximum": 80.46137499999895
+        },
+        "overlappingDownloads": 6
+      },
+      {
+        "version": "before",
+        "width": 1280,
+        "readyMs": {
+          "n": 6,
+          "median": 2822.0999999940395,
+          "minimum": 2759.100000023842,
+          "maximum": 2909
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 61.3497710000031,
+          "minimum": 49.39958300000035,
+          "maximum": 78.01050000000396
+        },
+        "overlappingDownloads": 0
+      },
+      {
+        "version": "before",
+        "width": 390,
+        "readyMs": {
+          "n": 6,
+          "median": 2825.75,
+          "minimum": 2765.599999964237,
+          "maximum": 2918
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 62.99066700000003,
+          "minimum": 42.38537500000166,
+          "maximum": 93.5535830000008
+        },
+        "overlappingDownloads": 0
+      }
+    ]
+  },
+  "throttled": {
+    "conditions": "local gzip proxy; Chromium CDP 150ms latency, desktop 12Mbps/mobile 6Mbps down, 2Mbps up; no CPU emulation; fresh contexts; alternating order; first visits only",
+    "groups": [
+      {
+        "version": "after",
+        "width": 1280,
+        "readyMs": {
+          "n": 3,
+          "median": 4383.400000035763,
+          "minimum": 4376.099999964237,
+          "maximum": 4385.800000011921
+        },
+        "nextMs": {
+          "n": 3,
+          "median": 52.74195800000234,
+          "minimum": 42.16675000000032,
+          "maximum": 55.40862500000003
+        },
+        "overlappingDownloads": 3
+      },
+      {
+        "version": "after",
+        "width": 390,
+        "readyMs": {
+          "n": 3,
+          "median": 6870.900000035763,
+          "minimum": 6844.400000035763,
+          "maximum": 6885.199999988079
+        },
+        "nextMs": {
+          "n": 3,
+          "median": 51.96650000000227,
+          "minimum": 51.92370800000208,
+          "maximum": 81.76645900000585
+        },
+        "overlappingDownloads": 3
+      },
+      {
+        "version": "before",
+        "width": 1280,
+        "readyMs": {
+          "n": 3,
+          "median": 4771.600000023842,
+          "minimum": 4751.600000023842,
+          "maximum": 4782.600000023842
+        },
+        "nextMs": {
+          "n": 3,
+          "median": 57.67633299999943,
+          "minimum": 53.136624999999185,
+          "maximum": 91.83891700000004
+        },
+        "overlappingDownloads": 0
+      },
+      {
+        "version": "before",
+        "width": 390,
+        "readyMs": {
+          "n": 3,
+          "median": 7194.5,
+          "minimum": 7186.699999988079,
+          "maximum": 7197.099999964237
+        },
+        "nextMs": {
+          "n": 3,
+          "median": 53.94145900000149,
+          "minimum": 42.588000000003376,
+          "maximum": 54.466874999998254
+        },
+        "overlappingDownloads": 0
+      }
+    ]
+  },
+  "live-diagnosis": {
+    "conditions": "fresh browser context; real network; no interception, CPU or bandwidth emulation; first visits only",
+    "groups": [
+      {
+        "version": "live",
+        "width": 1280,
+        "readyMs": {
+          "n": 6,
+          "median": 4350.199999988079,
+          "minimum": 4104,
+          "maximum": 6804
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 59.01093749999927,
+          "minimum": 40.90820799999892,
+          "maximum": 72.23316599999816
+        },
+        "overlappingDownloads": 0
+      },
+      {
+        "version": "live",
+        "width": 390,
+        "readyMs": {
+          "n": 6,
+          "median": 5073.199999988079,
+          "minimum": 2454,
+          "maximum": 6292.599999964237
+        },
+        "nextMs": {
+          "n": 6,
+          "median": 69.57787499999722,
+          "minimum": 54.42670900000303,
+          "maximum": 95.42891700000473
+        },
+        "overlappingDownloads": 0
+      }
+    ],
+    "slowest": [
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "readyMs": 6804,
+        "htmlResponseStart": 4541,
+        "requestToFirstByte": 4512
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "readyMs": 6292.599999964237,
+        "htmlResponseStart": 3833.599999964237,
+        "requestToFirstByte": 3801.0
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "readyMs": 6174,
+        "htmlResponseStart": 3981,
+        "requestToFirstByte": 3959
+      }
+    ]
+  }
+}

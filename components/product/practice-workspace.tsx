@@ -8,7 +8,6 @@ const loadLearner = () => import('./learner-app').then(m => ({ default: m.Learne
 const loadTeacher = () => import('./staff-apps').then(m => ({ default: m.TeacherApp }));
 const LearnerApp = lazy(loadLearner);
 const TeacherApp = lazy(loadTeacher);
-export const preloadPracticeWorkspace = (portal: 'learner' | 'teacher') => portal === 'learner' ? loadLearner() : loadTeacher();
 
 export default function PracticeWorkspace({ portal, onExit, onToast }: {
   portal: 'learner' | 'teacher'; onExit: () => void; onToast: (text: string) => void;

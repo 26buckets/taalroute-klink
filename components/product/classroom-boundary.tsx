@@ -3,6 +3,7 @@
 import { KlinkOpeningLoader } from './klink-opening-loader';
 
 import { lazy, Suspense, useEffect, useLayoutEffect, useState, type ReactNode } from 'react';
+import { loadPracticeWorkspace } from './load-practice-workspace';
 import {
   classroomHash,
   classroomMaterialsHash,
@@ -25,7 +26,7 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
     const preload = readClassroomActive() || window.location.hash.startsWith(classroomHash)
       ? loadTeacher()
       : /^#(?:learner|teacher)/.test(window.location.hash)
-        ? import('./practice-workspace').then(m => m.preloadPracticeWorkspace(window.location.hash.startsWith('#learner') ? 'learner' : 'teacher')) : Promise.resolve();
+        ? loadPracticeWorkspace(window.location.hash.startsWith('#learner') ? 'learner' : 'teacher') : Promise.resolve();
     void preload.then(loaded, loaded);
     return () => { cancelled = true; };
   }, []);

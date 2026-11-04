@@ -70,12 +70,24 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
     });
   }
   const sources = unique(pack.exercises.filter(item => item.mode?.startsWith('connected-')), item => String(item.contextId));
+  const lessonsByContent = new Map<string, Set<string | undefined>>();
+  for (const exercise of pack.exercises) {
+    if (typeof exercise.contextId !== 'string') continue;
+    const lessons = lessonsByContent.get(exercise.contextId) ?? new Set<string | undefined>();
+    lessons.add(exercise.lessonId);
+    lessonsByContent.set(exercise.contextId, lessons);
+  }
   return sources.flatMap<PackageExercise>((source, index) => {
     const item = contentById.get(String(source.contextId));
     const step = pack.lessons.find(lesson => lesson.id === source.lessonId);
     if (!item || !step) return [];
+    // Reject unrelated sources before constructing their expensive reading conditions.
+    if ((activity === 'text-question' || activity === 'text-evidence') && item.kind !== 'text') return [];
+    if ((activity === 'dialogue-question' || activity === 'dialogue-role') && item.kind !== 'dialogue') return [];
+    if ((activity === 'sentence-build' || activity === 'verb-choice') && item.kind !== 'sentence') return [];
+    if ((activity === 'functional-message' || activity === 'functional-form') && !writingByContent.has(item.id)) return [];
     const common: PackageExercise = { ...base, exerciseId: `${pack.id}:group:${activity}:${item.id}`, contextId: item.id,
-      sourceContentIds: [item.id], sourceExerciseId: source.exerciseId, lessonId: step.id, sourceLessonIds: [...new Set(pack.exercises.filter(row => row.contextId === item.id).map(row => row.lessonId!))],
+      sourceContentIds: [item.id], sourceExerciseId: source.exerciseId, lessonId: step.id, sourceLessonIds: [...(lessonsByContent.get(item.id) ?? [])],
       targetWordIds: (source.wordIds as string[]).filter(id => pack.words.some(word => word.id === id)),
       readingConditions: contentReadingConditions(item, step), sourceLevel: item.sourceLevel,
       sourceText: item.text, sourceBlocks: item.blocks, contentTitle: item.title,

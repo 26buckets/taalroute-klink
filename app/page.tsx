@@ -1,12 +1,13 @@
 'use client';
 
 import { KlinkOpeningLoader } from '@/components/product/klink-opening-loader';
+import { loadPracticeWorkspace } from '@/components/product/load-practice-workspace';
 
 import { EntryScreen } from '@/components/product/entry-design';
 import { CheckCircle2 } from 'lucide-react';
 import { lazy, Suspense, useEffect, useState } from 'react';
 
-const PracticeWorkspace = lazy(() => import('@/components/product/practice-workspace'));
+const PracticeWorkspace = lazy(() => loadPracticeWorkspace(window.location.hash.startsWith('#teacher') ? 'teacher' : 'learner'));
 
 export type Portal = 'entry' | 'learner' | 'teacher';
 

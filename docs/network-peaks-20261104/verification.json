@@ -1,0 +1,40 @@
+{
+  "status": "review-only-not-published",
+  "measuredAt": "2026-11-04T21:35:37.984481+00:00",
+  "base": "b085d626f591342e0be3aa32faa3bfe85342d5e9",
+  "live": "dc37a479a7a6f148d61ffb5140dfd79112331f85",
+  "branch": "codex/klink-network-peaks-20261104",
+  "runtimeSha256": {
+    "app/page.tsx": "09f51fdf336c0fc1ca8ff94e0ba1fa3afb3031e41b465d58b21933d7da2ea650",
+    "components/product/classroom-boundary.tsx": "64049f7971b955ee22c5d727bcb97bf5791f22d9a069b7ad90d46c627fd2a5a5",
+    "components/product/practice-workspace.tsx": "346f833c3a0752e90980732e22120f5842b748ff35c044fdc650594425250b3c",
+    "components/product/load-practice-workspace.ts": "c4f62a405a7059ccc03b30c6447f86d13c485228adc49a357f3c32b329747877",
+    "lib/extended-practice.ts": "1689538b388d466eef0732701f178213083429f0fcc0f98db5e9416df21a9465"
+  },
+  "contentMediaCssAuthStorageDbChanged": false,
+  "remoteSqlExecuted": false,
+  "deploymentExecuted": false,
+  "workflows": [],
+  "cloudRunsStarted": false,
+  "publicationGate": "blocked as expected: new source is outside historical approved change; gate unmodified",
+  "checks": {
+    "unit": 23,
+    "exactContentCombinations": 1242,
+    "emptyPacks": 9,
+    "parallelEntrances": 8,
+    "regression": 16,
+    "pixelIdenticalPairs": 24,
+    "loaderNavigation": 8,
+    "wordAudio": 44,
+    "types": "pass",
+    "build": "pass",
+    "lint": "pass",
+    "offeredAssets": 19999
+  },
+  "limitations": [
+    "No deployment; no live improvement claim",
+    "Live HTML response-start spikes still observed",
+    "No physical phone or personal MFA session",
+    "Small controlled network sample; no percentile guarantee"
+  ]
+}
