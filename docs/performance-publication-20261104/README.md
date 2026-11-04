@@ -1,0 +1,15 @@
+# Snelheidsuitgave Klink en Klink+docent, 4 november 2026
+
+Nico heeft hercontrole op de nieuwste versie en publicatie expliciet opgedragen. De brongebonden toestemming staat in approval.json. Het publicatievenster is afgestemd met ‘Zet Klink-chats online’ en ‘KLINK: IMPLEMENTEREN’. Hun voorwaartse correctie is integraal overgenomen: main b482a162b7875a28cb876b7c8d8a9c41a8e88abf, live b9865143a32c32f69cf47a1e20f5effdc50fcdee. De zes spellingbanken met 36 nog niet vrijgegeven dictees blijven op HOLD. De tien vernieuwde Alfa B-schrijfopdrachten blijven behouden.
+
+De wijziging verwijdert de vaste wachttijd bij openen, laadt cursist- en docentcode apart en bewaart volledige, gevalideerde woordaudio-bundels tijdelijk in het geheugen (maximaal 8 MiB). Werkelijke laad- en herstelvoorwaarden blijven gelden. De loader animeert maximaal eenmaal per paginabezoek; latere laadmomenten gebruiken het eindbeeld. Geen nieuwe inhoud, media, vormgeving, routes, opslagformaat, authenticatie, database of hostingplan.
+
+De eerste actuele bouw telde 20.007 aangeboden bestanden en is niet gepubliceerd. Alleen kleine gedeelde iconen en twee bestaande UI-hulpen zijn daarom samen verpakt via de bestaande bundler. De gecontroleerde bouw telt 19.999 bestanden tegenover 20.000 op de basis. Alle oorspronkelijke openbare bestanden blijven behouden. De relevante browser- en uiterlijkcontroles zijn na deze verpakkingswijziging opnieuw uitgevoerd.
+
+De lokale controles omvatten 34 gerichte tests, TypeScript, gerichte lint, normale bouw, 16 gevallen voor de eenmalige loader, 16 laad-/herstelgevallen, 44 woordaudio-/bedieningscontroles, acht vertraagde navigatiestromen, vier handleidingstromen en 24 exact gelijke schermparen (Chromium/WebKit, desktop/mobiel, licht/donker). Bewijs staat in local/. preservation.json vergelijkt alle runtime-, data-, media- en stijlbestanden met de actuele basis.
+
+De productieproef gebruikt dezelfde 72 bezoeken per versie: Chromium en WebKit, desktop en mobiel, drie herhalingen, eerste en herhaald bezoek voor Start, cursist en +docent. De starttijd wordt in de pagina gemeten zodra het doel zichtbaar en de loader weg is. De daaropvolgende handeling wordt ook gemeten om verplaatste wachttijd te zien; die meting omvat browserautomatisering. De audioproef gebruikt echte ongewijzigde audio, normale netwerkverzoeken en native afspeelgebeurtenissen; het klikbare proeftekstje bestaat alleen in de testbrowser. Geen databasewijzigingen. Dit zijn opeenvolgende steekproeven op één netwerk, geen garantie voor ieder apparaat of netwerk.
+
+Inzicht is een afzonderlijke repository en Worker. Alleen de twee openbare startverzoeken zijn daar gelijktijdig gemaakt. Zie 26buckets/taalroute-klink-inzicht, docs/performance-publication-20261104. PR8/staging wordt niet meegenomen in deze productie-uitgave.
+
+Publicatie uitsluitend via canonieke main en npm run deploy. De historische publicatieketen blijft actief; de opvolgende poort bindt deze concrete toestemming, bronbestanden, lokale controles en teruggelezen Drive-back-up. Geen GitHub Actions aanwezig of toegevoegd, geen betaalde limiet verhoogd.
