@@ -151,6 +151,7 @@ function PracticeSheet({ pack, exercises, title, showTitle, active, onAudio, onA
 function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttempt, onDone }: { pack: PackageDefinition; exercise: PackageExercise; number: number; onAudio: AudioPlayer; startPlayback: () => AbortController; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
   const { view } = useRouteSettings();
   const [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
+  const [sourceFeedback, setSourceFeedback] = useState<string>();
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
   const [playing, setPlaying] = useState(false);
@@ -161,8 +162,9 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
   useWordListeningHelp(row, phase => { if (phase === 'end' || phase === 'browse') return; if (phase === 'request') metrics.current.helpUsed = true; playback.current?.abort(); setPlaying(false); });
   const model = exercise.componentId === 'ALF-CMP-001';
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
-  function finish(answer: string, correct: boolean) {
+  function finish(answer: string, correct: boolean, feedback?: string) {
     if (result === 'right') return;
+    if (exercise.sourceWordDictationExact === true) setSourceFeedback(feedback);
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,
       support: model || typeof exercise.exampleWord === 'string' || (!exercise.audioOnly && view.photo && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && pack.words.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', ...(!exercise.audioOnly ? { pictureSupport: view.photo ? 'always' as const : 'request' as const } : {}), elapsedMs: Date.now() - metrics.current.started,
@@ -184,7 +186,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
       } catch { if (!controller.signal.aborted) setAudioError(true); return false; }
       finally { if (playback.current === controller) setPlaying(false); }
     }} />
-    <output aria-live="polite">{audioError ? 'Luisteren lukt niet. Tik opnieuw.' : result === 'right' ? <><Check aria-hidden="true" />{model ? 'Beluisterd' : typeof exercise.correctFeedback === 'string' ? 'Goed. ' + exercise.correctFeedback : 'Goed'}</> : result === 'wrong' ? exercise.feedback || 'Probeer nog een keer.' : ''}</output>
+    <output aria-live="polite">{audioError ? 'Luisteren lukt niet. Tik opnieuw.' : result === 'right' ? <><Check aria-hidden="true" />{model ? 'Beluisterd' : typeof exercise.correctFeedback === 'string' ? 'Goed. ' + exercise.correctFeedback : 'Goed'}</> : result === 'wrong' ? sourceFeedback || exercise.feedback || 'Probeer nog een keer.' : ''}</output>
   </article></ExerciseAudioProvider>;
 }
 

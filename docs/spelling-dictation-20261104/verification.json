@@ -1,0 +1,32 @@
+{
+  "status": "LOCAL_VERIFIED_NOT_PUBLISHED",
+  "types": true,
+  "coreTests": true,
+  "build": true,
+  "localDryRun": true,
+  "priorAssetsPreserved": true,
+  "fixedAppearancePreserved": true,
+  "sourceBoundRuntimeChangeOnly": true,
+  "newStaticAssets": 0,
+  "offeredStaticAssets": 20000,
+  "largestStaticAssetBytes": 25532160,
+  "missingWordAudio": 0,
+  "newAudio": 0,
+  "unmodifiedAudioReused": 37,
+  "nativePlaybackFlows": 144,
+  "independentHumanNT2Review": false,
+  "humanListeningPerformed": false,
+  "physicalDevicesOrClassroomTested": false,
+  "spellingFollowup": {
+    "thee": "Dutch sound-equivalent tee in both independent transcripts",
+    "kapper": "Exact independent Dutch CTC after Whisper disagreement"
+  },
+  "coreTestsPassed": 13,
+  "sheetChecks": 12,
+  "retentionChecks": 2,
+  "visualChecks": 4,
+  "workerDryRun": {
+    "uncompressedKiB": 36158.83,
+    "gzipKiB": 6126.25
+  }
+}
