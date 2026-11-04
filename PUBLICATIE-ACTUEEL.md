@@ -1,3 +1,13 @@
+## Actuele publicatie — bronstatus Spelling hersteld — 4 november 2026
+
+Livebron `b9865143a32c32f69cf47a1e20f5effdc50fcdee`, Worker `a9a2fa07-7aaa-4952-9ee3-2527bed52e29`, afstammeling van `1d053db52c07b02f8c3efe9dd86e7a6a16cbcee5`. De eerdere zes woorddicteerreeksen met 36 A1-, A2- en B1-bronposities zijn uit het aanbod gehaald. De aparte Spelling396-bron vereist onafhankelijke menselijke taal-/niveaureview en werkelijke beluistering. De eerdere technische vrijgave gold ten onrechte als voldoende. Die publicatie en de bewijsstukken blijven historisch vastgelegd.
+
+Alle zes bank-URL's geven 404. In twee browsers zijn 24 voormalige links in Schrijven en Spelling gecontroleerd; oude ingevoerde antwoorden blijven lokaal behouden. De tien vernieuwde Alfa B Schrijven oefenen zijn bytegelijk teruggelezen en via vier browserproeven met conceptopslag gecontroleerd. De twee bronregisters met het resterende aanbod zijn bytegelijk aan de laatste bron vóór de 36 dictees. Geen aanpassingen aan spelers, instellingen, routes, uiterlijk, opnamen of gebruikersgegevens. 20000 statische bestanden via de gewone publicatieroute.
+
+Veertien vervolgkandidaten Alfa B/C zijn alleen lokaal technisch gecontroleerd. De menselijke broncontroles voor beide selecties staan open. Zie het `review-invulblad.md` in de herstelmap. Herstelback-up vóór publicatie Drive `1DbaLW7TTCQ6N4taEwzpbnTI0XRZgw67T`; definitief bewijs Drive `1VU1NUKB6Fu59wUZ7J-sB2mo29zYtTmso`, volledig teruggelezen. Deze bewijsopvolger niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — 36 woorddictees Spelling A1, A2 en B1 — 4 november 2026
 
 Livebron `1d053db52c07b02f8c3efe9dd86e7a6a16cbcee5`, Worker `8b44da9d-0cb0-4d02-a5d8-140ff3021eaf`, vanaf `a06134aa42fe8fe646e8abfa87709ff3bdaaa216` met behoud van de tien vernieuwde Alfa B-opdrachten. Zes rondes via Spelling → Hoor en typ en de bestaande dicteerroute van Schrijven. De 36 bron-ID’s zijn 1:1 de oefening- en antwoordsleutels. Bron, antwoordsleutel, feedback en criteria zijn vastgelegd in `docs/spelling-dictation-20261104`; de redactionele aanpassing voor ‘herinnering’ is afzonderlijk geregistreerd.
