@@ -28,7 +28,7 @@ export function verifyLetterAbReady10Content(read=readFileSync){
  const p=json(root+'preservation/result.json');assert.equal(p.checks.length,8);assert.equal(p.flows.length,16);assert(p.checks.every(x=>x.maxChannelDelta<=1));
  const v=json(root+'verification.json');assert(v.typesPassed&&v.lintPassed&&v.normalBuildPassed&&v.unitTestsPassed&&v.bankReaderTestsPassed&&v.exactBankReadback&&v.allOldPublicBytesPreserved&&v.inheritedGrammarRuntimePreserved);assert.equal(v.oldPublicFiles,20106);assert.equal(v.appearanceChanged,false);assert.equal(v.newAudioImages,0);assert.equal(v.humanNT2ReviewPerformed,false);
  const c=json(root+'capacity.json');assert.equal(json(root+'offered-build-assets.json').count,20000);assert(c.workerGzipKiB<10240&&c.workerKiB<65536&&c.maxStaticFileBytes<=25*1024*1024&&c.noConfigLimitBudgetChanges);
- return r;
+ return {...r,successor};
 }
 export function verifyLetterAbReady10Release(read=readFileSync){const r=verifyLetterAbReady10Content(read),b=JSON.parse(read(root+'gate-backup.json'));assert(b.driveId&&b.fullReadback&&b.zipIntegrity);assert.deepEqual(b.files,r.files);assert.deepEqual(b.evidenceFiles,r.evidenceFiles);return r;}
-export function readBeforeLetterAbReady10(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeLetterAbReady10(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeLetterAcReady10(file,r.successor,read);}

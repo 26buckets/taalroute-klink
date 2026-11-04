@@ -35,7 +35,7 @@ export function verifyGrammarReady16Content(read=readFileSync){
  const v=json(root+'verification.json');assert(v.typesPassed&&v.lintPassed&&v.normalBuildPassed&&v.bankTestsPassed&&v.assetHttpCasesPassed&&v.storageRegressionPassed);assert.equal(v.appearanceChanged,false);assert.equal(v.newGeneration,0);assert.equal(v.independentHumanNt2Review,false);
  const p=json(root+'preservation.json');assert(p.runtimeMatchesPriorTestedIntegration&&p.allOldPublicBytesEqual);assert.equal(p.oldPublicFiles,20106);assert(p.inheritedVisualEvidence.length>0);
  const cap=json(root+'capacity.json');assert.equal(json(root+'offered-build-assets.json').count,20000);assert(cap.maxStaticFileBytes<=25*1024*1024&&cap.workerGzipKiB<10240&&cap.workerKiB<65536&&cap.noConfigLimitBudgetChanges);
- return r;
+ return {...r,successor};
 }
 export function verifyGrammarReady16Release(read=readFileSync){const r=verifyGrammarReady16Content(read),b=JSON.parse(read(root+'gate-backup.json'));assert(b.driveId&&b.fullReadback&&b.zipIntegrity);assert.deepEqual(b.files,r.files);assert.deepEqual(b.evidenceFiles,r.evidenceFiles);return r;}
-export function readBeforeGrammarReady16(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeGrammarReady16(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeLetterAbReady10(file,r.successor,read);}
