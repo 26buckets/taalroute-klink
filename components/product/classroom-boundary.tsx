@@ -13,7 +13,10 @@ import { TaalrouteHeader } from './taalroute-header';
 import { loadTeacherWithRecovery } from './teacher-module-recovery';
 
 let teacherModule: Promise<typeof import('./teacher-classroom')> | undefined;
-const loadTeacher = () => teacherModule ??= loadTeacherWithRecovery(() => import('./teacher-classroom'));
+const loadTeacher = () => {
+  if (import.meta.env.SSR) throw new Error('Teacher workspaces load in the browser.');
+  return teacherModule ??= loadTeacherWithRecovery(() => import('./teacher-classroom'));
+};
 const TeacherClassroom = lazy(() => loadTeacher().then(m => ({ default: m.TeacherClassroom })));
 const TeacherMaterials = lazy(() => loadTeacher().then(m => ({ default: m.TeacherMaterials })));
 
