@@ -1,3 +1,4 @@
+import {readProductionBank} from './read-production-bank.mjs';
 import {compactImageSrc} from '../lib/compact-images.ts';
 import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
@@ -8,7 +9,7 @@ const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18937',browser=await chromium.launch({channel:'chrome',headless:true}),page=await browser.newPage({viewport:{width:1366,height:950}}),errors=[],checks=[];
 page.on('pageerror',e=>errors.push(e.message));
 await page.addInitScript(()=>{window.__played=[];window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.paused=true;}play(){this.paused=false;window.__played.push(this.src);this.t=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},40);return Promise.resolve();}pause(){clearTimeout(this.t);this.paused=true;}};});
-const data=row=>JSON.parse(readFileSync('public'+row.url)).exercises;
+const data=row=>readProductionBank(row).exercises;
 const url=row=>base+'/'+chapterHash({chapter:practiceChapters.find(c=>c.activities.includes(row.activity)).id,activity:row.activity,collection:row.id,level:row.level,help:row.help});
 const next=()=>page.locator('.cp-exercise-feedback').getByRole('button',{name:/^(Verder|Ronde afronden|Klaar)$/});
 async function finish(e,scope=page){

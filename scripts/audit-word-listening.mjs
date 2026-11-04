@@ -1,10 +1,11 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { chapterCollections } from '../lib/practice-chapters.ts';
 import { groupActivities } from '../lib/group-practice.ts';
 import { recordingForWord } from '../lib/word-listening.ts';
 import { spokenWords } from '../lib/word-listening-text.ts';
 import { writingFormLiteralRanges } from '../lib/writing-form.ts';
 import assert from 'node:assert/strict';
+import { readProductionBank } from './read-production-bank.mjs';
 
 const fields = new Set(['text', 'label', 'title', 'prompt', 'question', 'before', 'after', 'cue', 'model', 'help', 'feedback', 'word', 'example', 'exampleWord', 'sourceModel', 'rule', 'primary', 'correct', 'retry', 'answer', 'teacherGuidance', 'criteria', 'description', 'meaning']);
 const words = new Map(), seen = new Set(), loaded = new Map(), formLiteralData = [];
@@ -25,7 +26,7 @@ function read(value, field, source, spellingUnits) {
 let instances = 0;
 const writingPositions = new Set();
 for (const activity of groupActivities) for (const collection of chapterCollections(activity.id)) {
-  if (collection.contentUrl && !loaded.has(collection.contentUrl)) loaded.set(collection.contentUrl, JSON.parse(readFileSync('public' + collection.contentUrl)).exercises);
+  if (collection.contentUrl && !loaded.has(collection.contentUrl)) loaded.set(collection.contentUrl, readProductionBank({ url: collection.contentUrl, id: collection.id, count: collection.exerciseCount }).exercises);
   for (const exercise of collection.contentUrl ? loaded.get(collection.contentUrl) : collection.exercises) {
     instances++;
     if (seen.has(exercise.exerciseId) && !exercise.writingSourceId) continue;

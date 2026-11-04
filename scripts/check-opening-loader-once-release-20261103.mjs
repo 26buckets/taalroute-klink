@@ -1,3 +1,4 @@
+import {verifyGrammarReady16Release,readBeforeGrammarReady16} from './check-grammar-ready16-release.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -13,6 +14,7 @@ const sha = value => createHash('sha256').update(value).digest('hex');
 const lines = value => value.toString().trim().split('\n').filter(Boolean);
 const sort = values => values.sort((a, b) => a.localeCompare(b));
 export function verifyOpeningLoaderOnceContent(read = readFileSync) {
+  const successor=verifyGrammarReady16Release(read),currentRead=read;read=file=>readBeforeGrammarReady16(file,successor,currentRead);
   const json = file => JSON.parse(read(file));
   const r = json('docs/klink-owner-release-opening-loader-once-20261103.json');
   assert.equal(r.approvedBy, 'Nico');
@@ -22,7 +24,7 @@ export function verifyOpeningLoaderOnceContent(read = readFileSync) {
   assert.equal(r.liveSourceCommit, 'b0763872c76c319e02d4464b57b7afcb02d21ed3');
   git('merge-base', '--is-ancestor', r.liveSourceCommit, base);
   git('merge-base', '--is-ancestor', base, 'HEAD');
-  const changed = sort([...new Set([...lines(git('diff', '--name-only', base, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])]);
+  const changed = sort([...new Set(lines(git('diff', '--name-only', base, successor.baselineSourceCommit, '--', ...roots)))]);
   assert.deepEqual(changed, r.changedFiles);
   assert.deepEqual(sort(Object.keys(r.files)), changed);
   for (const [file, hash] of Object.entries({ ...r.files, ...r.evidenceFiles })) assert.equal(sha(read(file)), hash, file);
@@ -45,7 +47,7 @@ export function verifyOpeningLoaderOnceContent(read = readFileSync) {
   const navigation = json(root + 'navigation/checks.json');
   assert.equal(navigation.checks.length, 8); assert.deepEqual(navigation.errors, []);
   assert(navigation.checks.every(item => item.finalFrameKept && item.opens && item.storagePreserved && item.delayedModuleRequests > 0));
-  return r;
+  return { ...r, successor };
 }
 export function verifyOpeningLoaderOnceRelease(read = readFileSync) {
   const r = verifyOpeningLoaderOnceContent(read);
@@ -55,5 +57,5 @@ export function verifyOpeningLoaderOnceRelease(read = readFileSync) {
   return r;
 }
 export function readBeforeOpeningLoaderOnce(file, r, read = readFileSync) {
-  return r.changedFiles.includes(file) ? git('show', `${base}:${file}`) : read(file);
+  return r.changedFiles.includes(file) ? git('show', `${base}:${file}`) : readBeforeGrammarReady16(file,r.successor,read);
 }

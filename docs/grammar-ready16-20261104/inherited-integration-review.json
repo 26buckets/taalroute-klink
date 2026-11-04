@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-11-04T00:47:37.460552+00:00",
+  "scope": "Local implementation and actual built Worker verification; NOT live or full content release",
+  "base": "3f58c2136346e9dbe369b07610b7a12b570fea48",
+  "liveReference": "c66cee52a149a9059a181b77dff3a3d587e7e85f",
+  "sourceModifiedTime": "2026-11-02T09:24:03.050Z",
+  "sourceRevisionRecheckedUnchanged": true,
+  "sourceSelectionSha256": "214ca0dc05584a135ae725007e7d105c64964e0bebfffea6c41e820330efee6f",
+  "workplaces": [
+    "/private/tmp/klink-grammar-aa-20261103",
+    "/private/tmp/klink-grammar-integrated-20261104"
+  ],
+  "neverPublishDetachedWorkplaces": true,
+  "uniqueLocalPositions": 28,
+  "localByGroup": {
+    "KHW": 10,
+    "MDZ": 9,
+    "ZMZ": 9,
+    "ZOE": 0
+  },
+  "livePositions": 0,
+  "MDZ": {
+    "sourceBound": 9,
+    "fullFirstLastReloadFlows": 36,
+    "nativeCardCompletions": 108,
+    "new001CompleteNineSourceRounds": 4,
+    "photoStorageFailureControls": 4,
+    "independentReadingAndReviewEligible": false,
+    "bugFixed": "Separate card audio buttons marked data-practice-listen so global word-listening does not play the button word Luister."
+  },
+  "ZMZ": {
+    "sourceBound": 9,
+    "fullFirstLastReloadFlows": 36,
+    "nativeOptionCompletions": 108,
+    "completeRounds": 4,
+    "distinctOptionImagePlacements": 108,
+    "contextPlacements": 36,
+    "newBuiltWorkerStoragePhotoControls": 4,
+    "sourcePersonRoleMapping": "001 Roos self-reference; 004 Roos left woman (scene held); 005 Roos standing addresser; 008 Remko right male reader; others narrator. Person option photos are word-choice examples, not the same photographed characters.",
+    "placementRelease": false,
+    "placementHold": "Desktop image content only 59-68px high and labels extend outside card border. Mobile images are about208px high. No global CSS or floor change made."
+  },
+  "builtWorker": {
+    "actualAnswerFlows": 56,
+    "completeRounds": 6,
+    "actualPayloadsByteEqual": 30,
+    "httpChecks": [
+      "GET",
+      "HEAD",
+      "Range",
+      "ETag304",
+      "404",
+      "416"
+    ],
+    "offeredStaticAssets": 20000,
+    "oldPublicPayloadsByteEqual": 20106,
+    "normalBuildPassed": true,
+    "dryRunPassed": true,
+    "dryRunUploadKiB": 34865.44,
+    "dryRunGzipKiB": 5313.66,
+    "typesPassed": true,
+    "focusedLintPassed": true,
+    "sourceAndStateUnitTests": 12,
+    "bankReaderAndChapterTests": 6,
+    "configIgnoreBudgetLimitsChanged": false,
+    "cloudMutation": false,
+    "liveCapacityProven": false,
+    "localPollingOnly": {
+      "CHOKIDAR_USEPOLLING": "1",
+      "CHOKIDAR_INTERVAL": "2000"
+    }
+  },
+  "visualPreservation": {
+    "storedPairsPixelIdentical": 3,
+    "storedWebkit390NotPixelIdentical": true,
+    "freshCanonicalLocalWebkit390PixelIdentical": true,
+    "freshEvidence": "/private/tmp/klink-grammar-aa-20261103/docs/klink10-grammar-aa-20261103/mdz/preservation-fresh/result.json",
+    "incorrectConstantBooleanInOldComparison": "Old raw result has an erroneously hardcoded true helper flag despite false pixelIdentical; ignored. Script fixed to pixels===0; no altered tolerances, CSS, masks or reference images."
+  },
+  "newAudio001": {
+    "text": "Ik drink water.",
+    "voiceId": "7qdUFMklKPaaAVMsBTBt",
+    "role": "SC001 female self-reference",
+    "characters": 15,
+    "onceGenerated": true,
+    "oldUnknownVoiceCandidatePreserved": true,
+    "metadataDecodeAndUnchangedAudioPacketsPassed": true,
+    "nativeFullAppCompletedInBothBrowsers": true,
+    "pronunciationApproved": false
+  },
+  "listeningReview": {
+    "driveId": "1xCrPutx5fnnJuqss2q_tGePf_2V68veA",
+    "url": "https://drive.google.com/file/d/1xCrPutx5fnnJuqss2q_tGePf_2V68veA/view",
+    "bytes": 524351,
+    "sha256": "6fa2e911df3823007c554dcc52bf8745b90c4e2f6eb055038d1c266e012aa4a2",
+    "fullReadbackEqual": true
+  },
+  "sourceHolds": [
+    "SC004 walking image/function",
+    "SC009 addressee/home/bicycle hands and missing model",
+    "ZOE all10 require genuinely new images; source conflict still awaiting designated image chat"
+  ],
+  "sourceReadyForNextLimitedBatchAfterAudio": [
+    "KGR-AA-KHW-001",
+    "KGR-AA-KHW-002",
+    "KGR-AA-KHW-003",
+    "KGR-AA-KHW-005",
+    "KGR-AA-KHW-006",
+    "KGR-AA-KHW-007",
+    "KGR-AA-KHW-008",
+    "KGR-AA-KHW-010",
+    "KGR-AA-MDZ-001",
+    "KGR-AA-MDZ-002",
+    "KGR-AA-MDZ-003",
+    "KGR-AA-MDZ-005",
+    "KGR-AA-MDZ-006",
+    "KGR-AA-MDZ-007",
+    "KGR-AA-MDZ-008",
+    "KGR-AA-MDZ-010"
+  ],
+  "notClaimed": [
+    "Human NT2/listening approval",
+    "Physical phone testing",
+    "Independent reading mastery",
+    "All40 integration",
+    "Live release or live capacity"
+  ],
+  "rejectedEvidence": [
+    "Development-server final-image probes encountered module-import errors; not accepted. Built Worker replacement probes have zero page errors.",
+    "Worker test initially constructed an invalid URL; fixed test only.",
+    "Worker test initially waited for already selected order cards to re-enable; fixed test only.",
+    "ZMZ control initially used ambiguous listening-button selector; fixed test only.",
+    "Two visual proposals with overlap are rejected and retained. Final three-column proposal is review-only, not applied."
+  ],
+  "visualProposal": "/private/tmp/klink-grammar-integrated-20261104/docs/klink-grammar-integrated-20261104/placement-proposal/proposed-top.png",
+  "awaitingSpecificAppearanceApproval": true,
+  "newImageGeneration": false,
+  "githubActionsTriggered": false,
+  "countsChanged": false
+}

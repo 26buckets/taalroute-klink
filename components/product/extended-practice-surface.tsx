@@ -4,9 +4,11 @@ import './word-use.css';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseListen } from './exercise-listen';
 import { StandardPracticeSurface } from './standard-practice-surface';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Image from './compact-image';
+import { emptyGrammarChoice, grammarChoiceKey, parseGrammarChoice, submitGrammarChoice } from '@/lib/grammar-choice-answer';
 import { Check, Volume2, RotateCcw } from 'lucide-react';
-import type { AudioPlayer, PackageExercise, ExerciseAudio } from '@/lib/package-content';
+import type { AudioPlayer, PackageExercise, ExerciseAudio, ExerciseImage } from '@/lib/package-content';
 
 type Props = { exercise: PackageExercise; onAudio: AudioPlayer; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean };
 type Block = { id: string; text: string; speaker?: string; audio?: ExerciseAudio };
@@ -15,14 +17,39 @@ type Task = { id: string; prompt: string; criteria: string[]; example: string; s
 export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: Props) {
   const [selected, setSelected] = useState('');
   const [help, setHelp] = useState(false);
-  const options = (exercise.options ?? []) as { id: string; label: string; audio?: ExerciseAudio }[];
+  const options = (exercise.options ?? []) as { id: string; label: string; audio?: ExerciseAudio; image?: ExerciseImage }[];
   const answer = (exercise.answer ?? {}) as { correctOptionIds?: string[] };
+  const grammarSourceId = typeof exercise.grammarSourceId === 'string' ? exercise.grammarSourceId : undefined;
+  const photoView = useExerciseViewTarget('photo', Boolean(grammarSourceId && exercise.prompt?.image?.src));
+  const optionSignature = JSON.stringify(options.map(option => option.id).sort());
+  const grammarAnswer = useRef(emptyGrammarChoice(options.map(option => option.id)));
+  const [grammarReady, setGrammarReady] = useState(false);
+  const [storageError, setStorageError] = useState(false);
+  useEffect(() => {
+    if (!grammarSourceId) return;
+    let active = true;
+    queueMicrotask(() => {
+      if (!active) return;
+      const ids: string[] = JSON.parse(optionSignature);
+      setGrammarReady(false); setStorageError(false); setSelected('');
+      grammarAnswer.current = emptyGrammarChoice(ids);
+      try {
+        const raw = localStorage.getItem(grammarChoiceKey(grammarSourceId));
+        const saved = parseGrammarChoice(raw, ids);
+        if (raw && !saved) throw new Error('Invalid saved choice');
+        grammarAnswer.current = saved ?? emptyGrammarChoice(ids);
+        setSelected(saved?.last ?? ''); setGrammarReady(true);
+      } catch { setStorageError(true); }
+    });
+    return () => { active = false; };
+  }, [grammarSourceId, optionSignature]);
   if (exercise.standardTask) return <StandardPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
   if (exercise.mode === 'functional-message' || exercise.mode === 'functional-form') return <FunctionalWriting exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onAudio={onAudio} canAnswer={canAnswer} />;
   const correct = answer.correctOptionIds?.includes(selected);
   const synonyms = exercise.mode === 'synonyms';
   const wordUse = typeof exercise.wordUseId === 'string';
   return <section className={`cp-task-card cp-extended-task${synonyms || wordUse ? ' cp-synonyms-task' : ''}${wordUse && exercise.mode === 'suitable-reply' ? ' cp-word-use-reply' : ''}`}>
+    {grammarSourceId && <>{exercise.prompt?.audio?.src && <ExerciseListen label="Luister naar de opdracht" onClick={() => onAudio(exercise.prompt?.audio?.src)} />}{exercise.prompt?.image?.src && <Image {...photoView} src={exercise.prompt.image.src} alt="Foto bij de opdracht" width={760} height={760} />}{storageError && <p role="alert">Je keuze kon niet worden bewaard. Probeer opnieuw voordat je verdergaat.</p>}</>}
     {wordUse && <p className="cp-synonym-context">{String(exercise.wordUseContext)}</p>}
     {synonyms && exercise.prompt?.audio?.src && typeof exercise.synonymContext === 'string' && <p className="cp-synonym-context">{exercise.synonymContext}</p>}
     {exercise.mode === 'sound-compare' ? <ExerciseListen label="Luister naar beide woorden" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> :
@@ -32,16 +59,23 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
       </> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} initiallyHidden={exercise.transcriptAfterAnswer === true && !selected} />}
     {typeof exercise.question === 'string' && <h4><WordAudioText text={exercise.question} /></h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
-    <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
+    <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button aria-label={grammarSourceId && option.image ? option.label : undefined} disabled={!canAnswer || (grammarSourceId ? !grammarReady || answeredCorrectly : correct)} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
       setSelected(option.id);
+      if (grammarSourceId) {
+        try {
+          const next = submitGrammarChoice(grammarAnswer.current, option.id);
+          localStorage.setItem(grammarChoiceKey(grammarSourceId), JSON.stringify(next));
+          grammarAnswer.current = next; setStorageError(false);
+        } catch { setStorageError(true); return; }
+      }
       const isCorrect = answer.correctOptionIds?.includes(option.id) === true;
       const optionFeedback = (exercise.optionFeedback as Record<string, unknown> | undefined)?.[option.id];
       const feedback = typeof optionFeedback === 'string' ? optionFeedback : synonyms || wordUse || exercise.readingRoundId ? String(isCorrect ? exercise.correctFeedback : exercise.feedback)
         : isCorrect ? typeof exercise.evidence === 'string' ? `In de tekst: ${exercise.evidence}` : 'Goed. Kijk ook naar het voorbeeld.'
         : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.';
       onFinish(option.id, isCorrect, feedback);
-    }}>{option.label}</button>{option.audio?.src && !wordUse && <button className="secondary-button" aria-label={`Luister: ${option.label}`} onClick={() => onAudio(option.audio?.src)}><Volume2 /></button>}</div>)}</div>
-    {exercise.mode === 'verb-choice' && <><button className="secondary-button" onClick={() => { setHelp(!help); onHelp(); }}>Help</button>{help && <div className="cp-source-text"><p>{String(exercise.rule)}</p><p>{String(exercise.sourceModel)}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.modelAudio as ExerciseAudio).src)}><Volume2 />Luister</button>}</div>}</>}
+    }}>{grammarSourceId && option.image?.src && <Image src={option.image.src} alt={option.image.altText ?? option.label} width={760} height={760} />}{option.label}</button>{option.audio?.src && !wordUse && <button className="secondary-button" aria-label={`Luister: ${option.label}`} onClick={() => onAudio(option.audio?.src)}><Volume2 /></button>}</div>)}</div>
+    {exercise.mode === 'verb-choice' && !grammarSourceId && <><button className="secondary-button" onClick={() => { setHelp(!help); onHelp(); }}>Help</button>{help && <div className="cp-source-text"><p>{String(exercise.rule)}</p><p>{String(exercise.sourceModel)}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.modelAudio as ExerciseAudio).src)}><Volume2 />Luister</button>}</div>}</>}
     {typeof exercise.evidence === 'string' && <p className="cp-source-proof" aria-hidden={!correct} style={{ visibility: correct ? 'visible' : 'hidden' }}>{exercise.evidence}</p>}
   </section>;
 }

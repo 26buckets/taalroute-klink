@@ -6,6 +6,7 @@ import { practiceChapters, displayedChapterCollections } from '../lib/practice-c
 import { productionIndex, validateProductionCollection } from '../lib/production-practice.ts';
 import { exerciseVocabularyLevels } from '../lib/content-levels.ts';
 import { groupActivities } from '../lib/group-practice.ts';
+import { readProductionBank } from './read-production-bank.mjs';
 
 export function buildWordLibraryIndex() {
   const known = new Set(allPackageWords.map(word => word.id));
@@ -19,7 +20,7 @@ export function buildWordLibraryIndex() {
         if (!loaded.has(collection.contentUrl)) {
           const row = productionIndex.find(row => row.url === collection.contentUrl);
           assert(row, collection.contentUrl);
-          loaded.set(collection.contentUrl, validateProductionCollection(JSON.parse(readFileSync('public' + row.url)), row.id, row.count));
+          loaded.set(collection.contentUrl, validateProductionCollection(readProductionBank(row), row.id, row.count));
         }
         exercises = loaded.get(collection.contentUrl);
         const selected = collection.wordRound?.exerciseIds ?? collection.readingSelection?.exerciseIds;

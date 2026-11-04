@@ -1,0 +1,15 @@
+
+> taalroute-klink@0.1.0 lint
+> oxlint components/product/package-exercise-browser.tsx components/product/extended-practice-surface.tsx lib/sequence-answer.ts lib/grammar-choice-answer.ts app/api/grammar-aa-assets/[name]/route.ts scripts/check-grammar-ready16-release.mjs scripts/check-opening-loader-once-release-20261103.mjs scripts/test-grammar-ready16-browser.mjs
+
+scripts/check-opening-loader-once-release-20261103.mjs:27:37: error unicorn(no-useless-spread): `Set` accepts an iterable, so it's unnecessary to convert the iterable to an array. help: Consider removing the spread operator.
+scripts/check-grammar-ready16-release.mjs:20:166: error typescript(require-array-sort-compare): Require 'compare' argument.
+scripts/check-grammar-ready16-release.mjs:28:19: error typescript(require-array-sort-compare): Require 'compare' argument.
+scripts/check-grammar-ready16-release.mjs:32:122: error typescript(require-array-sort-compare): Require 'compare' argument.
+scripts/test-grammar-ready16-browser.mjs:16:163: error typescript(unbound-method): Avoid referencing unbound methods which may cause unintentional scoping of `this`. help: If your function does not access `this`, you can annotate it with `this: void`, or consider using an arrow function instead.
+scripts/test-grammar-ready16-browser.mjs:24:53: error typescript(no-base-to-string): 'engine' may use Object's default stringification format ('[object Object]') when stringified. help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+scripts/test-grammar-ready16-browser.mjs:24:53: error typescript(restrict-template-expressions): Invalid type used in template literal expression.
+scripts/test-grammar-ready16-browser.mjs:29:25: error typescript(no-base-to-string): 'engine' may use Object's default stringification format ('[object Object]') when stringified. help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+scripts/test-grammar-ready16-browser.mjs:29:25: error typescript(restrict-template-expressions): Invalid type used in template literal expression.
+scripts/test-grammar-ready16-browser.mjs:30:25: error typescript(no-base-to-string): 'engine' may use Object's default stringification format ('[object Object]') when stringified. help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+scripts/test-grammar-ready16-browser.mjs:30:25: error typescript(restrict-template-expressions): Invalid type used in template literal expression.

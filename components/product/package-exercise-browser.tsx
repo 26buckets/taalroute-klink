@@ -8,6 +8,7 @@ import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
 import { checkSentenceAnswer, parseOwnSentence, type OwnSentence } from '@/lib/sentence-answer';
 import { wordAudioParts } from '@/lib/word-audio';
+import { emptySequenceAnswer, parseSequenceAnswer, updateSequenceAnswer, sequenceAnswerKey } from '@/lib/sequence-answer';
 import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 import { emptyWritingInk, hasWritingInk, loadWritingInk, openWritingInk, saveWritingInk, updateWritingInk, type WritingInk } from '@/lib/writing-ink';
 import { WritingBoard, type Stroke } from './writing-board';
@@ -71,7 +72,7 @@ type ResultState = 'idle' | 'right' | 'wrong';
 type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };
 type Tile = { id: string; token: string };
 type TextField = { id: string; acceptedAnswers?: string[] };
-type ExerciseItem = { itemId: string; text?: string; content?: CardContent; pairKey?: string };
+type ExerciseItem = { itemId: string; text?: string; content?: CardContent; pairKey?: string; audio?: { src: string } };
 type CardContent = { text?: string; image?: ExerciseImage };
 
 const normalize = (value: string) => value.trim().replace(/\s+/g, ' ').toLocaleLowerCase('nl-NL').replace(/[.!?]+$/, '');
@@ -434,7 +435,7 @@ function PackageExercisePlayer({
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
       ...(exercise.synonymPairId || exercise.wordUseId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
-      ...(exercise.writingSourceId ? { independentReading: false, reviewEligible: false } : {}),
+      ...(exercise.writingSourceId || exercise.sequenceSourceId || exercise.grammarSourceId ? { independentReading: false, reviewEligible: false } : {}),
       ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: exercise.access === 'self-practice' ? 'self-practice' : 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
@@ -626,7 +627,7 @@ export function ExerciseSurface({
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-011': return exercise.sourceForm === true ? <SourceFormSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} /> : <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-012': return exercise.handwritingOnly === true ? <HandwritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} /> : <TraceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} />;
-    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
+    case 'ALF-CMP-013': return <SequenceSurface key={exercise.exerciseId} exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-014': return <BoardSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} canAnswer={canAnswer} />;
     case 'ALF-CMP-015': return <GameSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-016': return <CardsSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
@@ -1192,15 +1193,50 @@ function StagedSequenceSurface(props: Pick<SurfaceProps, 'exercise' | 'onAudio' 
 function SequenceSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onAudio' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {
   const items = asArray<ExerciseItem>(exercise.items);
   const target = asArray<string>(exercise.targetOrderIds);
+  const sourceId = asString(exercise.sequenceSourceId);
+  const itemSignature = JSON.stringify(items.map(item => item.itemId));
+  const current = useRef(emptySequenceAnswer(items.map(item => item.itemId)));
   const [chosen, setChosen] = useState<string[]>([]);
+  const [ready, setReady] = useState(!sourceId), [storageError, setStorageError] = useState(false), [audioError, setAudioError] = useState(false);
   const bank = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!sourceId) return;
+    const frame = requestAnimationFrame(() => {
+      try {
+        const raw = localStorage.getItem(sequenceAnswerKey(sourceId));
+        const saved = parseSequenceAnswer(raw, JSON.parse(itemSignature));
+        if (saved) { current.current = saved; setChosen(saved.draft); }
+        else if (raw !== null) setStorageError(true);
+      } catch { setStorageError(true); }
+      setReady(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [sourceId, itemSignature]);
+  function save(next: string[], submitted = false) {
+    current.current = updateSequenceAnswer(current.current, next, submitted);
+    setChosen(next);
+    if (sourceId) {
+      try { localStorage.setItem(sequenceAnswerKey(sourceId), JSON.stringify(current.current)); setStorageError(false); }
+      catch { setStorageError(true); return false; }
+    }
+    return true;
+  }
   const itemContent = (item: ExerciseItem) => <>{item.content?.image && <ExerciseImageView image={item.content.image} />}{item.text ?? item.content?.text}</>;
-  function add(id: string) { if (!canAnswer || answeredCorrectly || chosen.includes(id) || !items.some(item => item.itemId === id)) return; setChosen([...chosen, id]); onReset(); requestAnimationFrame(() => bank.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus()); }
+  const replay = (item: ExerciseItem, index: number) => item.audio?.src && <button type="button" className="secondary-button" data-practice-listen data-order-audio={item.itemId} aria-label={`Luister naar kaart ${index + 1}`} disabled={!canAnswer} onClick={async () => {
+    try { setAudioError(await onAudio(item.audio!.src, { waitUntilEnd: true }) === false); } catch { setAudioError(true); }
+  }}>Luister</button>;
+  function add(id: string) { if (!ready || !canAnswer || answeredCorrectly || chosen.includes(id) || !items.some(item => item.itemId === id)) return; save([...chosen, id]); onReset(); requestAnimationFrame(() => bank.current?.querySelector<HTMLButtonElement>('button[data-order-item]:not(:disabled)')?.focus()); }
   return <section className="cp-task-card cp-standard-task" data-standard-player="order"><Prompt exercise={exercise} onAudio={onAudio} />
+    {sourceId && <ExerciseImageView image={exercise.prompt?.image} optional />}
     {/* oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- Dropping supplements the keyboard/tap buttons below. */}
-    <ol className="cp-sequence-result" aria-label="Jouw volgorde" onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); add(event.dataTransfer.getData('text/plain')); }}>{chosen.map(id => <li key={id}>{itemContent(items.find(item => item.itemId === id)!)}</li>)}</ol>
-    <div className="cp-sequence-options" ref={bank}>{items.map(item => <button key={item.itemId} data-order-item={item.itemId} disabled={!canAnswer || answeredCorrectly || chosen.includes(item.itemId)} draggable={!chosen.includes(item.itemId) && canAnswer && !answeredCorrectly} onDragStart={event => event.dataTransfer.setData('text/plain', item.itemId)} onClick={() => add(item.itemId)}>{itemContent(item)}</button>)}</div>
-    <div className="cp-task-actions"><button className="secondary-button" disabled={!chosen.length || answeredCorrectly} onClick={() => { const id = chosen.at(-1)!; setChosen(chosen.slice(0, -1)); onReset(); requestAnimationFrame(() => Array.from(bank.current?.querySelectorAll<HTMLButtonElement>('button') ?? []).find(button => button.dataset.orderItem === id)?.focus()); }}><RotateCcw />Eén terug</button><button data-practice-check className="primary-button" disabled={!canAnswer || answeredCorrectly || chosen.length !== items.length} onClick={() => onFinish(chosen.join('|'), orderAccepted(chosen, target, asArray<string[]>(exercise.acceptedOrderIds)))}>Controleer<Check /></button></div>
+    <ol className="cp-sequence-result" aria-label="Jouw volgorde" onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); add(event.dataTransfer.getData('text/plain')); }}>{chosen.map(id => { const item = items.find(item => item.itemId === id)!; return <li key={id}>{itemContent(item)}{replay(item, items.indexOf(item))}</li>; })}</ol>
+    <div className="cp-sequence-options" ref={bank}>{items.map((item, index) => {
+      const choice = <button key={item.itemId} data-order-item={item.itemId} disabled={!ready || !canAnswer || answeredCorrectly || chosen.includes(item.itemId)} draggable={!chosen.includes(item.itemId) && ready && canAnswer && !answeredCorrectly} onDragStart={event => event.dataTransfer.setData('text/plain', item.itemId)} onClick={() => add(item.itemId)}>{itemContent(item)}</button>;
+      return item.audio?.src ? <div className="cp-task-actions" key={item.itemId}>{choice}{replay(item, index)}</div> : choice;
+    })}</div>
+    <div className="cp-task-actions"><button className="secondary-button" disabled={!ready || !chosen.length || answeredCorrectly} onClick={() => { const id = chosen.at(-1)!; save(chosen.slice(0, -1)); onReset(); requestAnimationFrame(() => Array.from(bank.current?.querySelectorAll<HTMLButtonElement>('button') ?? []).find(button => button.dataset.orderItem === id)?.focus()); }}><RotateCcw />Eén terug</button><button data-practice-check className="primary-button" disabled={!ready || !canAnswer || answeredCorrectly || chosen.length !== items.length} onClick={() => { if (save(chosen, true)) onFinish(chosen.join('|'), orderAccepted(chosen, target, asArray<string[]>(exercise.acceptedOrderIds))); }}>Controleer<Check /></button></div>
+    {storageError && <output>Je volgorde kon niet op dit apparaat worden geladen of bewaard. Je huidige keuze blijft in dit scherm staan. Probeer opnieuw te bewaren.</output>}
+    {audioError && <output>Het geluid werkt niet. Probeer het nog eens.</output>}
     <WordHint exercise={exercise} onHelp={onHelp} />
   </section>;
 }
