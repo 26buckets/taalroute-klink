@@ -1,0 +1,47 @@
+chromium 390 KSW-N26R2-AB-WL-001
+chromium 390 KSW-N26R2-AB-WL-002
+chromium 390 KSW-N26R2-AB-WL-003
+chromium 390 KSW-N26R2-AB-WL-004
+chromium 390 KSW-N26R2-AB-WL-005
+chromium 390 KSW-N26R2-AB-WL-006
+chromium 390 KSW-N26R2-AB-WL-007
+chromium 390 KSW-N26R2-AB-WL-008
+chromium 390 KSW-N26R2-AB-WL-009
+chromium 390 KSW-N26R2-AB-WL-010
+chromium 1280 KSW-N26R2-AB-WL-001
+chromium 1280 KSW-N26R2-AB-WL-002
+chromium 1280 KSW-N26R2-AB-WL-003
+chromium 1280 KSW-N26R2-AB-WL-004
+chromium 1280 KSW-N26R2-AB-WL-005
+chromium 1280 KSW-N26R2-AB-WL-006
+chromium 1280 KSW-N26R2-AB-WL-007
+chromium 1280 KSW-N26R2-AB-WL-008
+chromium 1280 KSW-N26R2-AB-WL-009
+chromium 1280 KSW-N26R2-AB-WL-010
+webkit 390 KSW-N26R2-AB-WL-001
+webkit 390 KSW-N26R2-AB-WL-002
+webkit 390 KSW-N26R2-AB-WL-003
+webkit 390 KSW-N26R2-AB-WL-004
+webkit 390 KSW-N26R2-AB-WL-005
+webkit 390 KSW-N26R2-AB-WL-006
+webkit 390 KSW-N26R2-AB-WL-007
+webkit 390 KSW-N26R2-AB-WL-008
+webkit 390 KSW-N26R2-AB-WL-009
+webkit 390 KSW-N26R2-AB-WL-010
+webkit 1280 KSW-N26R2-AB-WL-001
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-exercise-id="KSW-N26R2-AB-WL-001"]') to be visible[22m
+
+    at /private/tmp/klink-letter-ab-ready10-20261104/scripts/test-klink10-letter-ab-browser.mjs:26:36 {
+  log: [
+    `  - waiting for locator('[data-exercise-id="KSW-N26R2-AB-WL-001"]') to be visible`
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0

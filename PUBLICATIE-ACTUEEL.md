@@ -1,3 +1,17 @@
+## Actuele publicatie — tien Alfa B-letteropdrachten — 4 november 2026
+
+Livebron `8fb4f0203861e8bf24142b7ded2cb6f566f119a3`, Worker `06d25f68-2bca-4814-bca4-2876de010d79`. Tien bronopdrachten KSW-N26R2-AB-WL-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. In Schrijf de letter · Letters in woorden typt de cursist de gevraagde kleine letter. Bestaande contextaudio en opnamebytes hergebruikt; nul nieuwe audio of beelden. Dit bewijst geen handschriftvaardigheid of nieuwe unieke letters.
+
+Live: 40 antwoord-, concept-, eerste/laatste-poging- en herlaadstromen in Chromium/WebKit op mobiel/desktop; 22 native afspeelafrondingen en tien exact teruggelezen audiobestanden met bestaande gecontroleerde Taalroute-metadata. De eerste run voltooide 30 stromen; WebKit-desktop overschreed bij de eerste herlading 15 seconden. Oorzaak niet vastgelegd. Alleen de tien onafgeronde stromen opnieuw gecontroleerd, ongewijzigd geslaagd; oorspronkelijke foutlog behouden. De antwoordstromen gebruiken gesimuleerde audio, de afzonderlijke native afspeelproeven echte audio. Bank GET, HEAD en ETag gecontroleerd; Content-Length is optioneel bij de aangeboden HEAD-respons.
+
+Lokaal acht bestaande Alfa A-schermparen pixelgelijk en zestien bestaande antwoordstromen behouden. Alle 20.106 oude publicbestanden bytegelijk. Werkelijk 15 geüploade + 19.985 ongewijzigde assets = 20.000; Worker 35.542,11 KiB ongecomprimeerd / 5.800,82 KiB gzip. Geen CSS-, configuratie-, limiet-, budget- of D1-wijziging. Geen GitHub Actions.
+
+Bronback-up Drive `15H-3iBKSNqjN9hFzlacPGhLLrLmNOF4S`: 84 payloads volledig teruggelezen. Eindbewijs Drive `1YNWEeE7oPgAFR1cL-RZnVPPVqj4OJ0In`: 3.452.171 bytes; alle 33 buitenste en 84 geneste payloads plus manifesten exact gecontroleerd. Bewijs in `docs/letter-ab-ready10-20261104/postflight/publication.json` en `backup-readback.json`. Deze bewijsopvolger niet opnieuw deployen.
+
+Nog zestig voorbereide schrijftaken in zes eerste-tien-reeksen; volgende zelfstandige kandidaat Alfa C Schrijf de letter. De bron voor Alfa B Zelf schrijven is op 4 november inhoudelijk gewijzigd: oude instructies/feedback niet ongecontroleerd publiceren. Aanvullende grammatica blijft 16/40 live met 24 open; afzonderlijke woordbeeldenachterstand 232. Geen fysieke apparaten of nieuwe onafhankelijke menselijke uitspraak-/NT2-review uitgevoerd.
+
+---
+
 ## Actuele publicatie — 16 Alfa A-grammaticaopdrachten — 4 november 2026
 
 Livebron `3e5634eda2cbb8a87a8638a9184b1a01bf07713e`, Worker `8fb06869-1431-4425-91d0-3ccac4aa011f`. Gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Kies het werkwoord en Maak de zin bevatten ieder de acht bronposities 001, 002, 003, 005, 006, 007, 008 en 010. Van de aanvullende 40 staan nu 16 online; 24 blijven open. Het geselecteerde grammaticapakket telt daarmee 136 van 160 live geverifieerde bronposities.
