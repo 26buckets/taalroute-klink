@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-source-writing-text="KSW-N26R2-AC-SO-001"]') to be visible[22m
+
+    at /private/tmp/klink-self-writing-ac-ready10-20261104/scripts/test-self-writing-ac-ready10-browser.mjs:15:165 {
+  log: [
+    `  - waiting for locator('[data-source-writing-text="KSW-N26R2-AC-SO-001"]') to be visible`
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0
