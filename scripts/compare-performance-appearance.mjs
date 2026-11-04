@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {chromium,webkit} from 'playwright';
 import sharp from 'sharp';
-const out='docs/performance-20261102/appearance';mkdirSync(out,{recursive:true});const rows=[];
+const out=process.env.KLINK_PERF_APPEARANCE_OUTPUT || 'docs/performance-20261102/appearance';mkdirSync(out,{recursive:true});const rows=[];
 for(const [engine,type] of Object.entries({chromium,webkit})){
  const b=await type.launch();try{for(const width of [1280,390])for(const colorScheme of ['light','dark'])for(const [name,hash,selector] of [['entry','','.landing-start'],['learner','#learner','.learner-app'],['docent','#teacher/plus','.kpd-lesson-choice']]){
   const images=[];

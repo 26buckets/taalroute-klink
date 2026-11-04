@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { GroupRound } from './package-group-practice';
-import { validateProductionCollection } from '@/lib/production-practice';
+import { productionAssetUrl, validateProductionCollection } from '@/lib/production-practice';
 import type { PackageExercise } from '@/lib/package-content';
 
 type Props = React.ComponentProps<typeof GroupRound> & { contentUrl: string; count: number; exerciseIds?: string[] };
@@ -12,7 +12,7 @@ export async function loadProductionExercises(contentUrl: string, id: string, co
   const hasRequired = (exercises: PackageExercise[]) => requiredIds.every(id => exercises.some(e => e.exerciseId === id));
   if (cached && hasRequired(cached)) return cached;
   if (cached) cache.delete(contentUrl);
-  const response = await fetch(contentUrl, { signal });
+  const response = await fetch(productionAssetUrl(contentUrl), { signal });
   if (!response.ok) throw new Error('Unavailable');
   const exercises = validateProductionCollection(await response.json(), id, count);
   if (!hasRequired(exercises)) throw new Error('Missing source exercise');

@@ -1,0 +1,35 @@
+{
+  "application": "Klink",
+  "authorization": "Nico, 2 November 2026: finish and publish ten reviewed chats including audio",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "0qLmDzgqulxcvv0yf3kg"
+  },
+  "model": "eleven_v4",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.8,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+  },
+  "maximumIncludedCredits": 10000,
+  "buyExtraCredits": false,
+  "characters": 69,
+  "clips": [
+    {
+      "id": "k10s-2221e5db17410321-r5-v4",
+      "text": "Luister naar de hele zin en lees mee. Tik op het woord 'alstublieft'.",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'alstublieft'.",
+      "role": "instruction",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "src": "/package-audio/klink10-sentences-20261103/k10s-2221e5db17410321-r5-v4.mp3",
+      "textSha256": "df6b62b2254a719e3ec98f63aca11791eab5e7a82f71041c8a9e7922dc3b680c",
+      "requestText": "Luister naar de hele zin en lees mee. Tik op het woord 'alstublieft'."
+    }
+  ],
+  "seed": 1,
+  "purpose": "One failed instruction clip, same verified Dutch Roland voice; v4 listed for this voice, cost factor1; no limit increase."
+}

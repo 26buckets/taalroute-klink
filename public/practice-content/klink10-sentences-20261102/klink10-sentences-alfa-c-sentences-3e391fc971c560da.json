@@ -1,0 +1,927 @@
+{
+  "id": "klink10-sentences-alfa-c-sentences",
+  "exercises": [
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-001",
+      "sourceRecordId": "SZ-ALFA-C-LLM-001",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-001"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-001.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-001"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'Hallo'.",
+      "question": "Waar staat 'Hallo'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-001-sentence",
+          "text": "Hallo, ik heet Noor.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-001.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-001"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Hallo, ik heet Noor.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Hallo,",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "id": "word-7",
+            "text": "ik",
+            "start": 7,
+            "end": 9
+          },
+          {
+            "id": "word-10",
+            "text": "heet",
+            "start": 10,
+            "end": 14
+          },
+          {
+            "id": "word-15",
+            "text": "Noor.",
+            "start": 15,
+            "end": 20
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-0"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-c40b526df9018070",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=0,61254"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-002",
+      "sourceRecordId": "SZ-ALFA-C-LLM-002",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-002"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-002.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-002"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'alstublieft'.",
+      "question": "Waar staat 'alstublieft'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-002-sentence",
+          "text": "Ik wil graag een brood, alstublieft.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-002.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-002"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Ik wil graag een brood, alstublieft.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Ik",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "word-3",
+            "text": "wil",
+            "start": 3,
+            "end": 6
+          },
+          {
+            "id": "word-7",
+            "text": "graag",
+            "start": 7,
+            "end": 12
+          },
+          {
+            "id": "word-13",
+            "text": "een",
+            "start": 13,
+            "end": 16
+          },
+          {
+            "id": "word-17",
+            "text": "brood,",
+            "start": 17,
+            "end": 23
+          },
+          {
+            "id": "word-24",
+            "text": "alstublieft.",
+            "start": 24,
+            "end": 36
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-24"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-2221e5db17410321-r5-v4",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=61254,77978"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-003",
+      "sourceRecordId": "SZ-ALFA-C-LLM-003",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-003"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-003.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-003"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'hoofd'.",
+      "question": "Waar staat 'hoofd'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-003-sentence",
+          "text": "Mijn hoofd doet pijn.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-003.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-003"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Mijn hoofd doet pijn.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Mijn",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "id": "word-5",
+            "text": "hoofd",
+            "start": 5,
+            "end": 10
+          },
+          {
+            "id": "word-11",
+            "text": "doet",
+            "start": 11,
+            "end": 15
+          },
+          {
+            "id": "word-16",
+            "text": "pijn.",
+            "start": 16,
+            "end": 21
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-5"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-3d9b557f7ccfeb81",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=139232,62090"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-004",
+      "sourceRecordId": "SZ-ALFA-C-LLM-004",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-004"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/connected/2ce7889e37129241a1d1.wav",
+          "audioId": "klink-opname-2ce7889e37129241a1d1"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'water'.",
+      "question": "Waar staat 'water'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-004-sentence",
+          "text": "Er ligt water op de vloer.",
+          "audio": {
+            "src": "/package-audio/connected/2ce7889e37129241a1d1.wav",
+            "audioId": "klink-opname-2ce7889e37129241a1d1"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Er ligt water op de vloer.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Er",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "word-3",
+            "text": "ligt",
+            "start": 3,
+            "end": 7
+          },
+          {
+            "id": "word-8",
+            "text": "water",
+            "start": 8,
+            "end": 13
+          },
+          {
+            "id": "word-14",
+            "text": "op",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "id": "word-17",
+            "text": "de",
+            "start": 17,
+            "end": 19
+          },
+          {
+            "id": "word-20",
+            "text": "vloer.",
+            "start": 20,
+            "end": 26
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-8"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-377da1a1364d11cd",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=201322,62090"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-005",
+      "sourceRecordId": "SZ-ALFA-C-LLM-005",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-005"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-005.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-005"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'begint'.",
+      "question": "Waar staat 'begint'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-005-sentence",
+          "text": "De les begint om negen uur.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-005.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-005"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "De les begint om negen uur.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "De",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "word-3",
+            "text": "les",
+            "start": 3,
+            "end": 6
+          },
+          {
+            "id": "word-7",
+            "text": "begint",
+            "start": 7,
+            "end": 13
+          },
+          {
+            "id": "word-14",
+            "text": "om",
+            "start": 14,
+            "end": 16
+          },
+          {
+            "id": "word-17",
+            "text": "negen",
+            "start": 17,
+            "end": 22
+          },
+          {
+            "id": "word-23",
+            "text": "uur.",
+            "start": 23,
+            "end": 27
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-7"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-edb783cbb75b10b5",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=263412,65016"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-006",
+      "sourceRecordId": "SZ-ALFA-C-LLM-006",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-006"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-006.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-006"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'Sara'.",
+      "question": "Waar staat 'Sara'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-006-sentence",
+          "text": "Dit is mijn zus Sara.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-006.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-006"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Dit is mijn zus Sara.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Dit",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "id": "word-4",
+            "text": "is",
+            "start": 4,
+            "end": 6
+          },
+          {
+            "id": "word-7",
+            "text": "mijn",
+            "start": 7,
+            "end": 11
+          },
+          {
+            "id": "word-12",
+            "text": "zus",
+            "start": 12,
+            "end": 15
+          },
+          {
+            "id": "word-16",
+            "text": "Sara.",
+            "start": 16,
+            "end": 21
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-16"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-6db7533cdd117fb2",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=328428,64596"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-007",
+      "sourceRecordId": "SZ-ALFA-C-LLM-007",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-007"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-007.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-007"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'vriend'.",
+      "question": "Waar staat 'vriend'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-007-sentence",
+          "text": "Ik praat met mijn vriend.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-007.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-007"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Ik praat met mijn vriend.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Ik",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "word-3",
+            "text": "praat",
+            "start": 3,
+            "end": 8
+          },
+          {
+            "id": "word-9",
+            "text": "met",
+            "start": 9,
+            "end": 12
+          },
+          {
+            "id": "word-13",
+            "text": "mijn",
+            "start": 13,
+            "end": 17
+          },
+          {
+            "id": "word-18",
+            "text": "vriend.",
+            "start": 18,
+            "end": 25
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-18"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-bf1a8a674135d56d",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=393024,64598"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-008",
+      "sourceRecordId": "SZ-ALFA-C-LLM-008",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-008"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-008.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-008"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'kamers'.",
+      "question": "Waar staat 'kamers'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-008-sentence",
+          "text": "Mijn huis heeft twee kamers.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-008.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-008"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Mijn huis heeft twee kamers.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Mijn",
+            "start": 0,
+            "end": 4
+          },
+          {
+            "id": "word-5",
+            "text": "huis",
+            "start": 5,
+            "end": 9
+          },
+          {
+            "id": "word-10",
+            "text": "heeft",
+            "start": 10,
+            "end": 15
+          },
+          {
+            "id": "word-16",
+            "text": "twee",
+            "start": 16,
+            "end": 20
+          },
+          {
+            "id": "word-21",
+            "text": "kamers.",
+            "start": 21,
+            "end": 28
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-21"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-c6e073f26ce0448f",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=457622,62926"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-009",
+      "sourceRecordId": "SZ-ALFA-C-LLM-009",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-009"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-009.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-009"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'badkamer'.",
+      "question": "Waar staat 'badkamer'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-009-sentence",
+          "text": "De badkamer is naast de keuken.",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-009.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-009"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "De badkamer is naast de keuken.",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "De",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "word-3",
+            "text": "badkamer",
+            "start": 3,
+            "end": 11
+          },
+          {
+            "id": "word-12",
+            "text": "is",
+            "start": 12,
+            "end": 14
+          },
+          {
+            "id": "word-15",
+            "text": "naast",
+            "start": 15,
+            "end": 20
+          },
+          {
+            "id": "word-21",
+            "text": "de",
+            "start": 21,
+            "end": 23
+          },
+          {
+            "id": "word-24",
+            "text": "keuken.",
+            "start": 24,
+            "end": 31
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-3"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-24779f43f08fbbf0",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=520548,65854"
+      }
+    },
+    {
+      "exerciseId": "SZ-ALFA-C-LLM-010",
+      "sourceRecordId": "SZ-ALFA-C-LLM-010",
+      "sourceDocumentId": "19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceDoc": "https://docs.google.com/document/d/19m2bfuFarGMZonftSOJ9w9wMFh4_bciIcTFTLTNv4s4",
+      "sourceContentIds": [
+        "ZDZ-AC-010"
+      ],
+      "sourceStatus": "source-bound-review-20261102",
+      "contractVersion": "1.0",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "assessment": "answer",
+      "manualAdvance": true,
+      "requiresExplicitCompletion": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "supported-listening",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/complete-20261101/zdz-ac-010.mp3",
+          "audioId": "KLINK-COMPLETE-ZDZ-AC-010"
+        }
+      },
+      "requiresAudio": true,
+      "audioOnly": true,
+      "feedback": "Probeer opnieuw. Je kunt de opname nog eens afspelen.",
+      "componentId": "KLINK-STANDARD",
+      "mode": "mark",
+      "groupActivity": "sentences",
+      "title": "Luister naar de hele zin en lees mee. Tik op het woord 'appels'.",
+      "question": "Waar staat 'appels'?",
+      "sourceBlocks": [
+        {
+          "id": "SZ-ALFA-C-LLM-010-sentence",
+          "text": "Mag ik een kilo appels?",
+          "audio": {
+            "src": "/package-audio/complete-20261101/zdz-ac-010.mp3",
+            "audioId": "KLINK-COMPLETE-ZDZ-AC-010"
+          }
+        }
+      ],
+      "standardTask": {
+        "kind": "mark",
+        "text": "Mag ik een kilo appels?",
+        "tokens": [
+          {
+            "id": "word-0",
+            "text": "Mag",
+            "start": 0,
+            "end": 3
+          },
+          {
+            "id": "word-4",
+            "text": "ik",
+            "start": 4,
+            "end": 6
+          },
+          {
+            "id": "word-7",
+            "text": "een",
+            "start": 7,
+            "end": 10
+          },
+          {
+            "id": "word-11",
+            "text": "kilo",
+            "start": 11,
+            "end": 15
+          },
+          {
+            "id": "word-16",
+            "text": "appels?",
+            "start": 16,
+            "end": 23
+          }
+        ],
+        "acceptedSelections": [
+          [
+            "word-16"
+          ]
+        ],
+        "help": "Luister nog eens. Lees de hele zin mee en tik op het gevraagde woord."
+      },
+      "instructionAudio": {
+        "audioId": "k10s-facffa8b115b27bb",
+        "src": "/package-audio/klink10-sentences-20261103/audio-8d7774fbfd31a8aa.bin#bytes=586402,64598"
+      }
+    }
+  ]
+}

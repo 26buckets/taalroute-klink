@@ -99,3 +99,18 @@ test('Packed recordings require the exact byte range and retain a full-response 
   for (const invalid of [{...source,src:'https://another.example/a.bin'},{...source,offset:-1},{...source,offset:1.5},{...source,length:262145}]) await assert.rejects(fetchWordRecording(invalid,controller.signal));
   assert.equal(fetched,false);
 });
+
+test('Packed WAV models retain their original bytes and real media type in partial and complete responses', async t => {
+  const original = globalThis.fetch;
+  t.after(() => { globalThis.fetch = original; });
+  const bytes = Buffer.concat([Buffer.from('RIFF'), Buffer.alloc(4), Buffer.from('WAVE'), Buffer.alloc(20)]), source = {src:'/package-audio/word-listening-20261101/words-fedcba9876543210.bin',offset:7,length:bytes.length};
+  for (const complete of [false,true]) {
+    globalThis.fetch = async () => complete ? new Response(Buffer.concat([Buffer.alloc(7),bytes])) : new Response(bytes,{status:206,headers:{'Content-Range':`bytes 7-${6+bytes.length}/${7+bytes.length}`}});
+    const clip = await fetchWordRecording(source,new AbortController().signal);
+    assert.equal(clip.type,'audio/wav'); assert.deepEqual(Buffer.from(await clip.arrayBuffer()),bytes);
+  }
+  for(const bad of [Buffer.from('RIFFxxxxxxxx-not-wave-audio'),Buffer.from('RIFF0000AVI xxxxxxxxxxxx')]) {
+    globalThis.fetch = async () => new Response(bad,{status:206,headers:{'Content-Range':`bytes 7-${6+bad.length}/${7+bad.length}`}});
+    await assert.rejects(fetchWordRecording({...source,src:'/package-audio/word-listening-20261101/words-fedcba9876543211.bin',length:bad.length},new AbortController().signal));
+  }
+});

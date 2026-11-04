@@ -40,3 +40,10 @@ test('Concurrent complete downloads count a retained bundle only once',async t=>
  await Promise.all([1,2,3].map(()=>fetchWordRecording(source(601),signal())));
  await fetchWordRecording(source(601),signal());assert.equal(calls,3);
 });
+
+test('Complete mixed bundles reuse WAV and MP3 without changing bytes or MIME',async t=>{
+ const original=fetch;t.after(()=>globalThis.fetch=original);const body=bundle();body.set(Buffer.from('RIFF0000WAVE'),64);let calls=0;
+ globalThis.fetch=async()=>{calls++;return new Response(body)};
+ for(const offset of [0,64,64,0]){const clip=await fetchWordRecording(source(701,offset),signal());assert.equal(clip.type,offset?'audio/wav':'audio/mpeg');assert.deepEqual(new Uint8Array(await clip.arrayBuffer()),body.slice(offset,offset+24));}
+ assert.equal(calls,1);
+});

@@ -1,0 +1,36 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10te-word-d79cc3d508ecf2f4-roos",
+      "src": "/package-audio/klink10-text-evidence-20261102/k10te-word-d79cc3d508ecf2f4-roos.mp3",
+      "expected": "apotheker",
+      "recognized": " Appeteker.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.6,
+          "text": " Appeteker.",
+          "tokens": [
+            50365,
+            3132,
+            302,
+            25926,
+            13,
+            50395
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.40049658502851215,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 0.2284744530916214
+        }
+      ]
+    }
+  ]
+}

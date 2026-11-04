@@ -1,0 +1,35 @@
+{
+  "application": "Klink",
+  "authorization": "Nico 2 November 2026: finish first ten source-bound exercises, including necessary ElevenLabs audio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "7qdUFMklKPaaAVMsBTBt",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 21,
+  "clips": [
+    {
+      "id": "k10te-word-context-010da522f38f34db",
+      "text": "Dit is een apotheker.",
+      "title": "Dit is een apotheker.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-text-evidence-20261102/k10te-word-context-010da522f38f34db.mp3",
+      "textSha256": "010da522f38f34dba8e2e5200b6d83f162899ec7f75e3efb4744cd52983c94d5"
+    }
+  ],
+  "supersedesPreliminary11ClipPlan": "Ten combined instruction+question recordings use the existing header player; no new UI or separate unused question recordings.",
+  "reason": "Context transcription passed but middle-word cut truncated final syllable; place target word at sentence end to retain complete ending."
+}

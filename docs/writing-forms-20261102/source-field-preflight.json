@@ -1,0 +1,1322 @@
+{
+  "forms": 140,
+  "fields": 395,
+  "unfound": [],
+  "normalizationContracts": [
+    {
+      "contract": "exact-source",
+      "count": 200,
+      "examples": [
+        [
+          "KSW-AA-VG-001",
+          "DAG",
+          "maandag"
+        ],
+        [
+          "KSW-AA-VG-002",
+          "DAG",
+          "vrijdag"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Nora",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-001",
+          "Voornaam",
+          "Nora"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Bakker",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-001",
+          "Achternaam",
+          "Bakker"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "17-05-1995",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-002",
+          "Geboortedatum",
+          "17-05-1995"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Delft",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-002",
+          "Woonplaats",
+          "Delft"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "06 0000 0000",
+          "0600000000"
+        ],
+        "demoOnly": true,
+        "example": "06 0000 0000",
+        "keepLeadingZero": true,
+        "match": "digits-after-removing-spaces"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-003",
+          "Telefoonnummer",
+          "06 0000 0000"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "exact e-mailadres"
+        ],
+        "example": "amir.kaya@example.org",
+        "match": "case-insensitive",
+        "preserveAtAndDots": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-003",
+          "E-mailadres",
+          "amir.kaya@example.org"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Lindeweg",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 2,
+      "examples": [
+        [
+          "KSW-AC-VGI-004",
+          "Straat",
+          "Lindeweg"
+        ],
+        [
+          "KSW-AC-VGI-015",
+          "Straat",
+          "Lindeweg"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "exacte cijferreeks"
+        ],
+        "example": "24",
+        "keepLeadingZeros": true,
+        "match": "exact-string"
+      },
+      "count": 2,
+      "examples": [
+        [
+          "KSW-AC-VGI-004",
+          "Huisnummer",
+          "24"
+        ],
+        [
+          "KSW-AC-VGI-015",
+          "Huisnummer",
+          "24"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Alfa C2",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-005",
+          "Groep",
+          "Alfa C2"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "09:00",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-005",
+          "Tijd",
+          "09:00"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Fatima Amin",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-006",
+          "Naam",
+          "Fatima Amin"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "12-03-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-006",
+          "Datum",
+          "12-03-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "ziek",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-006",
+          "Reden",
+          "ziek"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Sami Noor",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-007",
+          "Naam",
+          "Sami Noor"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "08-04-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-007",
+          "Datum",
+          "08-04-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "10:15",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-007",
+          "Tijd",
+          "10:15"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Mila Vos",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-008",
+          "Naam",
+          "Mila Vos"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "De kleine tuin",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-008",
+          "Titel",
+          "De kleine tuin"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "09-04-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-008",
+          "Datum",
+          "09-04-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Amina Said",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-009",
+          "Naam",
+          "Amina Said"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "De Groene Mand",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-009",
+          "Winkel",
+          "De Groene Mand"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "03-05-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-009",
+          "Datum",
+          "03-05-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Leo Bakker",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-010",
+          "Naam",
+          "Leo Bakker"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Samen Sterk",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-010",
+          "Club",
+          "Samen Sterk"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "weekdag"
+        ],
+        "example": "woensdag",
+        "match": "case-insensitive"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-010",
+          "Dag",
+          "woensdag"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Farid Saleh",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-011",
+          "Naam",
+          "Farid Saleh"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Werkplaats Noord",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-011",
+          "Bedrijf",
+          "Werkplaats Noord"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "12-05-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-011",
+          "Datum",
+          "12-05-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "08:30",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-011",
+          "Tijd",
+          "08:30"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "exacte cijferreeks"
+        ],
+        "example": "7",
+        "keepLeadingZeros": true,
+        "match": "exact-string"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-012",
+          "Bus",
+          "7"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Parkplein",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-012",
+          "Halte",
+          "Parkplein"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "weekdag"
+        ],
+        "example": "vrijdag",
+        "match": "case-insensitive"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-012",
+          "Dag",
+          "vrijdag"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "14:20",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-012",
+          "Tijd",
+          "14:20"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Laila Idris",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-013",
+          "Naam",
+          "Laila Idris"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "dokter Bos",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-013",
+          "Dokter",
+          "dokter Bos"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "21-05-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-013",
+          "Datum",
+          "21-05-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "11:30",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-013",
+          "Tijd",
+          "11:30"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Rosa de Wit",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-014",
+          "Naam",
+          "Rosa de Wit"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Nederlands A1",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-014",
+          "Cursus",
+          "Nederlands A1"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "A1-3",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-014",
+          "Groep",
+          "A1-3"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "18:30",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-014",
+          "Tijd",
+          "18:30"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "lamp kapot",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-015",
+          "Probleem",
+          "lamp kapot"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "13-06-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-015",
+          "Datum",
+          "13-06-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Eva",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-016",
+          "Naam",
+          "Eva"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Spreken 2",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-016",
+          "Groep",
+          "Spreken 2"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "20-06-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-016",
+          "Datum",
+          "20-06-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "15:00",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-016",
+          "Tijd",
+          "15:00"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Lina",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-017",
+          "Naam",
+          "Lina"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "De lange weg",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-017",
+          "Titel",
+          "De lange weg"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "23-06-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-017",
+          "Datum",
+          "23-06-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "14:00",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-017",
+          "Tijd",
+          "14:00"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Yara",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-018",
+          "Naam",
+          "Yara"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "25-06-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-018",
+          "Datum",
+          "25-06-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "07:30",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-018",
+          "Begint om",
+          "07:30"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "12:00",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-018",
+          "Klaar om",
+          "12:00"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Sara",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-019",
+          "Naam",
+          "Sara"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "exacte cijferreeks"
+        ],
+        "example": "2",
+        "keepLeadingZeros": true,
+        "match": "exact-string"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-019",
+          "Groep",
+          "2"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "02-07-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-019",
+          "Datum",
+          "02-07-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "13:00",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-019",
+          "Tijd",
+          "13:00"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Karim",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-020",
+          "Naam",
+          "Karim"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "inhoudelijk gelijk na witruimte-normalisatie"
+        ],
+        "example": "Alfa C4",
+        "match": "case-insensitive-trim-collapse-spaces",
+        "preserveInternalWords": true
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-020",
+          "Groep",
+          "Alfa C4"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "DD-MM-JJJJ",
+          "DD/MM/JJJJ"
+        ],
+        "example": "13-07-2027",
+        "keepLeadingZeros": true,
+        "match": "day-month-year"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-020",
+          "Datum",
+          "13-07-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "acceptedPatterns": [
+          "UU:MM"
+        ],
+        "example": "10:00",
+        "keepLeadingZeros": true,
+        "match": "24-hour"
+      },
+      "count": 1,
+      "examples": [
+        [
+          "KSW-AC-VGI-020",
+          "Tijd",
+          "10:00"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "caseInsensitive": true,
+        "format": "source-text",
+        "ignoreOuterSpace": true,
+        "keepLeadingZero": true,
+        "unknownEquivalent": "HUMAN_REVIEW"
+      },
+      "count": 37,
+      "examples": [
+        [
+          "KSW-AC-VGI-021",
+          "Naam",
+          "Farah Salim"
+        ],
+        [
+          "KSW-AC-VGI-021",
+          "Groep",
+          "A1-2"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "caseInsensitive": false,
+        "format": "source-text",
+        "ignoreOuterSpace": true,
+        "keepLeadingZero": true,
+        "unknownEquivalent": "HUMAN_REVIEW"
+      },
+      "count": 8,
+      "examples": [
+        [
+          "KSW-AC-VGI-022",
+          "Bus",
+          "9"
+        ],
+        [
+          "KSW-AC-VGI-026",
+          "Nummer",
+          "0042"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "caseInsensitive": false,
+        "format": "hh:mm",
+        "ignoreOuterSpace": true,
+        "keepLeadingZero": true,
+        "unknownEquivalent": "HUMAN_REVIEW"
+      },
+      "count": 12,
+      "examples": [
+        [
+          "KSW-AC-VGI-022",
+          "Tijd",
+          "07:45"
+        ],
+        [
+          "KSW-AC-VGI-024",
+          "Tijd",
+          "14:30"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "caseInsensitive": false,
+        "format": "dd-mm-jjjj",
+        "ignoreOuterSpace": true,
+        "keepLeadingZero": true,
+        "unknownEquivalent": "HUMAN_REVIEW"
+      },
+      "count": 6,
+      "examples": [
+        [
+          "KSW-AC-VGI-024",
+          "Datum",
+          "15-04-2027"
+        ],
+        [
+          "KSW-AC-VGI-026",
+          "Datum",
+          "03-05-2027"
+        ]
+      ]
+    },
+    {
+      "contract": {
+        "caseInsensitive": true,
+        "format": "hh:mm",
+        "ignoreOuterSpace": true,
+        "keepLeadingZero": true,
+        "unknownEquivalent": "HUMAN_REVIEW"
+      },
+      "count": 2,
+      "examples": [
+        [
+          "KSW-AC-VGI-040",
+          "Begint om",
+          "08:00"
+        ],
+        [
+          "KSW-AC-VGI-040",
+          "Klaar om",
+          "12:30"
+        ]
+      ]
+    },
+    {
+      "contract": "CASE_INSENSITIVE_WHERE_MEANING_PRESERVED",
+      "count": 53,
+      "examples": [
+        [
+          "KSW-AC-VGI-041",
+          "Dag",
+          "donderdag"
+        ],
+        [
+          "KSW-AC-VGI-042",
+          "Zaal",
+          "2"
+        ]
+      ]
+    },
+    {
+      "contract": "24_HOUR",
+      "count": 12,
+      "examples": [
+        [
+          "KSW-AC-VGI-041",
+          "Tijd",
+          "17:00"
+        ],
+        [
+          "KSW-AC-VGI-042",
+          "Tijd",
+          "19:30"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 'use client';
+import handwritingHints from '@/data/klink-handwriting-help-20261103.json';
 import { WordAudioText, isWordAudioClick } from './word-audio-text';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
@@ -7,9 +8,13 @@ import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
 import { checkSentenceAnswer, parseOwnSentence, type OwnSentence } from '@/lib/sentence-answer';
 import { wordAudioParts } from '@/lib/word-audio';
+import { emptySequenceAnswer, parseSequenceAnswer, updateSequenceAnswer, sequenceAnswerKey } from '@/lib/sequence-answer';
 import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 import { emptyWritingInk, hasWritingInk, loadWritingInk, openWritingInk, saveWritingInk, updateWritingInk, type WritingInk } from '@/lib/writing-ink';
 import { WritingBoard, type Stroke } from './writing-board';
+import './writing-form.css';
+import { SourceWritingText, type WritingExample } from './source-writing-text';
+import { checkWritingFormField, completeWritingForm, emptyWritingFormAnswer, loadWritingForm, openWritingForm, saveWritingForm, updateWritingFormAnswer, writingFormLiteralRanges, type SourceFormField, type WritingFormAnswer, type FormCheck } from '@/lib/writing-form';
 
 import { useId } from 'react';
 import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
@@ -67,7 +72,7 @@ type ResultState = 'idle' | 'right' | 'wrong';
 type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };
 type Tile = { id: string; token: string };
 type TextField = { id: string; acceptedAnswers?: string[] };
-type ExerciseItem = { itemId: string; text?: string; content?: CardContent; pairKey?: string };
+type ExerciseItem = { itemId: string; text?: string; content?: CardContent; pairKey?: string; audio?: { src: string } };
 type CardContent = { text?: string; image?: ExerciseImage };
 
 const normalize = (value: string) => value.trim().replace(/\s+/g, ' ').toLocaleLowerCase('nl-NL').replace(/[.!?]+$/, '');
@@ -430,7 +435,7 @@ function PackageExercisePlayer({
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
       ...(exercise.synonymPairId || exercise.wordUseId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
-      ...(exercise.writingSourceId ? { independentReading: false, reviewEligible: false } : {}),
+      ...(exercise.writingSourceId || exercise.sequenceSourceId || exercise.grammarSourceId ? { independentReading: false, reviewEligible: false } : {}),
       ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: exercise.access === 'self-practice' ? 'self-practice' : 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
@@ -497,9 +502,12 @@ function PackageExercisePlayer({
       ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([id, label]) => ({ id, label, icon: phaseIcons[id as keyof typeof phaseIcons] ?? Shapes }))
       : exerciseTypes.map(type => ({ id: type.id, label: type.label, icon: Shapes })),
   } : undefined);
+  const titleText = exercise.title || family?.label || 'Oefenen';
+  const titleUnits = asArray<number>(exercise.writingTitleUnits);
+  const titleContent = exercise.writingSourceId && titleUnits.length ? <span style={{ font: 'inherit', color: 'inherit', margin: 0 }}>{wordAudioParts(titleText).map((part, index) => titleUnits.includes(part.start) ? <span style={{ display: 'inline', font: 'inherit', color: 'inherit', margin: 0 }} key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</span> : titleText;
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
-              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
+              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button data-practice-listen className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{titleContent}</button> : titleContent}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button data-practice-previous aria-keyshortcuts="ArrowLeft" title="Vorige oefening (←)" onClick={() => { if (!audioPending && !recording && !practiceBusy(keyboard.ref.current)) { if (guided) openGuidedAt(guidedIndex - 1); else openAt(recordIndex - 1); } }} disabled={audioPending || recording || (guided ? guidedIndex <= 0 : recordIndex === 0)} aria-label="Vorige oefening"><ArrowLeft /></button>
@@ -562,7 +570,7 @@ function PackageExercisePlayer({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' || !audioPending ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={(audioPending && result !== 'right') || recording || (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right')))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.handwritingOnly === true || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
+            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={(audioPending && result !== 'right') || recording || (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right')))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.handwritingOnly === true || exercise.sourceForm === true || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
           </footer>
         </div>
       </div>
@@ -602,6 +610,7 @@ export function ExerciseSurface({
   infoTarget?: HTMLElement | null;
 }) {
   const demo = beginnerExerciseDemo(pack, exercise, guided);
+  if (exercise.sourceFreeWriting === true) return <SourceWritingText key={exercise.exerciseId} id={exercise.exerciseId} context={asString(exercise.sourceWritingContext)} support={asArray<string>(exercise.sourceWritingSupport)} examples={asArray<WritingExample>(exercise.sourceWritingExamples)} criteria={asArray<string>(exercise.sourceWritingCriteria)} label={asString(exercise.sourceWritingLabel)} canAnswer={canAnswer} onReset={onReset} onHelp={onHelp} onFinish={onFinish}><Prompt exercise={exercise} onAudio={onAudio} /></SourceWritingText>;
   if (exercise.mode === 'open-sentence') return <OwnSentenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onRecordingChange={onRecordingChange} canAnswer={canAnswer} />;
   if (Array.isArray(exercise.sequenceStages)) return <StagedSequenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
   switch (exercise.componentId) {
@@ -619,9 +628,9 @@ export function ExerciseSurface({
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onRecordingChange={onRecordingChange} />;
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
-    case 'ALF-CMP-011': return <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-011': return exercise.sourceForm === true ? <SourceFormSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} /> : <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-012': return exercise.handwritingOnly === true ? <HandwritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} /> : <TraceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} />;
-    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
+    case 'ALF-CMP-013': return <SequenceSurface key={exercise.exerciseId} exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-014': return <BoardSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} canAnswer={canAnswer} />;
     case 'ALF-CMP-015': return <GameSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-016': return <CardsSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
@@ -814,7 +823,7 @@ function WordHint({ exercise, onHelp, disabled = false }: { exercise: PackageExe
   const spellingUnits = asArray<number>(exercise.writingHintUnits);
   useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" disabled={disabled} aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <div className="cp-word-hint" ref={hint}>{shown && <><strong data-word-listening-units={exercise.letterModelOnly ? 'sound' : undefined}>{exercise.letterModelOnly ? exercise.helpWord : <WordAudioText text={exercise.helpWord} />}</strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" disabled={disabled} aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
@@ -940,7 +949,7 @@ function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onF
     } catch {
       stream.current?.getTracks().forEach(track => track.stop());
       stream.current = null;
-      if (mounted.current) setMessage('De microfoon werkt niet. Zeg het woord hardop. Tik daarna op Klaar.');
+      if (mounted.current) setMessage('De microfoon werkt niet. Zeg je antwoord hardop. Tik daarna op Klaar.');
     } finally {
       if (mounted.current) setRequesting(false);
     }
@@ -971,11 +980,70 @@ function FormSurface({ exercise, onFinish, onReset }: Pick<SurfaceProps, 'exerci
   return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-form-fields">{fields.map((field) => <label key={field.fieldId}><span>{field.label}</span>{field.type === 'select' ? <select value={values[field.fieldId] ?? ''} onChange={(event) => { setValues({ ...values, [field.fieldId]: event.target.value }); onReset(); }}><option value="">Kies</option>{field.options?.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select> : <input type={field.type === 'number' ? 'number' : 'text'} value={values[field.fieldId] ?? ''} onChange={(event) => { setValues({ ...values, [field.fieldId]: event.target.value }); onReset(); }} />}</label>)}</div><button data-practice-check className="primary-button" onClick={() => onFinish(JSON.stringify(values), valid())}>Controleer<Check /></button></section>;
 }
 
+function SourceFormSurface({ exercise, onAudio, onFinish, onReset, canAnswer }: SurfaceProps & { onReset: () => void; canAnswer: boolean }) {
+  const fields = asArray<SourceFormField>(exercise.fields), labelId = useId(), card = asString(asRecord(exercise.sourceCard).text);
+  const [answer, setAnswer] = useState<WritingFormAnswer>(emptyWritingFormAnswer), [checks, setChecks] = useState<FormCheck[]>();
+  const current = useRef(answer), db = useRef<IDBDatabase | null>(null), active = useRef(true);
+  const [ready, setReady] = useState(false), [busy, setBusy] = useState(false), [error, setError] = useState(false);
+  useEffect(() => {
+    let connection: IDBDatabase | undefined, alive = true; active.current = true;
+    void (async () => {
+      try {
+        connection = await openWritingForm(); const saved = await loadWritingForm(connection, exercise.exerciseId, fields);
+        if (!alive || !active.current) { connection.close(); return; }
+        db.current = connection; current.current = saved; setAnswer(saved); setReady(true);
+      } catch { if (alive && active.current) setError(true); connection?.close(); }
+    })();
+    return () => { alive = false; active.current = false; db.current = null; connection?.close(); };
+  }, [exercise.exerciseId, fields]);
+  async function save(next: WritingFormAnswer, submitted = false) {
+    current.current = next; setAnswer(next);
+    try {
+      if (!db.current) throw new Error('Form storage unavailable');
+      const saved = await saveWritingForm(db.current, exercise.exerciseId, next, fields, submitted);
+      if (active.current) { if (current.current === next) { current.current = saved; setAnswer(saved); } setError(false); }
+      return true;
+    } catch { if (active.current) setError(true); return false; }
+  }
+  function change(id: string, value: string) {
+    onReset(); setChecks(undefined);
+    try { void save(updateWritingFormAnswer(current.current, { ...current.current.draft, [id]: value }, fields)); } catch { setError(true); }
+  }
+  async function compare() {
+    if (!ready || busy || !canAnswer || !completeWritingForm(current.current.draft, fields)) return;
+    setBusy(true); const next = updateWritingFormAnswer(current.current, current.current.draft, fields, true);
+    if (await save(next, true) && active.current) {
+      const result = fields.map(field => checkWritingFormField(next.draft[field.id], field)); setChecks(result);
+      if (result.every(check => check === 'matched')) onFinish(JSON.stringify(next.draft), true, 'Je hebt de gegevens op de juiste plek gezet.');
+    }
+    if (active.current) setBusy(false);
+  }
+  return <section className="cp-task-card" data-writing-form-source={exercise.exerciseId}>
+    <Prompt exercise={exercise} onAudio={onAudio} />
+    <div className="cp-source-text functional-source"><p><WordAudioText text={card} literalRanges={writingFormLiteralRanges(card)} /></p></div>
+    <div className="cp-form-fields">{fields.map((field, index) => {
+      const feedback = checks?.[index] === 'matched' ? field.feedback.correct : checks?.[index] === 'retry' ? field.feedback.retry : asString(exercise.feedback);
+      return <label key={field.id}>
+      <span><WordAudioText text={field.label} literalRanges={writingFormLiteralRanges(field.label)} /></span>
+      <input data-form-field={field.id} type="text" aria-label={field.label} required autoComplete="off" spellCheck={false} maxLength={500} disabled={!ready || busy || !canAnswer} value={answer.draft[field.id] ?? ''} aria-invalid={checks?.[index] === 'retry'} aria-describedby={checks ? labelId + field.id : undefined} onChange={event => change(field.id, event.target.value)} />
+      {checks && <output id={labelId + field.id}><WordAudioText text={feedback} literalRanges={writingFormLiteralRanges(feedback)} /></output>}
+    </label>; })}</div>
+    {error && <output role="alert">Bewaren lukt niet. Je invoer blijft in dit scherm. Houd deze oefening open.</output>}
+    <button data-practice-check className="primary-button" disabled={!ready || busy || !canAnswer || !completeWritingForm(answer.draft, fields)} onClick={() => void compare()}>Controleer<Check /></button>
+    {checks?.some(check => check !== 'matched') && <button data-practice-check className="secondary-button" disabled={busy || error} onClick={() => onFinish(JSON.stringify(current.current.draft), true, 'Je hebt ingevuld. Bespreek de velden met je docent.')}>Bewaar voor bespreking<Check /></button>}
+  </section>;
+}
+
 function HandwritingSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void }) {
   const [ink, setInk] = useState<WritingInk>(emptyWritingInk);
   const current = useRef(ink), db = useRef<IDBDatabase | null>(null);
   const [ready, setReady] = useState(false), [error, setError] = useState(false), [busy, setBusy] = useState(false), [revealed, setRevealed] = useState(false);
   const id = exercise.exerciseId;
+  const sourceHint = handwritingHints.find(row => row.sourceId === id && row.model === exercise.target);
+  const listeningHint = sourceHint?.listeningHint;
+  const [helpStep, setHelpStep] = useState(0);
+  const hint = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (helpStep) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [helpStep]);
   useEffect(() => {
     let active = true, connection: IDBDatabase | undefined;
     void (async () => {
@@ -1012,13 +1080,33 @@ function HandwritingSurface({ exercise, onAudio, onFinish, onReset, canAnswer, o
     if (!ready || busy) return;
     onHelp(); void save({ ...current.current, modelSeen: true });
   }
+  async function stagedHelp() {
+    if (!ready || !canAnswer || busy || (helpStep === 1 && !ink.first && !hasWritingInk(ink.draft))) return;
+    onHelp();
+    if (helpStep === 0) {
+      setBusy(true);
+      try { if (await onAudio(exercise.prompt?.audio?.src) !== false) setHelpStep(1); }
+      finally { setBusy(false); }
+    } else if (helpStep === 1) {
+      setBusy(true);
+      // The spelling hint contains the answer: preserve the attempt before revealing it.
+      const submitted = hasWritingInk(current.current.draft);
+      const next = updateWritingInk(current.current, current.current.draft, submitted);
+      if (await save({ ...next, modelSeen: true }, submitted)) setHelpStep(2);
+      setBusy(false);
+    } else setHelpStep(helpStep === 2 ? 3 : 0);
+  }
   return <section className="cp-task-card" data-handwriting-source={id}>
     <Prompt exercise={exercise} onAudio={onAudio} />
     <div className="cp-handwriting-input">{revealed && <strong className="cp-paper-model"><WordAudioText text={asString(exercise.target)} /></strong>}<WritingBoard strokes={ink.draft} onChange={change} handwritingOnly disabled={!ready || !canAnswer || busy} /></div>
     {error && <output role="alert">Bewaren lukt niet. Je schrijfwerk blijft in dit scherm. Houd deze oefening open.</output>}
     {revealed ? <button data-practice-check className="primary-button" disabled={busy || error} onClick={() => onFinish('Eigen schrijfwerk bewaard op dit apparaat.', true, 'Je hebt geoefend. Bespreek je schrijfwerk zo nodig met je docent.')}>Ik heb vergeleken<Check /></button>
       : <button data-practice-check className="primary-button" disabled={!ready || !canAnswer || busy || !hasWritingInk(ink.draft)} onClick={() => void compare()}>Vergelijk<Check /></button>}
-    {!revealed && <WordHint exercise={exercise} onHelp={help} disabled={!ready || busy} />}
+    {!revealed && (listeningHint ? <div className="cp-word-hint" ref={hint} data-handwriting-help-step={helpStep}>
+      {helpStep === 1 && <p>{wordAudioParts(listeningHint).map((part, index) => sourceHint?.listeningHintUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</p>}
+      {helpStep >= 2 && <>{helpStep === 3 && <strong><WordAudioText text={asString(exercise.target)} /></strong>}<p>{wordAudioParts(asString(exercise.meaning)).map((part, index) => asArray<number>(exercise.writingHintUnits).includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</p></>}
+      <button data-practice-listen={helpStep === 0 || undefined} className="secondary-button" disabled={!ready || !canAnswer || busy || (helpStep === 1 && !ink.first && !hasWritingInk(ink.draft))} aria-expanded={helpStep > 0} onClick={() => void stagedHelp()}>{helpStep === 3 ? 'Verberg voorbeeld' : 'Help'}</button>
+    </div> : <WordHint exercise={exercise} onHelp={help} disabled={!ready || busy} />)}
   </section>;
 }
 
@@ -1108,21 +1196,56 @@ function StagedSequenceSurface(props: Pick<SurfaceProps, 'exercise' | 'onAudio' 
 function SequenceSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onAudio' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {
   const items = asArray<ExerciseItem>(exercise.items);
   const target = asArray<string>(exercise.targetOrderIds);
+  const sourceId = asString(exercise.sequenceSourceId);
+  const itemSignature = JSON.stringify(items.map(item => item.itemId));
+  const current = useRef(emptySequenceAnswer(items.map(item => item.itemId)));
   const [chosen, setChosen] = useState<string[]>([]);
+  const [ready, setReady] = useState(!sourceId), [storageError, setStorageError] = useState(false), [audioError, setAudioError] = useState(false);
   const bank = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!sourceId) return;
+    const frame = requestAnimationFrame(() => {
+      try {
+        const raw = localStorage.getItem(sequenceAnswerKey(sourceId));
+        const saved = parseSequenceAnswer(raw, JSON.parse(itemSignature));
+        if (saved) { current.current = saved; setChosen(saved.draft); }
+        else if (raw !== null) setStorageError(true);
+      } catch { setStorageError(true); }
+      setReady(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [sourceId, itemSignature]);
+  function save(next: string[], submitted = false) {
+    current.current = updateSequenceAnswer(current.current, next, submitted);
+    setChosen(next);
+    if (sourceId) {
+      try { localStorage.setItem(sequenceAnswerKey(sourceId), JSON.stringify(current.current)); setStorageError(false); }
+      catch { setStorageError(true); return false; }
+    }
+    return true;
+  }
   const itemContent = (item: ExerciseItem) => <>{item.content?.image && <ExerciseImageView image={item.content.image} />}{item.text ?? item.content?.text}</>;
-  function add(id: string) { if (!canAnswer || answeredCorrectly || chosen.includes(id) || !items.some(item => item.itemId === id)) return; setChosen([...chosen, id]); onReset(); requestAnimationFrame(() => bank.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus()); }
+  const replay = (item: ExerciseItem, index: number) => item.audio?.src && <button type="button" className="secondary-button" data-practice-listen data-order-audio={item.itemId} aria-label={`Luister naar kaart ${index + 1}`} disabled={!canAnswer} onClick={async () => {
+    try { setAudioError(await onAudio(item.audio!.src, { waitUntilEnd: true }) === false); } catch { setAudioError(true); }
+  }}>Luister</button>;
+  function add(id: string) { if (!ready || !canAnswer || answeredCorrectly || chosen.includes(id) || !items.some(item => item.itemId === id)) return; save([...chosen, id]); onReset(); requestAnimationFrame(() => bank.current?.querySelector<HTMLButtonElement>('button[data-order-item]:not(:disabled)')?.focus()); }
   return <section className="cp-task-card cp-standard-task" data-standard-player="order"><Prompt exercise={exercise} onAudio={onAudio} />
+    {sourceId && <ExerciseImageView image={exercise.prompt?.image} optional />}
     {/* oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- Dropping supplements the keyboard/tap buttons below. */}
-    <ol className="cp-sequence-result" aria-label="Jouw volgorde" onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); add(event.dataTransfer.getData('text/plain')); }}>{chosen.map(id => <li key={id}>{itemContent(items.find(item => item.itemId === id)!)}</li>)}</ol>
-    <div className="cp-sequence-options" ref={bank}>{items.map(item => <button key={item.itemId} data-order-item={item.itemId} disabled={!canAnswer || answeredCorrectly || chosen.includes(item.itemId)} draggable={!chosen.includes(item.itemId) && canAnswer && !answeredCorrectly} onDragStart={event => event.dataTransfer.setData('text/plain', item.itemId)} onClick={() => add(item.itemId)}>{itemContent(item)}</button>)}</div>
-    <div className="cp-task-actions"><button className="secondary-button" disabled={!chosen.length || answeredCorrectly} onClick={() => { const id = chosen.at(-1)!; setChosen(chosen.slice(0, -1)); onReset(); requestAnimationFrame(() => Array.from(bank.current?.querySelectorAll<HTMLButtonElement>('button') ?? []).find(button => button.dataset.orderItem === id)?.focus()); }}><RotateCcw />Eén terug</button><button data-practice-check className="primary-button" disabled={!canAnswer || answeredCorrectly || chosen.length !== items.length} onClick={() => onFinish(chosen.join('|'), orderAccepted(chosen, target, asArray<string[]>(exercise.acceptedOrderIds)))}>Controleer<Check /></button></div>
+    <ol className="cp-sequence-result" aria-label="Jouw volgorde" onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); add(event.dataTransfer.getData('text/plain')); }}>{chosen.map(id => { const item = items.find(item => item.itemId === id)!; return <li key={id}>{itemContent(item)}{replay(item, items.indexOf(item))}</li>; })}</ol>
+    <div className="cp-sequence-options" ref={bank}>{items.map((item, index) => {
+      const choice = <button key={item.itemId} data-order-item={item.itemId} disabled={!ready || !canAnswer || answeredCorrectly || chosen.includes(item.itemId)} draggable={!chosen.includes(item.itemId) && ready && canAnswer && !answeredCorrectly} onDragStart={event => event.dataTransfer.setData('text/plain', item.itemId)} onClick={() => add(item.itemId)}>{itemContent(item)}</button>;
+      return item.audio?.src ? <div className="cp-task-actions" key={item.itemId}>{choice}{replay(item, index)}</div> : choice;
+    })}</div>
+    <div className="cp-task-actions"><button className="secondary-button" disabled={!ready || !chosen.length || answeredCorrectly} onClick={() => { const id = chosen.at(-1)!; save(chosen.slice(0, -1)); onReset(); requestAnimationFrame(() => Array.from(bank.current?.querySelectorAll<HTMLButtonElement>('button') ?? []).find(button => button.dataset.orderItem === id)?.focus()); }}><RotateCcw />Eén terug</button><button data-practice-check className="primary-button" disabled={!ready || !canAnswer || answeredCorrectly || chosen.length !== items.length} onClick={() => { if (save(chosen, true)) onFinish(chosen.join('|'), orderAccepted(chosen, target, asArray<string[]>(exercise.acceptedOrderIds))); }}>Controleer<Check /></button></div>
+    {storageError && <output>Je volgorde kon niet op dit apparaat worden geladen of bewaard. Je huidige keuze blijft in dit scherm staan. Probeer opnieuw te bewaren.</output>}
+    {audioError && <output>Het geluid werkt niet. Probeer het nog eens.</output>}
     <WordHint exercise={exercise} onHelp={onHelp} />
   </section>;
 }
 
 function BoardSurface({ exercise, onAudio, onFinish, canAnswer }: SurfaceProps & { canAnswer: boolean }) {
-  const cells = asArray<{ cellId: string; text?: string; image?: ExerciseImage }>(exercise.cells);
+  const cells = asArray<{ cellId: string; text?: string; image?: ExerciseImage; feedback?: string }>(exercise.cells);
   const marked = asArray<string>(exercise.markedCellIds);
   const targetId = asString(asRecord(exercise.answer).correctCellId);
   const [selected, setSelected] = useState('');
@@ -1130,7 +1253,7 @@ function BoardSurface({ exercise, onAudio, onFinish, canAnswer }: SurfaceProps &
   function chooseCell(cellId: string) {
     if (!canAnswer || complete || marked.includes(cellId)) return;
     setSelected(cellId);
-    onFinish(cellId, cellId === targetId, cellId === targetId ? marked.length + 1 === cells.length ? 'De kaart is vol!' : 'Goed. Luister naar het volgende woord.' : 'Luister opnieuw. Kies een ander vak.');
+    onFinish(cellId, cellId === targetId, cells.find(cell => cell.cellId === cellId)?.feedback ?? (cellId === targetId ? marked.length + 1 === cells.length ? 'De kaart is vol!' : 'Goed. Luister naar het volgende woord.' : 'Luister opnieuw. Kies een ander vak.'));
   }
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><p className="cp-round-progress">{marked.length + (complete ? 1 : 0)} / {cells.length}</p><div className="cp-board-grid">{cells.map(cell => {
     const done = marked.includes(cell.cellId) || (complete && cell.cellId === selected);

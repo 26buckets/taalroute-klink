@@ -1,0 +1,22 @@
+{
+  "types": true,
+  "lint": true,
+  "coreTests": 11,
+  "wordAudioCoverage": true,
+  "missingWordAudio": 0,
+  "sourceReview": true,
+  "screensVisuallyReviewed": true,
+  "screens": [
+    "local/screens/chromium-390.png",
+    "local/screens/webkit-1280.png"
+  ],
+  "existingPublicBytesPreserved": true,
+  "humanListening": false,
+  "independentNT2Review": false,
+  "physicalDeviceTested": false,
+  "classroomTrial": false,
+  "newAudio": 11,
+  "newQuestions": 10,
+  "githubWorkflowFiles": [],
+  "additionalCheckLimit": "Broad legacy view test encountered immediate aria state timing assertion; unchanged runtime. Required focused 14 view/reload/blocked-storage/native-replay checks passed. No claim of full legacy browser matrix."
+}

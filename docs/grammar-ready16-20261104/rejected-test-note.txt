@@ -1,0 +1,1 @@
+First browser attempt assumed a persisted correct selection also restores the parent completion state. Existing behavior preserves the choice/order but requires reconfirming after reload. Revised assertion checks exact answer record, selected option, and reconfirmation. No app code changed.

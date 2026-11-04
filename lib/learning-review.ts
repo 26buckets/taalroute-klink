@@ -9,7 +9,7 @@ export function parseLearningReview(raw: string | null): LearningReview {
     const value: unknown = JSON.parse(raw ?? '{}');
     if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
     return Object.fromEntries(Object.entries(value).filter(([id, record]) => {
-      if (!id.includes(':recall:') || !record || typeof record !== 'object') return false;
+      if ((!id.includes(':recall:') && !id.endsWith(':recall')) || !record || typeof record !== 'object') return false;
       const r = record as { due: number; last: number; streak: number };
       return [r.due, r.last, r.streak].every(Number.isFinite) && r.due >= 0 && r.last >= 0 && Number.isInteger(r.streak) && r.streak >= 0 && r.streak <= 3;
     }).slice(-3000));

@@ -1,0 +1,138 @@
+{
+  "selectedInstruction": {
+    "sourceId": "KLINK-INS-FORM-GEGEVENS",
+    "script": "Kijk naar de kaart. Vul de gegevens in.",
+    "voiceId": "h6uBOiAjLKklte8hdYio",
+    "languageCode": "nl",
+    "status": "received-and-complete-metadata-checked",
+    "startedAt": "2026-11-02T06:59:30.235074+00:00",
+    "characters": 39,
+    "requestId": "vRuPHttqVL47snVDBA4O",
+    "characterCost": "19",
+    "audioDataIdentical": true,
+    "bytes": 229620,
+    "sha256": "05fec2490b9f874a7239b82ddee5c7a32c2c1ddeee6bb3593607933fa5c237bc",
+    "pcmSha256": "3877eb0bc0b17e7c5f07806261c67ac31f41d0c839d64c0d516a55df0e2d48a5",
+    "seconds": 2.6006349206349206,
+    "metadata": {
+      "artist": "Taalroute",
+      "copyright": "Taalroute",
+      "title": "Kijk naar de kaart. Vul de gegevens in.",
+      "album": "Taalroute - Klink - Oefeninstructies",
+      "album_artist": "Taalroute",
+      "publisher": "Taalroute"
+    },
+    "original": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-GEGEVENS-original.wav",
+    "final": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-GEGEVENS.wav",
+    "humanListeningPerformed": false,
+    "src": "/package-audio/klink-forms-20261102/KLINK-INS-FORM-GEGEVENS-05fec2490b9f874a.wav",
+    "whisper": {
+      "sourceId": "KLINK-INS-FORM-GEGEVENS",
+      "script": "Kijk naar de kaart. Vul de gegevens in.",
+      "transcript": " Kijk naar de kaart. Vul de gegevens in.",
+      "exactWords": true
+    },
+    "dutchCtc": {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-GEGEVENS.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "kijk naar de kaart vul de gegevens in"
+    }
+  },
+  "originalRequests": 6,
+  "reportedIncludedCredits": 53,
+  "allOriginalAndUnusedRecordingsKeptPrivately": true,
+  "allVoicePlansDeclaredBeforeGeneration": true,
+  "privateProductionRoot": "/tmp/klink-invul-sources/forms-140/",
+  "asr": {
+    "model": "mlx-community/whisper-large-v3-turbo",
+    "language": "nl",
+    "initialPrompt": null,
+    "humanListeningPerformed": false,
+    "files": [
+      {
+        "sourceId": "KLINK-INS-FORM-DAG",
+        "script": "Typ de dag.",
+        "transcript": " Typ de dag.",
+        "exactWords": true
+      },
+      {
+        "sourceId": "KLINK-INS-FORM-TIJD",
+        "script": "Typ de tijd.",
+        "transcript": " Diep de tijd.",
+        "exactWords": false
+      },
+      {
+        "sourceId": "KLINK-INS-FORM-NUMMER",
+        "script": "Typ het nummer.",
+        "transcript": " Toep heet nummer.",
+        "exactWords": false
+      },
+      {
+        "sourceId": "KLINK-INS-FORM-NAAM",
+        "script": "Typ de naam.",
+        "transcript": " Typ de naam.",
+        "exactWords": true
+      },
+      {
+        "sourceId": "KLINK-INS-FORM-LOKAAL",
+        "script": "Typ het lokaalnummer.",
+        "transcript": " type het lokaal nummer.",
+        "exactWords": false
+      },
+      {
+        "sourceId": "KLINK-INS-FORM-GEGEVENS",
+        "script": "Kijk naar de kaart. Vul de gegevens in.",
+        "transcript": " Kijk naar de kaart. Vul de gegevens in.",
+        "exactWords": true
+      }
+    ]
+  },
+  "ctc": [
+    {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-DAG.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "diept omn deak"
+    },
+    {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-TIJD.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "diep de tijd"
+    },
+    {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-NUMMER.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "tuup heert numr"
+    },
+    {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-NAAM.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "diep den naam"
+    },
+    {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-LOKAAL.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "duep het lokaal nummer"
+    },
+    {
+      "file": "/tmp/klink-invul-sources/forms-140/audio/KLINK-INS-FORM-GEGEVENS.wav",
+      "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+      "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+      "expectedWordPrompt": null,
+      "text": "kijk naar de kaart vul de gegevens in"
+    }
+  ],
+  "humanListeningPerformed": false,
+  "paidBudgetIncrease": 0
+}

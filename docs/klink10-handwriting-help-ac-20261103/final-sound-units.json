@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "hintExact": true,
+      "shortVowelUnitDoesNotTriggerOrdinaryWordAudio": true,
+      "modelStillHidden": true
+    },
+    {
+      "engine": "webkit",
+      "hintExact": true,
+      "shortVowelUnitDoesNotTriggerOrdinaryWordAudio": true,
+      "modelStillHidden": true
+    }
+  ],
+  "changeSinceFullFlows": "Only source sound-unit spans were added; all hint strings, stage transitions, storage, audio sources and controls unchanged."
+}

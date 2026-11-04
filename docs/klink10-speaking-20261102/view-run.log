@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'false' !== 'true'
+
+    at file:///Users/nicoknoester/Documents/Codex/2026-10-29/ok-voor-klink-staan-een-heel/work/klink10-a2-20261102/scripts/test-exercise-view-browser-20261101.mjs:59:69 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'false',
+  expected: 'true',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

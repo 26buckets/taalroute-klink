@@ -4,8 +4,13 @@ import meaningContexts from '../data/klink-meaning-contexts.json' with { type: '
 import type { ChapterCollection } from './practice-chapters';
 import index from '../data/klink-production-index.json' with { type: 'json' };
 import type { PackageDefinition, PackageExercise } from './package-content';
+import { sourceSpellingRecallIds } from './source-spelling-review.ts';
 
 export const productionIndex = index;
+export function productionAssetUrl(contentUrl: string) {
+  const row = productionIndex.find(item => item.url === contentUrl);
+  return row && 'bundleUrl' in row && typeof row.bundleUrl === 'string' ? row.bundleUrl : contentUrl;
+}
 export function productionPack(row: Pick<typeof index[number], 'id' | 'title' | 'level' | 'activity' | 'count'>, exercises: PackageExercise[] = []): PackageDefinition {
   return { id: row.id, title: row.title, subtitle: '', description: '', level: row.level, status: 'available', statusNote: '',
     practiceActivities: [row.activity], words: [], lessons: [], texts: [], dialogues: [], games: [], scenes: [], exercises, exerciseTypes: [],
@@ -15,6 +20,13 @@ export function productionPack(row: Pick<typeof index[number], 'id' | 'title' | 
 
 export function validateProductionCollection(value: unknown, id: string, count: number): PackageExercise[] {
   if (!value || typeof value !== 'object') throw new Error('Invalid collection');
+  if ((value as { bundleType?: string }).bundleType === 'klink-production-rounds-v1') {
+    const { banks } = value as { banks?: Record<string, unknown> };
+    const bank = banks && typeof banks === 'object' && Object.hasOwn(banks, id) ? banks[id] : undefined;
+    if (typeof bank !== 'string') throw new Error('Missing bundled collection');
+    value = JSON.parse(bank);
+    if (!value || typeof value !== 'object') throw new Error('Invalid bundled collection');
+  }
   const data = value as { id?: string; exercises?: PackageExercise[] };
   if (data.id !== id || !Array.isArray(data.exercises) || data.exercises.length !== count || !count) throw new Error('Incomplete collection');
   const ids = new Set<string>();
@@ -26,7 +38,7 @@ export function validateProductionCollection(value: unknown, id: string, count: 
     }
     ids.add(exercise.exerciseId);
   }
-  return data.exercises;
+  return data.exercises.map(exercise => sourceSpellingRecallIds.has(exercise.exerciseId) ? { ...exercise, reviewEligible: true } : exercise);
 }
 
 // Keep the complete source available to old links and share its completion records.

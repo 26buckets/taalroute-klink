@@ -1,0 +1,378 @@
+{
+  "model": "mlx-community/whisper-large-v3-mlx",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10ta2-9cb675fefd0538ed",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-9cb675fefd0538ed.mp3",
+      "expected": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wanneer vertrekt Layla met haar klas vanaf school?",
+      "recognized": " Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wanneer vertrekt Lela met haar klas vanaf school?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 4.0200000000000005,
+          "text": " Lees de vraag. Tik op alle woorden van de zin met het antwoord.",
+          "tokens": [
+            50365,
+            1456,
+            279,
+            368,
+            46485,
+            13,
+            15613,
+            999,
+            5430,
+            6020,
+            19058,
+            3161,
+            368,
+            710,
+            259,
+            1131,
+            3639,
+            2511,
+            6120,
+            765,
+            13,
+            50566
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07509847482045491,
+          "compression_ratio": 1.1649484536082475,
+          "no_speech_prob": 0.011621248908340931
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 4.94,
+          "end": 7.18,
+          "text": " Wanneer vertrekt Lela met haar klas vanaf school?",
+          "tokens": [
+            50612,
+            343,
+            12674,
+            260,
+            1306,
+            3599,
+            2320,
+            441,
+            4053,
+            1131,
+            39371,
+            350,
+            7743,
+            371,
+            2095,
+            69,
+            1395,
+            30,
+            50724
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.07509847482045491,
+          "compression_ratio": 1.1649484536082475,
+          "no_speech_prob": 0.011621248908340931
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-1244d912e6811f1a",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-1244d912e6811f1a.mp3",
+      "expected": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat krijgt Sofia als ze zaterdag naar de tuin gaat?",
+      "recognized": " Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat krijgt Sophia als ze zaterdag naar de tuin gaat?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.68,
+          "text": " Lees de vraag. Tik op alle woorden van de zin met het antwoord.",
+          "tokens": [
+            50365,
+            1456,
+            279,
+            368,
+            46485,
+            13,
+            15613,
+            999,
+            5430,
+            6020,
+            19058,
+            3161,
+            368,
+            710,
+            259,
+            1131,
+            3639,
+            2511,
+            6120,
+            765,
+            13,
+            50549
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06539666652679443,
+          "compression_ratio": 1.16,
+          "no_speech_prob": 0.02425202541053295
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 4.38,
+          "end": 6.66,
+          "text": " Wat krijgt Sophia als ze zaterdag naar de tuin gaat?",
+          "tokens": [
+            50584,
+            12593,
+            27027,
+            10463,
+            35152,
+            3907,
+            5277,
+            710,
+            771,
+            39877,
+            12762,
+            368,
+            2604,
+            259,
+            17829,
+            30,
+            50698
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06539666652679443,
+          "compression_ratio": 1.16,
+          "no_speech_prob": 0.02425202541053295
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-60581dd0329d58af",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-60581dd0329d58af.mp3",
+      "expected": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat stuurt de winkel om Meryem te helpen de handdoeken terug te sturen?",
+      "recognized": " Lees de vraag, tik op alle woorden van de zin met het antwoord. Wat stuurt de winkel om Miriam te helpen de handdoeken terug te sturen?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 3.2,
+          "text": " Lees de vraag, tik op alle woorden van de zin met het antwoord.",
+          "tokens": [
+            50365,
+            1456,
+            279,
+            368,
+            46485,
+            11,
+            44994,
+            999,
+            5430,
+            6020,
+            19058,
+            3161,
+            368,
+            710,
+            259,
+            1131,
+            3639,
+            2511,
+            6120,
+            765,
+            13,
+            50525
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06294500066878948,
+          "compression_ratio": 1.2272727272727273,
+          "no_speech_prob": 0.010925293900072575
+        },
+        {
+          "id": 1,
+          "seek": 0,
+          "start": 3.7,
+          "end": 6.86,
+          "text": " Wat stuurt de winkel om Miriam te helpen de handdoeken terug te sturen?",
+          "tokens": [
+            50550,
+            12593,
+            342,
+            84,
+            6224,
+            368,
+            1942,
+            7124,
+            3406,
+            9421,
+            2918,
+            535,
+            854,
+            268,
+            368,
+            1011,
+            2595,
+            41021,
+            35020,
+            535,
+            342,
+            9873,
+            30,
+            50708
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.06294500066878948,
+          "compression_ratio": 1.2272727272727273,
+          "no_speech_prob": 0.010925293900072575
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-word-dc2dac096c1701a0",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-dc2dac096c1701a0.mp3",
+      "expected": "klaarligt",
+      "recognized": " Klaarlicht?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.64,
+          "text": " Klaarlicht?",
+          "tokens": [
+            50365,
+            591,
+            875,
+            289,
+            20238,
+            30,
+            50397
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.4299298822879791,
+          "compression_ratio": 0.5789473684210527,
+          "no_speech_prob": 0.3912090063095093
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-word-b40877b8dee863ed",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-b40877b8dee863ed.mp3",
+      "expected": "regenbui",
+      "recognized": " Regen bij?",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.64,
+          "text": " Regen bij?",
+          "tokens": [
+            50365,
+            4791,
+            268,
+            10317,
+            30,
+            50397
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.6354594911847796,
+          "compression_ratio": 0.5555555555555556,
+          "no_speech_prob": 0.09842212498188019
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-word-e0491abb8d95715a",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-e0491abb8d95715a.mp3",
+      "expected": "taalklas",
+      "recognized": " Talclus.",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.64,
+          "text": " Talclus.",
+          "tokens": [
+            50365,
+            10516,
+            66,
+            3063,
+            13,
+            50397
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.70046295438494,
+          "compression_ratio": 0.5,
+          "no_speech_prob": 0.2829006016254425
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-word-676bdbb2cc57d556",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-676bdbb2cc57d556.mp3",
+      "expected": "layla",
+      "recognized": " Leila",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.4,
+          "text": " Leila",
+          "tokens": [
+            50365,
+            1456,
+            7371,
+            50385
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.3523041486740112,
+          "compression_ratio": 0.38461538461538464,
+          "no_speech_prob": 0.15323412418365479
+        }
+      ]
+    },
+    {
+      "id": "k10ta2-word-197058e907d057ce",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-word-197058e907d057ce.mp3",
+      "expected": "retourlabel",
+      "recognized": " Retour Labels",
+      "normalizedExact": false,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.78,
+          "text": " Retour Labels",
+          "tokens": [
+            50365,
+            11495,
+            396,
+            10137,
+            1625,
+            50404
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.34611082077026367,
+          "compression_ratio": 0.6190476190476191,
+          "no_speech_prob": 0.19388830661773682
+        }
+      ]
+    }
+  ]
+}

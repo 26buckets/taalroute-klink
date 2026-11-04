@@ -1,6 +1,7 @@
 import { productionIndex, productionPack, readingSelections } from './production-practice.ts';
 import { sourceRepeatRounds, type SourceRepeat } from './source-repeat.ts';
 import { writingDictationRounds } from './writing-dictation.ts';
+import { alfaADictationRound } from './klink10-writing-dictation-aa.ts';
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
@@ -13,6 +14,7 @@ import { contentById } from './connected-content.ts';
 import { learnerListName } from './learner-copy.ts';
 import { contentLevels, contentHelp, exerciseContentLevel, exerciseVocabularyLevels, exerciseSetLevel, exerciseSetHelp, matchesContent, type ContentHelp } from './content-levels.ts';
 import type { LearningReview } from './learning-review';
+import { sourceSpellingReview, sourceSpellingRecallExercises } from './source-spelling-review.ts';
 import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
@@ -166,8 +168,10 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     const exercises = groupExercises(collection.pack, activity);
     return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
   }));
+  if (activity === 'dictation') result.push({ id: alfaADictationRound.id, title: alfaADictationRound.title, level: 'alfa-a', help: 'practice', pack: productionPack({ ...alfaADictationRound, level: 'alfa-a', activity, count: alfaADictationRound.exercises.length }), exercises: alfaADictationRound.exercises });
   if (activity === 'learning-review') {
     result.push(...wordUseCollections);
+    result.push({ id: sourceSpellingReview.collectionId, title: sourceSpellingReview.title, level: 'alfa-a', help: 'guided', pack: productionPack({ id: sourceSpellingReview.collectionId, title: sourceSpellingReview.title, level: 'alfa-a', activity, count: sourceSpellingRecallExercises.length }), exercises: sourceSpellingRecallExercises });
     result.push(...sourceRepeatRounds.map(round => ({ id: round.id, title: round.title, level: round.level as ChapterLevel, help: 'practice' as const, pack: productionPack({ ...round, activity, count: 12 }), exercises: [], sourceRepeat: round, exerciseCount: 12 })));
   }
   cache.set(activity, result);

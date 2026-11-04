@@ -1,0 +1,97 @@
+{
+  "application": "Klink",
+  "authorization": "Nico 2 november 2026: eerste tien afmaken inclusief noodzakelijke ElevenLabs-audio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "7qdUFMklKPaaAVMsBTBt",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 1
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 347,
+  "clips": [
+    {
+      "id": "k10ta2-repair-77cee99633457e85",
+      "text": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wanneer vertrekt de klas vanaf school?",
+      "title": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wanneer vertrekt de klas vanaf school?",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-repair-77cee99633457e85.mp3",
+      "textSha256": "77851b7d0cfdad506d33fa41b59f0bd1e0d0f6e5f5846cd4418786a4b99fee91",
+      "sourceId": "A2-TEXT-03-06"
+    },
+    {
+      "id": "k10ta2-repair-d6cdae6a1efe7705",
+      "text": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat stuurt de winkel na de melding over de verkeerde handdoeken?",
+      "title": "Lees de vraag. Tik op alle woorden van de zin met het antwoord. Wat stuurt de winkel na de melding over de verkeerde handdoeken?",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-repair-d6cdae6a1efe7705.mp3",
+      "textSha256": "246d0dfa5825a4e7db651e4b1510520877088cbbeec6def7272994fd9f40132a",
+      "sourceId": "A2-TEXT-03-09"
+    },
+    {
+      "id": "k10ta2-context-3097ee12d8950214",
+      "text": "Ze zegt dat het boek klaarligt.",
+      "title": "Ze zegt dat het boek klaarligt.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-context-3097ee12d8950214.mp3",
+      "textSha256": "fcf247fd546abd564bd6cac2133b72f158c8435b5adb9ed27a183634c2c039d7",
+      "wordKey": "klaarligt",
+      "use": "Contextbron; nog geen definitieve losse woordopname. Extractie en grenscontrole vereist."
+    },
+    {
+      "id": "k10ta2-context-b195916431caaffb",
+      "text": "Er komt een regenbui.",
+      "title": "Er komt een regenbui.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-context-b195916431caaffb.mp3",
+      "textSha256": "89af76772308188cd50107f3ec8ab427d6c7c349a5f512ef839a0ed29537f056",
+      "wordKey": "regenbui",
+      "use": "Contextbron; nog geen definitieve losse woordopname. Extractie en grenscontrole vereist."
+    },
+    {
+      "id": "k10ta2-context-1095baa50a70716c",
+      "text": "We oefenen samen in de taalklas.",
+      "title": "We oefenen samen in de taalklas.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-context-1095baa50a70716c.mp3",
+      "textSha256": "bf9de626a94383f39518e0605a5eaea27d2577076a41584aacab64bb74b9e197",
+      "wordKey": "taalklas",
+      "use": "Contextbron; nog geen definitieve losse woordopname. Extractie en grenscontrole vereist."
+    },
+    {
+      "id": "k10ta2-context-5bf2e532cb9edc7c",
+      "text": "De winkel stuurt een retourlabel.",
+      "title": "De winkel stuurt een retourlabel.",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-context-5bf2e532cb9edc7c.mp3",
+      "textSha256": "14c856785dcc826579804cb1ab64bb775dc6e717ed1eb91c486e0bcd6156f749",
+      "wordKey": "retourlabel",
+      "use": "Contextbron; nog geen definitieve losse woordopname. Extractie en grenscontrole vereist."
+    }
+  ],
+  "pronunciationChecks": [
+    "OV-kaart: afkorting als twee Nederlandse letternamen, gevolgd door kaart",
+    "Layla: behoud de fictieve bronnaam, geen automatische vervanging door een andere naam",
+    "klaarligt en samenkomt: volledige samengestelde woorden, geen afgeknipt begin/einde",
+    "gesolliciteerd: alle lettergrepen en eindklank behouden",
+    "Bestaande voorkomen-verhinderen-opname hergebruiken voor voorkomen in deze context; niet de variant aanwezig zijn",
+    "ASR-spelling is geen zelfstandig bewijs van klemtoon; concrete twijfel blokkeren totdat echte audio is gecontroleerd"
+  ],
+  "repairReason": "Gerichte controle van twee naaminstructies en vier onzekere losse woorden; originele opnamen blijven bewaard."
+}

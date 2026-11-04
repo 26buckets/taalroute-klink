@@ -1,0 +1,471 @@
+{
+  "existingTasks": 2363,
+  "checks": [
+    {
+      "sourceId": "SPK-AA-ZDZ-01",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik wil water.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik wil water.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-02",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik wil een appel.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik wil een appel.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-03",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik pak brood.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik pak brood.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-04",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik heb mijn jas aan.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik heb mijn jas aan.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-05",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik ga zitten.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik ga zitten.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-06",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik wacht op de bus.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik wacht op de bus.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-07",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik pak mijn boek.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik pak mijn boek.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-08",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'De deur is dicht.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "De deur is dicht.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-09",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik neem mijn tas mee.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik neem mijn tas mee.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-AA-ZDZ-10",
+      "level": "Alfa A",
+      "form": "Zeg de zin",
+      "context": "Voorbeeldstem: 'Ik pak mijn telefoon.'",
+      "instruction": "Luister naar de korte zin. Zeg de hele zin na.",
+      "target": "Ik pak mijn telefoon.",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-01",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'buurman'. Context: je groet je buurman bij de voordeur.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "buurman",
+      "matches": [
+        {
+          "activity": "speak",
+          "collectionId": "route-delen.alfa-b",
+          "level": "alfa-b",
+          "title": "huiskamer · rugzak",
+          "exerciseId": "route-delen:group:speak:woord-klink-woord-buurman:klink-woord-buurman:repeat-word",
+          "text": "buurman",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-buurman.wav",
+            "audioId": "klink-woord-buurman"
+          },
+          "instructionAudio": {
+            "src": "/package-audio/instructions/nazeggen.wav",
+            "audioId": "nazeggen"
+          },
+          "assessment": "participation"
+        }
+      ]
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-02",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'broodje'. Context: je koopt twee broodjes.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "broodje",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-03",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'treinkaartje'. Context: je koopt een treinkaartje.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "treinkaartje",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-04",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'collega'. Context: je stelt jezelf op je werk voor; in deze oefening heet jij Amir.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "collega",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-05",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'dokter'. Context: je vertelt dat je hoest.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "dokter",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-06",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'docent'. Context: je vraagt aan de docent om hulp.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "docent",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-07",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'oplader'. Context: je legt je telefoon aan de oplader.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "oplader",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-08",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'soep'. Context: je maakt soep voor het avondeten.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "soep",
+      "matches": [
+        {
+          "activity": "speak",
+          "collectionId": "groep-6.alfa-a",
+          "level": "alfa-a",
+          "title": "boek · muur",
+          "exerciseId": "groep-6:group:speak:klink-leesstap-20:klink-woord-soep:repeat-word",
+          "text": "soep",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-soep.wav",
+            "audioId": "klink-woord-soep"
+          },
+          "instructionAudio": {
+            "src": "/package-audio/instructions/nazeggen.wav",
+            "audioId": "nazeggen"
+          },
+          "assessment": "participation"
+        },
+        {
+          "activity": "speak",
+          "collectionId": "groep-7.alfa-a",
+          "level": "alfa-a",
+          "title": "neus · buik",
+          "exerciseId": "groep-7:group:speak:klink-leesstap-24:klink-woord-soep:repeat-word",
+          "text": "soep",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-soep.wav",
+            "audioId": "klink-woord-soep"
+          },
+          "instructionAudio": {
+            "src": "/package-audio/instructions/nazeggen.wav",
+            "audioId": "nazeggen"
+          },
+          "assessment": "participation"
+        }
+      ]
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-09",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'cadeau'. Context: je krijgt op je verjaardag een cadeau van een vriend.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "cadeau",
+      "matches": [
+        {
+          "activity": "speak",
+          "collectionId": "groep-10.alfa-b",
+          "level": "alfa-b",
+          "title": "sjaal · taxi",
+          "exerciseId": "groep-10:group:speak:woord-klink-woord-cadeau:klink-woord-cadeau:repeat-word",
+          "text": "cadeau",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-cadeau.wav",
+            "audioId": "klink-woord-cadeau"
+          },
+          "instructionAudio": {
+            "src": "/package-audio/instructions/nazeggen.wav",
+            "audioId": "nazeggen"
+          },
+          "assessment": "participation"
+        }
+      ]
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-10",
+      "level": "A1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'kamer'. Context: je kijkt naar een kamer die te huur is.",
+      "instruction": "Luister naar het voorbeeldwoord. Spreek het woord zelf uit. Kijk naar het beeld of luister naar de korte situatie.",
+      "target": "kamer",
+      "matches": [
+        {
+          "activity": "speak",
+          "collectionId": "route-delen.alfa-b",
+          "level": "alfa-b",
+          "title": "huiskamer · rugzak",
+          "exerciseId": "route-delen:group:speak:woord-klink-woord-huiskamer:klink-woord-kamer:repeat-word",
+          "text": "kamer",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+            "audioId": "klink-woord-kamer"
+          },
+          "instructionAudio": {
+            "src": "/package-audio/instructions/nazeggen.wav",
+            "audioId": "nazeggen"
+          },
+          "assessment": "participation"
+        },
+        {
+          "activity": "speak",
+          "collectionId": "voorbereiding.alfa-b",
+          "level": "alfa-b",
+          "title": "appel · sap",
+          "exerciseId": "voorbereiding:group:speak:woord-klink-woord-kamer:klink-woord-kamer:repeat-word",
+          "text": "kamer",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+            "audioId": "klink-woord-kamer"
+          },
+          "instructionAudio": {
+            "src": "/package-audio/instructions/nazeggen.wav",
+            "audioId": "nazeggen"
+          },
+          "assessment": "participation"
+        }
+      ]
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-01",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'afspraak'. Situatie: je belt de tandarts omdat je woensdag moet werken.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "afspraak",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-02",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'bestelling'. Situatie: je haalt een blauwe jas uit een pakket terwijl je een zwarte bestelde.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "bestelling",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-03",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'vertraging'. Situatie: je ziet dat de trein twintig minuten later vertrekt.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "vertraging",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-04",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'ziekmelding'. Situatie: je belt de werkgever omdat je koorts hebt.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "ziekmelding",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-05",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'geluid'. Situatie: je belt bij de buren aan vanwege harde muziek in de nacht.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "geluid",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-06",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'dienst'. Situatie: je vraagt een collega om vrijdagmiddag te werken in jouw plaats.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "dienst",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-07",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'verlengen'. Situatie: je boek moet morgen terug naar de bibliotheek.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "verlengen",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-08",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'lekkage'. Situatie: je meldt bij de verhuurder dat de keukenkraan blijft druppen.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "lekkage",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-09",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'recept'. Situatie: je komt bij de apotheek voor medicijnen op recept.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "recept",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-A2-ZHW-10",
+      "level": "A2",
+      "form": "Zeg het woord",
+      "context": "Woord: 'inschrijving'. Situatie: je vraagt aan de balie of er plaats is in een avondcursus.",
+      "instruction": "Luister naar het woord. Zeg het duidelijk en gebruik het daarna in een korte zin over de situatie.",
+      "target": "inschrijving",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-01",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'overdracht'. Context: je bespreekt een onverwacht tekort aan collega's met de teamleider.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "overdracht",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-02",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'terugbetaling'. Context: je meldt bij een webwinkel dat een nieuw apparaat beschadigd is aangekomen.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "terugbetaling",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-03",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'onderhoud'. Context: je laat aan de verhuurder een vochtplek op de slaapkamerwand zien.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "onderhoud",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-04",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'vooruitgang'. Context: je praat met een docent over de vooruitgang van je kind.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "vooruitgang",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-05",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'voorstel'. Context: je brengt op een bewonersavond een voorstel voor extra fietsenrekken in.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "voorstel",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-06",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'omleiding'. Context: je zoekt een andere reisroute omdat je vaste bus tijdelijk niet rijdt.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "omleiding",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-07",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'voorwaarden'. Context: je bespreekt met een studieadviseur of je naast je baan een opleiding kunt volgen.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "voorwaarden",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-08",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'bevestiging'. Context: je bespreekt een afspraak waarvan de bevestiging nog niet is aangekomen.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "bevestiging",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-09",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'werkervaring'. Context: je legt in een gesprek uit hoe je eerdere ervaring bij de baan past.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "werkervaring",
+      "matches": []
+    },
+    {
+      "sourceId": "SPK-B1-ZHW-10",
+      "level": "B1",
+      "form": "Zeg het woord",
+      "context": "Doelwoord: 'samenwerking'. Context: je organiseert met buurtgenoten een gezamenlijke schoonmaakdag.",
+      "instruction": "Luister naar het doelwoord. Zeg het rustig en gebruik het in een eigen B1-zin die past bij de situatie.",
+      "target": "samenwerking",
+      "matches": []
+    }
+  ]
+}

@@ -1,0 +1,1176 @@
+{
+  "scope": "Current connected text sources plus linked production text collections; semantic candidates only, no live equivalence claim. Other Flitslezen repository not read in this pass.",
+  "sourcePositions": 210,
+  "distinctNormalizedTexts": 40,
+  "canonicalTextsScanned": 1252,
+  "checks": [
+    {
+      "sourceId": "AC-TEXT-01-01",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "De tafel is vies. Mina pakt een doek. Ze veegt de tafel. De tafel is schoon.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.6923,
+          "id": "klink-text-af5006b457c0dda2",
+          "text": "De tafel is vies. Hugo pakt een doek. Hij veegt de tafel schoon.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.4667,
+          "id": "klink-text-63902899f0fe2aa8",
+          "text": "De schoen is vies. Omar pakt een doek. Hij maakt de schoen schoon.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.3529,
+          "id": "klink-text-23601eea8cfbb8ec",
+          "text": "Amina ziet een vlek op haar wang. Ze pakt een doek. Ze veegt haar wang schoon.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-02",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Ali gaat naar school. Hij loopt naar de halte. Hij stapt in de bus. Hij komt bij school.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2667,
+          "id": "klink-teksten-zelf-a1-batch08-q168",
+          "text": "Een cursist komt met de fiets naar school. Bij de deur hangt een bord: \"Zet fietsen achter het gebouw.\" De cursist leest het bord. Hij loopt met zijn fiets naar de achterkant. Daarna gaat hij naar de les.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r14-v1-1561c99ae33b3008.json"
+        },
+        {
+          "jaccard": 0.2667,
+          "id": "klink-teksten-zelf-a1-batch11-q228",
+          "text": "Een man wil de bus nemen. Bij de halte zoekt hij zijn kaartje. Het ligt niet in zijn tas. Hij zoekt in zijn jas. Daar zit het kaartje. De bus komt om acht uur. De man stapt in.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r19-v1-56716145c2312ac9.json"
+        },
+        {
+          "jaccard": 0.2424,
+          "id": "klink-teksten-zelf-a1-batch19-q384",
+          "text": "In de bus zit een man. Zijn telefoon gaat. Hij kan niet goed horen wat zijn collega zegt. Bij de volgende halte stapt hij uit. Dan belt hij zijn collega terug. De collega wacht op zijn antwoord.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r32-v1-e7cea190c5939dea.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-03",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Sara heeft dorst. Ze pakt een beker. Ze vult de beker met water. Ze drinkt het water.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.1905,
+          "id": "klink-text-5ab8832a45b1d92c",
+          "text": "De sleutel ligt in een doosje. Het doosje staat op de plank. Daan pakt de sleutel.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.1905,
+          "id": "klink-text-77c2874708ecf3ab",
+          "text": "De fles staat in de koelkast. Leila pakt de fles. Zij schenkt water in een glas.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.1905,
+          "id": "klink-text-c009ca712d9aafe6",
+          "text": "De melk is koud. Iris pakt een glas. Zij schenkt de melk in het glas.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-04",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Noor heeft vandaag les. Ze leest een bericht. De les begint om tien uur. Noor gaat om tien uur naar de les.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.3103,
+          "id": "klink-teksten-zelf-a1-batch10-q196",
+          "text": "Bij het lokaal hangt een briefje. De les is vandaag in lokaal drie. De docent staat daar bij de deur. De cursisten lopen naar lokaal drie. Om tien uur begint de les.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r17-v1-3f10b75189053180.json"
+        },
+        {
+          "jaccard": 0.3077,
+          "id": "klink-text-dd4e764696d3f730",
+          "text": "Rachid heeft dinsdag les. De les begint om tien uur en duurt een uur. Na de les drinkt hij thee met zijn buur.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2667,
+          "id": "klink-teksten-zelf-a1-r01-q04",
+          "text": "Sara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r01-v1-a951b879dbcbac0a.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-05",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Omar wil een appel. Hij gaat naar de winkel. Hij koopt een appel. Hij stopt de appel in zijn tas.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2759,
+          "id": "klink-teksten-zelf-a1-batch06-q116",
+          "text": "Een man kan zijn boek niet goed lezen. Hij gaat dinsdag naar de winkel voor een bril. Hij past een zwarte bril en een bruine bril. De zwarte bril zit goed. Hij koopt de zwarte bril en gaat naar huis.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r10-v1-6ab14e073a39c1e8.json"
+        },
+        {
+          "jaccard": 0.2424,
+          "id": "klink-teksten-zelf-a1-batch08-q160",
+          "text": "Een ouder maakt de lunch voor een kind klaar. De ouder doet een appel en een boterham in de tas. Het kind wil ook water. De ouder geeft een fles water mee. Om acht uur gaat het kind naar school.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r14-v1-1561c99ae33b3008.json"
+        },
+        {
+          "jaccard": 0.2414,
+          "id": "klink-teksten-zelf-a1-r01-q08",
+          "text": "Op zaterdag gaat Omar naar de winkel. Hij koopt brood, melk en twee appels. De melk kost drie euro. Omar betaalt bij de kassa. Daarna gaat hij naar huis.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r01-v1-a951b879dbcbac0a.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-06",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Fatima gaat weg. Ze pakt haar sleutels. Ze doet de deur op slot. Ze loopt naar de fiets.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2812,
+          "id": "klink-text-fa334c7a982c0bfd",
+          "text": "Celine komt bij school aan. Zij zet haar fiets in het rek en doet hem op slot. Daarna loopt ze naar de ingang naast het grote raam.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2667,
+          "id": "klink-teksten-zelf-a1-r03-q32",
+          "text": "Noor wil naar haar werk. Zij zoekt haar sleutel. De sleutel ligt niet in haar tas, maar op tafel. Noor pakt de sleutel en doet de deur dicht. Daarna loopt zij naar haar werk.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r03-v1-59300aa34dc193a2.json"
+        },
+        {
+          "jaccard": 0.2273,
+          "id": "klink-text-191147d87a9ba649",
+          "text": "Aisha gaat naar de slager. Zij koopt vlees. Daarna loopt ze naar huis.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-07",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "De plant is droog. Hassan pakt een gieter. Hij vult de gieter met water. Hij geeft de plant water.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.3,
+          "id": "klink-text-3df102a7b59234d0",
+          "text": "De fles is leeg. Abel vult de fles met water. Daarna doet hij de dop erop.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2632,
+          "id": "klink-text-af5006b457c0dda2",
+          "text": "De tafel is vies. Hugo pakt een doek. Hij veegt de tafel schoon.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2632,
+          "id": "klink-text-63902899f0fe2aa8",
+          "text": "De schoen is vies. Omar pakt een doek. Hij maakt de schoen schoon.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-08",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Het is koud buiten. Leila pakt haar jas. Ze trekt haar jas aan. Ze loopt naar buiten.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.3077,
+          "id": "klink-text-188560dc99f5db28",
+          "text": "Daan haalt zijn kleuter op. Buiten is het koud. Hij heeft een jasje meegenomen. Het kind trekt het jasje aan voordat ze naar buiten gaan.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2258,
+          "id": "klink-teksten-zelf-a1-batch18-q364",
+          "text": "Een vrouw gaat naar de kapper. Zij hangt haar blauwe jas aan een haak bij de deur. Na het knippen is haar jas weg. De kapper wijst naar een stoel. Op de stoel ligt de jas. De vrouw trekt haar jas aan.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r31-v1-199621360c31deff.json"
+        },
+        {
+          "jaccard": 0.1935,
+          "id": "KLINK-LUI-P01-B1-text-question-001",
+          "text": "Samira heeft dinsdag een sollicitatiegesprek. Op maandag ontvangt ze een bericht: de leidinggevende is ziek. Het gesprek wordt verplaatst naar donderdag. Samira past haar agenda aan.",
+          "kind": "text-question",
+          "url": "/practice-content/klink10-listening-20261102/klink10-listening-b1-text-question-cbd8c48d23f5ae11.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-09",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Sam heeft een boek van school. Hij stopt het boek in zijn tas. Hij loopt naar school. Hij geeft het boek aan de docent.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2424,
+          "id": "klink-teksten-zelf-a1-r01-q04",
+          "text": "Sara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r01-v1-a951b879dbcbac0a.json"
+        },
+        {
+          "jaccard": 0.24,
+          "id": "klink-text-1a4d87e9b3b2f353",
+          "text": "De taxi staat voor het gebouw. Erik pakt zijn tas. Hij stapt in.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2353,
+          "id": "klink-teksten-zelf-a1-batch19-q376",
+          "text": "Op straat vindt een vrouw een portemonnee. In de portemonnee ziet zij een kaart met een naam. De vrouw brengt de portemonnee naar het politiebureau. Daar geeft zij de portemonnee aan een medewerker. De medewerker schrijft het telefoonnummer van de vrouw op.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r32-v1-e7cea190c5939dea.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "AC-TEXT-01-10",
+      "sourceDocId": "1-FMGJ9OInmWFWC-sWI1utcZqzMDBHQkX6OyitjlC75U",
+      "sourceText": "Yara wil eten. Ze pakt twee boterhammen. Ze doet kaas op het brood. Ze eet een boterham.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2,
+          "id": "klink-text-4b43883e0a26dae1",
+          "text": "Eva doet haar ringen af. Ze legt ze in een doosje. Het doosje staat op de plank.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.1739,
+          "id": "klink-text-5ab8832a45b1d92c",
+          "text": "De sleutel ligt in een doosje. Het doosje staat op de plank. Daan pakt de sleutel.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.1739,
+          "id": "klink-text-23601eea8cfbb8ec",
+          "text": "Amina ziet een vlek op haar wang. Ze pakt een doek. Ze veegt haar wang schoon.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-01",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Het is maandag. Sara heeft taalles. Ze pakt haar schrift en pen. Ze fietst naar de school. Om negen uur begint haar les.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.3333,
+          "id": "klink-teksten-zelf-a1-r01-q04",
+          "text": "Sara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r01-v1-a951b879dbcbac0a.json"
+        },
+        {
+          "jaccard": 0.3333,
+          "id": "klink-teksten-zelf-a1-batch19-q380",
+          "text": "Bericht voor de groep: Morgen is er geen les in het lokaal. De docent is ziek. Vrijdag komt de groep weer naar school. De les begint dan om negen uur. Neem vrijdag je schrift en een pen mee.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r32-v1-e7cea190c5939dea.json"
+        },
+        {
+          "jaccard": 0.25,
+          "id": "klink-teksten-zelf-a1-batch02-q36",
+          "text": "Bericht van de docent: Op woensdag begint de les om tien uur. Neem een boek en een pen mee. Op donderdag is er geen les. De toets is op vrijdag om negen uur.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r03-v1-59300aa34dc193a2.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-02",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Omar heeft geen brood meer in huis. Hij loopt naar de bakker. Hij koopt een bruin brood. Thuis legt hij het brood op tafel.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.303,
+          "id": "klink-text-ff98b538d2885209",
+          "text": "Minh wil brood bakken. Er is geen meel meer in de kast. Hij koopt een nieuwe zak en zet die op het aanrecht.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2895,
+          "id": "klink-teksten-zelf-a1-batch15-q300",
+          "text": "Een man wil brood en melk kopen. In de winkel kost de melk vier euro. De man heeft maar drie euro bij zich. Daarom koopt hij alleen het brood. Hij betaalt bij de kassa. Daarna loopt hij naar huis.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r25-v1-9c3c71350a7e262c.json"
+        },
+        {
+          "jaccard": 0.2432,
+          "id": "klink-teksten-zelf-a1-batch10-q208",
+          "text": "In de vakantie wil een vrouw graag lezen. Zij gaat naar de bibliotheek. Daar kiest zij een boek over dieren. Zij leent het boek met haar pas. Thuis legt zij het boek op tafel.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r18-v1-0c74353019fae0cc.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-03",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Fatima heeft koorts en kan niet werken. Ze belt haar leidinggevende. Ze zegt dat ze vandaag thuisblijft. Daarna gaat ze weer in bed liggen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.1892,
+          "id": "klink-teksten-zelf-a1-r01-q12",
+          "text": "Fatima is vandaag ziek. Zij gaat niet naar haar werk. Om acht uur belt zij haar baas. Zij zegt: 'Ik ben ziek.' Haar baas zegt: 'Blijf thuis.' Morgen gaat Fatima naar de dokter.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r01-v1-a951b879dbcbac0a.json"
+        },
+        {
+          "jaccard": 0.1667,
+          "id": "klink-teksten-zelf-a1-batch07-q152",
+          "text": "Maandag gaat een medewerker naar zijn werk. In de pauze merkt hij dat zijn brood thuis ligt. Zijn collega heeft twee boterhammen en geeft hem er één. Samen drinken zij water. Daarna gaan ze weer aan het werk.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r13-v1-5c3c0380a054ab5c.json"
+        },
+        {
+          "jaccard": 0.1556,
+          "id": "klink-text-4fd01a58f33b1599",
+          "text": "Tariq werkt soms in de nacht. Als hij thuiskomt, wil hij slapen. Daarom laat hij Eva weten dat hij overdag niet meteen op berichten reageert. Hij belt haar terug zodra hij wakker is en tijd heeft.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-04",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Nora wil haar haar laten knippen. Ze belt de kapper. Ze maakt een afspraak voor vrijdag. Op vrijdag gaat ze naar de kapsalon.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2286,
+          "id": "klink-teksten-zelf-a1-batch18-q364",
+          "text": "Een vrouw gaat naar de kapper. Zij hangt haar blauwe jas aan een haak bij de deur. Na het knippen is haar jas weg. De kapper wijst naar een stoel. Op de stoel ligt de jas. De vrouw trekt haar jas aan.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r31-v1-199621360c31deff.json"
+        },
+        {
+          "jaccard": 0.2222,
+          "id": "klink-text-142815dad31c8c8c",
+          "text": "Leila maakt een lijst. Ze schrijft rijst en melk op. De lijst ligt naast haar tas.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2188,
+          "id": "klink-text-77bf177b20aa0262",
+          "text": "Elena is voor het eerst in de les. Nora vraagt haar naam. Elena schrijft haar naam op een kaart. Daarna gaat zij naast Nora zitten.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-05",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Bilal moet naar Utrecht. Zijn trein vertrekt om twee uur. Hij koopt een kaartje. Hij loopt naar het juiste perron. Om twee uur stapt hij in de trein.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2778,
+          "id": "klink-teksten-zelf-a1-batch11-q228",
+          "text": "Een man wil de bus nemen. Bij de halte zoekt hij zijn kaartje. Het ligt niet in zijn tas. Hij zoekt in zijn jas. Daar zit het kaartje. De bus komt om acht uur. De man stapt in.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r19-v1-56716145c2312ac9.json"
+        },
+        {
+          "jaccard": 0.2632,
+          "id": "klink-teksten-zelf-a1-batch06-q120",
+          "text": "Op het station kijkt een vrouw op het bord. De trein naar de stad vertrekt om negen uur van spoor drie. Het is nu acht uur. De vrouw wacht bij spoor drie. Later stapt zij in de trein.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r10-v1-6ab14e073a39c1e8.json"
+        },
+        {
+          "jaccard": 0.2432,
+          "id": "klink-teksten-zelf-a1-batch03-q72",
+          "text": "Een man krijgt een brief van de gemeente. In de brief staat: \"Kom dinsdag om twee uur. Neem uw paspoort mee.\" Op dinsdag pakt de man zijn paspoort en de brief. Hij gaat naar de gemeente.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r06-v1-998fb3de1cef3f36.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-06",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Elif wil een boek lezen over dieren. Ze gaat naar de bibliotheek. Ze zoekt een boek over dieren. Ze leent het boek en neemt het mee naar huis.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.3636,
+          "id": "klink-teksten-zelf-a1-batch10-q208",
+          "text": "In de vakantie wil een vrouw graag lezen. Zij gaat naar de bibliotheek. Daar kiest zij een boek over dieren. Zij leent het boek met haar pas. Thuis legt zij het boek op tafel.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r18-v1-0c74353019fae0cc.json"
+        },
+        {
+          "jaccard": 0.25,
+          "id": "KLINK-LUI-P01-AC-text-question-005",
+          "text": "De docent vertelt dat de klas morgen naar de bibliotheek gaat. Iedereen neemt een bibliotheekpas mee. Ze verzamelen om negen uur bij school.",
+          "kind": "text-question",
+          "url": "/practice-content/klink10-listening-20261102/klink10-listening-alfa-c-text-question-3cddedba4b1fb37a.json"
+        },
+        {
+          "jaccard": 0.2353,
+          "id": "klink-text-57c78e5c980242e8",
+          "text": "Jamal wil zijn deur blauw verven. Hij neemt een kleurkaart mee naar huis. In het daglicht bekijkt hij de kaart naast de deur. Daarna kiest hij de kleur.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-07",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "De huisarts geeft Hassan een recept voor medicijnen. Hassan gaat naar de apotheek. Hij geeft het recept aan de apotheker. De apotheker geeft hem de medicijnen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.25,
+          "id": "klink-teksten-zelf-a1-batch04-q76",
+          "text": "Een vrouw gaat naar de apotheek. Zij heeft een recept van de dokter. De medewerker geeft haar een medicijn. De vrouw vraagt hoe zij het medicijn moet gebruiken. De medewerker legt het uit. Daarna gaat de vrouw naar huis.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r07-v1-419f9716297e02a8.json"
+        },
+        {
+          "jaccard": 0.2143,
+          "id": "klink-teksten-zelf-a1-batch07-q152",
+          "text": "Maandag gaat een medewerker naar zijn werk. In de pauze merkt hij dat zijn brood thuis ligt. Zijn collega heeft twee boterhammen en geeft hem er één. Samen drinken zij water. Daarna gaan ze weer aan het werk.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r13-v1-5c3c0380a054ab5c.json"
+        },
+        {
+          "jaccard": 0.2059,
+          "id": "klink-text-c75936c53e6f82b1",
+          "text": "Morgen gaat Mo naar een feest. Zijn blauwe pak hangt in de kast. Zijn bruine riem hangt ernaast. Mo trekt het pak aan. De riem is te klein. Hij zoekt een andere riem.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-08",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Leila staat voor haar huis. Haar sleutel ligt nog bij haar zus. Ze belt haar zus. Haar zus komt met de sleutel. Leila opent de deur en gaat naar binnen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2424,
+          "id": "klink-text-8ae278d44d3be43d",
+          "text": "Eva gaat met haar zoon naar de boot. De boot ligt nog aan de steiger. Ze wachten totdat de medewerker zegt dat ze kunnen instappen.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2368,
+          "id": "klink-teksten-zelf-a1-batch10-q204",
+          "text": "Vrijdag gaat een vrouw zwemmen. Zij legt haar badpak en een handdoek in haar tas. De tas staat bij de deur. Om twee uur vertrekt zij met de fiets naar het zwembad.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r17-v1-3f10b75189053180.json"
+        },
+        {
+          "jaccard": 0.2368,
+          "id": "klink-teksten-zelf-a1-batch19-q392",
+          "text": "Een vader komt om acht uur bij school. De deur is nog dicht. Op een briefje staat: De school gaat vandaag om half negen open. De vader wacht buiten. Om half negen gaat hij naar binnen.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r33-v1-83051f7239344bf4.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-09",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Amir begint vandaag bij een nieuwe werkgever. Hij meldt zich bij de receptie. Een collega laat zijn werkplek zien. Daarna begint Amir met zijn eerste taak.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2368,
+          "id": "klink-teksten-zelf-a1-batch03-q68",
+          "text": "Vandaag begint een nieuwe collega in een winkel. De baas laat eerst de kassa zien. Daarna helpt de collega een klant. Om twaalf uur heeft de collega pauze. Na de pauze zet de collega producten in een lege kast.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r06-v1-998fb3de1cef3f36.json"
+        },
+        {
+          "jaccard": 0.1905,
+          "id": "klink-teksten-zelf-a1-batch04-q80",
+          "text": "Een man werkt in een keuken. Zijn oude schoenen zijn kapot. Vandaag krijgt hij nieuwe schoenen van zijn baas. De nieuwe schoenen zijn zwart en passen goed. Hij trekt ze aan. Om negen uur begint hij met werken.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r07-v1-419f9716297e02a8.json"
+        },
+        {
+          "jaccard": 0.1795,
+          "id": "klink-teksten-zelf-a1-batch08-q168",
+          "text": "Een cursist komt met de fiets naar school. Bij de deur hangt een bord: \"Zet fietsen achter het gebouw.\" De cursist leest het bord. Hij loopt met zijn fiets naar de achterkant. Daarna gaat hij naar de les.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r14-v1-1561c99ae33b3008.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A1-TEXT-01-10",
+      "sourceDocId": "12flQ2BKGYszfBYgc6neUHPyajXnf_0RXFax9zVr2ibo",
+      "sourceText": "Er ligt een briefje in de brievenbus van Sam. Zijn pakket ligt bij een afhaalpunt. Sam leest het briefje. Hij gaat met zijn identiteitsbewijs naar het afhaalpunt. Hij neemt het pakket mee naar huis.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2778,
+          "id": "klink-text-57c78e5c980242e8",
+          "text": "Jamal wil zijn deur blauw verven. Hij neemt een kleurkaart mee naar huis. In het daglicht bekijkt hij de kaart naast de deur. Daarna kiest hij de kleur.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2759,
+          "id": "klink-text-ce689565fa3098d5",
+          "text": "Het pakje ligt in de gang. Kofi komt binnen. Hij neemt het pakje mee naar de keuken.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.275,
+          "id": "klink-teksten-zelf-a1-batch06-q124",
+          "text": "Maandag krijgt een medewerker een bericht van zijn baas. Dinsdag werkt hij niet in de winkel, maar in het magazijn. Hij begint om acht uur. Hij neemt zijn werkschoenen mee. Op dinsdag gaat hij naar het magazijn.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r11-v1-414f50536414a8a0.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-01",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Nadia heeft dinsdag om drie uur een afspraak bij de tandarts. Op maandag vraagt haar werkgever of ze dinsdag langer kan werken. Nadia belt de tandarts om de afspraak te veranderen. De assistent geeft haar een nieuwe afspraak op donderdag om half vier. Nadia zet de nieuwe tijd meteen in haar agenda.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.4,
+          "id": "klink-teksten-zelf-a2-r01-q04",
+          "text": "Farid heeft dinsdag om tien uur een afspraak bij de tandarts. Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts. Daarom belt Farid de tandarts. De medewerker verzet de afspraak naar donderdag om half drie. Farid schrijft de nieuwe tijd in zijn agenda. Daarna krijgt hij een sms met de nieuwe afspraak.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r01-v1-2f1041cfeb2c00b1.json"
+        },
+        {
+          "jaccard": 0.3636,
+          "id": "klink-text-5bff832cdc08c5dd",
+          "text": "Mo heeft woensdag om vier uur een afspraak bij de tandarts voor zijn kies. Hij moet die middag werken en belt om de afspraak te verzetten. De assistent biedt donderdag om tien uur aan. Dan kan Mo wel komen. Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.3,
+          "id": "KLINK-LUI-P01-AC-text-question-001",
+          "text": "Nora heeft donderdag om half elf een afspraak bij de tandarts. Ze schrijft de tijd op een kaartje. Op donderdag vertrekt ze op tijd.",
+          "kind": "text-question",
+          "url": "/practice-content/klink10-listening-20261102/klink10-listening-alfa-c-text-question-3cddedba4b1fb37a.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-02",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Karim werkt in een magazijn en begint om acht uur. Normaal neemt hij bus 12. Bij de halte ziet hij dat die bus vandaag niet rijdt. Hij kijkt op de reisinformatie naar een andere route. Hij neemt bus 15 en stapt daarna over op de tram. Hij komt vijf minuten later dan normaal op zijn werk.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2963,
+          "id": "klink-teksten-zelf-a1-batch07-q136",
+          "text": "Om acht uur wil een man naar zijn werk vertrekken. Hij kijkt naar de klok in de keuken. De klok staat stil. Op zijn telefoon ziet hij zeven uur. Hij pakt zijn tas en neemt bus vier.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r12-v1-d4f8b5a6c9efb359.json"
+        },
+        {
+          "jaccard": 0.2857,
+          "id": "klink-teksten-zelf-a1-batch03-q56",
+          "text": "Op maandag wil een man met bus 6 naar het centrum. Bij de halte staat een bord met de tekst: \"Bus 6 komt vandaag niet.\" De man neemt daarom tram 2. Om tien uur is hij in het centrum.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r05-v1-1e083c0f9b0c66a2.json"
+        },
+        {
+          "jaccard": 0.2727,
+          "id": "klink-teksten-zelf-a1-batch06-q124",
+          "text": "Maandag krijgt een medewerker een bericht van zijn baas. Dinsdag werkt hij niet in de winkel, maar in het magazijn. Hij begint om acht uur. Hij neemt zijn werkschoenen mee. Op dinsdag gaat hij naar het magazijn.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r11-v1-414f50536414a8a0.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-03",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Yara heeft een boek nodig voor haar cursus. In de bibliotheek ziet ze dat iemand anders het enige beschikbare exemplaar al heeft gereserveerd. Ze vraagt aan een medewerker wat ze kan doen. De medewerker laat haar zien hoe ze het boek zelf kan reserveren. Een week later krijgt Yara een bericht dat het boek klaarligt.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2222,
+          "id": "klink-text-94c3ad68a158b702",
+          "text": "Elena zoekt een boek in de bibliotheek. Het boek is vandaag niet aanwezig: iemand anders heeft het geleend. De medewerker verwacht het vrijdag terug. Elena laat het boek voor zich bewaren en komt dan opnieuw.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2034,
+          "id": "KLINK-LUI-P01-B1-text-question-010",
+          "text": "Fatima heeft een controleafspraak in het ziekenhuis. Ze vraagt of ze daarvoor moet reizen. De medewerker legt uit dat een telefonisch gesprek mogelijk is wanneer lichamelijk onderzoek niet nodig is. De arts moet eerst beoordelen of dat voor haar geldt.",
+          "kind": "text-question",
+          "url": "/practice-content/klink10-listening-20261102/klink10-listening-b1-text-question-cbd8c48d23f5ae11.json"
+        },
+        {
+          "jaccard": 0.1899,
+          "id": "B1-FL-006-Q2",
+          "text": "Rosa vraagt bij de gemeente een document aan. Volgens de bevestigingsmail moet ze vóór haar afspraak een formulier invullen en haar identiteitsbewijs meenemen. Thuis heeft ze geen printer. De medewerker legt uit dat het formulier ook digitaal kan worden ingestuurd. Rosa doet dat en krijgt een ontvangstbericht op haar telefoon. In dat bericht staat dat ze bij het loket nog haar identiteit moet laten controleren. Haar vriendin denkt dat het document nu al klaar is. Rosa legt uit dat het formulier alleen ontvangen is en dat de afspraak moet plaatsvinden.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r01-2f4fd17ce24adda3.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-04",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Omar woont in een huurwoning. Na een stevige regenbui ziet hij een natte plek bij het raam. Hij wil voorkomen dat de plek groter wordt. Hij maakt een foto van de natte plek. Hij stuurt de foto met een bericht naar de verhuurder. De verhuurder laat weten dat een medewerker morgen komt kijken.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.25,
+          "id": "klink-text-e780513e59ea2285",
+          "text": "Abel wil met de bus naar zijn afspraak. Bij de halte ziet hij dat de bus later komt. Hij stuurt een bericht dat hij vertraging heeft. Hij weet nog niet precies hoe laat hij aankomt en schrijft dat erbij.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.2444,
+          "id": "KLINK-LUI-P01-AC-text-question-002",
+          "text": "Omar staat bij de bushalte. Op het bord staat dat de bus tien minuten later komt. Hij stuurt een bericht naar zijn collega.",
+          "kind": "text-question",
+          "url": "/practice-content/klink10-listening-20261102/klink10-listening-alfa-c-text-question-3cddedba4b1fb37a.json"
+        },
+        {
+          "jaccard": 0.2297,
+          "id": "klink-teksten-zelf-a2-batch12-q240",
+          "text": "Een bewoner ziet maandagochtend water onder het raam in de woonkamer. Het heeft die nacht hard geregend. Hij maakt een foto en stuurt die naar de verhuurder. De verhuurder vraagt hem het water eerst op te drogen en geen spullen bij het raam te zetten. Een monteur kan woensdagmiddag komen kijken, maar de reparatie is nog niet afgesproken. De bewoner laat weten dat hij woensdag thuis is. Hij zet zijn boeken tijdelijk in de slaapkamer en droogt de vloer.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r20-v1-f573a5865d76bd9c.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-05",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Elif werkt in een winkel. Op vrijdagavond krijgt ze een bericht met het rooster voor volgende week. Ze ziet dat haar dienst op woensdag eerder begint. Ze vergelijkt het nieuwe rooster met haar agenda. Ze merkt dat ze die ochtend een cursus heeft en stuurt een bericht naar haar leidinggevende. Samen spreken ze af dat een collega de eerste twee uur overneemt.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2805,
+          "id": "klink-teksten-zelf-a2-batch15-q304",
+          "text": "Een schoonmaakbedrijf stuurt het rooster voor volgende week. De ochtenddienst begint maandag een uur eerder dan normaal, om zeven uur. Medewerkers die niet kunnen komen, moeten vóór vrijdag met hun leidinggevende overleggen. Zij mogen niet zelf een collega in hun plaats zetten. Een medewerker heeft maandag een afspraak bij de dokter. Hij belt donderdag zijn leidinggevende. Samen spreken ze af dat hij maandag de middagdienst werkt. Vrijdag ontvangt hij het aangepaste rooster per e-mail. Hij leest het rooster nog eens.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r26-v1-9ae149e536d23ec5.json"
+        },
+        {
+          "jaccard": 0.2299,
+          "id": "B1-FL-024-Q2",
+          "text": "Yara krijgt donderdag bericht dat ze dinsdag kan beginnen met een cursus Nederlands. De school wil vóór maandag haar bevestiging; anders gaat de plaats naar iemand anders. Yara werkt normaal op dinsdag, maar haar nieuwe rooster verschijnt pas maandagmiddag. Ze belt daarom vrijdag met haar leidinggevende. Die kan haar op dinsdag vrijroosteren als Yara maandag een extra dienst werkt. Yara stemt daarmee in en krijgt die afspraak per e-mail bevestigd. Ze bevestigt vrijdag haar deelname aan de cursus, hoewel het aangepaste werkrooster nog niet in het systeem staat.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r04-9c5026a5df0ed5eb.json"
+        },
+        {
+          "jaccard": 0.2267,
+          "id": "klink-teksten-zelf-a2-r02-q24",
+          "text": "Daan werkt in een supermarkt en staat zaterdag op het rooster. Zijn dochter heeft die ochtend een sportwedstrijd. Daan vraagt collega Ivo of ze kunnen ruilen. Ivo wil zaterdag werken, maar kan pas om twaalf uur beginnen. Hun leidinggevende past het rooster aan: Daan werkt zondagochtend en Ivo zaterdagmiddag. Voor de zaterdagochtend vindt de leidinggevende een andere collega. Daan controleert daarna het nieuwe rooster op zijn telefoon.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r02-v1-ab07f84d846cb574.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-06",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "De taalklas van docent Bas gaat vrijdag naar het museum. De cursisten moeten voor vertrek hun lunch en ov-kaart meenemen. Voor Layla is het haar eerste bezoek aan dit museum. Layla leest thuis het bericht van school. Ze legt donderdagavond haar lunchbox en ov-kaart klaar. Vrijdagochtend vertrekt ze met de klas vanaf school.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2143,
+          "id": "klink-teksten-zelf-a1-batch17-q336",
+          "text": "Een vrouw is verhuisd. Ze schrijft haar nieuwe adres op een kaart. Op maandag geeft ze de kaart aan een medewerker op school. De medewerker leest het adres en legt de kaart in een map. Dinsdag krijgt ze ook een bericht.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r28-v1-a8f787bd4fdf7954.json"
+        },
+        {
+          "jaccard": 0.1935,
+          "id": "klink-text-c0d8db1213cceed0",
+          "text": "Anita gaat naar een taalles in een nieuw gebouw. Voor de blauwe deur hangt een bericht. Deze ingang is tijdelijk gesloten. Cursisten moeten de deur aan het eind van de gang gebruiken. Anita volgt de pijl en vindt daar het lokaal.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.1887,
+          "id": "klink-teksten-zelf-a1-batch16-q320",
+          "text": "Een moeder schrijft een brief aan de school. Haar zoon is donderdag ziek en blijft thuis. Vrijdag geeft de moeder de brief aan de docent. De docent leest de brief. Maandag is de zoon weer op school.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r27-v1-87fe74c305e882e4.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-07",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Farid heeft online een jas besteld. Hij kiest ophalen in de winkel, omdat hij overdag vaak niet thuis is. Op donderdag krijgt hij een bericht dat de jas is aangekomen. Farid controleert het afhaalnummer in de e-mail. Hij gaat zaterdag met de e-mail naar de winkel. Een medewerker geeft hem de jas nadat hij het afhaalnummer heeft laten zien.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2414,
+          "id": "KLINK-LUI-P01-B1-text-question-008",
+          "text": "Youssef heeft bericht gekregen dat zijn document klaar is. Hij wil het meteen ophalen, maar op de website staat dat een afspraak verplicht is. Hij kiest online een tijdstip voor vrijdag. Daarna ontvangt hij een bevestiging per e-mail.",
+          "kind": "text-question",
+          "url": "/practice-content/klink10-listening-20261102/klink10-listening-b1-text-question-cbd8c48d23f5ae11.json"
+        },
+        {
+          "jaccard": 0.2407,
+          "id": "klink-teksten-zelf-a1-batch06-q124",
+          "text": "Maandag krijgt een medewerker een bericht van zijn baas. Dinsdag werkt hij niet in de winkel, maar in het magazijn. Hij begint om acht uur. Hij neemt zijn werkschoenen mee. Op dinsdag gaat hij naar het magazijn.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r11-v1-414f50536414a8a0.json"
+        },
+        {
+          "jaccard": 0.2361,
+          "id": "klink-teksten-zelf-a2-batch02-q52",
+          "text": "Een klant koopt vrijdag een zwarte broek in een kledingwinkel. Thuis ziet hij een kleine scheur in de broek. Zaterdag gaat hij met de broek en de bon terug naar de winkel. De medewerker wil een nieuwe broek in dezelfde maat geven, maar die maat is uitverkocht. De klant wil niet op een bestelling wachten. Daarom kiest hij voor terugbetaling. De medewerker zegt dat het geld binnen drie werkdagen op de bankrekening van de klant staat.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r05-v1-e3d32cdce87debf9.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-08",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "In de buurt van Sofia ligt een kleine gezamenlijke tuin. Bewoners mogen er helpen, maar ze spreken af wie welke planten verzorgt. Sofia wil graag meedoen. Ze vraagt aan de buurman wanneer de groep samenkomt. Zaterdag gaat ze naar de tuin en krijgt ze een eigen stukje grond. Daarna geeft ze samen met een buurvrouw de jonge planten water.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.209,
+          "id": "klink-teksten-zelf-a1-batch07-q152",
+          "text": "Maandag gaat een medewerker naar zijn werk. In de pauze merkt hij dat zijn brood thuis ligt. Zijn collega heeft twee boterhammen en geeft hem er één. Samen drinken zij water. Daarna gaan ze weer aan het werk.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r13-v1-5c3c0380a054ab5c.json"
+        },
+        {
+          "jaccard": 0.194,
+          "id": "klink-teksten-zelf-a1-batch15-q308",
+          "text": "Zaterdag werkt een man in zijn tuin. Hij maakt eerst de tafel schoon. Daarna geeft hij de planten water. Zijn zoon komt om twee uur helpen. Samen zetten ze twee stoelen buiten. Om vier uur gaan zij weer naar binnen.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r26-v1-3b42f9f2a8102be8.json"
+        },
+        {
+          "jaccard": 0.1935,
+          "id": "klink-teksten-zelf-a1-batch12-q252",
+          "text": "Zaterdag is er feest op school. Een vrouw wil haar groene jurk dragen. De jurk ligt in de kast, maar is vuil. Zij wast de jurk op vrijdag. Zaterdag trekt zij de schone jurk aan en gaat naar school.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r21-v1-928c6d3360eeaa28.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-09",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Meryem heeft twee blauwe handdoeken besteld. In de doos zitten echter twee groene handdoeken. Volgens de e-mail van de winkel kan ze een verkeerd artikel binnen veertien dagen terugsturen. Ze maakt een foto van de groene handdoeken. Ze meldt de fout via het formulier van de winkel. De winkel mailt haar een retourlabel om de handdoeken terug te sturen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2069,
+          "id": "B1-FL-010-Q2",
+          "text": "Meryem wil een online gekochte jas terugsturen omdat de mouwen te kort zijn. Volgens de winkelvoorwaarden kan dat binnen veertien dagen als de jas ongebruikt is. De kaartjes zitten eraan, maar de originele verpakking is weggegooid. De klantenservice zegt dat een stevige doos ook goed is. Meryem stopt de jas in die doos en bewaart de verzendbevestiging. Wanneer de winkel later meldt niets te hebben ontvangen, kan ze met die bevestiging laten zien wanneer ze het pakket heeft verstuurd. Ze weet nog niet of de retour al verwerkt is.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r02-cad50049910e2fdf.json"
+        },
+        {
+          "jaccard": 0.1481,
+          "id": "klink-teksten-zelf-a1-batch02-q52",
+          "text": "Een cursist maakt een foto van het bord. De docent vraagt om de foto. De cursist stuurt de foto op maandag. Op dinsdag opent de docent de foto op haar computer. Daarna praat de klas over de foto.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r05-v1-1e083c0f9b0c66a2.json"
+        },
+        {
+          "jaccard": 0.1481,
+          "id": "klink-teksten-zelf-a2-batch19-q396",
+          "text": "Een bewoner meldt via de website van de gemeente dat de straatlamp bij haar huis soms uitvalt. In het formulier vult ze de straatnaam en het nummer van de lamp in. Daarna krijgt ze een bericht dat haar melding is ontvangen. In dat bericht staat dat een medewerker binnen vijf werkdagen bekijkt wat er nodig is. Het bericht noemt geen dag waarop de lamp wordt gerepareerd. De bewoner bewaart het meldingsnummer, zodat ze later naar de voortgang kan vragen.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r33-v1-9d8ad212dbb5a52b.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "A2-TEXT-01-10",
+      "sourceDocId": "1g3wWW3QHo6ivBxYItb0f2RPltfdvqTIC5kGDSy-xXdM",
+      "sourceText": "Amir heeft gesolliciteerd naar een baan in een fietsenwinkel. De eigenaar vraagt of hij maandagmiddag op gesprek kan komen. Amir heeft dan les en kan pas na vier uur. Hij stuurt een bericht waarin hij uitlegt wanneer hij kan. De eigenaar stelt dinsdagochtend voor. Amir bevestigt de nieuwe afspraak en noteert het adres.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2564,
+          "id": "B1-FL-076-Q2",
+          "text": "Medewerker Niels plant twee sollicitatiegesprekken voor een nieuwe functie op donderdag. De leidinggevende kan alleen na de lunch. Kandidaat Nienke kan om twee uur, maar kandidaat Mo kan pas om vier uur. De leidinggevende heeft om vier uur al een afspraak. Niels vraagt of die afspraak kan worden verplaatst. Zolang hij geen antwoord heeft, bevestigt hij Nienkes tijd wel, maar Mo's tijd nog niet. Hij noteert in de planning dat het tweede gesprek voorlopig is. In Nienkes uitnodiging staat duidelijk dat haar gesprek definitief is afgesproken.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r13-92ffb3c9677b0167.json"
+        },
+        {
+          "jaccard": 0.2368,
+          "id": "klink-teksten-zelf-a2-batch05-q96",
+          "text": "In een advertentie staat een houten tafel te koop voor veertig euro. De tafel is nog goed, maar past niet in de nieuwe woning van de verkoper. Ophalen kan zaterdag tussen tien en twaalf uur. De koper moet zelf vervoer regelen, want bezorgen kan niet. Een buur stuurt vrijdag een bericht. Hij wil de tafel kopen, maar kan zaterdag pas in de middag komen. De verkoper stelt daarom zondagochtend voor. De buur kan dan komen en vraagt om het adres.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r08-v1-4a777a4375e827b1.json"
+        },
+        {
+          "jaccard": 0.2317,
+          "id": "B1-FL-113-Q2",
+          "text": "Sietske wil zondag met haar familie bij oma eten. Haar broer werkt tot vier uur en kan pas om vijf uur komen. Hun moeder heeft het eten om twee uur gepland, maar moet om half zes naar een afspraak. Oma wil graag dat iedereen samen eet. Sietske stelt voor om vijf uur te beginnen met een kleine maaltijd. Haar broer neemt drinken mee. Hun moeder kan nog even mee-eten, maar moet op tijd vertrekken. Sietske vraagt iedereen of dit plan past voordat ze de nieuwe tijd bevestigt.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r19-4b73dc37c59eafd8.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-01",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "Bij een zorginstelling maakt Joris het rooster. Zijn collega Lina vraagt of ze vrijdag een avonddienst mag ruilen, omdat ze dan een cursus volgt. Een collega wil de dienst overnemen. Volgens de interne afspraak telt een ruil pas als de wijziging in het roostersysteem is goedgekeurd. Lina dient het verzoek in via het roostersysteem, met de naam van de collega die wil overnemen. Joris controleert of de bezetting voldoende blijft en keurt de ruil daarna goed. Lina ziet vrijdag de nieuwe dienstverdeling in haar persoonlijke rooster en informeert de collega.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2222,
+          "id": "B1-FL-001-Q2",
+          "text": "In het distributiecentrum ziet Samira dat ze woensdagavond moet werken, terwijl ze dan een cursus heeft. Collega Pieter wil haar dienst overnemen als zij zaterdag voor hem werkt. Samira stemt daarmee in en meldt de ruil aan de teamleider. Die heeft het rooster nog niet aangepast, omdat hij eerst wil controleren of zaterdag genoeg medewerkers aanwezig zijn. Pieter denkt dat de ruil al vaststaat. Samira wacht liever op de bevestiging van de teamleider. Tot die tijd staan beide diensten nog op het oorspronkelijke rooster.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r01-2f4fd17ce24adda3.json"
+        },
+        {
+          "jaccard": 0.2135,
+          "id": "klink-teksten-zelf-a2-batch14-q276",
+          "text": "Een medewerker wil donderdagmiddag naar de tandarts en vraagt zijn leidinggevende om vrij. Volgens het rooster werkt hij donderdag van twaalf tot vijf uur. Een collega kan zijn dienst vanaf twee uur overnemen. De leidinggevende vraagt daarom of de medewerker tot twee uur kan werken. Hij gaat akkoord. Woensdag ontvangt hij een aangepast rooster per e-mail: donderdag werkt hij van twaalf tot twee uur. Pas na die bevestiging maakt hij de afspraak bij de tandarts voor drie uur.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r23-v1-2e68cde5943d87ac.json"
+        },
+        {
+          "jaccard": 0.2045,
+          "id": "klink-teksten-zelf-a2-r02-q24",
+          "text": "Daan werkt in een supermarkt en staat zaterdag op het rooster. Zijn dochter heeft die ochtend een sportwedstrijd. Daan vraagt collega Ivo of ze kunnen ruilen. Ivo wil zaterdag werken, maar kan pas om twaalf uur beginnen. Hun leidinggevende past het rooster aan: Daan werkt zondagochtend en Ivo zaterdagmiddag. Voor de zaterdagochtend vindt de leidinggevende een andere collega. Daan controleert daarna het nieuwe rooster op zijn telefoon.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r02-v1-ab07f84d846cb574.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-02",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "In een appartementencomplex ontdekt bewoner Jamal na een regenbui een vochtige plek in de gezamenlijke hal. De beheerder wil eerst weten of het water uit het dak of uit een leiding komt. Daarom vraagt zij de bewoners om foto's en de tijd waarop zij de plek voor het eerst zagen. Jamal stuurt de beheerder een foto en schrijft dat hij de plek zondagavond zag. De beheerder verzamelt ook de informatie van twee andere bewoners en laat dinsdag een monteur komen. De monteur onderzoekt de plek en meldt dat eerst het dak moet worden gecontroleerd voordat herstel kan beginnen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2105,
+          "id": "klink-teksten-zelf-a2-batch04-q76",
+          "text": "In een huurwoning komt er water uit de kraan, ook als die dicht is. De bewoner stuurt maandagochtend een bericht met een foto naar de verhuurder. Die stelt woensdagmiddag voor, maar de bewoner is dan aan het werk. Ze spreken daarom donderdag om tien uur af. Een monteur repareert de kraan. Daarna kijkt de bewoner of de kraan droog blijft wanneer hij hem dichtdoet. De bewoner laat de verhuurder weten dat het probleem is opgelost.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r07-v1-7425e1fdc7d494d3.json"
+        },
+        {
+          "jaccard": 0.2059,
+          "id": "B1-FL-002-Q2",
+          "text": "Ilias ontdekt een vochtplek op het plafond van zijn slaapkamer en meldt die bij de verhuurder. Een monteur komt pas volgende week. Twee dagen later wordt de plek groter en ligt er water op de vloer. Ilias maakt foto's en vraagt om spoed. De verhuurder regelt een spoedbezoek voor morgenochtend. Ilias zet een emmer neer en verplaatst zijn spullen. De buurman zegt dat een emmer voldoende is tot volgende week. Ilias legt uit dat het water nog steeds naar binnen komt en dat de oorzaak moet worden onderzocht.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r01-2f4fd17ce24adda3.json"
+        },
+        {
+          "jaccard": 0.1939,
+          "id": "klink-teksten-zelf-a2-batch12-q244",
+          "text": "Een vrijwilliger schrijft een kort stukje voor de buurtkrant over de nieuwe bank bij het park. De redactie vraagt om twee foto’s en een tekst van ongeveer honderd woorden. De vrijwilliger stuurt dinsdag alvast de foto’s. Zijn tekst is nog niet klaar, omdat hij een bewoner wil spreken. Woensdag heeft hij dat gesprek. Hij schrijft daarna de tekst en verstuurt die donderdag. De redactie moet alles uiterlijk vrijdag ontvangen. Vrijdag krijgt hij bericht dat zijn bijdrage is aangekomen.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r21-v1-7788c89df07b1606.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-03",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "Sofia werkt drie dagen per week in een winkel en wil een opleiding tot administratief medewerker volgen. De school biedt lessen op maandag en donderdag. Sofia heeft donderdag meestal dienst, maar haar leidinggevende wil kijken of zij op die dag vroeger kan stoppen. De school vraagt om een definitieve keuze vóór de inschrijfdatum. Sofia vraagt de school om het volledige lesrooster en de inschrijfdatum. Ze bespreekt het rooster met haar leidinggevende en krijgt toestemming om donderdag eerder weg te gaan. Daarna schrijft Sofia zich in en bewaart ze de bevestiging van de school.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2376,
+          "id": "B1-FL-024-Q2",
+          "text": "Yara krijgt donderdag bericht dat ze dinsdag kan beginnen met een cursus Nederlands. De school wil vóór maandag haar bevestiging; anders gaat de plaats naar iemand anders. Yara werkt normaal op dinsdag, maar haar nieuwe rooster verschijnt pas maandagmiddag. Ze belt daarom vrijdag met haar leidinggevende. Die kan haar op dinsdag vrijroosteren als Yara maandag een extra dienst werkt. Yara stemt daarmee in en krijgt die afspraak per e-mail bevestigd. Ze bevestigt vrijdag haar deelname aan de cursus, hoewel het aangepaste werkrooster nog niet in het systeem staat.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r04-9c5026a5df0ed5eb.json"
+        },
+        {
+          "jaccard": 0.2308,
+          "id": "klink-teksten-zelf-a2-batch14-q276",
+          "text": "Een medewerker wil donderdagmiddag naar de tandarts en vraagt zijn leidinggevende om vrij. Volgens het rooster werkt hij donderdag van twaalf tot vijf uur. Een collega kan zijn dienst vanaf twee uur overnemen. De leidinggevende vraagt daarom of de medewerker tot twee uur kan werken. Hij gaat akkoord. Woensdag ontvangt hij een aangepast rooster per e-mail: donderdag werkt hij van twaalf tot twee uur. Pas na die bevestiging maakt hij de afspraak bij de tandarts voor drie uur.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r23-v1-2e68cde5943d87ac.json"
+        },
+        {
+          "jaccard": 0.2277,
+          "id": "B1-FL-049-Q2",
+          "text": "Vrijdag sluit de kinderopvang eerder. Sofia werkt tot vijf uur en kan haar zoon niet zelf ophalen. Haar moeder kan om vier uur komen, maar staat nog niet op de lijst met mensen die kinderen mogen ophalen. Sofia geeft haar naam en telefoonnummer door. De opvang bevestigt dat oma hem mag meenemen, maar vraagt haar bij het ophalen een identiteitsbewijs te tonen. Sofia stuurt haar moeder de bevestiging en belt om te controleren of ze haar identiteitsbewijs bij zich heeft. Pas daarna meldt Sofia aan de opvang dat oma komt.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r09-8cb2ca0cff133b06.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-04",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "In het magazijn van een meubelwinkel komt een levering met tien stoelen binnen. Medewerker Ibrahim ziet bij twee dozen duidelijke schade. Op het controleformulier staat dat beschadigde goederen apart moeten blijven totdat de teamleider heeft beslist wat ermee gebeurt. De andere acht dozen lijken in orde. Ibrahim maakt foto's van de twee beschadigde dozen en vult het controleformulier in. Hij zet die dozen apart en meldt de situatie aan de teamleider. De teamleider laat de acht goede dozen verwerken en vraagt voor de twee andere om een beoordeling van de leverancier.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2414,
+          "id": "klink-teksten-zelf-a2-batch04-q92",
+          "text": "Een nieuwe medewerker begint maandag in een magazijn. Voor de eerste dienst krijgt hij uitleg over veiligheid. Zware dozen moeten met een kar worden verplaatst. Zet een doos met een scheur apart. Meld de scheur bij de leidinggevende. Tijdens de uitleg merkt hij dat een kar een kapot wiel heeft. Hij gebruikt die kar niet en meldt het probleem. Daarna krijgt hij een andere kar. Hij controleert die kar en begint daarna met het verplaatsen van dozen.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r08-v1-4a777a4375e827b1.json"
+        },
+        {
+          "jaccard": 0.2283,
+          "id": "klink-teksten-zelf-a2-batch10-q208",
+          "text": "In de werkruimte staat een apparaat om dozen dicht te maken. Een medewerker hoort dat het apparaat vreemde geluiden maakt. De werkinstructie zegt: gebruik het apparaat dan niet en meld het probleem aan de leidinggevende. De medewerker zet het apparaat uit en meldt wat hij hoort. Zijn leidinggevende vraagt hem de dozen voorlopig met tape dicht te maken. Een monteur komt morgen kijken. Pas nadat de monteur het apparaat heeft gecontroleerd, beslist de leidinggevende of het weer gebruikt mag worden.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r18-v1-1d5cd4843c719a24.json"
+        },
+        {
+          "jaccard": 0.2151,
+          "id": "klink-teksten-zelf-a2-batch03-q64",
+          "text": "Woensdag komt bij een klein bedrijf een doos aan. Het bedrijf heeft zes koptelefoons besteld. In de doos liggen er maar vijf. De medewerker maakt meteen een foto van de inhoud en stuurt die met het bestelnummer naar de leverancier. De leverancier antwoordt dat de zesde koptelefoon vrijdag wordt bezorgd. De medewerker schrijft dit op voor de collega’s. De vijf koptelefoons die wel zijn ontvangen, kunnen ondertussen gewoon gebruikt worden.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r06-v1-6fa160e3506d2414.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-05",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "De buurtvereniging organiseert zaterdag een kleine markt op het plein. In de weersverwachting wordt harde wind aangekondigd. Daarom besluit de organisatie de markt naar de sporthal te verplaatsen. De openingstijd blijft gelijk. Niet alle bezoekers hebben een e-mailadres, dus alleen een e-mailbericht sturen is niet voldoende. De organisatie stuurt een bericht aan de mensen die zich digitaal hebben aangemeld. Vrijwilligers hangen ook een duidelijk bericht bij het plein en bij de ingang van de sporthal. Op zaterdagochtend helpen zij bezoekers die toch nog naar het plein komen om de juiste plek te vinden.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2258,
+          "id": "klink-teksten-zelf-a2-batch02-q36",
+          "text": "Bericht bij het buurthuis: Van maandag tot en met vrijdag werken mensen aan de vloer bij de gewone ingang. Bezoekers kunnen deze ingang daarom tijdelijk niet gebruiken. Zij gaan naar de deur aan de achterkant, naast de parkeerplaats. Die deur is open van acht uur in de ochtend tot zes uur in de avond. Op zaterdag is de gewone ingang weer open. Ook bezoekers met een rolstoel kunnen via het pad naast het gebouw naar de tijdelijke ingang.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r03-v1-46b74417c98aedb3.json"
+        },
+        {
+          "jaccard": 0.1792,
+          "id": "klink-teksten-zelf-a2-batch14-q280",
+          "text": "In de bibliotheek is zaterdag een korte workshop over zoeken op internet. Voor de workshop zijn twaalf plaatsen. Wie wil meedoen, moet zich uiterlijk vrijdag aanmelden bij de balie. Voor het lenen van een boek hoef je je niet aan te melden. Donderdag staan er nog drie plaatsen open. Een bezoeker meldt zich die dag aan voor de workshop en krijgt direct een bevestiging per e-mail. De workshop begint zaterdag om elf uur. De bibliotheek is voor gewone bezoekers al om tien uur open.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r24-v1-726b916b44030b5c.json"
+        },
+        {
+          "jaccard": 0.1622,
+          "id": "B1-FL-069-Q2",
+          "text": "Op de kwekerij merkt Sam dat de temperatuur in een kas oploopt. Het systeem meldt een storing in de ventilatie. De planten lijken nog gezond. Buiten waait het hard, dus hij opent niet zomaar alle ramen. Samen met een collega zet hij een deur aan de beschutte kant open. Ze wijken af van de planning en meten elk halfuur. Bij de volgende meting is het nog warmer geworden. Sam meldt dit aan de verantwoordelijke collega. Hij vraagt om een andere maatregel, want de deur alleen lijkt niet te helpen.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r12-f8ae3e2dec2d0738.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-06",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "Meryem krijgt per sms een herinnering voor een gesprek bij de gemeente op woensdag. In haar online omgeving staat echter donderdag. In een eerdere brief stond dat wijzigingen altijd in de online omgeving worden bijgewerkt. Toch wil Meryem niet gokken welke dag juist is, omdat ze voor het gesprek vrij moet nemen. Meryem controleert het bericht in de online omgeving en leest de eerdere brief nog eens. Ze belt de gemeente en vraagt de medewerker de juiste datum te bevestigen. De medewerker bevestigt donderdag; Meryem noteert dit en past haar werkafspraak aan.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2258,
+          "id": "klink-teksten-zelf-a2-batch08-q156",
+          "text": "Een cursusleider stuurt dinsdag een formulier voor een bezoek aan de bibliotheek. Op het formulier staat donderdag, maar in de e-mail staat vrijdag. Een cursist vraagt welke dag klopt. De cursusleider antwoordt dat het bezoek vrijdag om twee uur is en stuurt een verbeterd formulier. Wie het oude formulier al heeft ingevuld, hoeft niet opnieuw te beginnen. Alleen de datum moet worden veranderd. De cursist bewaart de nieuwe e-mail om de juiste dag later te kunnen teruglezen.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r13-v1-cc9494453b90a08d.json"
+        },
+        {
+          "jaccard": 0.2188,
+          "id": "B1-FL-006-Q2",
+          "text": "Rosa vraagt bij de gemeente een document aan. Volgens de bevestigingsmail moet ze vóór haar afspraak een formulier invullen en haar identiteitsbewijs meenemen. Thuis heeft ze geen printer. De medewerker legt uit dat het formulier ook digitaal kan worden ingestuurd. Rosa doet dat en krijgt een ontvangstbericht op haar telefoon. In dat bericht staat dat ze bij het loket nog haar identiteit moet laten controleren. Haar vriendin denkt dat het document nu al klaar is. Rosa legt uit dat het formulier alleen ontvangen is en dat de afspraak moet plaatsvinden.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r01-2f4fd17ce24adda3.json"
+        },
+        {
+          "jaccard": 0.2095,
+          "id": "B1-FL-070-Q2",
+          "text": "Mira krijgt een klacht van een klant die denkt dubbel voor een cursus te hebben betaald. Het systeem toont twee betalingen, maar bij één staat 'in behandeling'. Op het bankafschrift dat de klant meestuurt, ziet Mira maar één afschrijving. Haar collega wil meteen zeggen dat er niets aan de hand is. Mira vindt dat te vroeg: de tweede betaling kan nog worden verwerkt. Ze vraagt de financiële afdeling om beide regels te controleren en belooft de klant vrijdag een bericht. Een terugbetaling zegt ze nog niet toe.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r12-f8ae3e2dec2d0738.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-07",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "De elektrische fiets van Ahmed maakt sinds een week een vreemd geluid. De fietsenmaker zegt dat hij de fiets eerst wil onderzoeken. Volgens de afspraak krijgt Ahmed daarna een prijsopgave; zonder zijn toestemming begint de fietsenmaker niet aan een reparatie. Ahmed gebruikt de fiets dagelijks om naar zijn werk te gaan. Ahmed brengt de fiets naar de werkplaats en legt uit wanneer het geluid ontstaat. De fietsenmaker onderzoekt de fiets en stuurt een prijsopgave voor het vervangen van een onderdeel. Ahmed geeft akkoord op de prijs; de fietsenmaker plant de reparatie vervolgens voor vrijdag.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2062,
+          "id": "B1-FL-092-Q2",
+          "text": "In de garage controleert Bram de remlichten van een auto. Hij ontdekt ook dat een achterlicht kapot is. Die reparatie staat niet op de werkbon. De baliemedewerker vraagt de klant of het achterlicht ook vervangen mag worden. De klant geeft toestemming, maar alleen als de extra kosten niet hoger zijn dan veertig euro. Bram controleert de prijs en ziet dat de reparatie vijfenvijftig euro kost. Hij begint daarom nog niet met het extra werk. De baliemedewerker belt terug om een andere afspraak over de kosten te maken.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r16-09e53de0af073d17.json"
+        },
+        {
+          "jaccard": 0.2059,
+          "id": "B1-FL-120-Q2",
+          "text": "Voor de wijkkrant schrijft vrijwilliger Leyla een artikel over oude winkels in de buurt. Kees vertelt een verhaal over zijn werk bij de bakker. Hij leest de tekst en vraagt één zin te veranderen, omdat die volgens hem een verkeerde indruk geeft. Leyla past de zin aan. De redactie wil de oude versie alvast gebruiken om de deadline te halen. Leyla wacht nog op Kees' akkoord voor de aangepaste tekst. Ze legt uit dat toestemming voor het eerste concept niet automatisch betekent dat Kees de nieuwe versie al heeft goedgekeurd.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r20-42e8a2bc0e2442ae.json"
+        },
+        {
+          "jaccard": 0.1961,
+          "id": "B1-FL-052-Q2",
+          "text": "Julia moet een oude vulling laten vervangen. De tandartspraktijk stuurt haar een kostenoverzicht. Daarin staat dat het bedrag nog kan veranderen als tijdens de behandeling meer werk nodig blijkt. Julia heeft deze maand weinig geld over. Ze vraagt wanneer ze de rekening krijgt en hoe lang ze heeft om te betalen. De medewerker legt de betaaltermijn uit, maar kan de uiteindelijke prijs nog niet garanderen. Julia maakt een afspraak voor volgende maand en vraagt of de tandarts vóór extra werk eerst de kosten met haar bespreekt.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r09-8cb2ca0cff133b06.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-08",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "De woningcorporatie wil de ventilatie in de flat van Elif controleren. In de brief staat dat een medewerker op dinsdag tussen negen en twaalf uur kan langskomen. Bewoners die dan niet thuis kunnen zijn, mogen via het bewonersportaal een andere afspraak aanvragen. Elif werkt dinsdagochtend. Elif leest de brief en kijkt in haar werkagenda. Via het bewonersportaal vraagt ze om een afspraak op donderdagmiddag. Ze krijgt een bevestiging voor donderdag om twee uur en zet die tijd in haar agenda.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.25,
+          "id": "klink-teksten-zelf-a2-batch14-q276",
+          "text": "Een medewerker wil donderdagmiddag naar de tandarts en vraagt zijn leidinggevende om vrij. Volgens het rooster werkt hij donderdag van twaalf tot vijf uur. Een collega kan zijn dienst vanaf twee uur overnemen. De leidinggevende vraagt daarom of de medewerker tot twee uur kan werken. Hij gaat akkoord. Woensdag ontvangt hij een aangepast rooster per e-mail: donderdag werkt hij van twaalf tot twee uur. Pas na die bevestiging maakt hij de afspraak bij de tandarts voor drie uur.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r23-v1-2e68cde5943d87ac.json"
+        },
+        {
+          "jaccard": 0.2436,
+          "id": "klink-teksten-zelf-a2-r01-q04",
+          "text": "Farid heeft dinsdag om tien uur een afspraak bij de tandarts. Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts. Daarom belt Farid de tandarts. De medewerker verzet de afspraak naar donderdag om half drie. Farid schrijft de nieuwe tijd in zijn agenda. Daarna krijgt hij een sms met de nieuwe afspraak.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r01-v1-2f1041cfeb2c00b1.json"
+        },
+        {
+          "jaccard": 0.2424,
+          "id": "B1-FL-021-Q2",
+          "text": "De beheerder laat bewoners op maandag weten dat het slot van de fietsenstalling vrijdag wordt vervangen. Nieuwe sleutels kunnen ze van dinsdag tot donderdag ophalen. Wie dat mist, kan zaterdag tussen twee en vier uur bij de huismeester terecht. Hanne leest de e-mail pas zaterdagmorgen. Haar fiets staat in de stalling, maar ze werkt die dag van één tot drie uur. Ze belt de beheerder; een eerdere afhaaltijd is niet mogelijk. Daarom neemt ze de bus naar haar werk en haalt ze om half vier de sleutel op.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r04-9c5026a5df0ed5eb.json"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-09",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "De bibliotheek stuurt Farid een bericht dat zijn gereserveerde studieboek klaarligt. In het bericht staat dat het boek tot en met zaterdag wordt vastgehouden. Daarna gaat het naar de volgende persoon op de wachtlijst. Farid heeft vrijdagavond les, maar zaterdagochtend is hij vrij. Farid controleert de openingstijden van de bibliotheek op zaterdag. Hij gaat zaterdagochtend naar de balie en noemt zijn reserveringsnummer. De medewerker geeft hem het boek en legt uit op welke datum hij het moet terugbrengen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.2326,
+          "id": "klink-teksten-zelf-a2-batch19-q376",
+          "text": "Een klant koopt maandag twee notitieboeken. Op het schap staat vier euro per boek, maar de kassabon noemt vijf euro per boek. Ze komt terug met haar bon en een foto van het prijskaartje. De medewerker controleert het schap. Daarna zegt hij dat de winkel het prijsverschil kan terugbetalen. De klant vraagt of het geld direct op haar rekening komt. De medewerker legt uit dat hij eerst de aankoop in het systeem moet opzoeken. Pas daarna kan hij haar vraag beantwoorden.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r32-v1-3162a0a4c07c9088.json"
+        },
+        {
+          "jaccard": 0.2113,
+          "id": "klink-teksten-zelf-a1-batch07-q152",
+          "text": "Maandag gaat een medewerker naar zijn werk. In de pauze merkt hij dat zijn brood thuis ligt. Zijn collega heeft twee boterhammen en geeft hem er één. Samen drinken zij water. Daarna gaan ze weer aan het werk.",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a1-r13-v1-5c3c0380a054ab5c.json"
+        },
+        {
+          "jaccard": 0.2105,
+          "id": "klink-text-54ba0651dd3d6eda",
+          "text": "Sara heeft een boek van Mo geleend. Ze zou het vandaag terugbrengen, maar ze heeft het thuis laten liggen. Voor de les stuurt ze Mo een bericht: Sorry, je boek ligt nog op mijn tafel. Ik neem het morgen mee. Mo antwoordt dat dat goed is. Hij heeft het boek pas volgende week nodig.",
+          "kind": "connected-content"
+        }
+      ],
+      "equivalentVerified": false
+    },
+    {
+      "sourceId": "B1-TEXT-01-10",
+      "sourceDocId": "1goKMedq1nO5Zd4uWco7UHj29nT54KKbj_Hxq3uJFat4",
+      "sourceText": "Leila solliciteert naar een baan als receptionist. In haar brief noemt ze haar werkervaring in een hotel in het buitenland. De werkgever wil tijdens het gesprek vooral weten hoe ze gasten helpt als het druk is. Leila heeft voorbeelden van haar eerdere werk, maar ze wil die duidelijk en kort kunnen uitleggen. Ze kiest twee situaties uit haar vorige baan en schrijft per situatie op wat ze heeft gedaan. Ze oefent de voorbeelden hardop met een vriendin en past onduidelijke zinnen aan. Tijdens het gesprek gebruikt Leila een voorbeeld om uit te leggen hoe ze rustig bleef toen meerdere gasten hulp vroegen.",
+      "exactMatches": [],
+      "nearestCandidates": [
+        {
+          "jaccard": 0.1848,
+          "id": "klink-text-a712384ff53ec2ac",
+          "text": "Lina heeft een gesprek met de chirurg. Zij schrijft vooraf op wat zij wil vragen. Tijdens het gesprek vraagt ze om uitleg bij een moeilijk woord. Aan het einde vat ze in haar eigen woorden samen wat is afgesproken, zodat ze kan controleren of ze het goed begrijpt.",
+          "kind": "connected-content"
+        },
+        {
+          "jaccard": 0.1736,
+          "id": "B1-FL-032-Q2",
+          "text": "Marloes wil ouderen helpen met boodschappen, maar werkt elke week op andere dagen. De coördinator van het buurthuis legt uit dat vrijwilligers losse bezoeken kunnen kiezen. Wel moeten zij uiterlijk dinsdag bevestigen dat ze donderdag komen, zodat de ouderen weten op wie ze kunnen rekenen. Marloes krijgt haar werkrooster meestal op maandag. Ze kiest daarom voorlopig één bezoek per twee weken. Na haar eerste bezoek vertelt ze dat de oudere mevrouw vooral behoefte had aan een rustig gesprek. De coördinator vraagt haar voortaan ook voor dat contact tijd te reserveren.",
+          "kind": "text-question",
+          "url": "/practice-content/b1-review-20261101/klink-flitslezen-b1-r06-62f7c34f601782f6.json"
+        },
+        {
+          "jaccard": 0.1698,
+          "id": "klink-teksten-zelf-a2-batch10-q200",
+          "text": "Vacature: De bakker zoekt een medewerker voor drie ochtenden per week. Het werk begint om zeven uur. Je helpt klanten en vult de schappen aan. Ervaring in een winkel is fijn, maar niet verplicht. Wie belangstelling heeft, stuurt uiterlijk maandag een korte e-mail met naam en telefoonnummer. Op dinsdag belt de bakker de mensen die hij wil uitnodigen voor een gesprek. Het gesprek is donderdag in de winkel. ",
+          "kind": "text-question",
+          "url": "/practice-content/complete-20261101/klink-teksten-zelf-a2-r17-v1-6013b7791d9dcadc.json"
+        }
+      ],
+      "equivalentVerified": false
+    }
+  ]
+}

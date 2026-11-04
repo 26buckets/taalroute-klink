@@ -153,6 +153,8 @@ export function WordListening() {
       if (!source) { setMessage(`Het geluid voor ‘${word.text}’ is nog niet beschikbaar.`); completed?.(); return; }
       // A word card may already have started its exact recording through its own handler.
       if (previousPlays !== nativePlays && nativeSource === wordRecordingKey(source)) { completed?.(); return; }
+      // Pointer answers run before their word audio; later playback must not mark that answer as helped.
+      word.node.parentElement?.dispatchEvent(new Event('klink-word-audio-request', { bubbles: true }));
       wordAudio = current;
       listeningNode = word.node;
       word.node.parentElement?.dispatchEvent(new CustomEvent('klink-word-audio-start', { bubbles: true, detail: current }));
@@ -189,9 +191,8 @@ export function WordListening() {
     const rootFor = (element: Element | null) => element?.closest('.learner-app, [data-classroom="active"], .kpd') ??
       (document.querySelector('.learner-app, [data-classroom="active"]') ? element?.closest('[role="dialog"]') : undefined) ??
       (element === document.body ? document.querySelector('.learner-app, [data-classroom="active"], .kpd') : undefined);
-    const requested = (word: Word) => {
+    const requested = () => {
       if (recording()) { setMessage('Stop eerst je opname om een woord te beluisteren.'); return false; }
-      if (recordingForWord(word.text)) word.node.parentElement?.dispatchEvent(new Event('klink-word-audio-request', { bubbles: true }));
       return true;
     };
     const down = (event: PointerEvent) => {
@@ -211,7 +212,7 @@ export function WordListening() {
       if (inline && !inline.closest(':disabled')) return;
       const word = wordAtPoint(event.clientX, event.clientY);
       if (!word) return;
-      if (!requested(word)) return;
+      if (!requested()) return;
       const exercise = word.node.parentElement?.closest('[data-exercise-id], [data-pilot-step], [data-functional-step], [data-daily-step]') ?? undefined;
       pending = { word, before: nativePlays, href: location.href, exercise, marker: exercise?.getAttribute('data-exercise-id') };
       if (event.target.closest(':disabled')) { listen(word); pending = undefined; }
@@ -232,7 +233,7 @@ export function WordListening() {
         return;
       }
       // Some answer controls stop bubbling; their words remain audible too.
-      queueMicrotask(() => { if (selected && pending === selected) click(); });
+      setTimeout(() => { if (selected && pending === selected) click(); }, 0);
     };
     const closeKeyboard = () => {
       if (keyboardAt >= 0) window.getSelection()?.removeAllRanges();
@@ -255,7 +256,7 @@ export function WordListening() {
       } else if (keyboardAt >= 0 && ['ArrowLeft', 'ArrowRight', ' ', 'Enter', 'Escape'].includes(event.key)) {
         event.preventDefault(); event.stopPropagation();
         if (event.key === 'Escape') { cancelWord(); closeKeyboard(); return; }
-        if (event.key === ' ' || event.key === 'Enter') { if (!event.repeat) { if (requested(keyboardWords[keyboardAt])) listen(keyboardWords[keyboardAt]); } return; }
+        if (event.key === ' ' || event.key === 'Enter') { if (!event.repeat) { if (requested()) listen(keyboardWords[keyboardAt]); } return; }
         keyboardAt = Math.max(0, Math.min(keyboardWords.length - 1, keyboardAt + (event.key === 'ArrowRight' ? 1 : -1)));
       } else return;
       const word = keyboardWords[keyboardAt];
@@ -278,7 +279,7 @@ export function WordListening() {
       const { element, completed } = (event as CustomEvent<{element: HTMLButtonElement; completed?: () => void}>).detail;
       if (!(element instanceof HTMLButtonElement) || !element.matches('.cp-inline-word') || !visibleElement(element)) { completed?.(); return; }
       const word = wordsIn(element).words[0];
-      if (word && requested(word)) listen(word, nativePlays, completed); else completed?.();
+      if (word && requested()) listen(word, nativePlays, completed); else completed?.();
     };
     const inlineCanceled = (event: Event) => {
       const element = (event as CustomEvent<HTMLElement>).detail;

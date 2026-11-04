@@ -36,8 +36,10 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
   const complete = Boolean(cached) || response?.status === 200;
   const bytes = complete ? body.slice(offset, end + 1) : body;
   if (bytes.byteLength !== length || body.byteLength > 4 * 1024 * 1024) throw new Error('Incomplete word recording');
-  const header = new Uint8Array(bytes, 0, 3);
-  if (header[0] !== 73 || header[1] !== 68 || header[2] !== 51) throw new Error('Invalid word audio');
+  const header = new Uint8Array(bytes, 0, Math.min(12, bytes.byteLength));
+  const type = header[0] === 73 && header[1] === 68 && header[2] === 51 ? 'audio/mpeg'
+    : header[0] === 82 && header[1] === 73 && header[2] === 70 && header[3] === 70 && header[8] === 87 && header[9] === 65 && header[10] === 86 && header[11] === 69 ? 'audio/wav' : undefined;
+  if (!type) throw new Error('Invalid word audio');
   if (complete) {
     const previous = bundles.get(src);
     if (previous) bundleBytes -= previous.byteLength;
@@ -49,5 +51,5 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
       bundles.delete(oldest);
     }
   }
-  return new Blob([bytes], { type: 'audio/mpeg' });
+  return new Blob([bytes], { type });
 }

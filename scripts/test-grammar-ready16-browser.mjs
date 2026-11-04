@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {chromium,webkit} from 'playwright';
+import {chapterHash} from '../lib/practice-chapters.ts';
+import {readProductionBank} from './read-production-bank.mjs';
+const out='docs/grammar-ready16-20261104';
+const DEFAULT_AUDIO_RATE=Number(/DEFAULT_AUDIO_RATE = ([\d.]+)/.exec(readFileSync('lib/media-player.ts','utf8'))[1]);
+const base=process.env.KLINK_TEST_URL??'http://127.0.0.1:19161',assets=JSON.parse(readFileSync('data/klink-grammar-aa-assets.json')),rows=JSON.parse(readFileSync('data/klink-production-index.json')).filter(r=>r.id.startsWith('klink10-grammar-alfa-a-'));const payloads=[],flows=[],errors=[];
+for(const [name,e]of Object.entries(assets)){const src='/api/grammar-aa-assets/'+name,r=await fetch(base+src),b=Buffer.from(await r.arrayBuffer());assert.equal(r.status,200);assert.equal(createHash('sha256').update(b).digest('hex'),e.sha256);assert.deepEqual(b,Buffer.from(e.body,'base64'));payloads.push(src);}
+
+await Promise.all([{engine:'chrome',type:chromium,width:1280},{engine:'webkit',type:webkit,width:390}].map(async ({engine,type,width})=>{
+ const browser=await type.launch({headless:true,...(engine==='chrome'?{channel:'chrome'}:{})});
+ try{for(const row of rows){
+  const runEvents=[];const page=await browser.newPage({viewport:{width,height:900}});page.on('pageerror',e=>errors.push(e.message));
+  await page.addInitScript(()=>{window.audioEvents=[];window.audioOverlaps=[];const active=new Set();const seen=new WeakSet(),original=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'play').value;HTMLMediaElement.prototype.play=function(...args){if(!seen.has(this)){seen.add(this);this.addEventListener('playing',()=>{active.add(this);if([...active].filter(a=>!a.paused&&!a.ended).length>1)window.audioOverlaps.push([...active].map(a=>a.currentSrc));window.audioEvents.push({event:'playing',src:new URL(this.currentSrc).pathname,at:performance.now(),volume:this.volume,rate:this.playbackRate});});for(const event of ['ended','pause','error'])this.addEventListener(event,()=>{active.delete(this);window.audioEvents.push({event,src:new URL(this.currentSrc||this.src).pathname,at:performance.now()})});}return original.apply(this,args);};});
+  await page.goto(base+'/'+chapterHash({chapter:'grammar',activity:row.activity,collection:row.id,level:row.level,help:'practice'}));const bank=readProductionBank(row);
+  for(const [index,e]of bank.exercises.entries()){
+   const task=page.locator(`[data-exercise-id="${e.exerciseId}"]`),sequence=!!e.targetOrderIds;await task.waitFor({timeout:60000});await page.waitForFunction(src=>window.audioEvents.some(v=>v.event==='ended'&&v.src===src),e.prompt.audio.src,{timeout:30000});
+   await task.locator(sequence?'[data-order-item]:not(:disabled)':'.cp-extended-option > button:first-child:not(:disabled)').first().waitFor({timeout:30000});const items=e.items??e.options;
+   for(const item of items){const before=await page.evaluate(()=>window.audioEvents.length);await (sequence?task.locator(`[data-order-audio="${item.itemId}"]`):task.getByRole('button',{name:'Luister: '+item.label,exact:true})).click();await page.waitForFunction(({before,src})=>window.audioEvents.slice(before).some(v=>v.event==='ended'&&v.src===src),{before,src:item.audio.src},{timeout:15000});}
+   if(sequence){for(const id of e.targetOrderIds)await task.locator(`[data-order-item="${id}"]`).click();await task.locator('[data-practice-check]').click();}else await task.getByRole('button',{name:e.options.find(o=>e.answer.correctOptionIds.includes(o.id)).label,exact:true}).click();
+   await task.locator('[data-practice-next]:not(:disabled)').waitFor();if(index===0||index===bank.exercises.length-1){const key=(sequence?'klink.sequence-answer.v1:':'klink.grammar-choice.v1:')+e.exerciseId,before=await page.evaluate(key=>localStorage.getItem(key),key);assert(before);runEvents.push(...await page.evaluate(()=>window.audioEvents));assert.deepEqual(await page.evaluate(()=>window.audioOverlaps),[]);await page.reload();await task.waitFor({timeout:60000});await page.waitForFunction(src=>window.audioEvents.some(v=>v.event==='ended'&&v.src===src),e.prompt.audio.src,{timeout:30000});assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),before);if(sequence)await task.locator('[data-practice-check]').click();else {const choice=task.getByRole('button',{name:e.options.find(o=>e.answer.correctOptionIds.includes(o.id)).label,exact:true});assert.equal(await choice.getAttribute('aria-pressed'),'true');await choice.click();}await task.locator('[data-practice-next]:not(:disabled)').waitFor();}
+   if(index===0)await page.screenshot({path:out+`/${engine}-${row.id}.png`,fullPage:true});
+   flows.push({engine,width,id:e.exerciseId,optionEndings:items.length});await task.locator('[data-practice-next]').click();writeFileSync(out+'/browser-progress.json',JSON.stringify({flows,errors},null,2));
+  }
+  await page.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();const events=[...runEvents,...await page.evaluate(()=>window.audioEvents)],overlaps=await page.evaluate(()=>window.audioOverlaps);assert.deepEqual(overlaps,[]);assert(!events.some(e=>e.event==='error'));
+  const ended=events.filter(e=>e.event==='ended');for(const e of bank.exercises){for(const src of [e.prompt.audio.src,...(e.items??e.options).map(o=>o.audio.src),...(e.instructionAudio?[e.instructionAudio.src]:[])])assert(ended.some(v=>v.src===src),src);}
+  writeFileSync(out+`/${engine}-${row.id}-events.json`,JSON.stringify({events,overlaps},null,2));assert(events.filter(e=>e.event==='playing'&&e.src.startsWith('/api/grammar-aa-assets/')).every(e=>e.volume===1&&Math.abs(e.rate-DEFAULT_AUDIO_RATE)<.001));
+  writeFileSync(out+`/${engine}-${row.id}-events.json`,JSON.stringify({events,overlaps},null,2));await page.close();console.log(engine,row.id,'complete');
+ }}finally{await browser.close();}
+}));
+assert.equal(flows.length,32);assert.equal(payloads.length,Object.keys(assets).length);assert.deepEqual(errors,[]);writeFileSync(out+'/browser-result.json',JSON.stringify({payloads,flows,errors,humanListening:false,scope:'Canonical-descendant sixteen: desktop Chrome/mobile WebKit, actual native controls, first/last answer reload and all current payloads byte-exact; no simulated audio.'},null,2));console.log('PASS',flows.length,'flows',payloads.length,'exact files');

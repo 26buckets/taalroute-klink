@@ -1,0 +1,10 @@
+file:///private/tmp/klink-handwriting-help-ac-20261103/scripts/test-klink10-handwriting-help-ac-browser.mjs:15
+if(selected){const panel=task.locator('[data-handwriting-help-step]');await p.evaluate(()=>window.hsEnded=[]);await panel.getByRole('button',{name:'Help',exact:true}).click();await p.waitForFunction(src=>window.hsEnded.some(x=>x.key===src&&x.native),e.prompt.audio.src);await p.waitForFunction(id=>document.querySelector(`[data-handwriting-source="${id}"] [data-handwriting-help-step]`)?.getAttribute('data-handwriting-help-step')==='1',e.exerciseId);result.nativePlays.push({id:e.exerciseId,kind:'help-repeat',events:await p.evaluate(()=>window.hsEnded)});assert.equal(await panel.locator('p').innerText(),selected.listeningHint);assert.equal(await panel.locator('strong').count(),0);assert(await panel.getByRole('button',{name:'Help',exact:true}).isDisabled());assert.equal((await ink(p,e.exerciseId)).modelSeen,undefined);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+
+TypeError: Cannot read properties of undefined (reading 'modelSeen')
+    at file:///private/tmp/klink-handwriting-help-ac-20261103/scripts/test-klink10-handwriting-help-ac-browser.mjs:15:805
+    at async Promise.all (index 0)
+    at async file:///private/tmp/klink-handwriting-help-ac-20261103/scripts/test-klink10-handwriting-help-ac-browser.mjs:11:5
+
+Node.js v26.4.0

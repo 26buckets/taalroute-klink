@@ -1,0 +1,224 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    }
+  ],
+  "flows": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "base": "https://klink.taalroute.nl",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "base": "http://127.0.0.1:19162",
+      "sourceId": "KSW-N26R2-AA-WL-001",
+      "uppercaseRejectedLowercaseAccepted": true,
+      "firstLatestReload": true
+    }
+  ],
+  "audioMocked": false,
+  "physicalPhoneTested": false
+}

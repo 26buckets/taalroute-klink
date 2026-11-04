@@ -11,6 +11,8 @@ import { wordUseCollections } from '../lib/word-use.ts';
 import complete from '../docs/klink-complete-release-20261101/import-manifest.json' with {type:'json'};
 import reviewedB1 from '../docs/b1-reviewed-release-20261101/b1-release-manifest.json' with {type:'json'};
 import { writingDictationRounds } from '../lib/writing-dictation.ts';
+import { alfaADictationRound } from '../lib/klink10-writing-dictation-aa.ts';
+import { sourceSpellingReview, sourceSpellingRecallExercises } from '../lib/source-spelling-review.ts';
 
 void test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
   const before = JSON.stringify(packs);
@@ -22,6 +24,15 @@ void test('Twelve independent chapters cover all registered activities without c
     assert(collections.length, activity.id);
     assert.equal(new Set(collections.map(item => item.id)).size, collections.length, `${activity.id}: unique collections`);
     for (const collection of collections) {
+      if (collection.id === alfaADictationRound.id) {
+        assert.equal(activity.id, 'dictation');assert.equal(collection.level, 'alfa-a');assert.equal(collection.exercises.length, 10);assert.deepEqual(collection.exercises, alfaADictationRound.exercises);continue;
+      }
+      if (collection.id === sourceSpellingReview.collectionId) {
+        assert.equal(activity.id, 'learning-review');
+        assert.deepEqual(collection.exercises, sourceSpellingRecallExercises);
+        assert.equal(collection.exercises.length, 10);
+        continue;
+      }
       const writing = writingDictationRounds.find(round => round.id === collection.id);
       if (writing) {
         assert.equal(activity.id, 'dictation');
@@ -39,7 +50,7 @@ void test('Twelve independent chapters cover all registered activities without c
       if (collection.contentUrl) {
         assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
         assert(collection.exerciseCount > 0);
-        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101|klink-handwriting-20261102|b1-review-20261101|klink10-grammar-20261102|klink10-listening-20261102|klink10-sentences-20261102)\//.test(collection.contentUrl));
+        assert(/^\/api\/grammar-aa-assets\/[a-f0-9]{64}\.json$/.test(collection.contentUrl) || /^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101|klink-handwriting-20261102|klink-forms-20261102|klink-typ-de-zin-20261103|klink-messages-texts-20261103|b1-review-20261101|klink10-grammar-20261102|klink10-grammar-aa-20261103|klink10-listening-20261102|klink10-sentences-20261102|klink10-bingo-20261102|klink10-text-evidence-20261102|klink10-text-a2-evidence-20261102|klink10-speaking-20261102)\//.test(collection.contentUrl));
         continue;
       }
       assert(collection.exercises.length);
@@ -47,7 +58,7 @@ void test('Twelve independent chapters cover all registered activities without c
       for (const item of collection.exercises) assert.deepEqual(item, source.get(item.exerciseId), 'Keep source IDs, answers, media, reading conditions and assessment unchanged');
     }
     const original = activity.id.startsWith('content-') ? importedItems.filter(item=>item.domain===importedRoutes.find(route=>route.id===activity.id).domain).map(importedExercise) : [...packs, ...([...synonymActivities, 'learning-review'].includes(activity.id) ? synonymCollections.map(collection => collection.pack) : []), ...wordUseCollections.filter(collection=>collection.pack.practiceActivities.includes(activity.id)).map(collection=>collection.pack)].flatMap(pack => groupExercises(pack, activity.id));
-    const connected = collections.filter(item => !writingDictationRounds.some(round => round.id === item.id)).flatMap(item => item.exercises);
+    const connected = collections.filter(item => item.id !== sourceSpellingReview.collectionId && !writingDictationRounds.some(round => round.id === item.id)).flatMap(item => item.exercises);
     const key = item => item.contextId && activity.id !== 'word-sentence' ? `${item.mode}:${item.contextId}` : item.exerciseId;
     assert.deepEqual(new Set(connected.map(key)), new Set(original.map(key)), `${activity.id}: no lost content`);
     for (const pack of packs) {

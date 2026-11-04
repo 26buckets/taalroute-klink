@@ -1,0 +1,205 @@
+﻿Klink | Review en antwoordmodellen A1 en A2
+31 oktober 2026
+Uitkomst en afbakening
+De zes bestaande leesteksten en alle 24 vragen zijn inhoudelijk nagekeken, gericht hersteld en opnieuw gecontroleerd. De zes verhalende teksten zijn woordelijk behouden. De vragen blijven verdeeld over twee leesrondes met twaalf vragen per niveau. Dit is een interne AI-redactiereview en een overdracht voor verdere appintegratie; geen onafhankelijke menselijke beoordeling, cursistenpilot of livevrijgave.
+Herkomst en herstel
+Bron: de chat ‘Leesrondes bouwen en publiceren’ (6ae5e0ed-5414-83eb-b867-0500e41af986), tekstbijdrage d400ad0b-3d23-4e51-bf2a-5ac3e99fe4fe van 31 oktober 2026. De oorspronkelijke bronopdracht werd gevolgd door Nico’s expliciete toestemming om hier alle teksten te maken. Het oorspronkelijke chatantwoord blijft ongewijzigd als afzonderlijk herstelbestand bewaard. De oude chat is weer geopend; het sturen van de hervattingsopdracht mislukte herhaaldelijk met ‘Too many requests’. Deze review is daarom uitgevoerd in de vervolgchat ‘Hervat publicatie A1- en A2-teksten’.
+Het aparte cursistdocument bevat uitsluitend leesmateriaal en vragen. Antwoorden, feedback, bewijsplaatsen, bronidentificaties en reviewstatus staan in dit redactionele dossier en in het gestructureerde herstelbestand.
+Gecontroleerde bronnen
+Taalroute-ontwerpbasis: https://docs.google.com/document/d/1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz
+Beschikbare A1-kern: https://docs.google.com/document/d/11rV2e96XgxOF7CU36BtQXm0ynPGSPRNvLdp630_oMXg (925 bronlemma’s; gebaseerd op het Basis 1000-bronregister). Deze ronde herhaalt de koppeling daadwerkelijk; de historische claim uit de oude chat is niet als bewijs overgenomen.
+Canonieke productregels gelezen in een lokale kopie van 26buckets/taalroute-klink: VORMGEVING-VASTGEZET.md, docs/appearance-floor-20261031/floor.json en PUBLICATIE-ACTUEEL.md. Er is geen appcode gewijzigd of gepubliceerd. De lokale kopie is context voor de review en geen vaststelling van de actuele liveversie.
+Niveaureview
+A1: korte concrete teksten van 30, 29 en 33 woorden, over school, boodschappen en ziekmelden. Eenvoudige tegenwoordige tijd, concrete tijden, personen en handelingen. De vier vragen per tekst vragen naar direct vindbare informatie. Het cijfer twaalf betreft vragen, geen twaalf verschillende teksten.
+A1-woordcontrole: 98 verschillende woordvormen in teksttitels, leesteksten, instructie, vragen, opties en beide feedbacktypen. Daarvan zijn 95 aan de beschikbare 925 lemma’s gekoppeld, inclusief 16 verbogen of vervoegde vormen; Sara, Omar en Fatima zijn drie eigennamen. Er zijn geen onverklaarde vormen in dit materiaal. Dit is een woordkoppeling, geen garantie van individueel A1-leesniveau of volledige Basis 1000-dekking.
+A2: teksten van 68, 58 en 73 woorden, met oorzaak/gevolg, oude en nieuwe afspraken, tijdsvolgorde en een praktische beperking. Passend als eenvoudige eerste A2-oefenronde. Het merendeel van de vragen vraagt expliciete details; de set bewijst geen beheersing van heel A2 en is geen gevalideerd examen. Instructies, opties en feedback zijn handmatig op taalbelasting en aansluiting beoordeeld. Een integrale koppeling aan Basis 2000 is niet uitgevoerd.
+De bibliotheekuitspraak geldt binnen Yara’s fictieve situatie. Zij wordt niet aangeboden als algemene regel voor alle bibliotheken. De ziektepassage is een fictieve leestekst, geen zorgadvies.
+Namen en doorlopende personen
+Sara, Omar en Fatima verwijzen naar de reeds bestaande Klink-personen klink-persoon-sara, klink-persoon-omar en klink-persoon-fatima uit data/klink-dialogue-repair.json. Er worden geen tweede personen met die namen aangemaakt en hun bestaande stem-ID’s blijven onaangeroerd. De tekst voegt geen tegenstrijdige identiteit toe.
+Farid, Elif en Yara komen niet voor in de gecontroleerde lib/- en data/-inhoud van deze lokale Klink-kopie. Binnen deze set heeft iedere persoon één naam en worden namen consequent in tekst, vragen, antwoorden en feedback gebruikt. Bij latere integratie moet de nieuwste import-/caststand opnieuw worden vergeleken; werk in andere tools is geen naamconflict.
+Leerdoelen en samenhang
+A1 Naar school: dag, begintijd, vervoer en voorwerp herkennen; aansluiting bij de bestaande A1-families School, cursus en leswerk (LWD-A1-C09), Tijd, afspraken en roosters (C03) en Onderweg en de weg (C04).
+A1 In de winkel: boodschappen, aantal, prijs en betaalplaats herkennen; aansluiting bij Boodschappen, eten en drinken (LWD-A1-C06). A1 Fatima is ziek: ziekmelding, tijd, gesprekspartner en vervolgdag herkennen; aansluiting bij Gezondheid en ziekmelden (C07) en Bellen en digitale berichten (C10).
+A2 Een andere afspraak: oorspronkelijke en gewijzigde afspraak onderscheiden en reden herkennen. A2 Met de bus naar het werk: reden, busnummer, aankomsttijd en vervolghandeling onderscheiden. A2 Een boek lenen: leesdoel, sluitingstijd, reden voor niet meenemen en vervolgafspraak herkennen.
+Deze losse oefenrondes kunnen aan een bestaand boekdoel en docentlesplan worden gekoppeld. De precieze boekles, werkelijk ingeroosterde bijeenkomst, tijd en toepasselijke observatiepunten zijn niet uit de bron vastgesteld en blijven bij lesintegratie open. Er wordt geen nieuw cursusprogramma verzonnen en geen huiswerk stilzwijgend verplicht.
+Herstelregister
+A1-Q01 — prompt: Natuurlijk Nederlands.
+Was: Welke dag gaat Sara naar school?
+Wordt: Op welke dag gaat Sara naar school?
+A1-Q08 — options: Afleiders binnen dezelfde winkelsituatie, zonder een tweede juist antwoord.
+Was: Op school / Bij de kassa / In de bus
+Wordt: Bij de deur / Bij de kassa / Bij de melk
+A1-Q11 — prompt: Verwijdert de dubbele lezing van ‘Wie belt Fatima?’.
+Was: Wie belt Fatima?
+Wordt: Met wie praat Fatima aan de telefoon?
+A1-Q11 — options: Antwoordvorm sluit aan op de herstelde vraag.
+Was: Haar dokter / Haar baas / Haar vriend
+Wordt: Met haar dokter / Met haar baas / Met haar vriend
+A1-Q11 — answerText: Antwoordvorm sluit aan op de herstelde vraag.
+Was: Haar baas
+Wordt: Met haar baas
+A1-Q11 — retryFeedback: Verwijst naar de volledige telefoonhandeling.
+Was: Lees wie Fatima belt.
+Wordt: Lees wie Fatima belt en wat haar baas zegt.
+A2-Q02 — evidence: Volledig, letterlijk broncitaat.
+Was: "Hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts."
+Wordt: "Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts."
+A2-Q03 — retryFeedback: Natuurlijker en duidelijker leesaanwijzing.
+Was: Lees wanneer de medewerker de afspraak heeft gezet.
+Wordt: Lees de zin over de nieuwe afspraak.
+A2-Q04 — options: Alle opties gaan over een geloofwaardige afspraakbevestiging.
+Was: Een sms met de nieuwe afspraak / Een brief over zijn vakantie / Een e-mail over zijn werk
+Wordt: Een sms met de nieuwe afspraak / Een e-mail met de nieuwe afspraak / Een brief met de nieuwe afspraak
+A2-Q05 — evidence: Verwijdert het aangepaste citaat met [staat].
+Was: "Haar fiets [staat] bij de fietsenmaker, omdat de rem kapot is."
+Wordt: "Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is."
+A2-Q08 — options: Geloofwaardiger alternatieven voor de handeling na de busrit.
+Was: Zij loopt nog vijf minuten naar haar werk. / Zij fietst verder. / Zij gaat naar huis.
+Wordt: Zij loopt nog vijf minuten naar haar werk. / Zij wacht nog vijf minuten bij de halte. / Zij loopt nog vijf minuten naar huis.
+A2-Q09 — options: Afleiders sluiten aan op het lenen van een boek.
+Was: Om een vriend te bezoeken / Om een makkelijk boek te lenen / Om een computer te kopen
+Wordt: Om een boek terug te brengen / Om een makkelijk boek te lenen / Om een boek te kopen
+A2-Q10 — evidence: Verwijdert het aangepaste citaat met [is].
+Was: "De bibliotheek [is] op zaterdag tot vier uur open."
+Wordt: "Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is."
+A2-Q11 — options: Afleiders blijven binnen de leensituatie.
+Was: Haar bibliotheekpas ligt thuis. / Het boek is kapot. / De bibliotheek is al dicht.
+Wordt: Haar bibliotheekpas ligt thuis. / Het boek is niet te leen. / Haar pas is niet meer geldig.
+A2-Q11 — evidence: Volledig, letterlijk citaat; uitspraak binnen de fictieve situatie.
+Was: "Haar bibliotheekpas ligt thuis." En: "Zonder pas mag je het boek niet meenemen."
+Wordt: "Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.'"
+Antwoordmodellen en bewijsplaatsen
+A1-T01 | Naar school
+A1-Q01. Op welke dag gaat Sara naar school?
+Juist: A. Maandag
+Letterlijk tekstbewijs: Sara gaat op maandag naar school.
+Feedback goed: Goed! Sara gaat op maandag naar school.
+Hulp bij fout: Lees de zin over Sara en school opnieuw.
+A1-Q02. Hoe laat begint de les?
+Juist: B. Negen uur
+Letterlijk tekstbewijs: De les begint om negen uur.
+Feedback goed: Goed! De les begint om negen uur.
+Hulp bij fout: Kijk naar de tijd van de les.
+A1-Q03. Hoe gaat Sara naar school?
+Juist: B. Met de bus
+Letterlijk tekstbewijs: Sara gaat met de bus.
+Feedback goed: Goed! Sara gaat met de bus.
+Hulp bij fout: Lees hoe Sara naar school gaat.
+A1-Q04. Wat zit in haar tas?
+Juist: C. Een boek
+Letterlijk tekstbewijs: In haar tas zit een boek.
+Feedback goed: Goed! In haar tas zit een boek.
+Hulp bij fout: Lees de zin over de tas.
+A1-T02 | In de winkel
+A1-Q05. Wanneer gaat Omar naar de winkel?
+Juist: B. Zaterdag
+Letterlijk tekstbewijs: Op zaterdag gaat Omar naar de winkel.
+Feedback goed: Goed! Omar gaat op zaterdag naar de winkel.
+Hulp bij fout: Lees de zin over Omar en de winkel.
+A1-Q06. Hoeveel appels koopt Omar?
+Juist: A. Twee
+Letterlijk tekstbewijs: Hij koopt brood, melk en twee appels.
+Feedback goed: Goed! Omar koopt twee appels.
+Hulp bij fout: Lees wat Omar koopt.
+A1-Q07. Hoeveel kost de melk?
+Juist: C. Drie euro
+Letterlijk tekstbewijs: De melk kost drie euro.
+Feedback goed: Goed! De melk kost drie euro.
+Hulp bij fout: Kijk naar de prijs van de melk.
+A1-Q08. Waar betaalt Omar?
+Juist: B. Bij de kassa
+Letterlijk tekstbewijs: Omar betaalt bij de kassa.
+Feedback goed: Goed! Omar betaalt bij de kassa.
+Hulp bij fout: Lees de zin over betalen.
+A1-T03 | Fatima is ziek
+A1-Q09. Waarom gaat Fatima niet naar haar werk?
+Juist: C. Zij is ziek.
+Letterlijk tekstbewijs: Fatima is vandaag ziek.
+Feedback goed: Goed! Fatima is ziek.
+Hulp bij fout: Lees de zin over Fatima en haar werk.
+A1-Q10. Hoe laat belt Fatima haar baas?
+Juist: A. Acht uur
+Letterlijk tekstbewijs: Om acht uur belt zij haar baas.
+Feedback goed: Goed! Fatima belt om acht uur.
+Hulp bij fout: Kijk naar de tijd bij het bellen.
+A1-Q11. Met wie praat Fatima aan de telefoon?
+Juist: B. Met haar baas
+Letterlijk tekstbewijs: Om acht uur belt zij haar baas.
+Feedback goed: Goed! Fatima belt haar baas.
+Hulp bij fout: Lees wie Fatima belt en wat haar baas zegt.
+A1-Q12. Wanneer gaat Fatima naar de dokter?
+Juist: C. Morgen
+Letterlijk tekstbewijs: Morgen gaat Fatima naar de dokter.
+Feedback goed: Goed! Fatima gaat morgen naar de dokter.
+Hulp bij fout: Lees de zin over de dokter.
+A2-T01 | Een andere afspraak
+A2-Q01. Wanneer was de afspraak bij de tandarts eerst?
+Juist: A. Dinsdag om tien uur
+Letterlijk tekstbewijs: Farid heeft dinsdag om tien uur een afspraak bij de tandarts.
+Feedback goed: Goed! De eerste afspraak was dinsdag om tien uur.
+Hulp bij fout: Lees de eerste zin van de tekst opnieuw.
+A2-Q02. Waarom belt Farid de tandarts?
+Juist: B. Hij moet dinsdag om negen uur beginnen met werken.
+Letterlijk tekstbewijs: Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.
+Feedback goed: Goed! Farid moet werken en kan niet naar de afspraak.
+Hulp bij fout: Lees het bericht van zijn werkgever opnieuw.
+A2-Q03. Wanneer is de nieuwe afspraak?
+Juist: B. Donderdag om half drie
+Letterlijk tekstbewijs: De medewerker verzet de afspraak naar donderdag om half drie.
+Feedback goed: Goed! De nieuwe afspraak is donderdag om half drie.
+Hulp bij fout: Lees de zin over de nieuwe afspraak.
+A2-Q04. Wat krijgt Farid na het veranderen van de afspraak?
+Juist: A. Een sms met de nieuwe afspraak
+Letterlijk tekstbewijs: Daarna krijgt hij een sms met de nieuwe afspraak.
+Feedback goed: Goed! Farid krijgt een sms met de nieuwe afspraak.
+Hulp bij fout: Lees de laatste zin.
+A2-T02 | Met de bus naar het werk
+A2-Q05. Waarom staat de fiets van Elif bij de fietsenmaker?
+Juist: B. De rem is kapot.
+Letterlijk tekstbewijs: Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is.
+Feedback goed: Goed! De rem van de fiets is kapot.
+Hulp bij fout: Lees waarom de fiets bij de fietsenmaker staat.
+A2-Q06. Welke bus neemt Elif?
+Juist: C. Bus 12
+Letterlijk tekstbewijs: Daarom neemt Elif bus 12.
+Feedback goed: Goed! Elif neemt bus 12.
+Hulp bij fout: Zoek het nummer van de bus in de tekst.
+A2-Q07. Hoe laat komt de bus aan?
+Juist: C. 8.05 uur
+Letterlijk tekstbewijs: De bus vertrekt om 7.40 uur en komt om 8.05 uur aan.
+Feedback goed: Goed! De bus komt om 8.05 uur aan.
+Hulp bij fout: Let op het verschil tussen vertrekken en aankomen.
+A2-Q08. Wat doet Elif na de busrit?
+Juist: A. Zij loopt nog vijf minuten naar haar werk.
+Letterlijk tekstbewijs: Elif loopt daarna nog vijf minuten naar haar werk.
+Feedback goed: Goed! Elif loopt het laatste stuk naar haar werk.
+Hulp bij fout: Lees wat Elif na de busreis doet.
+A2-T03 | Een boek lenen
+A2-Q09. Waarom gaat Yara naar de bibliotheek?
+Juist: B. Om een makkelijk boek te lenen
+Letterlijk tekstbewijs: Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen.
+Feedback goed: Goed! Yara wil een makkelijk boek lenen.
+Hulp bij fout: Lees waarom Yara naar de bibliotheek gaat.
+A2-Q10. Hoe laat sluit de bibliotheek op zaterdag?
+Juist: C. Om vier uur
+Letterlijk tekstbewijs: Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is.
+Feedback goed: Goed! De bibliotheek sluit om vier uur.
+Hulp bij fout: Lees wat er op de deur staat.
+A2-Q11. Waarom kan Yara het boek vandaag niet meenemen?
+Juist: A. Haar bibliotheekpas ligt thuis.
+Letterlijk tekstbewijs: Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.'
+Feedback goed: Goed! Yara heeft haar bibliotheekpas niet bij zich.
+Hulp bij fout: Lees wat de medewerker over de pas zegt.
+A2-Q12. Wanneer wil Yara terugkomen?
+Juist: C. Maandag
+Letterlijk tekstbewijs: Zij besluit maandag met haar pas terug te komen.
+Feedback goed: Goed! Yara wil maandag terugkomen.
+Hulp bij fout: Lees de laatste zin.
+Eindcontrole en open integratiepunten
+Na herstel: 6 teksten, 24 unieke vraag-ID’s, precies 12 vragen per niveau en 4 per tekst. Iedere vraag heeft 3 verschillende antwoordopties en 1 juist antwoord. Alle 24 bewijsplaatsen zijn letterlijk als aaneengesloten passage in de bijbehorende tekst teruggevonden. Alle antwoordletters verwijzen naar de vastgelegde juiste optie. De inhoudelijke juistheid is daarnaast per vraag gelezen.
+Antwoordspreiding: A1 A=3, B=5, C=4; A2 A=4, B=4, C=4. Geen vaste beurtelingse antwoordcode toegevoegd.
+Audio: geen nieuwe opname gegenereerd; er is geen exacte bestaande opname voor deze zes teksten vastgesteld of beluisterd. Audio blijft bij integratie uitgeschakeld totdat een exacte match en de verplichte stem-/merkmetadata zijn gecontroleerd. De zes teksten zijn ongewijzigd, maar gewijzigde vragen/opties mogen niet met oude afwijkende vraagaudio worden gekoppeld.
+Appintegratie en publicatie zijn niet uitgevoerd. Actuele livebron, botsingen met productie-ID’s, spelerweergave, afronden/hervatten, behoud van opgeslagen voortgang en desktop/mobiel plus licht/donker moeten bij integratie worden gecontroleerd. Het vastgezette uiterlijk blijft de vloer. Er is niet gepusht en er zijn geen GitHub Actions gestart.
+Er zijn geen nieuwe beelden, print-PDF’s of drukbestanden gemaakt. Dit dossier geeft geen drukgoedkeuring.
+Bewaarstatus: de cursisttekst en dit dossier worden samen met het oorspronkelijke chatantwoord en het gestructureerde herstelbestand in de bestaande Klink-projectmap opgeslagen. De upload wordt afzonderlijk teruggelezen; een back-up is geen livepublicatie.
+CODEX WORK %: niet per taak meetbaar.

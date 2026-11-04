@@ -1,0 +1,36 @@
+{
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "nl",
+  "initialPrompt": null,
+  "humanListening": false,
+  "clips": [
+    {
+      "id": "k10ta2-taalklas-retake-27e297f292614701",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-taalklas-retake-27e297f292614701.mp3",
+      "expected": "taalklas",
+      "recognized": " Taalklas.",
+      "normalizedExact": true,
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0,
+          "start": 0.0,
+          "end": 0.76,
+          "text": " Taalklas.",
+          "tokens": [
+            50365,
+            6551,
+            667,
+            7743,
+            13,
+            50403
+          ],
+          "temperature": 0.0,
+          "avg_logprob": -0.42952033451625277,
+          "compression_ratio": 0.5294117647058824,
+          "no_speech_prob": 4.4661517539790196e-11
+        }
+      ]
+    }
+  ]
+}

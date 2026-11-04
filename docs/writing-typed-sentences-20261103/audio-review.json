@@ -1,0 +1,172 @@
+{
+  "bundle": {
+    "src": "/package-audio/klink10-typ-de-zin-20261103/audio-1ea97f30dc67f4b0.bin",
+    "bytes": 324232,
+    "sha256": "1ea97f30dc67f4b09a54b7f687feb627326efeddc9b89fdc52ea6dbad8a67993"
+  },
+  "instruction": {
+    "src": "/package-audio/klink10-typ-de-zin-20261103/audio-1ea97f30dc67f4b0.bin#bytes=164250,159982",
+    "voiceId": "h6uBOiAjLKklte8hdYio",
+    "text": "Lees de opdracht. Typ één zin.",
+    "sha256": "b800a526ca3c6ceb15e673859530271bde1a374e3f10eb3732ca43ff83d26fef"
+  },
+  "selected": [
+    {
+      "role": "target",
+      "record": {
+        "sourceId": "KLINK-TZ-WORD-01",
+        "script": "teruggevonden",
+        "voiceId": "0qLmDzgqulxcvv0yf3kg",
+        "languageCode": "nl",
+        "status": "received-and-complete-metadata-checked",
+        "startedAt": "2026-11-03T00:39:46.664496+00:00",
+        "characters": 13,
+        "requestId": "ORy8jI3hPe9IzxhWCzYn",
+        "characterCost": "6",
+        "audioDataIdentical": true,
+        "bytes": 90320,
+        "sha256": "05e53992c121251039f1024e26f316ebcddc30ab06152c58d7f75673a2f24fbb",
+        "pcmSha256": "f12bd6d6f5e6054be1defdea6c5bee178c49fe3d593a0624ff9ba12e7a6306e9",
+        "seconds": 1.0216780045351475,
+        "metadata": {
+          "artist": "Taalroute",
+          "copyright": "Taalroute",
+          "title": "teruggevonden",
+          "album": "Taalroute - Klink - Zinnen",
+          "album_artist": "Taalroute",
+          "publisher": "Taalroute"
+        },
+        "original": "/tmp/klink-invul-sources/remaining-writing-420/tz-word-audio/KLINK-TZ-WORD-01-original.wav",
+        "final": "/tmp/klink-invul-sources/remaining-writing-420/tz-word-audio/KLINK-TZ-WORD-01.wav",
+        "humanListeningPerformed": false
+      },
+      "whisper": {
+        "sourceId": "KLINK-TZ-WORD-01",
+        "script": "teruggevonden",
+        "transcript": " teruggevonden.",
+        "exactWords": true
+      },
+      "dutchCtc": {
+        "file": "/tmp/klink-invul-sources/remaining-writing-420/tz-word-audio/KLINK-TZ-WORD-01.wav",
+        "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+        "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+        "expectedWordPrompt": null,
+        "text": "terug gevonden"
+      },
+      "reviewBasis": "Blind Dutch transcript retains the spoken word; spaces in uit doet are orthographic.",
+      "offset": 0,
+      "length": 90320,
+      "source": {
+        "src": "/package-audio/klink10-typ-de-zin-20261103/audio-1ea97f30dc67f4b0.bin",
+        "offset": 0,
+        "length": 90320
+      }
+    },
+    {
+      "role": "target",
+      "record": {
+        "sourceId": "KLINK-TZ-WORD-02",
+        "script": "uitdoet",
+        "voiceId": "0qLmDzgqulxcvv0yf3kg",
+        "languageCode": "nl",
+        "status": "received-and-complete-metadata-checked",
+        "startedAt": "2026-11-03T00:39:47.472404+00:00",
+        "characters": 7,
+        "requestId": "TLeN8MMs39xHVWS4fNnv",
+        "characterCost": "3",
+        "audioDataIdentical": true,
+        "bytes": 73930,
+        "sha256": "bb5077cb8a70911915d308846c82fd95c3ea055b222368349a040e13b3963ee1",
+        "pcmSha256": "e6d65df8554f106f27359dfb3f03210382f5ea3b4d38bfe917aaa6a017f7b863",
+        "seconds": 0.8359183673469388,
+        "metadata": {
+          "artist": "Taalroute",
+          "copyright": "Taalroute",
+          "title": "uitdoet",
+          "album": "Taalroute - Klink - Zinnen",
+          "album_artist": "Taalroute",
+          "publisher": "Taalroute"
+        },
+        "original": "/tmp/klink-invul-sources/remaining-writing-420/tz-word-audio/KLINK-TZ-WORD-02-original.wav",
+        "final": "/tmp/klink-invul-sources/remaining-writing-420/tz-word-audio/KLINK-TZ-WORD-02.wav",
+        "humanListeningPerformed": false
+      },
+      "whisper": {
+        "sourceId": "KLINK-TZ-WORD-02",
+        "script": "uitdoet",
+        "transcript": " uit doet.",
+        "exactWords": true
+      },
+      "dutchCtc": {
+        "file": "/tmp/klink-invul-sources/remaining-writing-420/tz-word-audio/KLINK-TZ-WORD-02.wav",
+        "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+        "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+        "expectedWordPrompt": null,
+        "text": "huij doet"
+      },
+      "reviewBasis": "Blind Dutch transcript retains the spoken word; spaces in uit doet are orthographic.",
+      "offset": 90320,
+      "length": 73930,
+      "source": {
+        "src": "/package-audio/klink10-typ-de-zin-20261103/audio-1ea97f30dc67f4b0.bin",
+        "offset": 90320,
+        "length": 73930
+      }
+    },
+    {
+      "role": "instruction-support",
+      "record": {
+        "sourceId": "KLINK-INS-TZ-OPDRACHT",
+        "script": "Lees de opdracht. Typ één zin.",
+        "voiceId": "h6uBOiAjLKklte8hdYio",
+        "languageCode": "nl",
+        "status": "received-and-complete-metadata-checked",
+        "startedAt": "2026-11-03T00:39:50.517536+00:00",
+        "characters": 30,
+        "requestId": "WQ9LW3A3otZi2BYJBJpp",
+        "characterCost": "15",
+        "audioDataIdentical": true,
+        "bytes": 159982,
+        "sha256": "b800a526ca3c6ceb15e673859530271bde1a374e3f10eb3732ca43ff83d26fef",
+        "pcmSha256": "3d994b6365e0e0634f188345cb11af127d6c9e999fbc334a23649e906d4a7c8a",
+        "seconds": 1.811156462585034,
+        "metadata": {
+          "artist": "Taalroute",
+          "copyright": "Taalroute",
+          "title": "Lees de opdracht. Typ één zin.",
+          "album": "Taalroute - Klink - Oefeninstructies",
+          "album_artist": "Taalroute",
+          "publisher": "Taalroute"
+        },
+        "original": "/tmp/klink-invul-sources/remaining-writing-420/tz-instruction-audio/KLINK-INS-TZ-OPDRACHT-original.wav",
+        "final": "/tmp/klink-invul-sources/remaining-writing-420/tz-instruction-audio/KLINK-INS-TZ-OPDRACHT.wav",
+        "humanListeningPerformed": false
+      },
+      "whisper": {
+        "sourceId": "KLINK-INS-TZ-OPDRACHT",
+        "script": "Lees de opdracht. Typ één zin.",
+        "transcript": " Lees de opdracht type 1 zin.",
+        "exactWords": false
+      },
+      "dutchCtc": {
+        "file": "/tmp/klink-invul-sources/remaining-writing-420/tz-instruction-audio/KLINK-INS-TZ-OPDRACHT.wav",
+        "model": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
+        "revision": "46f221381d200f7bef268309b3f02023ccf11fcc",
+        "expectedWordPrompt": null,
+        "text": "lees de opdracht diep eens in"
+      },
+      "reviewBasis": "Whisper recognized the same audible instruction; type/typ and digit 1/één are transcription notation. Dutch CTC disagreed and is retained. Human listening was not performed.",
+      "offset": 164250,
+      "length": 159982,
+      "source": {
+        "src": "/package-audio/klink10-typ-de-zin-20261103/audio-1ea97f30dc67f4b0.bin",
+        "offset": 164250,
+        "length": 159982
+      }
+    }
+  ],
+  "reportedIncludedCredits": 24,
+  "requests": 3,
+  "paidBudgetIncrease": 0,
+  "humanListeningPerformed": false
+}

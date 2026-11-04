@@ -1,0 +1,50 @@
+{
+  "reviewedAt": "2026-11-02T16:35:13.135916+00:00",
+  "baselineMain": "4734ec25c3ca6a3ac6f8e43b9e379555ab54afac",
+  "liveSource": "9518708b3ddd764ec830c151965bae3503977868",
+  "sourcePositions": 210,
+  "uniqueSourceTexts": 40,
+  "indexedCanonicalTextsCompared": 1252,
+  "exactNormalizedTextMatches": 0,
+  "semanticEquivalenceConfirmed": 0,
+  "newPublished": 0,
+  "findings": [
+    {
+      "sourceId": "A1-TEXT-01-03",
+      "issue": "Wie belt Fatima? has a caller/callee ambiguity already repaired in the earlier six-text review. Do not reintroduce unchanged.",
+      "proposal": "Met wie praat Fatima aan de telefoon?"
+    },
+    {
+      "sourceId": "A1-TEXT-01-08",
+      "issue": "Wie heeft de sleutel? omits timing: the sister has it initially but Leila opens the door at the end.",
+      "proposal": "Bij wie ligt de sleutel voordat Leila belt?"
+    },
+    {
+      "sourceIds": [
+        "A1-TEXT-03-01",
+        "A1-TEXT-03-02",
+        "A1-TEXT-03-03",
+        "A1-TEXT-03-04",
+        "A1-TEXT-03-05",
+        "A1-TEXT-03-06",
+        "A1-TEXT-03-07",
+        "A1-TEXT-03-08",
+        "A1-TEXT-03-09",
+        "A1-TEXT-03-10"
+      ],
+      "issue": "First/after generic prompts lack a reference event; earliest background events are ignored by some source keys. Source also supplies MC questions where current Zoek het antwoord requires actual evidence selection.",
+      "proposal": "Ten source-preserving, explicit questions and exact whole-sentence mark tasks saved as candidates."
+    }
+  ],
+  "reviewScope": "Agent first pass and structural checks only; existing A1/A2 review covers six old texts/24 questions, not these 210. B1 master covers old120, not the new10 B1 stories.",
+  "independentHumanReview": false,
+  "originalSourceHoldPreserved": true,
+  "candidateReadyForPublication": false,
+  "remaining": [
+    "Review semantic near-matches and map existing person identities without creating duplicate people",
+    "Complete local content/level and relevant book-goal linkage for selected ten",
+    "Produce/reuse required ElevenLabs audio within credits, verify actual audio and Taalroute metadata",
+    "Connect existing mark player, check word audio and storage locally",
+    "Coordinate normal deployment; live verification and checked Drive backups"
+  ]
+}

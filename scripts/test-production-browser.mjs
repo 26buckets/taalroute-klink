@@ -1,3 +1,4 @@
+import {readProductionBank} from './read-production-bank.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {productionIndex} from '../lib/production-practice.ts';
@@ -9,7 +10,7 @@ const page=await browser.newPage({viewport:{width:1366,height:950}}),errors=[],c
 page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
 await page.addInitScript(()=>{window.__played=[];window.Audio=class extends EventTarget {constructor(src){super();this.src=src;}play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();}pause(){clearTimeout(this.timer);}};});
 const url=row=>base+'/'+chapterHash({chapter:practiceChapters.find(c=>c.activities.includes(row.activity)).id,activity:row.activity,collection:row.id,level:row.level,help:row.help});
-const data=row=>JSON.parse(readFileSync('public'+row.url)).exercises;
+const data=row=>readProductionBank(row).exercises;
 const out='outputs/production-20261029';mkdirSync(out,{recursive:true});
 try{
  await page.goto(base+'/#learner/home');await page.locator('.cp-home').waitFor();assert(!requests.some(u=>u.includes('/practice-content/')));checks.push('Home does not fetch new exercise banks');

@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-04T11:52:43.884618+00:00",
+  "base": "3f58c2136346e9dbe369b07610b7a12b570fea48",
+  "runtimeMatchesPriorTestedIntegration": true,
+  "runtimeHashes": {
+    "components/product/package-exercise-browser.tsx": {
+      "candidate": "e2ab20bea1a8828126c1b39517c4651bc7eeeb6f420bd518d260ef28175e432d",
+      "testedIntegration": "e2ab20bea1a8828126c1b39517c4651bc7eeeb6f420bd518d260ef28175e432d"
+    },
+    "components/product/extended-practice-surface.tsx": {
+      "candidate": "4af39ccd660959cbdcaa30f5dcc46e5a9a1eb5ff0232d82fbefef317d0b9dd79",
+      "testedIntegration": "4af39ccd660959cbdcaa30f5dcc46e5a9a1eb5ff0232d82fbefef317d0b9dd79"
+    },
+    "lib/sequence-answer.ts": {
+      "candidate": "4cd4808ec2e2714296b93bc7e1b4a1fef9e90b1794d8f570e5d612e334ab28f7",
+      "testedIntegration": "4cd4808ec2e2714296b93bc7e1b4a1fef9e90b1794d8f570e5d612e334ab28f7"
+    },
+    "lib/grammar-choice-answer.ts": {
+      "candidate": "fe117e9956f0c4350003d15a67dfbce09acb2d0d95e9416874d4c6eaa458588d",
+      "testedIntegration": "fe117e9956f0c4350003d15a67dfbce09acb2d0d95e9416874d4c6eaa458588d"
+    },
+    "app/api/grammar-aa-assets/[name]/route.ts": {
+      "candidate": "ebe1d2ea19383779c5366908fbb72c10b908103397bd48505ee2e92f08b657e1",
+      "testedIntegration": "ebe1d2ea19383779c5366908fbb72c10b908103397bd48505ee2e92f08b657e1"
+    }
+  },
+  "allOldPublicBytesEqual": true,
+  "oldPublicFiles": 20106,
+  "differentOldPublicFiles": [],
+  "inheritedVisualEvidence": [
+    {
+      "file": "inherited-integration-review.json",
+      "sha256": "fb66c0bcf2e12523533b23fc82eaf02e951863d45ba96d232a717d28c88f8db1",
+      "source": "/private/tmp/klink-grammar-integrated-20261104/docs/klink-grammar-integrated-20261104/review.json"
+    },
+    {
+      "file": "inherited-fresh-visual-preservation.json",
+      "sha256": "04a38550959d0ff6e17e10631e90d22586f6814131f5789c38f68ea79d29e2c7",
+      "source": "/private/tmp/klink-grammar-aa-20261103/docs/klink10-grammar-aa-20261103/mdz/preservation-fresh/result.json"
+    }
+  ],
+  "limitation": "Prior exact old-player visual comparisons inherited only because same base and byte-identical runtime; current subset answer/audio/reload tests run separately. No ZMZ release or appearance change."
+}

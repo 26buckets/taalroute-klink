@@ -1,0 +1,998 @@
+{
+  "id": "production:word-bingo:alfa-c:WBG-C-02",
+  "exercises": [
+    {
+      "exerciseId": "WBG-C-02-001:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-001:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-001:turn:1",
+      "boardId": "WBG-C-02-001",
+      "sourceExerciseId": "WBG-C-02-001",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-melk.wav",
+          "audioId": "klink-woord-melk"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-001:cell:0",
+          "text": "water",
+          "feedback": "Je hoort melk, niet water."
+        },
+        {
+          "cellId": "WBG-C-02-001:cell:1",
+          "text": "melk",
+          "feedback": "Je hoort melk."
+        },
+        {
+          "cellId": "WBG-C-02-001:cell:2",
+          "text": "sap",
+          "feedback": "Je hoort melk, niet sap."
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-02-001:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-001:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-001:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-001:turn:2",
+      "boardId": "WBG-C-02-001",
+      "sourceExerciseId": "WBG-C-02-001",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/candidates/klink-woord-sap.wav",
+          "audioId": "klink-woord-sap"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-001:cell:0",
+          "text": "water",
+          "feedback": "Je hoort sap, niet water."
+        },
+        {
+          "cellId": "WBG-C-02-001:cell:1",
+          "text": "melk",
+          "feedback": "Je hoort sap, niet melk."
+        },
+        {
+          "cellId": "WBG-C-02-001:cell:2",
+          "text": "sap",
+          "feedback": "Je hoort sap."
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-001:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-001:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-001:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-001:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-001:turn:3",
+      "boardId": "WBG-C-02-001",
+      "sourceExerciseId": "WBG-C-02-001",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-water.wav",
+          "audioId": "klink-woord-water"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-001:cell:0",
+          "text": "water",
+          "feedback": "Je hoort water."
+        },
+        {
+          "cellId": "WBG-C-02-001:cell:1",
+          "text": "melk",
+          "feedback": "Je hoort water, niet melk."
+        },
+        {
+          "cellId": "WBG-C-02-001:cell:2",
+          "text": "sap",
+          "feedback": "Je hoort water, niet sap."
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-001:cell:1",
+        "WBG-C-02-001:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-001:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-002:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-002:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-002:turn:1",
+      "boardId": "WBG-C-02-002",
+      "sourceExerciseId": "WBG-C-02-002",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1540.mp3",
+          "audioId": "TL1540"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-002:cell:0",
+          "text": "koffie"
+        },
+        {
+          "cellId": "WBG-C-02-002:cell:1",
+          "text": "thee"
+        },
+        {
+          "cellId": "WBG-C-02-002:cell:2",
+          "text": "brood"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-02-002:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-002:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-002:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-002:turn:2",
+      "boardId": "WBG-C-02-002",
+      "sourceExerciseId": "WBG-C-02-002",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0277.mp3",
+          "audioId": "TL0277"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-002:cell:0",
+          "text": "koffie"
+        },
+        {
+          "cellId": "WBG-C-02-002:cell:1",
+          "text": "thee"
+        },
+        {
+          "cellId": "WBG-C-02-002:cell:2",
+          "text": "brood"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-002:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-002:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-002:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-002:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-002:turn:3",
+      "boardId": "WBG-C-02-002",
+      "sourceExerciseId": "WBG-C-02-002",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0802.mp3",
+          "audioId": "TL0802"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-002:cell:0",
+          "text": "koffie"
+        },
+        {
+          "cellId": "WBG-C-02-002:cell:1",
+          "text": "thee"
+        },
+        {
+          "cellId": "WBG-C-02-002:cell:2",
+          "text": "brood"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-002:cell:1",
+        "WBG-C-02-002:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-002:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-003:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-003:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-003:turn:1",
+      "boardId": "WBG-C-02-003",
+      "sourceExerciseId": "WBG-C-02-003",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-rijst.wav",
+          "audioId": "klink-woord-rijst"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-003:cell:0",
+          "text": "kaas"
+        },
+        {
+          "cellId": "WBG-C-02-003:cell:1",
+          "text": "rijst"
+        },
+        {
+          "cellId": "WBG-C-02-003:cell:2",
+          "text": "aardappel"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-02-003:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-003:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-003:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-003:turn:2",
+      "boardId": "WBG-C-02-003",
+      "sourceExerciseId": "WBG-C-02-003",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-aardappel.wav",
+          "audioId": "klink-woord-aardappel"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-003:cell:0",
+          "text": "kaas"
+        },
+        {
+          "cellId": "WBG-C-02-003:cell:1",
+          "text": "rijst"
+        },
+        {
+          "cellId": "WBG-C-02-003:cell:2",
+          "text": "aardappel"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-003:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-003:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-003:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-003:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-003:turn:3",
+      "boardId": "WBG-C-02-003",
+      "sourceExerciseId": "WBG-C-02-003",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-kaas.wav",
+          "audioId": "klink-woord-kaas"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-003:cell:0",
+          "text": "kaas"
+        },
+        {
+          "cellId": "WBG-C-02-003:cell:1",
+          "text": "rijst"
+        },
+        {
+          "cellId": "WBG-C-02-003:cell:2",
+          "text": "aardappel"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-003:cell:1",
+        "WBG-C-02-003:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-003:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-004:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-004:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-004:turn:1",
+      "boardId": "WBG-C-02-004",
+      "sourceExerciseId": "WBG-C-02-004",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-fruit.wav",
+          "audioId": "klink-woord-fruit"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-004:cell:0",
+          "text": "groente"
+        },
+        {
+          "cellId": "WBG-C-02-004:cell:1",
+          "text": "fruit"
+        },
+        {
+          "cellId": "WBG-C-02-004:cell:2",
+          "text": "appel"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-02-004:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-004:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-004:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-004:turn:2",
+      "boardId": "WBG-C-02-004",
+      "sourceExerciseId": "WBG-C-02-004",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-appel.wav",
+          "audioId": "klink-woord-appel"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-004:cell:0",
+          "text": "groente"
+        },
+        {
+          "cellId": "WBG-C-02-004:cell:1",
+          "text": "fruit"
+        },
+        {
+          "cellId": "WBG-C-02-004:cell:2",
+          "text": "appel"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-004:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-004:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-004:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-004:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-004:turn:3",
+      "boardId": "WBG-C-02-004",
+      "sourceExerciseId": "WBG-C-02-004",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-groente.wav",
+          "audioId": "klink-woord-groente"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-004:cell:0",
+          "text": "groente"
+        },
+        {
+          "cellId": "WBG-C-02-004:cell:1",
+          "text": "fruit"
+        },
+        {
+          "cellId": "WBG-C-02-004:cell:2",
+          "text": "appel"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-004:cell:1",
+        "WBG-C-02-004:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-004:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-005:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-005:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-005:turn:1",
+      "boardId": "WBG-C-02-005",
+      "sourceExerciseId": "WBG-C-02-005",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1099.mp3",
+          "audioId": "TL1099"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-005:cell:0",
+          "text": "banaan"
+        },
+        {
+          "cellId": "WBG-C-02-005:cell:1",
+          "text": "ontbijt"
+        },
+        {
+          "cellId": "WBG-C-02-005:cell:2",
+          "text": "lunch"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-02-005:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-005:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-005:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-005:turn:2",
+      "boardId": "WBG-C-02-005",
+      "sourceExerciseId": "WBG-C-02-005",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-lunch.wav",
+          "audioId": "klink-woord-lunch"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-005:cell:0",
+          "text": "banaan"
+        },
+        {
+          "cellId": "WBG-C-02-005:cell:1",
+          "text": "ontbijt"
+        },
+        {
+          "cellId": "WBG-C-02-005:cell:2",
+          "text": "lunch"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-005:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-005:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-005:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-005:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-005:turn:3",
+      "boardId": "WBG-C-02-005",
+      "sourceExerciseId": "WBG-C-02-005",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TR-A1-K-319.mp3",
+          "audioId": "TR-A1-K-319"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-005:cell:0",
+          "text": "banaan"
+        },
+        {
+          "cellId": "WBG-C-02-005:cell:1",
+          "text": "ontbijt"
+        },
+        {
+          "cellId": "WBG-C-02-005:cell:2",
+          "text": "lunch"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-005:cell:1",
+        "WBG-C-02-005:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-005:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-006:turn:1",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-006:turn:1"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-006:turn:1",
+      "boardId": "WBG-C-02-006",
+      "sourceExerciseId": "WBG-C-02-006",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL0277.mp3",
+          "audioId": "TL0277"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-006:cell:0",
+          "text": "snijden"
+        },
+        {
+          "cellId": "WBG-C-02-006:cell:1",
+          "text": "brood"
+        },
+        {
+          "cellId": "WBG-C-02-006:cell:2",
+          "text": "fruit"
+        }
+      ],
+      "markedCellIds": [],
+      "answer": {
+        "correctCellId": "WBG-C-02-006:cell:1"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-006:turn:2",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-006:turn:2"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-006:turn:2",
+      "boardId": "WBG-C-02-006",
+      "sourceExerciseId": "WBG-C-02-006",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-fruit.wav",
+          "audioId": "klink-woord-fruit"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-006:cell:0",
+          "text": "snijden"
+        },
+        {
+          "cellId": "WBG-C-02-006:cell:1",
+          "text": "brood"
+        },
+        {
+          "cellId": "WBG-C-02-006:cell:2",
+          "text": "fruit"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-006:cell:1"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-006:cell:2"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    },
+    {
+      "exerciseId": "WBG-C-02-006:turn:3",
+      "componentId": "ALF-CMP-014",
+      "contractVersion": "1.0",
+      "mode": "word-bingo",
+      "groupActivity": "word-bingo",
+      "contentLevel": "alfa-c",
+      "vocabularyLevels": [
+        "alfa-c"
+      ],
+      "sourceContentIds": [
+        "WBG-C-02-006:turn:3"
+      ],
+      "sourceDocumentId": "1wMWaJNs_yBCDzRgtXclLPhSaLGGYOjSCEUsC5AmtRtk",
+      "sourceStatus": "source-reviewed-20261029",
+      "title": "Luister. Tik op het woord.",
+      "assessment": "answer",
+      "requiresAudio": true,
+      "independentReading": false,
+      "reviewEligible": false,
+      "access": "teacher-supported",
+      "objective": "WBG-C-02-006:turn:3",
+      "boardId": "WBG-C-02-006",
+      "sourceExerciseId": "WBG-C-02-006",
+      "prompt": {
+        "audio": {
+          "src": "/package-audio/woorden-20261025/TL1417.mp3",
+          "audioId": "TL1417"
+        }
+      },
+      "cells": [
+        {
+          "cellId": "WBG-C-02-006:cell:0",
+          "text": "snijden"
+        },
+        {
+          "cellId": "WBG-C-02-006:cell:1",
+          "text": "brood"
+        },
+        {
+          "cellId": "WBG-C-02-006:cell:2",
+          "text": "fruit"
+        }
+      ],
+      "markedCellIds": [
+        "WBG-C-02-006:cell:1",
+        "WBG-C-02-006:cell:2"
+      ],
+      "answer": {
+        "correctCellId": "WBG-C-02-006:cell:0"
+      },
+      "instructionAudio": {
+        "audioId": "KLINK-INS-f30ca4bc7abf",
+        "src": "/package-audio/productie-instructies-20261029/KLINK-INS-f30ca4bc7abf.mp3"
+      }
+    }
+  ]
+}

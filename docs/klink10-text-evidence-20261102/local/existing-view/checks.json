@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "mode": "always",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "request",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "after",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "malformed",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "blocked",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": false
+    },
+    {
+      "engine": "chromium",
+      "nativeAudioContinues": true
+    },
+    {
+      "engine": "chromium",
+      "replayPreservesTextChoice": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "always",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "request",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "after",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "malformed",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "blocked",
+      "legacyPreserved": true,
+      "togglesWork": true,
+      "reload": false
+    },
+    {
+      "engine": "webkit",
+      "nativeAudioContinues": true
+    },
+    {
+      "engine": "webkit",
+      "replayPreservesTextChoice": true
+    }
+  ],
+  "errors": []
+}

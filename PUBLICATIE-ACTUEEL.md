@@ -1,3 +1,169 @@
+## Actuele publicatie — 16 Alfa A-grammaticaopdrachten — 4 november 2026
+
+Livebron `3e5634eda2cbb8a87a8638a9184b1a01bf07713e`, Worker `8fb06869-1431-4425-91d0-3ccac4aa011f`. Gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Kies het werkwoord en Maak de zin bevatten ieder de acht bronposities 001, 002, 003, 005, 006, 007, 008 en 010. Van de aanvullende 40 staan nu 16 online; 24 blijven open. Het geselecteerde grammaticapakket telt daarmee 136 van 160 live geverifieerde bronposities.
+
+Livecontrole: 32 desktop-Chromium/mobiel-WebKit antwoord- en herlaadstromen, 96 native optie-/kaartafrondingen, alle 50 aangeboden payloads bytegelijk teruggelezen, waaronder 40 bestaande goedgekeurde audiobestanden. Zes HTTP-gevallen geslaagd. Verse WebKit-vergelijkingen na bestaande knoptransities zijn pixel- en geometriegelijk; oorspronkelijke afwijkende screenshots behouden. Alle 20.106 oude publicbestanden behouden. Geen nieuwe audio, beelden, CSS, configuratie, limieten, budget of databasewijzigingen. Geen GitHub Actions. Werkelijke publicatie: 17 geüploade + 19.983 ongewijzigde assets = 20.000; Worker gzip 5.799,40 KiB.
+
+Bronback-up Drive `1JpCZqfDFu6U7ovePnULVQUaak2hXC6V1`: 62 payloads volledig gecontroleerd. Eindbewijs Drive `1Zv7irIBVuKHMknqw0gYI_tMxv91ihbbz`: 2.949.082 bytes, 27 buitenste en 62 geneste payloads plus manifesten volledig teruggelezen. Bewijs: `docs/grammar-ready16-20261104/postflight/publication.json` en `backup-readback.json`.
+
+Open: SC004 lopen, SC009 aanspreking/naar huis/handen en één ontbrekend rolgebonden model, tien ZOE-contextbeelden en afzonderlijk ZMZ-uiterlijkakkoord. De onafhankelijke 70 schrijftaken blijven in de publicatiewachtrij. Fysieke apparaten en onafhankelijke menselijke NT2-review niet uitgevoerd; geen eigen gehoorclaim.
+
+---
+
+## Actuele publicatie — loader speelt één keer — 3 november 2026
+
+Livebron `c66cee52a149a9059a181b77dff3a3d587e7e85f`, Worker `9228b7bf-b0c6-43b5-8c98-3d704dd99cf8`. PR #11 gepubliceerd op Nico’s expliciete opdracht via schone canonieke main en de gewone `npm run deploy`, inclusief de volledige bestaande publicatiepoort. Enige runtimewijziging: `components/product/klink-opening-loader.tsx`. De eerste loader speelt de bestaande animatie één keer af; volgende laadschermen binnen dezelfde geopende pagina tonen het bestaande eindbeeld. Een volledige paginaherlading begint opnieuw. Afbeeldingen, vormgeving, wachttijd, callbacks, inhoud, media, routes en opslag behouden.
+
+Lokaal: 16 componentgevallen, 32 volledige app-laadgevallen en acht navigatiegevallen. Live: acht navigatiestromen naar Klink en Klink+docent in Chromium/WebKit op desktop- en mobiel formaat, met daadwerkelijk vertraagde laadmodules; eindbeeld, openen en opslagbehoud geslaagd. Beide aangeboden loaderbestanden volledig bytegelijk teruggelezen. Alle vier inhoudsvingerafdrukken gelijk aan de vorige liveversie. Types, lint, normale bouw, zeven negatieve loaderproeven en zes bestaande negatieve handschriftproeven geslaagd.
+
+Wrangler bevestigt 16 geüpload + 19.984 ongewijzigd = 20.000 assets. Geen configuratie-, budget-, database- of audiowijziging. Geen GitHub Actions. PR #10 met overige snelheidswijzigingen en PR #8 met Inzicht niet meegenomen. Fysieke telefoons niet getest.
+
+Bron-/herstelkopie Drive `1VrYRGvyIEq0lOgmeNx7uhdM_TtiiwApZ` volledig teruggelezen: 42 gecontroleerde payloads. Livebewijs in `docs/opening-loader-once-20261103/publication.json`; eindbewijs Drive `1QaYCrIoQp3tz2ONEXNlGOtgWgCvvdLG9` volledig teruggelezen: 57 buitenste en 42 geneste payloads, vastgelegd in `postflight.json`.
+
+---
+
+## Actuele publicatie — hulpvolgorde Alfa C Hoor en schrijf — 3 november 2026
+
+Livebron `b0763872c76c319e02d4464b57b7afcb02d21ed3`, Worker `5aaf7b0d-b812-47ca-85b4-153097143e1d`. Uitsluitend tien bestaande bronopdrachten KSW-AC-HS-001 t/m 010 hersteld via actuele canonieke main, de volledige gewone publicatiepoort en `npm run deploy`. Help herhaalt de echte doelopname, toont de oorspronkelijke luisterhint en bewaart de eigen eerste poging vóór spellinghint/model. Spellinghints tellen eerlijk als modelgebruik. Geen OCR of automatische beheersingsscore. Dezelfde vragen, inktopslag, banken, opnamen, overige negentig handschrifttaken en vormgeving behouden.
+
+Live: 40 antwoord-/inkt-/herlaadstromen, 16 ongewijzigde handschriftstromen, acht volledige rondes en 136 native afspeelrecords geslaagd. Twee aangeboden bronbanken en elf opnamen volledig bytegelijk teruggelezen, met Taalroute-metadata en echte decodes. Lokale opslagfout-/oude-opslagcontroles, acht regressietests, zes negatieve poortproeven, types, lint en gewone bouw geslaagd. Acht lokale/live schermparen vóór publicatie: zes exact, twee uitsluitend 1/255 kleurafronding.
+
+Geen nieuwe audio of publieke bronbestanden. De schone canonieke eindbouw bood 20.000 assets; Wrangler bevestigde 15 geüpload + 19.985 al aanwezig. Geen limieten, configuratie, budget of oude publieke bytes gewijzigd. Geen actieve GitHub-workflows. Dit bewijst geen extra capaciteit voor andere kandidaten.
+
+Drive-eindbewijs `1PM_HDUi0NvWXKUbig1UKhmGiuF-iUWRj`: 79 buitenste en 238 geneste payloads volledig teruggelezen. Zie `docs/klink10-handwriting-help-ac-20261103/postflight.json`. Tien herziene bronposities, nul nieuwe unieke vragen. Geen onafhankelijke menselijke NT2-/luisterreview of fysieke telefoontest geclaimd.
+
+De ongepubliceerde dicteekandidaat is volledig bewaard in stash `46513ae2439b63d7b2df8e92afc89c2db2bafdb1` en Drive `1t3xToMaQalKTnc_S1wdSLrskZFsuitbB` (58 bestanden). De runtime is vervolgens op deze livebron herbaseerd in `/private/tmp/klink-dictation-ac-rebased-20261103`, uitsluitend ontwikkeling: de nieuwe handschrifthulp blijft bytegelijk. Herstelkopie `1sNittI6QLuhvu9eIdP7zSbwZG_MywuKh`, alle 57 bestanden teruggelezen. De brongebonden opvolgpoort moet bij vervolg opnieuw aan de actuele basis en bestanden worden gebonden; extra capaciteit blijft onbevestigd. Nooit uit deze ontwikkelwerkplek publiceren.
+
+---
+
+## Actuele publicatie — tien bestaande Alfa C Typ na onder Zelf oefenen — 3 november 2026
+
+Livebron `8c597e0cda5f8339633b8a45b966f2a1e45417e4`, schone canonieke main; Worker `62aff438-204d-4726-863e-0eaa96edb530`. Via normale `npm run deploy`, voortbouwend op `986ad669012933025f2613543efb351f3e7e5118`. KSW-AC-TN-001 t/m 010 zijn nu ook bereikbaar onder Zelf oefenen. Dezelfde canonieke vragen, modellen, exacte criteria, bronhints en antwoordopslag; de bestaande begeleide twintig blijven ongewijzigd. Geen nieuwe unieke vragen, audio of vormgeving.
+
+Lokaal en live: 40 afzonderlijke antwoordstromen, 20 bladopdrachten, vier overstappen vanuit de begeleide reeks met behouden concept/eerste antwoord, en twee echte woordaudio-afspeelproeven. De nieuwe en oorspronkelijke bank en de bestaande opname zijn volledig bytegelijk teruggelezen; audiometadata behouden. 16 regressietests, types, gerichte lint en vier negatieve publicatieproeven geslaagd. Geen GitHub Actions of extra betaald budget. Wrangler bevestigt 20.000 aangeboden assets: 16 geüpload plus 19.984 ongewijzigd; limieten en configuratie behouden.
+
+Drive-eindbewijs `1Db-ToTH10S3tVkPSb_DLfdEbSEDRfj8g`: 41 buitenste en 25 geneste bron-/herstelbestanden volledig teruggelezen. Bronkopie `10zaEeB4UVH8NayCLQpnEVanV5_LyYkbd`. Register: tien hergebruikte bronposities, geen nieuwe inhoud; extern schrijfregister 780/880 niet verhoogd. Geen onafhankelijke menselijke NT2-/luisterreview, fysieke apparaten of klasproef geclaimd.
+
+---
+
+## Actuele publicatie — tien Alfa A Schrijf de letter — 3 november 2026
+
+Livebron `986ad669012933025f2613543efb351f3e7e5118`, schone canonieke main; Worker `05d0e20d-670c-40dd-b8f1-e4c2822e197a`. Normale `npm run deploy`, opvolger van `1fe8b8c041d65b74e3a4162b8ab0b235dffd7dfa`. Tien bronopdrachten met exact één kleine letter: m, a, s, o, t, n, r, e, i, k. Bestaande invoerspeler, instructieaudio, uiterlijk en opslag behouden; geen handschriftbeoordeling.
+
+Lokaal en live elk 40 antwoordstromen op desktop/mobiel in Chrome/WebKit en twee echte instructieafspeelproeven. Hoofdletters en dubbele letters afgewezen, concepten en eerste/laatste antwoorden behouden. Bronbank en instructie volledig bytegelijk teruggelezen, Taalroute-metadata gecontroleerd. 16 regressietests, typecontrole, gerichte lint en negatieve vrijgaveproeven geslaagd. Exact één nieuwe publieke bank; geen bestaande publieke bytes gewijzigd, geen limiet- of budgetwijziging en geen GitHub Actions.
+
+Eindbewijs: Drive `1J0h2Z1Mn7cELLIiuICiffgb_iI7Y07Fm`, alle 37 buitenste bewijsbestanden en 23 ingebedde bron-/herstelbestanden volledig teruggelezen. Zie `docs/klink10-letter-aa-20261103/postflight.json`. Geen onafhankelijke menselijke NT2-/luisterreview, fysieke apparaten of klasproef geclaimd. Extern schrijfregister 780/880 blijft afzonderlijk; deze tien niet blind daarin optellen.
+
+---
+
+## Actuele publicatie — 220 bronopdrachten Schrijf een bericht en Zelf schrijven — 3 november 2026
+
+Livebron `1fe8b8c041d65b74e3a4162b8ab0b235dffd7dfa`, schone canonieke main; Worker `21532a26-349f-411b-b24e-656950b11264`. Opvolger van `0a6028fb5da823b46bf49e49a3d6399a5a3ddf1c` via `npm run deploy`. 120 berichten en 100 eigen teksten, 33 rondes en 440 ongewijzigde bronvoorbeelden. Bewaar vóór vergelijking; eerste en laatste tekst blijven afzonderlijk bewaard.
+
+440 live browserstromen, 66 conceptherstellen, 16 schermvarianten en acht echte afspeelproeven. Alle 70 aangeboden WAV-fragmenten teruggelezen met ongewijzigde geluidsdata en Taalroute-metadata. De audio is na de eerste livecontrole bytegelijk gesplitst zodat ook een volledig serverantwoord onder de afspeellimiet past. 19998 fysieke bestanden. Geen visuele wijziging, extra betaald gebruik of GitHub Actions. Geen menselijke NT2-/luisterreview, echte apparaten of klasproef geclaimd.
+
+Register: 780 van 880 bronposities online, 726 rechtstreeks en 54 gecontroleerd hergebruikt. 100 beeldwoorden staan open.
+
+---
+
+## Actuele publicatie — 100 bronopdrachten Typ de zin — 3 november 2026
+
+Livebron `c94f1a5bd49dc63b54491e930346b5fe3db4e626`, schone canonieke main; Worker `1d9fc007-7393-4f07-858d-734354211473`. Opvolger van `37bfa60c9c173cc95668fd0afa4469b30e310b45` via `npm run deploy`. 100 eigen zinnen, 15 rondes en 191 ongewijzigde bronvoorbeelden. Bewaar vóór vergelijking; eerste en laatste tekst blijven afzonderlijk bewaard. Alleen deelname, geen automatische taalbeoordeling.
+
+Lokaal en live: 200 browserstromen, 30 exacte conceptherstellen, 16 schermvarianten, 6 extra opslagproeven en 6 afspeelproeven. Drie aangeboden WAV-fragmenten teruggelezen met ongewijzigde geluidsdata en Taalroute-metadata. 19.993 fysieke bestanden. Geen nieuwe visuele indeling, betaald meerverbruik of GitHub Actions. Geen menselijke NT2-/luisterreview, echte apparaten of klasproef geclaimd.
+
+Register: 560 van 880 schrijfbronnen online, waarvan 506 rechtstreeks en 54 gecontroleerd hergebruikt. 320 nog open.
+
+---
+
+## Actuele publicatie — tien Alfa C Luister en lees mee — 3 november 2026
+
+Livebron `37bfa60c9c173cc95668fd0afa4469b30e310b45`, normale canonieke main en `npm run deploy`, voortbouwend op de actuele formulierenpublicatie en gecontroleerde Hoor-en-typ-correctie. Tien brongebonden woordaanwijsopdrachten sluiten de geselecteerde Zinnen-reeks van 230 posities af. De tien doelzinnen en hun audio zijn hergebruikt; tien voorbereide instructieopnamen zijn bytegelijk gebundeld. Geen wijziging aan uiterlijk, routes of bestaande voortgang.
+
+Nico heeft exact de nieuwe instructie met ‘alstublieft, met u’ goedgekeurd; eerdere afgekeurde versies blijven buiten de app. Lokaal en live veertig antwoordstromen, veertig native audio-decodes en vier echte instructie-/doelafspeelcontroles. Twintig aangeboden audiofragmenten volledig teruggelezen, met Taalroute-metadata; behoud van de eerdere Spreken-bank gecontroleerd. Zeventien relevante regressietests, types, bron-/antwoordcontrole en woordaudio zonder ontbrekende kandidaten. Geen zware Actions of extra betaald budget.
+
+Eindbewijs: Drive 1YO8MhHoF9xJlASY_qnLFawxeJde9uxI8; alle 35 bewijsbestanden en 114 ingebedde bron-/herstelbestanden teruggelezen.
+
+Bron en herstelgegevens: Drive `1Kh4-apUYD0ssP49Ovuzm2upmNYPGs_H5`, volledig teruggelezen. Geen menselijke luisterronde van alle opnamen, onafhankelijke menselijke NT2-review, fysieke-apparaat- of klasproef geclaimd.
+
+---
+
+## Actuele publicatie — 140 bronformulieren Vul gegevens in — 3 november 2026
+
+Livebron `f772babce64805160aad60a4a6ef5318c500aec8`, schone canonieke main; Worker `c419b479-35b6-47a3-85ea-47beabe86751`. Opvolger van `96bd4a87e075155deeaeed620afd749c824e58ad` via de gewone `npm run deploy`. 140 formulieren, 395 velden, 21 korte rondes. Eigen invoer wordt bewaard vóór feedback; de eerste en laatste inzending blijven apart. Onbekende schrijfwijzen vragen vergelijking. Geen zelfstandig leesbewijs of automatisch beheersingsresultaat.
+
+De 21 bronbanken zijn bytegelijk uit één compact bestand teruggelezen. Alle 76 nieuwe doelwoordmodellen en de afzonderlijke Roland-instructie zijn volledig gecontroleerd op aangeboden bytes, Taalroute-metadata en geluidsdata. Lokaal en live 280 formulierstromen in Chromium/WebKit, 42 rondes, 42 herladen concepten, 48 schermvarianten, zes opslaggevallen, 30 echte afspeelstromen en 304 native WAV-decodes. Eerdere inhoud, vormgeving en voortgang behouden. 24 bestaande docentenschermen vóór publicatie pixelgelijk.
+
+Register: 460 van 880 bronposities online, waarvan 406 rechtstreeks en 54 hergebruikt; 420 nog open. 1.087 inbegrepen audiocredits voor deze batch, waarvan 34 na sleutelvervanging. Geen extra betaald budget of GitHub Actions. Menselijke review, vijf naamuitspraken, fysieke apparaten, klasproef en concrete boek-/roosterkoppeling blijven afzonderlijk open. Bronherstel op Drive `1sYbAKHXgTtvNQuueL31w3-JIEmeAjlx8`. Definitief dossier `docs/writing-forms-20261102/`. Definitieve Drive-herstelkopie `1MyXtTYDAJcuO4eS6Bh3pN13unHHLSGQ5`: alle 25 buitenste en 770 geneste brononderdelen volledig teruggelezen.
+
+---
+
+## Actuele publicatie — tien Alfa A Hoor en typ-bronvarianten — 3 november 2026
+
+Livebron `96bd4a87e075155deeaeed620afd749c824e58ad` via schone canonieke main en gewone `npm run deploy`, opvolger van de gecontroleerde Spreken-publicatie. Tien bestaande canonieke woorddictees zijn nu ook aangesloten volgens de Hoor en typ-bron, zonder geschreven antwoordmodel vooraf. Geen nieuwe unieke vragen, woorden of audio; bestaande standaarddictees en honderd Alfa C-posities behouden hun hulp, antwoorden en voortgang.
+
+Nico heeft de exacte maan-, man- en vis-opnamen goedgekeurd; de overige zeven hebben vastgelegde automatische uitspraakcontrole. Lokaal en live: twintig antwoord-/hervatstromen, twintig bladweergaven, 22 native decodes en twee echte afspeelstromen. Live elf volledige audiobestanden met Taalroute-metadata teruggelezen; de eerdere Spreken-bank behouden. Types, lint, twaalf regressietests en zeven negatieve vrijgaveproeven geslaagd; geen Actions-workflows.
+
+Bron en herstelgegevens: Drive `1V1FHQFdFFxLGefjaiCzrI_USDi3Y2Xjy`, volledig teruggelezen. Geen menselijke luisterronde van alle bestanden, onafhankelijke NT2-review, fysieke apparaten of klasproef geclaimd.
+
+---
+
+## Actuele publicatie — tien dagelijkse Spreken-zinnen — 3 november 2026
+
+Livebron `c401dab88da45a3ee41874f95a1c18bf8796d261` op schone canonieke main, via gewone `npm run deploy`. Tien nieuwe Alfa A-zinnen met elf opnamen. Nico heeft de vervangende fruit-appel expliciet goedgekeurd; de afgekeurde hash wordt niet aangeboden. Spreken blijft begeleid oefenen zonder automatische uitspraakbeoordeling.
+
+De volledige instructie blijft afspelen bij een tekstklik door toepassing van de bestaande uitsluiting voor woordaudio. Geen vormgevingswijziging. Lokaal veertig antwoord-/voortgangsstromen, 22 native decodes, recorder-/opslagcontroles en acht negatieve vrijgaveproeven; live elf volledige audioteruglezingen met Taalroute-metadata, de volledige vraagbank, 22 decodes en vier echte afspeelstromen inclusief tekstklik gecontroleerd. Geen Actions-workflows.
+
+Volledige bron en herstelgegevens: Drive `1ojry8DmKN62l-sioHgFPEx2x974gbd4V`, volledig teruggelezen. Niet alle opnamen handmatig beluisterd; geen onafhankelijke menselijke NT2-review, fysieke apparaten of klasproef geclaimd.
+
+---
+
+## Actuele publicatie — eerste tien Zo schrijf je het Alfa A — 2 november 2026
+
+Livebron `c2aa17c4a3b4d7f1f37aefdd4fc8142d000e058f`, schone canonieke main, via gewone `npm run deploy`. Tien bestaande bronposities behouden hun veertig canonieke deelvragen; tien herhaalvragen sluiten nu aan op de bestaande 1/3/7-dagenplanner. Pointerantwoord wordt niet terugwerkend als geholpen geteld door daaropvolgende woordaudio. Geen nieuwe vragen, media of vormgeving.
+
+Bron-, antwoord-, feedback-, niveau- en integratiecontrole uitgevoerd door Codex. 24 gerichte behoudtests, 26 browserstromen lokaal en live, 44 bestaande woordluisterproeven, 26 native audiodecodes en zes negatieve vrijgaveproeven geslaagd. Beide oude bronbanken en 13 audio-assets volledig bytegelijk online teruggelezen; Taalroute-metadata behouden. Back-upbron op Drive `1qH_aCODKyrBMCt4KiXSGVxIIsXBH2hFo` volledig teruggelezen. Menselijke luisterreview, onafhankelijke NT2-review, fysieke apparaten en klasproef niet uitgevoerd. Spreken-appel-hold blijft afzonderlijk; geen algemene handmatige reviewwacht voor zelf controleerbaar werk.
+
+---
+
+## Actuele publicatie — tien A2-tekstbewijsopdrachten — 2 november 2026
+
+Livebron `d52a891e9129b6664ec5ed72759a5f402f736ca7`, schone canonieke main; Worker `cf99418f-c5ac-44bb-a643-15caf07b5da4`. Normale `npm run deploy` geslaagd, opvolger van `e3ce253798375049f0dbc7478b5133963205f0a6`.
+
+Tien brongebonden A2-opdrachten onder Teksten → Zoek het antwoord. Bestaande markeerspeler, ongewijzigde leesteksten, concrete vragen, twintig geselecteerde ElevenLabs-opnamen met afzonderlijke instructie- en doelstemmen. Alle oude assets, vormgeving en voortgang behouden. Geen tien nieuwe unieke scenario’s geclaimd.
+
+Lokaal en live: 40 antwoord-/opslag-/hervatstromen, 40 native audiodecodes en vier echte afspeelstromen; 21 livebestanden volledig bytegelijk teruggelezen, inclusief Taalroute-audiometadata. Types, gerichte lint, kerntests, woorddekking en zes negatieve vrijgaveproeven geslaagd. Bestaande volledige repository-lint heeft afzonderlijke fouten in oude schrijfscripts; geen volledige groene lint geclaimd. De eerste build stopte op indexvolgorde; bestaande bouwer heeft uitsluitend de volgorde genormaliseerd. Geen extra audio of Actions hiervoor.
+
+Bronnen, originelen en herstel volledig teruggelezen uit Drive `1iuSpf1sbJN_YQ8p7qVxQpYUNkX7YE64I`. Livebewijs: `docs/klink10-text-a2-evidence-20261102/postflight.json`. Menselijke luister-/klemtoonreview, onafhankelijke NT2-review, fysieke apparaten en klasproef niet uitgevoerd. Spreken-uitspraakhold en beeldproductiestop blijven gelden.
+
+---
+
+## Actuele publicatie — Klink tien: tien A1-tekstbewijsopdrachten — 2 november 2026
+
+Livebron `e3ce253798375049f0dbc7478b5133963205f0a6`, schone canonieke main; Worker `f8db2549-84df-4c3b-8c90-90cec2c775d2`. Gewone `npm run deploy`, volledige publicatiepoort en bouw geslaagd; opvolger van `9518708b3ddd764ec830c151965bae3503977868`.
+
+Tien brongebonden opdrachten onder Teksten → Zoek het antwoord, in de bestaande markeerspeler. De cursist kiest alle woorden van de juiste zin. Concrete vragen, ongewijzigde leesteksten, verkeerde en onvolledige selecties afgewezen, handmatig verdergaan en hervatten behouden. Geen wijziging aan uiterlijk, navigatie of runtimecomponenten.
+
+Tien gecombineerde instructie-/vraagopnamen met Roland en één woordmodel voor apotheker met de aparte doelstem Roos. Afgekeurde takes blijven offline; het geselecteerde woord is zonder hercodering uit een gecontroleerde contextopname gehaald, met exact behouden audiopakketten en twee onafhankelijke blinde transcripties. Elf aangeboden audiobestanden hebben gecontroleerde Taalroute-merkmetadata.
+
+Lokaal en live: 40 antwoord-/opslag-/hervatstromen, 22 native audiodecodes en vier echte afspeelstromen in Chromium/WebKit; twaalf volledige livebestandsteruglezingen. Lokaal ook veertien bestaande weergave-/opslagcontroles, elf kerntests, types, lint, volledige woordaudiodekking en zes negatieve vrijgaveproeven. Geen GitHub-workflows of extra Actions-kosten. Een aanvullende brede oude weergavetest liep tegen een directe asynchrone toestandassertie aan; geen volledige oude browsermatrix geclaimd. De verplichte gerichte behoudcontroles zijn geslaagd.
+
+Door deze taak nu 470 bronposities nieuw aangesloten; twintig bestaande bronposities hergebruikt en tien bestaande bingokaarten herzien. Nog 3110 bronposities niet gereconcilieerd, geen aantal unieke ontbrekende vragen. Teksten: tien van 210 bronposities in deze batch, overige 200 open. Historische bron-HOLD en niet-uitgevoerde menselijke NT2-/luisterreview, fysieke-apparatentest en klasproef blijven apart geregistreerd. Volledige bronnen, code, originelen en herstel: Drive `12qlVEm68p4vjmQMRrer5CNP6sLyXDKCa`, 121 leden teruggelezen. Definitief livebewijs in `docs/klink10-text-evidence-20261102/`.
+
+---
+
+## Actuele publicatie — Klink tien: tien Alfa C-woordbingokaarten — 2 november 2026
+
+Livebron `9518708b3ddd764ec830c151965bae3503977868`, schone canonieke main; Worker `c8418fb5-eda2-40e6-910b-b94a8e58feca`. Gewone `npm run deploy`, volledige publicatiepoort en bouw geslaagd; opvolger van `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`.
+
+Tien bestaande bronkaarten met dertig bestaande beurten geven nu de uitgewerkte feedback bij de gekozen optie. Geen nieuwe vragen, opnamen of beelden. De 31 bestaande opnamen, vraag-ID’s, antwoorden, vorige banken en voortgangsleutels blijven behouden. Geen wijziging aan de vormgeving of navigatie.
+
+Live: 51 volledige bestandsteruglezingen, inclusief tien oude banken en 31 audiobestanden met gecontroleerde Taalroute-metadata; 120 antwoord-/opslag-/hervatstromen op mobiel en desktop in Chromium/WebKit, 62 native audiodecodes en twaalf echte afspeelstromen. Lokaal ook oude feedbackfallback, veertien weergave-/opslagcontroles, kerntests, types, lint, woordaudiodekking en zes negatieve vrijgaveproeven geslaagd. Geen GitHub-workflows of extra Actions-kosten.
+
+Dit zijn herzieningen, geen dertig nieuwe opdrachten. Samen herhalen: twintig bestaande bronposities gecontroleerd hergebruikt plus tien bestaande kaarten herzien; 230 bronposities nog te vergelijken. A1/A2-bingo’s met bron-/niveauproblemen blijven apart. Originele bron-HOLD en ontbrekende onafhankelijke menselijke NT2-/luisterreview blijven eerlijk geregistreerd; geen fysieke apparaten of klasproef. Volledige bronnen, code, bestaande audio en herstelgegevens: Drive `1JvwJ81rZXh1YWi1SEsN7oDDxobvSb9ef`, 78 leden teruggelezen. Definitief livebewijs staat in `docs/klink10-bingo-20261102/`; Drive `173MoTMLDH8rO_5Hpsk9W0_GDoWW8EKZ5`, alle 39 leden volledig teruggelezen.
+
+---
+
 ## Actuele publicatie — Klink tien: 220 zinnenopdrachten — 2 november 2026
 
 Livebron `5d2c8f0b37aa5562bdbdd99ae7aea34f552bbdf3`, schone canonieke main; Worker `f2a9db3d-a8dc-4470-8b67-fbc1ff76d1be`. Gewone `npm run deploy`, normale volledige publicatiepoort en bouw geslaagd. Opvolger van de actuele inhoudelijke rondetitels `eb6270430997e84ffbb3428d4f1fbdfe06e52546`; deze titels en de overige bestaande vormgeving, inhoud, audio, routes en voortgang blijven behouden.

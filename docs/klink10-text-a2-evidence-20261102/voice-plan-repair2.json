@@ -1,0 +1,45 @@
+{
+  "application": "Klink",
+  "authorization": "Nico 2 november 2026: eerste tien afmaken inclusief noodzakelijke ElevenLabs-audio",
+  "roleVoices": {
+    "instruction": "h6uBOiAjLKklte8hdYio",
+    "target": "7qdUFMklKPaaAVMsBTBt"
+  },
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "7qdUFMklKPaaAVMsBTBt",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "settings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+  },
+  "maximumIncludedCredits": 80000,
+  "buyExtraCredits": false,
+  "characters": 9,
+  "clips": [
+    {
+      "id": "k10ta2-taalklas-retake-27e297f292614701",
+      "text": "taalklas",
+      "requestText": "Taalklas.",
+      "title": "taalklas",
+      "src": "/package-audio/klink10-text-a2-evidence-20261102/k10ta2-taalklas-retake-27e297f292614701.mp3",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "role": "target",
+      "wordKey": "taalklas",
+      "textSha256": "a1111aff4a2b4f8720d769fb17aa79680cedef2a17162caf8b083bd5ceb72e00"
+    }
+  ],
+  "pronunciationChecks": [
+    "OV-kaart: afkorting als twee Nederlandse letternamen, gevolgd door kaart",
+    "Layla: behoud de fictieve bronnaam, geen automatische vervanging door een andere naam",
+    "klaarligt en samenkomt: volledige samengestelde woorden, geen afgeknipt begin/einde",
+    "gesolliciteerd: alle lettergrepen en eindklank behouden",
+    "Bestaande voorkomen-verhinderen-opname hergebruiken voor voorkomen in deze context; niet de variant aanwezig zijn",
+    "ASR-spelling is geen zelfstandig bewijs van klemtoon; concrete twijfel blokkeren totdat echte audio is gecontroleerd"
+  ],
+  "seed": 23,
+  "repairReason": "Gerichte volledige losse woordopname na onzekere klinker/onset in eerste versie en contextuitsnede; geen afgekapte beginmedeklinker accepteren."
+}

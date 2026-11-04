@@ -1,0 +1,26 @@
+{
+  "types": true,
+  "lint": true,
+  "lintScope": "All changed scripts; full-repository lint has pre-existing unrelated no-floating-promises failures recorded in lint.log, not claimed green.",
+  "fullRepositoryLintPassed": false,
+  "coreTests": 16,
+  "wordAudioCoverage": true,
+  "missingWordAudio": 0,
+  "sourceReview": true,
+  "screensVisuallyReviewed": true,
+  "screens": [
+    "local/screens/question-390-light.png",
+    "local/screens/question-1280-dark-ready.png"
+  ],
+  "existingPublicBytesPreserved": true,
+  "humanListening": false,
+  "independentNT2Review": false,
+  "stressIndependentlyMeasured": false,
+  "physicalDeviceTested": false,
+  "classroomTrial": false,
+  "newAudio": 20,
+  "newQuestions": 10,
+  "newUniqueScenariosClaimed": false,
+  "githubWorkflowFiles": [],
+  "additionalCheckLimit": "No broad legacy browser rerun for unchanged components/styles. Exact existing index/instructions/word-audio/progress preservation plus40new task flows checked. No new image production."
+}

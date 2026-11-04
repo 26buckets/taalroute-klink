@@ -1,0 +1,449 @@
+{
+  "scope": "Only two actual source fixtures required by word-listening regression; not a full goal inventory.",
+  "cases": [
+    {
+      "activity": "meet",
+      "collection": "groep-1.alfa-a",
+      "level": "alfa-a",
+      "route": "/#learner/chapters/words/meet/groep-1.alfa-a?level=alfa-a",
+      "exercise": {
+        "exerciseId": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+        "componentId": "ALF-CMP-001",
+        "contractVersion": "1.0",
+        "lessonId": "klink-leesstap-05",
+        "mode": "model",
+        "title": "Kijk en luister.",
+        "sourceStatus": "concept",
+        "wordId": "klink-woord-man",
+        "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+        "activityTypeId": "KL-01",
+        "phase": "meet",
+        "assessment": "participation",
+        "instructionAudio": {
+          "src": "/package-audio/instructions/kijken.wav",
+          "audioId": "kijken"
+        },
+        "prompt": {
+          "text": "Kijk en luister.",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen mannelijk persoon."
+          },
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        },
+        "text": {
+          "primary": "man"
+        },
+        "targetWordIds": [
+          "klink-woord-man"
+        ],
+        "sourceLessonIds": [
+          "klink-leesstap-05"
+        ],
+        "sourceExerciseId": "klink-leesstap-05:klink-woord-man:model",
+        "groupActivity": "meet",
+        "combinationReview": "open"
+      }
+    },
+    {
+      "activity": "text-evidence",
+      "collection": "klink-text-11469f28cc75975d",
+      "level": "a1",
+      "route": "/#learner/chapters/texts/text-evidence/klink-text-11469f28cc75975d?level=a1",
+      "exercise": {
+        "contractVersion": "1.0",
+        "componentId": "KLINK-EXTENDED",
+        "mode": "text-evidence",
+        "title": "Tik op de woorden met het antwoord.",
+        "groupActivity": "text-evidence",
+        "instructionNeedId": "extra-bewijs",
+        "instructionAudio": {
+          "audioId": "extra-bewijs",
+          "src": "/package-audio/instructions/extra-bewijs.wav"
+        },
+        "sourceStatus": "concept",
+        "combinationReview": "open",
+        "assessment": "answer",
+        "independentReading": false,
+        "access": "teacher-supported",
+        "phase": "use",
+        "feedback": "Kijk of luister nog eens. Je kunt opnieuw kiezen.",
+        "exerciseId": "groep-1:group:text-evidence:klink-text-11469f28cc75975d",
+        "contextId": "klink-text-11469f28cc75975d",
+        "sourceContentIds": [
+          "klink-text-11469f28cc75975d"
+        ],
+        "sourceExerciseId": "klink-leesstap-05:klink-text-11469f28cc75975d",
+        "lessonId": "klink-leesstap-05",
+        "sourceLessonIds": [
+          "klink-leesstap-02",
+          "klink-leesstap-05"
+        ],
+        "targetWordIds": [
+          "klink-woord-tas"
+        ],
+        "readingConditions": {
+          "wordIds": [
+            "klink-woord-een",
+            "klink-woord-rok",
+            "klink-woord-bon",
+            "klink-woord-en",
+            "klink-woord-in",
+            "klink-woord-haar",
+            "klink-woord-tas",
+            "klink-woord-de",
+            "klink-woord-bij",
+            "klink-woord-bloes"
+          ],
+          "otherWords": [
+            {
+              "id": "klink-woord-een",
+              "word": "een",
+              "meaning": "Lidwoord bij één niet nader bepaald exemplaar; hier niet het telwoord één.",
+              "firstReading": {
+                "mode": "extension",
+                "extensionId": "klink-uitbreiding-18",
+                "afterStepId": "klink-leesstap-36"
+              }
+            },
+            {
+              "id": "klink-woord-rok",
+              "word": "rok",
+              "meaning": "Kledingstuk dat vanaf de taille naar beneden hangt.",
+              "firstReading": {
+                "mode": "optional-step",
+                "afterStepId": "klink-leesstap-14",
+                "group": 5
+              }
+            },
+            {
+              "id": "klink-woord-bon",
+              "word": "bon",
+              "meaning": "Bewijs waarop een aankoop en het betaalde bedrag staan.",
+              "firstReading": {
+                "mode": "core-step",
+                "stepId": "klink-leesstap-10"
+              }
+            },
+            {
+              "id": "klink-woord-en",
+              "word": "en",
+              "meaning": "Voegt woorden of zinsdelen samen.",
+              "firstReading": {
+                "mode": "optional-step",
+                "afterStepId": "klink-leesstap-06",
+                "group": 3
+              }
+            },
+            {
+              "id": "klink-woord-in",
+              "word": "in",
+              "meaning": "Binnen de grenzen van een plek of voorwerp.",
+              "firstReading": {
+                "mode": "extension",
+                "extensionId": "klink-uitbreiding-2",
+                "afterStepId": "klink-leesstap-08"
+              }
+            },
+            {
+              "id": "klink-woord-haar",
+              "word": "haar",
+              "meaning": "Verwijst naar een eerder genoemde vrouw of meisje, of geeft aan dat iets bij die persoon hoort. Bespreek naar wie haar in deze zin verwijst; hier gaat het niet om hoofdhaar.",
+              "firstReading": {
+                "mode": "optional-step",
+                "afterStepId": "klink-leesstap-25",
+                "group": 8
+              }
+            },
+            {
+              "id": "klink-woord-de",
+              "word": "de",
+              "meaning": "Lidwoord dat bij een zelfstandig naamwoord hoort.",
+              "firstReading": {
+                "mode": "core-step",
+                "stepId": "klink-leesstap-36"
+              }
+            },
+            {
+              "id": "klink-woord-bij",
+              "word": "bij",
+              "meaning": "In de buurt van of samen met iemand of iets; niet het insect.",
+              "firstReading": {
+                "mode": "optional-step",
+                "afterStepId": "klink-leesstap-29",
+                "group": 8
+              }
+            },
+            {
+              "id": "klink-woord-bloes",
+              "word": "bloes",
+              "meaning": "Kledingstuk voor het bovenlichaam, vaak met knopen.",
+              "firstReading": {
+                "mode": "optional-step",
+                "afterStepId": "klink-leesstap-22",
+                "group": 7
+              }
+            }
+          ],
+          "outsideWordBank": [
+            "lotte",
+            "koopt",
+            "ze",
+            "krijgt",
+            "doet",
+            "die",
+            "thuis",
+            "wil",
+            "nog",
+            "passen"
+          ],
+          "requiredUnits": [
+            "e-schwa",
+            "n",
+            "r",
+            "o",
+            "k",
+            "b",
+            "e",
+            "i",
+            "h",
+            "aa",
+            "t",
+            "a",
+            "s",
+            "d",
+            "ij",
+            "l",
+            "oe"
+          ],
+          "unitsOutsideStep": [
+            "e-schwa",
+            "r",
+            "o",
+            "k",
+            "b",
+            "e",
+            "i",
+            "h",
+            "aa",
+            "d",
+            "ij",
+            "l",
+            "oe"
+          ],
+          "wordConditions": [
+            "De onbeklemtoonde klinker herkennen, zonder elke e als de e van pen uit te spreken.",
+            "De bedoelde relatie in een gesprek, handeling of woordgroep begrijpen; een losse foto is geen betekeniscontrole.",
+            "Betekenis van haar in deze bron: Verwijst naar een eerder genoemde vrouw of meisje, of geeft aan dat iets bij die persoon hoort. Bespreek naar wie haar in deze zin verwijst; hier gaat het niet om hoofdhaar.",
+            "Aangrenzende medeklinkers verbinden zonder een extra klinker in te voegen.",
+            "Bereid onbekende woorden en verwijzingen uit deze bron mondeling voor; luistersteun blijft beschikbaar."
+          ],
+          "access": "supported-listening",
+          "independentReading": false,
+          "note": "Bereid betekenis, verwijswoorden en zinsverband mondeling voor. Controleer ook namen en overige woordvormen buiten de woordenbank. Een woordverband of klankoverlap is geen bewijs dat de hele tekst zelfstandig leesbaar is."
+        },
+        "sourceLevel": "A1",
+        "sourceText": "Lotte koopt een rok. Ze krijgt een bon en doet die in haar tas. Thuis wil ze de rok nog bij haar bloes passen.",
+        "sourceBlocks": [
+          {
+            "id": "klink-text-11469f28cc75975d-1",
+            "text": "Lotte koopt een rok. Ze krijgt een bon en doet die in haar tas. Thuis wil ze de rok nog bij haar bloes passen.",
+            "audio": {
+              "src": "/package-audio/connected/bb620a3cb7d4f707967e.wav",
+              "audioId": "klink-opname-bb620a3cb7d4f707967e"
+            }
+          }
+        ],
+        "contentTitle": "De bon bewaren",
+        "objective": "text-evidence:klink-text-11469f28cc75975d",
+        "requiresAudio": false,
+        "questionAudioNeedId": "klink-text-11469f28cc75975d:question",
+        "question": "Waar bewaart Lotte de bon?",
+        "evidence": "Ze krijgt een bon en doet die in haar tas.",
+        "activityTypeId": "TE-02",
+        "standardTask": {
+          "kind": "mark",
+          "text": "Lotte koopt een rok. Ze krijgt een bon en doet die in haar tas. Thuis wil ze de rok nog bij haar bloes passen.",
+          "tokens": [
+            {
+              "id": "word-0",
+              "text": "Lotte",
+              "start": 0,
+              "end": 5
+            },
+            {
+              "id": "word-6",
+              "text": "koopt",
+              "start": 6,
+              "end": 11
+            },
+            {
+              "id": "word-12",
+              "text": "een",
+              "start": 12,
+              "end": 15
+            },
+            {
+              "id": "word-16",
+              "text": "rok.",
+              "start": 16,
+              "end": 20
+            },
+            {
+              "id": "word-21",
+              "text": "Ze",
+              "start": 21,
+              "end": 23
+            },
+            {
+              "id": "word-24",
+              "text": "krijgt",
+              "start": 24,
+              "end": 30
+            },
+            {
+              "id": "word-31",
+              "text": "een",
+              "start": 31,
+              "end": 34
+            },
+            {
+              "id": "word-35",
+              "text": "bon",
+              "start": 35,
+              "end": 38
+            },
+            {
+              "id": "word-39",
+              "text": "en",
+              "start": 39,
+              "end": 41
+            },
+            {
+              "id": "word-42",
+              "text": "doet",
+              "start": 42,
+              "end": 46
+            },
+            {
+              "id": "word-47",
+              "text": "die",
+              "start": 47,
+              "end": 50
+            },
+            {
+              "id": "word-51",
+              "text": "in",
+              "start": 51,
+              "end": 53
+            },
+            {
+              "id": "word-54",
+              "text": "haar",
+              "start": 54,
+              "end": 58
+            },
+            {
+              "id": "word-59",
+              "text": "tas.",
+              "start": 59,
+              "end": 63
+            },
+            {
+              "id": "word-64",
+              "text": "Thuis",
+              "start": 64,
+              "end": 69
+            },
+            {
+              "id": "word-70",
+              "text": "wil",
+              "start": 70,
+              "end": 73
+            },
+            {
+              "id": "word-74",
+              "text": "ze",
+              "start": 74,
+              "end": 76
+            },
+            {
+              "id": "word-77",
+              "text": "de",
+              "start": 77,
+              "end": 79
+            },
+            {
+              "id": "word-80",
+              "text": "rok",
+              "start": 80,
+              "end": 83
+            },
+            {
+              "id": "word-84",
+              "text": "nog",
+              "start": 84,
+              "end": 87
+            },
+            {
+              "id": "word-88",
+              "text": "bij",
+              "start": 88,
+              "end": 91
+            },
+            {
+              "id": "word-92",
+              "text": "haar",
+              "start": 92,
+              "end": 96
+            },
+            {
+              "id": "word-97",
+              "text": "bloes",
+              "start": 97,
+              "end": 102
+            },
+            {
+              "id": "word-103",
+              "text": "passen.",
+              "start": 103,
+              "end": 110
+            }
+          ],
+          "acceptedSelections": [
+            [
+              "word-51",
+              "word-54",
+              "word-59"
+            ]
+          ],
+          "help": "Tik op de woorden met het antwoord. Toch een ander woord? Tik nog eens op het woord."
+        },
+        "manualAdvance": true,
+        "options": [
+          {
+            "id": "0",
+            "label": "Lotte koopt een rok."
+          },
+          {
+            "id": "1",
+            "label": "Ze krijgt een bon en doet die in haar tas."
+          },
+          {
+            "id": "2",
+            "label": "Thuis wil ze de rok nog bij haar bloes passen."
+          }
+        ],
+        "answer": {
+          "correctOptionIds": [
+            "1"
+          ]
+        },
+        "distractorReason": "Andere zinnen uit dezelfde bron; de bewijszin bevat het gevraagde antwoord."
+      }
+    }
+  ]
+}

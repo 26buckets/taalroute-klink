@@ -1,0 +1,99 @@
+{
+  "source": "/private/tmp/klink-letter-ab-20261103/docs/klink10-letter-ab-20261103/verification.json",
+  "titleLayoutAndKeyboardChecks": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "pixelIdenticalToPlainHeading": false,
+      "maxChannelDelta": 59,
+      "differentChannels": 594,
+      "totalChannels": 34278,
+      "boundsBefore": {
+        "x": 24,
+        "y": 131,
+        "width": 195.8125,
+        "height": 56.1875
+      },
+      "boundsAfter": {
+        "x": 24,
+        "y": 131,
+        "width": 195.8125,
+        "height": 56.1875
+      },
+      "headingGeometryDeltaBelowOnePixel": true,
+      "fontUnchanged": true,
+      "keyboardExcludesTargetButKeepsWord": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "pixelIdenticalToPlainHeading": false,
+      "maxChannelDelta": 59,
+      "differentChannels": 1166,
+      "totalChannels": 47040,
+      "boundsBefore": {
+        "x": 257,
+        "y": 141.5,
+        "width": 319,
+        "height": 48
+      },
+      "boundsAfter": {
+        "x": 257,
+        "y": 141.5,
+        "width": 318.9375,
+        "height": 48
+      },
+      "headingGeometryDeltaBelowOnePixel": true,
+      "fontUnchanged": true,
+      "keyboardExcludesTargetButKeepsWord": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "pixelIdenticalToPlainHeading": true,
+      "maxChannelDelta": 0,
+      "differentChannels": 0,
+      "totalChannels": 45704,
+      "boundsBefore": {
+        "x": 24,
+        "y": 131,
+        "width": 195.796875,
+        "height": 56.1875
+      },
+      "boundsAfter": {
+        "x": 24,
+        "y": 131,
+        "width": 195.796875,
+        "height": 56.1875
+      },
+      "headingGeometryDeltaBelowOnePixel": true,
+      "fontUnchanged": true,
+      "keyboardExcludesTargetButKeepsWord": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "pixelIdenticalToPlainHeading": false,
+      "maxChannelDelta": 117,
+      "differentChannels": 970,
+      "totalChannels": 62916,
+      "boundsBefore": {
+        "x": 257,
+        "y": 141.5,
+        "width": 319.1875,
+        "height": 48
+      },
+      "boundsAfter": {
+        "x": 257,
+        "y": 141.5,
+        "width": 318.96875,
+        "height": 48
+      },
+      "headingGeometryDeltaBelowOnePixel": true,
+      "fontUnchanged": true,
+      "keyboardExcludesTargetButKeepsWord": true
+    }
+  ],
+  "titleVisualReview": "Isolated title spans keep font, colour and line wrapping. Plain-heading comparison records subpixel glyph rasterisation differences and geometry deltas below one pixel; not claimed pixel-identical. Earlier generic span styles were corrected before final checks.",
+  "runtimePatchIdentical": true
+}

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {chromium,webkit} from 'playwright';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:19120';
-const out='docs/performance-20261102/regression';mkdirSync(out,{recursive:true});const checks=[],errors=[];
+const out=process.env.KLINK_PERF_REGRESSION_OUTPUT || 'docs/performance-20261102/regression';mkdirSync(out,{recursive:true});const checks=[],errors=[];
 for(const [engine,type] of Object.entries({chromium,webkit})){
  const b=await type.launch();try{for(const width of [1280,390]){
   for(const target of ['learner','teacher/plus']){

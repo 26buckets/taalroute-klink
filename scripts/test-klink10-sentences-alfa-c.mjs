@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {chapterCollections} from '../lib/practice-chapters.ts';
+import {validateProductionCollection} from '../lib/production-practice.ts';
+import {validStandardTask} from '../lib/standard-player-contract.ts';
+const root='docs/klink10-sentences-alfa-c-20261103',json=p=>JSON.parse(readFileSync(p)),m=json(root+'/import-manifest.json'),sources=json(root+'/source.json'),approval=json(root+'/nico-alstublieft-goedkeuring.json'),checks=[];
+const old=p=>JSON.parse(execFileSync('git',['show',m.baselineMain+':'+p],{maxBuffer:64e6}));
+const ids=m.newRows.map(x=>x.row.id);assert.equal(ids.length,1);assert.deepEqual(json('data/klink-production-index.json').filter(x=>!ids.includes(x.id)),old('data/klink-production-index.json'));assert.deepEqual(json('data/klink-production-instructions.json'),[...old('data/klink-production-instructions.json'),...m.newInstructions]);
+const policy=json('data/klink-audio-policy.json');for(const src of [...Object.keys(m.newAudio),...Object.keys(m.reusedAudio)]){assert(!policy.withdrawnPrefixes.some(p=>src.startsWith(p)));assert(!policy.withdrawnFiles.includes(src));}
+assert.equal(approval.userAnswer,'Goed: alstublieft, met u');assert(approval.humanApproved);assert.equal(approval.sha256,'302336589262ee21868f41878c3d2e338e509afe655204972e3704ae572bfda7');
+for(const{row,sha256}of m.newRows){assert.equal(createHash('sha256').update(readFileSync('public'+row.url)).digest('hex'),sha256);const es=validateProductionCollection(json('public'+row.url),row.id,10);assert(chapterCollections(row.activity).some(c=>c.id===row.id&&c.contentUrl===row.url));for(const e of es){const s=sources.find(x=>x.id===e.exerciseId);assert(s);assert.equal(e.standardTask.text,s.raw.match(/^Zin: (.+)$/m)[1]);assert(validStandardTask(e.standardTask));const word=s.raw.match(/Vraag: Kun je het woord ‘(.+?)’/)[1];assert.equal(e.standardTask.tokens.find(t=>t.id===e.standardTask.acceptedSelections[0][0]).text.replace(/[.,?!]$/,''),word);assert(e.requiresAudio&&e.manualAdvance&&e.requiresExplicitCompletion);assert(!e.independentReading&&!e.reviewEligible);assert.equal(e.sourceBlocks[0].text,e.standardTask.text);assert.equal(e.sourceBlocks[0].audio.src,e.prompt.audio.src);assert(m.reusedAudio[e.prompt.audio.src]);assert(m.newAudio[e.instructionAudio.src]);if(e.exerciseId==='SZ-ALFA-C-LLM-002')assert.equal(m.newAudio[e.instructionAudio.src].sha256,approval.sha256);checks.push({id:e.exerciseId,sourceAndAnswerVerified:true,supportedReadingOnly:true});}}
+assert.equal(checks.length,10);mkdirSync(root+'/local',{recursive:true});writeFileSync(root+'/local/content.json',JSON.stringify({checks,priorCollectionsPreserved:true,oldMediaImmutable:true},null,2)+'\n');console.log('Ten source-bound supported-reading tasks; prior collections and instructions preserved.');
