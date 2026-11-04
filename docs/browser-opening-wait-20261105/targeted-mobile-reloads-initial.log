@@ -1,0 +1,34 @@
+0 before first 1975
+0 before repeat 1639
+0 after first 1760
+0 after repeat 778
+1 after first 1632
+1 after repeat 753
+1 before first 1870
+1 before repeat 1621
+2 before first 2070
+2 before repeat 1602
+2 after first 1761
+2 after repeat 787
+3 after first 1665
+3 after repeat 761
+3 before first 2150
+3 before repeat 1773
+4 before first 1873
+4 before repeat 1635
+4 after first 1679
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Versioned code must reload from browser cache
+    at file:///Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/measure-learner-reloads.mjs:26:58 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

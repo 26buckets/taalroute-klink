@@ -1,0 +1,134 @@
+{
+  "before": {
+    "first": {
+      "n": 16,
+      "readyMedianMs": 1797.550000011921,
+      "readyMaxMs": 4447.5,
+      "afterDocumentMedianMs": 1615.550000011921,
+      "firstByteMedianMs": 104.5,
+      "over4100Ms": 1
+    },
+    "repeat": {
+      "n": 16,
+      "readyMedianMs": 1025.5,
+      "readyMaxMs": 1850.5,
+      "afterDocumentMedianMs": 970.2000000178814,
+      "firstByteMedianMs": 31.650000005960464,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 2289.25,
+          "readyMaxMs": 4447.5,
+          "afterDocumentMedianMs": 2059,
+          "firstByteMedianMs": 300.5,
+          "over4100Ms": 1
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 1341.8499999940395,
+          "readyMaxMs": 1850.5,
+          "afterDocumentMedianMs": 1310.300000011921,
+          "firstByteMedianMs": 31.150000005960464,
+          "over4100Ms": 0
+        }
+      },
+      "teacher/plus": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1482.5,
+          "readyMaxMs": 1670.199999988079,
+          "afterDocumentMedianMs": 1387.75,
+          "firstByteMedianMs": 81.05000001192093,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 949.4500000178814,
+          "readyMaxMs": 1369.800000011921,
+          "afterDocumentMedianMs": 907,
+          "firstByteMedianMs": 32.5,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 16,
+      "medianTotalMs": 459,
+      "longestMs": 605
+    },
+    "nextClick": {
+      "n": 8,
+      "medianMs": 27.049999982118607,
+      "maxMs": 42.40000003576279
+    }
+  },
+  "after": {
+    "first": {
+      "n": 16,
+      "readyMedianMs": 1735.449999988079,
+      "readyMaxMs": 3780.100000023842,
+      "afterDocumentMedianMs": 1564.1500000059605,
+      "firstByteMedianMs": 155,
+      "over4100Ms": 0
+    },
+    "repeat": {
+      "n": 16,
+      "readyMedianMs": 960,
+      "readyMaxMs": 1508.699999988079,
+      "afterDocumentMedianMs": 896.5499999821186,
+      "firstByteMedianMs": 38.55000001192093,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1845.8499999940395,
+          "readyMaxMs": 3780.100000023842,
+          "afterDocumentMedianMs": 1643.2000000178814,
+          "firstByteMedianMs": 155,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 885.3999999761581,
+          "readyMaxMs": 1508.699999988079,
+          "afterDocumentMedianMs": 845.3999999761581,
+          "firstByteMedianMs": 36.80000001192093,
+          "over4100Ms": 0
+        }
+      },
+      "teacher/plus": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1689.8500000238419,
+          "readyMaxMs": 2721,
+          "afterDocumentMedianMs": 1405.4000000059605,
+          "firstByteMedianMs": 187,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 970.9000000059605,
+          "readyMaxMs": 1396,
+          "afterDocumentMedianMs": 902.0499999821186,
+          "firstByteMedianMs": 40.55000001192093,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 16,
+      "medianTotalMs": 344,
+      "longestMs": 371
+    },
+    "nextClick": {
+      "n": 8,
+      "medianMs": 22.799999982118607,
+      "maxMs": 32
+    }
+  }
+}

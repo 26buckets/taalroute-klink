@@ -1,0 +1,3368 @@
+{
+  "conditions": "Original outlier cell: Chromium, 390x900, learner; 20 independent first/reload contexts per version, alternating version order, reduced motion, no CPU/network throttle. Both first visits and reloads retained.",
+  "rows": [
+    {
+      "repeat": 0,
+      "version": "before",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1975.199999988079,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 206.39999997615814,
+        "navigationId": 5580,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999996423721313,
+        "domainLookupStart": 2.299999952316284,
+        "domainLookupEnd": 4.099999964237213,
+        "connectStart": 4.099999964237213,
+        "secureConnectionStart": 14.899999976158142,
+        "connectEnd": 47.59999996423721,
+        "requestStart": 47.799999952316284,
+        "responseStart": 94.09999996423721,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 94.09999996423721,
+        "responseEnd": 96.79999995231628,
+        "transferSize": 4956,
+        "encodedBodySize": 4656,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 163.39999997615814,
+        "domContentLoadedEventStart": 163.39999997615814,
+        "domContentLoadedEventEnd": 163.39999997615814,
+        "domComplete": 206.39999997615814,
+        "loadEventStart": 206.39999997615814,
+        "loadEventEnd": 206.39999997615814,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 44.19999998807907
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 57.5
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 35116,
+          "durationMs": 33.09999996423721
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 50.09999996423721
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96638,
+          "durationMs": 56.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 28674,
+          "durationMs": 32.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 23774,
+          "durationMs": 54.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61093,
+          "durationMs": 61.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 63.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 48500,
+          "durationMs": 63.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244443,
+          "durationMs": 74.90000003576279
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 1001,
+          "durationMs": 61
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 23548,
+          "durationMs": 45.799999952316284
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 2374190,
+          "durationMs": 341.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 141120,
+          "durationMs": 66
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 53.5
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 44648,
+          "durationMs": 40.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 542,
+          "durationMs": 55.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 109169,
+          "durationMs": 54
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 21.30000001192093
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 48.59999996423721
+        }
+      ]
+    },
+    {
+      "repeat": 0,
+      "version": "before",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 1639.1000000238419,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 89.30000001192093,
+        "navigationId": 526,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.10000002384185791,
+        "domainLookupEnd": 0.10000002384185791,
+        "connectStart": 0.10000002384185791,
+        "secureConnectionStart": 0.10000002384185791,
+        "connectEnd": 0.10000002384185791,
+        "requestStart": 0.6000000238418579,
+        "responseStart": 29.600000023841858,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 29.600000023841858,
+        "responseEnd": 32,
+        "transferSize": 5022,
+        "encodedBodySize": 4722,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 34.700000047683716,
+        "unloadEventEnd": 34.700000047683716,
+        "domInteractive": 79.5,
+        "domContentLoadedEventStart": 79.5,
+        "domContentLoadedEventEnd": 79.5,
+        "domComplete": 89.30000001192093,
+        "loadEventStart": 89.30000001192093,
+        "loadEventEnd": 89.30000001192093,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 300,
+          "durationMs": 19.100000023841858
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 300,
+          "durationMs": 26.80000001192093
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 300,
+          "durationMs": 22.19999998807907
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 300,
+          "durationMs": 27.599999964237213
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 300,
+          "durationMs": 23.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 300,
+          "durationMs": 26.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 300,
+          "durationMs": 26.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 300,
+          "durationMs": 27.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 300,
+          "durationMs": 27.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 300,
+          "durationMs": 23
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 300,
+          "durationMs": 27.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 300,
+          "durationMs": 20
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 300,
+          "durationMs": 187.5
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 300,
+          "durationMs": 19.899999976158142
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 300,
+          "durationMs": 24.80000001192093
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 300,
+          "durationMs": 19.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 300,
+          "durationMs": 21.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 300,
+          "durationMs": 24.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 300,
+          "durationMs": 23.5
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 300,
+          "durationMs": 22.30000001192093
+        }
+      ]
+    },
+    {
+      "repeat": 0,
+      "version": "after",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1760.3999999761581,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 168.19999998807907,
+        "navigationId": 6951,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.3999999761581421,
+        "domainLookupEnd": 1.600000023841858,
+        "connectStart": 1.600000023841858,
+        "secureConnectionStart": 10.399999976158142,
+        "connectEnd": 25.5,
+        "requestStart": 25.600000023841858,
+        "responseStart": 70.80000001192093,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 70.80000001192093,
+        "responseEnd": 73.19999998807907,
+        "transferSize": 4959,
+        "encodedBodySize": 4659,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 146.80000001192093,
+        "domContentLoadedEventStart": 146.80000001192093,
+        "domContentLoadedEventEnd": 146.89999997615814,
+        "domComplete": 168.19999998807907,
+        "loadEventStart": 168.19999998807907,
+        "loadEventEnd": 168.19999998807907,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 25.5
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 65.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 27.100000023841858
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 48442,
+          "durationMs": 32.10000002384186
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 23770,
+          "durationMs": 43.700000047683716
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 35116,
+          "durationMs": 48.5
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96655,
+          "durationMs": 64.20000004768372
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 64.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61098,
+          "durationMs": 66.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 28663,
+          "durationMs": 64.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244434,
+          "durationMs": 64
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 995,
+          "durationMs": 88.5
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 2378030,
+          "durationMs": 450
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 23549,
+          "durationMs": 70.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 141112,
+          "durationMs": 102
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 70.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 44640,
+          "durationMs": 80.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 540,
+          "durationMs": 95
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 109142,
+          "durationMs": 54.19999998807907
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 31.30000001192093
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 73.90000003576279
+        }
+      ]
+    },
+    {
+      "repeat": 0,
+      "version": "after",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 778.1000000238419,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 83.60000002384186,
+        "navigationId": 9425,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0,
+        "domainLookupEnd": 0,
+        "connectStart": 0,
+        "secureConnectionStart": 0,
+        "connectEnd": 0,
+        "requestStart": 0.30000001192092896,
+        "responseStart": 39.69999998807907,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 39.69999998807907,
+        "responseEnd": 39.89999997615814,
+        "transferSize": 5023,
+        "encodedBodySize": 4723,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 45,
+        "unloadEventEnd": 45,
+        "domInteractive": 73.80000001192093,
+        "domContentLoadedEventStart": 73.80000001192093,
+        "domContentLoadedEventEnd": 73.80000001192093,
+        "domComplete": 83.60000002384186,
+        "loadEventStart": 83.60000002384186,
+        "loadEventEnd": 83.60000002384186,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "version": "after",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1631.800000011921,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 162.60000002384186,
+        "navigationId": 5938,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.40000003576278687,
+        "domainLookupEnd": 1.300000011920929,
+        "connectStart": 1.300000011920929,
+        "secureConnectionStart": 8.699999988079071,
+        "connectEnd": 22.19999998807907,
+        "requestStart": 22.400000035762787,
+        "responseStart": 74.69999998807907,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 74.69999998807907,
+        "responseEnd": 77.30000001192093,
+        "transferSize": 4985,
+        "encodedBodySize": 4685,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 144.10000002384186,
+        "domContentLoadedEventStart": 144.10000002384186,
+        "domContentLoadedEventEnd": 144.10000002384186,
+        "domComplete": 162.60000002384186,
+        "loadEventStart": 162.60000002384186,
+        "loadEventEnd": 162.60000002384186,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 48
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 62.60000002384186
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 22.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 24.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 35156,
+          "durationMs": 27.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 23770,
+          "durationMs": 29.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61098,
+          "durationMs": 33.90000003576279
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96642,
+          "durationMs": 61.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 48442,
+          "durationMs": 61.90000003576279
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 28633,
+          "durationMs": 24.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244434,
+          "durationMs": 52.5
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 995,
+          "durationMs": 50
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 2376230,
+          "durationMs": 312.4000000357628
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 23549,
+          "durationMs": 37.5
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 52.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 141112,
+          "durationMs": 50.09999996423721
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 540,
+          "durationMs": 50
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 44640,
+          "durationMs": 53.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 109174,
+          "durationMs": 31.099999964237213
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 42.5
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 22.19999998807907
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "version": "after",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 753,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 68.80000001192093,
+        "navigationId": 9203,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0,
+        "domainLookupEnd": 0,
+        "connectStart": 0,
+        "secureConnectionStart": 0,
+        "connectEnd": 0,
+        "requestStart": 0.30000001192092896,
+        "responseStart": 28,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 28,
+        "responseEnd": 30.399999976158142,
+        "transferSize": 4943,
+        "encodedBodySize": 4643,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 33.80000001192093,
+        "unloadEventEnd": 33.80000001192093,
+        "domInteractive": 59.19999998807907,
+        "domContentLoadedEventStart": 59.19999998807907,
+        "domContentLoadedEventEnd": 59.19999998807907,
+        "domComplete": 68.80000001192093,
+        "loadEventStart": 68.80000001192093,
+        "loadEventEnd": 68.80000001192093,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "version": "before",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1869.699999988079,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 152.0999999642372,
+        "navigationId": 7397,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999996423721313,
+        "domainLookupStart": 0.5,
+        "domainLookupEnd": 1.300000011920929,
+        "connectStart": 1.300000011920929,
+        "secureConnectionStart": 9.099999964237213,
+        "connectEnd": 22.899999976158142,
+        "requestStart": 22.899999976158142,
+        "responseStart": 66.59999996423721,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 66.59999996423721,
+        "responseEnd": 69,
+        "transferSize": 4947,
+        "encodedBodySize": 4647,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 134.5999999642372,
+        "domContentLoadedEventStart": 134.5999999642372,
+        "domContentLoadedEventEnd": 134.5999999642372,
+        "domComplete": 152.0999999642372,
+        "loadEventStart": 152.0999999642372,
+        "loadEventEnd": 152.0999999642372,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 55.90000003576279
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 55.89999997615814
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 54.69999998807907
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96645,
+          "durationMs": 62
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 55.799999952316284
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 35116,
+          "durationMs": 56
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 48441,
+          "durationMs": 57
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61093,
+          "durationMs": 59.09999996423721
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 28640,
+          "durationMs": 32.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 23774,
+          "durationMs": 55.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244443,
+          "durationMs": 55
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 1001,
+          "durationMs": 25.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 2374977,
+          "durationMs": 334.0999999642372
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 40
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 23548,
+          "durationMs": 42.90000003576279
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 141100,
+          "durationMs": 42.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 44648,
+          "durationMs": 32.59999996423721
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 542,
+          "durationMs": 42.59999996423721
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 109143,
+          "durationMs": 41.89999997615814
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5832,
+          "durationMs": 25.30000001192093
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "version": "before",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 1621.199999988079,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 108.80000001192093,
+        "navigationId": 3093,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0,
+        "domainLookupEnd": 0,
+        "connectStart": 0,
+        "secureConnectionStart": 0,
+        "connectEnd": 0,
+        "requestStart": 0.30000001192092896,
+        "responseStart": 24.899999976158142,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 24.899999976158142,
+        "responseEnd": 27.30000001192093,
+        "transferSize": 4947,
+        "encodedBodySize": 4647,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 30.30000001192093,
+        "unloadEventEnd": 30.30000001192093,
+        "domInteractive": 97.80000001192093,
+        "domContentLoadedEventStart": 97.80000001192093,
+        "domContentLoadedEventEnd": 97.80000001192093,
+        "domComplete": 108.80000001192093,
+        "loadEventStart": 108.80000001192093,
+        "loadEventEnd": 108.80000001192093,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 300,
+          "durationMs": 19.5
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 300,
+          "durationMs": 24.69999998807907
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 300,
+          "durationMs": 19.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 300,
+          "durationMs": 21.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 300,
+          "durationMs": 21.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 300,
+          "durationMs": 24.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 300,
+          "durationMs": 24.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 300,
+          "durationMs": 24.5
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 300,
+          "durationMs": 26.399999976158142
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 300,
+          "durationMs": 29.19999998807907
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 300,
+          "durationMs": 37.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 300,
+          "durationMs": 21.799999952316284
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 300,
+          "durationMs": 153.4000000357628
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 300,
+          "durationMs": 19.30000001192093
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 300,
+          "durationMs": 19
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 300,
+          "durationMs": 27
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 300,
+          "durationMs": 19.099999964237213
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 300,
+          "durationMs": 21.5
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 300,
+          "durationMs": 21.099999964237213
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 300,
+          "durationMs": 19.19999998807907
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "version": "before",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 2070.099999964237,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 369,
+        "navigationId": 1310,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999996423721313,
+        "domainLookupStart": 0.30000001192092896,
+        "domainLookupEnd": 1.399999976158142,
+        "connectStart": 1.399999976158142,
+        "secureConnectionStart": 10.399999976158142,
+        "connectEnd": 25,
+        "requestStart": 25,
+        "responseStart": 281.80000001192093,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 281.80000001192093,
+        "responseEnd": 284.39999997615814,
+        "transferSize": 4947,
+        "encodedBodySize": 4647,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 349.89999997615814,
+        "domContentLoadedEventStart": 349.89999997615814,
+        "domContentLoadedEventEnd": 349.89999997615814,
+        "domComplete": 369,
+        "loadEventStart": 369,
+        "loadEventEnd": 369,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 31.19999998807907
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 57.30000001192093
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 23.900000035762787
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 56.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 35116,
+          "durationMs": 57.39999997615814
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96645,
+          "durationMs": 60.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 48451,
+          "durationMs": 33.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 28640,
+          "durationMs": 39.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 23774,
+          "durationMs": 42.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61093,
+          "durationMs": 56.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244522,
+          "durationMs": 69.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 1001,
+          "durationMs": 37.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 23548,
+          "durationMs": 33.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 2375014,
+          "durationMs": 329.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 141120,
+          "durationMs": 55
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 28
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 44648,
+          "durationMs": 58.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 542,
+          "durationMs": 52.10000002384186
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 109169,
+          "durationMs": 38.10000002384186
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 24.100000023841858
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 22.69999998807907
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "version": "before",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 1601.5999999642372,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 78,
+        "navigationId": 4220,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999996423721313,
+        "domainLookupStart": 0.09999996423721313,
+        "domainLookupEnd": 0.09999996423721313,
+        "connectStart": 0.09999996423721313,
+        "secureConnectionStart": 0.09999996423721313,
+        "connectEnd": 0.09999996423721313,
+        "requestStart": 0.3999999761581421,
+        "responseStart": 31.899999976158142,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 31.899999976158142,
+        "responseEnd": 34,
+        "transferSize": 4947,
+        "encodedBodySize": 4647,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 39.89999997615814,
+        "unloadEventEnd": 39.89999997615814,
+        "domInteractive": 67.5,
+        "domContentLoadedEventStart": 67.5,
+        "domContentLoadedEventEnd": 67.5,
+        "domComplete": 77.89999997615814,
+        "loadEventStart": 78,
+        "loadEventEnd": 78,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 300,
+          "durationMs": 19.5
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 300,
+          "durationMs": 21.80000001192093
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 300,
+          "durationMs": 19.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 300,
+          "durationMs": 21.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 300,
+          "durationMs": 22.19999998807907
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 300,
+          "durationMs": 25.399999976158142
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 300,
+          "durationMs": 28.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 300,
+          "durationMs": 21.399999976158142
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 300,
+          "durationMs": 21.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 300,
+          "durationMs": 22.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 300,
+          "durationMs": 31.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 300,
+          "durationMs": 23
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 300,
+          "durationMs": 180
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 300,
+          "durationMs": 22.899999976158142
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 300,
+          "durationMs": 27.099999964237213
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 300,
+          "durationMs": 19.69999998807907
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 300,
+          "durationMs": 19.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 300,
+          "durationMs": 22.599999964237213
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 300,
+          "durationMs": 22.099999964237213
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 300,
+          "durationMs": 23.700000047683716
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "version": "after",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1761.2999999523163,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 239.0999999642372,
+        "navigationId": 3181,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.19999998807907104,
+        "domainLookupEnd": 1.2999999523162842,
+        "connectStart": 1.2999999523162842,
+        "secureConnectionStart": 11.5,
+        "connectEnd": 32.89999997615814,
+        "requestStart": 33,
+        "responseStart": 130.69999998807907,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 130.69999998807907,
+        "responseEnd": 133.29999995231628,
+        "transferSize": 5022,
+        "encodedBodySize": 4722,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 218.79999995231628,
+        "domContentLoadedEventStart": 218.79999995231628,
+        "domContentLoadedEventEnd": 218.79999995231628,
+        "domComplete": 239.0999999642372,
+        "loadEventStart": 239.0999999642372,
+        "loadEventEnd": 239.0999999642372,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 63
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 73.90000003576279
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 50.89999997615814
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96642,
+          "durationMs": 51.09999996423721
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 35116,
+          "durationMs": 53.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 23770,
+          "durationMs": 72.5
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 84.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 48442,
+          "durationMs": 85.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61098,
+          "durationMs": 85.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 28633,
+          "durationMs": 84.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244434,
+          "durationMs": 80.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 995,
+          "durationMs": 37.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 2375407,
+          "durationMs": 390.5
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 23551,
+          "durationMs": 70.19999998807907
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 60.5
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 141126,
+          "durationMs": 105.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 44481,
+          "durationMs": 54
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 540,
+          "durationMs": 69.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 109151,
+          "durationMs": 40.80000001192093
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 27.900000035762787
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 65.5
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "version": "after",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 786.9000000357628,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 322.10000002384186,
+        "navigationId": 5530,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.10000002384185791,
+        "domainLookupEnd": 0.10000002384185791,
+        "connectStart": 0.10000002384185791,
+        "secureConnectionStart": 0.10000002384185791,
+        "connectEnd": 0.10000002384185791,
+        "requestStart": 0.40000003576278687,
+        "responseStart": 48.30000001192093,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 48.30000001192093,
+        "responseEnd": 50.700000047683716,
+        "transferSize": 4911,
+        "encodedBodySize": 4611,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 56.60000002384186,
+        "unloadEventEnd": 56.60000002384186,
+        "domInteractive": 86.5,
+        "domContentLoadedEventStart": 86.5,
+        "domContentLoadedEventEnd": 86.5,
+        "domComplete": 322.10000002384186,
+        "loadEventStart": 322.10000002384186,
+        "loadEventEnd": 322.10000002384186,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 0,
+          "durationMs": 0.40000003576278687
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "version": "after",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1664.6000000238419,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 198.80000001192093,
+        "navigationId": 1481,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.30000001192092896,
+        "domainLookupEnd": 1.2000000476837158,
+        "connectStart": 1.2000000476837158,
+        "secureConnectionStart": 9.400000035762787,
+        "connectEnd": 26.200000047683716,
+        "requestStart": 26.30000001192093,
+        "responseStart": 80.20000004768372,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 80.20000004768372,
+        "responseEnd": 83.20000004768372,
+        "transferSize": 4950,
+        "encodedBodySize": 4650,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 166.20000004768372,
+        "domContentLoadedEventStart": 166.20000004768372,
+        "domContentLoadedEventEnd": 166.20000004768372,
+        "domComplete": 198.80000001192093,
+        "loadEventStart": 198.80000001192093,
+        "loadEventEnd": 198.80000001192093,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 67.30000001192093
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 67
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 38.5
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96642,
+          "durationMs": 56.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 48508,
+          "durationMs": 39.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 23770,
+          "durationMs": 56.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 35114,
+          "durationMs": 66.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 68.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61098,
+          "durationMs": 95.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 28633,
+          "durationMs": 38.5
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244434,
+          "durationMs": 90.79999995231628
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 995,
+          "durationMs": 48.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 2378317,
+          "durationMs": 329.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 23549,
+          "durationMs": 22.399999976158142
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 38.5
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 141112,
+          "durationMs": 44.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 540,
+          "durationMs": 22.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 44640,
+          "durationMs": 29.600000023841858
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 109142,
+          "durationMs": 45
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 36.5
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 21.30000001192093
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "version": "after",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 761.1999999880791,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 72.89999997615814,
+        "navigationId": 1732,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999996423721313,
+        "domainLookupStart": 0.09999996423721313,
+        "domainLookupEnd": 0.09999996423721313,
+        "connectStart": 0.09999996423721313,
+        "secureConnectionStart": 0.09999996423721313,
+        "connectEnd": 0.09999996423721313,
+        "requestStart": 0.2999999523162842,
+        "responseStart": 36.299999952316284,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 36.299999952316284,
+        "responseEnd": 38.5,
+        "transferSize": 4950,
+        "encodedBodySize": 4650,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 40.89999997615814,
+        "unloadEventEnd": 40.89999997615814,
+        "domInteractive": 63.69999998807907,
+        "domContentLoadedEventStart": 63.69999998807907,
+        "domContentLoadedEventEnd": 63.69999998807907,
+        "domComplete": 72.89999997615814,
+        "loadEventStart": 72.89999997615814,
+        "loadEventEnd": 72.89999997615814,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 0,
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "version": "before",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 2150.300000011921,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 162.4000000357628,
+        "navigationId": 3301,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.30000001192092896,
+        "domainLookupEnd": 1.100000023841858,
+        "connectStart": 1.100000023841858,
+        "secureConnectionStart": 10.400000035762787,
+        "connectEnd": 24.80000001192093,
+        "requestStart": 24.900000035762787,
+        "responseStart": 74.10000002384186,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 74.10000002384186,
+        "responseEnd": 74.40000003576279,
+        "transferSize": 5022,
+        "encodedBodySize": 4722,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 143.4000000357628,
+        "domContentLoadedEventStart": 143.4000000357628,
+        "domContentLoadedEventEnd": 143.5,
+        "domComplete": 162.4000000357628,
+        "loadEventStart": 162.4000000357628,
+        "loadEventEnd": 162.4000000357628,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 39.89999997615814
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 53.09999996423721
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 30.80000001192093
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 49.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 35113,
+          "durationMs": 59.30000001192093
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96645,
+          "durationMs": 62.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 48505,
+          "durationMs": 28.399999976158142
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 28674,
+          "durationMs": 52.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61093,
+          "durationMs": 58.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244443,
+          "durationMs": 59
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 23842,
+          "durationMs": 62.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 1001,
+          "durationMs": 75
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 2377016,
+          "durationMs": 554.3000000119209
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 23552,
+          "durationMs": 38.299999952316284
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 58.299999952316284
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 141120,
+          "durationMs": 95.29999995231628
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 542,
+          "durationMs": 72
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 44350,
+          "durationMs": 77.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 109094,
+          "durationMs": 42.700000047683716
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 63.80000001192093
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 26.399999976158142
+        }
+      ]
+    },
+    {
+      "repeat": 3,
+      "version": "before",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 1773.2999999523163,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 147.19999998807907,
+        "navigationId": 9648,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.09999996423721313,
+        "domainLookupStart": 0.09999996423721313,
+        "domainLookupEnd": 0.09999996423721313,
+        "connectStart": 0.09999996423721313,
+        "secureConnectionStart": 0.09999996423721313,
+        "connectEnd": 0.09999996423721313,
+        "requestStart": 0.3999999761581421,
+        "responseStart": 36.59999996423721,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 36.59999996423721,
+        "responseEnd": 38.89999997615814,
+        "transferSize": 4953,
+        "encodedBodySize": 4653,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 41.19999998807907,
+        "unloadEventEnd": 41.19999998807907,
+        "domInteractive": 88,
+        "domContentLoadedEventStart": 88,
+        "domContentLoadedEventEnd": 88,
+        "domComplete": 147.19999998807907,
+        "loadEventStart": 147.19999998807907,
+        "loadEventEnd": 147.19999998807907,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 300,
+          "durationMs": 27.600000023841858
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 300,
+          "durationMs": 73.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 300,
+          "durationMs": 27.100000023841858
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 300,
+          "durationMs": 29.5
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 300,
+          "durationMs": 32.30000001192093
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 300,
+          "durationMs": 35.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 300,
+          "durationMs": 64.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 300,
+          "durationMs": 26.899999976158142
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 300,
+          "durationMs": 29.5
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 300,
+          "durationMs": 29.599999964237213
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 300,
+          "durationMs": 47.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 300,
+          "durationMs": 29.5
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 300,
+          "durationMs": 281.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 300,
+          "durationMs": 31.299999952316284
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 300,
+          "durationMs": 34.39999997615814
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 300,
+          "durationMs": 31.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 300,
+          "durationMs": 28.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 300,
+          "durationMs": 31.100000023841858
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 300,
+          "durationMs": 29.099999964237213
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 300,
+          "durationMs": 29.899999976158142
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 300,
+          "durationMs": 26.5
+        }
+      ]
+    },
+    {
+      "repeat": 4,
+      "version": "before",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1873.1000000238419,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 153.80000001192093,
+        "navigationId": 1754,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.40000003576278687,
+        "domainLookupEnd": 1.2000000476837158,
+        "connectStart": 1.2000000476837158,
+        "secureConnectionStart": 10.200000047683716,
+        "connectEnd": 25.700000047683716,
+        "requestStart": 25.700000047683716,
+        "responseStart": 61.30000001192093,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 61.30000001192093,
+        "responseEnd": 64.10000002384186,
+        "transferSize": 4953,
+        "encodedBodySize": 4653,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 138.30000001192093,
+        "domContentLoadedEventStart": 138.30000001192093,
+        "domContentLoadedEventEnd": 138.30000001192093,
+        "domComplete": 153.80000001192093,
+        "loadEventStart": 153.80000001192093,
+        "loadEventEnd": 153.80000001192093,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 26.900000035762787
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 55.5
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 28.899999976158142
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 35158,
+          "durationMs": 33.39999997615814
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96645,
+          "durationMs": 53.39999997615814
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 69.09999996423721
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 48500,
+          "durationMs": 32.40000003576279
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 23774,
+          "durationMs": 69.20000004768372
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61093,
+          "durationMs": 69.10000002384186
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 28674,
+          "durationMs": 69.70000004768372
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244443,
+          "durationMs": 70
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 1001,
+          "durationMs": 45.5
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 2375447,
+          "durationMs": 306.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 23587,
+          "durationMs": 26.599999964237213
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 26.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 141120,
+          "durationMs": 72
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 542,
+          "durationMs": 23.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 44488,
+          "durationMs": 33.59999996423721
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 109143,
+          "durationMs": 34.69999998807907
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5772,
+          "durationMs": 21.399999976158142
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 18.80000001192093
+        }
+      ]
+    },
+    {
+      "repeat": 4,
+      "version": "before",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 1634.6000000238419,
+      "navigation": {
+        "name": "https://klink-pr12-baseline.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 69.30000001192093,
+        "navigationId": 4175,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0.10000002384185791,
+        "domainLookupStart": 0.10000002384185791,
+        "domainLookupEnd": 0.10000002384185791,
+        "connectStart": 0.10000002384185791,
+        "secureConnectionStart": 0.10000002384185791,
+        "connectEnd": 0.10000002384185791,
+        "requestStart": 0.40000003576278687,
+        "responseStart": 26,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 26,
+        "responseEnd": 28.19999998807907,
+        "transferSize": 4947,
+        "encodedBodySize": 4647,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 30.600000023841858,
+        "unloadEventEnd": 30.600000023841858,
+        "domInteractive": 62.5,
+        "domContentLoadedEventStart": 62.5,
+        "domContentLoadedEventEnd": 62.5,
+        "domComplete": 69.30000001192093,
+        "loadEventStart": 69.30000001192093,
+        "loadEventEnd": 69.30000001192093,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 300,
+          "durationMs": 23
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 300,
+          "durationMs": 23.30000001192093
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 300,
+          "durationMs": 23.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 300,
+          "durationMs": 22.700000047683716
+        },
+        {
+          "path": "/_next/static/chunks/vinext-2UUUl7T6.js",
+          "transferSize": 300,
+          "durationMs": 23
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-BATZsYDE.js",
+          "transferSize": 300,
+          "durationMs": 23.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 300,
+          "durationMs": 24.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/index-B9DfpY6T.js",
+          "transferSize": 300,
+          "durationMs": 26.100000023841858
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 300,
+          "durationMs": 30.400000035762787
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-DnopImcR.js",
+          "transferSize": 300,
+          "durationMs": 25.80000001192093
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 300,
+          "durationMs": 37.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-BTSiN7SQ.js",
+          "transferSize": 300,
+          "durationMs": 21.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-D78XfUhA.js",
+          "transferSize": 300,
+          "durationMs": 23.700000047683716
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BJWOyYZ7.js",
+          "transferSize": 300,
+          "durationMs": 186.30000001192093
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-BDllTrzA.js",
+          "transferSize": 300,
+          "durationMs": 27.600000023841858
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 300,
+          "durationMs": 23.599999964237213
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BRRoZJ8s.js",
+          "transferSize": 300,
+          "durationMs": 23.799999952316284
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-CxOxDv2N.js",
+          "transferSize": 300,
+          "durationMs": 23.5
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-hKvXN5Hs.js",
+          "transferSize": 300,
+          "durationMs": 21.100000023841858
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 300,
+          "durationMs": 25.80000001192093
+        }
+      ]
+    },
+    {
+      "repeat": 4,
+      "version": "after",
+      "visit": "first",
+      "status": 200,
+      "readyMs": 1679,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 154.9000000357628,
+        "navigationId": 4822,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h2",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0.30000001192092896,
+        "domainLookupEnd": 1.100000023841858,
+        "connectStart": 1.100000023841858,
+        "secureConnectionStart": 10.400000035762787,
+        "connectEnd": 23.5,
+        "requestStart": 23.600000023841858,
+        "responseStart": 67.19999998807907,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 67.19999998807907,
+        "responseEnd": 67.5,
+        "transferSize": 4950,
+        "encodedBodySize": 4650,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [],
+        "unloadEventStart": 0,
+        "unloadEventEnd": 0,
+        "domInteractive": 136,
+        "domContentLoadedEventStart": 136,
+        "domContentLoadedEventEnd": 136,
+        "domComplete": 154.9000000357628,
+        "loadEventStart": 154.9000000357628,
+        "loadEventEnd": 154.9000000357628,
+        "type": "navigate",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "high"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 29588,
+          "durationMs": 24.900000035762787
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 23408,
+          "durationMs": 34.700000047683716
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 526,
+          "durationMs": 26.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 48442,
+          "durationMs": 37.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 740,
+          "durationMs": 43.19999998807907
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 35116,
+          "durationMs": 48.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 23770,
+          "durationMs": 50.09999996423721
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 61098,
+          "durationMs": 54.09999996423721
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 96642,
+          "durationMs": 62.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 28633,
+          "durationMs": 62.5
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 244434,
+          "durationMs": 71.60000002384186
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 995,
+          "durationMs": 31.900000035762787
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 23549,
+          "durationMs": 48.89999997615814
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 2376095,
+          "durationMs": 330
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 141114,
+          "durationMs": 70.60000002384186
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 921,
+          "durationMs": 45.69999998807907
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 540,
+          "durationMs": 48.59999996423721
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 44640,
+          "durationMs": 60.39999997615814
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 109174,
+          "durationMs": 51.80000001192093
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 5831,
+          "durationMs": 54.30000001192093
+        }
+      ]
+    },
+    {
+      "repeat": 4,
+      "version": "after",
+      "visit": "repeat",
+      "status": 200,
+      "readyMs": 793.5,
+      "navigation": {
+        "name": "https://klink-pr12-candidate.nico-554.workers.dev/#learner",
+        "entryType": "navigation",
+        "startTime": 0,
+        "duration": 86.5,
+        "navigationId": 6911,
+        "initiatorType": "navigation",
+        "deliveryType": "",
+        "nextHopProtocol": "h3",
+        "renderBlockingStatus": "non-blocking",
+        "contentType": "text/html",
+        "contentEncoding": "zstd",
+        "workerStart": 0,
+        "workerRouterEvaluationStart": 0,
+        "workerCacheLookupStart": 0,
+        "workerMatchedSourceType": "",
+        "workerFinalSourceType": "",
+        "redirectStart": 0,
+        "redirectEnd": 0,
+        "fetchStart": 0,
+        "domainLookupStart": 0,
+        "domainLookupEnd": 0,
+        "connectStart": 0,
+        "secureConnectionStart": 0,
+        "connectEnd": 0,
+        "requestStart": 0.30000001192092896,
+        "responseStart": 46.69999998807907,
+        "firstInterimResponseStart": 0,
+        "finalResponseHeadersStart": 46.69999998807907,
+        "responseEnd": 49,
+        "transferSize": 5026,
+        "encodedBodySize": 4726,
+        "decodedBodySize": 16927,
+        "responseStatus": 200,
+        "serverTiming": [
+          {
+            "name": "cfExtPri",
+            "duration": 0,
+            "description": ""
+          }
+        ],
+        "unloadEventStart": 51.19999998807907,
+        "unloadEventEnd": 51.19999998807907,
+        "domInteractive": 77.19999998807907,
+        "domContentLoadedEventStart": 77.19999998807907,
+        "domContentLoadedEventEnd": 77.19999998807907,
+        "domComplete": 86.5,
+        "loadEventStart": 86.5,
+        "loadEventEnd": 86.5,
+        "type": "reload",
+        "redirectCount": 0,
+        "activationStart": 0,
+        "criticalCHRestart": 0,
+        "notRestoredReasons": null,
+        "confidence": {
+          "randomizedTriggerRate": 0.4994798,
+          "value": "low"
+        }
+      },
+      "staticResources": [
+        {
+          "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/index.B_vDQoip.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/index-BPa1Ryw9.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/vinext-x7AV4lMu.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/shared-ui-CJG0Nmsr.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/compact-image-0fJpLZTg.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/practice-workspace-DmiAGNdt.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/route-settings-BRADcd5L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/staff-apps-CJrwYKat.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-exercise-browser-CV7o6g8N.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/package-experience-BVW-RRC1.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/klink-curriculum-Doq_bURd.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/chunks/learner-app-BmNiPh4L.js",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transferSize": 0,
+          "durationMs": 0
+        },
+        {
+          "path": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transferSize": 1511,
+          "durationMs": 24.69999998807907
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "repeat": 4,
+      "version": "after",
+      "visit": "repeat",
+      "message": "AssertionError [ERR_ASSERTION]: Versioned code must reload from browser cache"
+    }
+  ]
+}
