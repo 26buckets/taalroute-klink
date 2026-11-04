@@ -1,0 +1,53 @@
+{
+  "base": "http://127.0.0.1:19163",
+  "checks": [
+    {
+      "src": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "case": "GET",
+      "bytes": 15098
+    },
+    {
+      "src": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "case": "HEAD",
+      "contentLength": "15098"
+    },
+    {
+      "src": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "case": "ETag304"
+    },
+    {
+      "src": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "case": "Range206"
+    },
+    {
+      "src": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "case": "Range416"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "case": "GET",
+      "bytes": 13129
+    },
+    {
+      "src": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "case": "HEAD",
+      "contentLength": "13129"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "case": "ETag304"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "case": "Range206"
+    },
+    {
+      "src": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "case": "Range416"
+    },
+    {
+      "case": "missing404"
+    }
+  ],
+  "exactBankAndRina": true
+}

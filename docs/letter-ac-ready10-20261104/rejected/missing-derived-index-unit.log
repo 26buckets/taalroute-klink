@@ -1,0 +1,39 @@
+✔ Ten source-bound uppercase letters retain exact answers and original full name context (0.733417ms)
+✔ One bank appended; all previous collection rows and server payloads unchanged (24.272292ms)
+✖ Existing Rina source reused exactly and all previous audio mappings preserved (21.290708ms)
+✔ All shared rendering, answer/storage and handwriting help remain byte-identical (52.880375ms)
+✔ Existing public banks and new server banks keep the same validation (13.3955ms)
+✔ Unregistered or malformed server bank URLs fail closed (1.917166ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 372.454666
+
+✖ failing tests:
+
+test at scripts/test-letter-ac-ready10.mjs:14:1
+✖ Existing Rina source reused exactly and all previous audio mappings preserved (21.290708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - '/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-letter-ac-ready10-20261104/scripts/test-letter-ac-ready10.mjs:14:411)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

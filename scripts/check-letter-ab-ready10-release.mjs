@@ -1,3 +1,4 @@
+import {verifyLetterAcReady10Release,readBeforeLetterAcReady10} from './check-letter-ac-ready10-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -6,11 +7,12 @@ const base='2cdc45bc0f8bee8b542f56fbdaa2c8864cf1344b',root='docs/letter-ab-ready
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),sort=a=>a.sort((a,b)=>a.localeCompare(b)),lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifyLetterAbReady10Content(read=readFileSync){
+ const successor=verifyLetterAcReady10Release(read),currentRead=read;read=file=>readBeforeLetterAcReady10(file,successor,currentRead);
  const json=p=>JSON.parse(read(p)),r=json('docs/klink-owner-release-letter-ab-ready10-20261104.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.approvalKind,'standing-owner-approval');assert.equal(r.baselineSourceCommit,base);
  const owner=json('docs/klink-invullen-20261101/automatic-owner-approval.json');assert.equal(owner.sourceQuote,'Je zet vast dat Nico automatisch alles goedkeurt.');assert(owner.automaticOwnerApproval&&owner.automaticPublicationApproval);assert.equal(owner.mayInventHumanReviewEvidence,false);
  assert.equal(r.liveSourceCommit,json(root+'baseline-live-release.json').sourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
  assert.deepEqual(changed.filter(p=>/^(app|components|hooks|data|lib|public|db|drizzle)\//.test(p)),['components/product/package-exercise-browser.tsx','data/klink-grammar-aa-assets.json','data/klink-production-index.json']);
  const index=json('data/klink-production-index.json'),oldIndex=JSON.parse(git('show',base+':data/klink-production-index.json'));assert.deepEqual(index.slice(0,-1),oldIndex);const m=json(root+'manifest.json');assert.deepEqual(index.at(-1),m.row);assert.equal(m.row.count,10);assert.equal(m.row.activity,'write-letter');assert.equal(m.row.level,'alfa-b');

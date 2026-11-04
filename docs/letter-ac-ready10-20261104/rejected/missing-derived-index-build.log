@@ -1,0 +1,938 @@
+
+> taalroute-klink@0.1.0 prebuild
+> node scripts/build-word-library-index.mjs --check && node scripts/build-word-listening.mjs --check && node scripts/audit-word-listening.mjs --check && npm run images:check && node scripts/write-klink-release.mjs
+
+Word library: 5127 cards linked; index 2226395 bytes
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Rebuild the word-listening index after changing word recordings.
++ actual - expected
+... Skipped lines
+
+  '{\n' +
+    '  "0": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 12678,\n' +
+...
+    '    {\n' +
++   '      "s'... 1455107 more characters
+-   '      "s'... 1455222 more characters
+
+    at file:///private/tmp/klink-letter-ac-ready10-20261104/scripts/build-word-listening.mjs:54:48
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '{\n' +
+    '  "0": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 12678,\n' +
+    '      "length": 11423\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 152142,\n' +
+    '      "length": 10170\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "2": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 675333,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "3": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 942421,\n' +
+    '      "length": 12677\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "4": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1008181,\n' +
+    '      "length": 15185\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "5": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1102082,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "6": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1190551,\n' +
+    '      "length": 15185\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "7": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1222176,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "8": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1281946,\n' +
+    '      "length": 11423\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "9": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1359829,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "10": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 186694,\n' +
+    '      "length": 11424\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "11": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 244936,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "12": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 277819,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "13": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 329650,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "14": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 365040,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "15": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 420633,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "16": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 482915,\n' +
+    '      "length": 15186\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "17": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 519559,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "18": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 585603,\n' +
+    '      "length": 12678\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "19": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 637434,\n' +
+    '      "length": 17694\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "20": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 689264,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "21": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 754053,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "22": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 773001,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "23": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/klink10-listening-20261102/audio-bff51a666ba16e1d.bin",\n' +
+    '      "offset": 808459,\n' +
+    '      "length": 18143\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "24": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 820093,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "25": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 864677,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "30": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 955098,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "32": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 987979,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "40": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1023366,\n' +
+    '      "length": 15186\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "42": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1038552,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "45": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1057500,\n' +
+    '      "length": 21455\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "47": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1078955,\n' +
+    '      "length": 23127\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "50": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1116013,\n' +
+    '      "length": 15186\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "52": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1150148,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "53": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1169096,\n' +
+    '      "length": 21455\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "60": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1205736,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "70": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1262998,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "80": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1347151,\n' +
+    '      "length": 12678\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "90": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1448999,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "100": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 215815,\n' +
+    '      "length": 13933\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "120": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 308194,\n' +
+    '      "length": 21456\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "140": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 399177,\n' +
+    '      "length": 21456\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "180": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 615978,\n' +
+    '      "length": 21456\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "235": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 791949,\n' +
+    '      "length": 28144\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "240": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 840295,\n' +
+    '      "length": 24382\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "250": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 883625,\n' +
+    '      "length": 24382\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "300": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 969030,\n' +
+    '      "length": 18949\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "500": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1131199,\n' +
+    '      "length": 18949\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1000": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 229748,\n' +
+    '      "length": 15188\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1500": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 454770,\n' +
+    '      "length": 28145\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "2026": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 722147,\n' +
+    '      "length": 31906\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "2580": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 908007,\n' +
+    '      "length": 34414\n' +
+    '    }\n' +
+    '  ],\n' +
+    `  "'s": [\n` +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 0,\n' +
+    '      "length": 12678\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 24101,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "001": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 44303,\n' +
+    '      "length": 23128\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "01": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 67431,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "03": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 83871,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "04.00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 100311,\n' +
+    '      "length": 20205\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "08": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 120516,\n' +
+    '      "length": 11424\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "08.00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/klink10-messages-texts-20261103/audio-0ddfd57d990a8d1a.bin",\n' +
+    '      "offset": 2693190,\n' +
+    '      "length": 61640\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "09": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 131940,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "09.15": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/klink10-messages-texts-20261103/audio-0ddfd57d990a8d1a.bin",\n' +
+    '      "offset": 2754830,\n' +
+    '      "length": 102610\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1,6": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 162312,\n' +
+    '      "length": 24382\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "10.00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 198118,\n' +
+    '      "length": 17697\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "11.00": [\n' +
+    '    {\n' +
+    '      "s'... 1455107 more characters,
+  expected: '{\n' +
+    '  "0": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 12678,\n' +
+    '      "length": 11423\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 152142,\n' +
+    '      "length": 10170\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "2": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 675333,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "3": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 942421,\n' +
+    '      "length": 12677\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "4": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1008181,\n' +
+    '      "length": 15185\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "5": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1102082,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "6": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1190551,\n' +
+    '      "length": 15185\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "7": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1222176,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "8": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1281946,\n' +
+    '      "length": 11423\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "9": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1359829,\n' +
+    '      "length": 13931\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "10": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 186694,\n' +
+    '      "length": 11424\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "11": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 244936,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "12": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 277819,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "13": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 329650,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "14": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 365040,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "15": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 420633,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "16": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 482915,\n' +
+    '      "length": 15186\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "17": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 519559,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "18": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 585603,\n' +
+    '      "length": 12678\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "19": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 637434,\n' +
+    '      "length": 17694\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "20": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 689264,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "21": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 754053,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "22": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 773001,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "23": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/klink10-listening-20261102/audio-bff51a666ba16e1d.bin",\n' +
+    '      "offset": 808459,\n' +
+    '      "length": 18143\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "24": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 820093,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "25": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 864677,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "30": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 955098,\n' +
+    '      "length": 13932\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "32": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 987979,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "40": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1023366,\n' +
+    '      "length": 15186\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "42": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1038552,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "45": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1057500,\n' +
+    '      "length": 21455\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "47": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1078955,\n' +
+    '      "length": 23127\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "50": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1116013,\n' +
+    '      "length": 15186\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "52": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1150148,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "53": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1169096,\n' +
+    '      "length": 21455\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "60": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1205736,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "70": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1262998,\n' +
+    '      "length": 18948\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "80": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1347151,\n' +
+    '      "length": 12678\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "90": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1448999,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "100": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 215815,\n' +
+    '      "length": 13933\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "120": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 308194,\n' +
+    '      "length": 21456\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "140": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 399177,\n' +
+    '      "length": 21456\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "180": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 615978,\n' +
+    '      "length": 21456\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "235": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 791949,\n' +
+    '      "length": 28144\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "240": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 840295,\n' +
+    '      "length": 24382\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "250": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 883625,\n' +
+    '      "length": 24382\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "300": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 969030,\n' +
+    '      "length": 18949\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "500": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 1131199,\n' +
+    '      "length": 18949\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1000": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 229748,\n' +
+    '      "length": 15188\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1500": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 454770,\n' +
+    '      "length": 28145\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "2026": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 722147,\n' +
+    '      "length": 31906\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "2580": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 908007,\n' +
+    '      "length": 34414\n' +
+    '    }\n' +
+    '  ],\n' +
+    `  "'s": [\n` +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 0,\n' +
+    '      "length": 12678\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 24101,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "001": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 44303,\n' +
+    '      "length": 23128\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "01": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 67431,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "03": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 83871,\n' +
+    '      "length": 16440\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "04.00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 100311,\n' +
+    '      "length": 20205\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "08": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 120516,\n' +
+    '      "length": 11424\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "08.00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/klink10-messages-texts-20261103/audio-0ddfd57d990a8d1a.bin",\n' +
+    '      "offset": 2693190,\n' +
+    '      "length": 61640\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "09": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 131940,\n' +
+    '      "length": 20202\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "09.15": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/klink10-messages-texts-20261103/audio-0ddfd57d990a8d1a.bin",\n' +
+    '      "offset": 2754830,\n' +
+    '      "length": 102610\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "1,6": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 162312,\n' +
+    '      "length": 24382\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "10.00": [\n' +
+    '    {\n' +
+    '      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin",\n' +
+    '      "offset": 198118,\n' +
+    '      "length": 17697\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  "11.00": [\n' +
+    '    {\n' +
+    '      "s'... 1455222 more characters,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

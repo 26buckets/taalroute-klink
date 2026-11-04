@@ -1,0 +1,1 @@
+De eerste lokale unit/bouwproef wees terecht op een ontbrekende afgeleide woordaudio-index. De bestaande build-word-listening.mjs-route heeft uitsluitend Rina toegevoegd aan data/klink-word-listening.json; alle eerdere koppelingen gelijk. Geen gewijzigde opname, compilerconfiguratie of omzeiling. Daarna unitproeven en gewone bouw geslaagd.
