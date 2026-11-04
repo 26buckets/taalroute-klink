@@ -1,3 +1,17 @@
+## Actuele publicatie — 36 woorddictees Spelling A1, A2 en B1 — 4 november 2026
+
+Livebron `1d053db52c07b02f8c3efe9dd86e7a6a16cbcee5`, Worker `8b44da9d-0cb0-4d02-a5d8-140ff3021eaf`, vanaf `a06134aa42fe8fe646e8abfa87709ff3bdaaa216` met behoud van de tien vernieuwde Alfa B-opdrachten. Zes rondes via Spelling → Hoor en typ en de bestaande dicteerroute van Schrijven. De 36 bron-ID’s zijn 1:1 de oefening- en antwoordsleutels. Bron, antwoordsleutel, feedback en criteria zijn vastgelegd in `docs/spelling-dictation-20261104`; de redactionele aanpassing voor ‘herinnering’ is afzonderlijk geregistreerd.
+
+Antwoord invoeren kan na afspelen. Bij een eerste fout antwoord verschijnt de bronfeedback met het juiste woord. Het eerste en laatste antwoord en concept blijven bewaard; opslag geeft geen beheersingsscore. Lokaal en live 144 antwoordstromen met native afspelen in twee browsers en twee schermbreedtes, plus 12 proeven op één blad. De eerdere dicteerbeoordeling en de tien Alfa B-bronvelden bleven behouden. Geen wijziging aan CSS, routeconfiguratie, Actions of database.
+
+De 37 bestaande opnamen zijn bytegelijk hergebruikt en live teruggelezen, inclusief merkmetadata en volledige audiodecode. Geen nieuwe opnamen of statische bestanden. 20000 statische bestanden aangeboden via de normale publicatieroute. De desktop-/mobiele controle heeft de lichte en donkere browserstand meegenomen; geen onafhankelijke menselijke NT2-/luisterreview of fysieke toestelproef geclaimd.
+
+Bron- en herstelback-up Drive `1DOdY-WNqnoR-59303dz4zIv4oSEgxm3W`: 2972501 bytes, 82 bestanden, SHA-256 `a0717c460888368aa4c8c267ad952b3e4e4687ab8a51e0d1880823dbd12ee056`. Eindbewijs Drive `1SslESG0KtJ7Z496pMY0NLEzZvO00uLpf`: 2986365 bytes, 17 bestanden, SHA-256 `5eda1af435c7120029a28ce263b1bfd0d54c09be6f739b2f21048c97dfb1d9c5`. Beide volledig teruggelezen met ZIP- en manifestcontrole. Deze bewijsopvolger niet opnieuw deployen.
+
+Spelling: 36/396 live en 360 open voor brongebonden afhandeling. Het zelfstandige Schrijven-register 140/540 en het eerdere 780/880-register zijn afzonderlijk; geen optelling. De 100 beeldgebonden schrijfopdrachten en overige bronreeksen staan in het afzonderlijke openwerkoverzicht.
+
+---
+
 ## Actuele publicatie — tien Alfa B Schrijven oefenen — 4 november 2026
 
 Livebron `a06134aa42fe8fe646e8abfa87709ff3bdaaa216`, Worker `340d3e40-9eeb-4172-bc0c-32789395cff6`. KSW-N26R2-AB-SO-001 t/m 010 gepubliceerd via de volledige gewone publicatiepoort en `npm run deploy` vanuit schone canonieke main. Beide actuele Drive-documenten opnieuw volledig bytegelijk teruggelezen. Alle tien situatiegerichte instructies en voorbeeldfeedback vervangen de oude overschrijfinstructies; modellen en criteria behouden. De selectie bevat extra review-/slotmetadata, geen afwijkende taakvelden. 328 bestaande open schrijftaken vergeleken: tien nieuwe brongebonden vragen, geen claim van tien unieke nieuwe situaties.
