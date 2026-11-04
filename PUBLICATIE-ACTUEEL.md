@@ -1,3 +1,19 @@
+## Actuele publicatie — tien Alfa C-zinnendictees — 4 november 2026
+
+Livebron `d22ac40961200ae8dbdc26a175e239d91ce8fed9`, Worker `b19d3cb2-f3b8-4eb1-8f98-886ec82b2a2c`. KSW-N26R2-AC-TZ-001 t/m 010 zijn gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. De doelzin blijft verborgen vóór het nakijken; expliciete toegestane antwoordvarianten worden geaccepteerd, inclusief acht/8 uitsluitend waar de bron dat toelaat. Eerste/laatste antwoorden en concepten blijven bewaard. De bestaande invoeropzet blijft staan. Dit zijn tien bronposities, geen claim van tien unieke nieuwe situaties of handschriftvaardigheid.
+
+Elf bestaande opnamen hergebruikt als exacte MP3-segmenten via de bestaande media-API; nul nieuwe TTS, hercodering of beelden. De oorspronkelijke bundel blijft herstelbron. Instructie Roland en doelstem Remko blijven verschillend. De oorspronkelijke controle op toegestane gebundelde audio-URL's is behouden. Een eerdere lokale kandidaat met een ongeschikte gebundelde API-URL is afgewezen en bewaard; die versie is nooit gepubliceerd.
+
+Lokaal en live veertig antwoord-/opslagstromen, waaronder vier concept-herlaadstromen, 22 native afspeelafrondingen, elf exacte aangeboden opnamen met Taalroute-metadata en elf HTTP-gevallen geslaagd. Lokaal acht oude schermparen pixelgelijk en zestien oude antwoord-/opslagstromen behouden. Eerste afwijkende opnamen vóór het einde van knoptransities zijn bewaard; gerichte vervolgvergelijkingen gebruiken geen masker of tolerantie. Alle 20.106 oude publicbestanden bytegelijk; uitsluitend de expliciete antwoordvariantreparatie raakt gedeelde runtime, alle overige componenten, CSS, routes, opslag en oude audio behouden. Vijf historische inhoudsmarkeringen live gelijk. Gewone opvolgpoort en zes negatieve mutatieproeven slagen; geen historisch akkoord gewijzigd.
+
+Werkelijk 17 nieuwe + 19.983 behouden = 20.000 aangeboden assets; Worker 35981.39 KiB / gzip 6098.46 KiB. Geen configuratie-, ignore-, limiet-, budget-, D1- of GitHub Actions-wijzigingen. Lokale start-/bouwfouten zijn behouden; uitsluitend de afgeronde gebouwde-Worker-proeven tellen.
+
+Bronback-up Drive `1Od5JiFHVV5YqnST0bL-DGSzhx2gSFp3D`: 3.723.764 bytes, 105 payloads exact teruggelezen. Eindbewijs Drive `19jjUQ_i7iQ6P-TjeBxumalZ2RUEbRfvb`: 4.195.176 bytes, 30 buitenste en 105 geneste payloads plus manifesten en hele ZIP exact teruggelezen. Zie `docs/dictation-ac-ready10-20261104/postflight/publication.json` en `backup-readback.json`. Deze docs-opvolger niet opnieuw deployen.
+
+Schrijven 100/540 bronposities behandeld: 40 nieuw, 50 hergebruikt en 10 herzien; externe 780/880 blijft apart. Nog veertig voorbereide schrijftaken; volgende reeks: Alfa C Vul een berichtkaart in. Aanvullende grammatica blijft 16/40 live, 24 open; woordbeeldenachterstand 232. Geen nieuwe onafhankelijke menselijke luister-/NT2-review of fysieke-apparaatproef uitgevoerd. Performance-PR10 en Inzicht-PR1 blijven buiten deze publicatie.
+
+---
+
 ## Actuele publicatie — tien Alfa C-letteropdrachten — 4 november 2026
 
 Livebron `054739501d803509844d5c0c18e0e77ec7b8b098`, Worker `d0256c10-4a8d-4070-b272-311a42acdc92`. KSW-N26R2-AC-WL-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Schrijf de letter · Namen vraagt de eerste hoofdletter van de bestaande naam of plaats. Tien nieuwe brongebonden vragen; geen claim van nieuwe unieke namen, handschriftvaardigheid of zelfstandig lezen. Bestaande opnamen hergebruikt, inclusief de al voorbereide Rina-opname; nul nieuwe TTS, hercodering of beelden.
