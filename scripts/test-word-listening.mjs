@@ -89,9 +89,10 @@ test('Packed recordings require the exact byte range and retain a full-response 
   assert.deepEqual(Buffer.from(await (await fetchWordRecording(source, controller.signal)).arrayBuffer()), bytes);
   globalThis.fetch = async () => new Response(Buffer.concat([Buffer.alloc(12),bytes]));
   assert.deepEqual(Buffer.from(await (await fetchWordRecording(source, controller.signal)).arrayBuffer()), bytes);
+  let invalidResponse = 0;
   for (const response of [new Response(bytes,{status:206}),new Response(bytes,{status:206,headers:{'Content-Range':'bytes 0-3/4'}}),new Response('ID3short'),new Response(bytes,{status:404}),new Response(Buffer.alloc(bytes.length),{status:206,headers:{'Content-Range':`bytes 12-${11+bytes.length}/${12+bytes.length}`}})]) {
     globalThis.fetch = async () => response;
-    await assert.rejects(fetchWordRecording(source, controller.signal));
+    await assert.rejects(fetchWordRecording({...source, src: `/package-audio/word-listening-20261101/words-${(++invalidResponse).toString(16).padStart(16, '0')}.bin`}, controller.signal));
   }
   let fetched = false;
   globalThis.fetch = async () => { fetched = true; throw new Error('unexpected fetch'); };
@@ -102,7 +103,7 @@ test('Packed recordings require the exact byte range and retain a full-response 
 test('Packed WAV models retain their original bytes and real media type in partial and complete responses', async t => {
   const original = globalThis.fetch;
   t.after(() => { globalThis.fetch = original; });
-  const bytes = Buffer.concat([Buffer.from('RIFF'), Buffer.alloc(4), Buffer.from('WAVE'), Buffer.alloc(20)]), source = {src:'/package-audio/word-listening-20261101/words-0123456789abcdef.bin',offset:7,length:bytes.length};
+  const bytes = Buffer.concat([Buffer.from('RIFF'), Buffer.alloc(4), Buffer.from('WAVE'), Buffer.alloc(20)]), source = {src:'/package-audio/word-listening-20261101/words-fedcba9876543210.bin',offset:7,length:bytes.length};
   for (const complete of [false,true]) {
     globalThis.fetch = async () => complete ? new Response(Buffer.concat([Buffer.alloc(7),bytes])) : new Response(bytes,{status:206,headers:{'Content-Range':`bytes 7-${6+bytes.length}/${7+bytes.length}`}});
     const clip = await fetchWordRecording(source,new AbortController().signal);
@@ -110,6 +111,6 @@ test('Packed WAV models retain their original bytes and real media type in parti
   }
   for(const bad of [Buffer.from('RIFFxxxxxxxx-not-wave-audio'),Buffer.from('RIFF0000AVI xxxxxxxxxxxx')]) {
     globalThis.fetch = async () => new Response(bad,{status:206,headers:{'Content-Range':`bytes 7-${6+bad.length}/${7+bad.length}`}});
-    await assert.rejects(fetchWordRecording({...source,length:bad.length},new AbortController().signal));
+    await assert.rejects(fetchWordRecording({...source,src:'/package-audio/word-listening-20261101/words-fedcba9876543211.bin',length:bad.length},new AbortController().signal));
   }
 });

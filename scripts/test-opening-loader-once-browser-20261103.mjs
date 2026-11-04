@@ -5,16 +5,15 @@ import { build } from 'esbuild';
 import sharp from 'sharp';
 import { chromium, webkit } from 'playwright';
 
-const out = 'docs/opening-loader-once-20261103/local';
+const out = process.env.KLINK_LOADER_TEST_OUTPUT || 'docs/opening-loader-once-20261103/local';
 mkdirSync(out, { recursive: true });
 const bundled = await build({
-  stdin: { contents: `import React, {StrictMode, useState, useCallback} from 'react';
+  stdin: { contents: `import React, {StrictMode, useState} from 'react';
     import {createRoot} from 'react-dom/client';
     import {KlinkOpeningLoader} from './components/product/klink-opening-loader';
-    function Test(){const [key,setKey]=useState(0),[done,setDone]=useState(0);
-      const complete=useCallback(()=>setDone(n=>n+1),[]);
+    function Test(){const [key,setKey]=useState(0);
       return <><button onClick={()=>setKey(n=>n+1)}>Volgend laadmoment</button>
-        <span id="done">{done}</span><KlinkOpeningLoader key={key} onComplete={complete}/></>}
+        <KlinkOpeningLoader key={key}/></>}
     createRoot(document.getElementById('root')).render(<StrictMode><Test/></StrictMode>);`,
     resolveDir: process.cwd(), loader: 'tsx' },
   bundle: true, format: 'esm', jsx: 'automatic', write: false,
@@ -50,7 +49,7 @@ try {
         assert((await logo.getAttribute('src')).includes('/opening-loader-quick-'));
         await page.waitForTimeout(250);
         const moving = await pixels(await logo.screenshot());
-        await page.locator('#done').filter({ hasText: /^1$/ }).waitFor();
+        await page.waitForTimeout(2000);
         const final = await logo.screenshot();
         assert.equal(moving.equals(await pixels(final)), reducedMotion === 'reduce', 'Animation moves once; reduced motion stays still');
         for (let remount = 0; remount < 2; remount++) {
@@ -63,15 +62,14 @@ try {
         // Keep the later loader visible past a full animation cycle.
         await page.waitForTimeout(2200);
         assert((await pixels(final)).equals(await pixels(await logo.screenshot())), 'Final frame must remain still');
-        assert.equal(await page.locator('#done').innerText(), '2', 'Cancelled timers must not complete after unmount, including StrictMode');
         await logo.screenshot({ path: `${out}/${engine}-${width}-${reducedMotion}-${colorScheme}.png` });
-        checks.push({ engine, width, reducedMotion, colorScheme, remounts: 2, finalFrameIdentical: true, completionPreserved: true });
+        checks.push({ engine, width, reducedMotion, colorScheme, remounts: 2, finalFrameIdentical: true, readyDriven: true });
         await page.close();
       }
     } finally { await browser.close(); }
   }
   assert.deepEqual(errors, []);
-  console.log(`PASS ${checks.length} real component cases: first animation, repeated mounts, final pixels, reduced motion, completion/cancellation`);
+  console.log(`PASS ${checks.length} real component cases: first animation, repeated mounts, final pixels, reduced motion, no completion timer`);
 } finally {
   server.close();
   writeFileSync(`${out}/checks.json`, JSON.stringify({ checks, errors, physicalDevicesTested: false }, null, 2) + '\n');

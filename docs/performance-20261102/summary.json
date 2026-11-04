@@ -1,0 +1,140 @@
+{
+  "baseline": {
+    "entry": {
+      "ready_ms": 2321,
+      "next_ms": 1992,
+      "n": 24
+    },
+    "learner": {
+      "ready_ms": 3680,
+      "next_ms": 54,
+      "n": 24
+    },
+    "docent": {
+      "ready_ms": 2471,
+      "next_ms": 30,
+      "n": 24
+    }
+  },
+  "ready-only": {
+    "entry": {
+      "ready_ms": 110,
+      "next_ms": 1971,
+      "n": 24
+    },
+    "learner": {
+      "ready_ms": 2434,
+      "next_ms": 53,
+      "n": 24
+    },
+    "docent": {
+      "ready_ms": 970,
+      "next_ms": 35,
+      "n": 24
+    }
+  },
+  "split": {
+    "entry": {
+      "ready_ms": 104,
+      "next_ms": 1744,
+      "n": 24
+    },
+    "learner": {
+      "ready_ms": 2127,
+      "next_ms": 72,
+      "n": 24
+    },
+    "docent": {
+      "ready_ms": 959,
+      "next_ms": 44,
+      "n": 24
+    }
+  },
+  "final": {
+    "entry": {
+      "ready_ms": 106,
+      "next_ms": 1734,
+      "n": 24
+    },
+    "learner": {
+      "ready_ms": 2137,
+      "next_ms": 88,
+      "n": 24
+    },
+    "docent": {
+      "ready_ms": 957,
+      "next_ms": 43,
+      "n": 24
+    }
+  },
+  "current-baseline": {
+    "entry": {
+      "ready_ms": 2334,
+      "next_ms": 1974,
+      "n": 24
+    },
+    "learner": {
+      "ready_ms": 3696,
+      "next_ms": 86,
+      "n": 24
+    },
+    "docent": {
+      "ready_ms": 2497,
+      "next_ms": 37,
+      "n": 24
+    }
+  },
+  "delivery": {
+    "entry": {
+      "ready_ms": 122,
+      "next_ms": 1734,
+      "n": 24
+    },
+    "learner": {
+      "ready_ms": 2128,
+      "next_ms": 83,
+      "n": 24
+    },
+    "docent": {
+      "ready_ms": 946,
+      "next_ms": 43,
+      "n": 24
+    }
+  },
+  "audio": {
+    "audio-before": {
+      "requests": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "bytes_per_session": 6266631
+    },
+    "delivery-audio": {
+      "requests": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "bytes_per_session": 2088877
+    }
+  }
+}

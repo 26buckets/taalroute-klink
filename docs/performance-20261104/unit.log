@@ -1,0 +1,23 @@
+✔ Full fallback reuses exact bytes for another word and repeat; already-aborted playback never fetches (12.58575ms)
+✔ Eight MiB budget evicts least recently used complete bundles (7.588583ms)
+✔ Invalid and cancelled downloads cannot poison later playback (0.518458ms)
+✔ Partial replies still require their exact range and never masquerade as a full bundle (0.560708ms)
+✔ A later word revealing a truncated cached bundle can recover on retry (0.305458ms)
+✔ Concurrent complete downloads count a retained bundle only once (2.808416ms)
+✔ Complete mixed bundles reuse WAV and MP3 without changing bytes or MIME (0.7995ms)
+✔ Dutch word boundaries preserve accents, contractions and compounds (8.002083ms)
+✔ A phrase recording is never presented as the sound of an individual word (0.085458ms)
+✔ All twenty newly published reviewed word forms keep their native recording (49.137959ms)
+✔ Image words retain their exact source and account for contained image margins (3.999042ms)
+✔ All existing single-word recordings remain available without stemming or guessed spellings (11.216958ms)
+✔ The index is reproducible and contains only existing allowed recording paths (59.080542ms)
+✔ Packed recordings require the exact byte range and retain a full-response fallback (9.030625ms)
+✔ Packed WAV models retain their original bytes and real media type in partial and complete responses (0.592333ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 369.219708

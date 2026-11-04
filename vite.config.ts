@@ -31,6 +31,14 @@ export default defineConfig(async () => {
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
   return {
+    // Keep tiny shared UI modules together within the existing asset limit.
+    environments: { client: { build: { rolldownOptions: { output: {
+      codeSplitting: { groups: [{
+        name: 'shared-ui',
+        test: /(?:node_modules\/lucide-react\/|components\/product\/(?:manual-legacy-link|motion-feedback)\.tsx$)/,
+        includeDependenciesRecursively: false,
+      }] },
+    } } } } },
     css: { postcss: { plugins: [tailwindcss()] } },
     server: { watch: {
       ignored: ['**/outputs/**', '**/docs/**'],

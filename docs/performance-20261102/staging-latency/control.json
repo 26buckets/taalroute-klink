@@ -1,0 +1,102 @@
+[
+  {
+    "http_code": 401,
+    "time_appconnect": 0.05452,
+    "time_pretransfer": 0.054566,
+    "time_starttransfer": 1.484655,
+    "time_total": 1.493468,
+    "label": "staging",
+    "repeat": 0,
+    "headers": [
+      "server-timing: inzicht;dur=0.0",
+      "cf-ray: a5446977f8bbbd42-LHR"
+    ]
+  },
+  {
+    "http_code": 200,
+    "time_appconnect": 0.069731,
+    "time_pretransfer": 0.069781,
+    "time_starttransfer": 0.138479,
+    "time_total": 0.138849,
+    "label": "current",
+    "repeat": 0,
+    "headers": [
+      "cf-ray: a54469819bd3d127-CDG"
+    ]
+  },
+  {
+    "http_code": 401,
+    "time_appconnect": 0.034508,
+    "time_pretransfer": 0.034568,
+    "time_starttransfer": 2.710878,
+    "time_total": 2.711046,
+    "label": "staging",
+    "repeat": 1,
+    "headers": [
+      "server-timing: inzicht;dur=0.0",
+      "cf-ray: a54469825e790a4f-AMS"
+    ]
+  },
+  {
+    "http_code": 200,
+    "time_appconnect": 0.063471,
+    "time_pretransfer": 0.063513,
+    "time_starttransfer": 0.174481,
+    "time_total": 0.174825,
+    "label": "current",
+    "repeat": 1,
+    "headers": [
+      "cf-ray: a54469939f2a76d5-LHR"
+    ]
+  },
+  {
+    "http_code": 401,
+    "time_appconnect": 0.051457,
+    "time_pretransfer": 0.051498,
+    "time_starttransfer": 1.337538,
+    "time_total": 1.337657,
+    "label": "staging",
+    "repeat": 2,
+    "headers": [
+      "server-timing: inzicht;dur=0.0",
+      "cf-ray: a5446994acf91ddf-LHR"
+    ]
+  },
+  {
+    "http_code": 200,
+    "time_appconnect": 0.065774,
+    "time_pretransfer": 0.065814,
+    "time_starttransfer": 0.193697,
+    "time_total": 0.193801,
+    "label": "current",
+    "repeat": 2,
+    "headers": [
+      "cf-ray: a544699d2df23075-LHR"
+    ]
+  },
+  {
+    "http_code": 401,
+    "time_appconnect": 0.039898,
+    "time_pretransfer": 0.039939,
+    "time_starttransfer": 1.271693,
+    "time_total": 1.271846,
+    "label": "staging",
+    "repeat": 3,
+    "headers": [
+      "server-timing: inzicht;dur=0.0",
+      "cf-ray: a544699e38befba0-AMS"
+    ]
+  },
+  {
+    "http_code": 200,
+    "time_appconnect": 0.067768,
+    "time_pretransfer": 0.067812,
+    "time_starttransfer": 0.164546,
+    "time_total": 0.164649,
+    "label": "current",
+    "repeat": 3,
+    "headers": [
+      "cf-ray: a54469a66e878867-LHR"
+    ]
+  }
+]

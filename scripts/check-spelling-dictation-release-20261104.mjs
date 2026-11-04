@@ -1,3 +1,4 @@
+import {verifyPerformanceRelease,readBeforePerformance} from './check-performance-release-20261104.mjs';
 import assert from 'node:assert/strict';
 import {existsSync,readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,13 +9,13 @@ const roots=['app','components','hooks','data','lib','public','scripts','db','dr
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),sort=a=>a.sort((x,y)=>x.localeCompare(y)),lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const holdPath='docs/spelling-hold-restoration-20261104/';
 const holdApproval='docs/klink-owner-spelling-hold-restoration-20261104.json';
-function verifyRestoredHold(read){
+function verifyRestoredHold(read,successor){
  if(!existsSync(holdApproval))return null;
  const json=p=>JSON.parse(read(p)),h=json(holdApproval),live=json(holdPath+'baseline-live-release.json'),base=h.baselineSourceCommit,old=p=>git('show',base+':'+p);
  assert.equal(h.status,'RESTORE_SOURCE_HOLD_NO_PUBLICATION_APPROVAL');
  assert.equal(live.sourceCommit,h.liveSourceCommit);assert(live.sourceClean&&live.branch==='main');
  git('merge-base','--is-ancestor',h.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,sort(Object.keys(h.files)));
  assert.deepEqual(changed,['data/klink-grammar-aa-assets.json','data/klink-production-index.json','scripts/check-spelling-dictation-release-20261104.mjs','scripts/test-production-bank-reader.mjs']);
  for(const[p,digest] of Object.entries({...h.files,...h.evidenceFiles}))assert.equal(sha(read(p)),digest,p);
@@ -33,7 +34,8 @@ function verifyRestoredHold(read){
  return {...h,changedFiles:changed};
 }
 export function verifySpellingDictationRelease(read=readFileSync){
- const current=read,held=verifyRestoredHold(current);
+ const successor=verifyPerformanceRelease(read),currentRead=read;read=file=>readBeforePerformance(file,successor,currentRead);
+ const current=read,held=verifyRestoredHold(current,successor);
  if(held)read=file=>readBeforeSpellingDictation(file,held,current);
  const json=p=>JSON.parse(read(p)),r=json(approval),m=json(root+'import-manifest.json'),policy='docs/klink-invullen-20261101/automatic-owner-approval.json',owner=json(policy),base=r.baselineSourceCommit,old=p=>git('show',base+':'+p);
  assert.equal(r.approvedBy,'Nico');assert.equal(r.standingPolicySha256,sha(read(policy)));assert.equal(r.approvalKind,'standing-owner-approval');assert(r.publicationApproved&&owner.automaticOwnerApproval&&owner.automaticPublicationApproval&&!owner.mayInventHumanReviewEvidence);
@@ -64,6 +66,6 @@ export function verifySpellingDictationRelease(read=readFileSync){
  assert.equal(json(root+'local/media.json').checks.length,37);assert.equal(json(root+'local/sheet.json').checks.length,12);assert(json(root+'source-drive-proof.json').wholeZipReadBack);
  assert.equal(sha(read('public'+reuse.instruction.src)),reuse.instruction.sha256);
  const v=json(root+'verification.json');assert(v.types&&v.coreTests&&v.build&&v.priorAssetsPreserved&&v.fixedAppearancePreserved);assert.equal(v.offeredStaticAssets,20000);assert.equal(v.missingWordAudio,0);
- const backup=json(root+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
+ const backup=json(root+'backup.json');assert(backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,successor};
 }
-export function readBeforeSpellingDictation(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeSpellingDictation(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):r.successor?readBeforePerformance(file,r.successor,read):read(file);}

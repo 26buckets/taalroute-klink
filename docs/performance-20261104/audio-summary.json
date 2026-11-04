@@ -1,0 +1,71 @@
+{
+  "controlledFullResponseDelayMs": 100,
+  "rows": [
+    {
+      "format": "MP3",
+      "before": {
+        "sessions": 12,
+        "requestsPerThreePlays": [
+          3
+        ],
+        "bytesPerThreePlays": [
+          6266631
+        ],
+        "medianNativePlayingMs": [
+          258.10000002384186,
+          195.40000000596046,
+          213.40000000596046
+        ],
+        "source": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin"
+      },
+      "after": {
+        "sessions": 12,
+        "requestsPerThreePlays": [
+          1
+        ],
+        "bytesPerThreePlays": [
+          2088877
+        ],
+        "medianNativePlayingMs": [
+          215.09999999403954,
+          142.05000001192093,
+          145.19999998807907
+        ],
+        "source": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin"
+      }
+    },
+    {
+      "format": "WAV",
+      "before": {
+        "sessions": 12,
+        "requestsPerThreePlays": [
+          3
+        ],
+        "bytesPerThreePlays": [
+          9139086
+        ],
+        "medianNativePlayingMs": [
+          264.39999997615814,
+          218.2999999821186,
+          215.55000001192093
+        ],
+        "source": "/package-audio/klink10-messages-texts-20261103/audio-96aac17d6451aa7b.bin"
+      },
+      "after": {
+        "sessions": 12,
+        "requestsPerThreePlays": [
+          1
+        ],
+        "bytesPerThreePlays": [
+          3046362
+        ],
+        "medianNativePlayingMs": [
+          269.65000000596046,
+          145.9500000178814,
+          147.65000000596046
+        ],
+        "source": "/package-audio/klink10-messages-texts-20261103/audio-96aac17d6451aa7b.bin"
+      }
+    }
+  ]
+}
