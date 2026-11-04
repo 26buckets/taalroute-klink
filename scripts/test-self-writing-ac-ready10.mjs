@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {validateProductionCollection,productionIndex} from '../lib/production-practice.ts';
+import {chapterCollections} from '../lib/practice-chapters.ts';
+const d='docs/self-writing-ac-ready10-20261104',m=JSON.parse(readFileSync(d+'/manifest.json')),s=JSON.parse(readFileSync(d+'/selected-items.json')),reuse=JSON.parse(readFileSync(d+'/reuse-candidates.json')),bank=JSON.parse(readFileSync(d+'/source-bank.json'));
+assert.deepEqual(productionIndex.find(x=>x.id===m.row.id),m.row);assert.equal(chapterCollections('write').find(x=>x.id===m.row.id).exerciseCount,10);assert.equal(validateProductionCollection(bank,m.row.id,10).length,10);
+for(const [i,e]of bank.exercises.entries()){const mapping=m.mapping[i],source=s[i];assert.equal(mapping.sourceId,source.sourceId);assert.equal(e.exerciseId,mapping.canonicalId);assert.equal(e.sourceFreeWriting,true);assert.equal(e.assessment,'participation');assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);assert.equal(e.requiresExplicitCompletion,true);assert.equal(e.manualAdvance,true);assert.equal(e.accepted,undefined);
+if(mapping.kind==='existing-canonical-reuse'){const c=reuse.find(c=>c.targetId===e.exerciseId);assert.deepEqual(e,c.bank.exercises.find(x=>x.exerciseId===e.exerciseId));}
+else{assert.equal(e.sourceWritingContext,source.instruction);assert.equal(e.sourceWritingExamples[0].text,source.example);assert.deepEqual(e.sourceWritingCriteria,source.context.split('Controleer na het schrijven: ')[1].replace(/\.$/,'').split('; '));assert.equal(e.title,m.instructionReuse.text);assert.equal(e.instructionAudio.src,m.instructionReuse.src);}}
+assert.equal(m.mapping.filter(x=>x.kind==='new-source-bound-question').length,8);assert.equal(m.mapping.filter(x=>x.kind==='existing-canonical-reuse').length,2);console.log('Ten source positions, eight source-bound questions, two byte-equivalent canonical reuses and honest self-review validated.');

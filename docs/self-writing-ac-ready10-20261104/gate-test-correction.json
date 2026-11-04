@@ -1,0 +1,1 @@
+{"firstAttempt":"Content and six negative cases passed; test-only expected the latest baseline when parent historically changed the same bank-count test.","correction":"Compare parent reader to its own baseline for parent-owned files; otherwise successor baseline. Production gate unchanged.","originalFailure":"assert(readBeforeMessageCardAcReady10(file,parent).equals(expected))"}

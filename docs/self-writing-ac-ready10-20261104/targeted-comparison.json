@@ -1,0 +1,195 @@
+{
+  "checkedAt": "2026-11-03T04:49:19.942514+00:00",
+  "state": "TARGETED_SOURCE_AND_EXISTING_EQUIVALENTS_VERIFIED_PENDING_SELECTED_BINDING",
+  "selectedDriveSource": {
+    "id": "1GPKZxvJqZypCO-GkyDGHV7k7LX3wFz4B5D7ZGFp3RYc",
+    "modifiedTime": "2026-11-02T00:07:45.527Z",
+    "revisionUnchanged": true,
+    "fullTextSha256": "69838e71144c3b4382a038936c8cb7f82c06c1cdcecde4573a6fad6d17c05954",
+    "docxSha256": "5bc09f3686a0c41713ffa1a464bbb55c21374eb14c9d8382e9b595dbc7e3ca44"
+  },
+  "externalSources": [
+    {
+      "id": "1qJDp_GNt-aiXzBKXb6U_OLRWWJtbpEMjnuqGJDT-JVk",
+      "modified": "2026-11-01T11:56:29.566Z",
+      "docxSha256": "6c2b5f132b88c7f1d5605416d19b64dafbdb7bf2f62c988830dcaf7921b5f771",
+      "textSha256": "3f0cb42515b25bda691c039cb903054ba7a4ef64725a12feefb20340543e4845"
+    },
+    {
+      "id": "1szkt-KzpFX-9pONPxmEmzwFjh5a5E7CSnphWbXHiczI",
+      "modified": "2026-11-01T12:00:46.410Z",
+      "docxSha256": "eb0d0620ed9820b296c66ec5847f6de8237d0be74a63880e66e0ac12966d90d7",
+      "textSha256": "1fdf79445409bb72b8cd941baa841484b6e49cbcdaa14036afb2b7b3bfa5f116"
+    }
+  ],
+  "comparisonScope": {
+    "level": "alfa-c",
+    "activities": [
+      "write",
+      "functional-message"
+    ],
+    "collections": 45,
+    "canonicalExercises": 300,
+    "sourcePositions": 10
+  },
+  "checks": [
+    {
+      "sourceId": "KSW-N26R2-AC-SO-001",
+      "instruction": "Schrijf wanneer je een afspraak hebt: maandag om tien uur.",
+      "example": "Ik heb maandag om tien uur een afspraak.",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-TZ-012",
+      "equivalent": false,
+      "equivalenceReason": "Geen maandag in de bestaande opdracht; de geselecteerde opdracht vereist maandag, tien uur en een afspraak.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-002",
+      "instruction": "Je bus is laat. Schrijf een kort bericht dat je later komt.",
+      "example": "Ik kom later, want de bus is laat.",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-SB-011",
+      "equivalent": false,
+      "equivalenceReason": "Bestaand bericht vereist twintig minuten vertraging, werk en Bram; geselecteerd vraagt alleen later komen doordat de bus laat is.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-003",
+      "instruction": "Je wilt weten wanneer de les begint. Schrijf een vraag.",
+      "example": "Hoe laat begint de les?",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-TZ-025",
+      "equivalent": true,
+      "equivalenceReason": "Dezelfde vraag naar de begintijd van de les, met natuurlijke alternatieven en zelf-/docentcontrole; actuele bron heeft zowel directe als beleefde vraag.",
+      "decision": "REUSE_EXISTING_CANONICAL_ID_PENDING_SELECTED_BINDING",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-004",
+      "instruction": "Schrijf wat je graag wilt drinken.",
+      "example": "Ik wil graag water drinken.",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-TZ-006",
+      "equivalent": false,
+      "equivalenceReason": "Bestaand vraagt specifiek water en beginnen met Ik; geselecteerd laat de drankkeuze vrij.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-005",
+      "instruction": "Schrijf wat je morgen wilt doen.",
+      "example": "Morgen ga ik naar de markt.",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-ZS-100",
+      "equivalent": false,
+      "equivalenceReason": "Bestaand vraagt twee zinnen met morgen en daarna; geselecteerd vraagt één vrij plan voor morgen.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-006",
+      "instruction": "Schrijf waar jouw tas staat.",
+      "example": "Mijn tas staat bij de deur.",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-TZ-013 / KSW-AC-TZ-056 / KSW-AC-TZ-063",
+      "equivalent": false,
+      "equivalenceReason": "Tas meenemen/ophalen/in de trein is niet vertellen waar jouw tas staat.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-007",
+      "instruction": "Vraag of iemand brood kan meenemen.",
+      "example": "Wil je brood meenemen?",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-SB-004",
+      "equivalent": false,
+      "equivalenceReason": "Bestaand vraagt Ali om brood én melk; geselecteerd alleen om brood meenemen.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-008",
+      "instruction": "Laat weten dat je vandaag niet naar de les komt omdat je ziek bent.",
+      "example": "Ik ben ziek en kom vandaag niet naar de les.",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-SB-002",
+      "equivalent": true,
+      "equivalenceReason": "Dezelfde boodschap: vandaag ziek en daarom niet naar de les. Actuele bron staat verschillende passende formuleringen toe.",
+      "decision": "REUSE_EXISTING_CANONICAL_ID_PENDING_SELECTED_BINDING",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-009",
+      "instruction": "Sluit een bericht aan een vriend vriendelijk af.",
+      "example": "Groetjes, Sam",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-SB-003",
+      "equivalent": false,
+      "equivalenceReason": "Groetjes, Sam komt voor in een volledige uitnodiging voor koffie met Lina; uitsluitend vriendelijk afsluiten is een andere opdracht.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    },
+    {
+      "sourceId": "KSW-N26R2-AC-SO-010",
+      "instruction": "Schrijf dat je fiets kapot is en dat je hulp wilt.",
+      "example": "Mijn fiets is kapot. Kun je me helpen?",
+      "sourceContentReview": "PASS",
+      "reviewBasis": "Volledige actuele bron; model past bij de expliciete opdracht en bevat de gevraagde inhoud. Natuurlijke alternatieven blijven toegestaan; geen automatische grammatica- of rubricscore geclaimd.",
+      "nearestCanonicalId": "KSW-AC-TZ-067 / KSW-AC-ZS-016",
+      "equivalent": false,
+      "equivalenceReason": "Alleen fiets kapot melden mist hulp vragen; de andere kandidaat vraagt drie zinnen over probleem, reis en vervolg en is eveneens niet gelijkwaardig.",
+      "decision": "PREPARE_SOURCE_BOUND_QUESTION",
+      "humanEditorialReviewPerformed": false
+    }
+  ],
+  "summary": {
+    "existingSemanticEquivalents": 2,
+    "sourceBoundQuestionsNeeded": 8,
+    "newLiveQuestions": 0,
+    "selectedPositionsNewlyCounted": 0,
+    "newAudio": 0,
+    "runtimeChanged": false,
+    "published": false
+  },
+  "next": "Sluit één complete bronreeks aan met acht brongebonden vragen en hergebruik van KSW-AC-TZ-025 en KSW-AC-SB-002, dezelfde opslag-ID’s. Behoud de bestaande begeleide/zelfstandige reeksen, vrije antwoorden en zelf-/docentcontrole. Controleer instructiehergebruik en alle zichtbare woordaudio vóór runtime-aansluiting.",
+  "capacity": "Bestaande capaciteitsvraag ongewijzigd; geen deploy, configuratiewijziging of limietverhoging.",
+  "limitations": [
+    "Geen menselijke NT2-/alfaredactie of luisterreview geclaimd.",
+    "Twee equivalenten zijn geen bewijs dat de geselecteerde eerste-tien-reeks al is aangesloten.",
+    "Geen exclusieve modelstring en geen opgeslagen-is-correct interpretatie.",
+    "Directe losse bank-URL gaf leeg antwoord; de werkelijk gebruikte bundel bevat exact de canonieke bankbytes."
+  ],
+  "liveVerification": {
+    "targetedAnswerStorageFlows": 8,
+    "navigationOnlyPredecessors": 20,
+    "nativeInstructionCompletions": 8,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewportWidths": [
+      390,
+      1280
+    ],
+    "offeredContentBundlesByteEqual": 2,
+    "offeredAudioBundlesByteEqual": 2,
+    "embeddedInstructionMetadataPassed": 2,
+    "humanListeningPerformed": false,
+    "physicalMobileDeviceTested": false,
+    "screenshots": 8,
+    "main": "660aff9ff55c238039dc7d9cf0adb2faae7c2d6b",
+    "liveSource": "8c597e0cda5f8339633b8a45b966f2a1e45417e4"
+  }
+}
