@@ -1,0 +1,230 @@
+{
+  "clock": "Actual visible DOM timestamp; automation next action measured separately",
+  "rows": [
+    {
+      "scenario": "entry",
+      "visit": "cold",
+      "baseline": {
+        "n": 12,
+        "medianReadyMs": 2112.199999988079,
+        "medianNextMs": 2289.8259370000105,
+        "minReadyMs": 2086.099999964237,
+        "maxReadyMs": 2138
+      },
+      "ready-only": {
+        "n": 12,
+        "medianReadyMs": 123.0,
+        "medianNextMs": 2309.5973125000037,
+        "minReadyMs": 71.10000002384186,
+        "maxReadyMs": 379.5
+      },
+      "candidate": {
+        "n": 12,
+        "medianReadyMs": 117.0,
+        "medianNextMs": 2050.5983334999983,
+        "minReadyMs": 82.20000004768372,
+        "maxReadyMs": 387.5999999642372
+      }
+    },
+    {
+      "scenario": "entry",
+      "visit": "warm",
+      "baseline": {
+        "n": 12,
+        "medianReadyMs": 2060.5999999940395,
+        "medianNextMs": 1623.4053544999988,
+        "minReadyMs": 2045.300000011921,
+        "maxReadyMs": 2086
+      },
+      "ready-only": {
+        "n": 12,
+        "medianReadyMs": 58.0,
+        "medianNextMs": 1645.248228999997,
+        "minReadyMs": 46,
+        "maxReadyMs": 349.7000000476837
+      },
+      "candidate": {
+        "n": 12,
+        "medianReadyMs": 58.0,
+        "medianNextMs": 1382.5015830000011,
+        "minReadyMs": 41.80000001192093,
+        "maxReadyMs": 359.5999999642372
+      }
+    },
+    {
+      "scenario": "entry",
+      "visit": "all",
+      "baseline": {
+        "n": 24,
+        "medianReadyMs": 2086.0499999821186,
+        "medianNextMs": 2034.4860625000038,
+        "minReadyMs": 2045.300000011921,
+        "maxReadyMs": 2138
+      },
+      "ready-only": {
+        "n": 24,
+        "medianReadyMs": 81.69999998807907,
+        "medianNextMs": 2025.4311665000023,
+        "minReadyMs": 46,
+        "maxReadyMs": 379.5
+      },
+      "candidate": {
+        "n": 24,
+        "medianReadyMs": 87.75,
+        "medianNextMs": 1756.1125414999988,
+        "minReadyMs": 41.80000001192093,
+        "maxReadyMs": 387.5999999642372
+      }
+    },
+    {
+      "scenario": "learner",
+      "visit": "cold",
+      "baseline": {
+        "n": 12,
+        "medianReadyMs": 3156.5,
+        "medianNextMs": 44.56281200000376,
+        "minReadyMs": 3088,
+        "maxReadyMs": 3206.300000011921
+      },
+      "ready-only": {
+        "n": 12,
+        "medianReadyMs": 1905.75,
+        "medianNextMs": 44.509479499993176,
+        "minReadyMs": 1861,
+        "maxReadyMs": 1977
+      },
+      "candidate": {
+        "n": 12,
+        "medianReadyMs": 1616.0999999940395,
+        "medianNextMs": 39.272500000002765,
+        "minReadyMs": 1552.5,
+        "maxReadyMs": 1732
+      }
+    },
+    {
+      "scenario": "learner",
+      "visit": "warm",
+      "baseline": {
+        "n": 12,
+        "medianReadyMs": 3156.5,
+        "medianNextMs": 32.035520999990695,
+        "minReadyMs": 3088,
+        "maxReadyMs": 3206.300000011921
+      },
+      "ready-only": {
+        "n": 12,
+        "medianReadyMs": 1905.75,
+        "medianNextMs": 32.96262550000574,
+        "minReadyMs": 1861,
+        "maxReadyMs": 1977
+      },
+      "candidate": {
+        "n": 12,
+        "medianReadyMs": 1616.0999999940395,
+        "medianNextMs": 36.33514549999745,
+        "minReadyMs": 1552.5,
+        "maxReadyMs": 1732
+      }
+    },
+    {
+      "scenario": "learner",
+      "visit": "all",
+      "baseline": {
+        "n": 24,
+        "medianReadyMs": 3156.5,
+        "medianNextMs": 39.87031250000291,
+        "minReadyMs": 3088,
+        "maxReadyMs": 3206.300000011921
+      },
+      "ready-only": {
+        "n": 24,
+        "medianReadyMs": 1905.75,
+        "medianNextMs": 38.491791500000545,
+        "minReadyMs": 1861,
+        "maxReadyMs": 1977
+      },
+      "candidate": {
+        "n": 24,
+        "medianReadyMs": 1616.0999999940395,
+        "medianNextMs": 38.17264549999891,
+        "minReadyMs": 1552.5,
+        "maxReadyMs": 1732
+      }
+    },
+    {
+      "scenario": "docent",
+      "visit": "cold",
+      "baseline": {
+        "n": 12,
+        "medianReadyMs": 2410.449999988079,
+        "medianNextMs": 35.449979500001064,
+        "minReadyMs": 2384.5,
+        "maxReadyMs": 2432
+      },
+      "ready-only": {
+        "n": 12,
+        "medianReadyMs": 841.0500000119209,
+        "medianNextMs": 33.82635449999361,
+        "minReadyMs": 715.5,
+        "maxReadyMs": 980
+      },
+      "candidate": {
+        "n": 12,
+        "medianReadyMs": 840.3499999940395,
+        "medianNextMs": 37.25595849999809,
+        "minReadyMs": 729.4000000357628,
+        "maxReadyMs": 950
+      }
+    },
+    {
+      "scenario": "docent",
+      "visit": "warm",
+      "baseline": {
+        "n": 12,
+        "medianReadyMs": 2382.75,
+        "medianNextMs": 26.675875000004453,
+        "minReadyMs": 2367,
+        "maxReadyMs": 2399.899999976158
+      },
+      "ready-only": {
+        "n": 12,
+        "medianReadyMs": 630.25,
+        "medianNextMs": 30.478979000001345,
+        "minReadyMs": 537,
+        "maxReadyMs": 723.1000000238419
+      },
+      "candidate": {
+        "n": 12,
+        "medianReadyMs": 638.7000000178814,
+        "medianNextMs": 29.403583499999513,
+        "minReadyMs": 537,
+        "maxReadyMs": 749.6999999880791
+      }
+    },
+    {
+      "scenario": "docent",
+      "visit": "all",
+      "baseline": {
+        "n": 24,
+        "medianReadyMs": 2388.300000011921,
+        "medianNextMs": 28.803104500009795,
+        "minReadyMs": 2367,
+        "maxReadyMs": 2432
+      },
+      "ready-only": {
+        "n": 24,
+        "medianReadyMs": 719.8499999940395,
+        "medianNextMs": 31.491666499994608,
+        "minReadyMs": 537,
+        "maxReadyMs": 980
+      },
+      "candidate": {
+        "n": 24,
+        "medianReadyMs": 738.5,
+        "medianNextMs": 31.896312500008207,
+        "minReadyMs": 537,
+        "maxReadyMs": 950
+      }
+    }
+  ]
+}

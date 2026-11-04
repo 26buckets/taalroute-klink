@@ -1,0 +1,40 @@
+✔ Packed lesson clips retain exact bytes, playback completion, cancellation and object URL cleanup (13.380667ms)
+✔ mat uses the canonical lesson, word, media and existing practice (0.685875ms)
+✔ three content routes are independent of support and trace prerequisites honestly (0.566334ms)
+✔ sentence and text cards preserve duplicates and reject invalid ordering (0.157584ms)
+✔ tile actions preserve unique known letters and allow reordering (0.082208ms)
+✔ session round trip preserves lesson; malformed storage fails closed (0.09375ms)
+✔ runtime sound manifest has isolated slots and rejects unsafe sources and fallbacks (4.422291ms)
+✔ successful import returns the original module and resets only the recovery marker (0.659541ms)
+✔ missing old module reloads once, preserves the route and stored lesson/progress, and avoids an error flash (2.155417ms)
+✔ recognises browser load failure: error loading dynamically imported module: /old.js (0.323ms)
+✔ recognises browser load failure: Importing a module script failed. (0.248042ms)
+✔ recognises browser load failure: Unable to preload CSS for /old.css (0.23075ms)
+✔ recognises browser load failure: Loading chunk teacher-12 failed. (0.221375ms)
+✔ does not reload with {"online":false} (0.427792ms)
+✔ does not reload with {"blocked":true} (0.0625ms)
+✔ real application errors remain errors without reloading (0.077583ms)
+✔ server failure remains an error without browser access (0.082916ms)
+✔ Full fallback reuses exact bytes for another word and repeat; already-aborted playback never fetches (12.232125ms)
+✔ Eight MiB budget evicts least recently used complete bundles (7.013834ms)
+✔ Invalid and cancelled downloads cannot poison later playback (0.526875ms)
+✔ Partial replies still require their exact range and never masquerade as a full bundle (0.919583ms)
+✔ A later word revealing a truncated cached bundle can recover on retry (0.401667ms)
+✔ Concurrent complete downloads count a retained bundle only once (2.414209ms)
+✔ Complete mixed bundles reuse WAV and MP3 without changing bytes or MIME (0.408334ms)
+✔ Dutch word boundaries preserve accents, contractions and compounds (7.846292ms)
+✔ A phrase recording is never presented as the sound of an individual word (0.079458ms)
+✔ All twenty newly published reviewed word forms keep their native recording (44.667208ms)
+✔ Image words retain their exact source and account for contained image margins (4.147459ms)
+✔ All existing single-word recordings remain available without stemming or guessed spellings (8.413167ms)
+✔ The index is reproducible and contains only existing allowed recording paths (50.619834ms)
+✔ Packed recordings require the exact byte range and retain a full-response fallback (7.885958ms)
+✔ Packed WAV models retain their original bytes and real media type in partial and complete responses (0.521209ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.240208

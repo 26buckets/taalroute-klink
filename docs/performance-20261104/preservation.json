@@ -1,0 +1,32 @@
+{
+  "basisCommit": "8fb4f0203861e8bf24142b7ded2cb6f566f119a3",
+  "mainEvidenceCommit": "c2e296cb6eba0b71e029723b6cf90eeb835203a7",
+  "runtimeCandidateCommit": "abc607f45789a31929cf5dae8c4987929c244528",
+  "files": {
+    "components/product/classroom-boundary.tsx": "74955cec56f12ad1c5c1d1a567e78da0a1cdd716661c842dfb4d96b9811cc8ee",
+    "components/product/klink-opening-loader.tsx": "52c793bbaad36d26b0f107351523532c73fee03c8208134fdabac1fb5a41fb3c",
+    "components/product/practice-workspace.tsx": "ccfa28ae5c69c77c596d0d865306f3f26a0fc2e1b46079c796aa0841e97d5ffa",
+    "lib/word-listening.ts": "b3743aac715d02337cb2aa49a7df4dbcaa5c1e01a319983e2779669dc9f31ec2"
+  },
+  "unchangedSourceAreas": [
+    "data",
+    "public (excluding generated local release.json)",
+    "app/api",
+    "migrations",
+    "wrangler.jsonc"
+  ],
+  "productionDeploymentPerformed": false,
+  "stagingDeploymentPerformed": false,
+  "githubWorkflows": [],
+  "tests": {
+    "targetedUnit": 32,
+    "loadingAndPreservation": 16,
+    "oneShotComponent": 16,
+    "oneShotNavigation": 8,
+    "wordListeningBrowser": 44,
+    "pixelIdenticalScreenPairs": 24,
+    "typeCheck": "passed",
+    "runtimeLint": "passed"
+  },
+  "method": "METHODE.md"
+}

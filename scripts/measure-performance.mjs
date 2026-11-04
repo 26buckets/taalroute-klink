@@ -19,16 +19,26 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       const context = await browser.newContext({ viewport: { width, height: 900 }, hasTouch: width === 390, reducedMotion: 'reduce' });
       const page = await context.newPage();
       page.on('pageerror', error => errors.push({ engine, width, scenario: scenario.name, message: error.message }));
-      await page.addInitScript(() => {
+      await page.addInitScript(selector => {
         localStorage.setItem('performance-preserve', 'saved-progress');
+        window.perfReadyAt = null;
+        const observer = new MutationObserver(() => {
+          const target = document.querySelector(selector);
+          if (target?.getClientRects().length && !document.querySelector('.klink-opening-loader')) {
+            window.perfReadyAt = performance.now();
+            observer.disconnect();
+          }
+        });
+        observer.observe(document, { childList: true, subtree: true, attributes: true });
         window.perfLongTasks = [];
         try { new PerformanceObserver(list => window.perfLongTasks.push(...list.getEntries().map(e => e.duration))).observe({ type: 'longtask', buffered: true }); } catch {}
-      });
+      }, scenario.selector);
       for (const visit of ['cold', 'warm']) {
         await page.goto(base + '/' + scenario.hash, { waitUntil: 'domcontentloaded' });
         await page.locator(scenario.selector).first().waitFor();
         await page.locator('.klink-opening-loader').waitFor({ state: 'detached' });
-        const ready = await page.evaluate(() => performance.now());
+        const ready = await page.evaluate(() => window.perfReadyAt);
+        assert.equal(typeof ready, 'number', 'Capture actual visible DOM readiness, not automation polling');
         let nextMs;
         const start = performance.now();
         if (scenario.name === 'docent') {
@@ -54,7 +64,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         rows.push({ engine, width, scenario: scenario.name, repeat, visit, readyMs: ready, nextMs, ...stats });
         // Reset only the synthetic lesson choice, retain the browser HTTP cache.
         if (scenario.name === 'docent') await page.getByRole('button', { name: 'Lesoverzicht', exact: true }).click();
-        writeFileSync(out + '/measurements.json', JSON.stringify({ base, release, measuredAt: new Date().toISOString(), network: 'local loopback, no CPU/network emulation', rows, errors }, null, 2));
+        writeFileSync(out + '/measurements.json', JSON.stringify({ base, release, measuredAt: new Date().toISOString(), network: 'local loopback, no CPU/network emulation', readyClock: 'in-page MutationObserver after visible target and removed loader; nextMs includes automation interactions', rows, errors }, null, 2));
       }
       await context.close();
     }
