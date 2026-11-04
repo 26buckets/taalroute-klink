@@ -1,0 +1,411 @@
+{
+  "base": "http://127.0.0.1:19162",
+  "checks": [
+    {
+      "name": "instruction",
+      "source": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3",
+      "sha256": "11410b60e4e0fb2bbe191b205007879925261c533fa679c89fc610617b6b0a5a",
+      "bytes": 83132,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "bus",
+      "source": "/package-audio/taalroute/klink-woord-bus.wav",
+      "sha256": "43c23b0422bda3d67d0949185298be1355f7aa178bcb32093581c6944e8bf236",
+      "bytes": 63696,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "dak",
+      "source": "/package-audio/taalroute/klink-woord-dak.wav",
+      "sha256": "a482b194fb592ffd4206b793285ea8df0d4484e2db7304ad871e0930211c62a3",
+      "bytes": 70752,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "pen",
+      "source": "/package-audio/taalroute/klink-woord-pen.wav",
+      "sha256": "13757437f16e810ba29aef6275708e8279ea35abe3d884d4599d398702f9cf95",
+      "bytes": 56640,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "quiz",
+      "source": {
+        "src": "/package-audio/word-listening-20261101/words-ab1bcc1000dcc4e9.bin",
+        "offset": 1562825,
+        "length": 15606
+      },
+      "sha256": "c10444c3c1a261eea21a6bc2cd675af4bc546355ad428b5d706f5a234211550c",
+      "bytes": 15606,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "fiets",
+      "source": "/package-audio/taalroute/klink-woord-fiets.wav",
+      "sha256": "923f45a1ef16944bdf7c317808367113f80af68d7259e65661ecd3eb248b3fef",
+      "bytes": 70754,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "vis",
+      "source": "/package-audio/taalroute/klink-woord-vis.wav",
+      "sha256": "28633f1c2bcf8c11984efb936acd53f10e4a8f31c38eabefc2000d56b68224ec",
+      "bytes": 77808,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "huis",
+      "source": "/package-audio/taalroute/klink-woord-huis.wav",
+      "sha256": "8393a42c9755288bdb81b87d0151239679e71b1940e48fde6fffe8ccb02bb3c0",
+      "bytes": 84866,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "glas",
+      "source": "/package-audio/woorden-20261025/TL0572.mp3",
+      "sha256": "2604f2aabd7af4e22612e96acc15401f91e8b29500f972e2ce3dfa713f0e5ece",
+      "bytes": 15194,
+      "sourceMediaPreviouslyVerified": true
+    },
+    {
+      "name": "zon",
+      "source": "/package-audio/taalroute/klink-woord-zon.wav",
+      "sha256": "a2b8c76a1e5f215d69f05110011cb0b2e557acd1cc12e17a990d047171a8ea3c",
+      "bytes": 77808,
+      "sourceMediaPreviouslyVerified": true
+    }
+  ],
+  "plays": [
+    {
+      "engine": "chromium",
+      "kind": "instruction",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "bus",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "dak",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-dak.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-dak.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "pen",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-pen.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-pen.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "quiz",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "blob:http://127.0.0.1:19162/f5f5ede1-01d6-43f1-a3f5-0a9e6c7d6865"
+        },
+        {
+          "event": "ended",
+          "src": "blob:http://127.0.0.1:19162/f5f5ede1-01d6-43f1-a3f5-0a9e6c7d6865"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "fiets",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-fiets.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-fiets.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "vis",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-vis.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-vis.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "huis",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-huis.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-huis.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "glas",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/woorden-20261025/TL0572.mp3"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/woorden-20261025/TL0572.mp3"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "bus",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "zon",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-zon.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-zon.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "kind": "instruction",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "bus",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "dak",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-dak.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-dak.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "pen",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-pen.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-pen.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "quiz",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "blob:http://127.0.0.1:19162/d8d5b4ef-25b4-4e89-89c8-84dde3114e11"
+        },
+        {
+          "event": "ended",
+          "src": "blob:http://127.0.0.1:19162/d8d5b4ef-25b4-4e89-89c8-84dde3114e11"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "fiets",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-fiets.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-fiets.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "vis",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-vis.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-vis.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "huis",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-huis.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-huis.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "glas",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/woorden-20261025/TL0572.mp3"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/woorden-20261025/TL0572.mp3"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "bus",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-bus.wav"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "zon",
+      "kind": "word",
+      "events": [
+        {
+          "event": "playing",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-zon.wav"
+        },
+        {
+          "event": "ended",
+          "src": "http://127.0.0.1:19162/package-audio/taalroute/klink-woord-zon.wav"
+        }
+      ]
+    }
+  ],
+  "humanListeningPerformed": false,
+  "newAudioGenerated": 0
+}

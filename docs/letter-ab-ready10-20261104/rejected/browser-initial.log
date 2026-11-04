@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:19162/#learner/chapters/writing/write-letter/klink10%3Awrite-letter%3Aalfa-b%3A20261103?level=alfa-b&help=practice
+Call log:
+[2m  - navigating to "http://127.0.0.1:19162/#learner/chapters/writing/write-letter/klink10%3Awrite-letter%3Aalfa-b%3A20261103?level=alfa-b&help=practice", waiting until "load"[22m
+
+    at /private/tmp/klink-letter-ab-ready10-20261104/scripts/test-klink10-letter-ab-browser.mjs:19:14 {
+  log: [
+    '  - navigating to "http://127.0.0.1:19162/#learner/chapters/writing/write-letter/klink10%3Awrite-letter%3Aalfa-b%3A20261103?level=alfa-b&help=practice", waiting until "load"'
+  ],
+  name: 'Error'
+}
+
+Node.js v26.4.0

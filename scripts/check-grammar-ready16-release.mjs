@@ -1,3 +1,4 @@
+import {verifyLetterAbReady10Release,readBeforeLetterAbReady10} from './check-letter-ab-ready10-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,14 +9,15 @@ const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha
 const expectedIds=['KHW','MDZ'].flatMap(g=>['001','002','003','005','006','007','008','010'].map(n=>`KGR-AA-${g}-${n}`)).sort((a,b)=>a.localeCompare(b));
 const runtimeFiles=['app/api/grammar-aa-assets/[name]/route.ts','components/product/extended-practice-surface.tsx','components/product/package-exercise-browser.tsx','data/klink-grammar-aa-assets.json','data/klink-production-index.json','data/klink-production-instructions.json','lib/grammar-choice-answer.ts','lib/sequence-answer.ts'];
 export function verifyGrammarReady16Content(read=readFileSync){
+ const successor=verifyLetterAbReady10Release(read),currentRead=read;read=file=>readBeforeLetterAbReady10(file,successor,currentRead);
  const json=p=>JSON.parse(read(p)),r=json('docs/klink-owner-release-grammar-ready16-20261104.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,json(root+'audio-live-release-readback.json').sourceCommit);
  const approval=json(root+'audio-approval.json');assert.equal(r.ownerTurn,approval.turnId);assert.equal(approval.quote,'Ja, zo is de tas goed. Zorg dat alle audio hetzelfde volume heeft en rond de 40 grammaticaopdrachten af. Geen beelden of audio dubbel maken.');
  git('merge-base','--is-ancestor',r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
  assert.deepEqual(changed.filter(p=>/^(app|components|hooks|data|lib|public|db|drizzle)\//.test(p)),sort([...runtimeFiles]));
- assert.equal(git('diff','--name-only',base,'--','public','hooks','.github','wrangler.jsonc','package.json','package-lock.json','vite.config.ts','next.config.ts','docs/appearance-floor-20261031','VORMGEVING-VASTGEZET.md').length,0);
+ assert.equal(git('diff','--name-only',base,successor.baselineSourceCommit,'--','public','hooks','.github','wrangler.jsonc','package.json','package-lock.json','vite.config.ts','next.config.ts','docs/appearance-floor-20261031','VORMGEVING-VASTGEZET.md').length,0);
  const index=json('data/klink-production-index.json'),prior=JSON.parse(git('show',base+':data/klink-production-index.json'));assert.deepEqual(index.slice(0,prior.length),prior);const rows=index.slice(prior.length);assert.equal(rows.length,2);assert(rows.every(x=>x.count===8&&['verb-choice','sentence-build'].includes(x.activity)));
  const a=json('data/klink-grammar-aa-assets.json'),used=new Set(),exerciseIds=[],source=new Map(json(root+'selected-source.json').map(x=>[x.id,x]));assert.deepEqual([...source.keys()].sort((a,b)=>a.localeCompare(b)),expectedIds);
  const walk=v=>{if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==='object')Object.values(v).forEach(walk);else if(typeof v==='string'&&v.startsWith('/api/grammar-aa-assets/')){const k=v.split('/').at(-1);assert(a[k]);used.add(k);}};

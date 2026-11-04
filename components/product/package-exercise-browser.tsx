@@ -502,9 +502,12 @@ function PackageExercisePlayer({
       ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([id, label]) => ({ id, label, icon: phaseIcons[id as keyof typeof phaseIcons] ?? Shapes }))
       : exerciseTypes.map(type => ({ id: type.id, label: type.label, icon: Shapes })),
   } : undefined);
+  const titleText = exercise.title || family?.label || 'Oefenen';
+  const titleUnits = asArray<number>(exercise.writingTitleUnits);
+  const titleContent = exercise.writingSourceId && titleUnits.length ? <span style={{ font: 'inherit', color: 'inherit', margin: 0 }}>{wordAudioParts(titleText).map((part, index) => titleUnits.includes(part.start) ? <span style={{ display: 'inline', font: 'inherit', color: 'inherit', margin: 0 }} key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</span> : titleText;
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
-              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button data-practice-listen className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
+              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button data-practice-listen className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{titleContent}</button> : titleContent}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button data-practice-previous aria-keyshortcuts="ArrowLeft" title="Vorige oefening (←)" onClick={() => { if (!audioPending && !recording && !practiceBusy(keyboard.ref.current)) { if (guided) openGuidedAt(guidedIndex - 1); else openAt(recordIndex - 1); } }} disabled={audioPending || recording || (guided ? guidedIndex <= 0 : recordIndex === 0)} aria-label="Vorige oefening"><ArrowLeft /></button>
@@ -820,7 +823,7 @@ function WordHint({ exercise, onHelp, disabled = false }: { exercise: PackageExe
   const spellingUnits = asArray<number>(exercise.writingHintUnits);
   useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <><strong><WordAudioText text={exercise.helpWord} /></strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" disabled={disabled} aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <div className="cp-word-hint" ref={hint}>{shown && <><strong data-word-listening-units={exercise.letterModelOnly ? 'sound' : undefined}>{exercise.letterModelOnly ? exercise.helpWord : <WordAudioText text={exercise.helpWord} />}</strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" disabled={disabled} aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
