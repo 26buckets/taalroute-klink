@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "sourceId": "SZ-ALFA-C-TDZ-001",
+      "policy": "exact-copy",
+      "existingCriteriaAndStoragePreserved": true,
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "sourceId": "SZ-A1-TDZ-001",
+      "policy": "dictation",
+      "existingCriteriaAndStoragePreserved": true,
+      "pixelIdentical": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0
+    }
+  ],
+  "simulatedAudio": true
+}

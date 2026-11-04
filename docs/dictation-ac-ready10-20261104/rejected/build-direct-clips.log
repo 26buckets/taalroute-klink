@@ -1,0 +1,36 @@
+
+> taalroute-klink@0.1.0 prebuild
+> node scripts/build-word-library-index.mjs --check && node scripts/build-word-listening.mjs --check && node scripts/audit-word-listening.mjs --check && npm run images:check && node scripts/write-klink-release.mjs
+
+Word library: 5127 cards linked; index 2226395 bytes
+Word-listening index: 12476 exact words.
+{"instances":101016,"exerciseIds":69236,"uniqueTokens":11154,"recordedTokens":11105,"missingCandidates":0}
+
+> taalroute-klink@0.1.0 images:check
+> node scripts/prepare-images.mjs --check
+
+{"checked":1711,"prepared":0,"sourceBytes":295823095,"appBytes":36036583,"maxBytes":98304}
+Klink release marker: c1f3b207090bbbac47719499a37b72bac87620c7, clean=false
+
+> taalroute-klink@0.1.0 build
+> vinext build
+
+[vinext] Tip: migrate from `vinext build` to `vite build`.
+(node:34676) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+error during build:
+Error: ENOTEMPTY, Directory not empty: /private/tmp/klink-dictation-ac-ready10-20261104/dist '/private/tmp/klink-dictation-ac-ready10-20261104/dist'
+    at Object.rmSync (node:fs:1484:18)
+    at cleanBuildOutput (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vinext/dist/build/clean-output.js:21:5)
+    at prepareBuildOutput (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vinext/dist/build/lifecycle.js:129:2)
+    at BasicMinimalPluginContext.handler (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vinext/dist/build/lifecycle.js:236:5)
+    at file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vite/dist/node/chunks/node.js:37846:87
+    at Array.map (<anonymous>)
+    at resolveConfig (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vite/dist/node/chunks/node.js:37846:68)
+    at async createBuilder (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vite/dist/node/chunks/node.js:35112:17)
+    at async CAC.<anonymous> (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/node_modules/vite/dist/node/cli.js:769:19) {
+  errno: 66,
+  code: 'ENOTEMPTY',
+  path: '/private/tmp/klink-dictation-ac-ready10-20261104/dist',
+  syscall: 'rm'
+}

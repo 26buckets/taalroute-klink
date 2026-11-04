@@ -8,7 +8,11 @@ export function parseOwnSentence(raw: string | null): OwnSentence {
   } catch { return { draft: '' }; }
 }
 
-export function checkSentenceAnswer(expected: string, entered: string, copying: boolean) {
+export function checkSentenceAnswer(expected: string | readonly string[], entered: string, copying: boolean): { correct: boolean; feedback: string } {
+  if (typeof expected !== 'string') {
+    const results = expected.map(answer => checkSentenceAnswer(answer, entered, copying));
+    return results.find(result => result.correct) ?? results[0] ?? { correct: false, feedback: 'Controleer je antwoord.' };
+  }
   const words = (text: string) => text.normalize('NFC').toLocaleLowerCase('nl-NL').match(/[\p{L}\p{N}]+(?:['’-][\p{L}\p{N}]+)*/gu) ?? [];
   const target = words(expected), actual = words(entered);
   const sameWords = target.length === actual.length && target.every((word, i) => word === actual[i]);
