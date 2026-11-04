@@ -1,3 +1,17 @@
+## Actuele publicatie — tien Alfa C-letteropdrachten — 4 november 2026
+
+Livebron `054739501d803509844d5c0c18e0e77ec7b8b098`, Worker `d0256c10-4a8d-4070-b272-311a42acdc92`. KSW-N26R2-AC-WL-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Schrijf de letter · Namen vraagt de eerste hoofdletter van de bestaande naam of plaats. Tien nieuwe brongebonden vragen; geen claim van nieuwe unieke namen, handschriftvaardigheid of zelfstandig lezen. Bestaande opnamen hergebruikt, inclusief de al voorbereide Rina-opname; nul nieuwe TTS, hercodering of beelden.
+
+Lokaal en live elk veertig antwoord-, concept-, eerste/laatste-poging- en herlaadstromen; afzonderlijk 22 native afspeelafrondingen en elf exacte audiobestanden met gecontroleerde Taalroute-metadata. Elf HTTP-gevallen voor de exacte bank en Rina-opname, inclusief HEAD/ETag/Range/404/416. De eerste live ETag-vergelijking gebruikte verschillende contentcoderingen; de gerichte proef met overal identity slaagt. Geen appwijziging voor deze testcorrectie. Antwoordproeven gebruiken gesimuleerde audio; native proeven gebruiken echte audio.
+
+Alle componenten, CSS, routes en opslagcode bytegelijk; acht eerder gecontroleerde schermparen blijven toepasselijk en nieuwe schermen afzonderlijk gecontroleerd. Alle 20.106 oude publicbestanden en bestaande woordaudio-koppelingen behouden. Werkelijk 17 geüpload + 19983 ongewijzigd = 20.000 assets; Worker 35579.65 KiB / gzip 5814.75 KiB. Geen configuratie-, limiet-, budget-, D1- of GitHub Actions-wijzigingen. De gewone afgeleide woordaudio-index is bijgewerkt; de historische poortlezers geven de eerdere bytes correct door. Oude akkoorden/hashes niet aangepast; negatieve en gerichte regressieproeven geslaagd.
+
+Bronback-up Drive `1avpZVkIuvSk2IAxgfBDalkPIDNgYHTox`: 2.631.084 bytes, 67 payloads volledig teruggelezen. Eindbewijs Drive `15LPaqT0ZdGQcbZKrYUjvngilgdii8tyl`: 3028784 bytes; 32 buitenste en 67 geneste payloads plus manifesten exact. Bewijs `docs/letter-ac-ready10-20261104/postflight/publication.json` en `backup-readback.json`. Deze docs-opvolger niet opnieuw deployen.
+
+Nog vijftig voorbereide schrijftaken, te beginnen met het Alfa C-zinnendictee. Schrijven 90/540 bronposities behandeld; externe registers blijven apart. Aanvullende grammatica blijft 16/40 live en 24 open; woordbeeldenachterstand 232. Geen nieuwe menselijke luister-/NT2-review of fysieke-apparaatproef uitgevoerd. Performance-PR10 en Inzicht-PR1 niet meegenomen.
+
+---
+
 ## Actuele publicatie — tien Alfa B-letteropdrachten — 4 november 2026
 
 Livebron `8fb4f0203861e8bf24142b7ded2cb6f566f119a3`, Worker `06d25f68-2bca-4814-bca4-2876de010d79`. Tien bronopdrachten KSW-N26R2-AB-WL-001 t/m 010 gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. In Schrijf de letter · Letters in woorden typt de cursist de gevraagde kleine letter. Bestaande contextaudio en opnamebytes hergebruikt; nul nieuwe audio of beelden. Dit bewijst geen handschriftvaardigheid of nieuwe unieke letters.
