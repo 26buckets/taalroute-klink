@@ -1,6 +1,7 @@
 import tailwindcss from '@tailwindcss/postcss';
 import vinext from 'vinext';
 import { defineConfig } from 'vite';
+import { staticAssetsAdapter } from '@vinext/cloudflare/cache/static-assets-adapter';
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
@@ -10,6 +11,7 @@ const cloudflareConfig = {
   main: 'vinext/server/fetch-handler',
   compatibility_date: '2026-05-15',
   compatibility_flags: ['nodejs_compat'],
+  assets: { binding: 'ASSETS' },
   d1_databases: [
     {
       binding: 'DB',
@@ -31,11 +33,11 @@ export default defineConfig(async () => {
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
   return {
-    // Keep tiny shared UI modules together within the existing asset limit.
+    // Keep the initial shell together to leave room for prepared pages within the asset limit.
     environments: { client: { build: { rolldownOptions: { output: {
       codeSplitting: { groups: [{
         name: 'shared-ui',
-        test: /(?:node_modules\/lucide-react\/|components\/product\/(?:manual-legacy-link|motion-feedback)\.tsx$)/,
+        test: /(?:node_modules\/lucide-react\/|node_modules\/vinext\/dist\/(?:shims\/(?:script|link|layout-segment-context)|client\/pages-router-link-navigation)\.js$|app\/page\.tsx$|components\/product\/(?:manual-legacy-link|motion-feedback|manual-navigation|classroom-boundary|word-listening|taalroute-header|entry-design)\.tsx$|components\/product\/teacher-module-recovery\.ts$|lib\/(?:classroom-visibility|image-word-listening)\.ts$|data\/klink-image-word-listening\.json$)/,
         includeDependenciesRecursively: false,
       }] },
     } } } } },
@@ -45,7 +47,7 @@ export default defineConfig(async () => {
       ...(isCodexSeatbeltSandbox ? { useFsEvents: false, usePolling: true } : {}),
     } },
     plugins: [
-      vinext(),
+      vinext({ prerender: true, cache: { cdn: staticAssetsAdapter() } }),
       cloudflare({
         viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] },
         config: cloudflareConfig,

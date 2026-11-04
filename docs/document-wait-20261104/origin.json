@@ -1,0 +1,221 @@
+{
+  "conditions": "fresh local Miniflare instance per version/repetition; no external network; first and repeated anonymous HTML GET; initialization includes local harness overhead, not a production cold-start estimate",
+  "rows": [
+    {
+      "version": "before",
+      "repeat": 0,
+      "visit": "first",
+      "cache": "MISS",
+      "initializedMs": 1009.4200000000001,
+      "ttfbMs": 42.29537500000015,
+      "completeMs": 44.18108300000017
+    },
+    {
+      "version": "before",
+      "repeat": 0,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 1009.4200000000001,
+      "ttfbMs": 3.2283749999999145,
+      "completeMs": 3.76954099999989
+    },
+    {
+      "version": "after",
+      "repeat": 0,
+      "visit": "first",
+      "cache": "HIT",
+      "initializedMs": 1068.6167090000001,
+      "ttfbMs": 12.963624999999865,
+      "completeMs": 14.518291999999747
+    },
+    {
+      "version": "after",
+      "repeat": 0,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 1068.6167090000001,
+      "ttfbMs": 2.5738750000000437,
+      "completeMs": 2.9292499999996835
+    },
+    {
+      "version": "after",
+      "repeat": 1,
+      "visit": "first",
+      "cache": "HIT",
+      "initializedMs": 904.6701659999999,
+      "ttfbMs": 13.445666000000074,
+      "completeMs": 15.058708000000024
+    },
+    {
+      "version": "after",
+      "repeat": 1,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 904.6701659999999,
+      "ttfbMs": 3.0130420000000413,
+      "completeMs": 3.3847500000001673
+    },
+    {
+      "version": "before",
+      "repeat": 1,
+      "visit": "first",
+      "cache": "MISS",
+      "initializedMs": 889.6454589999998,
+      "ttfbMs": 36.30179099999987,
+      "completeMs": 37.850124999999935
+    },
+    {
+      "version": "before",
+      "repeat": 1,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 889.6454589999998,
+      "ttfbMs": 2.949874999999338,
+      "completeMs": 3.301209000000199
+    },
+    {
+      "version": "before",
+      "repeat": 2,
+      "visit": "first",
+      "cache": "MISS",
+      "initializedMs": 883.9584580000001,
+      "ttfbMs": 34.105625000000146,
+      "completeMs": 35.64783299999999
+    },
+    {
+      "version": "before",
+      "repeat": 2,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 883.9584580000001,
+      "ttfbMs": 2.727834000000257,
+      "completeMs": 3.0100839999995515
+    },
+    {
+      "version": "after",
+      "repeat": 2,
+      "visit": "first",
+      "cache": "HIT",
+      "initializedMs": 830.4529999999995,
+      "ttfbMs": 12.044416999999157,
+      "completeMs": 13.470707999999831
+    },
+    {
+      "version": "after",
+      "repeat": 2,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 830.4529999999995,
+      "ttfbMs": 2.3755419999997684,
+      "completeMs": 2.6848339999996824
+    },
+    {
+      "version": "after",
+      "repeat": 3,
+      "visit": "first",
+      "cache": "HIT",
+      "initializedMs": 875.6412909999999,
+      "ttfbMs": 14.763249999999971,
+      "completeMs": 16.687917000000198
+    },
+    {
+      "version": "after",
+      "repeat": 3,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 875.6412909999999,
+      "ttfbMs": 3.3994579999998678,
+      "completeMs": 3.739375000000109
+    },
+    {
+      "version": "before",
+      "repeat": 3,
+      "visit": "first",
+      "cache": "MISS",
+      "initializedMs": 884.7537080000002,
+      "ttfbMs": 33.425334000000475,
+      "completeMs": 34.95416699999987
+    },
+    {
+      "version": "before",
+      "repeat": 3,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 884.7537080000002,
+      "ttfbMs": 2.589458000000377,
+      "completeMs": 2.9329999999999927
+    },
+    {
+      "version": "before",
+      "repeat": 4,
+      "visit": "first",
+      "cache": "MISS",
+      "initializedMs": 855.52675,
+      "ttfbMs": 34.9945000000007,
+      "completeMs": 36.52141600000141
+    },
+    {
+      "version": "before",
+      "repeat": 4,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 855.52675,
+      "ttfbMs": 2.598875000001499,
+      "completeMs": 2.8543750000008004
+    },
+    {
+      "version": "after",
+      "repeat": 4,
+      "visit": "first",
+      "cache": "HIT",
+      "initializedMs": 958.9960410000003,
+      "ttfbMs": 14.765874999999141,
+      "completeMs": 16.524874999999156
+    },
+    {
+      "version": "after",
+      "repeat": 4,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 958.9960410000003,
+      "ttfbMs": 3.24383300000045,
+      "completeMs": 3.558208000000377
+    },
+    {
+      "version": "after",
+      "repeat": 5,
+      "visit": "first",
+      "cache": "HIT",
+      "initializedMs": 929.1720830000013,
+      "ttfbMs": 14.980209000001196,
+      "completeMs": 16.53295900000012
+    },
+    {
+      "version": "after",
+      "repeat": 5,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 929.1720830000013,
+      "ttfbMs": 3.7955829999991693,
+      "completeMs": 4.182290999999168
+    },
+    {
+      "version": "before",
+      "repeat": 5,
+      "visit": "first",
+      "cache": "MISS",
+      "initializedMs": 907.8832079999993,
+      "ttfbMs": 34.521875000000364,
+      "completeMs": 35.974333000000115
+    },
+    {
+      "version": "before",
+      "repeat": 5,
+      "visit": "repeat",
+      "cache": "HIT",
+      "initializedMs": 907.8832079999993,
+      "ttfbMs": 2.5142089999990276,
+      "completeMs": 2.735791999999492
+    }
+  ]
+}

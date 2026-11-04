@@ -1,0 +1,218 @@
+[
+  {
+    "repeat": 0,
+    "path": "/",
+    "exit": 0,
+    "dns": 0.002186,
+    "connect": 0.011747,
+    "tls": 0.032503,
+    "firstByte": 2.414453,
+    "total": 2.41481,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "no-store, must-revalidate",
+      "x-vinext-cache": "MISS",
+      "cf-ray": "a556cc5edde03751-AMS"
+    }
+  },
+  {
+    "repeat": 0,
+    "path": "/release.json",
+    "exit": 0,
+    "dns": 0.001724,
+    "connect": 0.010196,
+    "tls": 0.027066,
+    "firstByte": 0.085614,
+    "total": 0.087776,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "application/json",
+      "cf-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-ray": "a556cc6dfb0077ce-AMS"
+    }
+  },
+  {
+    "repeat": 1,
+    "path": "/release.json",
+    "exit": 0,
+    "dns": 0.001737,
+    "connect": 0.009667,
+    "tls": 0.024424,
+    "firstByte": 0.08557,
+    "total": 0.085722,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "application/json",
+      "cf-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-ray": "a556cc6e8e0ee18e-AMS"
+    }
+  },
+  {
+    "repeat": 1,
+    "path": "/",
+    "exit": 0,
+    "dns": 0.001812,
+    "connect": 0.010012,
+    "tls": 0.024615,
+    "firstByte": 0.084337,
+    "total": 0.08659,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a556cc6f196f1817-AMS"
+    }
+  },
+  {
+    "repeat": 2,
+    "path": "/",
+    "exit": 0,
+    "dns": 0.001686,
+    "connect": 0.01085,
+    "tls": 0.027803,
+    "firstByte": 2.248422,
+    "total": 2.249289,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "no-store, must-revalidate",
+      "x-vinext-cache": "MISS",
+      "cf-ray": "a556cc6fbda55d08-AMS"
+    }
+  },
+  {
+    "repeat": 2,
+    "path": "/release.json",
+    "exit": 0,
+    "dns": 0.002637,
+    "connect": 0.01067,
+    "tls": 0.025195,
+    "firstByte": 0.067481,
+    "total": 0.067754,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "application/json",
+      "cf-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-ray": "a556cc7dde4dbccf-AMS"
+    }
+  },
+  {
+    "repeat": 3,
+    "path": "/release.json",
+    "exit": 0,
+    "dns": 0.002477,
+    "connect": 0.009913,
+    "tls": 0.024726,
+    "firstByte": 0.07004,
+    "total": 0.070397,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "application/json",
+      "cf-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-ray": "a556cc7e5d96f5b9-AMS"
+    }
+  },
+  {
+    "repeat": 3,
+    "path": "/",
+    "exit": 0,
+    "dns": 0.002204,
+    "connect": 0.016819,
+    "tls": 0.032068,
+    "firstByte": 2.159615,
+    "total": 2.162145,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "no-store, must-revalidate",
+      "x-vinext-cache": "MISS",
+      "cf-ray": "a556cc7eeb098cb0-AMS"
+    }
+  },
+  {
+    "repeat": 4,
+    "path": "/",
+    "exit": 0,
+    "dns": 0.001824,
+    "connect": 0.009383,
+    "tls": 0.026405,
+    "firstByte": 2.076703,
+    "total": 2.078955,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "no-store, must-revalidate",
+      "x-vinext-cache": "MISS",
+      "cf-ray": "a556cc8c8ee68e65-AMS"
+    }
+  },
+  {
+    "repeat": 4,
+    "path": "/release.json",
+    "exit": 0,
+    "dns": 0.001885,
+    "connect": 0.010489,
+    "tls": 0.032503,
+    "firstByte": 0.096993,
+    "total": 0.099333,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "application/json",
+      "cf-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-ray": "a556cc999e67fffd-AMS"
+    }
+  },
+  {
+    "repeat": 5,
+    "path": "/release.json",
+    "exit": 0,
+    "dns": 0.002032,
+    "connect": 0.009876,
+    "tls": 0.030054,
+    "firstByte": 0.155881,
+    "total": 0.156095,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "application/json",
+      "cf-cache-status": "HIT",
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-ray": "a556cc9a4dc89fa6-AMS"
+    }
+  },
+  {
+    "repeat": 5,
+    "path": "/",
+    "exit": 0,
+    "dns": 0.00172,
+    "connect": 0.009065,
+    "tls": 0.022967,
+    "firstByte": 0.072391,
+    "total": 0.074587,
+    "status": 200,
+    "protocol": "2",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "s-maxage=31536000, stale-while-revalidate",
+      "x-vinext-cache": "HIT",
+      "cf-ray": "a556cc9b4d384e47-AMS"
+    }
+  }
+]

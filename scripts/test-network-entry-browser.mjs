@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium, webkit } from 'playwright';
 
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:19120';
-const out = 'docs/network-peaks-20261104/entry-checks';
+const out = process.env.KLINK_NETWORK_ENTRY_OUTPUT || 'docs/network-peaks-20261104/entry-checks';
 mkdirSync(out, { recursive: true });
 const rows = [], errors = [];
 for (const [engine, type] of Object.entries({ chromium, webkit })) {

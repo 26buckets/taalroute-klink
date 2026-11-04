@@ -1,0 +1,62 @@
+
+> taalroute-klink@0.1.0 check:publication
+> node scripts/check-curriculum-release.mjs
+
+✔ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (116.244375ms)
+✔ Former group 2 resumes at its actual exercise; first a steps remain small and consecutive (0.490583ms)
+✔ Approved navigation photos remain separate from every preserved word cover (4.410584ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 382.2145
+Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.
+De nieuwe leerreeksen wachten op actuele inhoudsgebonden vrijgave; het oude akkoord geldt niet voor nieuwe uitleg en samenstellingen.
+De nieuwe gemengde oefenrondes wachten op inhoudelijke beoordeling.
+De nieuwe groepsoefeningen wachten op combinatiebeoordeling en passende instructie-audio.
+De uitbreiding met begrip, klanken en taalgebruik wacht op inhoudelijke en instructie-audiovrijgave.
+Leg de gecontroleerde bronwijzigingen eerst vast in een commit.
+Publiceer uitsluitend vanuit de canonieke branch.
+De brongebonden grammaticavrijgave is ongeldig: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
++   'app/page.tsx',
+    'components/product/classroom-boundary.tsx',
+    'components/product/klink-opening-loader.tsx',
++   'components/product/load-practice-workspace.ts',
+    'components/product/practice-workspace.tsx',
++   'lib/extended-practice.ts',
+    'lib/word-listening.ts',
++   'package-lock.json',
++   'package.json',
+    'scripts/check-performance-release-20261104.mjs',
+    'scripts/check-spelling-dictation-release-20261104.mjs',
+    'scripts/compare-performance-appearance.mjs',
+    'scripts/measure-inzicht-login.mjs',
+    'scripts/measure-inzicht-performance.mjs',
++   'scripts/measure-network-origin.mjs',
++   'scripts/measure-network-peaks.mjs',
+    'scripts/measure-performance.mjs',
+    'scripts/measure-word-audio.mjs',
+    'scripts/performance-word-fixtures.mjs',
+    'scripts/serve-inzicht-performance.mjs',
++   'scripts/serve-network-benchmark.mjs',
+    'scripts/serve-performance.mjs',
+    'scripts/test-klink10-packed-media-20261102.mjs',
++   'scripts/test-network-content-preservation.mjs',
++   'scripts/test-network-entry-browser.mjs',
+    'scripts/test-opening-loader-once-browser-20261103.mjs',
+    'scripts/test-performance-browser.mjs',
+    'scripts/test-performance-manual.mjs',
+    'scripts/test-performance-release-20261104.mjs',
++   'scripts/test-prepared-pages.mjs',
+    'scripts/test-word-audio-cache.mjs',
+    'scripts/test-word-listening-browser.mjs',
+    'scripts/test-word-listening.mjs',
+    'vite.config.ts'
+  ]
+
