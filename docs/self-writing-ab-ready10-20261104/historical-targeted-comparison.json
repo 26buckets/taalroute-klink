@@ -1,0 +1,493 @@
+{
+  "checkedAt": "2026-11-03T08:33:16.044933+00:00",
+  "state": "SOURCE_REVIEWED_NOT_INTEGRATED",
+  "sources": [
+    {
+      "id": "13QMe6KvXj2oHQIN4pdvNa6kYWtGdHFqmbMpKLxjk7Y8",
+      "meta": {
+        "id": "13QMe6KvXj2oHQIN4pdvNa6kYWtGdHFqmbMpKLxjk7Y8",
+        "title": "KLINK SCHRIJVEN R2 | Alfa B | 40 opdrachten, 10 per aanvullende categorie | HOLD | 2026-11-02",
+        "mime_type": "application/vnd.google-apps.document",
+        "size": null,
+        "url": null,
+        "file_or_folder": "file",
+        "created_time": null,
+        "modified_time": "2026-11-02T00:07:43.395Z",
+        "parent_ids": null,
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "docxSha256": "c9c23c2429e1885020476b5061a37479d7a022bd789781d33ca3f1f83dad552f",
+      "textSha256": "0dece083ced50ede042df6cc65d01b0799159a48094a9e30a88cc56449483e22",
+      "characters": 52658,
+      "unchangedSinceMessageCards": true
+    },
+    {
+      "id": "1Uxht3timFHs4eSu1hrYjyUY4fZOOgP8uTOSEEIO4fnI",
+      "meta": {
+        "id": "1Uxht3timFHs4eSu1hrYjyUY4fZOOgP8uTOSEEIO4fnI",
+        "title": "KLINK Schrijven | Alfa B | eerste 90 kandidaten, 10 per activiteit | IMPORT-HOLD | 2026-11-02",
+        "mime_type": "application/vnd.google-apps.document",
+        "size": null,
+        "url": null,
+        "file_or_folder": "file",
+        "created_time": null,
+        "modified_time": "2026-11-02T09:29:32.808Z",
+        "parent_ids": null,
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "docxSha256": "23935b836877706401a80761a7e4b88be08fb7a075cba163635388d5a536b4c8",
+      "textSha256": "4fb529f70cd60baaf41cdc2d7052563629ca2858de35a85eb902fcddf0de96f1",
+      "characters": 133602,
+      "unchangedSinceMessageCards": true
+    }
+  ],
+  "externalSource": {
+    "id": "1tDY_T9NE1MxJzH9DvBMYZQ93Mrl5o_waGTDoZ2gssyA",
+    "meta": {
+      "id": "1tDY_T9NE1MxJzH9DvBMYZQ93Mrl5o_waGTDoZ2gssyA",
+      "title": "KLINK SCHRIJVEN | WORDCHAT OVERDRACHT | 04 | Alfa B | Schrijf een bericht | 20 kandidaatopdrachten | taalreview v1.1",
+      "mime_type": "application/vnd.google-apps.document",
+      "size": null,
+      "url": null,
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": "2026-11-01T09:23:13.112Z",
+      "parent_ids": null,
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": null,
+      "permissions": null,
+      "source_visibility_status": "access_not_verified"
+    },
+    "docxSha256": "8088aa897fe6eab0b55e2ab3758a8b97ff2a46d4f8a9a5e33a9a86f7a46d94c4",
+    "textSha256": "dc801ff11b869bd2f1f0468eed23dfbc13ce5a05b1ac4207523499f520ebbde4",
+    "characters": 35435
+  },
+  "allTenCompleteSourceBlocksEqualSelection": true,
+  "canonicalComparison": {
+    "positions": 205,
+    "copyWords": 145,
+    "externalMessages": 20,
+    "sentenceOrder": 20,
+    "sentenceMark": 10,
+    "sentenceCopy": 10,
+    "externalMessagesMatchCurrentSource": 20,
+    "offeredBundleSha256": "832555c0f3dee18193178a2732bed1d9657950c2d0484896354ff715b5e9372e",
+    "offeredBundleBytesEqual": true,
+    "allThreeMessageBanksEqual": true
+  },
+  "decisions": [
+    {
+      "sourceId": "KSW-N26R2-AB-SO-001",
+      "model": "Ik ben ziek.",
+      "nearestCanonicalIds": "KSW-AB-SB-001",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Het bestaande bericht vraagt zelfstandig ziek zijn én vandaag te melden. De geselecteerde bron geeft Ik ben ziek. al in de instructie en vraagt niet om vandaag.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-002",
+      "model": "Ik heet Sam.",
+      "nearestCanonicalIds": null,
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Geen bestaande Alfa B-schrijfvraag vraagt deze volledige modelzin met de fictieve naam Sam. Woorden kopiëren of een woord in een andere naamzin aanwijzen is geen gelijkwaardig antwoordcontract.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-003",
+      "model": "Het regent.",
+      "nearestCanonicalIds": null,
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Geen bestaande Alfa B-bericht- of kopieeropdracht vraagt deze volledige weerzin met modelhulp.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-004",
+      "model": "De bus komt.",
+      "nearestCanonicalIds": "KSW-AB-SB-002",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "De bestaande opdracht vraagt een laatkombericht met een late bus als reden; De bus komt. is een andere boodschap en wordt hier als model gegeven.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-005",
+      "model": "Ik zit in de klas.",
+      "nearestCanonicalIds": "KSW-AB-SB-005",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Een bericht over wachten bij de ingang van school verschilt van de gegeven zin over in de klas zitten.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-006",
+      "model": "Ik kom later.",
+      "nearestCanonicalIds": "KSW-AB-SB-002 / KSW-AB-SB-010",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "De bestaande berichten vragen ook de reden of aankomsttijd; deze bron geeft alleen Ik kom later. als model.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-007",
+      "model": "Kom je mee?",
+      "nearestCanonicalIds": null,
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Geen bestaand Alfa B-bericht vraagt deze uitnodigingsvraag. De bron vereist de gegeven vraagzin en het vraagteken als bespreekpunt.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-008",
+      "model": "Ik wil water.",
+      "nearestCanonicalIds": "KSW-AB-SB-003 / KSW-AB-SB-019",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Om een pen of twee dozen vragen is inhoudelijk anders dan de gegeven wens om water.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-009",
+      "model": "Ik ben thuis.",
+      "nearestCanonicalIds": "KSW-AB-SB-001 / KSW-AB-SB-004",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Thuis zijn is in de bestaande ziekmelding juist een onvolledig voorbeeld; een boek dat thuis ligt zegt iets anders dan de persoon die thuis is.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-010",
+      "model": "Dank je wel.",
+      "nearestCanonicalIds": "KSW-AB-SB-015",
+      "exactCopyModelMatches": [],
+      "equivalent": false,
+      "reason": "Het bestaande bericht bedankt specifiek voor hulp aan een vriend en laat de formulering open; deze bron geeft de algemene beleefdheidszin Dank je wel.",
+      "decision": "PREPARE_NEW_SOURCE_BOUND_QUESTION"
+    }
+  ],
+  "pendingMessageCardModelOverlaps": [
+    {
+      "sourceId": "KSW-N26R2-AB-SO-001",
+      "sameMessageCardIds": [
+        "KSW-N26R2-AB-FB-001"
+      ],
+      "equivalent": false,
+      "reason": "Twee kaartvelden met afzender en bericht overnemen is niet dezelfde één-zin-opdracht met modelhulp en zelf-/docentcontrole."
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-006",
+      "sameMessageCardIds": [
+        "KSW-N26R2-AB-FB-008"
+      ],
+      "equivalent": false,
+      "reason": "Twee kaartvelden met afzender en bericht overnemen is niet dezelfde één-zin-opdracht met modelhulp en zelf-/docentcontrole."
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-007",
+      "sameMessageCardIds": [
+        "KSW-N26R2-AB-FB-002"
+      ],
+      "equivalent": false,
+      "reason": "Twee kaartvelden met afzender en bericht overnemen is niet dezelfde één-zin-opdracht met modelhulp en zelf-/docentcontrole."
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-009",
+      "sameMessageCardIds": [
+        "KSW-N26R2-AB-FB-010"
+      ],
+      "equivalent": false,
+      "reason": "Twee kaartvelden met afzender en bericht overnemen is niet dezelfde één-zin-opdracht met modelhulp en zelf-/docentcontrole."
+    },
+    {
+      "sourceId": "KSW-N26R2-AB-SO-010",
+      "sameMessageCardIds": [
+        "KSW-N26R2-AB-FB-009"
+      ],
+      "equivalent": false,
+      "reason": "Twee kaartvelden met afzender en bericht overnemen is niet dezelfde één-zin-opdracht met modelhulp en zelf-/docentcontrole."
+    }
+  ],
+  "contentReview": {
+    "reviewer": "AI source-bound editorial review",
+    "sourceInstructionsAndModelsPreserved": true,
+    "providedModels": "Alle tien modellen staan al expliciet in de oorspronkelijke opdracht. Dit is korte-zinoefening met modelhulp, geen onafhankelijke schrijfprestatie.",
+    "variants": "De bron staat begrijpelijke varianten toe. Gebruik bestaande vrije antwoordopslag met zelf-/docentcontrole, geen exact-string matcher, automatische grammatica- of beheersingsscore.",
+    "feedbackEdits": "Tien generieke bronfeedbackzinnen zijn voor de kandidaat natuurlijk geformuleerd; originele volledige bronblokken blijven apart bewaard.",
+    "nameContext": "Sam is de gegeven fictieve bronnaam, geen verplicht eigen persoonsgegeven.",
+    "humanNT2ReviewPerformed": false,
+    "sourceHoldTextRetained": true,
+    "newImagesRequired": false
+  },
+  "runtimeIntegrated": false,
+  "nativeSelectedPlayerChecked": false,
+  "newAudioGenerated": 0,
+  "selectedPositionsCompleted": 0,
+  "equivalentExistingQuestions": 0,
+  "countsChanged": false,
+  "live": false,
+  "next": "Integrate the complete ten in a separate current development worktree using unchanged SourceWritingText and original draft/first/latest storage. Keep original full instructions including visible models; accept self/teacher review, never automatic grammar/mastery. Verify actual browser/persistence, instruction/word playback, preservation, normal prebuild/build and offered assets. No publication until real capacity proof and then current canonical transfer, full normal gate, publication window, deploy/live/Drive.",
+  "candidateValidation": {
+    "sourceQuestions": 10,
+    "originalFirstLastDraftSerializationCases": 10,
+    "sourceModelsAlreadyInInstructions": true,
+    "freeVariantSelfTeacherReview": true,
+    "automaticGrammarOrMastery": false,
+    "runtimeIntegrated": false,
+    "browserChecked": false
+  },
+  "audioReuse": {
+    "instruction": {
+      "src": "/package-audio/klink10-messages-texts-20261103/audio-0ddfd57d990a8d1a.bin#bytes=3095256,213238",
+      "text": "Lees de opdracht. Schrijf je eigen tekst.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "sha256": "32fc1e4f710c4b9cfae7dd8c1f52e70178d5a98b5fb67d692eda425a03f9ec27",
+      "offeredBytesEqual": true,
+      "httpStatus": 200,
+      "fullPackReadback": true,
+      "receivedBytes": 3308494,
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Lees de opdracht. Schrijf je eigen tekst.",
+        "album": "Taalroute - Klink - Oefeninstructies",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute"
+      },
+      "fullDecode": true
+    },
+    "wordCoverage": [
+      {
+        "word": "lees",
+        "recording": "/package-audio/woordvormen-20261101/WA-7776dc7742be.mp3"
+      },
+      {
+        "word": "de",
+        "recording": "/package-audio/taalroute/klink-woord-de.wav"
+      },
+      {
+        "word": "opdracht",
+        "recording": "/package-audio/woorden-20261025/TL1128.mp3"
+      },
+      {
+        "word": "schrijf",
+        "recording": "/package-audio/woordvormen-20261101/WA-4bdba21fa333.mp3"
+      },
+      {
+        "word": "je",
+        "recording": "/package-audio/woordgebruik-20261101/WU-821a39fbc93da1af3171.mp3"
+      },
+      {
+        "word": "eigen",
+        "recording": "/package-audio/woorden-20261025/TL0429.mp3"
+      },
+      {
+        "word": "tekst",
+        "recording": "/package-audio/woorden-20261025/TL1518.mp3"
+      },
+      {
+        "word": "korte",
+        "recording": "/package-audio/woordvormen-20261101/WA-2ded0942480e.mp3"
+      },
+      {
+        "word": "zin",
+        "recording": "/package-audio/woorden-20261025/TL1967.mp3"
+      },
+      {
+        "word": "ik",
+        "recording": "/package-audio/taalroute/klink-woord-ik.wav"
+      },
+      {
+        "word": "ben",
+        "recording": "/package-audio/woordvormen-20261101/WA-6700869c8ff7.mp3"
+      },
+      {
+        "word": "ziek",
+        "recording": "/package-audio/woorden-20261025/TL1957.mp3"
+      },
+      {
+        "word": "jouw",
+        "recording": "/package-audio/woorden-20261025/TL0740.mp3"
+      },
+      {
+        "word": "hebt",
+        "recording": "/package-audio/woordvormen-20261101/WA-b94866cf7836.mp3"
+      },
+      {
+        "word": "geschreven",
+        "recording": "/package-audio/woordvormen-20261101/WA-d4e8d7694ac2.mp3"
+      },
+      {
+        "word": "en",
+        "recording": "/package-audio/taalroute/klink-woord-en.wav"
+      },
+      {
+        "word": "vergeleken",
+        "recording": {
+          "src": "/package-audio/word-listening-20261101/words-a4b8c5247a072b5a.bin",
+          "offset": 59794,
+          "length": 20628
+        }
+      },
+      {
+        "word": "schrijft",
+        "recording": "/package-audio/woordvormen-20261101/WA-19c6ad9d98eb.mp3"
+      },
+      {
+        "word": "dat",
+        "recording": "/package-audio/woorden-20261025/TL0335.mp3"
+      },
+      {
+        "word": "bent",
+        "recording": "/package-audio/woordvormen-20261101/WA-90038b3e25c4.mp3"
+      },
+      {
+        "word": "heet",
+        "recording": "/package-audio/woorden-20261025/TL0624.mp3"
+      },
+      {
+        "word": "sam",
+        "recording": {
+          "src": "/package-audio/word-listening-20261101/words-252647bc97ad8587.bin",
+          "offset": 1242865,
+          "length": 13933
+        }
+      },
+      {
+        "word": "het",
+        "recording": "/package-audio/woorden-20261025/TL0642.mp3"
+      },
+      {
+        "word": "regent",
+        "recording": "/package-audio/betekenissen-20261031/regent-weer.mp3"
+      },
+      {
+        "word": "bus",
+        "recording": "/package-audio/taalroute/klink-woord-bus.wav"
+      },
+      {
+        "word": "komt",
+        "recording": "/package-audio/woordvormen-20261101/WA-62aea01f248d.mp3"
+      },
+      {
+        "word": "zit",
+        "recording": "/package-audio/taalroute/klink-woord-zit.wav"
+      },
+      {
+        "word": "in",
+        "recording": "/package-audio/taalroute/klink-woord-in.wav"
+      },
+      {
+        "word": "klas",
+        "recording": "/package-audio/woorden-20261025/TL0783.mp3"
+      },
+      {
+        "word": "kom",
+        "recording": "/package-audio/woorden-20261025/B5R-f3ed26b0bf58.mp3"
+      },
+      {
+        "word": "later",
+        "recording": "/package-audio/woorden-20261025/TR-A1-K-820.mp3"
+      },
+      {
+        "word": "komen",
+        "recording": "/package-audio/woorden-20261025/TL0804.mp3"
+      },
+      {
+        "word": "vraag",
+        "recording": "/package-audio/woorden-20261025/TL1816.mp3"
+      },
+      {
+        "word": "mee",
+        "recording": "/package-audio/taalroute/klink-woord-mee.wav"
+      },
+      {
+        "word": "vraagt",
+        "recording": "/package-audio/woordvormen-20261101/WA-e57f2a4a0983.mp3"
+      },
+      {
+        "word": "of",
+        "recording": "/package-audio/woorden-20261025/TL1060.mp3"
+      },
+      {
+        "word": "iemand",
+        "recording": "/package-audio/woorden-20261025/TL0684.mp3"
+      },
+      {
+        "word": "meegaat",
+        "recording": {
+          "src": "/package-audio/word-listening-20261101/words-162d796ddb57d20c.bin",
+          "offset": 1384852,
+          "length": 16445
+        }
+      },
+      {
+        "word": "wil",
+        "recording": "/package-audio/woorden-20261025/TL1916.mp3"
+      },
+      {
+        "word": "water",
+        "recording": "/package-audio/taalroute/klink-woord-water.wav"
+      },
+      {
+        "word": "wilt",
+        "recording": "/package-audio/woordvormen-20261101/WA-12732a9f8c34.mp3"
+      },
+      {
+        "word": "thuis",
+        "recording": "/package-audio/woorden-20261025/TL1541.mp3"
+      },
+      {
+        "word": "dank",
+        "recording": "/package-audio/woorden-20261025/TL0330.mp3"
+      },
+      {
+        "word": "wel",
+        "recording": "/package-audio/woorden-20261025/TL1872.mp3"
+      },
+      {
+        "word": "bedanken",
+        "recording": "/package-audio/woorden-20261025/TL0126.mp3"
+      },
+      {
+        "word": "bedankt",
+        "recording": "/package-audio/woordgebruik-20261101/WU-8080e94bd1c4bb468cd2.mp3"
+      }
+    ],
+    "visibleWordForms": 46,
+    "missingWords": 0,
+    "newGenerationNeeded": false,
+    "nativeSelectedPlayerChecked": false,
+    "humanListeningPerformed": false
+  },
+  "baseCheck": {
+    "remoteMain": "c53e3cdb045f9e42df3ad7c85a99d9bf15dc0fb4",
+    "localHead": "c53e3cdb045f9e42df3ad7c85a99d9bf15dc0fb4",
+    "canonicalClean": true,
+    "liveRelease": {
+      "application": "Klink",
+      "builtAt": "2026-11-03T06:00:08.111Z",
+      "sourceCommit": "b0763872c76c319e02d4464b57b7afcb02d21ed3",
+      "branch": "main",
+      "sourceClean": true,
+      "curriculumEdition": "klink-leerlijn-20261016-v1",
+      "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+      "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+      "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+      "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+    }
+  }
+}
