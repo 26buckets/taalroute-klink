@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+const assets=JSON.parse(readFileSync('data/klink-grammar-aa-assets.json'));
+const [name,item]=Object.entries(assets).find(([name])=>name.endsWith('.mp3'));
+const bytes=Buffer.from(item.body,'base64'),url='https://klink.taalroute.nl/api/grammar-aa-assets/'+name;
+const head=await fetch(url,{method:'HEAD'});assert.equal(head.status,200);assert.equal(Number(head.headers.get('content-length')),bytes.length);assert.equal((await head.arrayBuffer()).byteLength,0);
+const first=await fetch(url,{headers:{Range:'bytes=0-15'}});assert.equal(first.status,206);assert.deepEqual(Buffer.from(await first.arrayBuffer()),bytes.subarray(0,16));
+const last=await fetch(url,{headers:{Range:'bytes=-16'}});assert.equal(last.status,206);assert.deepEqual(Buffer.from(await last.arrayBuffer()),bytes.subarray(-16));
+const cached=await fetch(url,{headers:{'If-None-Match':head.headers.get('etag')}});assert.equal(cached.status,304);
+const beyond=await fetch(url,{headers:{Range:`bytes=${bytes.length}-`}});assert.equal(beyond.status,416);
+const missing=await fetch('https://klink.taalroute.nl/api/grammar-aa-assets/not-present.mp3');assert.equal(missing.status,404);
+writeFileSync('docs/grammar-ready16-20261104/postflight/http.json',JSON.stringify({passed:6,methods:['HEAD','first range','suffix range','ETag','416','404'],errors:[]},null,2)+'\n');
+console.log('Six live HTTP cases passed');

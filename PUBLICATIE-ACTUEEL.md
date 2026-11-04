@@ -1,3 +1,15 @@
+## Actuele publicatie — 16 Alfa A-grammaticaopdrachten — 4 november 2026
+
+Livebron `3e5634eda2cbb8a87a8638a9184b1a01bf07713e`, Worker `8fb06869-1431-4425-91d0-3ccac4aa011f`. Gepubliceerd vanuit schone canonieke main via de volledige gewone publicatiepoort en `npm run deploy`. Kies het werkwoord en Maak de zin bevatten ieder de acht bronposities 001, 002, 003, 005, 006, 007, 008 en 010. Van de aanvullende 40 staan nu 16 online; 24 blijven open. Het geselecteerde grammaticapakket telt daarmee 136 van 160 live geverifieerde bronposities.
+
+Livecontrole: 32 desktop-Chromium/mobiel-WebKit antwoord- en herlaadstromen, 96 native optie-/kaartafrondingen, alle 50 aangeboden payloads bytegelijk teruggelezen, waaronder 40 bestaande goedgekeurde audiobestanden. Zes HTTP-gevallen geslaagd. Verse WebKit-vergelijkingen na bestaande knoptransities zijn pixel- en geometriegelijk; oorspronkelijke afwijkende screenshots behouden. Alle 20.106 oude publicbestanden behouden. Geen nieuwe audio, beelden, CSS, configuratie, limieten, budget of databasewijzigingen. Geen GitHub Actions. Werkelijke publicatie: 17 geüploade + 19.983 ongewijzigde assets = 20.000; Worker gzip 5.799,40 KiB.
+
+Bronback-up Drive `1JpCZqfDFu6U7ovePnULVQUaak2hXC6V1`: 62 payloads volledig gecontroleerd. Eindbewijs Drive `1Zv7irIBVuKHMknqw0gYI_tMxv91ihbbz`: 2.949.082 bytes, 27 buitenste en 62 geneste payloads plus manifesten volledig teruggelezen. Bewijs: `docs/grammar-ready16-20261104/postflight/publication.json` en `backup-readback.json`.
+
+Open: SC004 lopen, SC009 aanspreking/naar huis/handen en één ontbrekend rolgebonden model, tien ZOE-contextbeelden en afzonderlijk ZMZ-uiterlijkakkoord. De onafhankelijke 70 schrijftaken blijven in de publicatiewachtrij. Fysieke apparaten en onafhankelijke menselijke NT2-review niet uitgevoerd; geen eigen gehoorclaim.
+
+---
+
 ## Actuele publicatie — loader speelt één keer — 3 november 2026
 
 Livebron `c66cee52a149a9059a181b77dff3a3d587e7e85f`, Worker `9228b7bf-b0c6-43b5-8c98-3d704dd99cf8`. PR #11 gepubliceerd op Nico’s expliciete opdracht via schone canonieke main en de gewone `npm run deploy`, inclusief de volledige bestaande publicatiepoort. Enige runtimewijziging: `components/product/klink-opening-loader.tsx`. De eerste loader speelt de bestaande animatie één keer af; volgende laadschermen binnen dezelfde geopende pagina tonen het bestaande eindbeeld. Een volledige paginaherlading begint opnieuw. Afbeeldingen, vormgeving, wachttijd, callbacks, inhoud, media, routes en opslag behouden.
