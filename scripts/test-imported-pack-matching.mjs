@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import { contentPackages } from '../lib/package-content.ts';
+import { importedItems, importedMatchesPack } from '../lib/imported-practice.ts';
+
+const pack = { ...contentPackages[0], words: [], lessons: [], texts: [], dialogues: [], exercises: [] };
+const item = { ...importedItems[0], sourceIds: [], teacherWorkflow: undefined };
+assert.equal(importedMatchesPack(item, pack), false, 'An empty source must not match an empty pack');
+item.sourceIds = ['klink-woord-a', 'klink-woord-b'];
+pack.words.push({ id: 'klink-woord-a' });
+assert.equal(importedMatchesPack(item, pack), false, 'All requested words are required');
+pack.words.push({ id: 'klink-woord-b' });
+assert.equal(importedMatchesPack(item, pack), true);
+pack.words.length = 0;
+assert.equal(importedMatchesPack(item, pack), false, 'A later changed pack must not reuse an old index');
+item.sourceIds = ['context-test'];
+pack.exercises.push({ contextId: 'context-test' });
+assert.equal(importedMatchesPack(item, pack), true);
+pack.exercises.length = 0;
+assert.equal(importedMatchesPack(item, pack), false);
+item.teacherWorkflow = { sourceLessonIds: ['lesson-test'], targetWordIds: [] };
+pack.lessons.push({ id: 'lesson-test' });
+assert.equal(importedMatchesPack(item, pack), true, 'A linked lesson does not require a word match');
+pack.lessons.length = 0;
+assert.equal(importedMatchesPack(item, pack), false);
+console.log('PASS eight empty, complete-word, context, lesson and changed-pack checks');

@@ -103,8 +103,9 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
         // Keep only a precise single-sentence proof. Whole-story evidence cannot be a meaningful selection task.
         const at = sentences.findIndex(text => normalize(text) === normalize(question.evidence));
         if (sentences.length < 2 || at < 0) return [];
-        return [{ ...common, title: markTask(item.text, question.evidence, question.answer) ? 'Tik op de woorden met het antwoord.' : 'Tik op alle woorden van de zin met het antwoord.', question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
-          standardTask: markTask(item.text, question.evidence, question.answer) ?? { ...markTask(item.text, question.evidence, question.evidence)!, help: 'Zoek de zin met het antwoord. Tik op alle woorden van die zin.' }, manualAdvance: true,
+        const answerTask = markTask(item.text, question.evidence, question.answer);
+        return [{ ...common, title: answerTask ? 'Tik op de woorden met het antwoord.' : 'Tik op alle woorden van de zin met het antwoord.', question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
+          standardTask: answerTask ?? { ...markTask(item.text, question.evidence, question.evidence)!, help: 'Zoek de zin met het antwoord. Tik op alle woorden van die zin.' }, manualAdvance: true,
           options: sentences.map((label, at) => ({ id: `${at}`, label })), answer: { correctOptionIds: [`${at}`] },
           distractorReason: 'Andere zinnen uit dezelfde bron; de bewijszin bevat het gevraagde antwoord.',
         }];

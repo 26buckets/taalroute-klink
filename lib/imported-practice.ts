@@ -31,25 +31,34 @@ export function importedExercise(item: ImportedItem): PackageExercise {
     readingConditions: { independentReading: false, preparation: item.prerequisites },
   };
 }
-export function importedMatchesPack(item: ImportedItem, pack: PackageDefinition) {
-  const lessons = item.teacherWorkflow?.sourceLessonIds ?? [];
-  if (lessons.some(id => pack.lessons.some(lesson => lesson.id === id))) return true;
-  const targets = item.teacherWorkflow?.targetWordIds.length ? item.teacherWorkflow.targetWordIds : item.sourceIds.filter(id => id.startsWith('klink-woord-'));
-  if (targets.length && targets.every(id => pack.words.some(word => word.id === id))) return true;
+function matchPack(pack: PackageDefinition) {
+  // Reuse membership within this calculation only; callers may supply changed packs later.
+  const lessons = new Set(pack.lessons.map(lesson => lesson.id));
+  const words = new Set(pack.words.map(word => word.id));
   const sources = new Set([...pack.texts, ...pack.dialogues].map(source => source.id));
   for (const exercise of pack.exercises) if (typeof exercise.contextId === 'string') sources.add(exercise.contextId);
-  return item.sourceIds.some(id => sources.has(id));
+  return (item: ImportedItem) => {
+    if ((item.teacherWorkflow?.sourceLessonIds ?? []).some(id => lessons.has(id))) return true;
+    const targets = item.teacherWorkflow?.targetWordIds.length ? item.teacherWorkflow.targetWordIds : item.sourceIds.filter(id => id.startsWith('klink-woord-'));
+    if (targets.length && targets.every(id => words.has(id))) return true;
+    return item.sourceIds.some(id => sources.has(id));
+  };
+}
+export function importedMatchesPack(item: ImportedItem, pack: PackageDefinition) {
+  return matchPack(pack)(item);
 }
 export function importedExercisesForPack(pack: PackageDefinition, activity: ImportedActivity) {
   const route = importedRoutes.find(item => item.id === activity)!;
-  return importedItems.filter(item => item.domain === route.domain && importedMatchesPack(item, pack)).map(importedExercise);
+  const matches = matchPack(pack);
+  return importedItems.filter(item => item.domain === route.domain && matches(item)).map(importedExercise);
 }
 export function importedCollections(activity: ImportedActivity, items = importedItems, packs: PackageDefinition[] = []) {
   const route = importedRoutes.find(item => item.id === activity)!;
+  const matchers = packs.map(pack => ({ pack, matches: matchPack(pack) }));
   const groups = new Map<string, { id: string; title: string; level: typeof importedLevels[keyof typeof importedLevels]; pack: PackageDefinition; exercises: PackageExercise[] }>();
   for (const item of items.filter(item => item.domain === route.domain && !importedItemIssues(item).length)) {
     const exercise = importedExercise(item);
-    const sourcePack = selfPracticeIds.has(item.id) ? undefined : packs.find(pack => importedMatchesPack(item, pack));
+    const sourcePack = selfPracticeIds.has(item.id) ? undefined : matchers.find(({ matches }) => matches(item))?.pack;
     const pack: PackageDefinition = sourcePack ?? { id: `content:${item.domain}`, title: route.label, subtitle: '', description: '', level: item.level, status: 'teacher-supported', statusNote: '',
       counts: { lessons: 0, coreWords: 0, exercises: 1, exerciseTypes: 1, texts: 0, dialogues: 0, games: 0, images: 0, audio: 0 },
       words: [], lessons: [], texts: [], dialogues: [], games: [], scenes: [], exercises: [exercise], exerciseTypes: [],

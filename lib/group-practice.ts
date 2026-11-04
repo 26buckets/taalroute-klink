@@ -232,6 +232,11 @@ export function groupExercises(pack: PackageDefinition, activity: GroupActivity,
     });
   }
   const sentences = unique(pack.exercises.filter(item => item.mode === 'connected-sentence'), item => String(item.contextId));
+  // Split each existing candidate once, rather than once for every comparison.
+  const sentenceCandidates = activity === 'find-sentence' ? sentences.flatMap(source => {
+    const item = contentById.get(String(source.contextId));
+    return item ? [{ item, tokens: item.text.toLocaleLowerCase('nl').split(/\s+/) }] : [];
+  }) : [];
   return shuffle(sentences, seed).flatMap<PackageExercise>((source, index) => {
     const item = contentById.get(String(source.contextId));
     if (!item || item.blocks.length !== 1 || !item.blocks[0].audio?.src) return [];
@@ -254,10 +259,8 @@ export function groupExercises(pack: PackageDefinition, activity: GroupActivity,
     if (activity !== 'find-sentence') return [];
     // Compare existing sentences with an identical frame and one differing word, never invented distractors.
     const tokens = text.toLocaleLowerCase('nl').split(/\s+/);
-    const alternatives = sentences.flatMap(other => {
-      const candidate = contentById.get(String(other.contextId));
-      if (!candidate || candidate.id === item.id) return [];
-      const parts = candidate.text.toLocaleLowerCase('nl').split(/\s+/);
+    const alternatives = sentenceCandidates.flatMap(({ item: candidate, tokens: parts }) => {
+      if (candidate.id === item.id) return [];
       return parts.length === tokens.length && parts.filter((part, i) => part !== tokens[i]).length === 1 ? [candidate] : [];
     });
     const choices = [item, ...unique(alternatives, candidate => candidate.text).slice(0, 2)];
