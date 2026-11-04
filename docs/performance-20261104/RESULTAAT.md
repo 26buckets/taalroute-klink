@@ -12,6 +12,10 @@ De definitieve klok meet in de browser het moment waarop het juiste scherm zicht
 
 De vaste openingspauze is weg; de juiste les-/appcode en veilige herstelcontrole moeten wel gereed zijn. De loader behoudt zijn eenmalige animatie en het eindbeeld bij volgende laadmomenten. De aanvullende splitsing geeft in deze reeks vooral bij Klink oefenen winst; docentschermen veranderen minder. Kleine verschillen in vervolgknoppen zijn geen betekenisvolle regressie; deze kolom omvat ook testbesturing. Volledige eerste/herhaalverdeling en spreiding staan in summary.json en de gecomprimeerde ruwe metingen.
 
+## Aansluiting op de volgende inhoudsbatch
+
+Na het vrijgeven van het meetvenster publiceerde de onafhankelijke inhoudschat de volgende letterbatch. Main 054739501d803509844d5c0c18e0e77ec7b8b098 is daarom ook in deze kandidaat samengevoegd. Alleen de vier aangekondigde databestanden veranderden in runtime; alle performancebronbestanden blijven bytegelijk. Op die nieuwste inhoud slagen opnieuw de productiebuild, 32 units, 16 laad-/voortgangsstromen en 44 woordaudio-browsercontroles. Alle actuele data, assets, API, configuratie en migraties zijn exact behouden. De bovenstaande vergelijkbare timings blijven expliciet bij de eerdere vastgezette 8fb4f020-basis; ze zijn niet stilzwijgend als nieuwe inhoudsmeting hernoemd.
+
 ## Audio en behoud
 
 De bestaande complete HTTP200-bundelfallback wordt maximaal 8 MiB hergebruikt. Exacte rangecontrole, maximumgrootte, annulering en herstel na beschadigde data blijven behouden. De actuele MP3- én WAV-herkenning is behouden. De eerste download wordt hierdoor niet structureel kleiner; correcte HTTP206-antwoorden worden niet als complete bundel opgeslagen.
