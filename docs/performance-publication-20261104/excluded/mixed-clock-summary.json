@@ -1,0 +1,648 @@
+{
+  "method": "real production network, no interception or CPU/network emulation; sequential before/after comparison",
+  "clock": "in-page MutationObserver after visible target and removed loader; nextMs includes automation interactions",
+  "beforeRelease": {
+    "application": "Klink",
+    "builtAt": "2026-11-04T18:50:02.940Z",
+    "sourceCommit": "b9865143a32c32f69cf47a1e20f5effdc50fcdee",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "afterRelease": {
+    "application": "Klink",
+    "builtAt": "2026-11-04T19:16:32.610Z",
+    "sourceCommit": "dc37a479a7a6f148d61ffb5140dfd79112331f85",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "rows": [
+    {
+      "scenario": "entry",
+      "before": {
+        "ready": {
+          "n": 24,
+          "medianMs": 2419.7999999821186,
+          "p95Ms": 7493,
+          "maxMs": 7885.5
+        },
+        "next": {
+          "n": 24,
+          "medianMs": 2491.8405210000055,
+          "p95Ms": 3280.5891249999986,
+          "maxMs": 3973.7479999999996
+        }
+      },
+      "after": {
+        "ready": {
+          "n": 24,
+          "medianMs": 595.0999999940395,
+          "p95Ms": 4179.100000023842,
+          "maxMs": 5158
+        },
+        "next": {
+          "n": 24,
+          "medianMs": 2318.7158960000015,
+          "p95Ms": 2867.9536249999983,
+          "maxMs": 3161.55825
+        }
+      },
+      "medianReductionPercent": 75.40705843464596
+    },
+    {
+      "scenario": "learner",
+      "before": {
+        "ready": {
+          "n": 24,
+          "medianMs": 6473.3499999940395,
+          "p95Ms": 8111,
+          "maxMs": 8111
+        },
+        "next": {
+          "n": 24,
+          "medianMs": 42.016458000005514,
+          "p95Ms": 73.71033299999544,
+          "maxMs": 87.73962499998743
+        }
+      },
+      "after": {
+        "ready": {
+          "n": 24,
+          "medianMs": 3562.6500000059605,
+          "p95Ms": 9144,
+          "maxMs": 9144
+        },
+        "next": {
+          "n": 24,
+          "medianMs": 39.52529100000538,
+          "p95Ms": 62.16841700000805,
+          "maxMs": 64.45283299999574
+        }
+      },
+      "medianReductionPercent": 44.96435385064548
+    },
+    {
+      "scenario": "docent",
+      "before": {
+        "ready": {
+          "n": 24,
+          "medianMs": 4438.75,
+          "p95Ms": 5687.899999976158,
+          "maxMs": 7483
+        },
+        "next": {
+          "n": 24,
+          "medianMs": 30.161833500002103,
+          "p95Ms": 50.55137500001001,
+          "maxMs": 86.99616700000479
+        }
+      },
+      "after": {
+        "ready": {
+          "n": 24,
+          "medianMs": 2691.599999964237,
+          "p95Ms": 5513.899999976158,
+          "maxMs": 7251
+        },
+        "next": {
+          "n": 24,
+          "medianMs": 29.276833500000066,
+          "p95Ms": 49.385167000000365,
+          "maxMs": 50.455165999999736
+        }
+      },
+      "medianReductionPercent": 39.36130667498199
+    }
+  ],
+  "groups": [
+    {
+      "scenario": "entry",
+      "engine": "chromium",
+      "width": 1280,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 5322,
+        "p95Ms": 7885.5,
+        "maxMs": 7885.5
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3844,
+        "p95Ms": 4052.400000035763,
+        "maxMs": 4052.400000035763
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "chromium",
+      "width": 1280,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 2435.800000011921,
+        "p95Ms": 2851.600000023842,
+        "maxMs": 2851.600000023842
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 617.3000000119209,
+        "p95Ms": 1025.4000000357628,
+        "maxMs": 1025.4000000357628
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "chromium",
+      "width": 390,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 4376.699999988079,
+        "p95Ms": 5118.800000011921,
+        "maxMs": 5118.800000011921
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3138.100000023842,
+        "p95Ms": 4179.100000023842,
+        "maxMs": 4179.100000023842
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "chromium",
+      "width": 390,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 2205.800000011921,
+        "p95Ms": 2225.600000023842,
+        "maxMs": 2225.600000023842
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 572.8999999761581,
+        "p95Ms": 619.5,
+        "maxMs": 619.5
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "webkit",
+      "width": 1280,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 5259,
+        "p95Ms": 7493,
+        "maxMs": 7493
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3888,
+        "p95Ms": 5158,
+        "maxMs": 5158
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "webkit",
+      "width": 1280,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 2169,
+        "p95Ms": 2248,
+        "maxMs": 2248
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 173,
+        "p95Ms": 205,
+        "maxMs": 205
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "webkit",
+      "width": 390,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 2480,
+        "p95Ms": 4467,
+        "maxMs": 4467
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 472,
+        "p95Ms": 2512,
+        "maxMs": 2512
+      }
+    },
+    {
+      "scenario": "entry",
+      "engine": "webkit",
+      "width": 390,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 2160,
+        "p95Ms": 2165,
+        "maxMs": 2165
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 159,
+        "p95Ms": 307,
+        "maxMs": 307
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "chromium",
+      "width": 1280,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 6539.699999988079,
+        "p95Ms": 7187.199999988079,
+        "maxMs": 7187.199999988079
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3729.899999976158,
+        "p95Ms": 6582.599999964237,
+        "maxMs": 6582.599999964237
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "chromium",
+      "width": 1280,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 6539.699999988079,
+        "p95Ms": 7187.199999988079,
+        "maxMs": 7187.199999988079
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3729.899999976158,
+        "p95Ms": 6582.599999964237,
+        "maxMs": 6582.599999964237
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "chromium",
+      "width": 390,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 6786.300000011921,
+        "p95Ms": 7737.099999964237,
+        "maxMs": 7737.099999964237
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 4325.599999964237,
+        "p95Ms": 6411.899999976158,
+        "maxMs": 6411.899999976158
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "chromium",
+      "width": 390,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 6786.300000011921,
+        "p95Ms": 7737.099999964237,
+        "maxMs": 7737.099999964237
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 4325.599999964237,
+        "p95Ms": 6411.899999976158,
+        "maxMs": 6411.899999976158
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "webkit",
+      "width": 1280,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 6407,
+        "p95Ms": 6594,
+        "maxMs": 6594
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 2505,
+        "p95Ms": 2653,
+        "maxMs": 2653
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "webkit",
+      "width": 1280,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 6407,
+        "p95Ms": 6594,
+        "maxMs": 6594
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 2505,
+        "p95Ms": 2653,
+        "maxMs": 2653
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "webkit",
+      "width": 390,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 3588,
+        "p95Ms": 8111,
+        "maxMs": 8111
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3963,
+        "p95Ms": 9144,
+        "maxMs": 9144
+      }
+    },
+    {
+      "scenario": "learner",
+      "engine": "webkit",
+      "width": 390,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 3588,
+        "p95Ms": 8111,
+        "maxMs": 8111
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3963,
+        "p95Ms": 9144,
+        "maxMs": 9144
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "chromium",
+      "width": 1280,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 4557.5,
+        "p95Ms": 4693,
+        "maxMs": 4693
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 2664.599999964237,
+        "p95Ms": 4001,
+        "maxMs": 4001
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "chromium",
+      "width": 1280,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 4557.5,
+        "p95Ms": 4693,
+        "maxMs": 4693
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 2664.599999964237,
+        "p95Ms": 4001,
+        "maxMs": 4001
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "chromium",
+      "width": 390,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 5291.599999964237,
+        "p95Ms": 5687.899999976158,
+        "maxMs": 5687.899999976158
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3350.099999964237,
+        "p95Ms": 5513.899999976158,
+        "maxMs": 5513.899999976158
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "chromium",
+      "width": 390,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 5291.599999964237,
+        "p95Ms": 5687.899999976158,
+        "maxMs": 5687.899999976158
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3350.099999964237,
+        "p95Ms": 5513.899999976158,
+        "maxMs": 5513.899999976158
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "webkit",
+      "width": 1280,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 5118,
+        "p95Ms": 7483,
+        "maxMs": 7483
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 3548,
+        "p95Ms": 7251,
+        "maxMs": 7251
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "webkit",
+      "width": 1280,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 2462,
+        "p95Ms": 2473,
+        "maxMs": 2473
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 729,
+        "p95Ms": 1367,
+        "maxMs": 1367
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "webkit",
+      "width": 390,
+      "visit": "cold",
+      "before": {
+        "n": 3,
+        "medianMs": 4320,
+        "p95Ms": 4882,
+        "maxMs": 4882
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 1887,
+        "p95Ms": 3343,
+        "maxMs": 3343
+      }
+    },
+    {
+      "scenario": "docent",
+      "engine": "webkit",
+      "width": 390,
+      "visit": "warm",
+      "before": {
+        "n": 3,
+        "medianMs": 2546,
+        "p95Ms": 2678,
+        "maxMs": 2678
+      },
+      "after": {
+        "n": 3,
+        "medianMs": 696,
+        "p95Ms": 819,
+        "maxMs": 819
+      }
+    }
+  ],
+  "errors": {
+    "before": [],
+    "after": []
+  },
+  "audio": {
+    "before": {
+      "sessions": 12,
+      "playsPerSession": 3,
+      "requests": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "responseContentLengthTotal": 50322888,
+      "browserTransferTotal": 50335093,
+      "firstStart": {
+        "n": 12,
+        "medianMs": 394,
+        "p95Ms": 1638.300000011921,
+        "maxMs": 1638.300000011921
+      },
+      "secondStart": {
+        "n": 12,
+        "medianMs": 182,
+        "p95Ms": 251,
+        "maxMs": 251
+      },
+      "thirdStart": {
+        "n": 12,
+        "medianMs": 181.4500000178814,
+        "p95Ms": 249,
+        "maxMs": 249
+      },
+      "errors": [],
+      "model": "Actual production network, no interception or added delay; native playing events after clicking words in a synthetic DOM text fixture; response bytes use Content-Length, resources record browser transfer size",
+      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin"
+    },
+    "after": {
+      "sessions": 12,
+      "playsPerSession": 3,
+      "requests": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "responseContentLengthTotal": 25066524,
+      "browserTransferTotal": 25070457,
+      "firstStart": {
+        "n": 12,
+        "medianMs": 304.90000000596046,
+        "p95Ms": 496,
+        "maxMs": 496
+      },
+      "secondStart": {
+        "n": 12,
+        "medianMs": 143.85000002384186,
+        "p95Ms": 255,
+        "maxMs": 255
+      },
+      "thirdStart": {
+        "n": 12,
+        "medianMs": 150.19999998807907,
+        "p95Ms": 250,
+        "maxMs": 250
+      },
+      "errors": [],
+      "model": "Actual production network, no interception or added delay; native playing events after clicking words in a synthetic DOM text fixture; response bytes use Content-Length, resources record browser transfer size",
+      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "route": "#teacher",
+      "legacyStaffOpens": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "legacyManualBookmark": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "#teacher",
+      "legacyStaffOpens": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "legacyManualBookmark": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "route": "#teacher",
+      "legacyStaffOpens": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "legacyManualBookmark": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "#teacher",
+      "legacyStaffOpens": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "legacyManualBookmark": true
+    }
+  ],
+  "errors": [],
+  "readOnly": true
+}

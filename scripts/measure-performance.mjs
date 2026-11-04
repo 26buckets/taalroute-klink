@@ -11,7 +11,8 @@ const scenarios = [
   { name: 'entry', hash: '', selector: '.landing-start' },
   { name: 'learner', hash: '#learner', selector: '.learner-app' },
   { name: 'docent', hash: '#teacher/plus', selector: '.kpd-lesson-choice' },
-];
+].filter(scenario => !process.env.KLINK_PERF_SCENARIO || scenario.name === process.env.KLINK_PERF_SCENARIO);
+assert(scenarios.length, 'Requested measurement scenario must exist');
 for (const [engine, type] of Object.entries({ chromium, webkit })) {
   const browser = await type.launch();
   try {
@@ -21,6 +22,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       page.on('pageerror', error => errors.push({ engine, width, scenario: scenario.name, message: error.message }));
       await page.addInitScript(selector => {
         localStorage.setItem('performance-preserve', 'saved-progress');
+        window.perfDocumentId = crypto.randomUUID();
         window.perfReadyAt = null;
         const observer = new MutationObserver(() => {
           const target = document.querySelector(selector);
@@ -34,7 +36,13 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         try { new PerformanceObserver(list => window.perfLongTasks.push(...list.getEntries().map(e => e.duration))).observe({ type: 'longtask', buffered: true }); } catch {}
       }, scenario.selector);
       for (const visit of ['cold', 'warm']) {
+        const previousDocument = visit === 'warm' ? await page.evaluate(() => window.perfDocumentId) : null;
         await page.goto(base + '/' + scenario.hash, { waitUntil: 'domcontentloaded' });
+        // A fragment-only navigation keeps the old performance clock; measure a real repeat visit.
+        if (previousDocument && await page.evaluate(() => window.perfDocumentId) === previousDocument)
+          await page.reload({ waitUntil: 'domcontentloaded' });
+        const documentId = await page.evaluate(() => window.perfDocumentId);
+        assert(documentId && documentId !== previousDocument, 'Each visit must have a fresh document clock');
         await page.locator(scenario.selector).first().waitFor();
         await page.locator('.klink-opening-loader').waitFor({ state: 'detached' });
         const ready = await page.evaluate(() => window.perfReadyAt);
@@ -61,7 +69,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           await page.evaluate(() => document.fonts.ready);
           await page.screenshot({ path: `${out}/${engine}-${width}-${scenario.name}.png` });
         }
-        rows.push({ engine, width, scenario: scenario.name, repeat, visit, readyMs: ready, nextMs, ...stats });
+        rows.push({ engine, width, scenario: scenario.name, repeat, visit, documentId, readyMs: ready, nextMs, ...stats });
         // Reset only the synthetic lesson choice, retain the browser HTTP cache.
         if (scenario.name === 'docent') await page.getByRole('button', { name: 'Lesoverzicht', exact: true }).click();
         writeFileSync(out + '/measurements.json', JSON.stringify({ base, release, measuredAt: new Date().toISOString(), network: new URL(base).hostname === '127.0.0.1' ? 'local loopback, no CPU/network emulation' : 'real production network, no interception or CPU/network emulation; sequential before/after comparison', readyClock: 'in-page MutationObserver after visible target and removed loader; nextMs includes automation interactions', rows, errors }, null, 2));

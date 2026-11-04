@@ -1,0 +1,429 @@
+{
+  "method": "Primary live comparison: first browser visits only, 12 per route and version, same source-bound batches. All original warm rows excluded from this primary comparison. Learner 12/12 and Docent 6/12 warm rows reused a document clock; raw evidence and invalid mixed summary retained. Corrected helper enforces a unique document clock per visit. Real network, sequential samples; no cold-Worker guarantee.",
+  "beforeRelease": {
+    "application": "Klink",
+    "builtAt": "2026-11-04T18:50:02.940Z",
+    "sourceCommit": "b9865143a32c32f69cf47a1e20f5effdc50fcdee",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "afterRelease": {
+    "application": "Klink",
+    "builtAt": "2026-11-04T19:16:32.610Z",
+    "sourceCommit": "dc37a479a7a6f148d61ffb5140dfd79112331f85",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "rows": [
+    {
+      "scenario": "entry",
+      "before": {
+        "ready": {
+          "n": 12,
+          "medianMs": 4681.350000023842,
+          "p95Ms": 7885.5,
+          "maxMs": 7885.5
+        },
+        "next": {
+          "n": 12,
+          "medianMs": 2682.3952080000017,
+          "p95Ms": 3973.7479999999996,
+          "maxMs": 3973.7479999999996
+        }
+      },
+      "after": {
+        "ready": {
+          "n": 12,
+          "medianMs": 2825.050000011921,
+          "p95Ms": 5158,
+          "maxMs": 5158
+        },
+        "next": {
+          "n": 12,
+          "medianMs": 2477.4550000000017,
+          "p95Ms": 3161.55825,
+          "maxMs": 3161.55825
+        }
+      },
+      "medianReductionPercent": 39.653091522797205
+    },
+    {
+      "scenario": "learner",
+      "before": {
+        "ready": {
+          "n": 12,
+          "medianMs": 6473.3499999940395,
+          "p95Ms": 8111,
+          "maxMs": 8111
+        },
+        "next": {
+          "n": 12,
+          "medianMs": 45.27804200000537,
+          "p95Ms": 87.73962499998743,
+          "maxMs": 87.73962499998743
+        }
+      },
+      "after": {
+        "ready": {
+          "n": 12,
+          "medianMs": 3562.6500000059605,
+          "p95Ms": 9144,
+          "maxMs": 9144
+        },
+        "next": {
+          "n": 12,
+          "medianMs": 44.77164599999378,
+          "p95Ms": 64.45283299999574,
+          "maxMs": 64.45283299999574
+        }
+      },
+      "medianReductionPercent": 44.96435385064548
+    },
+    {
+      "scenario": "docent",
+      "before": {
+        "ready": {
+          "n": 12,
+          "medianMs": 4787.5,
+          "p95Ms": 7483,
+          "maxMs": 7483
+        },
+        "next": {
+          "n": 12,
+          "medianMs": 44.83137500000157,
+          "p95Ms": 86.99616700000479,
+          "maxMs": 86.99616700000479
+        }
+      },
+      "after": {
+        "ready": {
+          "n": 12,
+          "medianMs": 3346.5499999821186,
+          "p95Ms": 7251,
+          "maxMs": 7251
+        },
+        "next": {
+          "n": 12,
+          "medianMs": 42.71158350000769,
+          "p95Ms": 50.455165999999736,
+          "maxMs": 50.455165999999736
+        }
+      },
+      "medianReductionPercent": 30.098172324133287
+    }
+  ],
+  "audio": {
+    "before": {
+      "sessions": 12,
+      "playsPerSession": 3,
+      "requests": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "responseContentLengthTotal": 50322888,
+      "browserTransferTotal": 50335093,
+      "firstStart": {
+        "n": 12,
+        "medianMs": 394,
+        "p95Ms": 1638.300000011921,
+        "maxMs": 1638.300000011921
+      },
+      "secondStart": {
+        "n": 12,
+        "medianMs": 182,
+        "p95Ms": 251,
+        "maxMs": 251
+      },
+      "thirdStart": {
+        "n": 12,
+        "medianMs": 181.4500000178814,
+        "p95Ms": 249,
+        "maxMs": 249
+      },
+      "errors": [],
+      "model": "Actual production network, no interception or added delay; native playing events after clicking words in a synthetic DOM text fixture; response bytes use Content-Length, resources record browser transfer size",
+      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin"
+    },
+    "after": {
+      "sessions": 12,
+      "playsPerSession": 3,
+      "requests": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "responseContentLengthTotal": 25066524,
+      "browserTransferTotal": 25070457,
+      "firstStart": {
+        "n": 12,
+        "medianMs": 304.90000000596046,
+        "p95Ms": 496,
+        "maxMs": 496
+      },
+      "secondStart": {
+        "n": 12,
+        "medianMs": 143.85000002384186,
+        "p95Ms": 255,
+        "maxMs": 255
+      },
+      "thirdStart": {
+        "n": 12,
+        "medianMs": 150.19999998807907,
+        "p95Ms": 250,
+        "maxMs": 250
+      },
+      "errors": [],
+      "model": "Actual production network, no interception or added delay; native playing events after clicking words in a synthetic DOM text fixture; response bytes use Content-Length, resources record browser transfer size",
+      "src": "/package-audio/word-listening-20261101/words-ed42a726f3e40c98.bin"
+    }
+  },
+  "errors": {
+    "before": [],
+    "after": []
+  },
+  "audit": [
+    {
+      "phase": "before",
+      "scenario": "entry",
+      "sameClockWarmRows": []
+    },
+    {
+      "phase": "before",
+      "scenario": "learner",
+      "sameClockWarmRows": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 2
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 2
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 0
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 1
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 2
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 0
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 1
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "scenario": "docent",
+      "sameClockWarmRows": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 2
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "scenario": "entry",
+      "sameClockWarmRows": []
+    },
+    {
+      "phase": "after",
+      "scenario": "learner",
+      "sameClockWarmRows": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 2
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 2
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 0
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 1
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 2
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 0
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 1
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "scenario": "docent",
+      "sameClockWarmRows": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 2
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 2
+        }
+      ]
+    }
+  ]
+}

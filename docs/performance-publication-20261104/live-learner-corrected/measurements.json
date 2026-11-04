@@ -1,0 +1,6741 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-11-04T19:16:32.610Z",
+    "sourceCommit": "dc37a479a7a6f148d61ffb5140dfd79112331f85",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "measuredAt": "2026-11-04T19:27:16.864Z",
+  "network": "real production network, no interception or CPU/network emulation; sequential before/after comparison",
+  "readyClock": "in-page MutationObserver after visible target and removed loader; nextMs includes automation interactions",
+  "rows": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "cold",
+      "documentId": "5957cb7d-a6a2-485e-a482-97add2cdb7c9",
+      "readyMs": 5516.699999988079,
+      "nextMs": 74.40720799999963,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29588,
+          "decoded": 29288,
+          "duration": 57.19999998807907
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23408,
+          "decoded": 23108,
+          "duration": 142.20000004768372
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1124,
+          "decoded": 1969,
+          "duration": 77.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5317,
+          "decoded": 12795,
+          "duration": 136.89999997615814
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96645,
+          "decoded": 543931,
+          "duration": 136.5
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 526,
+          "decoded": 343,
+          "duration": 136.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35281,
+          "decoded": 116037,
+          "duration": 96
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 740,
+          "decoded": 716,
+          "duration": 148.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 642,
+          "decoded": 496,
+          "duration": 69.90000003576279
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1964,
+          "decoded": 3800,
+          "duration": 89.20000004768372
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61093,
+          "decoded": 190038,
+          "duration": 89.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48439,
+          "decoded": 153991,
+          "duration": 141.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7392,
+          "decoded": 19225,
+          "duration": 141.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5487,
+          "decoded": 13174,
+          "duration": 114.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3413,
+          "decoded": 7875,
+          "duration": 160.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244443,
+          "decoded": 1554955,
+          "duration": 161.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5045,
+          "decoded": 11934,
+          "duration": 160.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28248,
+          "decoded": 122085,
+          "duration": 160.79999995231628
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48866,
+          "decoded": 67063,
+          "duration": 114
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3972,
+          "decoded": 9785,
+          "duration": 101
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1025,
+          "decoded": 1644,
+          "duration": 167.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2375167,
+          "decoded": 24666401,
+          "duration": 429.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109193,
+          "decoded": 444574,
+          "duration": 179.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44488,
+          "decoded": 279424,
+          "duration": 348.19999998807907
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 921,
+          "decoded": 1410,
+          "duration": 368
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140785,
+          "decoded": 858137,
+          "duration": 371.19999998807907
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5772,
+          "decoded": 23513,
+          "duration": 341.30000001192093
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2130,
+          "decoded": 5133,
+          "duration": 102.40000003576279
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4608,
+          "decoded": 12122,
+          "duration": 103.69999998807907
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31620,
+          "decoded": 31320,
+          "duration": 38.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2214,
+          "decoded": 5235,
+          "duration": 38.40000003576279
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2190,
+          "decoded": 5197,
+          "duration": 53
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2213,
+          "decoded": 5233,
+          "duration": 64
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2208,
+          "decoded": 5237,
+          "duration": 68.5
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2218,
+          "decoded": 5238,
+          "duration": 68.5
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2165,
+          "decoded": 5169,
+          "duration": 95.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2006,
+          "decoded": 3408,
+          "duration": 68.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2164,
+          "decoded": 5169,
+          "duration": 72.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2157,
+          "decoded": 5159,
+          "duration": 76.69999998807907
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 12774,
+          "decoded": 19033,
+          "duration": 85.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2213,
+          "decoded": 5234,
+          "duration": 160.30000001192093
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 9386,
+          "decoded": 9086,
+          "duration": 42.60000002384186
+        }
+      ],
+      "longTasks": [
+        91,
+        1071
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "warm",
+      "documentId": "63a414bb-ad6c-4bf2-b324-317922616da5",
+      "readyMs": 4036.5,
+      "nextMs": 42.97149999999965,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 126
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 119.79999995231628
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 125
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 134.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 122.10000002384186
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 127
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 133.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 144.9000000357628
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 125.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 128
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 131.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 139.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 134.0999999642372
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 134.5999999642372
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 138.0999999642372
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 142.0999999642372
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 167.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 144.5
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 160
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 103.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.09999996423721
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 372.2000000476837
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 107
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.5
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 100.19999998807907
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 114.09999996423721
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 67.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 60.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 62.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 65.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 86.40000003576279
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 19033,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.90000003576279
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.10000002384186
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.10000002384186
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 31320,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.30000001192093
+        }
+      ],
+      "longTasks": [
+        108,
+        73,
+        1059
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "cold",
+      "documentId": "0f2b19be-b2ce-41c8-8835-1813bb14a3d1",
+      "readyMs": 2272.5,
+      "nextMs": 68.62475000000086,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29588,
+          "decoded": 29288,
+          "duration": 109.30000001192093
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23408,
+          "decoded": 23108,
+          "duration": 77.59999996423721
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1124,
+          "decoded": 1969,
+          "duration": 111.59999996423721
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 526,
+          "decoded": 343,
+          "duration": 70.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5269,
+          "decoded": 12795,
+          "duration": 106.90000003576279
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96629,
+          "decoded": 543931,
+          "duration": 171.9000000357628
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 740,
+          "decoded": 716,
+          "duration": 172
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35281,
+          "decoded": 116037,
+          "duration": 201.4000000357628
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5045,
+          "decoded": 11934,
+          "duration": 76.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1964,
+          "decoded": 3800,
+          "duration": 111.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5487,
+          "decoded": 13174,
+          "duration": 133.0999999642372
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61093,
+          "decoded": 190038,
+          "duration": 159
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 642,
+          "decoded": 496,
+          "duration": 177.5999999642372
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7392,
+          "decoded": 19225,
+          "duration": 177.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48495,
+          "decoded": 153991,
+          "duration": 177.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3413,
+          "decoded": 7875,
+          "duration": 200.5
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244443,
+          "decoded": 1554955,
+          "duration": 201
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48866,
+          "decoded": 67063,
+          "duration": 110.90000003576279
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28251,
+          "decoded": 122085,
+          "duration": 200.70000004768372
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3917,
+          "decoded": 9785,
+          "duration": 96.29999995231628
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1025,
+          "decoded": 1644,
+          "duration": 62.5
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2377424,
+          "decoded": 24666401,
+          "duration": 527.1999999880791
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109141,
+          "decoded": 444574,
+          "duration": 72.40000003576279
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 921,
+          "decoded": 1410,
+          "duration": 41.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 141110,
+          "decoded": 858137,
+          "duration": 53.09999996423721
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44656,
+          "decoded": 279424,
+          "duration": 55.700000047683716
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5832,
+          "decoded": 23513,
+          "duration": 50.60000002384186
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2130,
+          "decoded": 5133,
+          "duration": 48
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4640,
+          "decoded": 12122,
+          "duration": 68.59999996423721
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31620,
+          "decoded": 31320,
+          "duration": 45.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2165,
+          "decoded": 5169,
+          "duration": 51.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2218,
+          "decoded": 5238,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2190,
+          "decoded": 5197,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2208,
+          "decoded": 5237,
+          "duration": 44.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2213,
+          "decoded": 5234,
+          "duration": 46
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 12774,
+          "decoded": 19033,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2157,
+          "decoded": 5159,
+          "duration": 46.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2006,
+          "decoded": 3408,
+          "duration": 49.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2213,
+          "decoded": 5233,
+          "duration": 66.5
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2214,
+          "decoded": 5235,
+          "duration": 69.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2164,
+          "decoded": 5169,
+          "duration": 126.09999996423721
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 9386,
+          "decoded": 9086,
+          "duration": 54.89999997615814
+        },
+        {
+          "name": "/docenten",
+          "transfer": 3964,
+          "decoded": 12999,
+          "duration": 45.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/manual-navigation-Cy7lIdJL.js",
+          "transfer": 887,
+          "decoded": 1179,
+          "duration": 39.59999996423721
+        },
+        {
+          "name": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transfer": 1511,
+          "decoded": 3557,
+          "duration": 41.90000003576279
+        }
+      ],
+      "longTasks": [
+        95,
+        1067
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "warm",
+      "documentId": "8189b448-6412-4e89-9b30-38a98bcad993",
+      "readyMs": 1632.8999999761581,
+      "nextMs": 38.25395899999967,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.5
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 77
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.19999998807907
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.19999998807907
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.39999997615814
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.59999996423721
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.799999952316284
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 54.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 73.39999997615814
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.40000003576279
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 100.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.5
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 202.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.5
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56.39999997615814
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.10000002384186
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.90000003576279
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 54.5
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.59999996423721
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 19033,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.19999998807907
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.19999998807907
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 31320,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.5
+        }
+      ],
+      "longTasks": [
+        109,
+        70,
+        1061
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "cold",
+      "documentId": "4af95cd5-9d94-4977-a416-775c3625785b",
+      "readyMs": 4171.399999976158,
+      "nextMs": 45.70745800000077,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29588,
+          "decoded": 29288,
+          "duration": 130
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23408,
+          "decoded": 23108,
+          "duration": 48.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1124,
+          "decoded": 1969,
+          "duration": 129.60000002384186
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 526,
+          "decoded": 343,
+          "duration": 74.5
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96645,
+          "decoded": 543931,
+          "duration": 128.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5317,
+          "decoded": 12795,
+          "duration": 129.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35307,
+          "decoded": 116037,
+          "duration": 166
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61134,
+          "decoded": 190038,
+          "duration": 89.5
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 740,
+          "decoded": 716,
+          "duration": 129.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48439,
+          "decoded": 153991,
+          "duration": 138.5
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7392,
+          "decoded": 19225,
+          "duration": 81
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 642,
+          "decoded": 496,
+          "duration": 138.5
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1964,
+          "decoded": 3800,
+          "duration": 138.5999999642372
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5510,
+          "decoded": 13174,
+          "duration": 138.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3413,
+          "decoded": 7875,
+          "duration": 160.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244522,
+          "decoded": 1554955,
+          "duration": 165.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5116,
+          "decoded": 11934,
+          "duration": 160.4000000357628
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28281,
+          "decoded": 122085,
+          "duration": 160.4000000357628
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48851,
+          "decoded": 67063,
+          "duration": 165.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3917,
+          "decoded": 9785,
+          "duration": 78.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1025,
+          "decoded": 1644,
+          "duration": 71.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2377535,
+          "decoded": 24666401,
+          "duration": 426.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109227,
+          "decoded": 444574,
+          "duration": 80.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44358,
+          "decoded": 279424,
+          "duration": 61.80000001192093
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5772,
+          "decoded": 23513,
+          "duration": 64.19999998807907
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 921,
+          "decoded": 1410,
+          "duration": 66.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140246,
+          "decoded": 858137,
+          "duration": 73.30000001192093
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2130,
+          "decoded": 5133,
+          "duration": 73
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4608,
+          "decoded": 12122,
+          "duration": 62.30000001192093
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31620,
+          "decoded": 31320,
+          "duration": 41.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2165,
+          "decoded": 5169,
+          "duration": 36.5
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2157,
+          "decoded": 5159,
+          "duration": 33.5
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 13011,
+          "decoded": 19033,
+          "duration": 36.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2213,
+          "decoded": 5234,
+          "duration": 37.5
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2214,
+          "decoded": 5235,
+          "duration": 37.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2208,
+          "decoded": 5237,
+          "duration": 42.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2190,
+          "decoded": 5197,
+          "duration": 54.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2164,
+          "decoded": 5169,
+          "duration": 56.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2213,
+          "decoded": 5233,
+          "duration": 67
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2006,
+          "decoded": 3408,
+          "duration": 70.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2218,
+          "decoded": 5238,
+          "duration": 73.30000001192093
+        }
+      ],
+      "longTasks": [
+        91,
+        1062
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "warm",
+      "documentId": "44d226fc-f12a-4149-aa8f-5c388044b050",
+      "readyMs": 3764.099999964237,
+      "nextMs": 35.75358399999823,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.80000001192093
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.59999996423721
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.80000001192093
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 51.5
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.80000001192093
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 48.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 61.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 65.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 67.5
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 68.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.299999952316284
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 350.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.5
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 33
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.5
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.40000003576279
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.30000001192093
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 19033,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.60000002384186
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.30000001192093
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 31320,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 9386,
+          "decoded": 9086,
+          "duration": 36
+        },
+        {
+          "name": "/docenten",
+          "transfer": 3889,
+          "decoded": 12999,
+          "duration": 41.59999996423721
+        },
+        {
+          "name": "/_next/static/chunks/manual-navigation-Cy7lIdJL.js",
+          "transfer": 887,
+          "decoded": 1179,
+          "duration": 44.30000001192093
+        },
+        {
+          "name": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transfer": 1511,
+          "decoded": 3557,
+          "duration": 59.80000001192093
+        }
+      ],
+      "longTasks": [
+        110,
+        70,
+        1069
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "cold",
+      "documentId": "e4a203fa-f835-444c-bea0-ce915b84fe4c",
+      "readyMs": 2138.300000011921,
+      "nextMs": 50.87616599999819,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29588,
+          "decoded": 29288,
+          "duration": 68.90000003576279
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23408,
+          "decoded": 23108,
+          "duration": 93
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5269,
+          "decoded": 12795,
+          "duration": 41.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1124,
+          "decoded": 1969,
+          "duration": 76
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96645,
+          "decoded": 543931,
+          "duration": 102.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35281,
+          "decoded": 116037,
+          "duration": 45.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 740,
+          "decoded": 716,
+          "duration": 72.70000004768372
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 526,
+          "decoded": 343,
+          "duration": 91.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48495,
+          "decoded": 153991,
+          "duration": 60
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 642,
+          "decoded": 496,
+          "duration": 67.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7392,
+          "decoded": 19225,
+          "duration": 72.5
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1964,
+          "decoded": 3800,
+          "duration": 75.5
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5510,
+          "decoded": 13174,
+          "duration": 91.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61093,
+          "decoded": 190038,
+          "duration": 91.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244522,
+          "decoded": 1554955,
+          "duration": 96.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3413,
+          "decoded": 7875,
+          "duration": 48.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28248,
+          "decoded": 122085,
+          "duration": 72.09999996423721
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5116,
+          "decoded": 11934,
+          "duration": 79
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48851,
+          "decoded": 67063,
+          "duration": 79
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3972,
+          "decoded": 9785,
+          "duration": 66.5
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1025,
+          "decoded": 1644,
+          "duration": 66.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2374925,
+          "decoded": 24666401,
+          "duration": 507.4000000357628
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109193,
+          "decoded": 444574,
+          "duration": 39.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140785,
+          "decoded": 858137,
+          "duration": 81.40000003576279
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44648,
+          "decoded": 279424,
+          "duration": 64
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5832,
+          "decoded": 23513,
+          "duration": 66.69999998807907
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 921,
+          "decoded": 1410,
+          "duration": 74.80000001192093
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2130,
+          "decoded": 5133,
+          "duration": 33.90000003576279
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4640,
+          "decoded": 12122,
+          "duration": 88.39999997615814
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31620,
+          "decoded": 31320,
+          "duration": 57.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2208,
+          "decoded": 5237,
+          "duration": 33.5
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2214,
+          "decoded": 5235,
+          "duration": 42.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2213,
+          "decoded": 5234,
+          "duration": 49.59999996423721
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2213,
+          "decoded": 5233,
+          "duration": 56.19999998807907
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2190,
+          "decoded": 5197,
+          "duration": 56.19999998807907
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2218,
+          "decoded": 5238,
+          "duration": 62.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2165,
+          "decoded": 5169,
+          "duration": 90.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2157,
+          "decoded": 5159,
+          "duration": 36.5
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 13011,
+          "decoded": 19033,
+          "duration": 38.5
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2006,
+          "decoded": 3408,
+          "duration": 39.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2164,
+          "decoded": 5169,
+          "duration": 43.80000001192093
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 9386,
+          "decoded": 9086,
+          "duration": 38
+        },
+        {
+          "name": "/docenten",
+          "transfer": 3954,
+          "decoded": 12999,
+          "duration": 43.80000001192093
+        },
+        {
+          "name": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transfer": 1511,
+          "decoded": 3557,
+          "duration": 39.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/manual-navigation-Cy7lIdJL.js",
+          "transfer": 887,
+          "decoded": 1179,
+          "duration": 39.40000003576279
+        }
+      ],
+      "longTasks": [
+        95,
+        1069
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "warm",
+      "documentId": "d90a9391-d9a8-4b5e-b58d-6a8ead78b2f2",
+      "readyMs": 1630.4000000357628,
+      "nextMs": 50.93779200000063,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.80000001192093
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 62.200000047683716
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 31.600000023841858
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.700000047683716
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.700000047683716
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 63.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 95.10000002384186
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.5
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 84.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 194.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 55.5
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 37.80000001192093
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.19999998807907
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.19999998807907
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32.40000003576279
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.5
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35.5
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 48
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 19033,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.89999997615814
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 52.299999952316284
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 31320,
+          "duration": 0
+        }
+      ],
+      "longTasks": [
+        110,
+        75,
+        1081
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "cold",
+      "documentId": "7bef8233-ac87-4c02-bf17-b1a4a040dfe0",
+      "readyMs": 3966.199999988079,
+      "nextMs": 39.37787499999831,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29588,
+          "decoded": 29288,
+          "duration": 72.5
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23408,
+          "decoded": 23108,
+          "duration": 65.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1124,
+          "decoded": 1969,
+          "duration": 63.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1964,
+          "decoded": 3800,
+          "duration": 62.80000001192093
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 526,
+          "decoded": 343,
+          "duration": 63.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5269,
+          "decoded": 12795,
+          "duration": 62.59999996423721
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 642,
+          "decoded": 496,
+          "duration": 64.5
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7467,
+          "decoded": 19225,
+          "duration": 92.19999998807907
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96645,
+          "decoded": 543931,
+          "duration": 123.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 740,
+          "decoded": 716,
+          "duration": 123.5
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61130,
+          "decoded": 190038,
+          "duration": 133.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48439,
+          "decoded": 153991,
+          "duration": 133.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35281,
+          "decoded": 116037,
+          "duration": 155.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3413,
+          "decoded": 7875,
+          "duration": 65
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28248,
+          "decoded": 122085,
+          "duration": 92.5
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5487,
+          "decoded": 13174,
+          "duration": 133.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5045,
+          "decoded": 11934,
+          "duration": 150.9000000357628
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48866,
+          "decoded": 67063,
+          "duration": 153.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244323,
+          "decoded": 1554955,
+          "duration": 153
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3972,
+          "decoded": 9785,
+          "duration": 50.299999952316284
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1025,
+          "decoded": 1644,
+          "duration": 69.29999995231628
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2377501,
+          "decoded": 24666401,
+          "duration": 636
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109193,
+          "decoded": 444574,
+          "duration": 84.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44648,
+          "decoded": 279424,
+          "duration": 45.80000001192093
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 921,
+          "decoded": 1410,
+          "duration": 64.5
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140785,
+          "decoded": 858137,
+          "duration": 83.39999997615814
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5772,
+          "decoded": 23513,
+          "duration": 45.60000002384186
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2130,
+          "decoded": 5133,
+          "duration": 75.30000001192093
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4640,
+          "decoded": 12122,
+          "duration": 76.59999996423721
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31620,
+          "decoded": 31320,
+          "duration": 72.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2190,
+          "decoded": 5197,
+          "duration": 40.40000003576279
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2165,
+          "decoded": 5169,
+          "duration": 70.19999998807907
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2006,
+          "decoded": 3408,
+          "duration": 33.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2213,
+          "decoded": 5234,
+          "duration": 37.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2213,
+          "decoded": 5233,
+          "duration": 48.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2164,
+          "decoded": 5169,
+          "duration": 54.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2214,
+          "decoded": 5235,
+          "duration": 87.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2218,
+          "decoded": 5238,
+          "duration": 92.5
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2208,
+          "decoded": 5237,
+          "duration": 98.5
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2157,
+          "decoded": 5159,
+          "duration": 103.30000001192093
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 12774,
+          "decoded": 19033,
+          "duration": 107.39999997615814
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 9386,
+          "decoded": 9086,
+          "duration": 61.80000001192093
+        }
+      ],
+      "longTasks": [
+        101,
+        1102
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "warm",
+      "documentId": "60a9a163-40e5-4948-b890-db1eaf2b218a",
+      "readyMs": 1766.1000000238419,
+      "nextMs": 34.45666599999822,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.30000001192093
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 51
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.89999997615814
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 52.30000001192093
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 53.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 58.89999997615814
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.59999996423721
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 53.09999996423721
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 63.59999996423721
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 100.39999997615814
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.40000003576279
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.5
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.5
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 334.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56.60000002384186
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.19999998807907
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 60.5
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 62.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 51.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.200000047683716
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 19033,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 89.39999997615814
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.60000002384186
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 31320,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 57.59999996423721
+        }
+      ],
+      "longTasks": [
+        108,
+        73,
+        1056
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "cold",
+      "documentId": "b55e304f-3051-4400-b857-d6dc99da2150",
+      "readyMs": 2215.900000035763,
+      "nextMs": 39.40137500000128,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29588,
+          "decoded": 29288,
+          "duration": 99
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23408,
+          "decoded": 23108,
+          "duration": 101
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1124,
+          "decoded": 1969,
+          "duration": 112.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5317,
+          "decoded": 12795,
+          "duration": 136.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 642,
+          "decoded": 496,
+          "duration": 52.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5487,
+          "decoded": 13174,
+          "duration": 64.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 740,
+          "decoded": 716,
+          "duration": 85.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7392,
+          "decoded": 19225,
+          "duration": 84.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61093,
+          "decoded": 190038,
+          "duration": 85.5
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 526,
+          "decoded": 343,
+          "duration": 96.70000004768372
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35281,
+          "decoded": 116037,
+          "duration": 97.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48439,
+          "decoded": 153991,
+          "duration": 114.20000004768372
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1964,
+          "decoded": 3800,
+          "duration": 117.90000003576279
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96657,
+          "decoded": 543931,
+          "duration": 120.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244443,
+          "decoded": 1554955,
+          "duration": 154
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5116,
+          "decoded": 11934,
+          "duration": 72
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3413,
+          "decoded": 7875,
+          "duration": 124.5
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28248,
+          "decoded": 122085,
+          "duration": 124.80000001192093
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48866,
+          "decoded": 67063,
+          "duration": 124.59999996423721
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3972,
+          "decoded": 9785,
+          "duration": 72.80000001192093
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1025,
+          "decoded": 1644,
+          "duration": 110.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2377602,
+          "decoded": 24666401,
+          "duration": 551.5
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140571,
+          "decoded": 858137,
+          "duration": 62.60000002384186
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 921,
+          "decoded": 1410,
+          "duration": 70.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109193,
+          "decoded": 444574,
+          "duration": 81
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5832,
+          "decoded": 23513,
+          "duration": 38
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44488,
+          "decoded": 279424,
+          "duration": 71.79999995231628
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2130,
+          "decoded": 5133,
+          "duration": 33.799999952316284
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4640,
+          "decoded": 12122,
+          "duration": 123.09999996423721
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31620,
+          "decoded": 31320,
+          "duration": 37.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2190,
+          "decoded": 5197,
+          "duration": 35.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2213,
+          "decoded": 5233,
+          "duration": 72.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2165,
+          "decoded": 5169,
+          "duration": 77.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2208,
+          "decoded": 5237,
+          "duration": 35.799999952316284
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2006,
+          "decoded": 3408,
+          "duration": 35.89999997615814
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 13011,
+          "decoded": 19033,
+          "duration": 37.39999997615814
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2214,
+          "decoded": 5235,
+          "duration": 41.59999996423721
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2218,
+          "decoded": 5238,
+          "duration": 73.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2157,
+          "decoded": 5159,
+          "duration": 78.5
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2213,
+          "decoded": 5234,
+          "duration": 88.09999996423721
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2164,
+          "decoded": 5169,
+          "duration": 38.40000003576279
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 9386,
+          "decoded": 9086,
+          "duration": 65.30000001192093
+        }
+      ],
+      "longTasks": [
+        97,
+        1065
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "warm",
+      "documentId": "b58337de-7583-4290-8e61-f5ac04b618cc",
+      "readyMs": 5794.100000023842,
+      "nextMs": 47.91895900000236,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.40000003576279
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.80000001192093
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.19999998807907
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.5
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43.5
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.5
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 65.10000002384186
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 2035
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.09999996423721
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.19999998807907
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 33.30000001192093
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 323.5999999642372
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.700000047683716
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.30000001192093
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.60000002384186
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38.69999998807907
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50.10000002384186
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45.10000002384186
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 47.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36.60000002384186
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.89999997615814
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.69999998807907
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.5
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44.09999996423721
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 19033,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39.30000001192093
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41.5
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46.90000003576279
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 31320,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40.10000002384186
+        },
+        {
+          "name": "/docenten",
+          "transfer": 3998,
+          "decoded": 12999,
+          "duration": 45.60000002384186
+        },
+        {
+          "name": "/_next/static/chunks/manual-navigation-Cy7lIdJL.js",
+          "transfer": 887,
+          "decoded": 1179,
+          "duration": 48
+        },
+        {
+          "name": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transfer": 1511,
+          "decoded": 3557,
+          "duration": 37.89999997615814
+        }
+      ],
+      "longTasks": [
+        109,
+        71,
+        1071
+      ],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "cold",
+      "documentId": "ea108c62-84b8-414c-bc3c-86cc9ad029d6",
+      "readyMs": 2398,
+      "nextMs": 44.971000000005006,
+      "resources": [
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48480,
+          "decoded": 153991,
+          "duration": 54
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1129,
+          "decoded": 1969,
+          "duration": 54
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 531,
+          "decoded": 343,
+          "duration": 77
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 745,
+          "decoded": 716,
+          "duration": 79
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5274,
+          "decoded": 12795,
+          "duration": 84
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29590,
+          "decoded": 29288,
+          "duration": 89
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35292,
+          "decoded": 116037,
+          "duration": 106
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23410,
+          "decoded": 23108,
+          "duration": 112
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61151,
+          "decoded": 190038,
+          "duration": 120
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96683,
+          "decoded": 543931,
+          "duration": 126
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48895,
+          "decoded": 67063,
+          "duration": 225
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7478,
+          "decoded": 19225,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5053,
+          "decoded": 11934,
+          "duration": 46
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28277,
+          "decoded": 122085,
+          "duration": 48
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5492,
+          "decoded": 13174,
+          "duration": 50
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1969,
+          "decoded": 3800,
+          "duration": 50
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244619,
+          "decoded": 1554955,
+          "duration": 75
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3415,
+          "decoded": 7875,
+          "duration": 92
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 647,
+          "decoded": 496,
+          "duration": 95
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 615,
+          "decoded": 484,
+          "duration": 191
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3919,
+          "decoded": 9785,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1030,
+          "decoded": 1644,
+          "duration": 39
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2376605,
+          "decoded": 24666401,
+          "duration": 462
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5780,
+          "decoded": 23513,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44692,
+          "decoded": 279424,
+          "duration": 46
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 926,
+          "decoded": 1410,
+          "duration": 48
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109316,
+          "decoded": 444574,
+          "duration": 65
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140889,
+          "decoded": 858137,
+          "duration": 80
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2170,
+          "decoded": 5169,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2135,
+          "decoded": 5133,
+          "duration": 47
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2011,
+          "decoded": 3408,
+          "duration": 41
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2213,
+          "decoded": 5237,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2219,
+          "decoded": 5235,
+          "duration": 42
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 13028,
+          "decoded": 19033,
+          "duration": 45
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2223,
+          "decoded": 5238,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2218,
+          "decoded": 5233,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2195,
+          "decoded": 5197,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2162,
+          "decoded": 5159,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2169,
+          "decoded": 5169,
+          "duration": 47
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2218,
+          "decoded": 5234,
+          "duration": 84
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4613,
+          "decoded": 12122,
+          "duration": 97
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31633,
+          "decoded": 31320,
+          "duration": 88
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "warm",
+      "documentId": "0aa12940-696b-4d90-83aa-2264b67c52e0",
+      "readyMs": 1723,
+      "nextMs": 34.936249999998836,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 37
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 91
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 37
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 51
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "cold",
+      "documentId": "efbc6796-de5a-4034-9752-e384f789cbc4",
+      "readyMs": 2336,
+      "nextMs": 38.50958299999911,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29598,
+          "decoded": 29288,
+          "duration": 37
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23419,
+          "decoded": 23108,
+          "duration": 81
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1129,
+          "decoded": 1969,
+          "duration": 83
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5328,
+          "decoded": 12795,
+          "duration": 36
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 745,
+          "decoded": 716,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 531,
+          "decoded": 343,
+          "duration": 52
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96710,
+          "decoded": 543931,
+          "duration": 63
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48480,
+          "decoded": 153991,
+          "duration": 104
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35342,
+          "decoded": 116037,
+          "duration": 105
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61187,
+          "decoded": 190038,
+          "duration": 122
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48904,
+          "decoded": 67063,
+          "duration": 301
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1969,
+          "decoded": 3800,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 647,
+          "decoded": 496,
+          "duration": 160
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7397,
+          "decoded": 19225,
+          "duration": 39
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3418,
+          "decoded": 7875,
+          "duration": 42
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5050,
+          "decoded": 11934,
+          "duration": 68
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5521,
+          "decoded": 13174,
+          "duration": 74
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28306,
+          "decoded": 122085,
+          "duration": 111
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244604,
+          "decoded": 1554955,
+          "duration": 197
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 615,
+          "decoded": 484,
+          "duration": 279
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3980,
+          "decoded": 9785,
+          "duration": 34
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1030,
+          "decoded": 1644,
+          "duration": 31
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2376250,
+          "decoded": 24666401,
+          "duration": 380
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5840,
+          "decoded": 23513,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 926,
+          "decoded": 1410,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109282,
+          "decoded": 444574,
+          "duration": 46
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140362,
+          "decoded": 858137,
+          "duration": 46
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44686,
+          "decoded": 279424,
+          "duration": 84
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2135,
+          "decoded": 5133,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2170,
+          "decoded": 5169,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2219,
+          "decoded": 5235,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2218,
+          "decoded": 5233,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2195,
+          "decoded": 5197,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2223,
+          "decoded": 5238,
+          "duration": 54
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2218,
+          "decoded": 5234,
+          "duration": 56
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2213,
+          "decoded": 5237,
+          "duration": 82
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2011,
+          "decoded": 3408,
+          "duration": 89
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 12793,
+          "decoded": 19033,
+          "duration": 95
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2169,
+          "decoded": 5169,
+          "duration": 68
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4651,
+          "decoded": 12122,
+          "duration": 88
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2162,
+          "decoded": 5159,
+          "duration": 94
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31636,
+          "decoded": 31320,
+          "duration": 81
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "warm",
+      "documentId": "efee4f4c-ea31-457f-a731-df604801857a",
+      "readyMs": 1265,
+      "nextMs": 30.26695899999322,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 37
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 37
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 34
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 45
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 55
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 55
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 77
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 83
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 51
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 67
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "cold",
+      "documentId": "f16090ae-7c15-4890-b71a-4aa42e9ea702",
+      "readyMs": 3726,
+      "nextMs": 45.62970900000073,
+      "resources": [
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5328,
+          "decoded": 12795,
+          "duration": 60
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 745,
+          "decoded": 716,
+          "duration": 61
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 531,
+          "decoded": 343,
+          "duration": 61
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29593,
+          "decoded": 29288,
+          "duration": 74
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1126,
+          "decoded": 1969,
+          "duration": 91
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23410,
+          "decoded": 23108,
+          "duration": 102
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48453,
+          "decoded": 153991,
+          "duration": 130
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61104,
+          "decoded": 190038,
+          "duration": 130
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96695,
+          "decoded": 543931,
+          "duration": 133
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35286,
+          "decoded": 116037,
+          "duration": 108
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48904,
+          "decoded": 67063,
+          "duration": 210
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 647,
+          "decoded": 496,
+          "duration": 38
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5495,
+          "decoded": 13174,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1969,
+          "decoded": 3800,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28271,
+          "decoded": 122085,
+          "duration": 52
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7397,
+          "decoded": 19225,
+          "duration": 61
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3418,
+          "decoded": 7875,
+          "duration": 62
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5053,
+          "decoded": 11934,
+          "duration": 68
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244610,
+          "decoded": 1554955,
+          "duration": 99
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 615,
+          "decoded": 484,
+          "duration": 154
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3919,
+          "decoded": 9785,
+          "duration": 64
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1030,
+          "decoded": 1644,
+          "duration": 42
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2376597,
+          "decoded": 24666401,
+          "duration": 298
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 926,
+          "decoded": 1410,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44686,
+          "decoded": 279424,
+          "duration": 47
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5780,
+          "decoded": 23513,
+          "duration": 47
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109279,
+          "decoded": 444574,
+          "duration": 47
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140895,
+          "decoded": 858137,
+          "duration": 51
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2135,
+          "decoded": 5133,
+          "duration": 37
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2195,
+          "decoded": 5197,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2210,
+          "decoded": 5237,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2223,
+          "decoded": 5238,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2170,
+          "decoded": 5169,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2219,
+          "decoded": 5235,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2218,
+          "decoded": 5234,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2162,
+          "decoded": 5159,
+          "duration": 43
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 12793,
+          "decoded": 19033,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2011,
+          "decoded": 3408,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2218,
+          "decoded": 5233,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2169,
+          "decoded": 5169,
+          "duration": 43
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4616,
+          "decoded": 12122,
+          "duration": 42
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31633,
+          "decoded": 31320,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "warm",
+      "documentId": "a8e4fb79-4db4-464d-8519-7e63de8a1ee7",
+      "readyMs": 1278,
+      "nextMs": 28.33783399999811,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/alfabetaplus-logo.png",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "cold",
+      "documentId": "8c612feb-fbd7-4d00-ad36-d833201b5363",
+      "readyMs": 2041,
+      "nextMs": 46.59441700000025,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29596,
+          "decoded": 29288,
+          "duration": 50
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1126,
+          "decoded": 1969,
+          "duration": 77
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 531,
+          "decoded": 343,
+          "duration": 77
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5325,
+          "decoded": 12795,
+          "duration": 85
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 745,
+          "decoded": 716,
+          "duration": 92
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23410,
+          "decoded": 23108,
+          "duration": 99
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61119,
+          "decoded": 190038,
+          "duration": 104
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96714,
+          "decoded": 543931,
+          "duration": 127
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48450,
+          "decoded": 153991,
+          "duration": 105
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35289,
+          "decoded": 116037,
+          "duration": 105
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48892,
+          "decoded": 67063,
+          "duration": 218
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1969,
+          "decoded": 3800,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 647,
+          "decoded": 496,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7478,
+          "decoded": 19225,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28274,
+          "decoded": 122085,
+          "duration": 48
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5495,
+          "decoded": 13174,
+          "duration": 48
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5053,
+          "decoded": 11934,
+          "duration": 49
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244795,
+          "decoded": 1554955,
+          "duration": 83
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3415,
+          "decoded": 7875,
+          "duration": 92
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 615,
+          "decoded": 484,
+          "duration": 191
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3977,
+          "decoded": 9785,
+          "duration": 41
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1030,
+          "decoded": 1644,
+          "duration": 44
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2377558,
+          "decoded": 24666401,
+          "duration": 315
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 926,
+          "decoded": 1410,
+          "duration": 38
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5780,
+          "decoded": 23513,
+          "duration": 38
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109282,
+          "decoded": 444574,
+          "duration": 46
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44697,
+          "decoded": 279424,
+          "duration": 49
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 141226,
+          "decoded": 858137,
+          "duration": 52
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2135,
+          "decoded": 5133,
+          "duration": 38
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2195,
+          "decoded": 5197,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2218,
+          "decoded": 5233,
+          "duration": 41
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2213,
+          "decoded": 5237,
+          "duration": 41
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2218,
+          "decoded": 5234,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2170,
+          "decoded": 5169,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2162,
+          "decoded": 5159,
+          "duration": 46
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2219,
+          "decoded": 5235,
+          "duration": 46
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 13025,
+          "decoded": 19033,
+          "duration": 48
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2223,
+          "decoded": 5238,
+          "duration": 55
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2011,
+          "decoded": 3408,
+          "duration": 90
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2169,
+          "decoded": 5169,
+          "duration": 41
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4651,
+          "decoded": 12122,
+          "duration": 45
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31633,
+          "decoded": 31320,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 0,
+      "visit": "warm",
+      "documentId": "c0c404c5-ca77-413d-918a-3b474ae9c898",
+      "readyMs": 1333,
+      "nextMs": 30.05349999999453,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 61
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 59
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 43
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 44
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 49
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 46
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 57
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "cold",
+      "documentId": "bf1ee0a6-4207-45e3-a6d0-f2980d6a168a",
+      "readyMs": 3785,
+      "nextMs": 40.29266700000153,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29601,
+          "decoded": 29288,
+          "duration": 62
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23416,
+          "decoded": 23108,
+          "duration": 75
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 745,
+          "decoded": 716,
+          "duration": 40
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5274,
+          "decoded": 12795,
+          "duration": 49
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 531,
+          "decoded": 343,
+          "duration": 55
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48539,
+          "decoded": 153991,
+          "duration": 61
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96737,
+          "decoded": 543931,
+          "duration": 65
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61143,
+          "decoded": 190038,
+          "duration": 74
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1129,
+          "decoded": 1969,
+          "duration": 74
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35348,
+          "decoded": 116037,
+          "duration": 83
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48898,
+          "decoded": 67063,
+          "duration": 150
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5521,
+          "decoded": 13174,
+          "duration": 26
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1969,
+          "decoded": 3800,
+          "duration": 28
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28277,
+          "decoded": 122085,
+          "duration": 33
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3418,
+          "decoded": 7875,
+          "duration": 36
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7478,
+          "decoded": 19225,
+          "duration": 37
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5127,
+          "decoded": 11934,
+          "duration": 56
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 647,
+          "decoded": 496,
+          "duration": 70
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244719,
+          "decoded": 1554955,
+          "duration": 96
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 615,
+          "decoded": 484,
+          "duration": 126
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3980,
+          "decoded": 9785,
+          "duration": 66
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1030,
+          "decoded": 1644,
+          "duration": 36
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2379594,
+          "decoded": 24666401,
+          "duration": 327
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 926,
+          "decoded": 1410,
+          "duration": 30
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5843,
+          "decoded": 23513,
+          "duration": 30
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44538,
+          "decoded": 279424,
+          "duration": 34
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109331,
+          "decoded": 444574,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140146,
+          "decoded": 858137,
+          "duration": 42
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2132,
+          "decoded": 5133,
+          "duration": 36
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2218,
+          "decoded": 5233,
+          "duration": 27
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2195,
+          "decoded": 5197,
+          "duration": 27
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2219,
+          "decoded": 5235,
+          "duration": 27
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2213,
+          "decoded": 5237,
+          "duration": 27
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2223,
+          "decoded": 5238,
+          "duration": 35
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2218,
+          "decoded": 5234,
+          "duration": 35
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2011,
+          "decoded": 3408,
+          "duration": 38
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2170,
+          "decoded": 5169,
+          "duration": 114
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4616,
+          "decoded": 12122,
+          "duration": 26
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 13028,
+          "decoded": 19033,
+          "duration": 34
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2169,
+          "decoded": 5169,
+          "duration": 37
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2162,
+          "decoded": 5159,
+          "duration": 37
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31630,
+          "decoded": 31320,
+          "duration": 32
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 1,
+      "visit": "warm",
+      "documentId": "6badab1b-294e-471b-bd32-4aae54d23b5f",
+      "readyMs": 1243,
+      "nextMs": 29.821209000001545,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 31
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 41
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 29
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 33
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 39
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 25
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 31
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 31
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 35
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 56
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 50
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 25
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "cold",
+      "documentId": "a435f12e-fe51-4377-8f0f-cbccb347bc4f",
+      "readyMs": 4347,
+      "nextMs": 46.62441600000602,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 23413,
+          "decoded": 23108,
+          "duration": 59
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 29601,
+          "decoded": 29288,
+          "duration": 62
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 35342,
+          "decoded": 116037,
+          "duration": 206
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 48477,
+          "decoded": 153991,
+          "duration": 233
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 61143,
+          "decoded": 190038,
+          "duration": 240
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 1129,
+          "decoded": 1969,
+          "duration": 264
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 96734,
+          "decoded": 543931,
+          "duration": 271
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 745,
+          "decoded": 716,
+          "duration": 275
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 5277,
+          "decoded": 12795,
+          "duration": 288
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 531,
+          "decoded": 343,
+          "duration": 290
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 48904,
+          "decoded": 67063,
+          "duration": 346
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 647,
+          "decoded": 496,
+          "duration": 87
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 5127,
+          "decoded": 11934,
+          "duration": 89
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 1969,
+          "decoded": 3800,
+          "duration": 92
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 5521,
+          "decoded": 13174,
+          "duration": 92
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 7475,
+          "decoded": 19225,
+          "duration": 103
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 244869,
+          "decoded": 1554955,
+          "duration": 139
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 3415,
+          "decoded": 7875,
+          "duration": 159
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 28310,
+          "decoded": 122085,
+          "duration": 165
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 615,
+          "decoded": 484,
+          "duration": 178
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 3977,
+          "decoded": 9785,
+          "duration": 57
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 1030,
+          "decoded": 1644,
+          "duration": 27
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 2374781,
+          "decoded": 24666401,
+          "duration": 364
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 109316,
+          "decoded": 444574,
+          "duration": 34
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 44686,
+          "decoded": 279424,
+          "duration": 40
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 926,
+          "decoded": 1410,
+          "duration": 43
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 140362,
+          "decoded": 858137,
+          "duration": 108
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 5777,
+          "decoded": 23513,
+          "duration": 129
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 2170,
+          "decoded": 5169,
+          "duration": 27
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 2195,
+          "decoded": 5197,
+          "duration": 33
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 2218,
+          "decoded": 5233,
+          "duration": 35
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 2135,
+          "decoded": 5133,
+          "duration": 217
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 2218,
+          "decoded": 5234,
+          "duration": 53
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 2159,
+          "decoded": 5159,
+          "duration": 187
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 2210,
+          "decoded": 5237,
+          "duration": 197
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 2219,
+          "decoded": 5235,
+          "duration": 199
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 12790,
+          "decoded": 19033,
+          "duration": 215
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 2011,
+          "decoded": 3408,
+          "duration": 215
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 2223,
+          "decoded": 5238,
+          "duration": 215
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 2169,
+          "decoded": 5169,
+          "duration": 259
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 4651,
+          "decoded": 12122,
+          "duration": 260
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 31633,
+          "decoded": 31320,
+          "duration": 261
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scenario": "learner",
+      "repeat": 2,
+      "visit": "warm",
+      "documentId": "a7417745-ff82-4fb7-b6a4-b4d60ee397e2",
+      "readyMs": 1286,
+      "nextMs": 34.35924999999406,
+      "resources": [
+        {
+          "name": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/appearance.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/taalroute-menu/menu-controls.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/index-BttZCZTe.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/index.B_vDQoip.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 36
+        },
+        {
+          "name": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/framework-5hhgsyNd.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/vinext-BeejmLWL.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/layout-segment-context-Cee64bnU.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/script-sDQoK8uA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/css/compact-image.xc0oAH1v.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/_next/static/chunks/shared-ui-DxaUdEwM.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/word-listening-BTPvAgJx.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/media-player-C9WW6SYQ.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/classroom-boundary-BmYDJ41z.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/link-vuIBHwDt.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/compact-image-Df9-JKHp.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 30
+        },
+        {
+          "name": "/manifest.webmanifest",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 83
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/page-xv-vxw9Q.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/practice-workspace-C3L2vqZA.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/route-settings-BvZ-kVrb.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/learner-app-acLGjxNO.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 1
+        },
+        {
+          "name": "/_next/static/chunks/package-exercise-browser-Cz6DqrJN.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/chunks/package-experience-QT29S3aw.js",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 67
+        },
+        {
+          "name": "/_next/static/css/learner-app.B7ojm1Zn.css",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 73
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/studio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/actief.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 26
+        },
+        {
+          "name": "/taalroute-menu/digibord.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/taalroute-menu/muziek.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/taalroute-menu/spreektijd.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 32
+        },
+        {
+          "name": "/taalroute-menu/klankstudio.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 38
+        },
+        {
+          "name": "/taalroute-menu/zinnen.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 80
+        },
+        {
+          "name": "/taalroute-menu/oppad.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 80
+        },
+        {
+          "name": "/taalroute-menu/missies.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 82
+        },
+        {
+          "name": "/klink-wordmark.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-menu/klink-brand.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 79
+        },
+        {
+          "name": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/taalroute-logo.svg",
+          "transfer": 0,
+          "decoded": 0,
+          "duration": 0
+        },
+        {
+          "name": "/opening-loader-v4-20261101/klink-static.svg",
+          "transfer": 300,
+          "decoded": 0,
+          "duration": 26
+        },
+        {
+          "name": "/docenten",
+          "transfer": 4019,
+          "decoded": 12999,
+          "duration": 98
+        },
+        {
+          "name": "/_next/static/css/layout.0n_gQ7M-.css",
+          "transfer": 1516,
+          "decoded": 3557,
+          "duration": 25
+        },
+        {
+          "name": "/_next/static/chunks/manual-navigation-Cy7lIdJL.js",
+          "transfer": 892,
+          "decoded": 1179,
+          "duration": 32
+        }
+      ],
+      "longTasks": [],
+      "preserved": "saved-progress"
+    }
+  ],
+  "errors": []
+}

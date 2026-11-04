@@ -1,3 +1,13 @@
+## Actuele publicatie — snelheid Klink en Klink+docent — 4 november 2026
+
+Livebron `dc37a479a7a6f148d61ffb5140dfd79112331f85`, Worker `886d4b64-a6bc-42bb-92f2-41ff7bb91dfb`, gepubliceerd via canonieke main en `npm run deploy`. Afstammeling van het Spelling-HOLD-herstel; de zes ingetrokken banken blijven 404 en de tien vernieuwde Alfa B-opdrachten zijn bytegelijk behouden. Geen nieuwe inhoud, media, auth, SQL of vormgeving. De vaste wachttijd vervalt; werkruimtes laden apart en gevalideerde volledige audiobundels worden begrensd hergebruikt. Kleine gedeelde UI-code wordt samen verpakt: 19.999 bestanden, geen budgetverhoging.
+
+Live eerste-bezoekmedianen: Start 4,68 → 2,83 s; cursist 6,47 → 3,56 s; +docent 4,79 → 3,35 s. Audioproef: 3 → 1 aanvragen, circa 50% minder echte browseroverdracht. Herhaalmetingen met een hergebruikte documentklok zijn uitgesloten en de meethelper is hersteld; zie `docs/performance-publication-20261104/RESULTAAT.md` voor geldige nul-/nameting, aanvullende echte herlaadproeven, behouden ruwe data en beperkingen. Netwerkpieken en fysieke telefoons/MFA blijven open.
+
+De zelfstandige Inzicht-uitgave heeft eigen bron `121b801ebe87c1ca9bb83c581fe0e412f22bb17d` en Worker `608b9163-18db-441a-b09e-ae9a75b07954`; PR8/staging is niet meegepubliceerd. De huidige opvolger op main verandert alleen bewijs en meetcode, geen runtime. Niet afzonderlijk opnieuw deployen. Bronback-up Drive `1kB_fkUUt7YyllmQr5dD-oegIsso15-L-` volledig teruggelezen; de definitieve ontvangstcontrole staat in `docs/performance-publication-20261104/backup.json`.
+
+---
+
 ## Actuele publicatie — bronstatus Spelling hersteld — 4 november 2026
 
 Livebron `b9865143a32c32f69cf47a1e20f5effdc50fcdee`, Worker `a9a2fa07-7aaa-4952-9ee3-2527bed52e29`, afstammeling van `1d053db52c07b02f8c3efe9dd86e7a6a16cbcee5`. De eerdere zes woorddicteerreeksen met 36 A1-, A2- en B1-bronposities zijn uit het aanbod gehaald. De aparte Spelling396-bron vereist onafhankelijke menselijke taal-/niveaureview en werkelijke beluistering. De eerdere technische vrijgave gold ten onrechte als voldoende. Die publicatie en de bewijsstukken blijven historisch vastgelegd.
