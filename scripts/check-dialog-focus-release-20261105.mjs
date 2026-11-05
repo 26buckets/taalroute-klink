@@ -2,9 +2,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-const folder = 'docs/focus-audit-all-20261105/publication-current/';
+const folder = 'docs/focus-audit-all-20261105/publication-final/';
 const roots = ['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
-const runtime = ['app/globals.css','app/layout.tsx','components/product/pointer-focus.tsx','components/product/practice-line.tsx'];
+const runtime = ['app/globals.css','components/product/motion-feedback.tsx','components/product/practice-line.tsx'];
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const paths = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -15,7 +15,7 @@ export function verifyDialogFocusContent(read = readFileSync) {
   assert.equal(request.userRequest, 'Publiceer deze aanvullende klikrandenreparatie nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, voortgang, toetsenbordbediening en de rest van het uiterlijk.');
   assert.equal(release.baselineSourceCommit, 'ca2633c1da422cfd4e765e0e8c3713159ed29b49');
   assert.equal(release.liveSourceCommit, 'ca2633c1da422cfd4e765e0e8c3713159ed29b49');
-  assert.equal(release.checkedCandidateCommit, '7ac0a87dd8f6d83c21347c18c386f6af5fdda9c0');
+  assert.equal(release.checkedCandidateCommit, '9c4b5e51afa5025ca747aad0ff68f568e1b97d23');
   git('merge-base','--is-ancestor',release.liveSourceCommit,release.baselineSourceCommit);
   git('merge-base','--is-ancestor',release.baselineSourceCommit,release.checkedCandidateCommit);
   git('merge-base','--is-ancestor',release.checkedCandidateCommit,'HEAD');
@@ -24,7 +24,7 @@ export function verifyDialogFocusContent(read = readFileSync) {
   assert.deepEqual(Object.keys(release.files).sort((a,b)=>a<b?-1:a>b?1:0), changed);
   assert.deepEqual(changed, [...runtime,'VORMGEVING-VASTGEZET.md','scripts/check-dictation-50-release-20261105.mjs','scripts/check-dialog-focus-release-20261105.mjs','scripts/test-dialog-focus-release-20261105.mjs'].sort((a,b)=>a<b?-1:a>b?1:0));
   for (const [path, hash] of Object.entries({...release.files,...release.evidenceFiles})) assert.equal(sha(read(path)), hash, path);
-  for (const path of runtime) assert.equal(sha(read(path)), sha(git('show','b87ec638fefae9d6a57884bb874cc41b945c232e:'+path)), path);
+  for (const path of runtime) assert.equal(sha(read(path)), sha(git('show',release.checkedCandidateCommit+':'+path)), path);
   const live = json(folder+'live-before.json');
   assert.equal(live.sourceCommit, release.liveSourceCommit); assert(live.sourceClean); assert.equal(live.branch,'main');
   const checks = json(folder+'verification.json');
@@ -32,6 +32,7 @@ export function verifyDialogFocusContent(read = readFileSync) {
   for (const [path,count] of [['dialogs-after/checks.json',48],['base-dialogs-final/checks.json',16]]) {
     const result = json(folder+path); assert.equal(result.checks.length,count); assert.deepEqual(result.errors,[]);
   }
+  assert.equal(json(folder+'asset-count.json').offeredAssets,20000);
   const visual = json(folder+'touch-appearance/checks.json');
   assert.equal(visual.checks.length,8); assert.equal(visual.touch.length,2);
   assert(visual.checks.every(row=>row.geometryEqual && row.changedPixels===0));
