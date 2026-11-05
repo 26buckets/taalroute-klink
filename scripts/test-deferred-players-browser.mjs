@@ -51,18 +51,22 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         await page.goto(base + '/#learner');
         await page.locator('.cp-home').waitFor();
         await page.evaluate(() => localStorage.setItem('deferred-preservation', 'saved answers'));
-        await page.route(player, route => route.abort());
+        const failedFile = width === 1280 ? player : /\/learner-rounds\.[^/]+\.css$/;
+        await page.route(failedFile, route => route.abort());
         await page.locator('[data-chapter="words"]').click();
         await page.locator('[data-chapter-activity="meet"]').click();
         await page.locator('[data-collection]').first().click();
         await page.getByRole('button', { name: 'Opnieuw openen', exact: true }).waitFor();
         assert.equal(await page.locator('[data-exercise-id]').count(), 0);
         assert(await page.getByRole('button', { name: 'Terug', exact: true }).isVisible());
-        await page.unroute(player);
+        await page.getByRole('button', { name: 'Opnieuw openen', exact: true }).click();
+        await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent === 'Opnieuw openen' && !button.disabled));
+        assert.equal(await page.locator('[data-exercise-id]').count(), 0, 'A failed retry must keep the recoverable error state');
+        await page.unroute(failedFile);
         await page.getByRole('button', { name: 'Opnieuw openen', exact: true }).click();
         await page.locator('[data-exercise-id]').first().waitFor();
         assert.equal(await page.evaluate(() => localStorage.getItem('deferred-preservation')), 'saved answers');
-        rows.push({ engine, width, failedDownloadVisible: true, explicitRetryRecovers: true, storedAnswersPreserved: true });
+        rows.push({ engine, width, failedFile: width === 1280 ? 'javascript' : 'stylesheet', failedDownloadVisible: true, repeatedFailureSafe: true, explicitRetryRecovers: true, storedAnswersPreserved: true });
       } finally { await recovery.close(); }
     }
   } finally { await browser.close(); writeFileSync(out + '/checks.json', JSON.stringify({ rows, errors }, null, 2) + '\n'); }
