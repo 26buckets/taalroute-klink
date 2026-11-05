@@ -1,6 +1,6 @@
 'use client';
 import { LearnerModuleBoundary } from './learner-module-boundary';
-import { loadLearnerRounds } from './load-learner-rounds';
+import { loadLearnerExtras } from './load-learner-rounds';
 import { WordPlaceholder } from './word-placeholder';
 import { AlfaCTeacherPractice } from './alfa-c-docent';
 import { legacyAlfaCHash } from '@/lib/alfa-c-navigation';
@@ -50,9 +50,9 @@ import {
 import Image from './compact-image';
 import { lazy, useEffect, useMemo, useState } from 'react';
 
-const PackageLibrary = lazy(() => loadLearnerRounds().then(({ PackageLibrary }) => ({ default: PackageLibrary })));
-const PackagePlayer = lazy(() => loadLearnerRounds().then(({ PackagePlayer }) => ({ default: PackagePlayer })));
-const PackageMixedPractice = lazy(() => loadLearnerRounds().then(({ PackageMixedPractice }) => ({ default: PackageMixedPractice })));
+const PackageLibrary = lazy(() => loadLearnerExtras().then(({ PackageLibrary }) => ({ default: PackageLibrary })));
+const PackagePlayer = lazy(() => loadLearnerExtras().then(({ PackagePlayer }) => ({ default: PackagePlayer })));
+const PackageMixedPractice = lazy(() => loadLearnerExtras().then(({ PackageMixedPractice }) => ({ default: PackageMixedPractice })));
 
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds' | 'alfa-c-teacher';
 

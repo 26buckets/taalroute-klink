@@ -1,6 +1,6 @@
 'use client';
 import { LearnerModuleBoundary } from './learner-module-boundary';
-import { loadLearnerRounds } from './load-learner-rounds';
+import { loadLearnerRounds, loadLearnerExtras } from './load-learner-rounds';
 import { RoundProgressNotice, useRoundProgress } from './round-progress';
 import { collectionProgressId, roundProgressCount, sequenceProgressId } from '@/lib/round-progress';
 import { importExistingSequenceProgress } from '@/lib/alfa-c-round-progress';
@@ -21,7 +21,7 @@ import type { PracticeAttempt } from '@/lib/package-content';
 import { learningReviewKey, parseLearningReview } from '@/lib/learning-review';
 import { learnerCollectionLabel } from '@/lib/learner-copy';
 
-const AlfaCPractice = lazy(() => loadLearnerRounds().then(({ AlfaCPractice }) => ({ default: AlfaCPractice })));
+const AlfaCPractice = lazy(() => loadLearnerExtras().then(({ AlfaCPractice }) => ({ default: AlfaCPractice })));
 const ProductionRound = lazy(() => loadLearnerRounds().then(({ ProductionRound }) => ({ default: ProductionRound })));
 const SourceRepeatRound = lazy(() => loadLearnerRounds().then(({ SourceRepeatRound }) => ({ default: SourceRepeatRound })));
 const GroupRound = lazy(() => loadLearnerRounds().then(({ GroupRound }) => ({ default: GroupRound })));
@@ -85,7 +85,8 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
   }, [location]);
   function open(next: ChapterLocation) {
     // Prepare the chosen player while its list is shown, never during the initial home download.
-    if (next.activity || next.sequence) void loadLearnerRounds().catch(() => undefined);
+    if (next.sequence) void loadLearnerExtras().catch(() => undefined);
+    else if (next.activity) void loadLearnerRounds().catch(() => undefined);
     stopMedia(); setLocation(next); setLimits(current => revealCollection(current, next)); setReview(readReview()); changePractice({ level: next.level === 'all' ? practice.level : next.level, help: next.help === 'guided' ? 'guided' : 'practice' }); window.location.assign(chapterHash(next)); }
   const sequenceChapter = alfaCChapters.find(item => item.id === location.chapter);
   const chapter = practiceChapters.find(item => item.id === (sequenceChapter?.parent ?? location.chapter));
