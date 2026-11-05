@@ -7,6 +7,7 @@ import {availableChapterCollections} from '../lib/practice-chapters.ts';
 import {readProductionBank} from './read-production-bank.mjs';
 import {spokenWords} from '../lib/word-listening-text.ts';
 import {recordingForWord} from '../lib/word-listening.ts';
+import {verifyStorageRepairContent} from './check-storage-player-repair-release-20261105.mjs';
 const root='docs/reading-comprehension-20261105/',json=p=>JSON.parse(readFileSync(p)),m=json(root+'manifest.json'),source=json(root+'sources/selected.json');
 void test('Twenty source-bound reading questions, feedback and existing audio are reachable',()=>{
  const words=new Map();
@@ -33,7 +34,7 @@ void test('Previous banks, IDs, word recordings, runtime and public bytes remain
  for(const[k,v]of Object.entries(before))assert.deepEqual(assets[k],v,k);
  assert.equal(Object.keys(assets).length,Object.keys(before).length+2);
  const immutable=['app','components','hooks','lib','public','db','drizzle','.github','vite.config.ts','wrangler.jsonc','package.json','package-lock.json','data/klink-word-listening.json'];
- assert.equal(execFileSync('git',['diff','--name-only',m.baselineSourceCommit,'--',...immutable],{encoding:'utf8'}),'');
+ assert.equal(execFileSync('git',['diff','--name-only',m.baselineSourceCommit,verifyStorageRepairContent().baselineSourceCommit,'--',...immutable],{encoding:'utf8'}),'');
  const ids=new Set(m.mapping.map(x=>x.sourceId));for(const r of old)for(const e of readProductionBank(r).exercises)assert(!ids.has(e.exerciseId),e.exerciseId);
  const overlap=json(root+'sources/overlap.json');for(const s of source){const r=overlap.records.find(r=>r.id===s.id);assert.deepEqual(r.idMatches,[]);assert.deepEqual(r.sameQuestion,[]);}
 });

@@ -1,0 +1,6 @@
+PASS Every eligible word stays on one page; audio is selected, not automatic; switching preserves sheet state without a mastery claim
+PASS Each dictation row has its own audio gate; errors, interruption, retry, typing and keyboard submission work without moving other words
+PASS Existing letter-building player works per row, with tap alternative and no forced next-word screen
+PASS Word/image/letter choices reuse the existing targets and distractors; errors keep all positions
+PASS Desktop/tablet/phone/landscape fit; all 68 eligible words in the largest collection appear on one scrollable page
+PASS The same sheet is accessible from the existing lesson-group practice page, including keyboard selection

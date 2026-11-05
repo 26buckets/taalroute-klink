@@ -1,0 +1,39 @@
+KLINK — LOKALE PUBLICATIECONTROLE — 5 NOVEMBER 2026
+
+Resultaat
+De technische lokale controles zijn afgerond. Niet gepubliceerd, niet gepusht en geen GitHub Actions gestart. De publicatiepoort blijft bewust gesloten: de bestaande toestemming voor de leesuitbreiding dekt deze nieuwe herstelwijzigingen niet.
+
+Bron
+Canonieke repository: 26buckets/taalroute-klink.
+Laatste meegenomen livebron: 93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402.
+Bijbehorende main/dossierbasis: fc51e7c5501f5bf410ee96e569e3676b51d65568.
+Lokale kandidaat: b5bdcc76707ff1f8ba1e1846d9b0005c8735452d.
+Branch: fix/local-storage-player-20261105. Schone bron; productiebuild vermeldt deze commit.
+Tijdens het werk zijn de gepubliceerde tien A1-nazegoefeningen en vervolgens twintig A1/A2-leesvragen meegenomen. Die blijven behouden.
+
+Herstel
+- De eerdere reparaties aan schrijfantwoordopslag en rondevoortgang zijn behouden. De oefenspeler gebruikt de afgesplitste opslag- en schermhoogtefuncties.
+- Bij tien oude start-tas-WAV's zijn ontbrekende albumartiest-/uitgeversgegevens aangevuld. De oorspronkelijke geluidsdata en volledig gedecodeerde audio zijn exact gelijk. Originelen zitten in het herstelarchief.
+- Een bestaande fout verborg de knop Klaar van een oefenblad achter de navigatie op tabletformaat. Eén CSS-selector beperkt de ontbrekende onderste scrollruimte nu tot de bedoelde losse oefenspeler. Geen nieuwe indeling, kleuren, lettertypes of knoppen.
+- Verouderde controles sluiten weer aan op de goedgekeurde menu's, fotobediening, bestaande knopmaten en audio-eigenschappen. Acht oorspronkelijke producentbronnen zijn met gecontroleerde hashes beschikbaar als lokale testbestanden. De woordrondecontrole en indexbouwer lezen ook bestaande via de API aangeboden banken met de bestaande gevalideerde lezer.
+
+Controlebewijs
+- Alle 47 opdrachten uit de volledige lokale review-/navigatieketen geslaagd. Na actualisering van de basis zijn de geraakte controles herhaald; 71 functionele unitcontroles geslaagd, zonder overgeslagen tests.
+- Alle 1.800 productie-verzamelingen openen. Ingangen per oefenvorm/niveau, smalle schermen en herstel na tijdelijk mislukte inhoudsaanvragen gecontroleerd.
+- 80 vergelijkingen met de voorafgaande bron: 48 oefenspelergevallen en 32 oefenbladgevallen. Chromium/WebKit, desktop/tablet/mobiel en licht/donker. Gelijke tekst en geometrie; nul pixelverschillen boven de vastgelegde afrondtolerantie van 2/255. Vier aanvullende vergelijkingen van de A1-spreekspeler met de nieuwste liveversie slagen.
+- Oefenbladen: bediening, antwoorden, fouten, audio-onderbreking, toetsenbord en bereikbare Klaar-knop op vijf schermformaten, in Chromium en WebKit. Alle 68 woorden van de grootste verzameling blijven bereikbaar.
+- Opslag: twaalf schrijfantwoordproeven, zes behoud-/meertabbladproeven, 72 toetsenbord-/viewportgevallen en twee native-audioproeven. Eerste antwoorden, latere correcties, beschadigde/volle opslag, herladen en veranderende rondeomvang gecontroleerd met synthetische gebruikersgegevens.
+- Audiobestanden: 13.891 losse bestanden en 6.293 fragmenten in 72 bundels volledig gedecodeerd en op aflevermetadata gecontroleerd. Daarnaast 72 exacte API-payloads inclusief HEAD/bytebereik en 56 bijbehorende audioproeven geslaagd.
+- Nieuwste lezen: 80 native woordaudio-/antwoordstromen, 160 geweigerde afleiders, acht volledige rondes en herladen tijdens/na afronding. Alle 401 gebruikte woordopnamen exact lokaal aangeboden, met correcte merkmetadata en geslaagde decode. De zes ingetrokken dicteebanken blijven 404; de bestaande Alfa B-schrijfbank en A1-spreekbank zijn exact behouden.
+- Catalogus, typecontrole, lint en productiebuild geslaagd. Verpakking uitsluitend met dry-run gecontroleerd: gzip 6.136,72 KiB. Geen upload of deployment.
+- Vijftig historische publicatiebeschermingstests slagen op hun onveranderde canonieke basis. Ook de laatste A1-, snelheids- en leesvrijgaven inclusief negatieve mutaties gecontroleerd. De leesvrijgave-eenheidstest slaagt op haar eigen basis. Op de herstelbranch wijst de bijbehorende onveranderlijkheidsvoorwaarde terecht de nieuwe reparaties af; dat is dezelfde begrenzing als de gesloten publicatiepoort. Deze voorwaarde en de eigenaarstoestemmingen zijn niet versoepeld.
+- 20.199 bestanden onder app/data/public vergeleken met de nieuwste basis: 20.188 bytegelijk, uitsluitend de scrollselector en tien verliesloos gemerkte WAV's gewijzigd. Alle overige inhoud en media, inclusief de nieuwste toevoegingen, zijn behouden.
+
+Bewijs en herstel
+Het ZIP-bestand bevat de volledige bewerkbare app-/component-/hook-/bibliotheek-/data-/scriptbronnen, een aanvullende Git-bundle, een binaire patch, de tien gewijzigde opnamen en hun originelen, hashmanifesten, controle-uitvoer en schermvergelijkingen. Ongewijzigde publieke media en historische dossiers worden hersteld uit de vastgelegde canonieke basis; ze zijn niet opnieuw gegenereerd. HERSTELLEN.txt beschrijft de lokale terugzetroute.
+Back-upmap: https://drive.google.com/drive/folders/1DpH2ChwgYsST5Tv_Dlf64ej-sn2rCjlF
+Het afzonderlijke ontvangstbewijs legt de volledige terugleescontrole van het geüploade ZIP-bestand vast.
+
+Grenzen
+Geen fysieke telefoon, echt schermtoetsenbord, menselijke luisterreview of cursistenpilot uitgevoerd. Geautomatiseerde tests gebruiken geïsoleerde testvoortgang; bestaande gebruikersopslag is niet gewijzigd. Een toekomstige publicatie vraagt expliciet akkoord, een hercontrole van de dan werkelijke livebasis en de gewone beveiligde publicatieroute.
+CODEX WORK %: niet meetbaar met de beschikbare sessiegegevens.

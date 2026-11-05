@@ -1,0 +1,339 @@
+{
+  "commands": [
+    {
+      "index": 0,
+      "command": "node --test scripts/test-audio-register.mjs",
+      "code": 0,
+      "seconds": 1.74,
+      "log": "suite-00.log"
+    },
+    {
+      "index": 1,
+      "command": "node --test scripts/test-curriculum.mjs scripts/test-existing-player-curriculum.mjs scripts/test-lesson-extension.mjs scripts/test-listening-route.mjs scripts/test-build-checklist.mjs scripts/test-sentence-comprehension.mjs scripts/test-connected-content.mjs scripts/test-content-routing.mjs scripts/test-sections.mjs scripts/test-mixed-practice.mjs",
+      "code": 0,
+      "seconds": 0.78,
+      "log": "retry-01.log"
+    },
+    {
+      "index": 2,
+      "command": "node scripts/test-demo-api-disabled.mjs",
+      "code": 0,
+      "seconds": 0.08,
+      "log": "suite-02.log"
+    },
+    {
+      "index": 3,
+      "command": "node scripts/test-existing-player-browser.mjs",
+      "code": 0,
+      "seconds": 39.56,
+      "log": "suite-03.log"
+    },
+    {
+      "index": 4,
+      "command": "node scripts/test-ui-lifecycle-browser.mjs",
+      "code": 0,
+      "seconds": 11.44,
+      "log": "retry-04.log"
+    },
+    {
+      "index": 5,
+      "command": "node scripts/test-phase-navigation-browser.mjs",
+      "code": 0,
+      "seconds": 19.75,
+      "log": "retry-05.log"
+    },
+    {
+      "index": 6,
+      "command": "node scripts/test-lesson-extension-browser.mjs",
+      "code": 0,
+      "seconds": null,
+      "log": "final-06.log"
+    },
+    {
+      "index": 7,
+      "command": "node scripts/test-continuous-flow-browser.mjs",
+      "code": 0,
+      "seconds": 59.27,
+      "log": "retry9-07.log"
+    },
+    {
+      "index": 8,
+      "command": "node scripts/test-sentence-comprehension-browser.mjs",
+      "code": 0,
+      "seconds": 51.04,
+      "log": "retry-08.log"
+    },
+    {
+      "index": 9,
+      "command": "node scripts/test-connected-content-browser.mjs",
+      "code": 0,
+      "seconds": 127.58,
+      "log": "suite-09.log"
+    },
+    {
+      "index": 10,
+      "command": "node scripts/test-learner-language-browser.mjs",
+      "code": 0,
+      "seconds": 5.34,
+      "log": "retry-10.log"
+    },
+    {
+      "index": 11,
+      "command": "node scripts/test-learner-ux-browser.mjs",
+      "code": 0,
+      "seconds": 136.22,
+      "log": "retry3-11.log"
+    },
+    {
+      "index": 12,
+      "command": "node scripts/test-learner-ux-audio-browser.mjs",
+      "code": 0,
+      "seconds": 7.13,
+      "log": "suite-12.log"
+    },
+    {
+      "index": 13,
+      "command": "node scripts/test-sections-browser.mjs",
+      "code": 0,
+      "seconds": null,
+      "log": "retry5-13.log"
+    },
+    {
+      "index": 14,
+      "command": "node scripts/test-landing-browser.mjs",
+      "code": 0,
+      "seconds": 13.28,
+      "log": "suite-14.log"
+    },
+    {
+      "index": 15,
+      "command": "node scripts/test-mixed-practice-browser.mjs",
+      "code": 0,
+      "seconds": 35.66,
+      "log": "retry-15.log"
+    },
+    {
+      "index": 16,
+      "command": "node scripts/test-mixed-practice-audio.mjs",
+      "code": 0,
+      "seconds": 7.09,
+      "log": "suite-16.log"
+    },
+    {
+      "index": 17,
+      "command": "node scripts/test-audio-register-browser.mjs",
+      "code": 0,
+      "seconds": 6.43,
+      "log": "retry3-17.log"
+    },
+    {
+      "index": 18,
+      "command": "node --test scripts/test-group-practice.mjs scripts/test-extended-practice.mjs",
+      "code": 0,
+      "seconds": 3.98,
+      "log": "retry-18.log"
+    },
+    {
+      "index": 19,
+      "command": "node scripts/test-group-practice-browser.mjs",
+      "code": 0,
+      "seconds": 48.58,
+      "log": "retry3-19.log"
+    },
+    {
+      "index": 20,
+      "command": "node scripts/test-extended-practice-browser.mjs",
+      "code": 0,
+      "seconds": 23.42,
+      "log": "retry-20.log"
+    },
+    {
+      "index": 21,
+      "command": "node --test scripts/test-practice-chapters.mjs",
+      "code": 0,
+      "seconds": 10.48,
+      "log": "suite-21.log"
+    },
+    {
+      "index": 22,
+      "command": "node scripts/test-practice-chapters-browser.mjs",
+      "code": 0,
+      "seconds": 8.62,
+      "log": "retry3-22.log"
+    },
+    {
+      "index": 23,
+      "command": "node scripts/test-player-stability-browser.mjs",
+      "code": 0,
+      "seconds": 18.86,
+      "log": "suite-23.log"
+    },
+    {
+      "index": 24,
+      "command": "node scripts/test-practice-sheet-browser.mjs",
+      "code": 0,
+      "seconds": null,
+      "log": "final-24.log"
+    },
+    {
+      "index": 25,
+      "command": "node --test scripts/test-learning-paths.mjs",
+      "code": 0,
+      "seconds": 7.93,
+      "log": "suite-25.log"
+    },
+    {
+      "index": 26,
+      "command": "node scripts/test-learning-paths-browser.mjs",
+      "code": 0,
+      "seconds": 34.57,
+      "log": "retry6-26.log"
+    },
+    {
+      "index": 27,
+      "command": "node scripts/test-menu-navigation-browser.mjs",
+      "code": 0,
+      "seconds": 20.64,
+      "log": "retry2-27.log"
+    },
+    {
+      "index": 28,
+      "command": "node scripts/test-menu-refinement-browser.mjs",
+      "code": 0,
+      "seconds": 20.69,
+      "log": "suite-28.log"
+    },
+    {
+      "index": 29,
+      "command": "node --test scripts/test-didactic-round3.mjs",
+      "code": 0,
+      "seconds": 0.82,
+      "log": "suite-29.log"
+    },
+    {
+      "index": 30,
+      "command": "node scripts/test-didactic-round3-browser.mjs",
+      "code": 0,
+      "seconds": 13.71,
+      "log": "retry2-30.log"
+    },
+    {
+      "index": 31,
+      "command": "node --test scripts/test-level-routes.mjs",
+      "code": 0,
+      "seconds": 5.05,
+      "log": "suite-31.log"
+    },
+    {
+      "index": 32,
+      "command": "node scripts/test-level-routes-browser.mjs",
+      "code": 0,
+      "seconds": 15.52,
+      "log": "retry9-32.log"
+    },
+    {
+      "index": 33,
+      "command": "node scripts/test-route-panel-browser.mjs",
+      "code": 0,
+      "seconds": 8.79,
+      "log": "retry2-33.log"
+    },
+    {
+      "index": 34,
+      "command": "node scripts/test-picture-guide-browser.mjs",
+      "code": 0,
+      "seconds": 4.71,
+      "log": "retry2-34.log"
+    },
+    {
+      "index": 35,
+      "command": "node --test scripts/test-standard-players.mjs",
+      "code": 0,
+      "seconds": 5.84,
+      "log": "suite-35.log"
+    },
+    {
+      "index": 36,
+      "command": "node scripts/test-standard-players-browser.mjs",
+      "code": 0,
+      "seconds": null,
+      "log": "final-36.log"
+    },
+    {
+      "index": 37,
+      "command": "node scripts/test-standard-player-variants-browser.mjs",
+      "code": 0,
+      "seconds": 7.97,
+      "log": "retry2-37.log"
+    },
+    {
+      "index": 38,
+      "command": "node scripts/test-standard-integration-browser.mjs",
+      "code": 0,
+      "seconds": 28.59,
+      "log": "retry2-38.log"
+    },
+    {
+      "index": 39,
+      "command": "node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs",
+      "code": 0,
+      "seconds": 1.82,
+      "log": "suite-39.log"
+    },
+    {
+      "index": 40,
+      "command": "node scripts/test-imported-practice-browser.mjs",
+      "code": 0,
+      "seconds": 11.79,
+      "log": "retry2-40.log"
+    },
+    {
+      "index": 41,
+      "command": "node scripts/test-cumulative-workflow-browser.mjs",
+      "code": 0,
+      "seconds": 16.1,
+      "log": "retry2-41.log"
+    },
+    {
+      "index": 42,
+      "command": "node scripts/test-cumulative-routes-browser.mjs",
+      "code": 0,
+      "seconds": 22.44,
+      "log": "retry9-42.log"
+    },
+    {
+      "index": 43,
+      "command": "node --test scripts/test-practice-navigation.mjs",
+      "code": 0,
+      "seconds": 0.35,
+      "log": "suite-43.log"
+    },
+    {
+      "index": 44,
+      "command": "node scripts/test-unified-practice-navigation.mjs",
+      "code": 0,
+      "seconds": 1.76,
+      "log": "suite-44.log"
+    },
+    {
+      "index": 45,
+      "command": "node scripts/test-direct-navigation-browser.mjs",
+      "code": 0,
+      "seconds": 24.27,
+      "log": "suite-45.log"
+    },
+    {
+      "index": 46,
+      "command": "node scripts/test-alfa-c-menu-browser.mjs",
+      "code": 0,
+      "seconds": 162.92,
+      "log": "retry3-46.log"
+    }
+  ],
+  "passed": 47,
+  "failed": 0,
+  "initialBaseline": "ebe45d6f5be44fa0cb49cc5ff1b15a9512420632",
+  "finalBaseline": "fc51e7c5501f5bf410ee96e569e3676b51d65568",
+  "candidate": "b5bdcc76707ff1f8ba1e1846d9b0005c8735452d",
+  "afterRebase": "71 affected functional unit tests, 1800 production collections, 80 new reading flows, 401 reading audio checks, 72 API payloads, offered-bank preservation, latest release rejection tests, build/types/lint/dry-run."
+}
