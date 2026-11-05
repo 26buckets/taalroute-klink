@@ -1,3 +1,15 @@
+## Actuele publicatie — vijftig dictees — 5 november 2026
+
+Livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49`, Worker `279e2254-a1d4-446e-93a0-36962ce2fd64`. Op Nico’s definitieve expliciete akkoord via schone canonieke main en `npm run deploy`, vanaf de actuele goedgekeurde livebron `43c05c9d4c40adb5373d564e6131d5dbdd90d546`. Alleen de twee inhoudsregisters veranderen de app; nieuwste Help-bediening, uiterlijk, logo, alle eerdere inhoud, media en voortgang behouden.
+
+Precies 50 brongebonden woorddictees in negen oefenblokken: Alfa B 10, Alfa C 4, A1 12, A2 12 en B1 12. De zes eerder ingetrokken banken en drie aanvullende Alfa-banken zijn beschikbaar. 1.800 eerdere blokken behouden; totaal 1.809 blokken en 64.326 oefeningen.
+
+Lokaal/live elk 200 echte dicteerstromen, 18 werkbladstromen, 80 bestaande leesstromen, acht Help-controles en zes opslagcontroles. 81 API-bestanden, 50 doelopnamen en één instructieopname exact teruggelezen; metadata en decode geslaagd. Acht werkelijke live voor/na-schermparen zonder pixels met verschil boven 10 per kleurkanaal. Werkelijk 21 nieuwe + 19.979 behouden = 20.000 assets; Worker gzip 6.141,80 KiB. Geen workflows, budget- of configuratiewijziging.
+
+Menselijke taal-/luisterreview en fysieke telefoonproef niet uitgevoerd. Nico keurde publicatie expliciet goed na melding van deze open punten; historische HOLD-bronnen blijven ongewijzigd. Geen menselijke goedkeuring afgeleid uit technische proeven. Exact akkoord, bronnen, herstel, back-up en ontvangstcontrole: `docs/dictation-50-20261105/`, eindbewijs in `postflight/RESULTAAT.txt` en `postflight/backup.json`. Deze bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — Help in de oefenbalk en appel en peer — 5 november 2026
 
 Livebron `43c05c9d4c40adb5373d564e6131d5dbdd90d546`, Worker `7214bd7e-3b34-45e5-943e-6965c9b9299f`. Op Nico’s expliciete opdracht via de gewone `npm run deploy` op schone canonieke main, vanaf livebron `8f310654410c683c772ce889b2164441b8a2a8c0`.
