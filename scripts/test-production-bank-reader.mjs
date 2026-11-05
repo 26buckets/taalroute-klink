@@ -6,7 +6,7 @@ const rows=JSON.parse(readFileSync('data/klink-production-index.json'));
 void test('Existing public banks and new server banks keep the same validation',()=>{
  const old=rows.find(r=>r.url.startsWith('/practice-content/'));
  assert.deepEqual(readProductionBank(old),JSON.parse(readFileSync('public'+old.url)));
- const server=rows.filter(r=>r.url.startsWith('/api/grammar-aa-assets/'));assert.equal(server.length,11);
+ const server=rows.filter(r=>r.url.startsWith('/api/grammar-aa-assets/'));assert.equal(server.length,20);
  for(const row of server){assert.equal(readProductionBank(row).exercises.length,row.count);assert.throws(()=>readProductionBank({...row,count:row.count+1}));assert.throws(()=>readProductionBank({...row,id:'wrong-source'}));}
 });
 void test('Unregistered or malformed server bank URLs fail closed',()=>{

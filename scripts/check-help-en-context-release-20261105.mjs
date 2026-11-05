@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict';
-import { verifyDialogFocusRelease, readBeforeDialogFocus } from './check-dialog-focus-release-20261105.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+
+import { verifyDictation50Release, readBeforeDictation50 } from './check-dictation-50-release-20261105.mjs';
 
 const folder = 'docs/help-en-context-20261105/';
 const roots = ['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
@@ -13,8 +14,8 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sort = files => files.sort();
 
 export function verifyHelpContextRelease(read = readFileSync) {
-  const successor = verifyDialogFocusRelease(read), currentRead = read;
-  read = file => readBeforeDialogFocus(file, successor, currentRead);
+  const successor = verifyDictation50Release(read), currentRead = read;
+  read = path => readBeforeDictation50(path, successor, currentRead);
   const json = path => JSON.parse(read(path));
   const release = json(folder + 'approval.json'), request = json(folder + 'owner-request.json');
   assert.equal(request.userRequest, 'Zet Help rechtsboven naast Foto en Tekst en zorg dat de knop zichtbaar blijft bij scrollen. Test dit op mobiel en zet beide aanpassingen daarna online. Laat Inzicht-staging ongemoeid.');
@@ -47,8 +48,8 @@ export function verifyHelpContextRelease(read = readFileSync) {
   assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity);
   assert.deepEqual(backup.files,release.files);
   assert.deepEqual(backup.evidenceFiles,release.evidenceFiles);
-  return { ...release, successor };
+  return {...release, successor};
 }
 export function readBeforeHelpContext(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : readBeforeDialogFocus(file, release.successor, read);
+  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : readBeforeDictation50(file, release.successor, read);
 }
