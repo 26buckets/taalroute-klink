@@ -99,7 +99,7 @@ try {
   await page.waitForFunction(() => document.querySelector('.cp-text-entry input')?.disabled === false);
   await page.getByRole('button', { name: 'Help', exact: true }).click();
   assert.equal(await page.locator('.cp-word-hint strong').innerText(), dictation.helpWord);
-  await page.getByRole('button', { name: 'Verberg voorbeeld', exact: true }).click();
+  await page.getByRole('button',{name:'Help',exact:true,expanded:true}).click();
   await page.locator('.cp-text-entry input').fill(dictation.fields[0].acceptedAnswers[0]);
   await page.locator('.cp-text-entry input').press('Enter');
   const pauseAfterHelp = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true });

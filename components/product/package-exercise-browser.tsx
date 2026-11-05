@@ -2,7 +2,7 @@
 import handwritingHints from '@/data/klink-handwriting-help-20261103.json';
 import { WordAudioText, isWordAudioClick } from './word-audio-text';
 import { useExerciseViewTarget } from './exercise-view';
-import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
+import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
@@ -788,11 +788,9 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
 
 function WordHint({ exercise, onHelp, disabled = false }: { exercise: PackageExercise; onHelp: () => void; disabled?: boolean }) {
   const [shown, setShown] = useState(false);
-  const hint = useRef<HTMLDivElement>(null);
   const spellingUnits = asArray<number>(exercise.writingHintUnits);
-  useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <><strong data-word-listening-units={exercise.letterModelOnly ? 'sound' : undefined}>{exercise.letterModelOnly ? exercise.helpWord : <WordAudioText text={exercise.helpWord} />}</strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</>}<button className="secondary-button" disabled={disabled} aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <ExerciseHelp open={shown} disabled={disabled} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown && <div className="cp-word-hint"><strong data-word-listening-units={exercise.letterModelOnly ? 'sound' : undefined}>{exercise.letterModelOnly ? exercise.helpWord : <WordAudioText text={exercise.helpWord} />}</strong>{typeof exercise.meaning === 'string' && <p>{exercise.writingSourceId ? wordAudioParts(exercise.meaning).map((part, index) => spellingUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text) : exercise.meaning}</p>}</div>}</ExerciseHelp>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
@@ -1003,8 +1001,6 @@ function HandwritingSurface({ exercise, onAudio, onFinish, onReset, canAnswer, o
   const sourceHint = handwritingHints.find(row => row.sourceId === id && row.model === exercise.target);
   const listeningHint = sourceHint?.listeningHint;
   const [helpStep, setHelpStep] = useState(0);
-  const hint = useRef<HTMLDivElement>(null);
-  useEffect(() => { if (helpStep) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [helpStep]);
   useEffect(() => {
     let active = true, connection: IDBDatabase | undefined;
     void (async () => {
@@ -1063,11 +1059,12 @@ function HandwritingSurface({ exercise, onAudio, onFinish, onReset, canAnswer, o
     {error && <output role="alert">Bewaren lukt niet. Je schrijfwerk blijft in dit scherm. Houd deze oefening open.</output>}
     {revealed ? <button data-practice-check className="primary-button" disabled={busy || error} onClick={() => onFinish('Eigen schrijfwerk bewaard op dit apparaat.', true, 'Je hebt geoefend. Bespreek je schrijfwerk zo nodig met je docent.')}>Ik heb vergeleken<Check /></button>
       : <button data-practice-check className="primary-button" disabled={!ready || !canAnswer || busy || !hasWritingInk(ink.draft)} onClick={() => void compare()}>Vergelijk<Check /></button>}
-    {!revealed && (listeningHint ? <div className="cp-word-hint" ref={hint} data-handwriting-help-step={helpStep}>
+    {!revealed && (listeningHint ? <ExerciseHelp data-practice-listen={helpStep === 0 || undefined} open={helpStep > 0} closeLabel={helpStep === 3 ? 'Verberg voorbeeld' : 'Help'} disabled={!ready || !canAnswer || busy || (helpStep === 1 && !ink.first && !hasWritingInk(ink.draft))} onClick={() => void stagedHelp()}>
+      {helpStep > 0 && <div className="cp-word-hint" data-handwriting-help-step={helpStep}>
       {helpStep === 1 && <p>{wordAudioParts(listeningHint).map((part, index) => sourceHint?.listeningHintUnits.includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</p>}
       {helpStep >= 2 && <>{helpStep === 3 && <strong><WordAudioText text={asString(exercise.target)} /></strong>}<p>{wordAudioParts(asString(exercise.meaning)).map((part, index) => asArray<number>(exercise.writingHintUnits).includes(part.start) ? <span key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</p></>}
-      <button data-practice-listen={helpStep === 0 || undefined} className="secondary-button" disabled={!ready || !canAnswer || busy || (helpStep === 1 && !ink.first && !hasWritingInk(ink.draft))} aria-expanded={helpStep > 0} onClick={() => void stagedHelp()}>{helpStep === 3 ? 'Verberg voorbeeld' : 'Help'}</button>
-    </div> : <WordHint exercise={exercise} onHelp={help} disabled={!ready || busy} />)}
+      </div>}
+    </ExerciseHelp> : <WordHint exercise={exercise} onHelp={help} disabled={!ready || busy} />)}
   </section>;
 }
 

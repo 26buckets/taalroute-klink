@@ -19,7 +19,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    assert(await task.getByText(e.selfCheck,{exact:true}).isVisible());
    assert.equal(await task.getByText(e.meaning,{exact:true}).count(),0);
    await task.getByRole('button',{name:'Help',exact:true}).click();assert(await task.getByText(e.meaning,{exact:true}).isVisible());
-   await task.getByRole('button',{name:'Verberg voorbeeld',exact:true}).click();
+   await task.getByRole('button',{name:'Help',exact:true,expanded:true}).click();
    if(i===0&&engine==='chromium'){
     await task.getByRole('button',{name:'Neem op',exact:true}).click();await task.getByRole('button',{name:'Stop',exact:true}).waitFor();
     assert(await task.locator('[data-practice-next]').isDisabled());await page.waitForTimeout(450);

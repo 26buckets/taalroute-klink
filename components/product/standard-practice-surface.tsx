@@ -1,7 +1,7 @@
 'use client';
 import { WordAudioText } from './word-audio-text';
 
-import { ExerciseListen } from './exercise-listen';
+import { ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { compactImageSrc } from '@/lib/compact-images';
 import { useRef, useState } from 'react';
 import { Check, RotateCcw, Volume2 } from 'lucide-react';
@@ -25,7 +25,7 @@ export function StandardPracticeSurface(props: Props) {
 }
 function Help({ text, onHelp }: { text: string; onHelp: () => void }) {
   const [open, setOpen] = useState(false);
-  return <><button className="secondary-button" aria-expanded={open} onClick={() => { setOpen(!open); onHelp(); }}>Help</button>{open && <p className="cp-source-text">{text}</p>}</>;
+  return <ExerciseHelp open={open} closeLabel="Verberg hulp" onClick={() => { setOpen(!open); onHelp(); }}>{open && <p className="cp-source-text">{text}</p>}</ExerciseHelp>;
 }
 function SortSurface({ task, onAudio, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: TaskProps<SortTask>) {
   const [selected, setSelected] = useState(task.items[0].id);
