@@ -1,0 +1,23 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "helpFocusPreserved": true,
+      "draftReloadPreserved": true,
+      "caretPreserved": true,
+      "correctAnswerNotRefocused": true,
+      "otherQuestionFocusPreserved": true,
+      "simulatedAudio": true
+    },
+    {
+      "engine": "webkit",
+      "helpFocusPreserved": true,
+      "draftReloadPreserved": true,
+      "caretPreserved": true,
+      "correctAnswerNotRefocused": true,
+      "otherQuestionFocusPreserved": true,
+      "simulatedAudio": true
+    }
+  ]
+}
