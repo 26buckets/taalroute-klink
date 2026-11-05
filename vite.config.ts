@@ -40,6 +40,7 @@ export default defineConfig(async () => {
         // Claim the shared framework and data first; only player-only dependencies may be deferred.
         { name: 'framework', test: /node_modules\/(?:react\/|react-dom\/|scheduler\/)/, priority: 100, includeDependenciesRecursively: false },
         { name: 'route-settings', test: /components\/product\/(?:route-settings|learner-app)\.tsx$/, priority: 50, includeDependenciesRecursively: true },
+        { name: 'learner-rounds-player', test: /components\/product\/package-exercise-browser\.tsx$/, priority: 20, includeDependenciesRecursively: true },
         { name: 'learner-rounds', test: /components\/product\/learner-rounds\.ts$/, priority: 10, includeDependenciesRecursively: true },
         { name: 'practice-source-bank', priority: 90, test: /data\/klink-(?:imported-practice|word-use-self)\.json$/, includeDependenciesRecursively: false },
         { name: 'practice-word-bank', priority: 90, test: /(?:data\/klink-(?:lexicon-wordbuild-rest|lexicon-wordbuild-20|curriculum|media)\.json|lib\/klink-curriculum\.ts)$/, includeDependenciesRecursively: false },

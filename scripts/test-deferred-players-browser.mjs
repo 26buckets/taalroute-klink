@@ -51,7 +51,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         await page.goto(base + '/#learner');
         await page.locator('.cp-home').waitFor();
         await page.evaluate(() => localStorage.setItem('deferred-preservation', 'saved answers'));
-        const failedFile = width === 1280 ? player : /\/learner-rounds\.[^/]+\.css$/;
+        const failedFile = width === 1280 ? player : /\/learner-rounds(?:-[^/]+)?\.[^/]+\.css$/;
         await page.route(failedFile, route => route.abort());
         await page.locator('[data-chapter="words"]').click();
         await page.locator('[data-chapter-activity="meet"]').click();

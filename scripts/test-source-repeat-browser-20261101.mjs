@@ -30,7 +30,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit}).filter(([e])=>!pr
    if(!localStorage.getItem('klink.repeat-test.seed')){for(const[k,v]of Object.entries(seed))localStorage.setItem(k,v);localStorage.setItem('klink.repeat-test.seed','1');}
    // Fast deterministic state tests; real file decoding and native playback have a separate media check.
    window.Audio=class extends EventTarget{
-    constructor(src){super();this.src=src;this.paused=true;this.playbackRate=1;this.currentTime=0;}
+    constructor(src){super();this.dataset={};this.src=src;this.paused=true;this.playbackRate=1;this.currentTime=0;}
     play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}
     pause(){clearTimeout(this.timer);this.paused=true;}
    };
