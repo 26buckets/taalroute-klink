@@ -3,6 +3,8 @@ import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 
+import { verifyDictation50Release, readBeforeDictation50 } from './check-dictation-50-release-20261105.mjs';
+
 const folder = 'docs/help-en-context-20261105/';
 const roots = ['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const runtime = ['app/learner-layout.css','components/product/alfa-c-dagelijks.tsx','components/product/alfa-c-functioneel.tsx','components/product/alfa-c-practice.tsx','components/product/exercise-listen.tsx','components/product/extended-practice-surface.tsx','components/product/package-exercise-browser.tsx','components/product/standard-practice-surface.tsx','data/klink-media.json','lib/package-content.ts'];
@@ -12,6 +14,8 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sort = files => files.sort();
 
 export function verifyHelpContextRelease(read = readFileSync) {
+  const successor = verifyDictation50Release(read), currentRead = read;
+  read = path => readBeforeDictation50(path, successor, currentRead);
   const json = path => JSON.parse(read(path));
   const release = json(folder + 'approval.json'), request = json(folder + 'owner-request.json');
   assert.equal(request.userRequest, 'Zet Help rechtsboven naast Foto en Tekst en zorg dat de knop zichtbaar blijft bij scrollen. Test dit op mobiel en zet beide aanpassingen daarna online. Laat Inzicht-staging ongemoeid.');
@@ -22,7 +26,7 @@ export function verifyHelpContextRelease(read = readFileSync) {
   git('merge-base','--is-ancestor',release.liveSourceCommit,release.baselineSourceCommit);
   git('merge-base','--is-ancestor',release.baselineSourceCommit,release.checkedCandidateCommit);
   git('merge-base','--is-ancestor',release.checkedCandidateCommit,'HEAD');
-  const changed = sort([...new Set([...paths(git('diff','--name-only',release.baselineSourceCommit,'--',...roots)),...paths(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed = sort(paths(git('diff','--name-only',release.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed, release.changedFiles);
   assert.deepEqual(sort(Object.keys(release.files)), changed);
   assert.deepEqual(changed.filter(path => !path.startsWith('scripts/')), sort([...runtime, 'VORMGEVING-VASTGEZET.md']));
@@ -44,8 +48,8 @@ export function verifyHelpContextRelease(read = readFileSync) {
   assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity);
   assert.deepEqual(backup.files,release.files);
   assert.deepEqual(backup.evidenceFiles,release.evidenceFiles);
-  return release;
+  return {...release, successor};
 }
 export function readBeforeHelpContext(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : read(file);
+  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : readBeforeDictation50(file, release.successor, read);
 }
