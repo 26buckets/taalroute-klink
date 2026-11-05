@@ -13,6 +13,9 @@ mkdirSync(out, { recursive: true });
 const hash = value => createHash('sha256').update(value).digest('hex');
 const files = root => globSync('**/*', { cwd: root, dot: true }).filter(file => statSync(`${root}/${file}`).isFile());
 const client = files('dist/client');
+for (const file of client.filter(file => /\/(?:framework|vinext)-[^/]+\.js$/.test(file))) {
+  assert(!/\bfrom["'`]\.\/(?:shared-ui|route-settings|learner-app|practice-(?:word|source)-bank)-/.test(readFileSync('dist/client/' + file, 'utf8')), 'Framework helpers must not depend on application/data initialization');
+}
 const ignored = ignore().add(['/.assetsignore', '/_headers', '/_redirects']).add(readFileSync('dist/client/.assetsignore', 'utf8'));
 const assets = client.filter(file => !ignored.ignores(file)).length;
 assert(assets <= 20000, 'Keep the existing asset ceiling');

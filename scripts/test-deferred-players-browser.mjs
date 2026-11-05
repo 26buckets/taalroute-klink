@@ -68,9 +68,22 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         assert.equal(await page.evaluate(() => localStorage.getItem('deferred-preservation')), 'saved answers');
         rows.push({ engine, width, failedFile: width === 1280 ? 'javascript' : 'stylesheet', failedDownloadVisible: true, repeatedFailureSafe: true, explicitRetryRecovers: true, storedAnswersPreserved: true });
       } finally { await recovery.close(); }
+
+      const teacher = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
+      try {
+        const page = await teacher.newPage(), requests = [];
+        page.on('request', request => requests.push(request.url()));
+        page.on('pageerror', error => errors.push(error.message));
+        await page.goto(base + '/#teacher/plus', { waitUntil: 'networkidle' });
+        await page.locator('.kpd-lesson-choice').first().waitFor();
+        assert(!requests.some(url => /\/(?:learner-app-|learner-rounds-(?!player-))/.test(url)), 'Teacher must not fetch the learner home or learner-only rounds');
+        await page.getByRole('button', { name: 'Les openen: mat', exact: true }).click();
+        await page.locator('.kpd-big-word').waitFor();
+        rows.push({ engine, width, teacherOmitsLearnerModules: true, teacherLessonOpens: true });
+      } finally { await teacher.close(); }
     }
   } finally { await browser.close(); writeFileSync(out + '/checks.json', JSON.stringify({ rows, errors }, null, 2) + '\n'); }
 }
-assert.equal(rows.length, 8);
+assert.equal(rows.length, 12);
 assert.deepEqual(errors, []);
-console.log('PASS eight cold/held/failed/reloaded player flows across Chromium/WebKit and desktop/mobile');
+console.log('PASS twelve cold/held/failed/reloaded player and isolated teacher flows across Chromium/WebKit and desktop/mobile');

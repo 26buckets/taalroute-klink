@@ -16,7 +16,7 @@ for (const [engine, type] of Object.entries(throttled ? { chromium } : { chromiu
   const browser = await type.launch();
   browserVersions[engine] = browser.version();
   try {
-    for (const width of [1280, 390]) for (const [portal, selector] of throttled ? [['learner', '.learner-app']] : [['learner', '.learner-app'], ['teacher/plus', '.kpd-lesson-choice']]) for (let repeat = 0; repeat < repeats; repeat++) {
+    for (const width of [1280, 390]) for (const [portal, selector] of [['learner', '.learner-app'], ['teacher/plus', '.kpd-lesson-choice']]) for (let repeat = 0; repeat < repeats; repeat++) {
       for (const version of repeat % 2 ? ['after', 'before'] : ['before', 'after']) {
         const base = remote ? `https://klink-pr12-${version === 'before' ? 'baseline' : 'candidate'}.nico-554.workers.dev` : `http://127.0.0.1:${version === 'before' ? 19122 : 19120}`;
         const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
@@ -73,7 +73,7 @@ for (const [engine, type] of Object.entries(throttled ? { chromium } : { chromiu
     }
   } finally { await browser.close(); }
 }
-assert.equal(rows.length, throttled ? 32 : 32 * repeats);
+assert.equal(rows.length, throttled ? 64 : 32 * repeats);
 assert.equal(nextClicks.length, throttled ? 16 : 8 * repeats);
 assert.deepEqual(errors, []);
 console.log(`PASS ${rows.length} first/reload visits and ${nextClicks.length} next-chapter interactions`);

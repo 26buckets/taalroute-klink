@@ -18,7 +18,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       let release;
       const held = new Promise(resolve => { release = resolve; });
       let requests = 0;
-      const chunk = target === 'learner' ? 'practice-workspace' : 'teacher-classroom';
+      const chunk = target === 'learner' ? 'route-settings' : 'teacher-classroom';
       await page.route('**/*', async route => {
         if (new RegExp('/' + chunk + '[.-].*\\.js(?:\\?|$)').test(route.request().url())) { requests++; await held; }
         await route.continue();

@@ -10,7 +10,7 @@ const stats = values => {
 };
 const sum = (rows, key) => rows.reduce((total, row) => total + row[key], 0);
 const summary = {};
-for (const [trial, expected] of [['normal', 64], ['3mbps', 32]]) {
+for (const [trial, expected] of [['normal', 64], ['3mbps', 64]]) {
   const data = read(trial + '/visits.json');
   assert.equal(data.rows.length, expected);
   assert.deepEqual(data.errors, []);
@@ -34,11 +34,17 @@ for (const [trial, expected] of [['normal', 64], ['3mbps', 32]]) {
 const flow = read('first-exercise/visits.json');
 assert.equal(flow.rows.length, 16);
 assert.deepEqual(flow.errors, []);
-assert.equal(new Set(flow.rows.map(row => row.exerciseId)).size, 1);
+assert.equal(new Set(flow.rows.filter(row => row.portal === 'learner').map(row => row.exerciseId)).size, 1);
 summary.firstExercise3Mbps = {};
 for (const version of ['before', 'after']) {
-  const rows = flow.rows.filter(row => row.version === version);
+  const rows = flow.rows.filter(row => row.version === version && row.portal === 'learner');
   summary.firstExercise3Mbps[version] = Object.fromEntries(['chapterClickMs', 'activityClickMs', 'exerciseClickMs', 'firstChoiceToExerciseMs', 'openingToExerciseMs', 'exerciseMediaReadyMs'].map(key => [key, stats(rows.map(row => row[key]))]));
+}
+summary.firstLesson3Mbps = {};
+for (const version of ['before', 'after']) {
+  const rows = flow.rows.filter(row => row.version === version && row.portal === 'teacher/plus');
+  assert(rows.every(row => row.lessonId === 'mat'));
+  summary.firstLesson3Mbps[version] = Object.fromEntries(['lessonClickMs', 'openingToLessonMs', 'lessonMediaReadyMs'].map(key => [key, stats(rows.map(row => row[key]))]));
 }
 writeFileSync(root + '/summary.json', JSON.stringify(summary, null, 2) + '\n');
 console.log(JSON.stringify(summary, null, 2));
