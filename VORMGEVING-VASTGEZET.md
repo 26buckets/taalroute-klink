@@ -1,3 +1,7 @@
+## Klikranden — Nico, 5 november 2026
+
+Op de concrete aanwijzing bij de blauwe rand rond “Luister. Zeg het woord na.” vervallen in Klink de browserranden op automatisch gefocuste titels en bij muisklikken. Zichtbare toetsenbordfocus, selectie-/foutmarkeringen en de bestaande focusverplaatsing blijven behouden. Geen andere wijziging aan inhoud, indeling, uiterlijk, audio of voortgang. Bronopdracht en lokale browsercontrole: `docs/pointer-focus-20261105/`. Nico heeft op 5 november expliciet publicatie van precies deze gecontroleerde wijziging opgedragen, met behoud van inhoud, audio, voortgang en de rest van het uiterlijk. Het concrete publicatieakkoord staat in `docs/pointer-focus-20261105/publication/`; de feitelijke live-status blijft vastgelegd in PUBLICATIE-ACTUEEL.md.
+
 ## Officieel Klink-logo — Nico, 1 november 2026
 
 Nico heeft het uitgewerkte petrolgroene vectorlogo met groene stip en vloeiende krul expliciet als officieel Klink-logo vastgesteld en uitsluitend deze vervanging in Klink en Studio voor publicatie vrijgegeven. Dit vervangt logo D van 24 oktober. Gebruik de gecontroleerde paden uit `docs/official-logo-20261101/master/`; letters #0F3B44, stip #3C8962, op donkere interfaces witte letters met dezelfde groene stip. Slogan waar al aanwezig behouden. Geen nieuwe lettervormen genereren of natekenen. De goedgekeurde favicon is afgeleid van dezelfde hoofdletter K.
