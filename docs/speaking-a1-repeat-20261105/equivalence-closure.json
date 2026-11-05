@@ -1,0 +1,1096 @@
+{
+  "live": {
+    "application": "Klink",
+    "builtAt": "2026-11-04T19:16:32.610Z",
+    "sourceCommit": "dc37a479a7a6f148d61ffb5140dfd79112331f85",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "canonical": "b085d626f591342e0be3aa32faa3bfe85342d5e9",
+  "source": {
+    "id": "1R_7IroJEEaPh2BMSh30LizCdO53JGLmd2z7ud3go9fI",
+    "revision": "2026-11-02T09:23:18.678Z",
+    "reviewRevision": "nazegvoorstel-20261104-v1"
+  },
+  "scan": {
+    "bankCount": 1797,
+    "embedded": 4439,
+    "exerciseAppearances": 99612,
+    "repeatByLevel": {
+      "alfa-a": 332,
+      "alfa-b": 111
+    },
+    "a1SpeakingModes": {
+      "sentence-speak": 1325
+    }
+  },
+  "dictation": {
+    "held": 50,
+    "exactPublishedIdHits": 0,
+    "bankHttpStatuses": [
+      {
+        "id": "production:dictation:a1:spelling-396-20261104-1",
+        "http": 404
+      },
+      {
+        "id": "production:dictation:a1:spelling-396-20261104-2",
+        "http": 404
+      },
+      {
+        "id": "production:dictation:a2:spelling-396-20261104-1",
+        "http": 404
+      },
+      {
+        "id": "production:dictation:a2:spelling-396-20261104-2",
+        "http": 404
+      },
+      {
+        "id": "production:dictation:b1:spelling-396-20261104-1",
+        "http": 404
+      },
+      {
+        "id": "production:dictation:b1:spelling-396-20261104-2",
+        "http": 404
+      }
+    ]
+  },
+  "rows": [
+    {
+      "sourceId": "SPK-A1-ZHW-01",
+      "word": "buurman",
+      "originalContext": "Doelwoord: 'buurman'. Context: je groet je buurman bij de voordeur.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Een man die naast je of dicht bij je woont.",
+        "modelResponse": "buurman"
+      },
+      "wordLibrary": [
+        {
+          "id": "klink-woord-buurman",
+          "meaning": "Man die dicht bij je woont.",
+          "group": "Gebruikswoord; leeswoord na voorbereiding",
+          "review": "open",
+          "audioStatus": "review-open",
+          "packageId": "route-delen"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/taalroute/klink-woord-buurman.wav"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/taalroute/klink-woord-buurman.wav",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [
+        {
+          "word": "buurman",
+          "level": "alfa-b",
+          "mode": "repeat-word",
+          "collection": "route-delen.alfa-b",
+          "exerciseId": "route-delen:group:speak:woord-klink-woord-buurman:klink-woord-buurman:repeat-word",
+          "sourceExerciseId": "woord-klink-woord-buurman:klink-woord-buurman:repeat-word",
+          "instruction": "Luister en zeg na.",
+          "promptText": "Luister en zeg na.",
+          "promptAudio": {
+            "src": "/package-audio/taalroute/klink-woord-buurman.wav",
+            "audioId": "klink-woord-buurman"
+          },
+          "exactAudioPath": true,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "Buur en man verbinden tot buurman.",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "buurman",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "route-delen.a1",
+          "exerciseId": "route-delen:group:sentence-speak:woord-klink-woord-buurman:klink-sentence-b7876614dc5ba639",
+          "sourceExerciseId": "woord-klink-woord-buurman:klink-sentence-b7876614dc5ba639",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/aefe3f4bda2d442ab23f.wav",
+            "audioId": "klink-opname-aefe3f4bda2d442ab23f"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-b7876614dc5ba639",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "buurman",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "route-delen.a1",
+          "exerciseId": "route-delen:group:sentence-speak:woord-klink-woord-buurman:klink-sentence-da75f50f385acdb6",
+          "sourceExerciseId": "woord-klink-woord-buurman:klink-sentence-da75f50f385acdb6",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/6f4323242fcea0ca3d21.wav",
+            "audioId": "klink-opname-6f4323242fcea0ca3d21"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-da75f50f385acdb6",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "buurman",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "route-delen.a1",
+          "exerciseId": "route-delen:group:sentence-speak:woord-klink-woord-buurman:klink-sentence-e1411259c4705739",
+          "sourceExerciseId": "woord-klink-woord-buurman:klink-sentence-e1411259c4705739",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/2dbffec944c3b51a6279.wav",
+            "audioId": "klink-opname-2dbffec944c3b51a6279"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-e1411259c4705739",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "buurman",
+          "level": "a2",
+          "mode": "sentence-speak",
+          "collection": "route-delen.a2",
+          "exerciseId": "route-delen:group:sentence-speak:woord-klink-woord-buurman:klink-sentence-6b578d9e1268c45b",
+          "sourceExerciseId": "woord-klink-woord-buurman:klink-sentence-6b578d9e1268c45b",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/b76f93f52177c1d675d8.wav",
+            "audioId": "klink-opname-b76f93f52177c1d675d8"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-6b578d9e1268c45b",
+          "context": null,
+          "requiresAudio": true
+        }
+      ],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-02",
+      "word": "broodje",
+      "originalContext": "Doelwoord: 'broodje'. Context: je koopt twee broodjes.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Een klein brood. Je eet een broodje.",
+        "modelResponse": "broodje"
+      },
+      "wordLibrary": [
+        {
+          "id": "TL0278",
+          "meaning": "Klein brood, soms met kaas, vlees of ander eten erop.",
+          "group": "Woorden met 7 tot 9 letters",
+          "audioStatus": "review-open",
+          "packageId": "lexicon-woordbouw-7-9-4"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/woorden-20261025/TL0278.mp3"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/woorden-20261025/TL0278.mp3",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-03",
+      "word": "treinkaartje",
+      "originalContext": "Doelwoord: 'treinkaartje'. Context: je koopt een treinkaartje.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Een kaartje voor een reis met de trein.",
+        "modelResponse": "treinkaartje"
+      },
+      "wordLibrary": [],
+      "existingWordListening": [
+        {
+          "src": "/package-audio/word-listening-20261101/words-ae331c9fbc486726.bin",
+          "offset": 1761683,
+          "length": 18958
+        }
+      ],
+      "modelAudio": {
+        "src": "/package-audio/word-listening-20261101/words-ae331c9fbc486726.bin",
+        "offset": 1761683,
+        "length": 18958,
+        "voiceId": "0qLmDzgqulxcvv0yf3kg",
+        "liveHttp": 200,
+        "localEqualsLive": true,
+        "sourceSha256": "14edcdbdab6e14cd0e358192bbfa30f6e4af210e78eb48672d985a94e8e599f0"
+      },
+      "liveSpeakingCandidates": [],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-04",
+      "word": "collega",
+      "originalContext": "Doelwoord: 'collega'. Context: je stelt jezelf op je werk voor; in deze oefening heet jij Amir.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Iemand met wie je samenwerkt.",
+        "modelResponse": "collega"
+      },
+      "wordLibrary": [
+        {
+          "id": "TL0305",
+          "meaning": "Persoon met wie je werkt.",
+          "group": "Woorden met 7 tot 9 letters",
+          "audioStatus": "review-open",
+          "packageId": "lexicon-woordbouw-7-9-4"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/woorden-20261025/TL0305.mp3"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/woorden-20261025/TL0305.mp3",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-05",
+      "word": "dokter",
+      "originalContext": "Doelwoord: 'dokter'. Context: je vertelt dat je hoest.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Een dokter helpt je als je ziek bent.",
+        "modelResponse": "dokter"
+      },
+      "wordLibrary": [
+        {
+          "id": "TL0376",
+          "meaning": "Persoon die ziektes onderzoekt en behandelt.",
+          "group": "Woorden met 5 of 6 letters",
+          "audioStatus": "review-open",
+          "packageId": "lexicon-woordbouw-5-6-2"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/woorden-20261025/TL0376.mp3"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/woorden-20261025/TL0376.mp3",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-06",
+      "word": "docent",
+      "originalContext": "Doelwoord: 'docent'. Context: je vraagt aan de docent om hulp.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Iemand die lesgeeft.",
+        "modelResponse": "docent"
+      },
+      "wordLibrary": [
+        {
+          "id": "TL0370",
+          "meaning": "Persoon die lesgeeft.",
+          "group": "Woorden met 5 of 6 letters",
+          "audioStatus": "review-open",
+          "packageId": "lexicon-woordbouw-5-6-2"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/woorden-20261025/TL0370.mp3"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/woorden-20261025/TL0370.mp3",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-07",
+      "word": "oplader",
+      "originalContext": "Doelwoord: 'oplader'. Context: je legt je telefoon aan de oplader.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Met een oplader laad je je telefoon op.",
+        "modelResponse": "oplader"
+      },
+      "wordLibrary": [
+        {
+          "id": "TL1144",
+          "meaning": "Een apparaat waarmee je een batterij van stroom voorziet.",
+          "group": "Woorden met 7 tot 9 letters",
+          "audioStatus": "review-open",
+          "packageId": "lexicon-woordbouw-7-9-12"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/woorden-20261025/TL1144.mp3"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/woorden-20261025/TL1144.mp3",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-08",
+      "word": "soep",
+      "originalContext": "Doelwoord: 'soep'. Context: je maakt soep voor het avondeten.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Je eet soep uit een kom of een diep bord.",
+        "modelResponse": "soep"
+      },
+      "wordLibrary": [
+        {
+          "id": "klink-woord-soep",
+          "meaning": "Vloeibaar gerecht, vaak met stukjes groente of ander eten.",
+          "group": "Mogelijk ankerwoord; daarna lees- en herhaalwoord",
+          "review": "open",
+          "audioStatus": "review-open",
+          "packageId": "groep-6"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/taalroute/klink-woord-soep.wav",
+        "/package-audio/woordgebruik-20261101/WU-26d39f9b03d90cc21409.mp3"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/taalroute/klink-woord-soep.wav",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [
+        {
+          "word": "soep",
+          "level": "alfa-a",
+          "mode": "repeat-word",
+          "collection": "groep-6.alfa-a",
+          "exerciseId": "groep-6:group:speak:klink-leesstap-20:klink-woord-soep:repeat-word",
+          "sourceExerciseId": "klink-leesstap-20:klink-woord-soep:repeat-word",
+          "instruction": "Luister en zeg na.",
+          "promptText": "Luister en zeg na.",
+          "promptAudio": {
+            "src": "/package-audio/taalroute/klink-woord-soep.wav",
+            "audioId": "klink-woord-soep"
+          },
+          "exactAudioPath": true,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "soep",
+          "level": "alfa-a",
+          "mode": "repeat-word",
+          "collection": "groep-7.alfa-a",
+          "exerciseId": "groep-7:group:speak:klink-leesstap-24:klink-woord-soep:repeat-word",
+          "sourceExerciseId": "klink-leesstap-24:klink-woord-soep:repeat-word",
+          "instruction": "Luister en zeg na.",
+          "promptText": "Luister en zeg na.",
+          "promptAudio": {
+            "src": "/package-audio/taalroute/klink-woord-soep.wav",
+            "audioId": "klink-woord-soep"
+          },
+          "exactAudioPath": true,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "soep",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-6.a1",
+          "exerciseId": "groep-6:group:sentence-speak:klink-leesstap-19:klink-sentence-2f5eed0846703665",
+          "sourceExerciseId": "klink-leesstap-19:klink-sentence-2f5eed0846703665",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/ef2ef1c0ce86632043f3.wav",
+            "audioId": "klink-opname-ef2ef1c0ce86632043f3"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-2f5eed0846703665",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "soep",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-6.a1",
+          "exerciseId": "groep-6:group:sentence-speak:klink-leesstap-19:klink-sentence-44a9a1d41da3e730",
+          "sourceExerciseId": "klink-leesstap-19:klink-sentence-44a9a1d41da3e730",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/1f14604f4bf52ad16481.wav",
+            "audioId": "klink-opname-1f14604f4bf52ad16481"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-44a9a1d41da3e730",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "soep",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-6.a1",
+          "exerciseId": "groep-6:group:sentence-speak:klink-leesstap-19:klink-sentence-62820d89f2c24da3",
+          "sourceExerciseId": "klink-leesstap-19:klink-sentence-62820d89f2c24da3",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/e0bd2665fc088347c7f7.wav",
+            "audioId": "klink-opname-e0bd2665fc088347c7f7"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-62820d89f2c24da3",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "soep",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-6.a1",
+          "exerciseId": "groep-6:group:sentence-speak:klink-leesstap-19:klink-sentence-4b59e689288f22fc",
+          "sourceExerciseId": "klink-leesstap-19:klink-sentence-4b59e689288f22fc",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/69a01b58c5c1481464c9.wav",
+            "audioId": "klink-opname-69a01b58c5c1481464c9"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-4b59e689288f22fc",
+          "context": null,
+          "requiresAudio": true
+        }
+      ],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-09",
+      "word": "cadeau",
+      "originalContext": "Doelwoord: 'cadeau'. Context: je krijgt op je verjaardag een cadeau van een vriend.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Iets dat je aan iemand geeft, bijvoorbeeld op een verjaardag.",
+        "modelResponse": "cadeau"
+      },
+      "wordLibrary": [
+        {
+          "id": "klink-woord-cadeau",
+          "meaning": "Iets dat je aan iemand geeft om die persoon plezier te doen.",
+          "group": "Gebruikswoord; leeswoord na voorbereiding",
+          "review": "open",
+          "audioStatus": "review-open",
+          "packageId": "groep-10"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/taalroute/klink-woord-cadeau.wav"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/taalroute/klink-woord-cadeau.wav",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [
+        {
+          "word": "cadeau",
+          "level": "alfa-b",
+          "mode": "repeat-word",
+          "collection": "groep-10.alfa-b",
+          "exerciseId": "groep-10:group:speak:woord-klink-woord-cadeau:klink-woord-cadeau:repeat-word",
+          "sourceExerciseId": "woord-klink-woord-cadeau:klink-woord-cadeau:repeat-word",
+          "instruction": "Luister en zeg na.",
+          "promptText": "Luister en zeg na.",
+          "promptAudio": {
+            "src": "/package-audio/taalroute/klink-woord-cadeau.wav",
+            "audioId": "klink-woord-cadeau"
+          },
+          "exactAudioPath": true,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "Voorstel voor Alfa B: lezen na voorbereiding van de bijzondere spelling. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "cadeau",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-10.a1",
+          "exerciseId": "groep-10:group:sentence-speak:woord-klink-woord-cadeau:klink-sentence-9a783f3eae9bc2bb",
+          "sourceExerciseId": "woord-klink-woord-cadeau:klink-sentence-9a783f3eae9bc2bb",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/bc0cca219c2b1db335b9.wav",
+            "audioId": "klink-opname-bc0cca219c2b1db335b9"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-9a783f3eae9bc2bb",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "cadeau",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-10.a1",
+          "exerciseId": "groep-10:group:sentence-speak:woord-klink-woord-cadeau:klink-sentence-dec2e11c216f9c8d",
+          "sourceExerciseId": "woord-klink-woord-cadeau:klink-sentence-dec2e11c216f9c8d",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/28dc06c5c9d86c771bfe.wav",
+            "audioId": "klink-opname-28dc06c5c9d86c771bfe"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-dec2e11c216f9c8d",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "cadeau",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-10.a1",
+          "exerciseId": "groep-10:group:sentence-speak:woord-klink-woord-cadeau:klink-sentence-ef2a5f4193375731",
+          "sourceExerciseId": "woord-klink-woord-cadeau:klink-sentence-ef2a5f4193375731",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/577179e18bd41776ee59.wav",
+            "audioId": "klink-opname-577179e18bd41776ee59"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-ef2a5f4193375731",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "cadeau",
+          "level": "a1",
+          "mode": "sentence-speak",
+          "collection": "groep-10.a1",
+          "exerciseId": "groep-10:group:sentence-speak:woord-klink-woord-cadeau:klink-sentence-56bde825cba3c2df",
+          "sourceExerciseId": "woord-klink-woord-cadeau:klink-sentence-56bde825cba3c2df",
+          "instruction": "Zeg de zin",
+          "promptText": null,
+          "promptAudio": {
+            "src": "/package-audio/connected/bb0cb5d40468159d847a.wav",
+            "audioId": "klink-opname-bb0cb5d40468159d847a"
+          },
+          "exactAudioPath": false,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "sentence-speak:klink-sentence-56bde825cba3c2df",
+          "context": null,
+          "requiresAudio": true
+        }
+      ],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    },
+    {
+      "sourceId": "SPK-A1-ZHW-10",
+      "word": "kamer",
+      "originalContext": "Doelwoord: 'kamer'. Context: je kijkt naar een kamer die te huur is.",
+      "revised": {
+        "instruction": "Luister. Zeg het woord na.",
+        "steps": [
+          "Luister naar het woord.",
+          "Zeg hetzelfde woord na.",
+          "Luister nog eens. Zeg het woord nog eens."
+        ],
+        "selfCheck": "Heb ik hetzelfde woord gezegd?",
+        "feedback": "Wil je nog oefenen? Luister nog eens en zeg het woord na.",
+        "meaningSupport": "Een ruimte in een huis, bijvoorbeeld om te wonen of te slapen.",
+        "modelResponse": "kamer"
+      },
+      "wordLibrary": [
+        {
+          "id": "klink-woord-kamer",
+          "meaning": "Een ruimte in een woning of ander gebouw.",
+          "group": "Steunwoord ter voorbereiding van een leesdoel",
+          "review": "open",
+          "audioStatus": "review-open",
+          "packageId": "voorbereiding"
+        }
+      ],
+      "existingWordListening": [
+        "/package-audio/taalroute/klink-woord-kamer.wav"
+      ],
+      "modelAudio": {
+        "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+        "liveHttp": 200,
+        "localEqualsLive": true
+      },
+      "liveSpeakingCandidates": [
+        {
+          "word": "kamer",
+          "level": "alfa-b",
+          "mode": "repeat-word",
+          "collection": "route-delen.alfa-b",
+          "exerciseId": "route-delen:group:speak:woord-klink-woord-huiskamer:klink-woord-kamer:repeat-word",
+          "sourceExerciseId": "woord-klink-woord-huiskamer:klink-woord-kamer:repeat-word",
+          "instruction": "Luister en zeg na.",
+          "promptText": "Luister en zeg na.",
+          "promptAudio": {
+            "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+            "audioId": "klink-woord-kamer"
+          },
+          "exactAudioPath": true,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "Kamer voorbereiden met lange a geschreven als één letter en onbeklemtoonde e. Huis is al een ingang, maar controleer ook daarvan het lezen en begrip.",
+          "context": null,
+          "requiresAudio": true
+        },
+        {
+          "word": "kamer",
+          "level": "alfa-b",
+          "mode": "repeat-word",
+          "collection": "voorbereiding.alfa-b",
+          "exerciseId": "voorbereiding:group:speak:woord-klink-woord-kamer:klink-woord-kamer:repeat-word",
+          "sourceExerciseId": "woord-klink-woord-kamer:klink-woord-kamer:repeat-word",
+          "instruction": "Luister en zeg na.",
+          "promptText": "Luister en zeg na.",
+          "promptAudio": {
+            "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+            "audioId": "klink-woord-kamer"
+          },
+          "exactAudioPath": true,
+          "assessment": "participation",
+          "feedback": null,
+          "objective": "Kamer voorbereiden met lange a geschreven als één letter en onbeklemtoonde e. Huis is al een ingang, maar controleer ook daarvan het lezen en begrip.",
+          "context": null,
+          "requiresAudio": true
+        }
+      ],
+      "releaseStatus": "HOLD",
+      "confirmedLiveA1Equivalent": false,
+      "reuseApprovedExistingModelAudio": true
+    }
+  ],
+  "reviewStatus": {
+    "editorialComparison": "COMPLETE",
+    "independentHuman": "OPEN",
+    "actualHumanListening": "OWNER_APPROVED_INDEPENDENT_OPEN",
+    "rightsAndExactVoiceIDs": "OPEN",
+    "specificBookAndLessonPlanLink": "OPEN",
+    "appBuildAndPhysicalMicrophoneTest": "OPEN",
+    "published": false,
+    "ownerContentAndListening": "APPROVED_FOR_EXACT_V1"
+  },
+  "technicalTranscription": {
+    "humanListening": false,
+    "ctc": {
+      "SPK-A1-ZHW-01": "buurman",
+      "SPK-A1-ZHW-02": "brood je",
+      "SPK-A1-ZHW-03": "treinkaartje",
+      "SPK-A1-ZHW-04": "collega",
+      "SPK-A1-ZHW-05": "dokter",
+      "SPK-A1-ZHW-06": "docent",
+      "SPK-A1-ZHW-07": "op lader",
+      "SPK-A1-ZHW-08": "soep",
+      "SPK-A1-ZHW-09": "cadau",
+      "SPK-A1-ZHW-10": "kamer"
+    },
+    "secondMachineResultForCadeau": " Luister en zeg het woord na. Met neem op kun je jezelf terug horen."
+  },
+  "ownerApproval": {
+    "recordedAt": "2026-11-04T21:51:38.996034+00:00",
+    "reviewer": "Nico",
+    "type": "OWNER_CONTENT_AND_LISTENING_APPROVAL",
+    "sourceThreadId": "01a197d3-df65-77d2-95ac-2d6b5ff0f210",
+    "sourceTurnId": "01a1a88a-cfd8-7631-933e-21eaf5735cde",
+    "sourceUserMessageId": "01a1a88a-d046-77e1-956f-8ac4babc0740",
+    "verifiedByReadThread": true,
+    "exactStatement": "De tien nazegoefeningen en de audio zijn goed. Laat Zet Klink-chats online de gelijkwaardige oefeningen hergebruiken en de rest pas na onafhankelijke goedkeuring online zetten. Geen dubbel werk.",
+    "proposalRevision": "nazegvoorstel-20261104-v1",
+    "sourceDocumentId": "1R_7IroJEEaPh2BMSh30LizCdO53JGLmd2z7ud3go9fI",
+    "sourceRevision": "2026-11-02T09:23:18.678Z",
+    "reviewBackupDriveId": "14nFue1fM6Bd68SkOwkL2KEIBZPbiSwSP",
+    "reviewBackupSha256": "69b4467f34c8903895cf03af671c9367095bd72eadd757e822ec818322815898",
+    "reviewJsonSha256": "f9e26258449fd2b87cc6c1c21f397f6b51f0b7dedfe8f9d7f585ed5c043906af",
+    "items": [
+      {
+        "id": "SPK-A1-ZHW-01",
+        "word": "buurman",
+        "audioSha256": "e0371d9610175514ecf041f69803f52be37d0d9b8f0ac4403533c270836fd47f",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-02",
+        "word": "broodje",
+        "audioSha256": "e42366b666158e112c0f665721029c03d5ee248863c3ed86092e77079ddecd0c",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-03",
+        "word": "treinkaartje",
+        "audioSha256": "14edcdbdab6e14cd0e358192bbfa30f6e4af210e78eb48672d985a94e8e599f0",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-04",
+        "word": "collega",
+        "audioSha256": "dca7bfb05f03efbe45b70149303a3b5f96eec41112a80c839b8ffeb21b423c77",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-05",
+        "word": "dokter",
+        "audioSha256": "42a2d5828433bf2c3f7e67a1e80946f26c6318720c549a65174a38ada599dc84",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-06",
+        "word": "docent",
+        "audioSha256": "9af939c406a7601708912481c6566aa8e6c993216b99b596b9e23f7872d3e04a",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-07",
+        "word": "oplader",
+        "audioSha256": "0022f6d9ad5b0fbea1323cd822cf53e812b7cc341ae837466eb9bf3c98f497e2",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-08",
+        "word": "soep",
+        "audioSha256": "b05186f95accce4583331a92a082a72af2850139533c356f88628962e5a7513c",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-09",
+        "word": "cadeau",
+        "audioSha256": "3926929f475c5a6367c84c5e41e8076b42670fed3669fe12503a00636c44d7a8",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      },
+      {
+        "id": "SPK-A1-ZHW-10",
+        "word": "kamer",
+        "audioSha256": "db2e0ed24e9e3da0fcfb46409870865fad13c4473068a4c7eda0132d945e17ff",
+        "ownerContentApproved": true,
+        "ownerListeningApproved": true
+      }
+    ],
+    "independentNT2Approval": false,
+    "independentReviewer": null,
+    "permission": "Reuse only proven equivalent live tasks with existing storage IDs; add remaining tasks only after exact independent approval and normal publication controls.",
+    "publicationPerformed": false
+  },
+  "rawCandidateCrosswalk": [
+    {
+      "rawId": "klink-leesstap-19:klink-woord-soep:repeat-word",
+      "rawPackage": "groep-6",
+      "word": "soep",
+      "live": null,
+      "a1Equivalent": false
+    },
+    {
+      "rawId": "klink-leesstap-20:klink-woord-soep:repeat-word",
+      "rawPackage": "groep-6",
+      "word": "soep",
+      "live": {
+        "word": "soep",
+        "level": "alfa-a",
+        "mode": "repeat-word",
+        "collection": "groep-6.alfa-a",
+        "exerciseId": "groep-6:group:speak:klink-leesstap-20:klink-woord-soep:repeat-word",
+        "sourceExerciseId": "klink-leesstap-20:klink-woord-soep:repeat-word",
+        "instruction": "Luister en zeg na.",
+        "promptText": "Luister en zeg na.",
+        "promptAudio": {
+          "src": "/package-audio/taalroute/klink-woord-soep.wav",
+          "audioId": "klink-woord-soep"
+        },
+        "exactAudioPath": true,
+        "assessment": "participation",
+        "feedback": null,
+        "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+        "context": null,
+        "requiresAudio": true
+      },
+      "a1Equivalent": false
+    },
+    {
+      "rawId": "klink-leesstap-24:klink-woord-soep:repeat-word",
+      "rawPackage": "groep-7",
+      "word": "soep",
+      "live": {
+        "word": "soep",
+        "level": "alfa-a",
+        "mode": "repeat-word",
+        "collection": "groep-7.alfa-a",
+        "exerciseId": "groep-7:group:speak:klink-leesstap-24:klink-woord-soep:repeat-word",
+        "sourceExerciseId": "klink-leesstap-24:klink-woord-soep:repeat-word",
+        "instruction": "Luister en zeg na.",
+        "promptText": "Luister en zeg na.",
+        "promptAudio": {
+          "src": "/package-audio/taalroute/klink-woord-soep.wav",
+          "audioId": "klink-woord-soep"
+        },
+        "exactAudioPath": true,
+        "assessment": "participation",
+        "feedback": null,
+        "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+        "context": null,
+        "requiresAudio": true
+      },
+      "a1Equivalent": false
+    },
+    {
+      "rawId": "woord-klink-woord-cadeau:klink-woord-cadeau:repeat-word",
+      "rawPackage": "groep-10",
+      "word": "cadeau",
+      "live": {
+        "word": "cadeau",
+        "level": "alfa-b",
+        "mode": "repeat-word",
+        "collection": "groep-10.alfa-b",
+        "exerciseId": "groep-10:group:speak:woord-klink-woord-cadeau:klink-woord-cadeau:repeat-word",
+        "sourceExerciseId": "woord-klink-woord-cadeau:klink-woord-cadeau:repeat-word",
+        "instruction": "Luister en zeg na.",
+        "promptText": "Luister en zeg na.",
+        "promptAudio": {
+          "src": "/package-audio/taalroute/klink-woord-cadeau.wav",
+          "audioId": "klink-woord-cadeau"
+        },
+        "exactAudioPath": true,
+        "assessment": "participation",
+        "feedback": null,
+        "objective": "Voorstel voor Alfa B: lezen na voorbereiding van de bijzondere spelling. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+        "context": null,
+        "requiresAudio": true
+      },
+      "a1Equivalent": false
+    },
+    {
+      "rawId": "woord-klink-woord-buurman:klink-woord-buurman:repeat-word",
+      "rawPackage": "route-delen",
+      "word": "buurman",
+      "live": {
+        "word": "buurman",
+        "level": "alfa-b",
+        "mode": "repeat-word",
+        "collection": "route-delen.alfa-b",
+        "exerciseId": "route-delen:group:speak:woord-klink-woord-buurman:klink-woord-buurman:repeat-word",
+        "sourceExerciseId": "woord-klink-woord-buurman:klink-woord-buurman:repeat-word",
+        "instruction": "Luister en zeg na.",
+        "promptText": "Luister en zeg na.",
+        "promptAudio": {
+          "src": "/package-audio/taalroute/klink-woord-buurman.wav",
+          "audioId": "klink-woord-buurman"
+        },
+        "exactAudioPath": true,
+        "assessment": "participation",
+        "feedback": null,
+        "objective": "Buur en man verbinden tot buurman.",
+        "context": null,
+        "requiresAudio": true
+      },
+      "a1Equivalent": false
+    },
+    {
+      "rawId": "woord-klink-woord-huiskamer:klink-woord-kamer:repeat-word",
+      "rawPackage": "route-delen",
+      "word": "kamer",
+      "live": {
+        "word": "kamer",
+        "level": "alfa-b",
+        "mode": "repeat-word",
+        "collection": "route-delen.alfa-b",
+        "exerciseId": "route-delen:group:speak:woord-klink-woord-huiskamer:klink-woord-kamer:repeat-word",
+        "sourceExerciseId": "woord-klink-woord-huiskamer:klink-woord-kamer:repeat-word",
+        "instruction": "Luister en zeg na.",
+        "promptText": "Luister en zeg na.",
+        "promptAudio": {
+          "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+          "audioId": "klink-woord-kamer"
+        },
+        "exactAudioPath": true,
+        "assessment": "participation",
+        "feedback": null,
+        "objective": "Kamer voorbereiden met lange a geschreven als één letter en onbeklemtoonde e. Huis is al een ingang, maar controleer ook daarvan het lezen en begrip.",
+        "context": null,
+        "requiresAudio": true
+      },
+      "a1Equivalent": false
+    },
+    {
+      "rawId": "woord-klink-woord-kamer:klink-woord-kamer:repeat-word",
+      "rawPackage": "voorbereiding",
+      "word": "kamer",
+      "live": {
+        "word": "kamer",
+        "level": "alfa-b",
+        "mode": "repeat-word",
+        "collection": "voorbereiding.alfa-b",
+        "exerciseId": "voorbereiding:group:speak:woord-klink-woord-kamer:klink-woord-kamer:repeat-word",
+        "sourceExerciseId": "woord-klink-woord-kamer:klink-woord-kamer:repeat-word",
+        "instruction": "Luister en zeg na.",
+        "promptText": "Luister en zeg na.",
+        "promptAudio": {
+          "src": "/package-audio/taalroute/klink-woord-kamer.wav",
+          "audioId": "klink-woord-kamer"
+        },
+        "exactAudioPath": true,
+        "assessment": "participation",
+        "feedback": null,
+        "objective": "Kamer voorbereiden met lange a geschreven als één letter en onbeklemtoonde e. Huis is al een ingang, maar controleer ook daarvan het lezen en begrip.",
+        "context": null,
+        "requiresAudio": true
+      },
+      "a1Equivalent": false
+    }
+  ]
+}

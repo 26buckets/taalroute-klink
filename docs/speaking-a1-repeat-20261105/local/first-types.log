@@ -1,0 +1,4 @@
+components/product/package-exercise-browser.tsx(629,142): error TS2322: Type '{ exercise: PackageExercise; onAudio: AudioPlayer; onFinish: (answer: string, correct: boolean, feedback?: string | undefined) => void; onRecordingChange: ((busy: boolean) => void) | undefined; onHelp: () => void; canAnswer: boolean; }' is not assignable to type 'IntrinsicAttributes & SurfaceProps'.
+  Property 'onHelp' does not exist on type 'IntrinsicAttributes & SurfaceProps'.
+components/product/package-exercise-browser.tsx(911,73): error TS2339: Property 'onHelp' does not exist on type 'SurfaceProps'.
+components/product/package-exercise-browser.tsx(911,81): error TS2339: Property 'canAnswer' does not exist on type 'SurfaceProps'.

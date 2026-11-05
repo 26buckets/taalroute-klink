@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {verifySpeakingA1Content,verifySpeakingA1Release} from './check-speaking-a1-repeat-release.mjs';
+const root='docs/speaking-a1-repeat-20261105/';
+const alter=(file,change)=>p=>p===file?Buffer.from(JSON.stringify(change(JSON.parse(readFileSync(p))))):readFileSync(p);
+verifySpeakingA1Content();
+for(const change of [r=>({...r,publicationApproved:false}),r=>({...r,approvedBy:'unknown'}),r=>({...r,baselineSourceCommit:'0'.repeat(40)}),r=>({...r,files:{...r.files,'data/klink-production-index.json':'0'.repeat(64)}})])assert.throws(()=>verifySpeakingA1Content(alter(root+'approval.json',change)));
+for(const file of [root+'review.json',root+'local/browser.json',root+'source-bank.json'])assert.throws(()=>verifySpeakingA1Content(p=>p===file?Buffer.concat([readFileSync(p),Buffer.from('changed')]):readFileSync(p)));
+assert.throws(()=>verifySpeakingA1Release(alter(root+'backup.json',r=>({...r,fullReadback:false}))));
+verifySpeakingA1Release();console.log('PASS release and eight rejected approval/source/evidence/backup mutations');
