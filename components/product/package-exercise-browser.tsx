@@ -68,7 +68,7 @@ import { orderAccepted } from '@/lib/standard-player-contract';
 import { ExtendedPracticeSurface } from './extended-practice-surface';
 import { LearningPathSurface } from './learning-path-surface';
 import { useRouteSettings } from './route-settings';
-import { allPackageWords } from '@/lib/package-content';
+import { allPackageWords, wordImageCaption } from '@/lib/package-content';
 
 type ResultState = 'idle' | 'right' | 'wrong';
 type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };
@@ -633,8 +633,12 @@ function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { 
   const modelClass = `cp-model-content${/\s/.test(asString(text.primary).trim()) ? ' cp-model-sentence' : ''}`;
   const articleId = useId();
   const phrase = wordWithArticle({ id: asString(exercise.wordId), word: asString(text.primary) });
-  const content = <><ExerciseImageView optional image={exerciseImage(exercise)} word={asString(text.primary)} /><strong {...textView}>{asString(text.primary)}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></>;
-  return <section className="cp-task-card">{source && <ExerciseListen label={`Luister naar ${asString(text.primary)}`} onClick={() => onAudio(source)} />}{source ? <button className={modelClass} onClick={() => onAudio(source)} aria-describedby={phrase ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className={modelClass}>{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button data-practice-check className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
+  const image = exerciseImage(exercise);
+  const context = wordImageCaption(asString(exercise.wordId), image?.src);
+  const { view } = useRouteSettings();
+  const caption = view.photo ? context : undefined;
+  const content = <><ExerciseImageView optional image={image && context ? { ...image, altText: context } : image} word={asString(text.primary)} /><strong {...textView} id={caption && !phrase ? articleId : undefined}>{caption ?? asString(text.primary)}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></>;
+  return <section className="cp-task-card">{source && <ExerciseListen label={`Luister naar ${asString(text.primary)}`} onClick={() => onAudio(source)} />}{source ? <button className={modelClass} onClick={() => onAudio(source)} aria-describedby={phrase || (caption && view.text) ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className={modelClass}>{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button data-practice-check className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
 function scrollDemoIntoView(anchor: HTMLElement | null) {

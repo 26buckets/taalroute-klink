@@ -4,6 +4,11 @@ import lexiconWordBuild from '../data/klink-lexicon-wordbuild-20.json' with { ty
 import lexiconRest from '../data/klink-lexicon-wordbuild-rest.json' with { type: 'json' };
 import wordMedia from '../data/klink-media.json' with { type: 'json' };
 
+export function wordImageCaption(wordId: string, imageSrc?: string): string | undefined {
+  const media = (wordMedia as Record<string, { image?: string; imageCaption?: string }>)[wordId];
+  return imageSrc && media?.image === imageSrc ? media.imageCaption : undefined;
+}
+
 export type PackageId = string;
 export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
 export type AudioOptions = { wordSourceKey?: string; signal?: AbortSignal; waitUntilEnd?: boolean; onStarted?: () => void; onProgress?: (seconds: number) => void; playbackRate?: number };
