@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {playMedia,stopMedia} from '../lib/media-player.ts';
 import {fetchWordRecording} from '../lib/word-listening.ts';
 const tick=()=>new Promise(resolve=>setImmediate(resolve));
-test('Packed lesson clips retain exact bytes, playback completion, cancellation and object URL cleanup',async()=>{
+void test('Packed lesson clips retain exact bytes, playback completion, cancellation and object URL cleanup',async()=>{
  const old={Audio:globalThis.Audio,fetch:globalThis.fetch,create:URL.createObjectURL.bind(URL),revoke:URL.revokeObjectURL.bind(URL)};
  let audio,serial=0;const blobs=[],revoked=[];
  globalThis.Audio=class extends EventTarget{dataset={};constructor(){super();audio=this;}play(){this.paused=false;return Promise.resolve();}pause(){this.paused=true;}};

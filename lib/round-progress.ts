@@ -13,7 +13,7 @@ export function parseRoundProgress(raw: string | null, total: number): RoundProg
   const empty: RoundProgress = { version: 1, total, done: [] };
   try {
     const value = JSON.parse(raw ?? 'null');
-    if (value?.version !== 1 || value.total !== total || !Number.isSafeInteger(total) || total < 1 || !Array.isArray(value.done) || value.done.length > total) return empty;
+    if (value?.version !== 1 || !Number.isSafeInteger(value.total) || value.total < 1 || !Number.isSafeInteger(total) || total < 1 || !Array.isArray(value.done) || value.done.length > value.total) return empty;
     if (!value.done.every((id: unknown) => typeof id === 'string' && id.length > 0 && id.length < 512)) return empty;
     return { ...empty, done: [...new Set<string>(value.done)] };
   } catch { return empty; }
@@ -42,7 +42,7 @@ function read(id: string) {
 
 export function roundProgressCount(id: string, total: number, exerciseIds?: string[]) {
   const done = parseRoundProgress(read(id), total).done;
-  return exerciseIds ? done.filter(item => exerciseIds.includes(item)).length : done.length;
+  return exerciseIds ? done.filter(item => exerciseIds.includes(item)).length : Math.min(done.length, total);
 }
 
 // Keep completion separate from the current attempt, so practising again never erases it.

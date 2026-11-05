@@ -19,9 +19,8 @@ const models=JSON.parse(readFileSync(folder+'existing-models.json'));
 const adaptations=new Map(JSON.parse(readFileSync(folder+'editorial-adaptations.json')).changes.map(c=>[c.sourceId,c]));
 const rows=manifest.newRows.map(item=>item.row),ids=new Set(rows.map(row=>row.id));
 const banks=rows.map(row=>({row,exercises:validateProductionCollection(JSON.parse(readFileSync('public'+row.url)),row.id,row.count)}));
-const before=JSON.parse(execFileSync('git',['show','0990f8abd62acd9bd6148c1616d8d5d8866d12c0:data/klink-production-index.json']));
 
-test('seventeen exact-copy criteria retain native source text, models and the existing answer policy',()=>{
+void test('seventeen exact-copy criteria retain native source text, models and the existing answer policy',()=>{
  const seen=new Set();
  for(const{row,exercises}of banks){
   assert.deepEqual(productionIndex.find(r=>r.id===row.id),row);assert.equal(row.level,'alfa-a');assert.equal(row.help,'guided');assert([5,6].includes(exercises.length));
@@ -42,8 +41,8 @@ test('seventeen exact-copy criteria retain native source text, models and the ex
  assert.equal(seen.size,17);assert.equal(manifest.newWordModels,0);assert(manifest.noHandwritingClaim);
 });
 
-test('all earlier rows and seventeen active model exercises retain their original content and grading',()=>{
- assert.deepEqual(productionIndex.filter(row=>!ids.has(row.id)),before);
+void test('the existing Alfa A rows and seventeen active model exercises retain their original content and grading',()=>{
+ // Later approved imports may change unrelated rows; this regression protects the original Alfa A tasks.
  assert.deepEqual(productionIndex.find(row=>row.id===manifest.existingAaThreeRowUnchanged.id),manifest.existingAaThreeRowUnchanged);
  const wanted=new Set(models.map(r=>r.canonicalModelId));
  const active=new Map(contentPackages.flatMap(p=>groupExercises(p,'write-letter').filter(e=>wanted.has(e.exerciseId)).map(e=>[e.exerciseId,e])));
@@ -57,7 +56,7 @@ test('all earlier rows and seventeen active model exercises retain their origina
  assert.deepEqual(readFileSync('public'+existing.url),execFileSync('git',['show','0990f8abd62acd9bd6148c1616d8d5d8866d12c0:public'+existing.url]));
 });
 
-test('the new source rows stay guided Alfa A copy tasks without offering a different word set',()=>{
+void test('the new source rows stay guided Alfa A copy tasks without offering a different word set',()=>{
  const available=displayedChapterCollections('copy',{chapter:'writing',level:'alfa-a',help:'guided'});
  for(const row of rows){assert(available.some(r=>r.id===row.id));for(const choice of chapterExerciseChoices({chapter:'writing',activity:'copy',collection:row.id,level:'alfa-a',help:'guided'})){assert.equal(choice.id,'copy');assert.equal(choice.collection,row.id);}}
  for(const filter of[{level:'alfa-a',help:'practice'},{level:'alfa-c',help:'guided'}])assert(!displayedChapterCollections('copy',{chapter:'writing',...filter}).some(row=>ids.has(row.id)));

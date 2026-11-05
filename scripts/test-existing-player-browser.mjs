@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import { defaultRouteSettings, practiceStages, selectUsageExercises } from '../lib/learner-route.ts';
+import { lessonPackages } from '../lib/package-content.ts';
 import { wordLibraryPageSize } from '../lib/word-library.ts';
 import { learnerListName } from '../lib/learner-copy.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -23,7 +25,7 @@ try {
   assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Start', 'Woorden bekijken', 'Nog een keer']);
   await screenshot('bestaande-home');
   await library();
-  assert.equal(await page.locator('.cp-package-grid > button').count(), packs.length);
+  assert.equal(await page.locator('.cp-package-grid > button').count(), lessonPackages.length);
   for (let i = 0; i < packs.length; i++) {
     const pack = packs[i];
     await page.locator('.cp-package-grid > button').nth(i).click();
@@ -52,7 +54,8 @@ try {
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
-  for (const activity of groupActivities.filter(item => item.id !== 'learning-review' && !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length)) {
+  const usageActivities = practiceStages.find(stage => stage.id === 'use').activities;
+  for (const activity of groupActivities.filter(item => item.id !== 'learning-review' && !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length && (!usageActivities.includes(item.id) || ['later', 'guided'].some(readiness => selectUsageExercises(groupExercises(packs[0], item.id), packs[0], undefined, defaultRouteSettings, readiness).length)))) {
     await openGroupActivity(page, activity.id);
     assert(await page.locator('.cp-exercise-stage > section').isVisible());
     await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click();
@@ -60,11 +63,15 @@ try {
   pass('All eligible group activities render in the existing exercise players');
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
   assert.equal(await page.locator('.cp-global-word-grid article').count(), wordLibraryPageSize);
+  await page.getByRole('searchbox', { name: 'Zoek een woord' }).fill('pak');
+  await page.getByRole('button', { name: 'pak (kleding) bewaren', exact: true }).waitFor();
   for (const meaning of ['pak (kleding)', 'pak (verpakking)']) {
     assert.equal(await page.locator('.cp-global-word-grid strong').filter({ hasText: new RegExp(`^${meaning.replace(/[()]/g, '\\$&')}$`) }).count(), 1);
     await page.getByRole('button', { name: `${meaning} bewaren`, exact: true }).click();
   }
+  await page.getByRole('searchbox', { name: 'Zoek een woord' }).fill('sap');
   await page.getByRole('button', { name: 'sap bewaren', exact: true }).click();
+  await page.getByRole('searchbox', { name: 'Zoek een woord' }).fill('mat');
   await page.getByRole('button', { name: 'mat bewaren', exact: true }).click();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Nog een keer', exact: true }).click();
   assert((await page.locator('.review-word-list').innerText()).includes('mat'));
@@ -101,8 +108,9 @@ try {
     await page.locator('.cp-start-lesson').first().click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
-    await page.locator('.cp-exercise-feedback').scrollIntoViewIfNeeded();
-    assert(await page.locator('.cp-exercise-feedback > button').evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
+    await page.waitForFunction(() => !document.querySelector('.cp-exercise-feedback > button').disabled);
+    await page.locator('.cp-exercise-feedback > button').scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => { const e = document.querySelector('.cp-exercise-feedback > button'), r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); });
     const footer = await page.locator('.cp-exercise-feedback').boundingBox();
     assert(footer.y + footer.height <= (width > 700 ? 900 : 844) + 2);
     await screenshot(`bestaande-speler-${width}`);

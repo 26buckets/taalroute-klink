@@ -1,6 +1,6 @@
 import {readProductionBank} from './read-production-bank.mjs';
 import assert from 'node:assert/strict';
-import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {writeFileSync,mkdirSync} from 'node:fs';
 import {productionIndex} from '../lib/production-practice.ts';
 import {practiceChapters,chapterHash} from '../lib/practice-chapters.ts';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');

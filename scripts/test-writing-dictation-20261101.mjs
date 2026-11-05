@@ -14,7 +14,7 @@ import { recordingForWord } from '../lib/word-listening.ts';
 const data = JSON.parse(readFileSync('data/klink-writing-dictation-20261101.json'));
 const originals = new Map(contentPackages.flatMap(pack => groupExercises(pack,'dictation').map(e => [e.exerciseId,e])));
 const sourceIds = [];
-test('100 source positions retain the answer contract: 54 references, 46 new canonical questions', () => {
+void test('100 source positions retain the answer contract: 54 references, 46 new canonical questions', () => {
   const snapshot = JSON.stringify([...originals]);
   let references=0,newQuestions=0;
   for (const round of writingDictationRounds) {
@@ -47,7 +47,7 @@ test('100 source positions retain the answer contract: 54 references, 46 new can
   // Undo local test mutation so later navigation tests inspect the original accepted answers.
   for(const round of writingDictationRounds)for(const e of round.exercises)e.fields[0].acceptedAnswers.pop();
 });
-test('fifteen short stable rounds open through both writing and spelling without changing old collections', () => {
+void test('fifteen short stable rounds open through both writing and spelling without changing old collections', () => {
   for(const chapter of ['writing','spelling']) {
     const rows=displayedChapterCollections('dictation',{chapter,level:'alfa-c',help:'practice'}).filter(row=>row.id.startsWith('ksw-ac-ht-'));
     assert.equal(rows.length,15);assert.equal(rows.reduce((n,row)=>n+row.exercises.length,0),100);
@@ -67,13 +67,13 @@ test('fifteen short stable rounds open through both writing and spelling without
     assert.equal(displayedChapterCollections('dictation',{chapter,level:'alfa-c',help:'guided'}).some(row=>row.id.startsWith('ksw-ac-ht-')),false);
   }
 });
-test('six meaning cues identify the sense without displaying the spelling answer', () => {
+void test('six meaning cues identify the sense without displaying the spelling answer', () => {
   const cues=writingDictationRounds.flatMap(r=>r.positions).filter(p=>p.meaningCue);
   assert.deepEqual(cues.map(p=>p.id),['007','043','047','082','088','100'].map(id=>'KSW-AC-HT-'+id));
   for(const p of cues){assert(!p.meaningCue.toLocaleLowerCase('nl-NL').split(/\W+/).includes(p.target));assert(p.instructionAudio.includes(p.id));}
   assert.equal(data.rounds.length,15);
 });
-test('every full word in the new tasks, feedback and Help has an individual recording',()=>{
+void test('every full word in the new tasks, feedback and Help has an individual recording',()=>{
   const words=new Set(),missing=[];
   for(const round of writingDictationRounds)for(const e of round.exercises)for(const field of ['title','meaningCue','helpWord','feedback','correctFeedback','meaning'])for(const part of wordAudioParts(e[field]||'')){
     if(!part.word||(field==='meaning'&&e.writingHintUnits.includes(part.start)))continue;

@@ -126,12 +126,12 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     openView('package', position.packageId);
   }
 
-  function recordAttempt(attempt: PracticeAttempt) {
+  async function recordAttempt(attempt: PracticeAttempt) {
     if (attempt.reviewEligible) {
       try { localStorage.setItem(learningReviewKey, JSON.stringify(updateLearningReview(parseLearningReview(localStorage.getItem(learningReviewKey)), attempt))); } catch { /* Optional on-device scheduling never prevents practice. */ }
     }
     try {
-      preserveAvailableCopyAnswers(window.localStorage);
+      await preserveAvailableCopyAnswers(window.localStorage);
       const raw: unknown = JSON.parse(window.localStorage.getItem('klink.taalroute.attempts.v1') ?? '[]');
       const previous = Array.isArray(raw) ? raw.slice(-199) : [];
       window.localStorage.setItem('klink.taalroute.attempts.v1', JSON.stringify([...previous, attempt]));
@@ -165,11 +165,11 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } setSlowAudio(false); onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
-        {(view === 'home' || view === 'chapters') && <LearnerHome key={view} onPackages={() => openView('packages')} onSounds={() => openView('sounds')} onBack={() => openView('home')} progress={progress} onLesson={openLesson} onAttempt={recordAttempt} />}
+        {(view === 'home' || view === 'chapters') && <LearnerHome key={view} onPackages={() => openView('packages')} onSounds={() => openView('sounds')} onBack={() => openView('home')} progress={progress} onLesson={openLesson} onAttempt={attempt => { void recordAttempt(attempt); }} />}
         {view === 'packages' && <PackageLibrary onBack={() => openView('home')} onOpen={openPackage} />}
-        {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={recordAttempt} />}
+        {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={attempt => { void recordAttempt(attempt); }} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
-        {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
+        {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={attempt => { void recordAttempt(attempt); }} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'alfa-c-teacher' && <AlfaCTeacherPractice key={teacherGroup} group={teacherGroup} />}
         {view === 'sounds' && <SoundReference onBack={() => openChapter('sounds')} onLesson={openLesson} />}
       </main>

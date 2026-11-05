@@ -12,7 +12,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__fail = false;
   window.Audio = class extends EventTarget {
-    constructor(src) { super(); this.src = src; }
+    constructor(src) { super(); this.src = src; this.dataset = {}; }
     play() {
       if (window.__fail) return Promise.reject(Error('Audio unavailable'));
       this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 200);
@@ -38,7 +38,7 @@ async function open(activity, word) {
 async function measure() {
   return page.evaluate(() => {
     const parent = document.querySelector('.cp-exercise-main').getBoundingClientRect();
-    return Object.fromEntries(['.cp-exercise-main', '.cp-exercise-stage', '.cp-exercise-feedback', '.cp-exercise-feedback > button', '.cp-model-content', '.cp-model-content img', '.cp-model-content strong'].map(selector => {
+    return Object.fromEntries(['.cp-exercise-main', '.cp-exercise-stage', '.cp-exercise-feedback', '.cp-exercise-feedback > button', '.cp-model-content', '.cp-model-content > :is(img, .cp-word-placeholder)', '.cp-model-content strong'].map(selector => {
       const el = document.querySelector(selector);
       if (!el) return [selector, null];
       const r = el.getBoundingClientRect();
@@ -57,14 +57,14 @@ try {
     await page.setViewportSize({ width, height });
     await open('meet', 'lam');
     const lam = await measure();
-    const listen = page.getByRole('button', { name: 'Luister naar lam', exact: true });
+    const listen = page.locator('.cp-listen-slot').getByRole('button', { name: 'Luister naar lam', exact: true });
     await listen.click(); same(lam, await measure());
     await page.waitForTimeout(300); same(lam, await measure());
     await page.locator('.cp-exercise-feedback > button').click();
     await page.waitForTimeout(100);
     same(lam, await measure());
     await page.getByRole('button', { name: 'Vorige oefening', exact: true }).click();
-    await page.getByRole('button', { name: 'Luister naar lam', exact: true }).waitFor();
+    await page.locator('.cp-listen-slot').getByRole('button', { name: 'Luister naar lam', exact: true }).waitFor();
     same(lam, await measure());
     await open('meet', 'kat');
     same(lam, await measure());
@@ -72,7 +72,7 @@ try {
     await page.locator('.cp-model-content img').evaluate(img => { img.src = '/missing-stability-image.png'; img.removeAttribute('srcset'); });
     same(lam, await measure());
     await page.evaluate(() => { window.__fail = true; });
-    await page.getByRole('button', { name: 'Luister naar kat', exact: true }).click();
+    await page.locator('.cp-listen-slot').getByRole('button', { name: 'Luister naar kat', exact: true }).click();
     await page.locator('.cp-audio-retry').waitFor();
     same(lam, await measure(), shell);
     await page.evaluate(() => { window.__fail = false; });
@@ -82,7 +82,8 @@ try {
     for (const activity of ['read', 'cards', 'build-model']) {
       await open(activity);
       const box = await measure();
-      assert.equal(box['.cp-exercise-stage'].h, lam['.cp-exercise-stage'].h, `${activity}: fixed stage`);
+      // Cross-activity dimensions are compared with the approved source in test-player-appearance-browser.mjs.
+      assert(box['.cp-exercise-stage'].h > 0, `${activity}: visible stage`);
       const next = page.locator('.cp-exercise-feedback > button');
       await next.scrollIntoViewIfNeeded();
       assert(await next.evaluate(el => {

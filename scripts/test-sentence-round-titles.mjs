@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { learnerCollectionLabel } from '../lib/learner-copy.ts';
 import { chapterCollections } from '../lib/practice-chapters.ts';
 const review = JSON.parse(readFileSync('docs/sentence-round-titles-20261102/title-review.json'));
-test('Every listening and reading sentence round has a short title from its own source content', () => {
+void test('Every listening and reading sentence round has a short title from its own source content', () => {
   const rounds = chapterCollections('sentences').filter(c => c.title.startsWith('Zinnenronde'));
   assert.equal(rounds.length, 20); assert.deepEqual(review.map(r => r.id), rounds.map(r => r.id));
   for (const level of ['a1', 'a2']) {
