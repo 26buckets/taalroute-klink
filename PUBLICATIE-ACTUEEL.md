@@ -1,3 +1,15 @@
+## Actuele publicatie — aanvullende klikranden inclusief Klink+docent — 5 november 2026
+
+Livebron `60c12280847ee54725df9830f1666a7ebfdcfa58`, Worker `9dde3e87-e714-4e8b-bada-63242a54f3fd` (100%). Op expliciete opdracht via schone canonieke main en `npm run deploy`, vanaf bevestigde livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49` met de 50 dictees. Alleen drie runtimebestanden veranderen: gerichte pointerfocus bij docent-/deel-/uitlegvensters, met behoud van toetsenbordfocus inclusief terugkeer uit de uitlegvideo. De bestaande audiofeedback blijft intact; Help, appel en peer, 1.809 banken, inhoud, audio, opslag en overige vormgeving behouden.
+
+Normale poort/build, types, lint, 49 curriculumproeven en 52 negatieve vrijgaveproeven geslaagd. Live: 64 venster-, 8 Help-, 6 opslag- en 12 schrijfproeven; 8 pixelgelijke voor/na-schermparen, 2 aanraak- en 2 echte audiostromen. Alle 8.134 media exact; 81 API-bestanden exact inclusief HEAD/bereik; 50 dictee-opnamen exact met Taalroute-metadata en volledige decode. De laadtijdafhankelijkheid van één iframeproef is in het bewijs uitgelegd, zonder productwijziging.
+
+De eerste uitrolpoging met één extra technisch bestand is door de gratis limiet afgewezen. Door de identieke focusfunctie in het bestaande MotionFeedback-bestand onder te brengen telt de succesvolle uitrol 22 nieuwe + 19.978 behouden = 20.000 assets. Geen betaalde upgrade, workflows of configuratieomweg.
+
+Bronakkoord en lokaal bewijs: `docs/focus-audit-all-20261105/publication-final/`. Livebewijs en gecontroleerde Drive-herstelkopie: `docs/focus-audit-all-20261105/postflight/RESULTAAT.md` en `backup.json`. Geen fysieke telefoon- of schermlezerclaim. Deze bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — vijftig dictees — 5 november 2026
 
 Livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49`, Worker `279e2254-a1d4-446e-93a0-36962ce2fd64`. Op Nico’s definitieve expliciete akkoord via schone canonieke main en `npm run deploy`, vanaf de actuele goedgekeurde livebron `43c05c9d4c40adb5373d564e6131d5dbdd90d546`. Alleen de twee inhoudsregisters veranderen de app; nieuwste Help-bediening, uiterlijk, logo, alle eerdere inhoud, media en voortgang behouden.
