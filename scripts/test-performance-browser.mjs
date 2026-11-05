@@ -7,8 +7,8 @@ for(const [engine,type] of Object.entries({chromium,webkit})){
  const b=await type.launch();try{for(const width of [1280,390]){
   for(const target of ['learner','teacher/plus']){
    const c=await b.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),p=await c.newPage();p.on('pageerror',e=>errors.push(e.message));let release;const held=new Promise(r=>release=r);let requested=false;
-   await p.route(target==='learner'?'**/*learner-app*.js':'**/*teacher-classroom*.js',async route=>{requested=true;await held;await route.continue()});
-   const requestSeen=p.waitForRequest(r=>new RegExp(target==='learner'?'learner-app.*\\.js':'teacher-classroom.*\\.js').test(r.url()));
+   await p.route(target==='learner'?'**/*route-settings*.js':'**/*teacher-classroom*.js',async route=>{requested=true;await held;await route.continue()});
+   const requestSeen=p.waitForRequest(r=>new RegExp(target==='learner'?'route-settings.*\\.js':'teacher-classroom.*\\.js').test(r.url()));
    await p.goto(base+'/#'+target,{waitUntil:'domcontentloaded'});
    await requestSeen;
    await p.locator('.klink-opening-loader').waitFor();await p.waitForTimeout(300);
