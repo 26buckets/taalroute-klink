@@ -35,6 +35,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           assert.equal(await page.locator('[data-exercise-id]').count(), 0);
           release();
           await page.locator('[data-exercise-id]').first().waitFor();
+          assert(!requests.some(url => /\/learner-rounds-extra[.-]/.test(url)), 'A regular exercise must not fetch Alfa C or package/mixed players');
           const id = await page.locator('[data-exercise-id]').first().getAttribute('data-exercise-id');
           const route = page.url();
           await page.reload();
@@ -69,6 +70,30 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         rows.push({ engine, width, failedFile: width === 1280 ? 'javascript' : 'stylesheet', failedDownloadVisible: true, repeatedFailureSafe: true, explicitRetryRecovers: true, storedAnswersPreserved: true });
       } finally { await recovery.close(); }
 
+      const extras = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
+      try {
+        const page = await extras.newPage();
+        page.on('pageerror', error => errors.push(error.message));
+        await page.goto(base + '/#learner');
+        await page.locator('.cp-home').waitFor();
+        await page.evaluate(() => localStorage.setItem('deferred-extra-preservation', 'saved answers'));
+        const failedFile = width === 1280 ? /\/learner-rounds-extra-[^/]+\.js$/ : /\/learner-rounds-extra\.[^/]+\.css$/;
+        await page.route(failedFile, route => route.abort());
+        await page.evaluate(() => { location.hash = '#learner/packages'; });
+        await page.getByRole('button', { name: 'Opnieuw openen', exact: true }).waitFor();
+        await page.getByRole('button', { name: 'Opnieuw openen', exact: true }).click();
+        await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent === 'Opnieuw openen' && !button.disabled));
+        await page.unroute(failedFile);
+        await page.getByRole('button', { name: 'Opnieuw openen', exact: true }).click();
+        await page.locator('.cp-package-grid > button').first().waitFor();
+        assert.equal(await page.evaluate(() => localStorage.getItem('deferred-extra-preservation')), 'saved answers');
+        await page.locator('.cp-package-grid > button').first().click();
+        await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
+        await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
+        await page.locator('.is-mixed-round, .cp-mixed-complete').waitFor();
+        rows.push({ engine, width, extraPlayerRetry: true, packageAndMixedOpen: true, storedAnswersPreserved: true });
+      } finally { await extras.close(); }
+
       const teacher = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
       try {
         const page = await teacher.newPage(), requests = [];
@@ -85,6 +110,6 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     }
   } finally { await browser.close(); writeFileSync(out + '/checks.json', JSON.stringify({ rows, errors }, null, 2) + '\n'); }
 }
-assert.equal(rows.length, 12);
+assert.equal(rows.length, 16);
 assert.deepEqual(errors, []);
-console.log('PASS twelve cold/held/failed/reloaded player and isolated teacher flows across Chromium/WebKit and desktop/mobile');
+console.log('PASS sixteen regular/extra player recovery and isolated teacher flows across Chromium/WebKit and desktop/mobile');
