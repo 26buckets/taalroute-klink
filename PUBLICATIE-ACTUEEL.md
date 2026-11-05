@@ -1,3 +1,13 @@
+## Actuele publicatie — klikranden gericht aangepast — 5 november 2026
+
+Livebron `8f310654410c683c772ce889b2164441b8a2a8c0`, Worker `fd9181b8-18bf-4d5b-a690-227f9f180968`. Op Nico’s expliciete opdracht via schone canonieke main en `npm run deploy`, vanaf bevestigde livebron `487be7bb68af6d883b479d00096a79d12ac42791`. Automatisch gefocuste titels en aanwijzerbediening krijgen geen ongewenste standaardrand; toetsenbordfocus blijft zichtbaar. Alleen twee CSS-bestanden veranderen de app. Inhoud, audio, voortgang en de rest van het uiterlijk behouden.
+
+Gewone publicatiepoort/opbouw, types, lint, 49 curriculumproeven en 32 negatieve vrijgaveproeven geslaagd. Live 8 focus- en 4 kaartbedieningsproeven, 6 opslag- en 12 schrijfproeven; 8.134 media exact, 401 woordopnamekoppelingen met metadata/decode; vier banken exact en zes ingetrokken banken 404. Acht werkelijke voor/na-schermparen: gelijke tekst/geometrie; zeven zonder overige pixelverschillen, één met negen rasterpixels langs de ongewijzigde Start-knoprand. Ruwe diagnostiek en beperking bewaard. 21 geüpload + 19.979 behouden = 20.000 assets; geen workflow of budgetwijziging.
+
+Bron, akkoord, volledige controles en herstel: `docs/pointer-focus-20261105/`. Eindbewijs en gecontroleerde Drive-back-up: `postflight/RESULTAAT.md` en `postflight/backup.json`. Geen fysieke telefoon- of menselijke luisterclaim. Deze bewijsopvolger bevat uitsluitend documentatie; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — opslag en oefenspeler hersteld — 5 november 2026
 
 Livebron `487be7bb68af6d883b479d00096a79d12ac42791`, Worker `b3e6b0f6-c83c-4ab9-b7fa-92bf5f3f0b49`. Op Nico’s expliciete publicatieopdracht via schone canonieke main en `npm run deploy`, vanaf bevestigde livebron `93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402`. Schrijfgeschiedenis en rondevoortgang hersteld; opslag- en schermgedrag gericht uit de speler gehaald. Werkblad-Klaar blijft bereikbaar. Tien bestaande WAV-bestanden verliesloos voorzien van Taalroute-merkvelden; oorspronkelijke geluidsdata exact behouden. Geen nieuwe inhoud, media, databasewijziging of vormgeving.
