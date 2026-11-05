@@ -36,12 +36,16 @@ export default defineConfig(async () => {
   return {
     // Keep the initial shell together to leave room for prepared pages within the asset limit.
     environments: { client: { build: { rolldownOptions: { output: {
-      codeSplitting: { groups: [{
+      codeSplitting: { groups: [
+        { name: 'practice-source-bank', test: /data\/klink-(?:imported-practice|word-use-self)\.json$/, includeDependenciesRecursively: false },
+        { name: 'practice-word-bank', test: /(?:data\/klink-(?:lexicon-wordbuild-rest|lexicon-wordbuild-20|curriculum|media)\.json|lib\/klink-curriculum\.ts)$/, includeDependenciesRecursively: false },
+        {
         name: 'shared-ui',
-        test: /(?:node_modules\/(?:lucide-react\/|@unpic\/|unpic\/)|node_modules\/vinext\/dist\/(?:shims\/(?:script|link|image|layout-segment-context)|client\/pages-router-link-navigation)\.js$|app\/page\.tsx$|components\/product\/(?:manual-legacy-link|motion-feedback|manual-navigation|classroom-boundary|word-listening|taalroute-header|entry-design|compact-image|word-placeholder|klink-opening-loader)\.tsx$|components\/product\/(?:teacher-module-recovery|load-practice-workspace)\.ts$|lib\/(?:classroom-visibility|image-word-listening|compact-images)\.ts$|data\/klink-(?:image-word-listening|compact-images-20261031)\.json$)/,
+        test: /(?:node_modules\/(?:lucide-react\/|@unpic\/|unpic\/)|node_modules\/vinext\/dist\/(?:shims\/(?:script|link|image|layout-segment-context)|client\/pages-router-link-navigation)\.js$|app\/page\.tsx$|components\/product\/(?:manual-legacy-link|motion-feedback|manual-navigation|classroom-boundary|word-listening|taalroute-header|entry-design|compact-image|word-placeholder|klink-opening-loader)\.tsx$|components\/product\/(?:teacher-module-recovery|load-practice-workspace)\.ts$|lib\/(?:classroom-visibility|image-word-listening|compact-images|audio-policy|audio-repairs|word-listening-text|word-listening|media-player)\.ts$|data\/klink-(?:image-word-listening|compact-images-20261031|production-instructions|word-use-audio|audio-policy|word-audio-repairs|word-listening)\.json$)/,
         includeDependenciesRecursively: false,
       }] },
     } } } } },
+    json: { stringify: true, namedExports: false },
     css: { postcss: { plugins: [tailwindcss()] } },
     server: { watch: {
       ignored: ['**/outputs/**', '**/docs/**'],
