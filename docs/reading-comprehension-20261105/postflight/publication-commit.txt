@@ -1,0 +1,81 @@
+commit 93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402
+Author:     Nico Knoester <nico@26buckets.com>
+AuthorDate: Thu Nov 5 02:18:16 2026 +0100
+Commit:     Nico Knoester <nico@26buckets.com>
+CommitDate: Thu Nov 5 02:18:16 2026 +0100
+
+    feat: add twenty source-bound A1 A2 reading comprehension tasks
+
+ data/klink-grammar-aa-assets.json                  |    12 +
+ data/klink-production-index.json                   |    20 +
+ docs/reading-comprehension-20261105/a1-bank.json   |   625 +
+ docs/reading-comprehension-20261105/a2-bank.json   |   625 +
+ docs/reading-comprehension-20261105/approval.json  |    53 +
+ docs/reading-comprehension-20261105/backup.json    |    42 +
+ .../baseline-live-release.json                     |    12 +
+ .../local/a1-chromium-1280.png                     |   Bin 0 -> 65250 bytes
+ .../local/a1-chromium-390.png                      |   Bin 0 -> 47650 bytes
+ .../local/a1-webkit-1280.png                       |   Bin 0 -> 91817 bytes
+ .../local/a1-webkit-390.png                        |   Bin 0 -> 59122 bytes
+ .../local/a2-chromium-1280.png                     |   Bin 0 -> 82023 bytes
+ .../local/a2-chromium-390.png                      |   Bin 0 -> 63618 bytes
+ .../local/a2-webkit-1280.png                       |   Bin 0 -> 110993 bytes
+ .../local/a2-webkit-390.png                        |   Bin 0 -> 81665 bytes
+ .../local/appearance-1280-dark-after.png           |   Bin 0 -> 51397 bytes
+ .../local/appearance-1280-dark-before.png          |   Bin 0 -> 51406 bytes
+ .../local/appearance-1280-light-after.png          |   Bin 0 -> 51361 bytes
+ .../local/appearance-1280-light-before.png         |   Bin 0 -> 51367 bytes
+ .../local/appearance-390-dark-after.png            |   Bin 0 -> 41034 bytes
+ .../local/appearance-390-dark-before.png           |   Bin 0 -> 41034 bytes
+ .../local/appearance-390-light-after.png           |   Bin 0 -> 40937 bytes
+ .../local/appearance-390-light-before.png          |   Bin 0 -> 40937 bytes
+ .../local/appearance-initial.json                  |    22 +
+ .../local/appearance.json                          |   262 +
+ .../local/banks-chapters-old-api-count.log         |    35 +
+ .../local/banks-chapters-old-count.log             |    35 +
+ .../local/banks-chapters.log                       |    14 +
+ .../local/browser.json                             |  1027 +
+ .../local/browser.log                              |     1 +
+ .../reading-comprehension-20261105/local/build.log |   241 +
+ .../local/built-preview-limitation.json            |     6 +
+ .../local/dryrun.log                               |   234 +
+ .../local/lint-final-additions.log                 |     0
+ .../local/lint-final.log                           |     0
+ .../local/lint-initial.log                         |     5 +
+ docs/reading-comprehension-20261105/local/lint.log |     0
+ .../local/media-initial-copyright-assumption.log   |    14 +
+ .../local/media.json                               |  7052 ++
+ .../reading-comprehension-20261105/local/media.log |     1 +
+ .../local/offered-banks.json                       |    59 +
+ .../local/offered-build-assets.json                | 80027 +++++++++++++++++++
+ .../preservation-first-server-unavailable.log      |    48 +
+ .../local/preservation-initial-raster.log          |    18 +
+ .../local/preservation.log                         |     1 +
+ .../reading-comprehension-20261105/local/types.log |     0
+ docs/reading-comprehension-20261105/local/unit.log |    10 +
+ .../local/word-coverage.json                       |  1726 +
+ docs/reading-comprehension-20261105/manifest.json  |   213 +
+ .../publication-request.json                       |    36 +
+ .../check-speaking-a1-repeat-release.mjs.backup    |    34 +
+ .../restore/klink-grammar-aa-assets.json.backup    |   422 +
+ .../restore/klink-production-index.json.backup     | 18267 +++++
+ .../restore/test-practice-chapters.mjs.backup      |   115 +
+ .../restore/test-production-bank-reader.mjs.backup |    15 +
+ .../sources/a1-source.docx                         |   Bin 0 -> 19444 bytes
+ .../sources/a1-source.json                         |     6 +
+ .../sources/a2-source.docx                         |   Bin 0 -> 24038 bytes
+ .../sources/a2-source.json                         |     6 +
+ .../sources/overlap.json                           |   588 +
+ .../sources/raw-source-check.json                  |    14 +
+ .../sources/selected.json                          |   422 +
+ .../verification.json                              |    20 +
+ ...heck-reading-comprehension-release-20261105.mjs |    34 +
+ scripts/check-speaking-a1-repeat-release.mjs       |     8 +-
+ scripts/test-practice-chapters.mjs                 |     2 +-
+ scripts/test-production-bank-reader.mjs            |     6 +-
+ scripts/test-reading-comprehension-20261105.mjs    |    39 +
+ ...test-reading-comprehension-browser-20261105.mjs |    36 +
+ .../test-reading-comprehension-media-20261105.py   |    50 +
+ ...reading-comprehension-preservation-20261105.mjs |    33 +
+ ...test-reading-comprehension-release-20261105.mjs |    10 +
+ 72 files changed, 112596 insertions(+), 7 deletions(-)
