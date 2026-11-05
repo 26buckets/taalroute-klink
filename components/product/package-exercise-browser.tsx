@@ -797,6 +797,23 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
   const fields = asArray<TextField>(exercise.fields);
   const writingId = writingAnswerSourceId(exercise);
   const { value, ready: writingReady, error: writingError, change } = useWritingAnswer(writingId);
+  const answerInput = useRef<HTMLInputElement>(null);
+  const [completedListens, setCompletedListens] = useState(0);
+  const hearAndType = exercise.requiresAudio && ['word-dictation', 'sentence-dictation'].includes(exercise.mode);
+  useEffect(() => {
+    const input = answerInput.current;
+    if (!hearAndType || !canAnswer || !writingReady || answeredCorrectly || !input || input.disabled || !input.getClientRects().length) return;
+    const scope = input.closest('[data-practice-item], [data-exercise-id]');
+    const active = document.activeElement;
+    // Keep a learner's deliberate move to Help, a dialog or another question.
+    if (active !== document.body && active !== input && active !== scope && !(scope?.contains(active) && active?.matches('[data-practice-listen], [data-practice-check], .cp-exercise-info-heading, .cp-audio-retry button'))) return;
+    input.focus({ preventScroll: true });
+  }, [hearAndType, canAnswer, writingReady, answeredCorrectly, completedListens]);
+  const listenForAnswer: AudioPlayer = async (source, options) => {
+    const played = await onAudio(source, options);
+    if (played !== false && source === exercise.prompt?.audio?.src) setCompletedListens(count => count + 1);
+    return played !== false;
+  };
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
   async function submit() {
     if (!canAnswer || !writingReady || !value.trim()) return;
@@ -810,7 +827,7 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
     onFinish(value, correct, feedback);
     if (reveal) onHelp();
   }
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { void change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={hearAndType ? listenForAnswer : onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input ref={answerInput} disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { void change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {
