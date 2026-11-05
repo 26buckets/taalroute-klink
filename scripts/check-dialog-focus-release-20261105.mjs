@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {verifyHearTypeFocusRelease,readBeforeHearTypeFocus} from './check-hear-type-focus-release-20261105.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -9,6 +10,7 @@ const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const paths = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 export function verifyDialogFocusContent(read = readFileSync) {
+  const successor=verifyHearTypeFocusRelease(read),currentRead=read;read=file=>readBeforeHearTypeFocus(file,successor,currentRead);
   const json = path => JSON.parse(read(path));
   const release = json(folder+'approval.json'), request = json(folder+'owner-request.json');
   assert.equal(request.approvedBy, 'Nico'); assert.equal(request.publicationApproved, true);
@@ -19,7 +21,7 @@ export function verifyDialogFocusContent(read = readFileSync) {
   git('merge-base','--is-ancestor',release.liveSourceCommit,release.baselineSourceCommit);
   git('merge-base','--is-ancestor',release.baselineSourceCommit,release.checkedCandidateCommit);
   git('merge-base','--is-ancestor',release.checkedCandidateCommit,'HEAD');
-  const changed = [...new Set([...paths(git('diff','--name-only',release.baselineSourceCommit,'--',...roots)),...paths(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a<b?-1:a>b?1:0);
+  const changed = paths(git('diff','--name-only',release.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)).sort((a,b)=>a<b?-1:a>b?1:0);
   assert.deepEqual(changed, release.changedFiles);
   assert.deepEqual(Object.keys(release.files).sort((a,b)=>a<b?-1:a>b?1:0), changed);
   assert.deepEqual(changed, [...runtime,'VORMGEVING-VASTGEZET.md','scripts/check-dictation-50-release-20261105.mjs','scripts/check-dialog-focus-release-20261105.mjs','scripts/test-dialog-focus-release-20261105.mjs'].sort((a,b)=>a<b?-1:a>b?1:0));
@@ -41,7 +43,7 @@ export function verifyDialogFocusContent(read = readFileSync) {
   const preservation = json(folder+'preservation.json');
   assert.deepEqual(preservation.runtimeChangedFiles,runtime); assert.deepEqual(preservation.githubWorkflowFiles,[]);
   assert(preservation.contentMediaStorageUnchanged && preservation.latestHelpRetained);
-  return release;
+  return {...release,successor};
 }
 export function verifyDialogFocusRelease(read = readFileSync) {
   const release = verifyDialogFocusContent(read), backup = JSON.parse(read(folder+'backup.json'));
@@ -50,5 +52,5 @@ export function verifyDialogFocusRelease(read = readFileSync) {
   return release;
 }
 export function readBeforeDialogFocus(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : read(file);
+  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : readBeforeHearTypeFocus(file,release.successor,read);
 }
