@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/postcss';
 import vinext from 'vinext';
 import { defineConfig } from 'vite';
 import { staticAssetsAdapter } from '@vinext/cloudflare/cache/static-assets-adapter';
+import { compactLexiconPlugin } from './scripts/compact-lexicon-module.mjs';
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
@@ -47,6 +48,7 @@ export default defineConfig(async () => {
       ...(isCodexSeatbeltSandbox ? { useFsEvents: false, usePolling: true } : {}),
     } },
     plugins: [
+      compactLexiconPlugin(),
       vinext({ prerender: true, cache: { cdn: staticAssetsAdapter() } }),
       cloudflare({
         viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] },
