@@ -148,7 +148,7 @@
 .cp-collection-meta { display: flex; flex-wrap: wrap; column-gap: 4px; align-content: start; margin-top: 6px; font-size: 14px; }
 .cp-collection-meta small { display: inline; margin-top: 0; }
 .cp-chapter-more { margin-top: 20px; }
-.learner-app .cp-chapter-collection:focus { outline: 3px solid var(--focus); outline-offset: 3px; }
+.learner-app .cp-chapter-collection:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .cp-menu-location { margin: 0 0 6px; color: var(--muted); font-size: 16px; font-weight: 400; }
 .cp-menu-guide { padding: 20px; margin-bottom: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
 .cp-menu-guide h2 { margin: 0 0 12px; font-weight: 500; }

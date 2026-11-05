@@ -40,6 +40,9 @@ button, input { font: inherit; }
 button { color: inherit; }
 button:not(:disabled) { cursor: pointer; }
 button { transition: color .12s ease, background-color .12s ease, border-color .12s ease, transform .12s ease; }
+/* Programmatic heading focus still announces the new task without a browser ring. */
+:is(h1, h2, h3, h4, h5, h6)[tabindex="-1"]:focus { outline: none; }
+:focus:not(:focus-visible) { outline: none; }
 button:focus-visible, input:focus-visible, audio:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 svg { width: 18px; height: 18px; stroke-width: 2; }
 h1, h2, h3, h4 { font-family: var(--heading); }
