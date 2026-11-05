@@ -1,4 +1,5 @@
 'use client';
+import { LearnerModuleBoundary } from './learner-module-boundary';
 import { WordPlaceholder } from './word-placeholder';
 import { AlfaCTeacherPractice } from './alfa-c-docent';
 import { legacyAlfaCHash } from '@/lib/alfa-c-navigation';
@@ -46,12 +47,11 @@ import {
   WholeWord,
 } from 'lucide-react';
 import Image from './compact-image';
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
+import { lazy, useEffect, useMemo, useState } from 'react';
 
-const PackageLibrary = lazy(() => import('./package-experience').then(({ PackageLibrary }) => ({ default: PackageLibrary })));
-const PackagePlayer = lazy(() => import('./package-experience').then(({ PackagePlayer }) => ({ default: PackagePlayer })));
-const PackageMixedPractice = lazy(() => import('./package-mixed-practice').then(({ PackageMixedPractice }) => ({ default: PackageMixedPractice })));
-const practiceLoading = <output className="honest-empty">De oefening wordt geladen…</output>;
+const PackageLibrary = lazy(() => import('./learner-rounds').then(({ PackageLibrary }) => ({ default: PackageLibrary })));
+const PackagePlayer = lazy(() => import('./learner-rounds').then(({ PackagePlayer }) => ({ default: PackagePlayer })));
+const PackageMixedPractice = lazy(() => import('./learner-rounds').then(({ PackageMixedPractice }) => ({ default: PackageMixedPractice })));
 
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds' | 'alfa-c-teacher';
 
@@ -167,7 +167,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <button className="secondary-button cp-nav-toggle" type="button" onClick={toggleNavigation} aria-expanded={!navCollapsed} aria-controls="klink-learner-navigation" aria-label={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'} title={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'}>{navCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}</button>
         <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } setSlowAudio(false); onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
-      <main className="learner-main"><Suspense fallback={practiceLoading}>
+      <main className="learner-main"><LearnerModuleBoundary key={view} onBack={() => openView('home')}>
         {(view === 'home' || view === 'chapters') && <LearnerHome key={view} onPackages={() => openView('packages')} onSounds={() => openView('sounds')} onBack={() => openView('home')} progress={progress} onLesson={openLesson} onAttempt={attempt => { void recordAttempt(attempt); }} />}
         {view === 'packages' && <PackageLibrary onBack={() => openView('home')} onOpen={openPackage} />}
         {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={attempt => { void recordAttempt(attempt); }} />}
@@ -175,7 +175,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={attempt => { void recordAttempt(attempt); }} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'alfa-c-teacher' && <AlfaCTeacherPractice key={teacherGroup} group={teacherGroup} />}
         {view === 'sounds' && <SoundReference onBack={() => openChapter('sounds')} onLesson={openLesson} />}
-      </Suspense></main>
+      </LearnerModuleBoundary></main>
     </div>
   );
 }

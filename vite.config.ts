@@ -37,13 +37,14 @@ export default defineConfig(async () => {
     // Keep the initial shell together to leave room for prepared pages within the asset limit.
     environments: { client: { build: { rolldownOptions: { output: {
       codeSplitting: { groups: [
-        // Keep deferred players together without adding to the public asset count.
-        { name: 'learner-rounds', test: /components\/product\/(?:learner-rounds|alfa-c-practice|package-exercise-browser|package-experience|package-group-practice|package-mixed-practice|learning-path-surface|production-round|source-repeat-round|alfa-c-dagelijks|alfa-c-functioneel|alfa-c-readalong)\.tsx?$/, includeDependenciesRecursively: false },
-        { name: 'route-settings', test: /(?:components\/product\/(?:route-settings|practice-line|sound-reference)\.tsx|lib\/(?:sounds|learner-progress|practice-navigation)\.ts)$/, includeDependenciesRecursively: false },
-        { name: 'practice-source-bank', test: /data\/klink-(?:imported-practice|word-use-self)\.json$/, includeDependenciesRecursively: false },
-        { name: 'practice-word-bank', test: /(?:data\/klink-(?:lexicon-wordbuild-rest|lexicon-wordbuild-20|curriculum|media)\.json|lib\/klink-curriculum\.ts)$/, includeDependenciesRecursively: false },
+        // Claim the shared framework and data first; only player-only dependencies may be deferred.
+        { name: 'framework', test: /node_modules\/(?:react\/|react-dom\/|scheduler\/)/, priority: 100, includeDependenciesRecursively: false },
+        { name: 'route-settings', test: /components\/product\/(?:route-settings|learner-app)\.tsx$/, priority: 50, includeDependenciesRecursively: true },
+        { name: 'learner-rounds', test: /components\/product\/learner-rounds\.ts$/, priority: 10, includeDependenciesRecursively: true },
+        { name: 'practice-source-bank', priority: 90, test: /data\/klink-(?:imported-practice|word-use-self)\.json$/, includeDependenciesRecursively: false },
+        { name: 'practice-word-bank', priority: 90, test: /(?:data\/klink-(?:lexicon-wordbuild-rest|lexicon-wordbuild-20|curriculum|media)\.json|lib\/klink-curriculum\.ts)$/, includeDependenciesRecursively: false },
         {
-        name: 'shared-ui',
+        name: 'shared-ui', priority: 100,
         test: /(?:node_modules\/(?:lucide-react\/|@unpic\/|unpic\/)|node_modules\/vinext\/dist\/(?:shims\/(?:script|link|image|layout-segment-context)|client\/pages-router-link-navigation)\.js$|app\/page\.tsx$|components\/product\/(?:manual-legacy-link|motion-feedback|manual-navigation|classroom-boundary|word-listening|taalroute-header|entry-design|compact-image|word-placeholder|klink-opening-loader)\.tsx$|components\/product\/(?:teacher-module-recovery|load-practice-workspace)\.ts$|lib\/(?:classroom-visibility|image-word-listening|compact-images|audio-policy|audio-repairs|word-listening-text|word-listening|media-player)\.ts$|data\/klink-(?:image-word-listening|compact-images-20261031|production-instructions|word-use-audio|audio-policy|word-audio-repairs|word-listening)\.json$)/,
         includeDependenciesRecursively: false,
       }] },

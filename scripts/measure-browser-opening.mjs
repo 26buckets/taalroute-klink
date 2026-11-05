@@ -49,7 +49,10 @@ for (const [engine, type] of Object.entries(throttled ? { chromium } : { chromiu
               const readyMs = await page.evaluate(() => performance.now());
               await page.waitForFunction(() => window.__opening.paintReadyMs !== null);
           const result = await page.evaluate(readyMs => ({ readyMs, ...window.__opening, navigation: performance.getEntriesByType('navigation')[0].toJSON(), widthFits: document.documentElement.scrollWidth <= innerWidth + 1, resources: performance.getEntriesByType('resource').map(entry => ({ path: new URL(entry.name).pathname, startMs: entry.startTime, endMs: entry.responseEnd, transferSize: entry.transferSize, encodedBodySize: entry.encodedBodySize, decodedBodySize: entry.decodedBodySize })) }), readyMs);
-              rows.push({ engine, width, portal, repeat, version, visit, status: response.status(), ...result });
+              // Count late images/fonts too; keep the original in-page paint time unchanged.
+              await page.waitForLoadState('networkidle');
+              const settledResources = await page.evaluate(() => performance.getEntriesByType('resource').map(entry => ({ path: new URL(entry.name).pathname, startMs: entry.startTime, endMs: entry.responseEnd, transferSize: entry.transferSize, encodedBodySize: entry.encodedBodySize, decodedBodySize: entry.decodedBodySize })));
+              rows.push({ engine, width, portal, repeat, version, visit, status: response.status(), ...result, settledResources });
               save();
               assert.equal(response.status(), 200);
               assert(result.widthFits);
