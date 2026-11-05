@@ -1,0 +1,42 @@
+1280 ordinary before cold 9885 worker network fetches 4
+1280 ordinary before warm 878 worker network fetches 0
+1280 ordinary after cold 8835 worker network fetches 4
+1280 ordinary after warm 863 worker network fetches 0
+1280 daily before cold 7882 worker network fetches 4
+1280 daily before warm 1404 worker network fetches 0
+1280 daily after cold 8007 worker network fetches 4
+1280 daily after warm 1427 worker network fetches 0
+1280 functional before cold 8071 worker network fetches 4
+1280 functional before warm 1392 worker network fetches 0
+1280 functional after cold 7760 worker network fetches 4
+1280 functional after warm 1378 worker network fetches 0
+390 ordinary after cold 7873 worker network fetches 4
+390 ordinary after warm 961 worker network fetches 0
+390 ordinary before cold 7911 worker network fetches 4
+390 ordinary before warm 895 worker network fetches 0
+390 daily after cold 7795 worker network fetches 4
+390 daily after warm 1376 worker network fetches 0
+390 daily before cold 7799 worker network fetches 4
+390 daily before warm 1481 worker network fetches 0
+390 functional after cold 7465 worker network fetches 4
+390 functional after warm 1434 worker network fetches 0
+390 functional before cold 8212 worker network fetches 4
+390 functional before warm 1472 worker network fetches 0
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Same actual lesson across versions and visits
+
+2 !== 1
+
+    at file:///Users/nicoknoester/.cache/klink-opening-eightseconds-20261105/scripts/measure-cache-and-alfa-c.mjs:47:68 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 2,
+  expected: 1,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-functional-step="klink-alfa-c-aanvulling-lijst-01"]').getByRole('button', { name: 'Uitleg', exact: true })[22m
+
+    at /Users/nicoknoester/.cache/klink-opening-eightseconds-20261105/scripts/test-alfa-c-functioneel-browser.mjs:58:71 {
+  log: [
+    `  - waiting for locator('[data-functional-step="klink-alfa-c-aanvulling-lijst-01"]').getByRole('button', { name: 'Uitleg', exact: true })`
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0

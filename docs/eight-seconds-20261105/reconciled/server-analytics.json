@@ -1,0 +1,32 @@
+{
+  "start": "2026-11-05T14:59:39Z",
+  "end": "2026-11-05T15:09:59Z",
+  "scope": "All candidate Worker requests including HTML and protocol checks. Not path-specific CPU and not billing. Adaptive dataset may lag.",
+  "cpuUnits": "microseconds (schema-verified in ../account-cost-access.json)",
+  "result": {
+    "data": {
+      "viewer": {
+        "accounts": [
+          {
+            "workersInvocationsAdaptive": [
+              {
+                "dimensions": {
+                  "scriptName": "klink-pr12-candidate"
+                },
+                "quantiles": {
+                  "cpuTimeP50": 885,
+                  "cpuTimeP99": 76811
+                },
+                "sum": {
+                  "errors": 0,
+                  "requests": 89
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "errors": null
+  }
+}
