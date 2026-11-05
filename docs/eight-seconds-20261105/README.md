@@ -1,10 +1,10 @@
 # Klink — kleinere eerste download — uitsluitend staging, 5 november 2026
 
-De proef is aangesloten op actuele main `a3beb7934eb43cb8d166c5e5a4fd0084f974fa6e` en livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49`. De goedgekeurde Help-/appel-en-peer-aanpassing én de 50 nieuwe dictees blijven behouden. **Deze snelheidswijziging is niet naar productie gepubliceerd of naar main gemerged.** Geen databasewijziging, dependency, workflow of budgetverhoging.
+De opgeleverde proef is gecontroleerd op de livebasis en bijbehorende main-bewijsopvolger `a3beb7934eb43cb8d166c5e5a4fd0084f974fa6e` en livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49`. De goedgekeurde Help-/appel-en-peer-aanpassing én de 50 nieuwe dictees blijven behouden. **Deze snelheidswijziging is niet naar productie gepubliceerd of naar main gemerged.** Geen databasewijziging, dependency, workflow of budgetverhoging.
 
 [Proefversie](https://klink-pr12-candidate.nico-554.workers.dev/#learner) · [Klink+Docent](https://klink-pr12-candidate.nico-554.workers.dev/#teacher/plus) · [Controle](https://klink-pr12-baseline.nico-554.workers.dev/#learner) · [Draft PR 12](https://github.com/26buckets/taalroute-klink/pull/12)
 
-## Laatste meting op dezelfde actuele basis
+## Laatste meting op dezelfde livebasis
 
 | Meting | Controle | Proefversie |
 |---|---:|---:|
@@ -54,3 +54,9 @@ Officiële bronnen, gecontroleerd 5 november 2026: [statische bestanden](https:/
 Oudere meetronden blijven apart: bovenliggende bestanden 8,49 → 8,30 s; `reconciled/` met Help-basis 8,61 → 8,10 s. Alleen de laatste `final/`-ronde met alle 50 dictees is de huidige eindmeting. Geen percentages uit verschillende basissen opgeteld.
 
 Open voor publicatie: afzonderlijk akkoord voor de concrete gecombineerde PR12-versie, normale publicatiecontroles op de dan actuele bron, daadwerkelijke accountkosten en een fysieke telefoonproef. De netwerkvariatie is niet verdwenen. Er is geen fysieke testtelefoon beschikbaar gesteld. De volledige herstelkopie en terugleescontrole staan in `drive-receipt.json`; de vorige herstelkopie staat in `pre-dictation-drive-receipt.json`.
+
+## Nog lopende focusreparatie op main
+
+De laatste controle zag nieuwere main `52ddc17c9ff473fd7151a12a433bb9c902f41718` met een afzonderlijke, nog niet gepubliceerde focusreparatie. Live gaf ook met een frisse controle nog `ca2633c1`. De integratie is in een aparte lokale branch geprobeerd; de verplichte voorbereidingscontrole blokkeerde de bouw op de bestaande 20.000-bestandsgrens. De eigenaar van die chat herstelt dit. Geen limiet verhoogd, blokkade omzeild of focusvariant uitgerold.
+
+PR12 en de opgeleverde staging blijven bewust op de volledig geteste livebasis met alle 50 dictees. De in-progress integratie blijft afzonderlijk bewaard en overschrijft geen werk van de andere chat. Aansluiting op diens definitieve focusbron en de geïntegreerde controles zijn een open publicatievoorwaarde. Zie [inspectie en blokkade](pending-focus.json). De eindback-up bevat alle geteste broncode en bewijzen; deze nacontrole staat apart naast het archief.
