@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { verifyDialogFocusContent, verifyDialogFocusRelease } from './check-dialog-focus-release-20261105.mjs';
-const folder='docs/focus-audit-all-20261105/publication/';
+const folder='docs/focus-audit-all-20261105/publication-current/';
 verifyDialogFocusRelease();
 for (const file of ['app/globals.css','app/layout.tsx','components/product/pointer-focus.tsx','components/product/practice-line.tsx',folder+'owner-request.json',folder+'dialogs-after/checks.json',folder+'base-dialogs-final/checks.json',folder+'help/browser.json']) {
   assert.throws(()=>verifyDialogFocusContent(path=>path===file ? Buffer.concat([readFileSync(path),Buffer.from('changed')]) : readFileSync(path)));

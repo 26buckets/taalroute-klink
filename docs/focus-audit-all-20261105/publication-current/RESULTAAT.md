@@ -1,0 +1,9 @@
+# Definitieve publicatiebasis — aanvullende klikranden
+
+Tijdens de laatste actuele-basiscontrole verscheen een nieuwe publicatie van 50 dictees (ca2633c1). De eerdere publicatievoorbereiding onder ../publication/ is daarom niet uitgerold; de normale push werd wegens de nieuwere main geweigerd. De ongewijzigde klikrandenreparatie is met de nieuwe canonieke main samengevoegd en opnieuw gebouwd/gecontroleerd. De bron van alle 50 dictees en alle 1.809 banken is exact gelijk aan live. Help en appel en peer blijven behouden. Alleen de vier oorspronkelijke runtimebestanden veranderen; hun inhoud is exact gelijk aan de reeds gecontroleerde kandidaat b87ec638.
+
+Op deze definitieve basis opnieuw geslaagd: types, lint, 49 curriculumproeven, normale build/droogloop; Chromium en WebKit: 48 docent-/deelvensterproeven, 16 uitlegproeven met iframe-brongrens, 8 pixelgelijke live/lokaal-vergelijkingen (desktop/mobiel, licht/donker), 2 aanraakproeven en 8 Help-/appel-en-peerproeven. De eerder deze publicatieronde geslaagde 6 opslag- en 12 schrijfproeven staan onder ../publication/; opslagcode is bytegelijk. Deze worden na uitrol ook live gecontroleerd.
+
+De eerdere 128 algemene schermcontroles zijn historische auditbewijzen, niet opnieuw op deze basis uitgevoerd. Geen fysieke telefoon, schermlezer of menselijke luisterreview. De wijziging raakt geen audio, data of gebruikersopslag. Bestaande menselijke-reviewbeperkingen van de 50 dictees blijven behouden. De oorspronkelijke vormgevingsvloer is ongewijzigd. Geen workflow/budgetwijzigingen.
+
+De normale vrijgaveketen blijft intact: de bestaande dictee-vrijgave toetst haar historische exacte bron, waarna deze opvolger de concrete nieuwe bestanden en bewijsstukken controleert. Oudere goedkeuringen en bronback-ups blijven behouden. Herstelketen: docs/dictation-50-20261105/backup.json, ../backup.json en docs/storage-player-repair-20261105/postflight/backup.json.
