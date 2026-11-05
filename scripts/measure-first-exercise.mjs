@@ -79,6 +79,7 @@ try {
         const id = await page.locator('[data-exercise-id]').first().getAttribute('data-exercise-id');
         assert(id);
         if (version === 'after') assert(!opening.resources.some(row => /\/(?:learner-rounds|staff-apps|teacher-classroom)-/.test(row.path)), 'No player or teacher transfer before the first choice');
+        if (version === 'after') assert(!exercise.resources.some(row => /\/learner-rounds-extra[.-]/.test(row.path)), 'Regular first exercise must not download unrelated extra players');
         // Test real audio after the timing snapshot, without charging playback duration to opening.
         const heard = await page.evaluate(() => window.__flowAudio.length);
         await page.locator('.cp-exercise-listen').first().click();

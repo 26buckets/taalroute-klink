@@ -4,7 +4,7 @@ import {chromium,webkit} from 'playwright';
 import sharp from 'sharp';
 const out=process.env.KLINK_PERF_APPEARANCE_OUTPUT || 'docs/performance-20261102/appearance';mkdirSync(out,{recursive:true});const rows=[];
 for(const [engine,type] of Object.entries({chromium,webkit})){
- const b=await type.launch();try{for(const width of [1280,390])for(const colorScheme of ['light','dark'])for(const [name,hash,selector] of [['entry','','.landing-start'],['learner','#learner','.learner-app'],['docent','#teacher/plus','.kpd-lesson-choice']]){
+ const b=await type.launch();try{for(const width of [1280,390])for(const colorScheme of ['light','dark'])for(const [name,hash,selector] of [['entry','','.landing-start'],['learner','#learner','.learner-app'],['docent','#teacher/plus','.kpd-lesson-choice'],['collections','#learner/chapters/words/meet?help=practice','.cp-chapter-collections']]){
   const images=[];
   for(const [version,port] of [['before',19122],['after',19120]]){
    const c=await b.newContext({viewport:{width,height:900},colorScheme,reducedMotion:'reduce'}),p=await c.newPage();await p.goto(`http://127.0.0.1:${port}/${hash}`,{waitUntil:'domcontentloaded'});await p.locator(selector).first().waitFor();await p.locator('.klink-opening-loader').waitFor({state:'detached'});

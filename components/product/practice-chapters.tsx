@@ -137,7 +137,7 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
         const label = learnerCollectionLabel(item.title, item.sourceId ?? item.id);
         const roundNumber = label.round ?? item.id.match(/~words-(\d+)$/)?.[1];
         return <button key={item.id} className={`cp-chapter-collection${complete ? ' is-complete' : ''}`} data-collection={item.id} data-source-collection={item.sourceId} {...(sequenceChapter ? { [`data-${sequenceChapter.kind}-block`]: item.id } : {})} onClick={() => open({ ...location, collection: item.id, words: undefined })}>
-        {item.image ? <Image src={item.image} width={96} height={96} alt="" /> : <BookOpen aria-hidden="true" />}
+        {item.image ? <Image src={item.image} width={96} height={96} alt="" fetchPriority="low" /> : <BookOpen aria-hidden="true" />}
         <span className="cp-collection-copy"><strong>{label.title}</strong>
           <span className="cp-collection-meta"><small>{roundNumber && `Ronde ${roundNumber} · `}{item.level} · </small><ExerciseCount count={item.wordCount ?? item.total} words={item.words} /></span>
           <small>{[label.support, item.summary].filter(Boolean).join(' · ')}</small>

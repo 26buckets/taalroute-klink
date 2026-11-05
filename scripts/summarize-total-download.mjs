@@ -40,6 +40,7 @@ summary.firstExercise3Mbps = {};
 for (const version of ['before', 'after']) {
   const rows = flow.rows.filter(row => row.version === version && row.portal === 'learner');
   summary.firstExercise3Mbps[version] = Object.fromEntries(['chapterClickMs', 'activityClickMs', 'exerciseClickMs', 'firstChoiceToExerciseMs', 'openingToExerciseMs', 'exerciseMediaReadyMs'].map(key => [key, stats(rows.map(row => row[key]))]));
+  summary.firstExercise3Mbps[version].deferredPlayerBodyBytes = stats(rows.map(row => sum(row.exercise.resources.filter(item => /\/learner-rounds[.-]/.test(item.path)), 'encodedBodySize')));
 }
 summary.firstLesson3Mbps = {};
 for (const version of ['before', 'after']) {
