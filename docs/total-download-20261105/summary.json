@@ -1,0 +1,670 @@
+{
+  "normal": {
+    "learner/first": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 1429.5499999821186,
+          "min": 1332,
+          "max": 1656.2999999523163
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 1041.75,
+          "min": 953.3999999761581,
+          "max": 1678.0999999642372
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 3171795,
+          "min": 3167259,
+          "max": 3182106
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 3183195,
+          "min": 3178659,
+          "max": 3194106
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2889633.5,
+          "min": 2886449,
+          "max": 2893258
+        },
+        "longestMainThreadTaskMs": 394
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 1223.4000000059605,
+          "min": 1148,
+          "max": 1739
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 1197.75,
+          "min": 759,
+          "max": 1491.4000000357628
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 2955125,
+          "min": 2949136,
+          "max": 2965153
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 2965025,
+          "min": 2959036,
+          "max": 2975653
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2677505.5,
+          "min": 2676609,
+          "max": 2679083
+        },
+        "longestMainThreadTaskMs": 395
+      }
+    },
+    "learner/repeat": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 745,
+          "min": 668,
+          "max": 998
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 359.94999998807907,
+          "min": 285,
+          "max": 699.8000000119209
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 1545363.5,
+          "min": 4662,
+          "max": 3098311
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 9582.5,
+          "min": 8862,
+          "max": 15126
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 1440328,
+          "min": 0,
+          "max": 2885076
+        },
+        "longestMainThreadTaskMs": 397
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 682.7499999701977,
+          "min": 632,
+          "max": 715
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 352.65000000596046,
+          "min": 252,
+          "max": 736
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 1439508.5,
+          "min": 4604,
+          "max": 2879700
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 9717.5,
+          "min": 8804,
+          "max": 14866
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 1335384,
+          "min": 0,
+          "max": 2673290
+        },
+        "longestMainThreadTaskMs": 381
+      }
+    },
+    "teacher/plus/first": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 1171.949999988079,
+          "min": 1041,
+          "max": 1740.699999988079
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 1315.5999999940395,
+          "min": 1195,
+          "max": 1879.3999999761581
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 4242095,
+          "min": 3329070,
+          "max": 5156186
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 4262795,
+          "min": 3341370,
+          "max": 5185286
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2970166,
+          "min": 2966222,
+          "max": 2972487
+        },
+        "longestMainThreadTaskMs": 143
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 1403.5999999940395,
+          "min": 1221,
+          "max": 1542
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 1550.1499999761581,
+          "min": 1376,
+          "max": 1696.6000000238419
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 4277184,
+          "min": 3362685,
+          "max": 5190351
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 4298184,
+          "min": 3375285,
+          "max": 5219751
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 3002581.5,
+          "min": 3001256,
+          "max": 3005043
+        },
+        "longestMainThreadTaskMs": 145
+      }
+    },
+    "teacher/plus/repeat": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 604.25,
+          "min": 578,
+          "max": 821.8000000119209
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 687.5,
+          "min": 660,
+          "max": 904.3000000119209
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 2174542.5,
+          "min": 112951,
+          "max": 4169364
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 126009,
+          "min": 125542,
+          "max": 201102
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 1480190.5,
+          "min": 0,
+          "max": 2964484
+        },
+        "longestMainThreadTaskMs": 129
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 600.6999999880791,
+          "min": 572,
+          "max": 996.6999999880791
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 712,
+          "min": 670.5,
+          "max": 1089
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 2160050.5,
+          "min": 112943,
+          "max": 4203596
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 125999,
+          "min": 60292,
+          "max": 201128
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 1497707.5,
+          "min": 0,
+          "max": 2997975
+        },
+        "longestMainThreadTaskMs": 127
+      }
+    }
+  },
+  "3mbps": {
+    "learner/first": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 9502.15000000596,
+          "min": 9314.600000023842,
+          "max": 9885.899999976158
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 9381.800000011921,
+          "min": 9010.899999976158,
+          "max": 9700.400000035763
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 3179237,
+          "min": 3173711,
+          "max": 3181110
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 3191237,
+          "min": 3185111,
+          "max": 3193110
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2888278.5,
+          "min": 2885796,
+          "max": 2889991
+        },
+        "longestMainThreadTaskMs": 400
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 8858.84999999404,
+          "min": 8634.5,
+          "max": 9004.300000011921
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 8899.550000011921,
+          "min": 8664.300000011921,
+          "max": 9068
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 2962994,
+          "min": 2960457,
+          "max": 2966577
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 2973494,
+          "min": 2970957,
+          "max": 2977077
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2677123.5,
+          "min": 2674689,
+          "max": 2680781
+        },
+        "longestMainThreadTaskMs": 403
+      }
+    },
+    "learner/repeat": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 715.3000000119209,
+          "min": 667,
+          "max": 979.6999999880791
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 417.25,
+          "min": 368.10000002384186,
+          "max": 735.9000000357628
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 3086141.5,
+          "min": 3083558,
+          "max": 3092444
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 9775.5,
+          "min": 9708,
+          "max": 13624
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2882437.5,
+          "min": 2879955,
+          "max": 2884198
+        },
+        "longestMainThreadTaskMs": 376
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 700.2999999821186,
+          "min": 687.5,
+          "max": 723.1999999880791
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 389.84999999403954,
+          "min": 377.89999997615814,
+          "max": 436.80000001192093
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 2869863,
+          "min": 2867323,
+          "max": 2873463
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 9758.5,
+          "min": 9702,
+          "max": 9777
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2671282.5,
+          "min": 2668896,
+          "max": 2674988
+        },
+        "longestMainThreadTaskMs": 378
+      }
+    },
+    "teacher/plus/first": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 9349.299999982119,
+          "min": 9275.099999964237,
+          "max": 9533.5
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 14396.050000011921,
+          "min": 14068.199999988079,
+          "max": 14748.300000011921
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 5010949,
+          "min": 4934961,
+          "max": 5087910
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 5038849,
+          "min": 4961661,
+          "max": 5117010
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2969563,
+          "min": 2966179,
+          "max": 2970839
+        },
+        "longestMainThreadTaskMs": 155
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 9506.750000029802,
+          "min": 9377.400000035763,
+          "max": 10220.300000011921
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 14622.100000023842,
+          "min": 14276.899999976158,
+          "max": 15003.800000011921
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 5045215,
+          "min": 4968496,
+          "max": 5121046
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 5073225.5,
+          "min": 4995496,
+          "max": 5150446
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 3001747,
+          "min": 2999900,
+          "max": 3003111
+        },
+        "longestMainThreadTaskMs": 157
+      }
+    },
+    "teacher/plus/repeat": {
+      "before": {
+        "paintMs": {
+          "n": 8,
+          "median": 848.8000000119209,
+          "min": 615.5,
+          "max": 879.5999999642372
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 995.3499999940395,
+          "min": 711.1000000238419,
+          "max": 1153.199999988079
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 4092894,
+          "min": 4016982,
+          "max": 4169672
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 125368,
+          "min": 125183,
+          "max": 125526
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2963770,
+          "min": 2960386,
+          "max": 2964998
+        },
+        "longestMainThreadTaskMs": 126
+      },
+      "after": {
+        "paintMs": {
+          "n": 8,
+          "median": 817.6500000059605,
+          "min": 623.1000000238419,
+          "max": 1066.300000011921
+        },
+        "initialResourcesReceivedMs": {
+          "n": 8,
+          "median": 1065.4500000178814,
+          "min": 912.1000000238419,
+          "max": 1344
+        },
+        "totalBodyBytes": {
+          "n": 8,
+          "median": 4127139,
+          "min": 4050609,
+          "max": 4202846
+        },
+        "networkTransferBytes": {
+          "n": 8,
+          "median": 125370,
+          "min": 125166,
+          "max": 125537
+        },
+        "javascriptBodyBytes": {
+          "n": 8,
+          "median": 2995954,
+          "min": 2994107,
+          "max": 2997270
+        },
+        "longestMainThreadTaskMs": 127
+      }
+    }
+  },
+  "firstExercise3Mbps": {
+    "before": {
+      "chapterClickMs": {
+        "n": 4,
+        "median": 36.80000001192093,
+        "min": 35.200000047683716,
+        "max": 43.5
+      },
+      "activityClickMs": {
+        "n": 4,
+        "median": 31.399999976158142,
+        "min": 31.200000047683716,
+        "max": 31.900000035762787
+      },
+      "exerciseClickMs": {
+        "n": 4,
+        "median": 31.250000029802322,
+        "min": 30.599999964237213,
+        "max": 31.600000023841858
+      },
+      "firstChoiceToExerciseMs": {
+        "n": 4,
+        "median": 163.05000001192093,
+        "min": 160.20000004768372,
+        "max": 163.9000000357628
+      },
+      "openingToExerciseMs": {
+        "n": 4,
+        "median": 9717.34999999404,
+        "min": 9567.300000011921,
+        "max": 10034
+      },
+      "exerciseMediaReadyMs": {
+        "n": 4,
+        "median": 10309.40000000596,
+        "min": 9900.5,
+        "max": 10918
+      }
+    },
+    "after": {
+      "chapterClickMs": {
+        "n": 4,
+        "median": 37.650000005960464,
+        "min": 33.5,
+        "max": 41.30000001192093
+      },
+      "activityClickMs": {
+        "n": 4,
+        "median": 31.05000001192093,
+        "min": 30.5,
+        "max": 31.30000001192093
+      },
+      "exerciseClickMs": {
+        "n": 4,
+        "median": 1339,
+        "min": 915.1999999880791,
+        "max": 1697.699999988079
+      },
+      "firstChoiceToExerciseMs": {
+        "n": 4,
+        "median": 1470.4000000059605,
+        "min": 1046.8999999761581,
+        "max": 1828.5
+      },
+      "openingToExerciseMs": {
+        "n": 4,
+        "median": 10235.799999982119,
+        "min": 9826.100000023842,
+        "max": 10654.299999952316
+      },
+      "exerciseMediaReadyMs": {
+        "n": 4,
+        "median": 10285.5,
+        "min": 9876.399999976158,
+        "max": 10704.399999976158
+      }
+    }
+  },
+  "firstLesson3Mbps": {
+    "before": {
+      "lessonClickMs": {
+        "n": 4,
+        "median": 33.89999997615814,
+        "min": 31.80000001192093,
+        "max": 39.39999997615814
+      },
+      "openingToLessonMs": {
+        "n": 4,
+        "median": 9578.34999999404,
+        "min": 9496.600000023842,
+        "max": 9629.899999976158
+      },
+      "lessonMediaReadyMs": {
+        "n": 4,
+        "median": 13133.249999970198,
+        "min": 12869,
+        "max": 13294.100000023842
+      }
+    },
+    "after": {
+      "lessonClickMs": {
+        "n": 4,
+        "median": 35.44999998807907,
+        "min": 32.10000002384186,
+        "max": 39.60000002384186
+      },
+      "openingToLessonMs": {
+        "n": 4,
+        "median": 9732.25,
+        "min": 9512.5,
+        "max": 9935.300000011921
+      },
+      "lessonMediaReadyMs": {
+        "n": 4,
+        "median": 13150.799999982119,
+        "min": 12883.400000035763,
+        "max": 13353.399999976158
+      }
+    }
+  }
+}

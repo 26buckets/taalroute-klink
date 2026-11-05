@@ -1,0 +1,15 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Teacher must not fetch the learner home or learner-only rounds
+    at file:///Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/test-deferred-players-browser.mjs:79:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

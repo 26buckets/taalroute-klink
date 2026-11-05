@@ -23,6 +23,7 @@ for (const [trial, expected] of [['normal', 64], ['3mbps', 64]]) {
       if (portal === 'learner' && version === 'after') assert(rows.every(row => !row.settledResources.some(item => /\/(?:learner-rounds|staff-apps|teacher-classroom)-/.test(item.path))), 'Player and teacher modules stay absent even after network idle');
       summary[trial][key][version] = {
         paintMs: stats(rows.map(row => row.paintReadyMs)),
+        initialResourcesReceivedMs: stats(rows.map(row => Math.max(row.navigation.responseEnd, ...row.settledResources.map(item => item.endMs)))),
         totalBodyBytes: stats(rows.map(row => row.navigation.encodedBodySize + sum(row.settledResources, 'encodedBodySize'))),
         networkTransferBytes: stats(rows.map(row => row.navigation.transferSize + sum(row.settledResources, 'transferSize'))),
         javascriptBodyBytes: stats(rows.map(row => sum(row.settledResources.filter(item => item.path.endsWith('.js')), 'encodedBodySize'))),

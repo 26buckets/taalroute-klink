@@ -1,0 +1,40 @@
+{
+  "runtimeBeforeFocus": "56aa5a681bb440ea8415f8b209b14d965000e53e",
+  "finalCandidate": "eccce25160e19d883d54d75c3859af897cd7fa15",
+  "finalBaseline": "b831ad09856b53d73b6dd1f1f6d52b5e8579e34f",
+  "basis": "8f310654410c683c772ce889b2164441b8a2a8c0",
+  "finalChecks": {
+    "compiledSourceHashes": 12,
+    "cssDeclarationsPreserved": true,
+    "assets": 20000,
+    "deferredRecoveryTeacherFlows": 12,
+    "pixelIdenticalEntryPairs": 24,
+    "playerAppearancePairs": 48,
+    "maxPlayerRoundingPixels": 42
+  },
+  "fullChecksBeforeFocusOnlyCSSMerge": {
+    "unit": 54,
+    "exerciseAndCollectionHashes": 203,
+    "regression": 16,
+    "parallelEntry": 8,
+    "loaderOnce": 8,
+    "manual": 4,
+    "wordListening": 44,
+    "readingNativeAudio": 80,
+    "wrongReadingChoicesRejected": 160,
+    "speakingNativeAudio": 40,
+    "syntheticMicrophone": 2,
+    "sourceRepeatTasks": 48,
+    "legacyStorageKeysPreserved": 822,
+    "storageCrossTabAndLocks": true,
+    "mixedPracticeAll15Sections": true
+  },
+  "notClaimed": [
+    "Physical phone/network validation",
+    "Human listening review",
+    "MFA testing",
+    "Production publication",
+    "All 48 source-repeat rounds rerun"
+  ],
+  "guard": "The focus-only release test rejects a wider performance branch by design. It was not changed or bypassed. A later production release needs its own reviewed publication contract."
+}

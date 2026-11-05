@@ -1,0 +1,632 @@
+{
+  "base": "http://127.0.0.1:19120",
+  "baseline": "http://127.0.0.1:19122",
+  "simulatedAudio": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "name": "copy",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 19,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-copy-1366-light-before.png",
+        "chromium-copy-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "copy",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 21,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-copy-1366-dark-before.png",
+        "chromium-copy-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "copy",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 38,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-copy-390-light-before.png",
+        "chromium-copy-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "copy",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 5,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-copy-390-dark-before.png",
+        "chromium-copy-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "dictation",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-dictation-1366-light-before.png",
+        "chromium-dictation-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "dictation",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-dictation-1366-dark-before.png",
+        "chromium-dictation-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "dictation",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-dictation-390-light-before.png",
+        "chromium-dictation-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "dictation",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-dictation-390-dark-before.png",
+        "chromium-dictation-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "meet",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-meet-1366-light-before.png",
+        "chromium-meet-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "meet",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-meet-1366-dark-before.png",
+        "chromium-meet-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "meet",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 34,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-meet-390-light-before.png",
+        "chromium-meet-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "meet",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-meet-390-dark-before.png",
+        "chromium-meet-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "read",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-read-1366-light-before.png",
+        "chromium-read-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "read",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-read-1366-dark-before.png",
+        "chromium-read-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "read",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-read-390-light-before.png",
+        "chromium-read-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "read",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-read-390-dark-before.png",
+        "chromium-read-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "cards",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-cards-1366-light-before.png",
+        "chromium-cards-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "cards",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-cards-1366-dark-before.png",
+        "chromium-cards-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "cards",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-cards-390-light-before.png",
+        "chromium-cards-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "cards",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-cards-390-dark-before.png",
+        "chromium-cards-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "build-model",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-build-model-1366-light-before.png",
+        "chromium-build-model-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "build-model",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-build-model-1366-dark-before.png",
+        "chromium-build-model-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "build-model",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-build-model-390-light-before.png",
+        "chromium-build-model-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "build-model",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "chromium-build-model-390-dark-before.png",
+        "chromium-build-model-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "copy",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-copy-1366-light-before.png",
+        "webkit-copy-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "copy",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-copy-1366-dark-before.png",
+        "webkit-copy-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "copy",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-copy-390-light-before.png",
+        "webkit-copy-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "copy",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-copy-390-dark-before.png",
+        "webkit-copy-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "dictation",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-dictation-1366-light-before.png",
+        "webkit-dictation-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "dictation",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-dictation-1366-dark-before.png",
+        "webkit-dictation-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "dictation",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-dictation-390-light-before.png",
+        "webkit-dictation-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "dictation",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-dictation-390-dark-before.png",
+        "webkit-dictation-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "meet",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-meet-1366-light-before.png",
+        "webkit-meet-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "meet",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-meet-1366-dark-before.png",
+        "webkit-meet-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "meet",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-meet-390-light-before.png",
+        "webkit-meet-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "meet",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-meet-390-dark-before.png",
+        "webkit-meet-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "read",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-read-1366-light-before.png",
+        "webkit-read-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "read",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-read-1366-dark-before.png",
+        "webkit-read-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "read",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-read-390-light-before.png",
+        "webkit-read-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "read",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-read-390-dark-before.png",
+        "webkit-read-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "cards",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-cards-1366-light-before.png",
+        "webkit-cards-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "cards",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-cards-1366-dark-before.png",
+        "webkit-cards-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "cards",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-cards-390-light-before.png",
+        "webkit-cards-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "cards",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-cards-390-dark-before.png",
+        "webkit-cards-390-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "build-model",
+      "width": 1366,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-build-model-1366-light-before.png",
+        "webkit-build-model-1366-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "build-model",
+      "width": 1366,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-build-model-1366-dark-before.png",
+        "webkit-build-model-1366-dark-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "build-model",
+      "width": 390,
+      "theme": "light",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-build-model-390-light-before.png",
+        "webkit-build-model-390-light-after.png"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "name": "build-model",
+      "width": 390,
+      "theme": "dark",
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "channelRoundingTolerance": 2,
+      "screenshots": [
+        "webkit-build-model-390-dark-before.png",
+        "webkit-build-model-390-dark-after.png"
+      ]
+    }
+  ],
+  "errors": []
+}

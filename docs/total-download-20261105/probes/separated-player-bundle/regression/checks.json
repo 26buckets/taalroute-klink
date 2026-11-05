@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "learner"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "teacher/plus"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "check": "failed decoration never blocks opening"
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "check": "active projection survives wrong hash and reload; written answer retained"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "learner"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "teacher/plus"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "check": "failed decoration never blocks opening"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "check": "active projection survives wrong hash and reload; written answer retained"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "learner"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "teacher/plus"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "check": "failed decoration never blocks opening"
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "check": "active projection survives wrong hash and reload; written answer retained"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "learner"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "check": "waits for selected code without exposing another workspace",
+      "target": "teacher/plus"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "check": "failed decoration never blocks opening"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "check": "active projection survives wrong hash and reload; written answer retained"
+    }
+  ],
+  "errors": []
+}

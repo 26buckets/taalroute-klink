@@ -1,0 +1,3049 @@
+{
+  "startedAt": "2026-11-05T09:27:24.668Z",
+  "savedAt": "2026-11-05T09:27:28.962Z",
+  "browserVersion": "156.0.8078.4",
+  "conditions": "Local diagnostic, fresh Chromium contexts, no network or CPU throttling.",
+  "rows": [
+    {
+      "width": 1280,
+      "repeat": 0,
+      "version": "before",
+      "opening": {
+        "home": 747,
+        "chapter": null,
+        "activity": null,
+        "exercise": null,
+        "clicks": {},
+        "navigation": {
+          "name": "http://127.0.0.1:19122/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 47,
+          "navigationId": 3381,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.10000002384185791,
+          "domainLookupStart": 0.5,
+          "domainLookupEnd": 0.6000000238418579,
+          "connectStart": 0.6000000238418579,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.800000011920929,
+          "requestStart": 0.9000000357627869,
+          "responseStart": 9.900000035762787,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 9.900000035762787,
+          "responseEnd": 10.200000047683716,
+          "transferSize": 4516,
+          "encodedBodySize": 4216,
+          "decodedBodySize": 16743,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 26.400000035762787,
+          "domContentLoadedEventStart": 26.400000035762787,
+          "domContentLoadedEventEnd": 26.400000035762787,
+          "domComplete": 47,
+          "loadEventStart": 47,
+          "loadEventEnd": 47,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 11.700000047683716,
+            "endMs": 14.300000011920929,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 11.700000047683716,
+            "endMs": 15.300000011920929,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 12,
+            "endMs": 19.100000023841858,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 12,
+            "endMs": 19.200000047683716,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 12,
+            "endMs": 19.400000035762787,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 12,
+            "endMs": 23.600000023841858,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 12.100000023841858,
+            "endMs": 19.200000047683716,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 12.100000023841858,
+            "endMs": 34,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/index-8AhZvFgt.js",
+            "startMs": 12.100000023841858,
+            "endMs": 36,
+            "encodedBodySize": 33370,
+            "decodedBodySize": 115667,
+            "transferSize": 33670
+          },
+          {
+            "path": "/_next/static/chunks/vinext-qTIYcz-J.js",
+            "startMs": 12.100000023841858,
+            "endMs": 36.90000003576279,
+            "encodedBodySize": 46219,
+            "decodedBodySize": 153991,
+            "transferSize": 46519
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 12.100000023841858,
+            "endMs": 37.40000003576279,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-Ds2JwQdK.js",
+            "startMs": 12.100000023841858,
+            "endMs": 47.90000003576279,
+            "encodedBodySize": 278100,
+            "decodedBodySize": 1826770,
+            "transferSize": 278400
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-DNp5qKkd.js",
+            "startMs": 59.10000002384186,
+            "endMs": 61.80000001192093,
+            "encodedBodySize": 668,
+            "decodedBodySize": 1555,
+            "transferSize": 968
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-BXsu-DGD.js",
+            "startMs": 59.200000047683716,
+            "endMs": 117.60000002384186,
+            "encodedBodySize": 1375926,
+            "decodedBodySize": 7979517,
+            "transferSize": 1376226
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 59.200000047683716,
+            "endMs": 191.70000004768372,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/_next/static/chunks/staff-apps-CFt9ah_M.js",
+            "startMs": 59.30000001192093,
+            "endMs": 125.30000001192093,
+            "encodedBodySize": 21772,
+            "decodedBodySize": 78919,
+            "transferSize": 22072
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 59.30000001192093,
+            "endMs": 184.10000002384186,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/chunks/package-exercise-browser-BeHUjGIB.js",
+            "startMs": 59.40000003576279,
+            "endMs": 142.10000002384186,
+            "encodedBodySize": 145762,
+            "decodedBodySize": 867817,
+            "transferSize": 146062
+          },
+          {
+            "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+            "startMs": 59.5,
+            "endMs": 123.5,
+            "encodedBodySize": 595,
+            "decodedBodySize": 1410,
+            "transferSize": 895
+          },
+          {
+            "path": "/_next/static/chunks/package-experience-Doj7TcdF.js",
+            "startMs": 59.5,
+            "endMs": 201.60000002384186,
+            "encodedBodySize": 50289,
+            "decodedBodySize": 279427,
+            "transferSize": 50589
+          },
+          {
+            "path": "/_next/static/chunks/learner-app-9VDkATsD.js",
+            "startMs": 125.80000001192093,
+            "endMs": 204.4000000357628,
+            "encodedBodySize": 106734,
+            "decodedBodySize": 502942,
+            "transferSize": 107034
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 347.4000000357628,
+            "endMs": 349.2000000476837,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 349.2000000476837,
+            "endMs": 351.30000001192093,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 350.30000001192093,
+            "endMs": 352.9000000357628,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 351.60000002384186,
+            "endMs": 357.2000000476837,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.10000002384186,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.10000002384186,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.30000001192093,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.4000000357628,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 358.2000000476837,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 362.30000001192093,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 362.4000000357628,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 362.5,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 351.80000001192093,
+            "endMs": 362.30000001192093,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 351.80000001192093,
+            "endMs": 363.60000002384186,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          },
+          {
+            "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+            "startMs": 354.9000000357628,
+            "endMs": 362.60000002384186,
+            "encodedBodySize": 4736,
+            "decodedBodySize": 23513,
+            "transferSize": 5036
+          }
+        ]
+      },
+      "exercise": {
+        "home": 747,
+        "chapter": 841.2000000476837,
+        "activity": 896.7000000476837,
+        "exercise": 962.7000000476837,
+        "clicks": {
+          "chapter": 799.9000000357628,
+          "activity": 865.7000000476837,
+          "exercise": 932.2000000476837
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:19122/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 47,
+          "navigationId": 3381,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.10000002384185791,
+          "domainLookupStart": 0.5,
+          "domainLookupEnd": 0.6000000238418579,
+          "connectStart": 0.6000000238418579,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.800000011920929,
+          "requestStart": 0.9000000357627869,
+          "responseStart": 9.900000035762787,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 9.900000035762787,
+          "responseEnd": 10.200000047683716,
+          "transferSize": 4516,
+          "encodedBodySize": 4216,
+          "decodedBodySize": 16743,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 26.400000035762787,
+          "domContentLoadedEventStart": 26.400000035762787,
+          "domContentLoadedEventEnd": 26.400000035762787,
+          "domComplete": 47,
+          "loadEventStart": 47,
+          "loadEventEnd": 47,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 11.700000047683716,
+            "endMs": 14.300000011920929,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 11.700000047683716,
+            "endMs": 15.300000011920929,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 12,
+            "endMs": 19.100000023841858,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 12,
+            "endMs": 19.200000047683716,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 12,
+            "endMs": 19.400000035762787,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 12,
+            "endMs": 23.600000023841858,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 12.100000023841858,
+            "endMs": 19.200000047683716,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 12.100000023841858,
+            "endMs": 34,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/index-8AhZvFgt.js",
+            "startMs": 12.100000023841858,
+            "endMs": 36,
+            "encodedBodySize": 33370,
+            "decodedBodySize": 115667,
+            "transferSize": 33670
+          },
+          {
+            "path": "/_next/static/chunks/vinext-qTIYcz-J.js",
+            "startMs": 12.100000023841858,
+            "endMs": 36.90000003576279,
+            "encodedBodySize": 46219,
+            "decodedBodySize": 153991,
+            "transferSize": 46519
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 12.100000023841858,
+            "endMs": 37.40000003576279,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-Ds2JwQdK.js",
+            "startMs": 12.100000023841858,
+            "endMs": 47.90000003576279,
+            "encodedBodySize": 278100,
+            "decodedBodySize": 1826770,
+            "transferSize": 278400
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-DNp5qKkd.js",
+            "startMs": 59.10000002384186,
+            "endMs": 61.80000001192093,
+            "encodedBodySize": 668,
+            "decodedBodySize": 1555,
+            "transferSize": 968
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-BXsu-DGD.js",
+            "startMs": 59.200000047683716,
+            "endMs": 117.60000002384186,
+            "encodedBodySize": 1375926,
+            "decodedBodySize": 7979517,
+            "transferSize": 1376226
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 59.200000047683716,
+            "endMs": 191.70000004768372,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/_next/static/chunks/staff-apps-CFt9ah_M.js",
+            "startMs": 59.30000001192093,
+            "endMs": 125.30000001192093,
+            "encodedBodySize": 21772,
+            "decodedBodySize": 78919,
+            "transferSize": 22072
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 59.30000001192093,
+            "endMs": 184.10000002384186,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/chunks/package-exercise-browser-BeHUjGIB.js",
+            "startMs": 59.40000003576279,
+            "endMs": 142.10000002384186,
+            "encodedBodySize": 145762,
+            "decodedBodySize": 867817,
+            "transferSize": 146062
+          },
+          {
+            "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+            "startMs": 59.5,
+            "endMs": 123.5,
+            "encodedBodySize": 595,
+            "decodedBodySize": 1410,
+            "transferSize": 895
+          },
+          {
+            "path": "/_next/static/chunks/package-experience-Doj7TcdF.js",
+            "startMs": 59.5,
+            "endMs": 201.60000002384186,
+            "encodedBodySize": 50289,
+            "decodedBodySize": 279427,
+            "transferSize": 50589
+          },
+          {
+            "path": "/_next/static/chunks/learner-app-9VDkATsD.js",
+            "startMs": 125.80000001192093,
+            "endMs": 204.4000000357628,
+            "encodedBodySize": 106734,
+            "decodedBodySize": 502942,
+            "transferSize": 107034
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 347.4000000357628,
+            "endMs": 349.2000000476837,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 349.2000000476837,
+            "endMs": 351.30000001192093,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 350.30000001192093,
+            "endMs": 352.9000000357628,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 351.60000002384186,
+            "endMs": 357.2000000476837,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.10000002384186,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.10000002384186,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.30000001192093,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 357.4000000357628,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 358.2000000476837,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 362.30000001192093,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 362.4000000357628,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 351.7000000476837,
+            "endMs": 362.5,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 351.80000001192093,
+            "endMs": 362.30000001192093,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 351.80000001192093,
+            "endMs": 363.60000002384186,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          },
+          {
+            "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+            "startMs": 354.9000000357628,
+            "endMs": 362.60000002384186,
+            "encodedBodySize": 4736,
+            "decodedBodySize": 23513,
+            "transferSize": 5036
+          },
+          {
+            "path": "/compact-images-20261031/01b131359f7a2357b3d0.webp",
+            "startMs": 881.1000000238419,
+            "endMs": 884,
+            "encodedBodySize": 31162,
+            "decodedBodySize": 31162,
+            "transferSize": 31462
+          },
+          {
+            "path": "/compact-images-20261031/c137d7cff03821e7e7f7.webp",
+            "startMs": 881.2000000476837,
+            "endMs": 889,
+            "encodedBodySize": 9148,
+            "decodedBodySize": 9148,
+            "transferSize": 9448
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-pak-action-03.webp",
+            "startMs": 881.2000000476837,
+            "endMs": 889.6000000238419,
+            "encodedBodySize": 37200,
+            "decodedBodySize": 37200,
+            "transferSize": 37500
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-kat-context-02.webp",
+            "startMs": 881.2000000476837,
+            "endMs": 889.8000000119209,
+            "encodedBodySize": 54108,
+            "decodedBodySize": 54108,
+            "transferSize": 54408
+          },
+          {
+            "path": "/compact-images-20261031/0f34dfb6dac6385c5b07.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 889.4000000357628,
+            "encodedBodySize": 17416,
+            "decodedBodySize": 17416,
+            "transferSize": 17716
+          },
+          {
+            "path": "/compact-images-20261031/7f8e734ca2cda69b287c.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 890.3000000119209,
+            "encodedBodySize": 74494,
+            "decodedBodySize": 74494,
+            "transferSize": 74794
+          },
+          {
+            "path": "/compact-images-20261031/7b8f9e028293acf472d0.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 893,
+            "encodedBodySize": 15650,
+            "decodedBodySize": 15650,
+            "transferSize": 15950
+          },
+          {
+            "path": "/compact-images-20261031/ff5aaa811e73d8832af0.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 893.1000000238419,
+            "encodedBodySize": 13978,
+            "decodedBodySize": 13978,
+            "transferSize": 14278
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 894.7000000476837,
+            "encodedBodySize": 44298,
+            "decodedBodySize": 44298,
+            "transferSize": 44598
+          },
+          {
+            "path": "/compact-images-20261031/181c71199990cfe8fbe8.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 894.9000000357628,
+            "encodedBodySize": 32464,
+            "decodedBodySize": 32464,
+            "transferSize": 32764
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-boon-context-02.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 894.9000000357628,
+            "encodedBodySize": 46184,
+            "decodedBodySize": 46184,
+            "transferSize": 46484
+          },
+          {
+            "path": "/compact-images-20261031/1bc4a9d2ba6cb4ce42a5.webp",
+            "startMs": 881.3000000119209,
+            "endMs": 896,
+            "encodedBodySize": 27804,
+            "decodedBodySize": 27804,
+            "transferSize": 28104
+          },
+          {
+            "path": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "startMs": 953.2000000476837,
+            "endMs": 954.7000000476837,
+            "encodedBodySize": 12685,
+            "decodedBodySize": 12685,
+            "transferSize": 12985
+          }
+        ]
+      },
+      "exerciseId": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "exerciseMediaReadyMs": 995.8000000119209,
+      "chapterClickMs": 41.30000001192093,
+      "activityClickMs": 31,
+      "exerciseClickMs": 30.5,
+      "firstChoiceToExerciseMs": 162.80000001192093,
+      "openingToExerciseMs": 962.7000000476837
+    },
+    {
+      "width": 1280,
+      "repeat": 0,
+      "version": "after",
+      "opening": {
+        "home": 722.6999999880791,
+        "chapter": null,
+        "activity": null,
+        "exercise": null,
+        "clicks": {},
+        "navigation": {
+          "name": "http://127.0.0.1:19120/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 58.69999998807907,
+          "navigationId": 5355,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.09999996423721313,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.5999999642372131,
+          "requestStart": 0.699999988079071,
+          "responseStart": 3.699999988079071,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 3.699999988079071,
+          "responseEnd": 3.899999976158142,
+          "transferSize": 4523,
+          "encodedBodySize": 4223,
+          "decodedBodySize": 16755,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 25.5,
+          "domContentLoadedEventStart": 25.5,
+          "domContentLoadedEventEnd": 25.5,
+          "domComplete": 58.69999998807907,
+          "loadEventStart": 58.69999998807907,
+          "loadEventEnd": 58.69999998807907,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 5.099999964237213,
+            "endMs": 7.599999964237213,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 5.199999988079071,
+            "endMs": 8.5,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 5.399999976158142,
+            "endMs": 12.399999976158142,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 5.399999976158142,
+            "endMs": 12.300000011920929,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 5.399999976158142,
+            "endMs": 12.800000011920929,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/chunks/index-CORZK72K.js",
+            "startMs": 5.399999976158142,
+            "endMs": 19.599999964237213,
+            "encodedBodySize": 33401,
+            "decodedBodySize": 115718,
+            "transferSize": 33701
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 5.399999976158142,
+            "endMs": 22.5,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 5.5,
+            "endMs": 12.199999988079071,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/_next/static/chunks/vinext-DJT5fEop.js",
+            "startMs": 5.5,
+            "endMs": 19.899999976158142,
+            "encodedBodySize": 41496,
+            "decodedBodySize": 138416,
+            "transferSize": 41796
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 5.5,
+            "endMs": 29.69999998807907,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-CQvEAPZN.js",
+            "startMs": 5.5,
+            "endMs": 39.39999997615814,
+            "encodedBodySize": 282948,
+            "decodedBodySize": 1842433,
+            "transferSize": 283248
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 5.599999964237213,
+            "endMs": 27.399999976158142,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-BsLYDddo.js",
+            "startMs": 62.30000001192093,
+            "endMs": 64.39999997615814,
+            "encodedBodySize": 623,
+            "decodedBodySize": 1409,
+            "transferSize": 923
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-CPAVkv8B.js",
+            "startMs": 62.30000001192093,
+            "endMs": 122.39999997615814,
+            "encodedBodySize": 1479751,
+            "decodedBodySize": 8435014,
+            "transferSize": 1480051
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 62.30000001192093,
+            "endMs": 180.19999998807907,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 62.39999997615814,
+            "endMs": 173.19999998807907,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/css/route-settings.BYbtnqiJ.css",
+            "startMs": 62.5,
+            "endMs": 124.80000001192093,
+            "encodedBodySize": 917,
+            "decodedBodySize": 2693,
+            "transferSize": 1217
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 314.5999999642372,
+            "endMs": 316.0999999642372,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 316.39999997615814,
+            "endMs": 317.5999999642372,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 317.39999997615814,
+            "endMs": 318.30000001192093,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 318.69999998807907,
+            "endMs": 320.69999998807907,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 318.69999998807907,
+            "endMs": 323.80000001192093,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 318.69999998807907,
+            "endMs": 324,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 323.69999998807907,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 323.80000001192093,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 324.0999999642372,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 324.69999998807907,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 328.0999999642372,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 328.19999998807907,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 318.89999997615814,
+            "endMs": 327.89999997615814,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 318.89999997615814,
+            "endMs": 328.0999999642372,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          }
+        ]
+      },
+      "exercise": {
+        "home": 722.6999999880791,
+        "chapter": 825.8000000119209,
+        "activity": 895.0999999642372,
+        "exercise": 973,
+        "clicks": {
+          "chapter": 778.6999999880791,
+          "activity": 859,
+          "exercise": 925
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:19120/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 58.69999998807907,
+          "navigationId": 5355,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.09999996423721313,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.5999999642372131,
+          "requestStart": 0.699999988079071,
+          "responseStart": 3.699999988079071,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 3.699999988079071,
+          "responseEnd": 3.899999976158142,
+          "transferSize": 4523,
+          "encodedBodySize": 4223,
+          "decodedBodySize": 16755,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 25.5,
+          "domContentLoadedEventStart": 25.5,
+          "domContentLoadedEventEnd": 25.5,
+          "domComplete": 58.69999998807907,
+          "loadEventStart": 58.69999998807907,
+          "loadEventEnd": 58.69999998807907,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 5.099999964237213,
+            "endMs": 7.599999964237213,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 5.199999988079071,
+            "endMs": 8.5,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 5.399999976158142,
+            "endMs": 12.399999976158142,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 5.399999976158142,
+            "endMs": 12.300000011920929,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 5.399999976158142,
+            "endMs": 12.800000011920929,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/chunks/index-CORZK72K.js",
+            "startMs": 5.399999976158142,
+            "endMs": 19.599999964237213,
+            "encodedBodySize": 33401,
+            "decodedBodySize": 115718,
+            "transferSize": 33701
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 5.399999976158142,
+            "endMs": 22.5,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 5.5,
+            "endMs": 12.199999988079071,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/_next/static/chunks/vinext-DJT5fEop.js",
+            "startMs": 5.5,
+            "endMs": 19.899999976158142,
+            "encodedBodySize": 41496,
+            "decodedBodySize": 138416,
+            "transferSize": 41796
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 5.5,
+            "endMs": 29.69999998807907,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-CQvEAPZN.js",
+            "startMs": 5.5,
+            "endMs": 39.39999997615814,
+            "encodedBodySize": 282948,
+            "decodedBodySize": 1842433,
+            "transferSize": 283248
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 5.599999964237213,
+            "endMs": 27.399999976158142,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-BsLYDddo.js",
+            "startMs": 62.30000001192093,
+            "endMs": 64.39999997615814,
+            "encodedBodySize": 623,
+            "decodedBodySize": 1409,
+            "transferSize": 923
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-CPAVkv8B.js",
+            "startMs": 62.30000001192093,
+            "endMs": 122.39999997615814,
+            "encodedBodySize": 1479751,
+            "decodedBodySize": 8435014,
+            "transferSize": 1480051
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 62.30000001192093,
+            "endMs": 180.19999998807907,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 62.39999997615814,
+            "endMs": 173.19999998807907,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/css/route-settings.BYbtnqiJ.css",
+            "startMs": 62.5,
+            "endMs": 124.80000001192093,
+            "encodedBodySize": 917,
+            "decodedBodySize": 2693,
+            "transferSize": 1217
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 314.5999999642372,
+            "endMs": 316.0999999642372,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 316.39999997615814,
+            "endMs": 317.5999999642372,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 317.39999997615814,
+            "endMs": 318.30000001192093,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 318.69999998807907,
+            "endMs": 320.69999998807907,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 318.69999998807907,
+            "endMs": 323.80000001192093,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 318.69999998807907,
+            "endMs": 324,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 323.69999998807907,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 323.80000001192093,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 324.0999999642372,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 324.69999998807907,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 328.0999999642372,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 318.80000001192093,
+            "endMs": 328.19999998807907,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 318.89999997615814,
+            "endMs": 327.89999997615814,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 318.89999997615814,
+            "endMs": 328.0999999642372,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          },
+          {
+            "path": "/_next/static/chunks/learner-rounds-Y5AiluIv.js",
+            "startMs": 859.1999999880791,
+            "endMs": 872.1999999880791,
+            "encodedBodySize": 196440,
+            "decodedBodySize": 1196161,
+            "transferSize": 196740
+          },
+          {
+            "path": "/_next/static/css/learner-rounds.ByxIQvFe.css",
+            "startMs": 859.3000000119209,
+            "endMs": 861.1999999880791,
+            "encodedBodySize": 4505,
+            "decodedBodySize": 22230,
+            "transferSize": 4805
+          },
+          {
+            "path": "/compact-images-20261031/01b131359f7a2357b3d0.webp",
+            "startMs": 874.5999999642372,
+            "endMs": 879.5,
+            "encodedBodySize": 31162,
+            "decodedBodySize": 31162,
+            "transferSize": 31462
+          },
+          {
+            "path": "/compact-images-20261031/c137d7cff03821e7e7f7.webp",
+            "startMs": 874.5999999642372,
+            "endMs": 879.5999999642372,
+            "encodedBodySize": 9148,
+            "decodedBodySize": 9148,
+            "transferSize": 9448
+          },
+          {
+            "path": "/compact-images-20261031/0f34dfb6dac6385c5b07.webp",
+            "startMs": 874.5999999642372,
+            "endMs": 882.1999999880791,
+            "encodedBodySize": 17416,
+            "decodedBodySize": 17416,
+            "transferSize": 17716
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-kat-context-02.webp",
+            "startMs": 874.5999999642372,
+            "endMs": 882.3999999761581,
+            "encodedBodySize": 54108,
+            "decodedBodySize": 54108,
+            "transferSize": 54408
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-pak-action-03.webp",
+            "startMs": 874.5999999642372,
+            "endMs": 882.1999999880791,
+            "encodedBodySize": 37200,
+            "decodedBodySize": 37200,
+            "transferSize": 37500
+          },
+          {
+            "path": "/compact-images-20261031/7f8e734ca2cda69b287c.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 882.5999999642372,
+            "encodedBodySize": 74494,
+            "decodedBodySize": 74494,
+            "transferSize": 74794
+          },
+          {
+            "path": "/compact-images-20261031/1bc4a9d2ba6cb4ce42a5.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 884.3000000119209,
+            "encodedBodySize": 27804,
+            "decodedBodySize": 27804,
+            "transferSize": 28104
+          },
+          {
+            "path": "/compact-images-20261031/7b8f9e028293acf472d0.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 884.3999999761581,
+            "encodedBodySize": 15650,
+            "decodedBodySize": 15650,
+            "transferSize": 15950
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-boon-context-02.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 887.5999999642372,
+            "encodedBodySize": 46184,
+            "decodedBodySize": 46184,
+            "transferSize": 46484
+          },
+          {
+            "path": "/compact-images-20261031/181c71199990cfe8fbe8.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 887.5,
+            "encodedBodySize": 32464,
+            "decodedBodySize": 32464,
+            "transferSize": 32764
+          },
+          {
+            "path": "/compact-images-20261031/ff5aaa811e73d8832af0.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 887.5,
+            "encodedBodySize": 13978,
+            "decodedBodySize": 13978,
+            "transferSize": 14278
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "startMs": 874.6999999880791,
+            "endMs": 887.5999999642372,
+            "encodedBodySize": 44298,
+            "decodedBodySize": 44298,
+            "transferSize": 44598
+          },
+          {
+            "path": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "startMs": 953.1999999880791,
+            "endMs": 954.5999999642372,
+            "encodedBodySize": 12685,
+            "decodedBodySize": 12685,
+            "transferSize": 12985
+          }
+        ]
+      },
+      "exerciseId": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "exerciseMediaReadyMs": 1023.3999999761581,
+      "chapterClickMs": 47.10000002384186,
+      "activityClickMs": 36.09999996423721,
+      "exerciseClickMs": 48,
+      "firstChoiceToExerciseMs": 194.30000001192093,
+      "openingToExerciseMs": 973
+    },
+    {
+      "width": 390,
+      "repeat": 0,
+      "version": "before",
+      "opening": {
+        "home": 774,
+        "chapter": null,
+        "activity": null,
+        "exercise": null,
+        "clicks": {},
+        "navigation": {
+          "name": "http://127.0.0.1:19122/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 46.60000002384186,
+          "navigationId": 7328,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.10000002384185791,
+          "domainLookupStart": 0.30000001192092896,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.699999988079071,
+          "requestStart": 0.699999988079071,
+          "responseStart": 3.699999988079071,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 3.699999988079071,
+          "responseEnd": 4,
+          "transferSize": 4516,
+          "encodedBodySize": 4216,
+          "decodedBodySize": 16743,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 21.100000023841858,
+          "domContentLoadedEventStart": 21.100000023841858,
+          "domContentLoadedEventEnd": 21.100000023841858,
+          "domComplete": 46.60000002384186,
+          "loadEventStart": 46.60000002384186,
+          "loadEventEnd": 46.60000002384186,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 5.300000011920929,
+            "endMs": 7.600000023841858,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 5.300000011920929,
+            "endMs": 8.800000011920929,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 5.600000023841858,
+            "endMs": 12.900000035762787,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 5.600000023841858,
+            "endMs": 12.800000011920929,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 5.600000023841858,
+            "endMs": 13,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 5.600000023841858,
+            "endMs": 13.100000023841858,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 5.600000023841858,
+            "endMs": 18.100000023841858,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/index-8AhZvFgt.js",
+            "startMs": 5.600000023841858,
+            "endMs": 33.30000001192093,
+            "encodedBodySize": 33370,
+            "decodedBodySize": 115667,
+            "transferSize": 33670
+          },
+          {
+            "path": "/_next/static/chunks/vinext-qTIYcz-J.js",
+            "startMs": 5.699999988079071,
+            "endMs": 34.80000001192093,
+            "encodedBodySize": 46219,
+            "decodedBodySize": 153991,
+            "transferSize": 46519
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 5.699999988079071,
+            "endMs": 35.40000003576279,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-Ds2JwQdK.js",
+            "startMs": 5.699999988079071,
+            "endMs": 50,
+            "encodedBodySize": 278100,
+            "decodedBodySize": 1826770,
+            "transferSize": 278400
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 5.800000011920929,
+            "endMs": 30.100000023841858,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-DNp5qKkd.js",
+            "startMs": 62.5,
+            "endMs": 64.69999998807907,
+            "encodedBodySize": 668,
+            "decodedBodySize": 1555,
+            "transferSize": 968
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-BXsu-DGD.js",
+            "startMs": 62.69999998807907,
+            "endMs": 225.60000002384186,
+            "encodedBodySize": 1375926,
+            "decodedBodySize": 7979517,
+            "transferSize": 1376226
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 62.80000001192093,
+            "endMs": 177.60000002384186,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 62.80000001192093,
+            "endMs": 215.30000001192093,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/_next/static/chunks/staff-apps-CFt9ah_M.js",
+            "startMs": 62.90000003576279,
+            "endMs": 71.5,
+            "encodedBodySize": 21772,
+            "decodedBodySize": 78919,
+            "transferSize": 22072
+          },
+          {
+            "path": "/_next/static/chunks/package-exercise-browser-BeHUjGIB.js",
+            "startMs": 62.90000003576279,
+            "endMs": 97.30000001192093,
+            "encodedBodySize": 145762,
+            "decodedBodySize": 867817,
+            "transferSize": 146062
+          },
+          {
+            "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+            "startMs": 63,
+            "endMs": 228.19999998807907,
+            "encodedBodySize": 595,
+            "decodedBodySize": 1410,
+            "transferSize": 895
+          },
+          {
+            "path": "/_next/static/chunks/package-experience-Doj7TcdF.js",
+            "startMs": 63,
+            "endMs": 230.9000000357628,
+            "encodedBodySize": 50289,
+            "decodedBodySize": 279427,
+            "transferSize": 50589
+          },
+          {
+            "path": "/_next/static/chunks/learner-app-9VDkATsD.js",
+            "startMs": 228.60000002384186,
+            "endMs": 239.9000000357628,
+            "encodedBodySize": 106734,
+            "decodedBodySize": 502942,
+            "transferSize": 107034
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 368.69999998807907,
+            "endMs": 370.60000002384186,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 370.69999998807907,
+            "endMs": 373.19999998807907,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 371.69999998807907,
+            "endMs": 375.69999998807907,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 373.10000002384186,
+            "endMs": 385.10000002384186,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 373.10000002384186,
+            "endMs": 385.30000001192093,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 373.10000002384186,
+            "endMs": 385.4000000357628,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 384.5,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 384.9000000357628,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 386.10000002384186,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.5,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.60000002384186,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.69999998807907,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.69999998807907,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 391,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/alfabetaplus-logo.png",
+            "startMs": 385.4000000357628,
+            "endMs": 396.4000000357628,
+            "encodedBodySize": 9086,
+            "decodedBodySize": 9086,
+            "transferSize": 9386
+          },
+          {
+            "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+            "startMs": 393.69999998807907,
+            "endMs": 397.69999998807907,
+            "encodedBodySize": 4736,
+            "decodedBodySize": 23513,
+            "transferSize": 5036
+          }
+        ]
+      },
+      "exercise": {
+        "home": 774,
+        "chapter": 860.4000000357628,
+        "activity": 922.8000000119209,
+        "exercise": 989.5,
+        "clicks": {
+          "chapter": 825.6000000238419,
+          "activity": 891.4000000357628,
+          "exercise": 958.6999999880791
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:19122/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 46.60000002384186,
+          "navigationId": 7328,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.10000002384185791,
+          "domainLookupStart": 0.30000001192092896,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.699999988079071,
+          "requestStart": 0.699999988079071,
+          "responseStart": 3.699999988079071,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 3.699999988079071,
+          "responseEnd": 4,
+          "transferSize": 4516,
+          "encodedBodySize": 4216,
+          "decodedBodySize": 16743,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 21.100000023841858,
+          "domContentLoadedEventStart": 21.100000023841858,
+          "domContentLoadedEventEnd": 21.100000023841858,
+          "domComplete": 46.60000002384186,
+          "loadEventStart": 46.60000002384186,
+          "loadEventEnd": 46.60000002384186,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 5.300000011920929,
+            "endMs": 7.600000023841858,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 5.300000011920929,
+            "endMs": 8.800000011920929,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 5.600000023841858,
+            "endMs": 12.900000035762787,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 5.600000023841858,
+            "endMs": 12.800000011920929,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 5.600000023841858,
+            "endMs": 13,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 5.600000023841858,
+            "endMs": 13.100000023841858,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 5.600000023841858,
+            "endMs": 18.100000023841858,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/index-8AhZvFgt.js",
+            "startMs": 5.600000023841858,
+            "endMs": 33.30000001192093,
+            "encodedBodySize": 33370,
+            "decodedBodySize": 115667,
+            "transferSize": 33670
+          },
+          {
+            "path": "/_next/static/chunks/vinext-qTIYcz-J.js",
+            "startMs": 5.699999988079071,
+            "endMs": 34.80000001192093,
+            "encodedBodySize": 46219,
+            "decodedBodySize": 153991,
+            "transferSize": 46519
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 5.699999988079071,
+            "endMs": 35.40000003576279,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-Ds2JwQdK.js",
+            "startMs": 5.699999988079071,
+            "endMs": 50,
+            "encodedBodySize": 278100,
+            "decodedBodySize": 1826770,
+            "transferSize": 278400
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 5.800000011920929,
+            "endMs": 30.100000023841858,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-DNp5qKkd.js",
+            "startMs": 62.5,
+            "endMs": 64.69999998807907,
+            "encodedBodySize": 668,
+            "decodedBodySize": 1555,
+            "transferSize": 968
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-BXsu-DGD.js",
+            "startMs": 62.69999998807907,
+            "endMs": 225.60000002384186,
+            "encodedBodySize": 1375926,
+            "decodedBodySize": 7979517,
+            "transferSize": 1376226
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 62.80000001192093,
+            "endMs": 177.60000002384186,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 62.80000001192093,
+            "endMs": 215.30000001192093,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/_next/static/chunks/staff-apps-CFt9ah_M.js",
+            "startMs": 62.90000003576279,
+            "endMs": 71.5,
+            "encodedBodySize": 21772,
+            "decodedBodySize": 78919,
+            "transferSize": 22072
+          },
+          {
+            "path": "/_next/static/chunks/package-exercise-browser-BeHUjGIB.js",
+            "startMs": 62.90000003576279,
+            "endMs": 97.30000001192093,
+            "encodedBodySize": 145762,
+            "decodedBodySize": 867817,
+            "transferSize": 146062
+          },
+          {
+            "path": "/_next/static/css/package-exercise-browser.BHa0Gynw.css",
+            "startMs": 63,
+            "endMs": 228.19999998807907,
+            "encodedBodySize": 595,
+            "decodedBodySize": 1410,
+            "transferSize": 895
+          },
+          {
+            "path": "/_next/static/chunks/package-experience-Doj7TcdF.js",
+            "startMs": 63,
+            "endMs": 230.9000000357628,
+            "encodedBodySize": 50289,
+            "decodedBodySize": 279427,
+            "transferSize": 50589
+          },
+          {
+            "path": "/_next/static/chunks/learner-app-9VDkATsD.js",
+            "startMs": 228.60000002384186,
+            "endMs": 239.9000000357628,
+            "encodedBodySize": 106734,
+            "decodedBodySize": 502942,
+            "transferSize": 107034
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 368.69999998807907,
+            "endMs": 370.60000002384186,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 370.69999998807907,
+            "endMs": 373.19999998807907,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 371.69999998807907,
+            "endMs": 375.69999998807907,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 373.10000002384186,
+            "endMs": 385.10000002384186,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 373.10000002384186,
+            "endMs": 385.30000001192093,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 373.10000002384186,
+            "endMs": 385.4000000357628,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 384.5,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 384.9000000357628,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 386.10000002384186,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.5,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.60000002384186,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.69999998807907,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 390.69999998807907,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 373.19999998807907,
+            "endMs": 391,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/alfabetaplus-logo.png",
+            "startMs": 385.4000000357628,
+            "endMs": 396.4000000357628,
+            "encodedBodySize": 9086,
+            "decodedBodySize": 9086,
+            "transferSize": 9386
+          },
+          {
+            "path": "/_next/static/css/learner-app.B7ojm1Zn.css",
+            "startMs": 393.69999998807907,
+            "endMs": 397.69999998807907,
+            "encodedBodySize": 4736,
+            "decodedBodySize": 23513,
+            "transferSize": 5036
+          },
+          {
+            "path": "/compact-images-20261031/01b131359f7a2357b3d0.webp",
+            "startMs": 907,
+            "endMs": 909.6000000238419,
+            "encodedBodySize": 31162,
+            "decodedBodySize": 31162,
+            "transferSize": 31462
+          },
+          {
+            "path": "/compact-images-20261031/c137d7cff03821e7e7f7.webp",
+            "startMs": 907.1000000238419,
+            "endMs": 911.9000000357628,
+            "encodedBodySize": 9148,
+            "decodedBodySize": 9148,
+            "transferSize": 9448
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-pak-action-03.webp",
+            "startMs": 907.1999999880791,
+            "endMs": 911.8000000119209,
+            "encodedBodySize": 37200,
+            "decodedBodySize": 37200,
+            "transferSize": 37500
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-kat-context-02.webp",
+            "startMs": 907.1999999880791,
+            "endMs": 912,
+            "encodedBodySize": 54108,
+            "decodedBodySize": 54108,
+            "transferSize": 54408
+          },
+          {
+            "path": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "startMs": 982.3000000119209,
+            "endMs": 984,
+            "encodedBodySize": 12685,
+            "decodedBodySize": 12685,
+            "transferSize": 12985
+          }
+        ]
+      },
+      "exerciseId": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "exerciseMediaReadyMs": 1022.9000000357628,
+      "chapterClickMs": 34.80000001192093,
+      "activityClickMs": 31.399999976158142,
+      "exerciseClickMs": 30.80000001192093,
+      "firstChoiceToExerciseMs": 163.89999997615814,
+      "openingToExerciseMs": 989.5
+    },
+    {
+      "width": 390,
+      "repeat": 0,
+      "version": "after",
+      "opening": {
+        "home": 688.6000000238419,
+        "chapter": null,
+        "activity": null,
+        "exercise": null,
+        "clicks": {},
+        "navigation": {
+          "name": "http://127.0.0.1:19120/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 57.5,
+          "navigationId": 8171,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.10000002384185791,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.699999988079071,
+          "requestStart": 0.699999988079071,
+          "responseStart": 2.399999976158142,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.399999976158142,
+          "responseEnd": 2.899999976158142,
+          "transferSize": 4523,
+          "encodedBodySize": 4223,
+          "decodedBodySize": 16755,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 19.19999998807907,
+          "domContentLoadedEventStart": 19.19999998807907,
+          "domContentLoadedEventEnd": 19.19999998807907,
+          "domComplete": 57.5,
+          "loadEventStart": 57.5,
+          "loadEventEnd": 57.5,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 3.899999976158142,
+            "endMs": 6.800000011920929,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 4,
+            "endMs": 8.100000023841858,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 4.199999988079071,
+            "endMs": 11.300000011920929,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 4.199999988079071,
+            "endMs": 11.800000011920929,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 4.300000011920929,
+            "endMs": 11.300000011920929,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 4.300000011920929,
+            "endMs": 11.600000023841858,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 4.300000011920929,
+            "endMs": 16.399999976158142,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/index-CORZK72K.js",
+            "startMs": 4.300000011920929,
+            "endMs": 27.5,
+            "encodedBodySize": 33401,
+            "decodedBodySize": 115718,
+            "transferSize": 33701
+          },
+          {
+            "path": "/_next/static/chunks/vinext-DJT5fEop.js",
+            "startMs": 4.399999976158142,
+            "endMs": 28.100000023841858,
+            "encodedBodySize": 41496,
+            "decodedBodySize": 138416,
+            "transferSize": 41796
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 4.399999976158142,
+            "endMs": 29.100000023841858,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-CQvEAPZN.js",
+            "startMs": 4.399999976158142,
+            "endMs": 39.5,
+            "encodedBodySize": 282948,
+            "decodedBodySize": 1842433,
+            "transferSize": 283248
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 4.5,
+            "endMs": 25.600000023841858,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-BsLYDddo.js",
+            "startMs": 60.39999997615814,
+            "endMs": 62.30000001192093,
+            "encodedBodySize": 623,
+            "decodedBodySize": 1409,
+            "transferSize": 923
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-CPAVkv8B.js",
+            "startMs": 60.5,
+            "endMs": 185.60000002384186,
+            "encodedBodySize": 1479751,
+            "decodedBodySize": 8435014,
+            "transferSize": 1480051
+          },
+          {
+            "path": "/_next/static/css/route-settings.BYbtnqiJ.css",
+            "startMs": 60.60000002384186,
+            "endMs": 65.69999998807907,
+            "encodedBodySize": 917,
+            "decodedBodySize": 2693,
+            "transferSize": 1217
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 60.60000002384186,
+            "endMs": 142.89999997615814,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 60.60000002384186,
+            "endMs": 173.69999998807907,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 298.89999997615814,
+            "endMs": 300.30000001192093,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 300.5,
+            "endMs": 301.69999998807907,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 301.39999997615814,
+            "endMs": 303.19999998807907,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 302.60000002384186,
+            "endMs": 305.39999997615814,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 302.60000002384186,
+            "endMs": 305.39999997615814,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 302.60000002384186,
+            "endMs": 305.5,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 307.10000002384186,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 307.10000002384186,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 307.19999998807907,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 308.80000001192093,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 308.80000001192093,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 308.89999997615814,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 310.39999997615814,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 310.5,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          }
+        ]
+      },
+      "exercise": {
+        "home": 688.6000000238419,
+        "chapter": 789.3000000119209,
+        "activity": 842.3999999761581,
+        "exercise": 922,
+        "clicks": {
+          "chapter": 742.8000000119209,
+          "activity": 807.3000000119209,
+          "exercise": 873.8000000119209
+        },
+        "navigation": {
+          "name": "http://127.0.0.1:19120/#learner",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 57.5,
+          "navigationId": 8171,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "http/1.1",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "gzip",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.10000002384185791,
+          "domainLookupStart": 0.3999999761581421,
+          "domainLookupEnd": 0.5,
+          "connectStart": 0.5,
+          "secureConnectionStart": 0,
+          "connectEnd": 0.699999988079071,
+          "requestStart": 0.699999988079071,
+          "responseStart": 2.399999976158142,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 2.399999976158142,
+          "responseEnd": 2.899999976158142,
+          "transferSize": 4523,
+          "encodedBodySize": 4223,
+          "decodedBodySize": 16755,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 19.19999998807907,
+          "domContentLoadedEventStart": 19.19999998807907,
+          "domContentLoadedEventEnd": 19.19999998807907,
+          "domComplete": 57.5,
+          "loadEventStart": 57.5,
+          "loadEventEnd": 57.5,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "path": "/_next/static/_vinext_fonts/geist-8ac0455e797f/geist-98bbbccb.woff2",
+            "startMs": 3.899999976158142,
+            "endMs": 6.800000011920929,
+            "encodedBodySize": 29288,
+            "decodedBodySize": 29288,
+            "transferSize": 29588
+          },
+          {
+            "path": "/_next/static/_vinext_fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2",
+            "startMs": 4,
+            "endMs": 8.100000023841858,
+            "encodedBodySize": 23108,
+            "decodedBodySize": 23108,
+            "transferSize": 23408
+          },
+          {
+            "path": "/taalroute-menu/appearance.js",
+            "startMs": 4.199999988079071,
+            "endMs": 11.300000011920929,
+            "encodedBodySize": 795,
+            "decodedBodySize": 1969,
+            "transferSize": 1095
+          },
+          {
+            "path": "/taalroute-menu/menu-controls.js",
+            "startMs": 4.199999988079071,
+            "endMs": 11.800000011920929,
+            "encodedBodySize": 4690,
+            "decodedBodySize": 12795,
+            "transferSize": 4990
+          },
+          {
+            "path": "/_next/static/css/klink-opening-loader.xc0oAH1v.css",
+            "startMs": 4.300000011920929,
+            "endMs": 11.300000011920929,
+            "encodedBodySize": 237,
+            "decodedBodySize": 343,
+            "transferSize": 537
+          },
+          {
+            "path": "/_next/static/chunks/rolldown-runtime-hePW80VL.js",
+            "startMs": 4.300000011920929,
+            "endMs": 11.600000023841858,
+            "encodedBodySize": 428,
+            "decodedBodySize": 716,
+            "transferSize": 728
+          },
+          {
+            "path": "/_next/static/css/index.4hauaJZ8.css",
+            "startMs": 4.300000011920929,
+            "endMs": 16.399999976158142,
+            "encodedBodySize": 86087,
+            "decodedBodySize": 543979,
+            "transferSize": 86387
+          },
+          {
+            "path": "/_next/static/chunks/index-CORZK72K.js",
+            "startMs": 4.300000011920929,
+            "endMs": 27.5,
+            "encodedBodySize": 33401,
+            "decodedBodySize": 115718,
+            "transferSize": 33701
+          },
+          {
+            "path": "/_next/static/chunks/vinext-DJT5fEop.js",
+            "startMs": 4.399999976158142,
+            "endMs": 28.100000023841858,
+            "encodedBodySize": 41496,
+            "decodedBodySize": 138416,
+            "transferSize": 41796
+          },
+          {
+            "path": "/_next/static/chunks/framework-5hhgsyNd.js",
+            "startMs": 4.399999976158142,
+            "endMs": 29.100000023841858,
+            "encodedBodySize": 59053,
+            "decodedBodySize": 190038,
+            "transferSize": 59353
+          },
+          {
+            "path": "/_next/static/chunks/shared-ui-CQvEAPZN.js",
+            "startMs": 4.399999976158142,
+            "endMs": 39.5,
+            "encodedBodySize": 282948,
+            "decodedBodySize": 1842433,
+            "transferSize": 283248
+          },
+          {
+            "path": "/opening-loader-v4-20261101/klink-static.svg",
+            "startMs": 4.5,
+            "endMs": 25.600000023841858,
+            "encodedBodySize": 48486,
+            "decodedBodySize": 67063,
+            "transferSize": 48786
+          },
+          {
+            "path": "/_next/static/chunks/practice-workspace-BsLYDddo.js",
+            "startMs": 60.39999997615814,
+            "endMs": 62.30000001192093,
+            "encodedBodySize": 623,
+            "decodedBodySize": 1409,
+            "transferSize": 923
+          },
+          {
+            "path": "/_next/static/chunks/route-settings-CPAVkv8B.js",
+            "startMs": 60.5,
+            "endMs": 185.60000002384186,
+            "encodedBodySize": 1479751,
+            "decodedBodySize": 8435014,
+            "transferSize": 1480051
+          },
+          {
+            "path": "/_next/static/css/route-settings.BYbtnqiJ.css",
+            "startMs": 60.60000002384186,
+            "endMs": 65.69999998807907,
+            "encodedBodySize": 917,
+            "decodedBodySize": 2693,
+            "transferSize": 1217
+          },
+          {
+            "path": "/_next/static/chunks/practice-word-bank-Bcirf0PG.js",
+            "startMs": 60.60000002384186,
+            "endMs": 142.89999997615814,
+            "encodedBodySize": 584022,
+            "decodedBodySize": 4603538,
+            "transferSize": 584322
+          },
+          {
+            "path": "/_next/static/chunks/practice-source-bank-D_epAxfj.js",
+            "startMs": 60.60000002384186,
+            "endMs": 173.69999998807907,
+            "encodedBodySize": 484303,
+            "decodedBodySize": 7029445,
+            "transferSize": 484603
+          },
+          {
+            "path": "/taalroute-logo.svg",
+            "startMs": 298.89999997615814,
+            "endMs": 300.30000001192093,
+            "encodedBodySize": 1799,
+            "decodedBodySize": 5133,
+            "transferSize": 2099
+          },
+          {
+            "path": "/klink-wordmark.svg",
+            "startMs": 300.5,
+            "endMs": 301.69999998807907,
+            "encodedBodySize": 4322,
+            "decodedBodySize": 12122,
+            "transferSize": 4622
+          },
+          {
+            "path": "/compact-images-20261031/4d90f848e6f725fad4af.webp",
+            "startMs": 301.39999997615814,
+            "endMs": 303.19999998807907,
+            "encodedBodySize": 31320,
+            "decodedBodySize": 31320,
+            "transferSize": 31620
+          },
+          {
+            "path": "/taalroute-menu/muziek.svg",
+            "startMs": 302.60000002384186,
+            "endMs": 305.39999997615814,
+            "encodedBodySize": 1855,
+            "decodedBodySize": 5197,
+            "transferSize": 2155
+          },
+          {
+            "path": "/taalroute-menu/actief.svg",
+            "startMs": 302.60000002384186,
+            "endMs": 305.39999997615814,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5233,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/studio.svg",
+            "startMs": 302.60000002384186,
+            "endMs": 305.5,
+            "encodedBodySize": 1833,
+            "decodedBodySize": 5169,
+            "transferSize": 2133
+          },
+          {
+            "path": "/taalroute-menu/spreektijd.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 307.10000002384186,
+            "encodedBodySize": 1870,
+            "decodedBodySize": 5237,
+            "transferSize": 2170
+          },
+          {
+            "path": "/taalroute-menu/klankstudio.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 307.10000002384186,
+            "encodedBodySize": 1880,
+            "decodedBodySize": 5238,
+            "transferSize": 2180
+          },
+          {
+            "path": "/taalroute-menu/digibord.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 307.19999998807907,
+            "encodedBodySize": 1877,
+            "decodedBodySize": 5235,
+            "transferSize": 2177
+          },
+          {
+            "path": "/taalroute-menu/missies.svg",
+            "startMs": 302.69999998807907,
+            "endMs": 308.80000001192093,
+            "encodedBodySize": 1875,
+            "decodedBodySize": 5234,
+            "transferSize": 2175
+          },
+          {
+            "path": "/taalroute-menu/oppad.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 308.80000001192093,
+            "encodedBodySize": 1674,
+            "decodedBodySize": 3408,
+            "transferSize": 1974
+          },
+          {
+            "path": "/compact-images-20261031/ce70a91ab0b5f8afafda.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 308.89999997615814,
+            "encodedBodySize": 12594,
+            "decodedBodySize": 19033,
+            "transferSize": 12894
+          },
+          {
+            "path": "/taalroute-menu/zinnen.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 310.39999997615814,
+            "encodedBodySize": 1823,
+            "decodedBodySize": 5159,
+            "transferSize": 2123
+          },
+          {
+            "path": "/taalroute-menu/klink-brand.svg",
+            "startMs": 302.80000001192093,
+            "endMs": 310.5,
+            "encodedBodySize": 1832,
+            "decodedBodySize": 5169,
+            "transferSize": 2132
+          },
+          {
+            "path": "/_next/static/chunks/learner-rounds-Y5AiluIv.js",
+            "startMs": 807.5,
+            "endMs": 821.6000000238419,
+            "encodedBodySize": 196440,
+            "decodedBodySize": 1196161,
+            "transferSize": 196740
+          },
+          {
+            "path": "/_next/static/css/learner-rounds.ByxIQvFe.css",
+            "startMs": 807.6000000238419,
+            "endMs": 810.3000000119209,
+            "encodedBodySize": 4505,
+            "decodedBodySize": 22230,
+            "transferSize": 4805
+          },
+          {
+            "path": "/compact-images-20261031/01b131359f7a2357b3d0.webp",
+            "startMs": 823,
+            "endMs": 825.3999999761581,
+            "encodedBodySize": 31162,
+            "decodedBodySize": 31162,
+            "transferSize": 31462
+          },
+          {
+            "path": "/compact-images-20261031/c137d7cff03821e7e7f7.webp",
+            "startMs": 823,
+            "endMs": 825.3999999761581,
+            "encodedBodySize": 9148,
+            "decodedBodySize": 9148,
+            "transferSize": 9448
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-kat-context-02.webp",
+            "startMs": 823,
+            "endMs": 827.5,
+            "encodedBodySize": 54108,
+            "decodedBodySize": 54108,
+            "transferSize": 54408
+          },
+          {
+            "path": "/package-media/cp001/aa-cp001-pak-action-03.webp",
+            "startMs": 823,
+            "endMs": 827.5,
+            "encodedBodySize": 37200,
+            "decodedBodySize": 37200,
+            "transferSize": 37500
+          },
+          {
+            "path": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "startMs": 903.8000000119209,
+            "endMs": 905.1999999880791,
+            "encodedBodySize": 12685,
+            "decodedBodySize": 12685,
+            "transferSize": 12985
+          }
+        ]
+      },
+      "exerciseId": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "exerciseMediaReadyMs": 971.6999999880791,
+      "chapterClickMs": 46.5,
+      "activityClickMs": 35.09999996423721,
+      "exerciseClickMs": 48.19999998807907,
+      "firstChoiceToExerciseMs": 179.19999998807907,
+      "openingToExerciseMs": 922
+    }
+  ],
+  "errors": []
+}

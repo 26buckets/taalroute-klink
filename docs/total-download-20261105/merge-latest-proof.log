@@ -1,0 +1,163 @@
+Merge made by the 'ort' strategy.
+ PUBLICATIE-ACTUEEL.md                              |    10 +
+ .../pointer-focus-20261105/postflight/RESULTAAT.md |    26 +
+ .../postflight/appearance-diagnostic.log           |    10 +
+ .../postflight/appearance.log                      |    18 +
+ docs/pointer-focus-20261105/postflight/backup.json |    33 +
+ docs/pointer-focus-20261105/postflight/banks.log   |     1 +
+ .../postflight/banks/offered-banks.json            |    59 +
+ .../postflight/check-live-collection-focus.mjs     |    17 +
+ .../postflight/check-live-focus.mjs                |    38 +
+ .../postflight/collection.log                      |     1 +
+ .../postflight/compare-live-appearance.mjs         |    26 +
+ docs/pointer-focus-20261105/postflight/deploy.log  |   539 +
+ .../postflight/diagnose-live-appearance.mjs        |    26 +
+ docs/pointer-focus-20261105/postflight/focus.log   |     1 +
+ .../postflight/focus/checks.json                   |   181 +
+ .../postflight/focus/chromium-1366-dark-after.png  |   Bin 0 -> 48954 bytes
+ .../postflight/focus/chromium-1366-dark-before.png |   Bin 0 -> 48914 bytes
+ .../postflight/focus/chromium-1366-light-after.png |   Bin 0 -> 48996 bytes
+ .../focus/chromium-1366-light-before.png           |   Bin 0 -> 48962 bytes
+ .../postflight/focus/chromium-390-dark-after.png   |   Bin 0 -> 37380 bytes
+ .../postflight/focus/chromium-390-dark-before.png  |   Bin 0 -> 37380 bytes
+ .../postflight/focus/chromium-390-light-after.png  |   Bin 0 -> 37448 bytes
+ .../postflight/focus/chromium-390-light-before.png |   Bin 0 -> 37448 bytes
+ .../postflight/focus/collection-checks.json        |    26 +
+ .../postflight/focus/webkit-1366-dark-after.png    |   Bin 0 -> 72403 bytes
+ .../postflight/focus/webkit-1366-dark-before.png   |   Bin 0 -> 72482 bytes
+ .../postflight/focus/webkit-1366-light-after.png   |   Bin 0 -> 72473 bytes
+ .../postflight/focus/webkit-1366-light-before.png  |   Bin 0 -> 72473 bytes
+ .../postflight/focus/webkit-390-dark-after.png     |   Bin 0 -> 46629 bytes
+ .../postflight/focus/webkit-390-dark-before.png    |   Bin 0 -> 46792 bytes
+ .../postflight/focus/webkit-390-light-after.png    |   Bin 0 -> 46923 bytes
+ .../postflight/focus/webkit-390-light-before.png   |   Bin 0 -> 46923 bytes
+ .../postflight/inspect-pixels.mjs                  |     5 +
+ .../postflight/live-appearance/after.json          |   448 +
+ .../postflight/live-appearance/before.json         |   432 +
+ .../live-appearance/chromium-1366-dark-after.json  |    54 +
+ .../live-appearance/chromium-1366-dark-after.png   |   Bin 0 -> 58293 bytes
+ .../live-appearance/chromium-1366-dark-before.json |    52 +
+ .../live-appearance/chromium-1366-dark-before.png  |   Bin 0 -> 58607 bytes
+ .../live-appearance/chromium-1366-light-after.json |    54 +
+ .../live-appearance/chromium-1366-light-after.png  |   Bin 0 -> 58349 bytes
+ .../chromium-1366-light-before.json                |    52 +
+ .../live-appearance/chromium-1366-light-before.png |   Bin 0 -> 58520 bytes
+ .../live-appearance/chromium-390-dark-after.json   |    54 +
+ .../live-appearance/chromium-390-dark-after.png    |   Bin 0 -> 45929 bytes
+ .../live-appearance/chromium-390-dark-before.json  |    52 +
+ .../live-appearance/chromium-390-dark-before.png   |   Bin 0 -> 46258 bytes
+ .../live-appearance/chromium-390-light-after.json  |    54 +
+ .../live-appearance/chromium-390-light-after.png   |   Bin 0 -> 45917 bytes
+ .../live-appearance/chromium-390-light-before.json |    52 +
+ .../live-appearance/chromium-390-light-before.png  |   Bin 0 -> 46123 bytes
+ .../live-appearance/webkit-1366-dark-after.json    |    54 +
+ .../live-appearance/webkit-1366-dark-after.png     |   Bin 0 -> 82206 bytes
+ .../live-appearance/webkit-1366-dark-before.json   |    52 +
+ .../live-appearance/webkit-1366-dark-before.png    |   Bin 0 -> 82279 bytes
+ .../live-appearance/webkit-1366-light-after.json   |    54 +
+ .../live-appearance/webkit-1366-light-after.png    |   Bin 0 -> 82190 bytes
+ .../live-appearance/webkit-1366-light-before.json  |    52 +
+ .../live-appearance/webkit-1366-light-before.png   |   Bin 0 -> 82275 bytes
+ .../live-appearance/webkit-390-dark-after.json     |    54 +
+ .../live-appearance/webkit-390-dark-after.png      |   Bin 0 -> 55323 bytes
+ .../live-appearance/webkit-390-dark-before.json    |    52 +
+ .../live-appearance/webkit-390-dark-before.png     |   Bin 0 -> 55482 bytes
+ .../live-appearance/webkit-390-light-after.json    |    54 +
+ .../live-appearance/webkit-390-light-after.png     |   Bin 0 -> 55469 bytes
+ .../live-appearance/webkit-390-light-before.json   |    52 +
+ .../live-appearance/webkit-390-light-before.png    |   Bin 0 -> 55648 bytes
+ docs/pointer-focus-20261105/postflight/media.json  | 48830 +++++++++++++++++++
+ docs/pointer-focus-20261105/postflight/media.log   |     1 +
+ .../postflight/pixel-diagnostic.json               |   155 +
+ .../postflight/publication-focus-gate.log          |     1 +
+ .../postflight/publication-reading-gate.log        |     1 +
+ .../postflight/publication-storage-gate.log        |     1 +
+ .../pointer-focus-20261105/postflight/release.json |    12 +
+ docs/pointer-focus-20261105/postflight/storage.log |     1 +
+ .../postflight/storage/checks.json                 |    43 +
+ .../postflight/word-audio.log                      |     1 +
+ .../postflight/word-audio/media.json               |  7052 +++
+ .../postflight/worker-after.log                    |    92 +
+ docs/pointer-focus-20261105/postflight/writing.log |     1 +
+ .../postflight/writing/answer-storage.json         |   105 +
+ 81 files changed, 59041 insertions(+)
+ create mode 100644 docs/pointer-focus-20261105/postflight/RESULTAAT.md
+ create mode 100644 docs/pointer-focus-20261105/postflight/appearance-diagnostic.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/appearance.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/backup.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/banks.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/banks/offered-banks.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/check-live-collection-focus.mjs
+ create mode 100644 docs/pointer-focus-20261105/postflight/check-live-focus.mjs
+ create mode 100644 docs/pointer-focus-20261105/postflight/collection.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/compare-live-appearance.mjs
+ create mode 100644 docs/pointer-focus-20261105/postflight/deploy.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/diagnose-live-appearance.mjs
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/checks.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-1366-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-1366-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-1366-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-1366-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-390-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-390-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-390-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/chromium-390-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/collection-checks.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-1366-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-1366-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-1366-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-1366-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-390-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-390-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-390-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/focus/webkit-390-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/inspect-pixels.mjs
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-dark-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-dark-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-light-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-light-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-1366-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-dark-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-dark-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-light-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-light-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/chromium-390-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-dark-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-dark-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-light-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-light-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-1366-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-dark-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-dark-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-dark-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-dark-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-light-after.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-light-after.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-light-before.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/live-appearance/webkit-390-light-before.png
+ create mode 100644 docs/pointer-focus-20261105/postflight/media.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/media.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/pixel-diagnostic.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/publication-focus-gate.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/publication-reading-gate.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/publication-storage-gate.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/release.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/storage.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/storage/checks.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/word-audio.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/word-audio/media.json
+ create mode 100644 docs/pointer-focus-20261105/postflight/worker-after.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/writing.log
+ create mode 100644 docs/pointer-focus-20261105/postflight/writing/answer-storage.json

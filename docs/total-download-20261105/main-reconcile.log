@@ -1,0 +1,767 @@
+Merge made by the 'ort' strategy.
+ PUBLICATIE-ACTUEEL.md                              |    10 +
+ .../postflight/RESULTAAT.md                        |    34 +
+ .../postflight/backup.json                         |    33 +
+ .../postflight/check-live-api.py                   |    12 +
+ .../postflight/check-offered-repair-audio.py       |    13 +
+ .../postflight/deploy-repair.log                   |   549 +
+ .../postflight/live-api.json                       |   578 +
+ .../postflight/live-api.log                        |     1 +
+ .../postflight/live-baseline-appearance.log        |    48 +
+ .../live-baseline-appearance/checks.json           |   632 +
+ .../chromium-build-model-1366-dark-after.png       |   Bin 0 -> 136900 bytes
+ .../chromium-build-model-1366-dark-before.png      |   Bin 0 -> 136900 bytes
+ .../chromium-build-model-1366-light-after.png      |   Bin 0 -> 136799 bytes
+ .../chromium-build-model-1366-light-before.png     |   Bin 0 -> 136799 bytes
+ .../chromium-build-model-390-dark-after.png        |   Bin 0 -> 88544 bytes
+ .../chromium-build-model-390-dark-before.png       |   Bin 0 -> 88544 bytes
+ .../chromium-build-model-390-light-after.png       |   Bin 0 -> 88421 bytes
+ .../chromium-build-model-390-light-before.png      |   Bin 0 -> 88421 bytes
+ .../chromium-cards-1366-dark-after.png             |   Bin 0 -> 142013 bytes
+ .../chromium-cards-1366-dark-before.png            |   Bin 0 -> 142013 bytes
+ .../chromium-cards-1366-light-after.png            |   Bin 0 -> 141920 bytes
+ .../chromium-cards-1366-light-before.png           |   Bin 0 -> 141920 bytes
+ .../chromium-cards-390-dark-after.png              |   Bin 0 -> 72989 bytes
+ .../chromium-cards-390-dark-before.png             |   Bin 0 -> 72989 bytes
+ .../chromium-cards-390-light-after.png             |   Bin 0 -> 72848 bytes
+ .../chromium-cards-390-light-before.png            |   Bin 0 -> 72848 bytes
+ .../chromium-copy-1366-dark-after.png              |   Bin 0 -> 54722 bytes
+ .../chromium-copy-1366-dark-before.png             |   Bin 0 -> 54722 bytes
+ .../chromium-copy-1366-light-after.png             |   Bin 0 -> 54641 bytes
+ .../chromium-copy-1366-light-before.png            |   Bin 0 -> 54676 bytes
+ .../chromium-copy-390-dark-after.png               |   Bin 0 -> 42164 bytes
+ .../chromium-copy-390-dark-before.png              |   Bin 0 -> 42164 bytes
+ .../chromium-copy-390-light-after.png              |   Bin 0 -> 42025 bytes
+ .../chromium-copy-390-light-before.png             |   Bin 0 -> 41975 bytes
+ .../chromium-dictation-1366-dark-after.png         |   Bin 0 -> 52576 bytes
+ .../chromium-dictation-1366-dark-before.png        |   Bin 0 -> 52576 bytes
+ .../chromium-dictation-1366-light-after.png        |   Bin 0 -> 52509 bytes
+ .../chromium-dictation-1366-light-before.png       |   Bin 0 -> 52509 bytes
+ .../chromium-dictation-390-dark-after.png          |   Bin 0 -> 39977 bytes
+ .../chromium-dictation-390-dark-before.png         |   Bin 0 -> 39977 bytes
+ .../chromium-dictation-390-light-after.png         |   Bin 0 -> 39859 bytes
+ .../chromium-dictation-390-light-before.png        |   Bin 0 -> 39859 bytes
+ .../chromium-meet-1366-dark-after.png              |   Bin 0 -> 209058 bytes
+ .../chromium-meet-1366-dark-before.png             |   Bin 0 -> 209067 bytes
+ .../chromium-meet-1366-light-after.png             |   Bin 0 -> 208926 bytes
+ .../chromium-meet-1366-light-before.png            |   Bin 0 -> 208926 bytes
+ .../chromium-meet-390-dark-after.png               |   Bin 0 -> 52943 bytes
+ .../chromium-meet-390-dark-before.png              |   Bin 0 -> 52938 bytes
+ .../chromium-meet-390-light-after.png              |   Bin 0 -> 52823 bytes
+ .../chromium-meet-390-light-before.png             |   Bin 0 -> 52823 bytes
+ .../chromium-read-1366-dark-after.png              |   Bin 0 -> 251844 bytes
+ .../chromium-read-1366-dark-before.png             |   Bin 0 -> 251844 bytes
+ .../chromium-read-1366-light-after.png             |   Bin 0 -> 251753 bytes
+ .../chromium-read-1366-light-before.png            |   Bin 0 -> 251753 bytes
+ .../chromium-read-390-dark-after.png               |   Bin 0 -> 139538 bytes
+ .../chromium-read-390-dark-before.png              |   Bin 0 -> 139538 bytes
+ .../chromium-read-390-light-after.png              |   Bin 0 -> 139390 bytes
+ .../chromium-read-390-light-before.png             |   Bin 0 -> 139390 bytes
+ .../webkit-build-model-1366-dark-after.png         |   Bin 0 -> 174366 bytes
+ .../webkit-build-model-1366-dark-before.png        |   Bin 0 -> 174366 bytes
+ .../webkit-build-model-1366-light-after.png        |   Bin 0 -> 174342 bytes
+ .../webkit-build-model-1366-light-before.png       |   Bin 0 -> 174342 bytes
+ .../webkit-build-model-390-dark-after.png          |   Bin 0 -> 102839 bytes
+ .../webkit-build-model-390-dark-before.png         |   Bin 0 -> 102839 bytes
+ .../webkit-build-model-390-light-after.png         |   Bin 0 -> 102974 bytes
+ .../webkit-build-model-390-light-before.png        |   Bin 0 -> 102974 bytes
+ .../webkit-cards-1366-dark-after.png               |   Bin 0 -> 184980 bytes
+ .../webkit-cards-1366-dark-before.png              |   Bin 0 -> 184980 bytes
+ .../webkit-cards-1366-light-after.png              |   Bin 0 -> 184960 bytes
+ .../webkit-cards-1366-light-before.png             |   Bin 0 -> 184960 bytes
+ .../webkit-cards-390-dark-after.png                |   Bin 0 -> 88937 bytes
+ .../webkit-cards-390-dark-before.png               |   Bin 0 -> 88937 bytes
+ .../webkit-cards-390-light-after.png               |   Bin 0 -> 89046 bytes
+ .../webkit-cards-390-light-before.png              |   Bin 0 -> 89046 bytes
+ .../webkit-copy-1366-dark-after.png                |   Bin 0 -> 77540 bytes
+ .../webkit-copy-1366-dark-before.png               |   Bin 0 -> 77540 bytes
+ .../webkit-copy-1366-light-after.png               |   Bin 0 -> 77545 bytes
+ .../webkit-copy-1366-light-before.png              |   Bin 0 -> 77545 bytes
+ .../webkit-copy-390-dark-after.png                 |   Bin 0 -> 50160 bytes
+ .../webkit-copy-390-dark-before.png                |   Bin 0 -> 50160 bytes
+ .../webkit-copy-390-light-after.png                |   Bin 0 -> 50306 bytes
+ .../webkit-copy-390-light-before.png               |   Bin 0 -> 50306 bytes
+ .../webkit-dictation-1366-dark-after.png           |   Bin 0 -> 76657 bytes
+ .../webkit-dictation-1366-dark-before.png          |   Bin 0 -> 76657 bytes
+ .../webkit-dictation-1366-light-after.png          |   Bin 0 -> 76659 bytes
+ .../webkit-dictation-1366-light-before.png         |   Bin 0 -> 76659 bytes
+ .../webkit-dictation-390-dark-after.png            |   Bin 0 -> 48609 bytes
+ .../webkit-dictation-390-dark-before.png           |   Bin 0 -> 48609 bytes
+ .../webkit-dictation-390-light-after.png           |   Bin 0 -> 48783 bytes
+ .../webkit-dictation-390-light-before.png          |   Bin 0 -> 48783 bytes
+ .../webkit-meet-1366-dark-after.png                |   Bin 0 -> 274862 bytes
+ .../webkit-meet-1366-dark-before.png               |   Bin 0 -> 274862 bytes
+ .../webkit-meet-1366-light-after.png               |   Bin 0 -> 274858 bytes
+ .../webkit-meet-1366-light-before.png              |   Bin 0 -> 274858 bytes
+ .../webkit-meet-390-dark-after.png                 |   Bin 0 -> 64209 bytes
+ .../webkit-meet-390-dark-before.png                |   Bin 0 -> 64209 bytes
+ .../webkit-meet-390-light-after.png                |   Bin 0 -> 64347 bytes
+ .../webkit-meet-390-light-before.png               |   Bin 0 -> 64347 bytes
+ .../webkit-read-1366-dark-after.png                |   Bin 0 -> 323609 bytes
+ .../webkit-read-1366-dark-before.png               |   Bin 0 -> 323609 bytes
+ .../webkit-read-1366-light-after.png               |   Bin 0 -> 323610 bytes
+ .../webkit-read-1366-light-before.png              |   Bin 0 -> 323610 bytes
+ .../webkit-read-390-dark-after.png                 |   Bin 0 -> 170349 bytes
+ .../webkit-read-390-dark-before.png                |   Bin 0 -> 170349 bytes
+ .../webkit-read-390-light-after.png                |   Bin 0 -> 170528 bytes
+ .../webkit-read-390-light-before.png               |   Bin 0 -> 170528 bytes
+ .../postflight/live-baseline-sheets.log            |    32 +
+ .../postflight/live-baseline-sheets/checks.json    |   424 +
+ .../chromium-copy-sheet-1366-dark-after.png        |   Bin 0 -> 226170 bytes
+ .../chromium-copy-sheet-1366-dark-before.png       |   Bin 0 -> 226170 bytes
+ .../chromium-copy-sheet-1366-light-after.png       |   Bin 0 -> 226195 bytes
+ .../chromium-copy-sheet-1366-light-before.png      |   Bin 0 -> 226195 bytes
+ .../chromium-copy-sheet-320-dark-after.png         |   Bin 0 -> 106432 bytes
+ .../chromium-copy-sheet-320-dark-before.png        |   Bin 0 -> 106432 bytes
+ .../chromium-copy-sheet-320-light-after.png        |   Bin 0 -> 106468 bytes
+ .../chromium-copy-sheet-320-light-before.png       |   Bin 0 -> 106468 bytes
+ .../chromium-copy-sheet-390-dark-after.png         |   Bin 0 -> 107730 bytes
+ .../chromium-copy-sheet-390-dark-before.png        |   Bin 0 -> 107730 bytes
+ .../chromium-copy-sheet-390-light-after.png        |   Bin 0 -> 107706 bytes
+ .../chromium-copy-sheet-390-light-before.png       |   Bin 0 -> 107706 bytes
+ .../chromium-copy-sheet-820-dark-after.png         |   Bin 0 -> 154681 bytes
+ .../chromium-copy-sheet-820-dark-before.png        |   Bin 0 -> 154681 bytes
+ .../chromium-copy-sheet-820-light-after.png        |   Bin 0 -> 154706 bytes
+ .../chromium-copy-sheet-820-light-before.png       |   Bin 0 -> 154706 bytes
+ .../chromium-dictation-sheet-1366-dark-after.png   |   Bin 0 -> 230496 bytes
+ .../chromium-dictation-sheet-1366-dark-before.png  |   Bin 0 -> 230496 bytes
+ .../chromium-dictation-sheet-1366-light-after.png  |   Bin 0 -> 230505 bytes
+ .../chromium-dictation-sheet-1366-light-before.png |   Bin 0 -> 230505 bytes
+ .../chromium-dictation-sheet-320-dark-after.png    |   Bin 0 -> 107763 bytes
+ .../chromium-dictation-sheet-320-dark-before.png   |   Bin 0 -> 107763 bytes
+ .../chromium-dictation-sheet-320-light-after.png   |   Bin 0 -> 107792 bytes
+ .../chromium-dictation-sheet-320-light-before.png  |   Bin 0 -> 107792 bytes
+ .../chromium-dictation-sheet-390-dark-after.png    |   Bin 0 -> 108874 bytes
+ .../chromium-dictation-sheet-390-dark-before.png   |   Bin 0 -> 108874 bytes
+ .../chromium-dictation-sheet-390-light-after.png   |   Bin 0 -> 108851 bytes
+ .../chromium-dictation-sheet-390-light-before.png  |   Bin 0 -> 108851 bytes
+ .../chromium-dictation-sheet-820-dark-after.png    |   Bin 0 -> 155750 bytes
+ .../chromium-dictation-sheet-820-dark-before.png   |   Bin 0 -> 155754 bytes
+ .../chromium-dictation-sheet-820-light-after.png   |   Bin 0 -> 155759 bytes
+ .../chromium-dictation-sheet-820-light-before.png  |   Bin 0 -> 155759 bytes
+ .../webkit-copy-sheet-1366-dark-after.png          |   Bin 0 -> 292385 bytes
+ .../webkit-copy-sheet-1366-dark-before.png         |   Bin 0 -> 292385 bytes
+ .../webkit-copy-sheet-1366-light-after.png         |   Bin 0 -> 292362 bytes
+ .../webkit-copy-sheet-1366-light-before.png        |   Bin 0 -> 292362 bytes
+ .../webkit-copy-sheet-320-dark-after.png           |   Bin 0 -> 125730 bytes
+ .../webkit-copy-sheet-320-dark-before.png          |   Bin 0 -> 125730 bytes
+ .../webkit-copy-sheet-320-light-after.png          |   Bin 0 -> 125824 bytes
+ .../webkit-copy-sheet-320-light-before.png         |   Bin 0 -> 125824 bytes
+ .../webkit-copy-sheet-390-dark-after.png           |   Bin 0 -> 128868 bytes
+ .../webkit-copy-sheet-390-dark-before.png          |   Bin 0 -> 128868 bytes
+ .../webkit-copy-sheet-390-light-after.png          |   Bin 0 -> 129058 bytes
+ .../webkit-copy-sheet-390-light-before.png         |   Bin 0 -> 129058 bytes
+ .../webkit-copy-sheet-820-dark-after.png           |   Bin 0 -> 198276 bytes
+ .../webkit-copy-sheet-820-dark-before.png          |   Bin 0 -> 198276 bytes
+ .../webkit-copy-sheet-820-light-after.png          |   Bin 0 -> 198287 bytes
+ .../webkit-copy-sheet-820-light-before.png         |   Bin 0 -> 198287 bytes
+ .../webkit-dictation-sheet-1366-dark-after.png     |   Bin 0 -> 299273 bytes
+ .../webkit-dictation-sheet-1366-dark-before.png    |   Bin 0 -> 299273 bytes
+ .../webkit-dictation-sheet-1366-light-after.png    |   Bin 0 -> 299254 bytes
+ .../webkit-dictation-sheet-1366-light-before.png   |   Bin 0 -> 299254 bytes
+ .../webkit-dictation-sheet-320-dark-after.png      |   Bin 0 -> 126979 bytes
+ .../webkit-dictation-sheet-320-dark-before.png     |   Bin 0 -> 126979 bytes
+ .../webkit-dictation-sheet-320-light-after.png     |   Bin 0 -> 127056 bytes
+ .../webkit-dictation-sheet-320-light-before.png    |   Bin 0 -> 127056 bytes
+ .../webkit-dictation-sheet-390-dark-after.png      |   Bin 0 -> 130195 bytes
+ .../webkit-dictation-sheet-390-dark-before.png     |   Bin 0 -> 130195 bytes
+ .../webkit-dictation-sheet-390-light-after.png     |   Bin 0 -> 130315 bytes
+ .../webkit-dictation-sheet-390-light-before.png    |   Bin 0 -> 130315 bytes
+ .../webkit-dictation-sheet-820-dark-after.png      |   Bin 0 -> 199060 bytes
+ .../webkit-dictation-sheet-820-dark-before.png     |   Bin 0 -> 199060 bytes
+ .../webkit-dictation-sheet-820-light-after.png     |   Bin 0 -> 199095 bytes
+ .../webkit-dictation-sheet-820-light-before.png    |   Bin 0 -> 199095 bytes
+ .../postflight/live-preservation.log               |     1 +
+ .../live-preservation/offered-banks.json           |    59 +
+ .../postflight/live-reading-media.log              |     1 +
+ .../postflight/live-reading-media/media.json       |  7052 +++
+ .../postflight/live-reading.log                    |     1 +
+ .../postflight/live-reading/a1-chromium-1280.png   |   Bin 0 -> 65259 bytes
+ .../postflight/live-reading/a1-chromium-390.png    |   Bin 0 -> 47650 bytes
+ .../postflight/live-reading/a1-webkit-1280.png     |   Bin 0 -> 91817 bytes
+ .../postflight/live-reading/a1-webkit-390.png      |   Bin 0 -> 59122 bytes
+ .../postflight/live-reading/a2-chromium-1280.png   |   Bin 0 -> 82028 bytes
+ .../postflight/live-reading/a2-chromium-390.png    |   Bin 0 -> 63618 bytes
+ .../postflight/live-reading/a2-webkit-1280.png     |   Bin 0 -> 110993 bytes
+ .../postflight/live-reading/a2-webkit-390.png      |   Bin 0 -> 81665 bytes
+ .../postflight/live-reading/browser.json           |  1027 +
+ .../postflight/live-repair-appearance.log          |    48 +
+ .../postflight/live-repair-appearance/checks.json  |   632 +
+ .../chromium-build-model-1366-dark-after.png       |   Bin 0 -> 136900 bytes
+ .../chromium-build-model-1366-dark-before.png      |   Bin 0 -> 136900 bytes
+ .../chromium-build-model-1366-light-after.png      |   Bin 0 -> 136799 bytes
+ .../chromium-build-model-1366-light-before.png     |   Bin 0 -> 136799 bytes
+ .../chromium-build-model-390-dark-after.png        |   Bin 0 -> 88543 bytes
+ .../chromium-build-model-390-dark-before.png       |   Bin 0 -> 88544 bytes
+ .../chromium-build-model-390-light-after.png       |   Bin 0 -> 88421 bytes
+ .../chromium-build-model-390-light-before.png      |   Bin 0 -> 88421 bytes
+ .../chromium-cards-1366-dark-after.png             |   Bin 0 -> 142013 bytes
+ .../chromium-cards-1366-dark-before.png            |   Bin 0 -> 142013 bytes
+ .../chromium-cards-1366-light-after.png            |   Bin 0 -> 141920 bytes
+ .../chromium-cards-1366-light-before.png           |   Bin 0 -> 141920 bytes
+ .../chromium-cards-390-dark-after.png              |   Bin 0 -> 72989 bytes
+ .../chromium-cards-390-dark-before.png             |   Bin 0 -> 72989 bytes
+ .../chromium-cards-390-light-after.png             |   Bin 0 -> 72848 bytes
+ .../chromium-cards-390-light-before.png            |   Bin 0 -> 72848 bytes
+ .../chromium-copy-1366-dark-after.png              |   Bin 0 -> 54750 bytes
+ .../chromium-copy-1366-dark-before.png             |   Bin 0 -> 54722 bytes
+ .../chromium-copy-1366-light-after.png             |   Bin 0 -> 54641 bytes
+ .../chromium-copy-1366-light-before.png            |   Bin 0 -> 54676 bytes
+ .../chromium-copy-390-dark-after.png               |   Bin 0 -> 42086 bytes
+ .../chromium-copy-390-dark-before.png              |   Bin 0 -> 42164 bytes
+ .../chromium-copy-390-light-after.png              |   Bin 0 -> 42025 bytes
+ .../chromium-copy-390-light-before.png             |   Bin 0 -> 42025 bytes
+ .../chromium-dictation-1366-dark-after.png         |   Bin 0 -> 52576 bytes
+ .../chromium-dictation-1366-dark-before.png        |   Bin 0 -> 52576 bytes
+ .../chromium-dictation-1366-light-after.png        |   Bin 0 -> 52509 bytes
+ .../chromium-dictation-1366-light-before.png       |   Bin 0 -> 52509 bytes
+ .../chromium-dictation-390-dark-after.png          |   Bin 0 -> 39977 bytes
+ .../chromium-dictation-390-dark-before.png         |   Bin 0 -> 39977 bytes
+ .../chromium-dictation-390-light-after.png         |   Bin 0 -> 39859 bytes
+ .../chromium-dictation-390-light-before.png        |   Bin 0 -> 39859 bytes
+ .../chromium-meet-1366-dark-after.png              |   Bin 0 -> 209067 bytes
+ .../chromium-meet-1366-dark-before.png             |   Bin 0 -> 209058 bytes
+ .../chromium-meet-1366-light-after.png             |   Bin 0 -> 208931 bytes
+ .../chromium-meet-1366-light-before.png            |   Bin 0 -> 208926 bytes
+ .../chromium-meet-390-dark-after.png               |   Bin 0 -> 52938 bytes
+ .../chromium-meet-390-dark-before.png              |   Bin 0 -> 52938 bytes
+ .../chromium-meet-390-light-after.png              |   Bin 0 -> 52826 bytes
+ .../chromium-meet-390-light-before.png             |   Bin 0 -> 52820 bytes
+ .../chromium-read-1366-dark-after.png              |   Bin 0 -> 251844 bytes
+ .../chromium-read-1366-dark-before.png             |   Bin 0 -> 251844 bytes
+ .../chromium-read-1366-light-after.png             |   Bin 0 -> 251753 bytes
+ .../chromium-read-1366-light-before.png            |   Bin 0 -> 251753 bytes
+ .../chromium-read-390-dark-after.png               |   Bin 0 -> 139538 bytes
+ .../chromium-read-390-dark-before.png              |   Bin 0 -> 139538 bytes
+ .../chromium-read-390-light-after.png              |   Bin 0 -> 139390 bytes
+ .../chromium-read-390-light-before.png             |   Bin 0 -> 139390 bytes
+ .../webkit-build-model-1366-dark-after.png         |   Bin 0 -> 174366 bytes
+ .../webkit-build-model-1366-dark-before.png        |   Bin 0 -> 174366 bytes
+ .../webkit-build-model-1366-light-after.png        |   Bin 0 -> 174342 bytes
+ .../webkit-build-model-1366-light-before.png       |   Bin 0 -> 174342 bytes
+ .../webkit-build-model-390-dark-after.png          |   Bin 0 -> 102839 bytes
+ .../webkit-build-model-390-dark-before.png         |   Bin 0 -> 102839 bytes
+ .../webkit-build-model-390-light-after.png         |   Bin 0 -> 102974 bytes
+ .../webkit-build-model-390-light-before.png        |   Bin 0 -> 102974 bytes
+ .../webkit-cards-1366-dark-after.png               |   Bin 0 -> 184980 bytes
+ .../webkit-cards-1366-dark-before.png              |   Bin 0 -> 184980 bytes
+ .../webkit-cards-1366-light-after.png              |   Bin 0 -> 184960 bytes
+ .../webkit-cards-1366-light-before.png             |   Bin 0 -> 184960 bytes
+ .../webkit-cards-390-dark-after.png                |   Bin 0 -> 88937 bytes
+ .../webkit-cards-390-dark-before.png               |   Bin 0 -> 88937 bytes
+ .../webkit-cards-390-light-after.png               |   Bin 0 -> 89046 bytes
+ .../webkit-cards-390-light-before.png              |   Bin 0 -> 89046 bytes
+ .../webkit-copy-1366-dark-after.png                |   Bin 0 -> 77540 bytes
+ .../webkit-copy-1366-dark-before.png               |   Bin 0 -> 77540 bytes
+ .../webkit-copy-1366-light-after.png               |   Bin 0 -> 77545 bytes
+ .../webkit-copy-1366-light-before.png              |   Bin 0 -> 77545 bytes
+ .../webkit-copy-390-dark-after.png                 |   Bin 0 -> 50160 bytes
+ .../webkit-copy-390-dark-before.png                |   Bin 0 -> 50160 bytes
+ .../webkit-copy-390-light-after.png                |   Bin 0 -> 50306 bytes
+ .../webkit-copy-390-light-before.png               |   Bin 0 -> 50306 bytes
+ .../webkit-dictation-1366-dark-after.png           |   Bin 0 -> 76657 bytes
+ .../webkit-dictation-1366-dark-before.png          |   Bin 0 -> 76657 bytes
+ .../webkit-dictation-1366-light-after.png          |   Bin 0 -> 76659 bytes
+ .../webkit-dictation-1366-light-before.png         |   Bin 0 -> 76659 bytes
+ .../webkit-dictation-390-dark-after.png            |   Bin 0 -> 48609 bytes
+ .../webkit-dictation-390-dark-before.png           |   Bin 0 -> 48609 bytes
+ .../webkit-dictation-390-light-after.png           |   Bin 0 -> 48783 bytes
+ .../webkit-dictation-390-light-before.png          |   Bin 0 -> 48783 bytes
+ .../webkit-meet-1366-dark-after.png                |   Bin 0 -> 274862 bytes
+ .../webkit-meet-1366-dark-before.png               |   Bin 0 -> 274862 bytes
+ .../webkit-meet-1366-light-after.png               |   Bin 0 -> 274858 bytes
+ .../webkit-meet-1366-light-before.png              |   Bin 0 -> 274858 bytes
+ .../webkit-meet-390-dark-after.png                 |   Bin 0 -> 64209 bytes
+ .../webkit-meet-390-dark-before.png                |   Bin 0 -> 64209 bytes
+ .../webkit-meet-390-light-after.png                |   Bin 0 -> 64347 bytes
+ .../webkit-meet-390-light-before.png               |   Bin 0 -> 64347 bytes
+ .../webkit-read-1366-dark-after.png                |   Bin 0 -> 323609 bytes
+ .../webkit-read-1366-dark-before.png               |   Bin 0 -> 323609 bytes
+ .../webkit-read-1366-light-after.png               |   Bin 0 -> 323610 bytes
+ .../webkit-read-1366-light-before.png              |   Bin 0 -> 323610 bytes
+ .../webkit-read-390-dark-after.png                 |   Bin 0 -> 170349 bytes
+ .../webkit-read-390-dark-before.png                |   Bin 0 -> 170349 bytes
+ .../webkit-read-390-light-after.png                |   Bin 0 -> 170528 bytes
+ .../webkit-read-390-light-before.png               |   Bin 0 -> 170528 bytes
+ .../postflight/live-repair-audio.log               |     1 +
+ .../postflight/live-repair-audio/checks.json       |    82 +
+ .../postflight/live-repair-audio/goed.wav          |   Bin 0 -> 63678 bytes
+ .../postflight/live-repair-audio/kies.wav          |   Bin 0 -> 183630 bytes
+ .../postflight/live-repair-audio/kijk.wav          |   Bin 0 -> 141294 bytes
+ .../postflight/live-repair-audio/klaar.wav         |   Bin 0 -> 155406 bytes
+ .../postflight/live-repair-audio/mat.wav           |   Bin 0 -> 70732 bytes
+ .../postflight/live-repair-audio/opnieuw.wav       |   Bin 0 -> 211856 bytes
+ .../postflight/live-repair-audio/tas.wav           |   Bin 0 -> 56620 bytes
+ .../live-repair-audio/vergelijk-woord.wav          |   Bin 0 -> 303640 bytes
+ .../postflight/live-repair-audio/voorbeeld.wav     |   Bin 0 -> 289474 bytes
+ .../postflight/live-repair-audio/zelfde-woord.wav  |   Bin 0 -> 275408 bytes
+ .../postflight/live-repair-release-final.json      |    12 +
+ .../postflight/live-repair-release.json            |    12 +
+ .../postflight/live-repair-sheets.log              |    32 +
+ .../postflight/live-repair-sheets/checks.json      |   424 +
+ .../chromium-copy-sheet-1366-dark-after.png        |   Bin 0 -> 226170 bytes
+ .../chromium-copy-sheet-1366-dark-before.png       |   Bin 0 -> 226170 bytes
+ .../chromium-copy-sheet-1366-light-after.png       |   Bin 0 -> 226195 bytes
+ .../chromium-copy-sheet-1366-light-before.png      |   Bin 0 -> 226195 bytes
+ .../chromium-copy-sheet-320-dark-after.png         |   Bin 0 -> 106432 bytes
+ .../chromium-copy-sheet-320-dark-before.png        |   Bin 0 -> 106432 bytes
+ .../chromium-copy-sheet-320-light-after.png        |   Bin 0 -> 106468 bytes
+ .../chromium-copy-sheet-320-light-before.png       |   Bin 0 -> 106468 bytes
+ .../chromium-copy-sheet-390-dark-after.png         |   Bin 0 -> 107730 bytes
+ .../chromium-copy-sheet-390-dark-before.png        |   Bin 0 -> 107730 bytes
+ .../chromium-copy-sheet-390-light-after.png        |   Bin 0 -> 107706 bytes
+ .../chromium-copy-sheet-390-light-before.png       |   Bin 0 -> 107706 bytes
+ .../chromium-copy-sheet-820-dark-after.png         |   Bin 0 -> 154681 bytes
+ .../chromium-copy-sheet-820-dark-before.png        |   Bin 0 -> 154681 bytes
+ .../chromium-copy-sheet-820-light-after.png        |   Bin 0 -> 154706 bytes
+ .../chromium-copy-sheet-820-light-before.png       |   Bin 0 -> 154706 bytes
+ .../chromium-dictation-sheet-1366-dark-after.png   |   Bin 0 -> 230496 bytes
+ .../chromium-dictation-sheet-1366-dark-before.png  |   Bin 0 -> 230496 bytes
+ .../chromium-dictation-sheet-1366-light-after.png  |   Bin 0 -> 230505 bytes
+ .../chromium-dictation-sheet-1366-light-before.png |   Bin 0 -> 230505 bytes
+ .../chromium-dictation-sheet-320-dark-after.png    |   Bin 0 -> 107763 bytes
+ .../chromium-dictation-sheet-320-dark-before.png   |   Bin 0 -> 107763 bytes
+ .../chromium-dictation-sheet-320-light-after.png   |   Bin 0 -> 107792 bytes
+ .../chromium-dictation-sheet-320-light-before.png  |   Bin 0 -> 107792 bytes
+ .../chromium-dictation-sheet-390-dark-after.png    |   Bin 0 -> 108874 bytes
+ .../chromium-dictation-sheet-390-dark-before.png   |   Bin 0 -> 108874 bytes
+ .../chromium-dictation-sheet-390-light-after.png   |   Bin 0 -> 108851 bytes
+ .../chromium-dictation-sheet-390-light-before.png  |   Bin 0 -> 108851 bytes
+ .../chromium-dictation-sheet-820-dark-after.png    |   Bin 0 -> 155750 bytes
+ .../chromium-dictation-sheet-820-dark-before.png   |   Bin 0 -> 155750 bytes
+ .../chromium-dictation-sheet-820-light-after.png   |   Bin 0 -> 155759 bytes
+ .../chromium-dictation-sheet-820-light-before.png  |   Bin 0 -> 155759 bytes
+ .../webkit-copy-sheet-1366-dark-after.png          |   Bin 0 -> 292385 bytes
+ .../webkit-copy-sheet-1366-dark-before.png         |   Bin 0 -> 292385 bytes
+ .../webkit-copy-sheet-1366-light-after.png         |   Bin 0 -> 292362 bytes
+ .../webkit-copy-sheet-1366-light-before.png        |   Bin 0 -> 292362 bytes
+ .../webkit-copy-sheet-320-dark-after.png           |   Bin 0 -> 125730 bytes
+ .../webkit-copy-sheet-320-dark-before.png          |   Bin 0 -> 125730 bytes
+ .../webkit-copy-sheet-320-light-after.png          |   Bin 0 -> 125824 bytes
+ .../webkit-copy-sheet-320-light-before.png         |   Bin 0 -> 125824 bytes
+ .../webkit-copy-sheet-390-dark-after.png           |   Bin 0 -> 128868 bytes
+ .../webkit-copy-sheet-390-dark-before.png          |   Bin 0 -> 128868 bytes
+ .../webkit-copy-sheet-390-light-after.png          |   Bin 0 -> 129058 bytes
+ .../webkit-copy-sheet-390-light-before.png         |   Bin 0 -> 129058 bytes
+ .../webkit-copy-sheet-820-dark-after.png           |   Bin 0 -> 198276 bytes
+ .../webkit-copy-sheet-820-dark-before.png          |   Bin 0 -> 198276 bytes
+ .../webkit-copy-sheet-820-light-after.png          |   Bin 0 -> 198287 bytes
+ .../webkit-copy-sheet-820-light-before.png         |   Bin 0 -> 198287 bytes
+ .../webkit-dictation-sheet-1366-dark-after.png     |   Bin 0 -> 299273 bytes
+ .../webkit-dictation-sheet-1366-dark-before.png    |   Bin 0 -> 299273 bytes
+ .../webkit-dictation-sheet-1366-light-after.png    |   Bin 0 -> 299254 bytes
+ .../webkit-dictation-sheet-1366-light-before.png   |   Bin 0 -> 299254 bytes
+ .../webkit-dictation-sheet-320-dark-after.png      |   Bin 0 -> 126979 bytes
+ .../webkit-dictation-sheet-320-dark-before.png     |   Bin 0 -> 126979 bytes
+ .../webkit-dictation-sheet-320-light-after.png     |   Bin 0 -> 127056 bytes
+ .../webkit-dictation-sheet-320-light-before.png    |   Bin 0 -> 127056 bytes
+ .../webkit-dictation-sheet-390-dark-after.png      |   Bin 0 -> 130195 bytes
+ .../webkit-dictation-sheet-390-dark-before.png     |   Bin 0 -> 130195 bytes
+ .../webkit-dictation-sheet-390-light-after.png     |   Bin 0 -> 130315 bytes
+ .../webkit-dictation-sheet-390-light-before.png    |   Bin 0 -> 130315 bytes
+ .../webkit-dictation-sheet-820-dark-after.png      |   Bin 0 -> 199060 bytes
+ .../webkit-dictation-sheet-820-dark-before.png     |   Bin 0 -> 199060 bytes
+ .../webkit-dictation-sheet-820-light-after.png     |   Bin 0 -> 199095 bytes
+ .../webkit-dictation-sheet-820-light-before.png    |   Bin 0 -> 199095 bytes
+ .../postflight/live-speaking.log                   |     1 +
+ .../postflight/live-speaking/browser.json          |   475 +
+ .../postflight/live-speaking/chromium-1280.png     |   Bin 0 -> 57430 bytes
+ .../postflight/live-speaking/chromium-390.png      |   Bin 0 -> 45524 bytes
+ .../postflight/live-speaking/webkit-1280.png       |   Bin 0 -> 82652 bytes
+ .../postflight/live-speaking/webkit-390.png        |   Bin 0 -> 57864 bytes
+ .../postflight/live-storage.log                    |     1 +
+ .../postflight/live-storage/checks.json            |    43 +
+ .../postflight/live-verified-media.json            | 48830 +++++++++++++++++++
+ .../postflight/live-verified-media.log             |     1 +
+ .../postflight/live-worker-deployments.log         |    92 +
+ .../postflight/live-writing.log                    |     1 +
+ .../postflight/live-writing/answer-storage.json    |   105 +
+ .../postflight/published-bundle-check.log          |     6 +
+ .../postflight/release-publication-main.log        |    18 +
+ .../postflight/release-reading-gate.log            |     1 +
+ .../postflight/release-reading-unit.log            |    10 +
+ .../postflight/release-repair-gate.log             |     1 +
+ .../postflight/verification.json                   |    31 +
+ 383 files changed, 61366 insertions(+)
+ create mode 100644 docs/storage-player-repair-20261105/postflight/RESULTAAT.md
+ create mode 100644 docs/storage-player-repair-20261105/postflight/backup.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/check-live-api.py
+ create mode 100644 docs/storage-player-repair-20261105/postflight/check-offered-repair-audio.py
+ create mode 100644 docs/storage-player-repair-20261105/postflight/deploy-repair.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-api.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-api.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/checks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-build-model-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-cards-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-copy-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-dictation-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-meet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/chromium-read-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-build-model-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-cards-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-copy-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-dictation-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-meet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-appearance/webkit-read-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/checks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-copy-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/chromium-dictation-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-copy-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-baseline-sheets/webkit-dictation-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-preservation.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-preservation/offered-banks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading-media.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading-media/media.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a1-chromium-1280.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a1-chromium-390.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a1-webkit-1280.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a1-webkit-390.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a2-chromium-1280.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a2-chromium-390.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a2-webkit-1280.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/a2-webkit-390.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-reading/browser.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/checks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-build-model-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-cards-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-copy-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-dictation-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-meet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/chromium-read-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-build-model-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-cards-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-copy-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-dictation-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-meet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-appearance/webkit-read-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/checks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/goed.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/kies.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/kijk.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/klaar.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/mat.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/opnieuw.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/tas.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/vergelijk-woord.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/voorbeeld.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-audio/zelfde-woord.wav
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-release-final.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-release.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/checks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-copy-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/chromium-dictation-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-copy-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-1366-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-1366-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-1366-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-1366-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-320-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-320-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-320-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-320-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-390-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-390-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-390-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-390-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-820-dark-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-820-dark-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-820-light-after.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-repair-sheets/webkit-dictation-sheet-820-light-before.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-speaking.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-speaking/browser.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-speaking/chromium-1280.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-speaking/chromium-390.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-speaking/webkit-1280.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-speaking/webkit-390.png
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-storage.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-storage/checks.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-verified-media.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-verified-media.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-worker-deployments.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-writing.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/live-writing/answer-storage.json
+ create mode 100644 docs/storage-player-repair-20261105/postflight/published-bundle-check.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/release-publication-main.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/release-reading-gate.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/release-reading-unit.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/release-repair-gate.log
+ create mode 100644 docs/storage-player-repair-20261105/postflight/verification.json

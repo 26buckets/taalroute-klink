@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.route-settings').first() to be visible[22m
+
+    at /Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/test-performance-browser.mjs:16:97 {
+  log: [
+    "  - waiting for locator('.route-settings').first() to be visible"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0

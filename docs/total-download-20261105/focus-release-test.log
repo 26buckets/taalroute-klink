@@ -1,0 +1,158 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    'app/globals.css',
+    'app/learner-ui.css',
++   'app/page.tsx',
++   'components/product/classroom-boundary.tsx',
++   'components/product/learner-app.tsx',
++   'components/product/learner-module-boundary.tsx',
++   'components/product/learner-rounds.ts',
++   'components/product/load-learner-rounds.ts',
++   'components/product/load-practice-workspace.ts',
++   'components/product/practice-chapters.tsx',
++   'components/product/practice-workspace.tsx',
++   'lib/extended-practice.ts',
++   'lib/group-practice.ts',
++   'lib/imported-practice.ts',
++   'package-lock.json',
++   'package.json',
++   'public/_headers',
+    'scripts/check-pointer-focus-release-20261105.mjs',
+    'scripts/check-storage-player-repair-release-20261105.mjs',
++   'scripts/compact-lexicon-module.mjs',
++   'scripts/measure-browser-opening.mjs',
++   'scripts/measure-first-exercise.mjs',
++   'scripts/measure-learner-reloads.mjs',
++   'scripts/measure-network-origin.mjs',
++   'scripts/measure-network-peaks.mjs',
++   'scripts/measure-opening-cpu.mjs',
++   'scripts/measure-staging-document-browser.mjs',
++   'scripts/measure-staging-document-trial.mjs',
++   'scripts/prepare-browser-opening-staging.mjs',
++   'scripts/prepare-staging-document-trial.mjs',
++   'scripts/profile-browser-opening.mjs',
++   'scripts/sanitize-staging-document-tail.py',
++   'scripts/serve-network-benchmark.mjs',
++   'scripts/serve-performance.mjs',
++   'scripts/summarize-browser-opening.mjs',
++   'scripts/summarize-split-download.mjs',
++   'scripts/summarize-staging-document-trial.mjs',
++   'scripts/summarize-total-download.mjs',
++   'scripts/test-compact-lexicon-browser.mjs',
++   'scripts/test-compact-lexicon-module.mjs',
++   'scripts/test-deferred-bundle.mjs',
++   'scripts/test-deferred-players-browser.mjs',
++   'scripts/test-imported-pack-matching.mjs',
++   'scripts/test-network-content-preservation.mjs',
++   'scripts/test-network-entry-browser.mjs',
++   'scripts/test-opening-content-preservation.mjs',
++   'scripts/test-opening-loader-once-navigation-20261103.mjs',
+    'scripts/test-pointer-focus-release-20261105.mjs',
++   'scripts/test-prepared-pages.mjs',
++   'scripts/test-server-workspace-boundary.mjs',
++   'scripts/test-source-repeat-browser-20261101.mjs',
++   'scripts/test-split-practice-bundles.mjs',
++   'scripts/test-static-cache-policy.mjs',
++   'vite.config.ts',
+    'VORMGEVING-VASTGEZET.md'
+  ]
+
+    at verifyPointerFocusContent (file:///Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/check-pointer-focus-release-20261105.mjs:15:9)
+    at verifyPointerFocusRelease (file:///Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/check-pointer-focus-release-20261105.mjs:28:70)
+    at file:///Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/test-pointer-focus-release-20261105.mjs:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'app/globals.css',
+    'app/learner-ui.css',
+    'app/page.tsx',
+    'components/product/classroom-boundary.tsx',
+    'components/product/learner-app.tsx',
+    'components/product/learner-module-boundary.tsx',
+    'components/product/learner-rounds.ts',
+    'components/product/load-learner-rounds.ts',
+    'components/product/load-practice-workspace.ts',
+    'components/product/practice-chapters.tsx',
+    'components/product/practice-workspace.tsx',
+    'lib/extended-practice.ts',
+    'lib/group-practice.ts',
+    'lib/imported-practice.ts',
+    'package-lock.json',
+    'package.json',
+    'public/_headers',
+    'scripts/check-pointer-focus-release-20261105.mjs',
+    'scripts/check-storage-player-repair-release-20261105.mjs',
+    'scripts/compact-lexicon-module.mjs',
+    'scripts/measure-browser-opening.mjs',
+    'scripts/measure-first-exercise.mjs',
+    'scripts/measure-learner-reloads.mjs',
+    'scripts/measure-network-origin.mjs',
+    'scripts/measure-network-peaks.mjs',
+    'scripts/measure-opening-cpu.mjs',
+    'scripts/measure-staging-document-browser.mjs',
+    'scripts/measure-staging-document-trial.mjs',
+    'scripts/prepare-browser-opening-staging.mjs',
+    'scripts/prepare-staging-document-trial.mjs',
+    'scripts/profile-browser-opening.mjs',
+    'scripts/sanitize-staging-document-tail.py',
+    'scripts/serve-network-benchmark.mjs',
+    'scripts/serve-performance.mjs',
+    'scripts/summarize-browser-opening.mjs',
+    'scripts/summarize-split-download.mjs',
+    'scripts/summarize-staging-document-trial.mjs',
+    'scripts/summarize-total-download.mjs',
+    'scripts/test-compact-lexicon-browser.mjs',
+    'scripts/test-compact-lexicon-module.mjs',
+    'scripts/test-deferred-bundle.mjs',
+    'scripts/test-deferred-players-browser.mjs',
+    'scripts/test-imported-pack-matching.mjs',
+    'scripts/test-network-content-preservation.mjs',
+    'scripts/test-network-entry-browser.mjs',
+    'scripts/test-opening-content-preservation.mjs',
+    'scripts/test-opening-loader-once-navigation-20261103.mjs',
+    'scripts/test-pointer-focus-release-20261105.mjs',
+    'scripts/test-prepared-pages.mjs',
+    'scripts/test-server-workspace-boundary.mjs',
+    'scripts/test-source-repeat-browser-20261101.mjs',
+    'scripts/test-split-practice-bundles.mjs',
+    'scripts/test-static-cache-policy.mjs',
+    'vite.config.ts',
+    'VORMGEVING-VASTGEZET.md'
+  ],
+  expected: [
+    'app/globals.css',
+    'app/learner-ui.css',
+    'scripts/check-pointer-focus-release-20261105.mjs',
+    'scripts/check-storage-player-repair-release-20261105.mjs',
+    'scripts/test-pointer-focus-release-20261105.mjs',
+    'VORMGEVING-VASTGEZET.md'
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ scripts/test-pointer-focus-release-20261105.mjs (138.518875ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 142.111083
+
+✖ failing tests:
+
+test at scripts/test-pointer-focus-release-20261105.mjs:1:1
+✖ scripts/test-pointer-focus-release-20261105.mjs (138.518875ms)
+  'test failed'

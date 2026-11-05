@@ -1,0 +1,16 @@
+{
+  "base": "http://127.0.0.1:19120",
+  "checks": [],
+  "roundChecks": [],
+  "requests": [
+    "/practice-content/klink-20261029/audio-words-listen-alfa-c-HMM_C01-c09748e0c9018a62.json",
+    "/practice-content/klink-20261029/audio-words-hear-match-alfa-c-HMM_C01-c05063e809288bc2.json"
+  ],
+  "errors": [
+    {
+      "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at /Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/test-source-repeat-browser-20261101.mjs:48:96"
+    }
+  ],
+  "audioPlayback": "simulated for state checks; real media tested separately",
+  "physicalPhoneTested": false
+}

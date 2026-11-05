@@ -1,0 +1,15 @@
+{
+  "base": "http://127.0.0.1:19120",
+  "checks": [
+    "All six targets, bounded retry, stable choices, independent resume and unchanged lesson progress",
+    "Reading target is visible without automatic word audio; requested audio is recorded as help",
+    "Three words and photos share a board; keyboard/tap pairing and wrong-answer recovery preserve correct pairs",
+    "Existing word-building player works with optional, explicitly recorded help",
+    "Four modes retain readable controls, no horizontal overflow and reachable feedback on five viewport sizes",
+    "Same mixed page is reachable in all fifteen original sections",
+    "Audio failure blocks guessing and recovers with the existing retry control",
+    "Existing Herhalen screen adds a prepared cross-section mix without removing saved words",
+    "Blocked storage does not prevent mixed practice"
+  ],
+  "errors": []
+}
