@@ -1,5 +1,5 @@
 'use client';
-import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
+import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { recordPilotRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
@@ -8,7 +8,6 @@ import {
   ArrowRight,
   Check,
   Eye,
-  HelpCircle,
   RefreshCw,
   Volume2,
 } from 'lucide-react';
@@ -358,19 +357,15 @@ function PilotPlayer({
                     <Eye />
                     Voorbeeld
                   </button>
-                  <button
-                    className="secondary-button"
-                    aria-expanded={help}
+                  <ExerciseHelp
+                    open={help} closeLabel="Verberg hulp"
                     onClick={() => {
                       markHelp();
                       setHelp(!help);
                       if (!help) void play(undefined, 'help');
                       else stopPlayback();
                     }}
-                  >
-                    <HelpCircle />
-                    Help
-                  </button>
+                  />
                 </>
               )}
             </div>

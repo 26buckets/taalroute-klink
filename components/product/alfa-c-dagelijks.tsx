@@ -1,10 +1,10 @@
 'use client';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { useExerciseViewTarget } from './exercise-view';
-import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
+import { ExerciseAudioSlot, ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { recordDailyRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, Eye, HelpCircle, Volume2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Eye, Volume2 } from 'lucide-react';
 import { dailyAudio, dailyStorageKey, emptyDailyRecord, readDailyProgress, recordDailyAnswer, type DailyBlock, type DailyProgress, type DailyRecord, type DailyStep, type Support } from '@/lib/alfa-c-dagelijks';
 import { playMedia, stopMedia } from './shared';
 import { AlfaCWorkspace, DocumentSet } from './alfa-c-workspace';
@@ -77,7 +77,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
         <ExerciseListen inline={Boolean(step.audio.O)} label="Luister naar de uitleg" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I], true); }} />
         {step.audio.O && <ExerciseListen label="Luister naar de tekst" disabled={busy} onClick={() => { support('content'); void play([step.audio.O!]); }} />}
         <button className="secondary-button" aria-expanded={model} onClick={() => { if (!model) { support('example'); void play([step.audio.V]); } else stop(); setHelp(false); setModel(!model); }}><Eye />Voorbeeld</button>
-        <button className="secondary-button" aria-expanded={help} onClick={() => { if (!help) { support('help'); void play([step.audio.H]); } else stop(); setModel(false); setHelp(!help); }}><HelpCircle />Help</button>
+        <ExerciseHelp open={help} closeLabel="Verberg hulp" onClick={() => { if (!help) { support('help'); void play([step.audio.H]); } else stop(); setModel(false); setHelp(!help); }} />
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">

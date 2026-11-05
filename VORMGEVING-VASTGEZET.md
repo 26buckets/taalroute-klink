@@ -1,3 +1,7 @@
+## Help in de oefenbalk — Nico, 5 november 2026
+
+Nico keurde de concrete plek rechts naast Foto en Tekst goed en gaf opdracht om die samen met het voorbeeld “appel en peer” te publiceren. De oefenhulp blijft tijdens scrollen bereikbaar, opent direct bij de knop en behoudt de bestaande luister-, antwoord- en hulplogica. Luister blijft op zijn bestaande plek. Geen algemene herindeling. Bronopdracht en controles: `docs/help-en-context-20261105/`.
+
 ## Klikranden — Nico, 5 november 2026
 
 Op de concrete aanwijzing bij de blauwe rand rond “Luister. Zeg het woord na.” vervallen in Klink de browserranden op automatisch gefocuste titels en bij muisklikken. Zichtbare toetsenbordfocus, selectie-/foutmarkeringen en de bestaande focusverplaatsing blijven behouden. Geen andere wijziging aan inhoud, indeling, uiterlijk, audio of voortgang. Bronopdracht en lokale browsercontrole: `docs/pointer-focus-20261105/`. Nico heeft op 5 november expliciet publicatie van precies deze gecontroleerde wijziging opgedragen, met behoud van inhoud, audio, voortgang en de rest van het uiterlijk. Het concrete publicatieakkoord staat in `docs/pointer-focus-20261105/publication/`; de feitelijke live-status blijft vastgelegd in PUBLICATIE-ACTUEEL.md.
