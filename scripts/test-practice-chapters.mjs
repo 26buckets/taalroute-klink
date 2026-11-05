@@ -86,7 +86,7 @@ void test('Source levels are honest, never inferred from matching words or a com
   assert.equal(chapterExerciseLevel({ exerciseId: 'unknown', componentId: '', contractVersion: '', mode: '' }), 'support');
   assert(chapterCollections('texts').some(item => item.level === 'a2'));
   assert.equal(new Set(chapterCollections('texts').flatMap(item => item.exercises.map(exercise => exercise.contextId))).size, 192);
-  assert.equal(chapterCollections('text-question').length, 270);
+  assert.equal(chapterCollections('text-question').length, 272);
   assert.equal(chapterCollections('dialogues').length, 128);
 });
 

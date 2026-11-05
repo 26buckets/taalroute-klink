@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {verifyReadingContent,verifyReadingRelease} from './check-reading-comprehension-release-20261105.mjs';
+const root='docs/reading-comprehension-20261105/';
+const alter=(file,change)=>p=>p===file?Buffer.from(JSON.stringify(change(JSON.parse(readFileSync(p))))):readFileSync(p);
+verifyReadingContent();
+for(const change of [r=>({...r,publicationApproved:false}),r=>({...r,approvedBy:'unknown'}),r=>({...r,baselineSourceCommit:'0'.repeat(40)}),r=>({...r,files:{...r.files,'data/klink-production-index.json':'0'.repeat(64)}})])assert.throws(()=>verifyReadingContent(alter(root+'approval.json',change)));
+for(const file of [root+'sources/selected.json',root+'local/browser.json',root+'a1-bank.json'])assert.throws(()=>verifyReadingContent(p=>p===file?Buffer.concat([readFileSync(p),Buffer.from('changed')]):readFileSync(p)));
+assert.throws(()=>verifyReadingRelease(alter(root+'backup.json',r=>({...r,fullReadback:false}))));
+verifyReadingRelease();console.log('PASS ordinary release and eight rejected approval/source/evidence/backup mutations.');

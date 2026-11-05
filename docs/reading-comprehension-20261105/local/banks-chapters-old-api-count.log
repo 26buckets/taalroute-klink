@@ -1,0 +1,35 @@
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (13429.373375ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.780208ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (25.331167ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (113.298875ms)
+✖ Existing public banks and new server banks keep the same validation (2.91575ms)
+✔ Unregistered or malformed server bank URLs fail closed (1.927375ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13922.575292
+
+✖ failing tests:
+
+test at scripts/test-production-bank-reader.mjs:6:1
+✖ Existing public banks and new server banks keep the same validation (2.91575ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  11 !== 9
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-implementatie-20261101/scripts/test-production-bank-reader.mjs:9:82)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 11,
+    expected: 9,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

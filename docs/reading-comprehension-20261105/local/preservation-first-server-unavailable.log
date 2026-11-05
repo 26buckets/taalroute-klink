@@ -1,0 +1,48 @@
+curl: (7) Failed to connect to 127.0.0.1 port 19136 after 0 ms: Couldn't connect to server
+node:internal/errors:998
+  const err = new Error(message);
+              ^
+
+Error: Command failed: curl -fsS --max-time 45 http://127.0.0.1:19136/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json
+curl: (7) Failed to connect to 127.0.0.1 port 19136 after 0 ms: Couldn't connect to server
+
+    at genericNodeError (node:internal/errors:998:15)
+    at wrappedFn (node:internal/errors:543:14)
+    at checkExecSyncError (node:child_process:926:11)
+    at execFileSync (node:child_process:962:15)
+    at fetchBytes (file:///private/tmp/klink-implementatie-20261101/scripts/test-reading-comprehension-preservation-20261105.mjs:9:75)
+    at file:///private/tmp/klink-implementatie-20261101/scripts/test-reading-comprehension-preservation-20261105.mjs:11:180
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  status: 7,
+  signal: null,
+  output: [
+    null,
+    Buffer(0) [Uint8Array] [],
+    Buffer(91) [Uint8Array] [
+       99, 117, 114, 108,  58,  32,  40,  55,  41,  32,  70,  97,
+      105, 108, 101, 100,  32, 116, 111,  32,  99, 111, 110, 110,
+      101,  99, 116,  32, 116, 111,  32,  49,  50,  55,  46,  48,
+       46,  48,  46,  49,  32, 112, 111, 114, 116,  32,  49,  57,
+       49,  51,  54,  32,  97, 102, 116, 101, 114,  32,  48,  32,
+      109, 115,  58,  32,  67, 111, 117, 108, 100, 110,  39, 116,
+       32,  99, 111, 110, 110, 101,  99, 116,  32, 116, 111,  32,
+      115, 101, 114, 118, 101, 114,  10
+    ]
+  ],
+  pid: 53345,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(91) [Uint8Array] [
+     99, 117, 114, 108,  58,  32,  40,  55,  41,  32,  70,  97,
+    105, 108, 101, 100,  32, 116, 111,  32,  99, 111, 110, 110,
+    101,  99, 116,  32, 116, 111,  32,  49,  50,  55,  46,  48,
+     46,  48,  46,  49,  32, 112, 111, 114, 116,  32,  49,  57,
+     49,  51,  54,  32,  97, 102, 116, 101, 114,  32,  48,  32,
+    109, 115,  58,  32,  67, 111, 117, 108, 100, 110,  39, 116,
+     32,  99, 111, 110, 110, 101,  99, 116,  32, 116, 111,  32,
+    115, 101, 114, 118, 101, 114,  10
+  ]
+}
+
+Node.js v26.4.0

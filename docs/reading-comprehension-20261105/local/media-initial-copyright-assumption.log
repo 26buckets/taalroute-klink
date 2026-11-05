@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/private/tmp/klink-implementatie-20261101/scripts/test-reading-comprehension-media-20261105.py", line 48, in <module>
+    results = list(pool.map(check, words))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 608, in result_iterator
+    yield fs.pop().result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/private/tmp/klink-implementatie-20261101/scripts/test-reading-comprehension-media-20261105.py", line 42, in check
+    assert tags.get('album') and 'taalroute' in tags.get('copyright', '').lower(), (row['word'], tags)
+AssertionError: ('de', {'artist': 'Taalroute', 'title': 'de', 'album': 'Klink - Taalroute', 'encoder': 'Lavf62.12.102', 'album_artist': 'Taalroute', 'publisher': 'Taalroute'})

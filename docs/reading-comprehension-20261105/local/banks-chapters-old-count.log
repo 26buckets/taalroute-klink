@@ -1,0 +1,35 @@
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (16966.41925ms)
+✖ Source levels are honest, never inferred from matching words or a completed activity (1.933791ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (23.249417ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (109.054458ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17551.152458
+
+✖ failing tests:
+
+test at scripts/test-practice-chapters.mjs:76:6
+✖ Source levels are honest, never inferred from matching words or a completed activity (1.933791ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  272 !== 270
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-implementatie-20261101/scripts/test-practice-chapters.mjs:89:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 272,
+    expected: 270,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
