@@ -1,0 +1,80 @@
+[
+  {
+    "version": "baseline",
+    "root": "/Users/nicoknoester/.cache/klink-eight-control-current-20261105/dist",
+    "commit": "5a7f92cb1608478792a89ec0c7819c96e8c766ed",
+    "round": "final",
+    "assets": 20000,
+    "config": {
+      "name": "klink-pr12-baseline",
+      "main": "/Users/nicoknoester/.cache/klink-eight-control-current-20261105/dist/server/index.js",
+      "compatibility_date": "2026-05-15",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "no_bundle": true,
+      "rules": [
+        {
+          "type": "ESModule",
+          "globs": [
+            "**/*.js",
+            "**/*.mjs"
+          ]
+        }
+      ],
+      "assets": {
+        "directory": "/Users/nicoknoester/.cache/klink-eight-control-current-20261105/dist/client",
+        "binding": "ASSETS"
+      },
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "observability": {
+        "enabled": true
+      },
+      "vars": {
+        "KLINK_STAGING_ROUND": "final"
+      }
+    },
+    "configSha256": "51e161de0aa295e307f0fe0006fac090543e10873f96cdae3f4a244ba05bcc4e"
+  },
+  {
+    "version": "candidate",
+    "root": "/Users/nicoknoester/.cache/klink-opening-eightseconds-20261105/dist",
+    "commit": "8de7543ba9012aac3728454ee2872ab37002895b",
+    "round": "final",
+    "assets": 20000,
+    "config": {
+      "name": "klink-pr12-candidate",
+      "main": "/Users/nicoknoester/.cache/klink-opening-eightseconds-20261105/dist/server/index.js",
+      "compatibility_date": "2026-05-15",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "no_bundle": true,
+      "rules": [
+        {
+          "type": "ESModule",
+          "globs": [
+            "**/*.js",
+            "**/*.mjs"
+          ]
+        }
+      ],
+      "assets": {
+        "directory": "/Users/nicoknoester/.cache/klink-opening-eightseconds-20261105/dist/client",
+        "binding": "ASSETS"
+      },
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "observability": {
+        "enabled": true
+      },
+      "vars": {
+        "KLINK_STAGING_ROUND": "final"
+      }
+    },
+    "configSha256": "cc5f635d74e88f678a646e20f92ffbd0d0bb7daee290160d204c0a7c0e9fda03"
+  }
+]

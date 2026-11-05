@@ -1,0 +1,224 @@
+{
+  "conditions": "Fresh Chromium contexts, 3 Mbps down / 1 Mbps up, 40 ms added latency, no CPU throttling; alternating versions. Immediate chapter, activity and first exercise clicks, without invented thinking time. Not a physical phone or mobile network.",
+  "visits": 16,
+  "errors": [],
+  "version": {
+    "before": {
+      "completeMs": {
+        "median": 8724.500000029802,
+        "min": 7638.899999976158,
+        "max": 9511.699999988079
+      },
+      "homeMs": {
+        "median": 7323.0,
+        "min": 6755.599999964237,
+        "max": 7861.799999952316
+      },
+      "lastClickIncludingMediaMs": {
+        "median": 1065.25,
+        "min": 697.8999999761581,
+        "max": 1464.0
+      },
+      "transferBytes": {
+        "median": 2634481.0,
+        "min": 2489897,
+        "max": 2773919
+      },
+      "resourceCount": {
+        "median": 43.5,
+        "min": 38,
+        "max": 47
+      },
+      "nativeAudioCompleted": true,
+      "byWidth": {
+        "1280": {
+          "n": 4,
+          "completeMedianMs": 9076.299999982119
+        },
+        "390": {
+          "n": 4,
+          "completeMedianMs": 8073.699999988079
+        }
+      }
+    },
+    "after": {
+      "completeMs": {
+        "median": 8207.299999982119,
+        "min": 7582.899999976158,
+        "max": 9215.799999952316
+      },
+      "homeMs": {
+        "median": 7012.550000011921,
+        "min": 6716.699999988079,
+        "max": 7582.399999976158
+      },
+      "lastClickIncludingMediaMs": {
+        "median": 1080.9999999701977,
+        "min": 680.8999999761581,
+        "max": 1448.6000000238419
+      },
+      "transferBytes": {
+        "median": 2519134.0,
+        "min": 2381593,
+        "max": 2666136
+      },
+      "resourceCount": {
+        "median": 42.0,
+        "min": 38,
+        "max": 47
+      },
+      "nativeAudioCompleted": true,
+      "byWidth": {
+        "1280": {
+          "n": 4,
+          "completeMedianMs": 8997.249999970198
+        },
+        "390": {
+          "n": 4,
+          "completeMedianMs": 7745.050000011921
+        }
+      }
+    }
+  },
+  "pairs": [
+    {
+      "width": 1280,
+      "repeat": 0,
+      "beforeMs": 9511.699999988079,
+      "afterMs": 9215.799999952316,
+      "savedMs": 295.9000000357628
+    },
+    {
+      "width": 1280,
+      "repeat": 1,
+      "beforeMs": 9148.399999976158,
+      "afterMs": 8380.599999964237,
+      "savedMs": 767.8000000119209
+    },
+    {
+      "width": 1280,
+      "repeat": 2,
+      "beforeMs": 9004.199999988079,
+      "afterMs": 9047.299999952316,
+      "savedMs": -43.09999996423721
+    },
+    {
+      "width": 1280,
+      "repeat": 3,
+      "beforeMs": 8839.300000011921,
+      "afterMs": 8947.199999988079,
+      "savedMs": -107.89999997615814
+    },
+    {
+      "width": 390,
+      "repeat": 0,
+      "beforeMs": 8609.700000047684,
+      "afterMs": 8034,
+      "savedMs": 575.7000000476837
+    },
+    {
+      "width": 390,
+      "repeat": 1,
+      "beforeMs": 8158.399999976158,
+      "afterMs": 7757.199999988079,
+      "savedMs": 401.19999998807907
+    },
+    {
+      "width": 390,
+      "repeat": 2,
+      "beforeMs": 7989,
+      "afterMs": 7582.899999976158,
+      "savedMs": 406.10000002384186
+    },
+    {
+      "width": 390,
+      "repeat": 3,
+      "beforeMs": 7638.899999976158,
+      "afterMs": 7732.900000035763,
+      "savedMs": -94.00000005960464
+    }
+  ],
+  "completeReductionPercent": 5.9281334179141165,
+  "pairedMedianSavedMs": 348.55000001192093,
+  "fasterPairs": 5,
+  "secondarySample": {
+    "ordinary": {
+      "before": {
+        "cold": {
+          "n": 2,
+          "medianMs": 9166.199999988079,
+          "bodyBytesMedian": 2636260.0
+        },
+        "warm": {
+          "n": 2,
+          "medianMs": 885.0,
+          "bodyBytesMedian": 2393862.0
+        }
+      },
+      "after": {
+        "cold": {
+          "n": 2,
+          "medianMs": 8841.050000011921,
+          "bodyBytesMedian": 2528140.5
+        },
+        "warm": {
+          "n": 2,
+          "medianMs": 871.1500000059605,
+          "bodyBytesMedian": 2285658.0
+        }
+      }
+    },
+    "daily": {
+      "before": {
+        "cold": {
+          "n": 2,
+          "medianMs": 8221.59999999404,
+          "bodyBytesMedian": 2461712.5
+        },
+        "warm": {
+          "n": 2,
+          "medianMs": 1434.1500000059605,
+          "bodyBytesMedian": 2368563.5
+        }
+      },
+      "after": {
+        "cold": {
+          "n": 2,
+          "medianMs": 8192.40000000596,
+          "bodyBytesMedian": 2483214.5
+        },
+        "warm": {
+          "n": 2,
+          "medianMs": 1408.550000011921,
+          "bodyBytesMedian": 2392481.0
+        }
+      }
+    },
+    "functional": {
+      "before": {
+        "cold": {
+          "n": 2,
+          "medianMs": 8029.8499999940395,
+          "bodyBytesMedian": 2461615.5
+        },
+        "warm": {
+          "n": 2,
+          "medianMs": 1458.6000000238419,
+          "bodyBytesMedian": 2368468.0
+        }
+      },
+      "after": {
+        "cold": {
+          "n": 2,
+          "medianMs": 7537.450000017881,
+          "bodyBytesMedian": 2483293.0
+        },
+        "warm": {
+          "n": 2,
+          "medianMs": 1367.0999999940395,
+          "bodyBytesMedian": 2390095.5
+        }
+      }
+    }
+  }
+}

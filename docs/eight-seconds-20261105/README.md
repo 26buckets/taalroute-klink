@@ -1,60 +1,56 @@
-# Klink — resterende eerste opening — gecontroleerde staging, 5 november 2026
+# Klink — kleinere eerste download — uitsluitend staging, 5 november 2026
 
-De laatste proef is volledig herhaald op actuele main `e8925763430601bea02fecfb89e91054e25015a7`, inclusief de afzonderlijk goedgekeurde Help-knop en appel-en-peer-correctie. Deze snelheidswijziging is **niet naar productie gepubliceerd**. Er is geen merge naar main, databasewijziging, nieuwe dependency, workflow of budgetverhoging uitgevoerd.
+De proef is aangesloten op actuele main `a3beb7934eb43cb8d166c5e5a4fd0084f974fa6e` en livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49`. De goedgekeurde Help-/appel-en-peer-aanpassing én de 50 nieuwe dictees blijven behouden. **Deze snelheidswijziging is niet naar productie gepubliceerd of naar main gemerged.** Geen databasewijziging, dependency, workflow of budgetverhoging.
 
-[Proefversie](https://klink-pr12-candidate.nico-554.workers.dev/#learner) · [Klink+Docent](https://klink-pr12-candidate.nico-554.workers.dev/#teacher/plus) · [Controleversie](https://klink-pr12-baseline.nico-554.workers.dev/#learner) · [Draft PR 12](https://github.com/26buckets/taalroute-klink/pull/12)
+[Proefversie](https://klink-pr12-candidate.nico-554.workers.dev/#learner) · [Klink+Docent](https://klink-pr12-candidate.nico-554.workers.dev/#teacher/plus) · [Controle](https://klink-pr12-baseline.nico-554.workers.dev/#learner) · [Draft PR 12](https://github.com/26buckets/taalroute-klink/pull/12)
 
-## Gemeten winst op de actuele basis
+## Laatste meting op dezelfde actuele basis
 
-| Meting | Controle | Nieuwe proefversie |
+| Meting | Controle | Proefversie |
 |---|---:|---:|
-| Volledige eerste oefening, gezamenlijke mediaan | 8.61 s | 8.10 s |
-| Desktop, mediaan van vier bezoeken | 9.13 s | 8.94 s |
-| Mobiele schermmaat, mediaan van vier bezoeken | 8.32 s | 7.82 s |
-| Laatste klik inclusief foto, gezamenlijke mediaan | 1.08 s | 1.08 s |
-| Werkelijk overgedragen bytes, mediaan | 2,631,762 | 2,522,287 |
-| Langzaamste volledige opening in deze steekproef | 9.73 s | 9.27 s |
+| Volledige eerste oefening, gezamenlijke mediaan | 8.72 s | 8.21 s |
+| Desktop, vier bezoeken per variant | 9.08 s | 9.00 s |
+| Mobiele schermmaat, vier bezoeken per variant | 8.07 s | 7.75 s |
+| Laatste klik inclusief foto, mediaan | 1.07 s | 1.08 s |
+| Totale overdracht inclusief headers, mediaan | 2,634,481 bytes | 2,519,134 bytes |
+| Langzaamste volledige opening in deze steekproef | 9.51 s | 9.22 s |
 
-Zestien verse Chromium-bezoeken in acht afwisselende paren, vier paren per schermmaat (1280 en 390 px). Dezelfde oefening, dezelfde gedecodeerde foto, lettertypen gereed en twee beeldverversingen. 3 Mbps download, 1 Mbps upload en 40 ms extra latency; geen CPU-beperking of verzonnen denkpauzes tussen klikken. Alle zestien native audio-opnamen speelden volledig af. Zeven van de acht paren waren sneller. De gepaarde mediane winst was 0.51 seconde; de gezamenlijke mediaan daalde 6.0%. Dit is geen fysieke telefoonproef en geen statistische garantie voor ieder netwerk.
+Zestien verse Chromium-bezoeken, afwisselend in acht paren. Dezelfde oefening, dezelfde ontvangen en gedecodeerde foto, lettertypen gereed en twee beeldverversingen. 3 Mbps download, 1 Mbps upload, 40 ms extra latency, geen CPU-beperking en geen denkpauzes tussen klikken. Alle zestien native audio-opnamen speelden volledig af; geen browserfouten. **5 van acht paren sneller**; gepaarde mediane winst 0.35 seconde. De gezamenlijke mediaan daalde 5.9%. Op desktop is de mediane winst klein. Een herhaalbezoek aan de gewone oefening duurde in de aanvullende proef bij de kandidaat mediaan 0.87 seconde (n=2).
 
-De acht seconden zijn dus **niet opgelost**. De startdownload is aantoonbaar kleiner; netwerkpieken blijven bestaan. In de aanvullende cachecontrole was de kandidaat bij één van de twee koude gewone bezoeken juist langzamer. Die bezoeken blijven in het bewijs staan. Een eerdere volledige ronde vóór de parallelle Help-publicatie gaf 8,49 → 8,30 seconde. De definitieve ronde hierboven gebruikt voor beide varianten de nieuwe goedgekeurde basis; de oudere meetronde staat apart in de bovenliggende map. Alleen resultaten uit dezelfde ronde worden vergeleken.
+**De resterende acht seconden en netwerkpieken zijn niet opgelost.** De kleinere download is aantoonbaar; een hogere snelheid bij ieder bezoek is niet aangetoond. Dit is netwerkemulatie op een computer, geen fysieke telefoon of Nico's eigen netwerk. Alle bezoeken, inclusief tragere kandidaten, zijn bewaard. [Samenvatting](final/summary.json), [ruwe hoofdmeting](final/3mbps/visits.json), [24 koude/warme controles](final/cache-and-alfa/checks.json).
 
-[Definitieve samenvatting](reconciled/summary.json) · [alle zestien metingen](reconciled/3mbps/visits.json) · [aanvullende 24 bezoeken](reconciled/cache-and-alfa/checks.json).
+## Wijziging en afbeeldingen
 
-## Wat is veranderd
+Twee ongewijzigde Alfa C-audiozoeklijsten laden nu met de bestaande aanvullende spelers. Menu's en het lezen van opgeslagen voortgang trekken die metadata niet meer meteen binnen. De runtimewijziging raakt vijf bestanden: twaalf regels toegevoegd, elf verwijderd. Broninhoud, opnamen, afbeeldingen, antwoorden en opslagformaten blijven gelijk.
 
-Twee ongewijzigde Alfa C-audiozoeklijsten worden door de bestaande aanvullende spelers geladen. Het menu en het lezen van opgeslagen voortgang trekken die lijsten niet meer meteen binnen. De runtimewijziging raakt vijf bestanden: twaalf regels toegevoegd, elf verwijderd. Alle brongegevens, audio-opnamen, afbeeldingen, antwoorden en opslagformaten blijven gelijk.
+De vier gecomprimeerde startbestanden dalen samen van 1,808,352 naar 1,700,585 bytes: **107,767 bytes minder**. Geen nieuw bestand op het kritieke laadpad en geen extra netwerkronde. De gewone eerste oefening haalt geen aanvullende Alfa C-spelers op. De overige oefengegevens vormen nog steeds het grootste deel van de eerste download; extra fotocompressie lost die hoofdoorzaak niet op.
 
-De vier gecomprimeerde startbestanden dalen samen van 1.808.218 naar 1.699.000 bytes: 109.218 bytes minder. Er is geen nieuw bestand op het kritieke laadpad en geen extra serververzoek toegevoegd. De gewone eerste oefening haalt de aanvullende spelers nog steeds niet op. Voor de grotere resterende winst moet het eerste pad minder van de overige oefengegevens nodig hebben; afbeeldingen opnieuw verkleinen pakt deze hoofdoorzaak niet aan.
+De foto's zijn al compact, voornamelijk WebP. De eerste oefenfoto is **31.162 bytes bij 640 × 640 pixels**. De foto's in de voorafgaande lijst zijn ongeveer **9–74 kB per stuk**. De desktoproute ontvangt circa 0,52–0,53 MB aan afbeeldingen/SVG's samen; de mobiele schermmaat circa 0,25–0,26 MB. Dezelfde oefenfoto wordt vanuit de lijst hergebruikt. Dit zijn kleine bestanden, geen garantie dat het netwerk ze zonder wachttijd levert. Er is geen kwaliteitsverlaging of nieuwe beeldbewerking uitgevoerd. [Inventaris](images.json).
 
-Afweging: wie meteen Alfa C opent, ontvangt de verplaatste gegevens alsnog. Door de verschillende compressie van de bestaande aanvullende spelers was die hele route in de kleine controle ongeveer 17–18 kB groter. Er is daar geen algemene snelheidswinst aangetoond. De twee koude en twee warme bezoeken per variant en soort staan volledig in het bewijs. Een nieuw compressiepad of extra Worker-aanroep is hiervoor niet toegevoegd.
-
-## Hoe groot zijn de afbeeldingen?
-
-De gebruikte afbeeldingen zijn al gecomprimeerd, voornamelijk als WebP. De foto van de eerste oefening is **31.162 bytes, 640 × 640 pixels**. De foto's in de voorafgaande lijst zijn circa **9–74 kB per foto**. De desktoproute ontvangt ongeveer 0,52–0,53 MB aan afbeeldingen en SVG's samen; op de mobiele schermmaat ongeveer 0,25–0,26 MB. Dezelfde oefenfoto wordt uit de lijst hergebruikt.
-
-‘Klein’ betekent niet dat een bestand zonder wachttijd binnenkomt. De gezamenlijke omvang en het netwerk tellen mee. De foto's zijn in deze wijziging niet opnieuw verkleind of in kwaliteit verlaagd. [Inventaris met afmetingen](images.json); de bronbestanden zijn identiek in de actuele proef.
+Afweging: wie meteen Alfa C opent, ontvangt de verplaatste metadata alsnog. Door de andere compressie van de bestaande aanvullende spelers was die hele route in de controle circa 22 kB groter. Daar is geen algemene snelheidswinst aangetoond. De twee koude en twee warme bezoeken per variant/soort blijven in het bewijs staan; geen extra Worker-compressiepad toegevoegd.
 
 ## Serveraanroepen en kosten
 
-De nieuwe importwijziging voegt **nul** serveraanroepen toe. De eerdere Brotli-proef handelt vier bestaande bestandsverzoeken met een Worker af. Dat zijn vier extra Worker-uitvoeringen ten opzichte van gewone statische afhandeling, maar geen vier extra downloads of nieuwe verzoekrondes. Er wordt tijdens een verzoek niet opnieuw gecomprimeerd en er is geen database nodig.
+De nieuwe importwijziging voegt **nul** serveraanroepen toe. De eerdere Brotli-proef handelt vier bestaande bestandsverzoeken met een Worker af. Dat zijn vier extra Worker-uitvoeringen ten opzichte van gewone statische afhandeling, geen vier extra downloads/verzoekrondes. Er wordt tijdens een verzoek niet opnieuw gecomprimeerd en er is geen database nodig.
 
-In alle twaalf koude bezoeken van de aanvullende proef bereikten vier van deze verzoeken de server. In alle twaalf herhaalbezoeken kwamen ze uit de browsercache: **nul nieuwe netwerkverzoeken voor deze vier bestanden**. De pagina zelf kan nog wel een serververzoek doen. De gewone oefening stond bij de twee herhaalbezoeken van de kandidaat in de mediaan in 0,92 seconde klaar. Een harde verversing of verlopen/lege browsercache kan de vier verzoeken opnieuw veroorzaken.
+In alle twaalf koude controles bereikten vier van die verzoeken de server. In alle twaalf herhaalbezoeken kwamen ze uit de browsercache: **nul nieuwe netwerkverzoeken voor deze vier bestanden**. De pagina zelf kan nog een verzoek doen. Harde verversing of lege/verlopen cache kan de vier verzoeken terugbrengen. [Cachebewijs](final/cache-and-alfa/validation.json).
 
-Volgens Cloudflare is statische bestandsafhandeling gratis; een met `run_worker_first` afgehandeld verzoek telt als Worker-uitvoering. Een Cloudflare-cachehit betekent niet automatisch dat die uitvoering gratis is. Bij Workers Standard geldt onder meer 10 miljoen inbegrepen verzoeken en $0,30 per miljoen daarboven, plus eventuele CPU- en logkosten. Honderdduizend volledig nieuwe bezoeken leveren vierhonderdduizend extra Worker-uitvoeringen op: **$0,12 aan verzoekkosten wanneer die allemaal boven de inbegrepen bundel vallen**, exclusief eventuele CPU/logkosten en abonnement. Dit is een rekenvoorbeeld, geen bevestiging van Nico's factuur of resterende bundel.
+Cloudflare rekent statische bestandsafhandeling niet als Worker-uitvoering; `run_worker_first` doet dat wel. Ook een Cloudflare-cachehit maakt zo'n uitvoering niet automatisch gratis. Workers Standard heeft onder meer 10 miljoen inbegrepen verzoeken en $0,30 per miljoen daarboven, plus eventuele CPU-/logkosten. Honderdduizend volledig nieuwe bezoeken betekenen vierhonderdduizend extra Worker-uitvoeringen: **$0,12 verzoekkosten als die allemaal boven de inbegrepen bundel vallen**, exclusief eventuele CPU/logkosten en abonnement. Dit is een rekenvoorbeeld, geen factuurprognose voor Nico.
 
-De API meldt accountmodel `standard`; toegang tot abonnementsgegevens wordt met 403 geweigerd. Daarom is geen claim van ‘gegarandeerd $0 extra’ gedaan. Budgetten en abonnementen zijn niet gewijzigd. In het definitieve meetvenster registreerde de beschikbare analyse 89 uitvoeringen zonder fouten; CPU-mediaan 0,885 ms en p99 76,811 ms. De beschikbare Worker-analyses en geverifieerde CPU-eenheden staan in [serverbewijs](reconciled/server-analytics.json) en [accounttoegang](account-cost-access.json). De dataset bevat ook HTML en protocolcontroles: geen zuivere meting van compressie-CPU en geen facturatiebestand.
+De API meldt model `standard`; abonnementsgegevens geven 403. Resterende bundel en werkelijke rekening konden dus niet worden bevestigd. Budgetten zijn niet gewijzigd. De definitieve analyse registreert 92 uitvoeringen zonder fouten, CPU-mediaan 0,899 ms en p99 51,431 ms. Deze adaptieve dataset bevat ook HTML/protocolcontroles, kan achterlopen en is geen zuivere compressie-CPU- of facturatiemeting. [Serverbewijs](final/server-analytics.json), [accounttoegang en geverifieerde CPU-eenheid](account-cost-access.json).
 
-Bronnen, gecontroleerd 5 november 2026: [Cloudflare static assets](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) en [Workers-prijzen](https://developers.cloudflare.com/workers/platform/pricing/).
+Officiële bronnen, gecontroleerd 5 november 2026: [statische bestanden](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/) en [Workers-prijzen](https://developers.cloudflare.com/workers/platform/pricing/).
 
-## Controle, aansluiting en grenzen
+## Controles en actuele aansluiting
 
-- Schone controlebuild `a7d519c8f114c3050b390d8c04879175e71c97d9`; schone kandidaatbuild `dad0fda4113378711f3c0e6d69098e650efe8899`. Beide bevatten actuele main. [Herkomst en stagingversies](reconciled/provenance.json), [teruggelezen releasegegevens](reconciled/staging-releases.json).
-- 56 pixelidentieke schermparen in Chromium en WebKit, desktop/mobiel en licht/donker, inclusief de twee gewijzigde Alfa C-spelers. Alle CSS-declaraties en 20.000 assets behouden. Bewijzen: [algemeen](reconciled/appearance/comparison.json), [spelers](reconciled/player-appearance/comparison.json), [gebouwde bronnen](reconciled/bundle-checks/checks.json). De PNG's zijn onderdeel van de gecontroleerde Drive-herstelkopie.
-- 288 hervatte Alfa C-opdrachten met juiste audiozoekkoppelingen in beide browsers; negen bron-/audiounitproeven; 203 volledige inhouds-/verzamelingsvergelijkingen; twaalf gebouwde databankhashes; TypeScript en gerichte lint geslaagd. [Audiobewijs](reconciled/audio-browser/checks.json).
-- Acht actuele Help-/appel-en-peer-bedieningsproeven geslaagd. Ook de zestien herstel-/afgeschermde docentstromen en opslagproeven zijn opnieuw op deze actuele basis geslaagd. [Actuele Help-controle](reconciled/help/browser.json).
-- Vier werkelijk aangeboden modules uitpakken naar precies de gebouwde bestanden; HEAD, 304 en oorspronkelijke afhandeling zonder Brotli werken. Vijf voorbereidingscontroles blokkeren productie en verkeerd gekozen testhost. [HTTP-bewijs](reconciled/http.json).
-- Een oud functioneel testschema zoekt de inmiddels vervangen knoptekst ‘Uitleg’ en faalt daarmee ook op de controleversie. De actuele audiobediening is afzonderlijk volledig gecontroleerd; dit oude volledige scenario is niet als geslaagd opgevoerd.
-- De andere chat publiceerde tijdens de eerste ronde de afzonderlijk goedgekeurde Help-/contextaanpassing, livebron `43c05c9d4c40adb5373d564e6131d5dbdd90d546`. Deze taak heeft geen productiepublicatie uitgevoerd. De proef is daarna opnieuw opgebouwd en gecontroleerd. Gedurende die definitieve ronde bleven productie Klink, productie Inzicht en PR8-staging exact gelijk: [uitrolcontrole](reconciled/preservation-result.json). Geen echt cursistgegeven gebruikt, geen migratie uitgevoerd.
+- Controle `5a7f92cb1608478792a89ec0c7819c96e8c766ed`; kandidaat `8de7543ba9012aac3728454ee2872ab37002895b`. Beide schone builds bevatten de live-inhoud. De latere main-opvolgers wijzigen uitsluitend bewijs/documentatie. [Herkomst](final/provenance.json), [teruggelezen releases](final/staging-releases.json).
+- 56 pixelidentieke schermparen in Chromium en WebKit, desktop/mobiel en licht/donker. Alle CSS-declaraties en 20.000 assets behouden. [Algemeen](final/appearance/comparison.json), [spelers](final/player-appearance/comparison.json), [gebouwde bronnen](final/bundle-checks/checks.json). De PNG's staan volledig in de Drive-herstelkopie, niet opnieuw in Git.
+- 203 volledige inhoudsvergelijkingen, twaalf gebouwde databankhashes, actuele build/TypeScript, acht Help-/appel-en-peer-proeven en alle 50 nieuwe dictees via de werkelijk gebouwde server exact vergeleken. [Nieuwe inhoud](final/dictation-and-audio-preservation.json), [Help](final/help/browser.json).
+- De 288 Alfa C-audioproeven in beide browsers, negen bron-/audiounitproeven, opslagproeven en zestien herstel-/afgeschermde docentstromen zijn geslaagd op de Help-basis. De vijf veranderde runtimebestanden en Alfa C-audiobronnen zijn daarna exact gelijk gebleven; dat is na de dicteetoevoeging apart gecontroleerd. [288 audioproeven](reconciled/audio-browser/checks.json), [identiteitsbewijs](final/dictation-and-audio-preservation.json).
+- Werkelijk aangeboden modules zijn na uitpakken exact gelijk aan de build; HEAD en 304 werken. De ongewijzigde oorspronkelijke afhandeling zonder Brotli is in de vorige ronde gecontroleerd. Vijf voorbereidingscontroles blokkeren productie en verkeerde host. [Definitieve HTTP-controle](final/http.json).
+- Een oud volledig functioneel testschema verwacht de vervangen knoptekst ‘Uitleg’ en faalt ook op de controleversie. Dit oude scenario wordt niet als geslaagd opgevoerd; actuele audio-, scherm- en Help-bediening zijn afzonderlijk gecontroleerd.
+- Tijdens het werk publiceerden de andere chats op afzonderlijk Nico-akkoord eerst Help/context en daarna 50 dictees. Beide zijn overgenomen; elke runtimewijziging leidde tot een nieuwe vergelijkbare proef. De laatste ronde behield productie Klink, productie Inzicht en PR8-staging exact: [uitrolcontrole](final/preservation-result.json). Deze taak heeft uitsluitend de twee PR12-testhosts uitgerold. Geen echte cursistgegevens of migraties.
 
-Voor publicatie blijven een afzonderlijk akkoord voor de concrete gecombineerde PR12-versie, de normale publicatiecontroles op de dan actuele bron en verificatie van de daadwerkelijke accountkosten nodig. Een fysieke telefoonproef is niet uitgevoerd; er is geen fysieke testtelefoon beschikbaar gesteld. De resterende netwerkwisseling is niet verdwenen. De herstelkopie en uploadcontrole worden vastgelegd in `drive-receipt.json`.
+Oudere meetronden blijven apart: bovenliggende bestanden 8,49 → 8,30 s; `reconciled/` met Help-basis 8,61 → 8,10 s. Alleen de laatste `final/`-ronde met alle 50 dictees is de huidige eindmeting. Geen percentages uit verschillende basissen opgeteld.
+
+Open voor publicatie: afzonderlijk akkoord voor de concrete gecombineerde PR12-versie, normale publicatiecontroles op de dan actuele bron, daadwerkelijke accountkosten en een fysieke telefoonproef. De netwerkvariatie is niet verdwenen. Er is geen fysieke testtelefoon beschikbaar gesteld. De volledige herstelkopie en terugleescontrole staan in `drive-receipt.json`; de vorige herstelkopie staat in `pre-dictation-drive-receipt.json`.
