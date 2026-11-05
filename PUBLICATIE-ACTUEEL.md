@@ -1,3 +1,15 @@
+## Actuele publicatie — Help in de oefenbalk en appel en peer — 5 november 2026
+
+Livebron `43c05c9d4c40adb5373d564e6131d5dbdd90d546`, Worker `7214bd7e-3b34-45e5-943e-6965c9b9299f`. Op Nico’s expliciete opdracht via de gewone `npm run deploy` op schone canonieke main, vanaf livebron `8f310654410c683c772ce889b2164441b8a2a8c0`.
+
+Help staat naast Foto en Tekst en blijft zichtbaar wanneer de opdracht scrolt. De bestaande hulp opent direct bij de knop. De bestaande foto bij het oefenwoord en toont “appel en peer”; zonder foto staat er “en”. De opname en het oefen-ID blijven gelijk.
+
+Lokaal en live acht scherm-/bedieningsproeven per ronde in Chromium en WebKit, waaronder zes mobiele schermformaten per ronde. Live is de oorspronkelijke en-opname volledig afgespeeld en de Klink+Docent-voorbeeldles mat geopend; de twaalf cursistenkaarten bleven bereikbaar. Vijf bestaande mediabestanden en inhoudsbanken bleven bytegelijk. Alle zes ingetrokken dicteebanken geven 404; de veertien lokale vervolgkandidaten zijn niet uitgerold. Inzicht en Inzicht-staging hebben exact dezelfde uitrolhistorie. PR 12, workflows en publicatieconfiguratie zijn niet gewijzigd. Werkelijk 21 nieuwe en 19.979 behouden assets; 20.000 totaal. Geen fysieke telefoonproef.
+
+Akkoord, bewijs, livebehoud en geverifieerde herstelkopie: `docs/help-en-context-20261105/`. Drive: `1sD5AMe7juJs-Vk7KXBpYUaCiPiU5mgUo`, volledig teruggelezen met 32 gecontroleerde onderdelen. De bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — klikranden gericht aangepast — 5 november 2026
 
 Livebron `8f310654410c683c772ce889b2164441b8a2a8c0`, Worker `fd9181b8-18bf-4d5b-a690-227f9f180968`. Op Nico’s expliciete opdracht via schone canonieke main en `npm run deploy`, vanaf bevestigde livebron `487be7bb68af6d883b479d00096a79d12ac42791`. Automatisch gefocuste titels en aanwijzerbediening krijgen geen ongewenste standaardrand; toetsenbordfocus blijft zichtbaar. Alleen twee CSS-bestanden veranderen de app. Inhoud, audio, voortgang en de rest van het uiterlijk behouden.

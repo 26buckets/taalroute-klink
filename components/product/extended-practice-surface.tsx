@@ -2,7 +2,7 @@
 import { WordAudioText } from './word-audio-text';
 import './word-use.css';
 import { useExerciseViewTarget } from './exercise-view';
-import { ExerciseListen } from './exercise-listen';
+import { ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { StandardPracticeSurface } from './standard-practice-surface';
 import { useEffect, useRef, useState } from 'react';
 import Image from './compact-image';
@@ -75,7 +75,7 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
         : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.';
       onFinish(option.id, isCorrect, feedback);
     }}>{grammarSourceId && option.image?.src && <Image src={option.image.src} alt={option.image.altText ?? option.label} width={760} height={760} />}{option.label}</button>{option.audio?.src && !wordUse && <button className="secondary-button" aria-label={`Luister: ${option.label}`} onClick={() => onAudio(option.audio?.src)}><Volume2 /></button>}</div>)}</div>
-    {exercise.mode === 'verb-choice' && !grammarSourceId && <><button className="secondary-button" onClick={() => { setHelp(!help); onHelp(); }}>Help</button>{help && <div className="cp-source-text"><p>{String(exercise.rule)}</p><p>{String(exercise.sourceModel)}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.modelAudio as ExerciseAudio).src)}><Volume2 />Luister</button>}</div>}</>}
+    {exercise.mode === 'verb-choice' && !grammarSourceId && <ExerciseHelp open={help} closeLabel="Verberg hulp" onClick={() => { setHelp(!help); onHelp(); }}>{help && <div className="cp-source-text"><p>{String(exercise.rule)}</p><p>{String(exercise.sourceModel)}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.modelAudio as ExerciseAudio).src)}><Volume2 />Luister</button>}</div>}</ExerciseHelp>}
     {typeof exercise.evidence === 'string' && <p className="cp-source-proof" aria-hidden={!correct} style={{ visibility: correct ? 'visible' : 'hidden' }}>{exercise.evidence}</p>}
   </section>;
 }

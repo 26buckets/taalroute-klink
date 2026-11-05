@@ -1,13 +1,13 @@
 'use client';
 import { functionalAudio } from '@/lib/alfa-c-audio';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
-import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
+import { ExerciseAudioSlot, ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { recordFunctionalRounds } from '@/lib/alfa-c-round-progress';
 import { FunctionalResponseFields } from './alfa-c-response';
 import { emptyFunctionalResponse, functionalActions, functionalResponseReady, functionalResponseText, type FunctionalResponse } from '@/lib/alfa-c-response';
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Volume2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Eye, FileText, RefreshCw, Volume2 } from 'lucide-react';
 import { functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
 import { playMedia, stopMedia } from './shared';
 import Image from './compact-image';
@@ -148,7 +148,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         <ExerciseListen inline={model ? Boolean(step.exampleTargetTexts.length) : Boolean(step.dictationTexts.length || documents.length)} label="Luister naar de uitleg" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)} />
         {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <ExerciseListen inline={!model && step.dictationTexts.length > 0} label={model ? 'Luister naar het voorbeeld' : 'Luister naar de tekst'} disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }} />}
         {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />Voorbeeld</button>}
-        <button className="secondary-button" aria-expanded={help} onClick={() => { markHelp(); setHelp(!help); setModel(false); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }}><HelpCircle />Help</button>
+        <ExerciseHelp open={help} closeLabel="Verberg hulp" onClick={() => { markHelp(); setHelp(!help); setModel(false); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }} />
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
