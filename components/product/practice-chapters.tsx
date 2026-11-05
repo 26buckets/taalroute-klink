@@ -1,5 +1,6 @@
 'use client';
 import { LearnerModuleBoundary } from './learner-module-boundary';
+import { loadLearnerRounds } from './load-learner-rounds';
 import { RoundProgressNotice, useRoundProgress } from './round-progress';
 import { collectionProgressId, roundProgressCount, sequenceProgressId } from '@/lib/round-progress';
 import { importExistingSequenceProgress } from '@/lib/alfa-c-round-progress';
@@ -20,11 +21,10 @@ import type { PracticeAttempt } from '@/lib/package-content';
 import { learningReviewKey, parseLearningReview } from '@/lib/learning-review';
 import { learnerCollectionLabel } from '@/lib/learner-copy';
 
-const loadRounds = () => import('./learner-rounds');
-const AlfaCPractice = lazy(() => loadRounds().then(({ AlfaCPractice }) => ({ default: AlfaCPractice })));
-const ProductionRound = lazy(() => loadRounds().then(({ ProductionRound }) => ({ default: ProductionRound })));
-const SourceRepeatRound = lazy(() => loadRounds().then(({ SourceRepeatRound }) => ({ default: SourceRepeatRound })));
-const GroupRound = lazy(() => loadRounds().then(({ GroupRound }) => ({ default: GroupRound })));
+const AlfaCPractice = lazy(() => loadLearnerRounds().then(({ AlfaCPractice }) => ({ default: AlfaCPractice })));
+const ProductionRound = lazy(() => loadLearnerRounds().then(({ ProductionRound }) => ({ default: ProductionRound })));
+const SourceRepeatRound = lazy(() => loadLearnerRounds().then(({ SourceRepeatRound }) => ({ default: SourceRepeatRound })));
+const GroupRound = lazy(() => loadLearnerRounds().then(({ GroupRound }) => ({ default: GroupRound })));
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const pageSize = 12;
@@ -85,7 +85,7 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
   }, [location]);
   function open(next: ChapterLocation) {
     // Prepare the chosen player while its list is shown, never during the initial home download.
-    if (next.activity || next.sequence) void loadRounds().catch(() => undefined);
+    if (next.activity || next.sequence) void loadLearnerRounds().catch(() => undefined);
     stopMedia(); setLocation(next); setLimits(current => revealCollection(current, next)); setReview(readReview()); changePractice({ level: next.level === 'all' ? practice.level : next.level, help: next.help === 'guided' ? 'guided' : 'practice' }); window.location.assign(chapterHash(next)); }
   const sequenceChapter = alfaCChapters.find(item => item.id === location.chapter);
   const chapter = practiceChapters.find(item => item.id === (sequenceChapter?.parent ?? location.chapter));
