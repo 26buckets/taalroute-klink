@@ -1,3 +1,15 @@
+## Actuele publicatie — tien Spreken A1-nazegoefeningen — 5 november 2026
+
+Livebron `8589a60a02117dfce87c44a833341796eed8b2c1`, Worker `bd45ccf8-6ab7-437a-ba7b-dabea96619a5`. Op Nico’s expliciete opdracht via de gewone `npm run deploy` en schone canonieke main, na afgestemd venster met Inzicht. PR12 niet meegenomen. Spreken → A1 → Zelf oefenen → Zeg het woord na: SPK-A1-ZHW-01 t/m 10. Tien nieuwe brongebonden vragen, tien bestaande ongewijzigde doelopnamen, geen nieuwe audio of beelden.
+
+Live veertig native afspeel-/antwoordstromen, vier complete rondes en voortgang na herladen in Chromium/WebKit op desktop- en mobiel formaat. Twee opnameproeven met synthetische microfoon; geen fysieke telefoon- of eigen menselijke gehoorclaim. Alle tien aangeboden opnamen exact teruggelezen, Taalroute-metadata en volledige decode geslaagd. Deelname geeft geen beheersingsscore. De zes ingetrokken dicteebanken blijven 404 en de bestaande Alfa B-schrijfbank is exact behouden.
+
+Optionele betekenissteun voor collega is “Iemand met wie je werkt.”; deze minimale gelijkwaardige formulering gebruikt uitsluitend bestaande woordaudio. Doelwoord, doelopname, instructie, zelfcontrole en feedback behouden. Geen CSS/configuratie/limiet/budget/D1/Actions-wijziging. Bestaande schermvergelijking: drie pixelgelijk; één kleine rasterafwijking aan dezelfde bestaande knoprand, met gelijke geometrie en markup. Nieuwe schermen apart bekeken. Werkelijk 21 geüpload + 19979 behouden = 20000 assets; Worker gzip 6122.90 KiB.
+
+Bewijs in `docs/speaking-a1-repeat-20261105/postflight`. Bron-/herstelbackup Drive `17rMfyl302Fh2k0WPKy416TGVm-OJtpj_`; definitief bewijs Drive `1tYvNFIEjx099UKQ_SJfL_Cy7gOLJ1T0V` volledig teruggelezen: 3063505 bytes, 82 buitenste en 58 geneste payloads, SHA-256 `a20a18c0820517fe9c1dbd6eda89a430fe1bb8a997bc2fe1cebaba117d5b03ac`. De volgende main-commit bevat alleen bewijs/documentatie; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — snelheid Klink en Klink+docent — 4 november 2026
 
 Livebron `dc37a479a7a6f148d61ffb5140dfd79112331f85`, Worker `886d4b64-a6bc-42bb-92f2-41ff7bb91dfb`, gepubliceerd via canonieke main en `npm run deploy`. Afstammeling van het Spelling-HOLD-herstel; de zes ingetrokken banken blijven 404 en de tien vernieuwde Alfa B-opdrachten zijn bytegelijk behouden. Geen nieuwe inhoud, media, auth, SQL of vormgeving. De vaste wachttijd vervalt; werkruimtes laden apart en gevalideerde volledige audiobundels worden begrensd hergebruikt. Kleine gedeelde UI-code wordt samen verpakt: 19.999 bestanden, geen budgetverhoging.

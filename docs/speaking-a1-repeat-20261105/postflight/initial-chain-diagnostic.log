@@ -1,0 +1,65 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    'app/learner-layout.css',
+    'docs/appearance-floor-20261031/approved-updates/text-question-spacing-20261101.json',
+    'docs/appearance-floor-20261031/floor.json',
++   'public/practice-content/klink10-speaking-20261102/speaking-a1-repeat-34903c74ad6bda6c.json',
++   'scripts/check-speaking-a1-repeat-release.mjs',
+    'scripts/check-teacher-phase-labels-release-20261101.mjs',
+    'scripts/check-text-question-spacing-release-20261101.mjs',
++   'scripts/test-speaking-a1-repeat-browser.mjs',
++   'scripts/test-speaking-a1-repeat-release.mjs',
++   'scripts/test-speaking-a1-repeat.mjs',
+    'scripts/test-text-question-spacing-browser-20261101.mjs',
+    'scripts/test-text-question-spacing-release-20261101.mjs',
+    'VORMGEVING-VASTGEZET.md'
+  ]
+
+    at verifyTextQuestionSpacingRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-text-question-spacing-release-20261101.mjs:16:9)
+    at verifyTeacherPhaseLabelsRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-teacher-phase-labels-release-20261101.mjs:11:18)
+    at verifyTeacherModuleRecoveryRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-teacher-module-recovery-release-20261101.mjs:12:18)
+    at verifyDialogueMobilePhotoRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-dialogue-mobile-photo-release-20261101.mjs:8:18)
+    at verifySynonymContextRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-synonym-context-release-20261101.mjs:12:18)
+    at verifySentenceListenRepairRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-sentence-listen-repair-release-20261101.mjs:12:18)
+    at verifySynonymRecoveryRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-synonym-recovery-release-20261101.mjs:19:18)
+    at verifyExerciseViewRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-exercise-view-release-20261101.mjs:11:18)
+    at verifySinglePracticeTitleRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-single-practice-title-release-20261031.mjs:12:18)
+    at verifyListenPlayfieldLeftRelease (file:///private/tmp/klink-implementatie-20261101/scripts/check-listen-playfield-left-release-20261031.mjs:13:18) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'app/learner-layout.css',
+    'docs/appearance-floor-20261031/approved-updates/text-question-spacing-20261101.json',
+    'docs/appearance-floor-20261031/floor.json',
+    'public/practice-content/klink10-speaking-20261102/speaking-a1-repeat-34903c74ad6bda6c.json',
+    'scripts/check-speaking-a1-repeat-release.mjs',
+    'scripts/check-teacher-phase-labels-release-20261101.mjs',
+    'scripts/check-text-question-spacing-release-20261101.mjs',
+    'scripts/test-speaking-a1-repeat-browser.mjs',
+    'scripts/test-speaking-a1-repeat-release.mjs',
+    'scripts/test-speaking-a1-repeat.mjs',
+    'scripts/test-text-question-spacing-browser-20261101.mjs',
+    'scripts/test-text-question-spacing-release-20261101.mjs',
+    'VORMGEVING-VASTGEZET.md'
+  ],
+  expected: [
+    'app/learner-layout.css',
+    'docs/appearance-floor-20261031/approved-updates/text-question-spacing-20261101.json',
+    'docs/appearance-floor-20261031/floor.json',
+    'scripts/check-teacher-phase-labels-release-20261101.mjs',
+    'scripts/check-text-question-spacing-release-20261101.mjs',
+    'scripts/test-text-question-spacing-browser-20261101.mjs',
+    'scripts/test-text-question-spacing-release-20261101.mjs',
+    'VORMGEVING-VASTGEZET.md'
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
