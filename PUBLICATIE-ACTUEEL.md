@@ -1,3 +1,13 @@
+## Actuele publicatie — opslag en oefenspeler hersteld — 5 november 2026
+
+Livebron `487be7bb68af6d883b479d00096a79d12ac42791`, Worker `b3e6b0f6-c83c-4ab9-b7fa-92bf5f3f0b49`. Op Nico’s expliciete publicatieopdracht via schone canonieke main en `npm run deploy`, vanaf bevestigde livebron `93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402`. Schrijfgeschiedenis en rondevoortgang hersteld; opslag- en schermgedrag gericht uit de speler gehaald. Werkblad-Klaar blijft bereikbaar. Tien bestaande WAV-bestanden verliesloos voorzien van Taalroute-merkvelden; oorspronkelijke geluidsdata exact behouden. Geen nieuwe inhoud, media, databasewijziging of vormgeving.
+
+De volledige lokale controles en gewone publicatiepoort zijn geslaagd. Voor en na publicatie elk 80 schermvergelijkingen: gelijke tekst/geometrie, geen betekenisvolle pixelverschillen. Live 6 opslag- en 12 schrijfproeven, 80 leesstromen/8 rondes en 40 spreekstromen/4 rondes met herladen; 2 synthetische opnameproeven. 8.134 mediabestanden exact teruggelezen, 72 API-bestanden inclusief HEAD/bereik, 401 woordopnamen met metadata/decode en de 10 herstelde WAV-opnamen apart gecontroleerd. De zes ingetrokken dicteebanken blijven 404. Werkelijk 31 geüpload + 19.969 behouden = 20.000 assets; Worker gzip 6.136,71 KiB. Geen workflows of budgetverhoging.
+
+Exact akkoord, bron-/herstelback-up en volledige beperkingen: `docs/storage-player-repair-20261105/`. Eindbewijs en ontvangstcontrole: `postflight/RESULTAAT.md` en `postflight/backup.json`. Geen fysieke telefoon- of menselijke luisterclaim. Deze bewijsopvolger bevat alleen documentatie; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — twintig leesvragen A1/A2 — 5 november 2026
 
 Livebron `93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402`, Worker `450d9ea0-946b-41ea-97b7-3828329079df`. Via de gewone publicatiepoort en `npm run deploy`, na afstemming met Inzicht. Teksten → Teksten begrijpen → A1/A2 → Zelf oefenen: A1-TEXT-05-01..10 en A2-TEXT-05-01..10. Twintig nieuwe brongebonden leesvragen met 401 bestaande ongewijzigde woordopnamen; geen twintig-nieuwe-tekstenclaim, geen nieuwe media. PR12 en vijftig offline dictees buiten deze publicatie.
