@@ -1,7 +1,8 @@
+import { functionalAudio } from '../lib/alfa-c-audio.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { functionalAudio, functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress } from '../lib/alfa-c-functioneel.ts';
+import { functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress } from '../lib/alfa-c-functioneel.ts';
 const amendments = JSON.parse(readFileSync('docs/imported-alfa-c-release-20261031/source-amendments.json')).changes;
 const source = JSON.parse(readFileSync('docs/klink-alfa-c-functioneel-20261028/reviewed-package.json'));
 void test('all instructions, examples, source texts, tips, retries and isolated dictation items have exact audio bindings',()=>{

@@ -1,9 +1,10 @@
+import { dailyAudio, functionalAudio } from '../lib/alfa-c-audio.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
-import { dailyBlocks, dailyAudio } from '../lib/alfa-c-dagelijks.ts';
-import { functionalBlocks, functionalAudio } from '../lib/alfa-c-functioneel.ts';
+import { dailyBlocks} from '../lib/alfa-c-dagelijks.ts';
+import { functionalBlocks} from '../lib/alfa-c-functioneel.ts';
 import { pilotBlocks, alfaCGuideAudio } from '../lib/alfa-c-practice.ts';
 const read = path => JSON.parse(fs.readFileSync(path));
 const alignment = read('data/klink-alfa-c-readalong.json');

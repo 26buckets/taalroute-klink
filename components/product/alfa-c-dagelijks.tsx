@@ -1,11 +1,12 @@
 'use client';
+import { dailyAudio } from '@/lib/alfa-c-audio';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordDailyRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Eye, HelpCircle, Volume2 } from 'lucide-react';
-import { dailyAudio, dailyStorageKey, emptyDailyRecord, readDailyProgress, recordDailyAnswer, type DailyBlock, type DailyProgress, type DailyRecord, type DailyStep, type Support } from '@/lib/alfa-c-dagelijks';
+import { dailyStorageKey, emptyDailyRecord, readDailyProgress, recordDailyAnswer, type DailyBlock, type DailyProgress, type DailyRecord, type DailyStep, type Support } from '@/lib/alfa-c-dagelijks';
 import { playMedia, stopMedia } from './shared';
 import { AlfaCWorkspace, DocumentSet } from './alfa-c-workspace';
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';

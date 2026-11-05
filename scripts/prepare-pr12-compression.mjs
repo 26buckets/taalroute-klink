@@ -1,15 +1,16 @@
-// Serve pre-compressed, byte-identical modules on the isolated PR 12 candidate only.
+// Serve pre-compressed, byte-identical modules on the isolated PR 12 test hosts only.
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { brotliCompressSync, brotliDecompressSync, constants } from 'node:zlib';
 
-const [rootArg, evidence] = process.argv.slice(2);
-assert(rootArg && evidence, 'Usage: node scripts/prepare-pr12-compression.mjs <build-root> <evidence.json>');
+const [rootArg, evidence, variant = 'candidate'] = process.argv.slice(2);
+assert(['candidate', 'baseline'].includes(variant), 'Only isolated PR12 test hosts');
+assert(rootArg && evidence, 'Usage: node scripts/prepare-pr12-compression.mjs <build-root> <evidence.json> [candidate|baseline]');
 const root = resolve(rootArg);
 const staging = JSON.parse(readFileSync(root + '/server/pr12-staging.wrangler.json'));
-assert.equal(staging.name, 'klink-pr12-candidate');
+assert.equal(staging.name, `klink-pr12-${variant}`);
 assert.equal(staging.workers_dev, true);
 assert.equal(staging.preview_urls, false);
 assert.deepEqual(staging.routes, []);

@@ -1,7 +1,8 @@
+import { dailyAudio } from '../lib/alfa-c-audio.ts';
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { dailyBlocks, dailyStorageKey, dailyAudio } from '../lib/alfa-c-dagelijks.ts';
+import { dailyBlocks, dailyStorageKey} from '../lib/alfa-c-dagelijks.ts';
 import { functionalBlocks, functionalStorageKey } from '../lib/alfa-c-functioneel.ts';
 import { pilotBlocks, pilotStorageKey } from '../lib/alfa-c-practice.ts';
 const base=process.env.KLINK_URL??'http://127.0.0.1:18882', out=process.env.KLINK_READALONG_OUTPUT??'/tmp/klink-herstel-readalong';

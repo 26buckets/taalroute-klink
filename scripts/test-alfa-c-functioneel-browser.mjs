@@ -1,7 +1,8 @@
+import { functionalAudio } from '../lib/alfa-c-audio.ts';
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { functionalAudio, functionalBlocks, functionalStorageKey } from '../lib/alfa-c-functioneel.ts';
+import { functionalBlocks, functionalStorageKey } from '../lib/alfa-c-functioneel.ts';
 import { functionalActions, isStrikeResponse, responseLines } from '../lib/alfa-c-response.ts';
 const base=process.env.KLINK_URL??'http://127.0.0.1:18868';
 const out=process.env.KLINK_FUNCTIONEEL_OUTPUT??'outputs/alfa-c-functioneel';fs.mkdirSync(out,{recursive:true});

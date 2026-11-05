@@ -1,11 +1,5 @@
 import { responseForStep, type FunctionalResponse } from './alfa-c-response.ts';
 import source from '../data/klink-alfa-c-functioneel.json' with { type: 'json' };
-import audio from '../data/klink-alfa-c-functioneel-audio.json' with { type: 'json' };
-
-type Clip = { text: string; role: string; src: string; voiceId: string; sha256: string; duration: number; reused: boolean };
-const clips = new Map((audio.clips as Clip[]).map(c => [c.role + '|' + c.text, c.src]));
-export const functionalAudio = (role: 'guide' | 'target', text: string) => clips.get(role + '|' + text);
-
 export const functionalBlocks = source.blocks;
 export type FunctionalBlock = (typeof functionalBlocks)[number];
 export type FunctionalStep = FunctionalBlock['steps'][number];

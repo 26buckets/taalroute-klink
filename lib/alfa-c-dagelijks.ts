@@ -1,12 +1,9 @@
 import source from '../data/klink-alfa-c-dagelijks.json' with { type: 'json' };
-import audio from '../data/klink-alfa-c-dagelijks-audio.json' with { type: 'json' };
 
 export const dailyBlocks = source.blocks;
 export type DailyBlock = typeof dailyBlocks[number];
 export type DailyStep = DailyBlock['steps'][number];
 export const dailyStorageKey = 'klink.alfa-c.dagelijks.v1';
-const audioSources = new Map(audio.clips.map(clip => [clip.id, clip.src]));
-export const dailyAudio = (id: string) => audioSources.get(id) ?? '';
 export type Support = { instruction: number; content: number; example: number; help: number; feedback: number };
 type Attempt = { response: string[]; correct: boolean; support: Support };
 export type DailyRecord = { support: Support; attempts: number; first?: Attempt; last?: Attempt };

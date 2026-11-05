@@ -1,4 +1,5 @@
 'use client';
+import { functionalAudio } from '@/lib/alfa-c-audio';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordFunctionalRounds } from '@/lib/alfa-c-round-progress';
@@ -7,7 +8,7 @@ import { emptyFunctionalResponse, functionalActions, functionalResponseReady, fu
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Volume2 } from 'lucide-react';
-import { functionalAudio, functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
+import { functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
 import { playMedia, stopMedia } from './shared';
 import Image from './compact-image';
 import { AlfaCWorkspace, DocumentSet, PracticeDocument } from './alfa-c-workspace';

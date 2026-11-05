@@ -1,8 +1,9 @@
+import { functionalAudio } from '../lib/alfa-c-audio.ts';
 import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync as read} from 'node:fs';
 import {displayedChapterCollections,chapterCollections,selectedChapterCollection,chapterHash,parseChapterHash,chapterExerciseCount}from'../lib/practice-chapters.ts';
 import {readingSupportForExercise}from'../lib/production-practice.ts';
 import {collectionProgressId,mergeRoundProgress}from'../lib/round-progress.ts';
-import {functionalBlocks,functionalAudio}from'../lib/alfa-c-functioneel.ts';
+import {functionalBlocks} from '../lib/alfa-c-functioneel.ts';
 import {teacherTasks}from'../lib/alfa-c-docent.ts';
 const support=JSON.parse(read('data/klink-b1-reading-support.json'));
 const selection={chapter:'repeat',activity:'read-series',level:'b1',help:'guided'};
