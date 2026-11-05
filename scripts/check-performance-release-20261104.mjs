@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifySpeakingA1Release,readBeforeSpeakingA1} from './check-speaking-a1-repeat-release.mjs';
 
 const root='docs/performance-publication-20261104/';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
@@ -12,6 +13,8 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const sort=a=>a.sort((a,b)=>a.localeCompare(b));
 
 export function verifyPerformanceContent(read=readFileSync){
+  const successor=verifySpeakingA1Release(read),currentRead=read;
+  read=file=>readBeforeSpeakingA1(file,successor,currentRead);
   const json=p=>JSON.parse(read(p)), r=json(root+'approval.json');
   assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);
   assert.equal(r.userRequest,'Prima, controleer de snelheidswijzigingen nog één keer op de nieuwste versie en publiceer ze daarna voor Klink, +docent en Inzicht. Stem af met het lopende werk en laat zien of de winst ook live merkbaar is.');
@@ -19,7 +22,7 @@ export function verifyPerformanceContent(read=readFileSync){
   assert.equal(live.sourceCommit,r.liveSourceCommit);assert(live.sourceClean&&live.branch==='main');
   git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
   git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
-  const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
   assert.deepEqual(changed.filter(p=>!p.startsWith('scripts/')),[...runtime,'vite.config.ts']);
   for(const [p,h] of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
@@ -35,7 +38,7 @@ export function verifyPerformanceContent(read=readFileSync){
   const navigation=json(root+'local/navigation/checks.json');assert.equal(navigation.checks.length,8);assert(navigation.checks.every(x=>x.finalFrameKept&&x.opens&&x.storagePreserved));
   const manual=json(root+'local/manual.json');assert.equal(manual.checks.length,4);assert.deepEqual(manual.errors,[]);
   assert(proof.offeredStaticAssets<=20000);
-  return r;
+  return {...r,successor};
 }
 export function verifyPerformanceRelease(read=readFileSync){
   const r=verifyPerformanceContent(read),backup=JSON.parse(read(root+'backup.json'));
@@ -44,5 +47,5 @@ export function verifyPerformanceRelease(read=readFileSync){
   return r;
 }
 export function readBeforePerformance(file,r,read=readFileSync){
-  return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);
+  return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeSpeakingA1(file,r.successor,read);
 }

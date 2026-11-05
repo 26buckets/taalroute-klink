@@ -626,7 +626,7 @@ export function ExerciseSurface({
     case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-007': return exercise.mode === 'connected-dialogue' && dialogueControls ? <DialogueSurface exercise={exercise} controls={dialogueControls} onFinish={onFinish} guided={guided} canAnswer={canAnswer} /> : <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} canAnswer={canAnswer} />;
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onRecordingChange={onRecordingChange} />;
+    case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onRecordingChange={onRecordingChange} onHelp={onHelp} canAnswer={canAnswer} />;
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-011': return exercise.sourceForm === true ? <SourceFormSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} /> : <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-012': return exercise.handwritingOnly === true ? <HandwritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} /> : <TraceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} />;
@@ -908,9 +908,10 @@ function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfacePro
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><ChoiceSurface exercise={linked} onAudio={onAudio} onFinish={onFinish} nested /></section>;
 }
 
-function SpeakSurface({ exercise, onAudio, onFinish, onRecordingChange }: SurfaceProps) {
+function SpeakSurface({ exercise, onAudio, onFinish, onRecordingChange, onHelp, canAnswer }: SurfaceProps & { onHelp: () => void; canAnswer: boolean }) {
   const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView optional image={image} />}<Recorder onFinish={onFinish} onRecordingChange={onRecordingChange} /></section>;
+  const repetition = exercise.sourceRepetition === true;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView optional image={image} />}{repetition && <><p>{asString(exercise.selfCheck)}</p><WordHint exercise={exercise} onHelp={onHelp} /></>}{(!repetition || canAnswer) && <Recorder onFinish={repetition ? (answer, correct) => onFinish(answer, correct, asString(exercise.feedback)) : onFinish} onRecordingChange={onRecordingChange} />}</section>;
 }
 
 function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onFinish']; onRecordingChange?: (busy: boolean) => void }) {

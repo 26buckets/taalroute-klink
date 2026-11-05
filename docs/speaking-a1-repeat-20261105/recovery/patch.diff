@@ -1,0 +1,92 @@
+diff --git a/components/product/package-exercise-browser.tsx b/components/product/package-exercise-browser.tsx
+index 2d01e06b..81c2dcd1 100644
+--- a/components/product/package-exercise-browser.tsx
++++ b/components/product/package-exercise-browser.tsx
+@@ -626,7 +626,7 @@ export function ExerciseSurface({
+     case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
+     case 'ALF-CMP-007': return exercise.mode === 'connected-dialogue' && dialogueControls ? <DialogueSurface exercise={exercise} controls={dialogueControls} onFinish={onFinish} guided={guided} canAnswer={canAnswer} /> : <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} canAnswer={canAnswer} />;
+     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
+-    case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onRecordingChange={onRecordingChange} />;
++    case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onRecordingChange={onRecordingChange} onHelp={onHelp} canAnswer={canAnswer} />;
+     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
+     case 'ALF-CMP-011': return exercise.sourceForm === true ? <SourceFormSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} /> : <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
+     case 'ALF-CMP-012': return exercise.handwritingOnly === true ? <HandwritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} /> : <TraceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} />;
+@@ -908,9 +908,10 @@ function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfacePro
+   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><ChoiceSurface exercise={linked} onAudio={onAudio} onFinish={onFinish} nested /></section>;
+ }
+ 
+-function SpeakSurface({ exercise, onAudio, onFinish, onRecordingChange }: SurfaceProps) {
++function SpeakSurface({ exercise, onAudio, onFinish, onRecordingChange, onHelp, canAnswer }: SurfaceProps & { onHelp: () => void; canAnswer: boolean }) {
+   const image = exerciseImage(exercise);
+-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView optional image={image} />}<Recorder onFinish={onFinish} onRecordingChange={onRecordingChange} /></section>;
++  const repetition = exercise.sourceRepetition === true;
++  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView optional image={image} />}{repetition && <><p>{asString(exercise.selfCheck)}</p><WordHint exercise={exercise} onHelp={onHelp} /></>}{(!repetition || canAnswer) && <Recorder onFinish={repetition ? (answer, correct) => onFinish(answer, correct, asString(exercise.feedback)) : onFinish} onRecordingChange={onRecordingChange} />}</section>;
+ }
+ 
+ function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onFinish']; onRecordingChange?: (busy: boolean) => void }) {
+diff --git a/data/klink-production-index.json b/data/klink-production-index.json
+index 9be2cdb7..de795458 100644
+--- a/data/klink-production-index.json
++++ b/data/klink-production-index.json
+@@ -18253,5 +18253,15 @@
+     "image": null,
+     "url": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+     "count": 10
++  },
++  {
++    "activity": "speak",
++    "level": "a1",
++    "help": "practice",
++    "image": null,
++    "id": "speaking-a1-repeat-20261105",
++    "title": "Zeg het woord na",
++    "url": "/practice-content/klink10-speaking-20261102/speaking-a1-repeat-34903c74ad6bda6c.json",
++    "count": 10
+   }
+ ]
+diff --git a/scripts/check-performance-release-20261104.mjs b/scripts/check-performance-release-20261104.mjs
+index 5a960f51..eecdad26 100644
+--- a/scripts/check-performance-release-20261104.mjs
++++ b/scripts/check-performance-release-20261104.mjs
+@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
+ import {readFileSync} from 'node:fs';
+ import {execFileSync} from 'node:child_process';
+ import {createHash} from 'node:crypto';
++import {verifySpeakingA1Release,readBeforeSpeakingA1} from './check-speaking-a1-repeat-release.mjs';
+ 
+ const root='docs/performance-publication-20261104/';
+ const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
+@@ -12,6 +13,8 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
+ const sort=a=>a.sort((a,b)=>a.localeCompare(b));
+ 
+ export function verifyPerformanceContent(read=readFileSync){
++  const successor=verifySpeakingA1Release(read),currentRead=read;
++  read=file=>readBeforeSpeakingA1(file,successor,currentRead);
+   const json=p=>JSON.parse(read(p)), r=json(root+'approval.json');
+   assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);
+   assert.equal(r.userRequest,'Prima, controleer de snelheidswijzigingen nog één keer op de nieuwste versie en publiceer ze daarna voor Klink, +docent en Inzicht. Stem af met het lopende werk en laat zien of de winst ook live merkbaar is.');
+@@ -19,7 +22,7 @@ export function verifyPerformanceContent(read=readFileSync){
+   assert.equal(live.sourceCommit,r.liveSourceCommit);assert(live.sourceClean&&live.branch==='main');
+   git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
+   git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
+-  const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
++  const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
+   assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
+   assert.deepEqual(changed.filter(p=>!p.startsWith('scripts/')),[...runtime,'vite.config.ts']);
+   for(const [p,h] of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
+@@ -35,7 +38,7 @@ export function verifyPerformanceContent(read=readFileSync){
+   const navigation=json(root+'local/navigation/checks.json');assert.equal(navigation.checks.length,8);assert(navigation.checks.every(x=>x.finalFrameKept&&x.opens&&x.storagePreserved));
+   const manual=json(root+'local/manual.json');assert.equal(manual.checks.length,4);assert.deepEqual(manual.errors,[]);
+   assert(proof.offeredStaticAssets<=20000);
+-  return r;
++  return {...r,successor};
+ }
+ export function verifyPerformanceRelease(read=readFileSync){
+   const r=verifyPerformanceContent(read),backup=JSON.parse(read(root+'backup.json'));
+@@ -44,5 +47,5 @@ export function verifyPerformanceRelease(read=readFileSync){
+   return r;
+ }
+ export function readBeforePerformance(file,r,read=readFileSync){
+-  return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);
++  return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeSpeakingA1(file,r.successor,read);
+ }

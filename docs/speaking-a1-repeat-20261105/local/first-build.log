@@ -1,0 +1,32 @@
+
+> taalroute-klink@0.1.0 prebuild
+> node scripts/build-word-library-index.mjs --check && node scripts/build-word-listening.mjs --check && node scripts/audit-word-listening.mjs --check && npm run images:check && node scripts/write-klink-release.mjs
+
+Word library: 5127 cards linked; index 2226395 bytes
+Word-listening index: 12477 exact words.
+{"instances":101066,"exerciseIds":69284,"uniqueTokens":11156,"recordedTokens":11106,"missingCandidates":1}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Visible source words need exact recordings before publication.
++ actual - expected
+
++ [
++   'samenwerkt'
++ ]
+- []
+
+    at file:///private/tmp/klink-implementatie-20261101/scripts/audit-word-listening.mjs:63:46
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [ 'samenwerkt' ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
