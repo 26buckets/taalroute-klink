@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {verifyPointerFocusContent,verifyPointerFocusRelease} from './check-pointer-focus-release-20261105.mjs';
+const root='docs/pointer-focus-20261105/',p=root+'publication/';
+const alter=(file,change)=>path=>path===file?Buffer.from(JSON.stringify(change(JSON.parse(readFileSync(path))))):readFileSync(path);
+verifyPointerFocusRelease();
+for(const change of [r=>({...r,publicationApproved:false}),r=>({...r,approvedBy:'unknown'}),r=>({...r,baselineSourceCommit:'0'.repeat(40)}),r=>({...r,checkedCandidateCommit:'0'.repeat(40)}),r=>({...r,files:{...r.files,'app/globals.css':'0'.repeat(64)}})])assert.throws(()=>verifyPointerFocusContent(alter(p+'approval.json',change)));
+for(const file of [p+'publication-request.json',root+'results/checks.json','app/globals.css','app/learner-ui.css'])assert.throws(()=>verifyPointerFocusContent(path=>path===file?Buffer.concat([readFileSync(path),Buffer.from('changed')]):readFileSync(path)));
+for(const key of ['fullReadback','zipIntegrity','allPayloadHashesMatch'])assert.throws(()=>verifyPointerFocusRelease(alter(p+'backup.json',r=>({...r,[key]:false}))));
+console.log('PASS pointer focus release and 12 rejected approval/source/evidence/backup mutations.');

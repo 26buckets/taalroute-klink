@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import {verifyPointerFocusRelease,readBeforePointerFocus} from './check-pointer-focus-release-20261105.mjs';
 const root = 'docs/storage-player-repair-20261105/';
 const roots = ['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
@@ -9,6 +10,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const sort = values => values.sort((a,b) => a.localeCompare(b));
 export function verifyStorageRepairContent(read = readFileSync) {
+  const successor=verifyPointerFocusRelease(read),currentRead=read;read=file=>readBeforePointerFocus(file,successor,currentRead);
   const json = path => JSON.parse(read(path)), r = json(root+'approval.json'), request = json(root+'publication-request.json');
   assert.equal(r.approvedBy, 'Nico'); assert(r.publicationApproved && request.publicationApproved);
   assert.equal(request.userRequest, 'Publiceer deze gecontroleerde herstelversie nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, voortgang en het huidige uiterlijk.');
@@ -18,13 +20,13 @@ export function verifyStorageRepairContent(read = readFileSync) {
   git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
   git('merge-base','--is-ancestor',r.baselineSourceCommit,r.checkedCandidateCommit);
   git('merge-base','--is-ancestor',r.checkedCandidateCommit,'HEAD');
-  const changed = sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed = sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed,r.changedFiles); assert.deepEqual(sort(Object.keys(r.files)),changed);
   for (const [path,hash] of Object.entries({...r.files,...r.evidenceFiles})) assert.equal(sha(read(path)),hash,path);
   // Runtime stays byte-identical to the fully checked repair; only its release proof is new.
   const runtime = roots.filter(path => path !== 'scripts');
-  assert.deepEqual(lines(git('diff','--name-only',r.checkedCandidateCommit,'--',...runtime)),[]);
-  assert.deepEqual(lines(git('ls-files','--others','--exclude-standard','--',...runtime)),[]);
+  assert.deepEqual(lines(git('diff','--name-only',r.checkedCandidateCommit,successor.baselineSourceCommit,'--',...runtime)),[]);
+  // The successor validates the current tree and untracked files.
   const checks = json(root+'verification.json');
   assert(checks.typesPassed && checks.lintPassed && checks.normalBuildPassed && checks.dryRunPassed);
   assert.equal(checks.packageCommands,47); assert.equal(checks.productionCollections,1800); assert.equal(checks.historicalPublicationTests,50);
@@ -40,7 +42,7 @@ export function verifyStorageRepairContent(read = readFileSync) {
   const repairs = json(root+'local/audio-metadata-repairs.json'); assert.equal(repairs.length,10); assert(repairs.every(f=>f.decodedAudioIdentical&&sha(read(f.file))===f.after));
   assert.equal(json(root+'live-before.json').sourceCommit,r.liveSourceCommit);
   const previousBackup = json(root+'checked-candidate-backup.json'); assert(previousBackup.fullReadback&&previousBackup.zipIntegrity&&previousBackup.allPayloadHashesMatch);
-  return r;
+  return {...r,successor};
 }
 export function verifyStorageRepairRelease(read = readFileSync) {
   const r = verifyStorageRepairContent(read), backup = JSON.parse(read(root+'backup.json'));
@@ -48,5 +50,5 @@ export function verifyStorageRepairRelease(read = readFileSync) {
   assert.deepEqual(backup.files,r.files); assert.deepEqual(backup.evidenceFiles,r.evidenceFiles); return r;
 }
 export function readBeforeStorageRepair(file,r,read=readFileSync) {
-  return r.changedFiles.includes(file) ? git('show',r.baselineSourceCommit+':'+file) : read(file);
+  return r.changedFiles.includes(file) ? git('show',r.baselineSourceCommit+':'+file) : readBeforePointerFocus(file,r.successor,read);
 }
