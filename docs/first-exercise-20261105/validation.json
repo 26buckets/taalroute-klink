@@ -1,0 +1,93 @@
+{
+  "deferred/checks.json": {
+    "errors": 0,
+    "counts": {
+      "rows": 16
+    }
+  },
+  "entry/checks.json": {
+    "errors": 0,
+    "counts": {
+      "rows": 8
+    }
+  },
+  "storage/checks.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 6
+    }
+  },
+  "loader/checks.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 8
+    }
+  },
+  "bundle-checks/checks.json": {
+    "errors": 0,
+    "counts": {
+      "rows": 12
+    }
+  },
+  "regression/checks.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 16
+    }
+  },
+  "alfa-c/checks.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 96
+    }
+  },
+  "player-appearance/checks.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 48
+    }
+  },
+  "source-repeat/browser-checks.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 48,
+      "roundChecks": 4,
+      "requests": 4
+    }
+  },
+  "mixed-check.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 9
+    }
+  },
+  "reading/browser.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 80,
+      "rounds": 8
+    }
+  },
+  "speaking/browser.json": {
+    "errors": 0,
+    "counts": {
+      "checks": 40,
+      "rounds": 4
+    }
+  },
+  "appearance/comparison.json": {
+    "pairs": 32,
+    "changedPixels": 0
+  },
+  "provenance": {
+    "fullFunctional": "ddbc01ea264e49be719537edd9261a70261d1580",
+    "finalRuntime": "d32c07e568c29f6f1a244ef70431bb32993d8938",
+    "finalRerun": [
+      "12 compiled data/CSS checks",
+      "16 deferred/recovery paths",
+      "32 pixel-exact visual comparisons",
+      "TypeScript and focused lint"
+    ],
+    "deltaAfterFullFunctional": "Only fetchPriority=low on existing collection thumbnail; test harness additions."
+  }
+}

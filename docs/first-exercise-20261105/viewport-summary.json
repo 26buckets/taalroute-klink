@@ -1,0 +1,90 @@
+{
+  "viewports": {
+    "1280": {
+      "before": {
+        "exerciseClickMs": {
+          "n": 2,
+          "median": 1666.0,
+          "min": 1663.800000011921,
+          "max": 1668.199999988079
+        },
+        "exerciseMediaReadyMs": {
+          "n": 2,
+          "median": 10926.099999964237,
+          "min": 10879.799999952316,
+          "max": 10972.399999976158
+        }
+      },
+      "after": {
+        "exerciseClickMs": {
+          "n": 2,
+          "median": 1388.9999999701977,
+          "min": 1380.3999999761581,
+          "max": 1397.5999999642372
+        },
+        "exerciseMediaReadyMs": {
+          "n": 2,
+          "median": 10558.399999976158,
+          "min": 10491.899999976158,
+          "max": 10624.899999976158
+        }
+      }
+    },
+    "390": {
+      "before": {
+        "exerciseClickMs": {
+          "n": 2,
+          "median": 922.8000000119209,
+          "min": 913.8000000119209,
+          "max": 931.8000000119209
+        },
+        "exerciseMediaReadyMs": {
+          "n": 2,
+          "median": 9891.649999976158,
+          "min": 9857.399999976158,
+          "max": 9925.899999976158
+        }
+      },
+      "after": {
+        "exerciseClickMs": {
+          "n": 2,
+          "median": 639.25,
+          "min": 631,
+          "max": 647.5
+        },
+        "exerciseMediaReadyMs": {
+          "n": 2,
+          "median": 9797.449999988079,
+          "min": 9583.699999988079,
+          "max": 10011.199999988079
+        }
+      }
+    }
+  },
+  "pairedSavingsMs": [
+    {
+      "width": 1280,
+      "repeat": 0,
+      "exerciseClickMs": 266.2000000476837,
+      "exerciseMediaReadyMs": 347.5
+    },
+    {
+      "width": 1280,
+      "repeat": 1,
+      "exerciseClickMs": 287.80000001192093,
+      "exerciseMediaReadyMs": 387.89999997615814
+    },
+    {
+      "width": 390,
+      "repeat": 0,
+      "exerciseClickMs": 300.80000001192093,
+      "exerciseMediaReadyMs": -153.80000001192093
+    },
+    {
+      "width": 390,
+      "repeat": 1,
+      "exerciseClickMs": 266.30000001192093,
+      "exerciseMediaReadyMs": 342.19999998807907
+    }
+  ]
+}
