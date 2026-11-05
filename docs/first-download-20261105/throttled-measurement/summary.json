@@ -1,0 +1,122 @@
+{
+  "before": {
+    "first": {
+      "n": 8,
+      "readyMedianMs": 10495.550000011921,
+      "readyMaxMs": 10570.299999952316,
+      "paintReadyMedianMs": 10013.500000029802,
+      "paintReadyMaxMs": 10094.899999976158,
+      "measurementLagMaxMs": 492.39999997615814,
+      "afterDocumentMedianMs": 10349.699999988079,
+      "firstByteMedianMs": 118.25,
+      "over4100Ms": 8
+    },
+    "repeat": {
+      "n": 8,
+      "readyMedianMs": 820.4500000178814,
+      "readyMaxMs": 904.1999999880791,
+      "paintReadyMedianMs": 744.0999999940395,
+      "paintReadyMaxMs": 820.8999999761581,
+      "measurementLagMaxMs": 85.39999997615814,
+      "afterDocumentMedianMs": 760.1000000238419,
+      "firstByteMedianMs": 36.099999994039536,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 10495.550000011921,
+          "readyMaxMs": 10570.299999952316,
+          "paintReadyMedianMs": 10013.500000029802,
+          "paintReadyMaxMs": 10094.899999976158,
+          "measurementLagMaxMs": 492.39999997615814,
+          "afterDocumentMedianMs": 10349.699999988079,
+          "firstByteMedianMs": 118.25,
+          "over4100Ms": 8
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 820.4500000178814,
+          "readyMaxMs": 904.1999999880791,
+          "paintReadyMedianMs": 744.0999999940395,
+          "paintReadyMaxMs": 820.8999999761581,
+          "measurementLagMaxMs": 85.39999997615814,
+          "afterDocumentMedianMs": 760.1000000238419,
+          "firstByteMedianMs": 36.099999994039536,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 16,
+      "medianTotalMs": 535.5,
+      "longestMs": 393
+    },
+    "nextClick": {
+      "n": 8,
+      "medianMs": 22.850000023841858,
+      "maxMs": 53.40000003576279
+    }
+  },
+  "after": {
+    "first": {
+      "n": 8,
+      "readyMedianMs": 9446.550000011921,
+      "readyMaxMs": 9683.100000023842,
+      "paintReadyMedianMs": 9244.350000023842,
+      "paintReadyMaxMs": 9606.199999988079,
+      "measurementLagMaxMs": 484.60000002384186,
+      "afterDocumentMedianMs": 9217.449999988079,
+      "firstByteMedianMs": 97.64999997615814,
+      "over4100Ms": 8
+    },
+    "repeat": {
+      "n": 8,
+      "readyMedianMs": 776.3000000119209,
+      "readyMaxMs": 860.9000000357628,
+      "paintReadyMedianMs": 701.4499999880791,
+      "paintReadyMaxMs": 786.1000000238419,
+      "measurementLagMaxMs": 84.39999997615814,
+      "afterDocumentMedianMs": 713.3499999940395,
+      "firstByteMedianMs": 37.900000005960464,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 9446.550000011921,
+          "readyMaxMs": 9683.100000023842,
+          "paintReadyMedianMs": 9244.350000023842,
+          "paintReadyMaxMs": 9606.199999988079,
+          "measurementLagMaxMs": 484.60000002384186,
+          "afterDocumentMedianMs": 9217.449999988079,
+          "firstByteMedianMs": 97.64999997615814,
+          "over4100Ms": 8
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 776.3000000119209,
+          "readyMaxMs": 860.9000000357628,
+          "paintReadyMedianMs": 701.4499999880791,
+          "paintReadyMaxMs": 786.1000000238419,
+          "measurementLagMaxMs": 84.39999997615814,
+          "afterDocumentMedianMs": 713.3499999940395,
+          "firstByteMedianMs": 37.900000005960464,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 16,
+      "medianTotalMs": 513,
+      "longestMs": 400
+    },
+    "nextClick": {
+      "n": 8,
+      "medianMs": 20.399999976158142,
+      "maxMs": 25
+    }
+  }
+}

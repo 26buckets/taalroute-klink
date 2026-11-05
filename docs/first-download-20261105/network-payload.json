@@ -1,0 +1,68 @@
+{
+  "staging-measurement": {
+    "before": {
+      "nFirstLearner": 8,
+      "chunkEncodedMedianBytes": 2376976.0,
+      "chunkEncodedMinBytes": 2373839,
+      "chunkEncodedMaxBytes": 2379195,
+      "chunkDecodedBytes": [
+        24666901
+      ],
+      "learnerAllScriptsEncodedMedianBytes": 3141121.5
+    },
+    "after": {
+      "nFirstLearner": 8,
+      "chunkEncodedMedianBytes": 2108633.0,
+      "chunkEncodedMinBytes": 2107212,
+      "chunkEncodedMaxBytes": 2110027,
+      "chunkDecodedBytes": [
+        19006594
+      ],
+      "learnerAllScriptsEncodedMedianBytes": 2873040.0
+    }
+  },
+  "throttled-measurement": {
+    "before": {
+      "nFirstLearner": 8,
+      "chunkEncodedMedianBytes": 2375937.0,
+      "chunkEncodedMinBytes": 2374645,
+      "chunkEncodedMaxBytes": 2377399,
+      "chunkDecodedBytes": [
+        24666901
+      ],
+      "learnerAllScriptsEncodedMedianBytes": 3139360.0
+    },
+    "after": {
+      "nFirstLearner": 8,
+      "chunkEncodedMedianBytes": 2107340.0,
+      "chunkEncodedMinBytes": 2105848,
+      "chunkEncodedMaxBytes": 2108049,
+      "chunkDecodedBytes": [
+        19006594
+      ],
+      "learnerAllScriptsEncodedMedianBytes": 2871168.0
+    }
+  },
+  "staging-quiet-measurement": {
+    "before": {
+      "nFirstLearner": 8,
+      "chunkEncodedMedianBytes": 2376575.5,
+      "chunkEncodedMinBytes": 2375107,
+      "chunkEncodedMaxBytes": 2378541,
+      "chunkDecodedBytes": [
+        24666901
+      ],
+      "learnerAllScriptsEncodedMedianBytes": 3140995.5
+    },
+    "after": {
+      "nFirstLearner": 8,
+      "chunkEncodedMedianBytes": 2108508.5,
+      "chunkEncodedMinBytes": 2107721,
+      "chunkEncodedMaxBytes": 2110557,
+      "chunkDecodedBytes": [
+        19006594
+      ],
+      "learnerAllScriptsEncodedMedianBytes": 2872980.5
+    }
+  }
+}

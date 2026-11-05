@@ -15,7 +15,7 @@ for (const version of ['before', 'after']) {
   result[version] = {
     first: summarize(rows.filter(row => row.visit === 'first')),
     repeat: summarize(rows.filter(row => row.visit === 'repeat')),
-    byPortal: Object.fromEntries(['learner', 'teacher/plus'].map(portal => [portal, Object.fromEntries(['first', 'repeat'].map(visit => [visit, summarize(rows.filter(row => row.portal === portal && row.visit === visit))]))])),
+    byPortal: Object.fromEntries([...new Set(rows.map(row => row.portal))].map(portal => [portal, Object.fromEntries(['first', 'repeat'].map(visit => [visit, summarize(rows.filter(row => row.portal === portal && row.visit === visit))]))])),
     chromiumLongTasks: { n: rows.filter(row => row.engine === 'chromium').length, medianTotalMs: median(rows.filter(row => row.engine === 'chromium').map(row => row.longTasks.reduce((sum, task) => sum + task.durationMs, 0))), longestMs: Math.max(...rows.filter(row => row.engine === 'chromium').flatMap(row => row.longTasks.map(task => task.durationMs))) },
     nextClick: { n: data.nextClicks.filter(row => row.version === version).length, medianMs: median(data.nextClicks.filter(row => row.version === version).map(row => row.durationMs)), maxMs: Math.max(...data.nextClicks.filter(row => row.version === version).map(row => row.durationMs)) },
   };

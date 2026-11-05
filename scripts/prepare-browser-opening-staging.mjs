@@ -5,11 +5,12 @@ import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import ignore from 'ignore';
 
-const candidateCommit = process.argv[2];
+const [candidateCommit, baselineCommit = 'c266bef2739509be3dc08d606a461fc978d6c759', evidenceDir = 'docs/browser-opening-wait-20261105'] = process.argv.slice(2);
 assert(/^[a-f0-9]{40}$/.test(candidateCommit), 'Supply the reviewed runtime commit');
-const round = 'browser-opening-cache-20261105';
+assert(/^[a-f0-9]{40}$/.test(baselineCommit), 'Supply the preserved runtime commit');
+const round = evidenceDir.split('/').at(-1);
 const builds = [
-  ['baseline', process.env.KLINK_STAGING_BASELINE_ROOT, 'c266bef2739509be3dc08d606a461fc978d6c759'],
+  ['baseline', process.env.KLINK_STAGING_BASELINE_ROOT, baselineCommit],
   ['candidate', 'dist', candidateCommit],
 ];
 const prepared = builds.map(([version, root, commit]) => {
@@ -42,5 +43,5 @@ const prepared = builds.map(([version, root, commit]) => {
   return { version, root, commit, round, assets: files.length, config, configSha256: createHash('sha256').update(JSON.stringify(config, null, 2) + '\n').digest('hex') };
 });
 for (const row of prepared) writeFileSync(row.root + '/server/pr12-staging.wrangler.json', JSON.stringify(row.config, null, 2) + '\n');
-writeFileSync(`docs/browser-opening-wait-20261105/staging-config.json`, JSON.stringify(prepared, null, 2) + '\n');
+writeFileSync(`${evidenceDir}/staging-config.json`, JSON.stringify(prepared, null, 2) + '\n');
 console.log(prepared.map(row => `${row.config.name}: ${row.assets} assets, ${row.commit}, round ${round}, no database or custom routes`).join('\n'));
