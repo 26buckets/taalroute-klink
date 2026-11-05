@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: chromium-1366-dark changed outside the authorized title outline
+
+9 !== 0
+
+    at file:///Users/nicoknoester/Documents/Codex/2026-11-05/kun-je-zoeken-op-github-hoe/work/klink-audit/focus-checks/compare-live-appearance.mjs:21:64 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 9,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

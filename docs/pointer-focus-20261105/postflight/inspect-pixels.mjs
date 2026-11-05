@@ -1,0 +1,5 @@
+import {createRequire} from 'node:module';import {readFileSync,writeFileSync} from 'node:fs';
+const sharp=createRequire(process.cwd()+'/package.json')('sharp'),root='../focus-checks/live-appearance',name='chromium-1366-dark';
+const a=await sharp(`${root}/${name}-before.png`).ensureAlpha().raw().toBuffer({resolveWithObject:true}),b=await sharp(`${root}/${name}-after.png`).ensureAlpha().raw().toBuffer({resolveWithObject:true}),heading=JSON.parse(readFileSync(`${root}/${name}-before.json`)).heading,rows=[];
+for(let i=0;i<a.data.length;i+=4){const x=i/4%a.info.width,y=Math.floor(i/4/a.info.width);if(x>=heading.x-6&&x<=heading.x+heading.width+6&&y>=heading.y-6&&y<=heading.y+heading.height+6)continue;const delta=Math.max(...[0,1,2,3].map(k=>Math.abs(a.data[i+k]-b.data[i+k])));if(delta>2)rows.push({x,y,delta,before:[...a.data.subarray(i,i+4)],after:[...b.data.subarray(i,i+4)]});}
+writeFileSync('../focus-checks/pixel-diagnostic.json',JSON.stringify(rows,null,2)+'\n');console.log(JSON.stringify(rows));
