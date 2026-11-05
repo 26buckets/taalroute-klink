@@ -3,6 +3,7 @@ import {readBeforeSentenceRevision} from './check-sentence-revision.mjs';
 import {verifyContentAmendments,repairBaseline} from './check-content-repair-release.mjs';
 import {execFileSync} from 'node:child_process';
 import test from 'node:test';
+import {gunzipSync} from 'node:zlib';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {adaptReleaseItem} from './adapt-release-item.mjs';
@@ -13,11 +14,12 @@ import {groupExercises} from '../lib/group-practice.ts';
 import {chapterCollections,chapterForLevel} from '../lib/practice-chapters.ts';
 import {taalroutePackages} from '../lib/taalroute-packages.ts';
 import {selectUsageExercises,defaultRouteSettings} from '../lib/learner-route.ts';
-const registry=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-18/klink-productieregie/registry.json'));
-const candidates=Object.fromEntries(registry.threads.map(row=>[row.domain,JSON.parse(readFileSync(row.workdir+'/release-candidate.json'))]));
+const candidateIndex=JSON.parse(readFileSync('docs/klink-cumulative-release-20261018/candidate-index.json'));
+const candidateBytes=Object.fromEntries(candidateIndex.map(row=>[row.domain,gunzipSync(readFileSync(new URL(`./fixtures/cumulative-candidates/${row.domain}.json.gz`,import.meta.url)))]));
+const candidates=Object.fromEntries(Object.entries(candidateBytes).map(([domain,bytes])=>[domain,JSON.parse(bytes)]));
 verifyContentAmendments(readBeforeSentenceRevision);
 const originalItems=JSON.parse(execFileSync('git',['show',repairBaseline+':data/klink-imported-practice.json'],{maxBuffer:20e6})).items;
-const admissions=JSON.parse(readFileSync('outputs/cumulative-integration-20261018/admissions.json'));
+const admissions=JSON.parse(readFileSync('docs/klink-cumulative-release-20261018/admissions.json'));
 const currentBank=JSON.parse(readFileSync('data/klink-imported-practice.json')).items;
 const selfUse=JSON.parse(readFileSync('data/klink-word-use-self.json'));
 void test('Original admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery',()=>{
@@ -25,8 +27,8 @@ void test('Original admitted content matches exact final candidate and renderer 
  assert.deepEqual(currentBank.map(item=>item.id),originalItems.map(item=>item.id));
  assert.deepEqual(importedItems,[...currentBank,...selfUse]);
  assert.equal(new Set(importedItems.map(item=>item.id)).size,importedItems.length);
- for(const row of registry.threads)assert.equal(contentHash(readFileSync(row.workdir+'/release-candidate.json')),admissions[row.domain].candidateSha256,'Producer changed; repeat source review');
- for(const item of currentBank){const raw=candidates[item.domain].items.find(row=>row.id===item.id);assert(raw);const proof=admissions[item.domain].items.find(row=>row.id===item.id);assert.equal(proof.itemSha256,contentHash(raw));assert.equal(proof.renderedItemSha256,contentHash(originalItems.find(x=>x.id===item.id)));assert.equal(raw.audioRequired,false);assert.equal(raw.blockers.length,0);assert.deepEqual(contentTaskIssues(item),[]);const exercise=importedExercise(item);assert.equal(exercise.reviewEligible,false);assert.equal(exercise.independentReading,false);assert.equal(exercise.requiresAudio,false);assert.equal(exercise.access,'teacher-supported');}
+ for(const row of candidateIndex){assert.equal(contentHash(candidateBytes[row.domain]),row.candidateSha256);assert.equal(row.candidateSha256,admissions[row.domain].candidateSha256,'Approved producer snapshot must match admissions');}
+ for(const item of currentBank){const raw=candidates[item.domain].items.find(row=>row.id===item.id);assert(raw);const proof=admissions[item.domain].items.find(row=>row.id===item.id);assert.equal(proof.itemSha256,contentHash(raw));assert.equal(proof.renderedItemSha256,contentHash(originalItems.find(x=>x.id===item.id)));assert.equal(raw.audioRequired,false);assert.equal(raw.blockers.length,0);assert.deepEqual(contentTaskIssues(item),[]);const exercise=importedExercise(item);assert.equal(exercise.reviewEligible,false);assert.equal(exercise.independentReading,false);assert.equal(exercise.requiresAudio,false);assert.equal(exercise.access,item.domain==='grammatica'&&item.mode==='choice'&&!item.teacherWorkflow&&!item.teacherReference?'self-practice':'teacher-supported');}
 });
 void test('Later approved self-practice questions retain exact content, source links and separate scoring',()=>{
  assert.deepEqual(selfUse,JSON.parse(execFileSync('git',['show',contentRevisionCheckpoints.approved+':data/klink-word-use-self.json'],{maxBuffer:20e6})));
@@ -40,7 +42,7 @@ void test('Later approved self-practice questions retain exact content, source l
 });
 void test('Every admitted item is reachable once in its chapter and in every source-linked canonical list',()=>{
  for(const route of importedRoutes){const expected=importedItems.filter(item=>item.domain===route.domain).map(item=>`content:${item.id}`).sort((a,b)=>a.localeCompare(b));const collections=chapterCollections(route.id);const actual=collections.flatMap(c=>c.exercises.map(e=>e.exerciseId));assert.deepEqual(actual.sort((a,b)=>a.localeCompare(b)),expected);}
- for(const pack of taalroutePackages)for(const route of importedRoutes){const exercises=groupExercises(pack,route.id);for(const item of exercises){assert.equal(item.componentId,'KLINK-CONTENT');assert(selectUsageExercises(exercises,pack,undefined,defaultRouteSettings,'guided').some(e=>e.exerciseId===item.exerciseId));}}
+ for(const pack of taalroutePackages)for(const route of importedRoutes){const exercises=groupExercises(pack,route.id);for(const item of exercises){assert.equal(item.componentId,'KLINK-CONTENT');assert(selectUsageExercises(exercises,pack,undefined,defaultRouteSettings,item.access==='self-practice'?'independent':'guided').some(e=>e.exerciseId===item.exerciseId));}}
  for(const level of ['alfa-a','alfa-b','alfa-c','a1','a2','b1'])assert(chapterForLevel(level,'words'));
 });
 void test('Word surfaces exactly preserve all producer phases; semantic follow-up and delayed transitions cannot disappear',()=>{

@@ -13,6 +13,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__played = []; window.__fail = false;
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; }
     play() { if (window.__fail) return Promise.reject(Error('failed')); window.__played.push(this.src); this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 25); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); }
@@ -20,7 +21,7 @@ await page.addInitScript(() => {
 });
 const pass = text => { checks.push(text); console.log('PASS', text); };
 async function open(mode, index = 0) {
-  await page.goto(`${base}/#learner/home`); await page.reload();
+  await page.goto(`${base}/#learner/packages`); await page.reload();
   await page.locator('.cp-package-grid > button').nth(index).click();
   await openGroupActivity(page, mode);
   await page.locator('.is-mixed-round').waitFor();

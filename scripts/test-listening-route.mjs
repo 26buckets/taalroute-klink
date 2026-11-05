@@ -9,6 +9,7 @@ import instructions from '../data/klink-instructions.json' with { type: 'json' }
 
 let audio, creations = 0, fail = false;
 globalThis.Audio = class extends EventTarget {
+  dataset = {};
   constructor() { super(); audio = this; creations++; }
   play() { this.paused = false; return fail ? Promise.reject(new Error('autoplay denied')) : Promise.resolve(); }
   pause() { this.paused = true; }

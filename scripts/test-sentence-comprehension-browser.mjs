@@ -1,3 +1,4 @@
+import { lessonContentLevel } from '../lib/learner-route.ts';
 import assert from 'node:assert/strict';
 import { openGroupActivity } from './browser-route-helpers.mjs';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
@@ -19,6 +20,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__plays = []; window.__fail = ''; window.__duration = 100;
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() {
       window.__plays.push(this.src);
@@ -37,13 +39,14 @@ async function openQuestion(exercise, targetPage = page) {
   const lesson = pack.lessons.find(item => item.id === exercise.lessonId);
   let expectedId = exercise.exerciseId;
   await targetPage.goto(`${base}/#learner/home`);
+  await targetPage.evaluate(level => localStorage.setItem('klink.taalroute.practice-navigation.v1', JSON.stringify({ level, help: 'practice' })), lessonContentLevel(pack, lesson));
   await targetPage.reload();
   if (lesson.guidedExerciseIds.includes(exercise.exerciseId)) {
     await targetPage.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: pack.id, lessonId: lesson.id, exerciseId: exercise.exerciseId });
     await targetPage.reload();
-    await targetPage.getByRole('button', { name: 'Ga verder', exact: true }).click();
+    await targetPage.getByRole('button', { name: /^Verder met / }).click();
   } else {
-    await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+    await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await targetPage.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
     await targetPage.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
     await targetPage.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await targetPage.locator('.cp-step-scope select').selectOption('');
     assert(!(await targetPage.locator('[data-group-practice]').innerText()).includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The activity hub must not reveal the sentence answer');

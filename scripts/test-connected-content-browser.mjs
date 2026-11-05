@@ -15,6 +15,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__plays = []; window.__fail = ''; window.__duration = 80;
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() { window.__plays.push(this.src); if (this.src === window.__fail) return Promise.reject(new Error('test unavailable')); this.paused = false; this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, window.__duration); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); this.paused = true; }
@@ -22,7 +23,7 @@ await page.addInitScript(() => {
 });
 async function openLibrary(pack, kind, target = page) {
   await target.goto(`${base}/#learner/home`); await target.reload();
-  await target.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+  await target.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await target.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await target.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
   await target.locator('.cp-tabs').getByRole('button', { name: 'Gebruiken', exact: true }).click();
   await target.getByRole('button', { name: kind === 'dialogue' ? 'Gesprekken' : kind === 'sentence' ? 'Zinnen' : 'Teksten en verhalen', exact: true }).click();

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {checkedWordMp3,verifyWordListeningRelease} from './check-word-listening-release-20261101.mjs';
 
-test('A real released word retains its brand, exact title and original MPEG payload',()=>{
+void test('A real released word retains its brand, exact title and original MPEG payload',()=>{
   const registry=JSON.parse(readFileSync('data/klink-word-listening-audio.json'));
   const [word,row]=Object.entries(registry).find(([,row])=>typeof row.source==='object');
   const {src,offset,length}=row.source;
@@ -18,7 +18,7 @@ test('A real released word retains its brand, exact title and original MPEG payl
   assert.throws(()=>checkedWordMp3(bytes.subarray(0,bytes.length-1),word,proof.mpegPayloadSha256));
 });
 
-test('The concrete release refuses missing authority and a changed reviewed file',()=>{
+void test('The concrete release refuses missing authority and a changed reviewed file',()=>{
   const file='docs/klink-owner-release-word-listening-20261101.json';
   const owner=JSON.parse(readFileSync(file));
   for(const patch of [{approvedBy:'unknown'},{publicationApproved:false},{baselineSourceCommit:'old'}]) {

@@ -10,7 +10,7 @@ import { isWithdrawnAudio } from '../lib/audio-policy.ts';
 import { imageListeningWords, imageWordRectangle } from '../lib/image-word-listening.ts';
 import { createHash } from 'node:crypto';
 
-test('Dutch word boundaries preserve accents, contractions and compounds', () => {
+void test('Dutch word boundaries preserve accents, contractions and compounds', () => {
   const text = "‘Kijk’, zei René: ’s-morgens e‑mail, café en 5.127 woorden.";
   const words = spokenWords(text);
   assert.deepEqual(words.map(word => word.key), ['kijk', 'zei', 'rené', "'s-morgens", 'e-mail', 'café', 'en', '5.127', 'woorden']);
@@ -20,13 +20,13 @@ test('Dutch word boundaries preserve accents, contractions and compounds', () =>
   assert.deepEqual(spokenWords('Ditismijnleesboek.').map(word => [word.text, word.start, word.end]), [['Dit',0,3],['is',3,5],['mijn',5,9],['leesboek',9,17]]);
 });
 
-test('A phrase recording is never presented as the sound of an individual word', () => {
+void test('A phrase recording is never presented as the sound of an individual word', () => {
   assert.equal(singleSpokenWord('het boek'), undefined);
   assert.equal(singleSpokenWord('boek (lezen)'), undefined);
   assert.equal(singleSpokenWord('Boek.'), 'boek');
 });
 
-test('All twenty newly published reviewed word forms keep their native recording', () => {
+void test('All twenty newly published reviewed word forms keep their native recording', () => {
   const index = buildWordListening();
   const reviewed = JSON.parse(readFileSync('data/klink-word-audio-twenty-reviewed-20261101.json'));
   const pool = JSON.parse(readFileSync('data/klink-word-listening-audio.json'));
@@ -36,7 +36,7 @@ test('All twenty newly published reviewed word forms keep their native recording
   }
 });
 
-test('Image words retain their exact source and account for contained image margins', () => {
+void test('Image words retain their exact source and account for contained image margins', () => {
   const images = JSON.parse(readFileSync('data/klink-image-word-listening.json'));
   for (const [source, image] of Object.entries(images)) {
     assert.equal(createHash('sha256').update(readFileSync('public' + image.original)).digest('hex'), image.sha256);
@@ -47,7 +47,7 @@ test('Image words retain their exact source and account for contained image marg
   assert.deepEqual(imageListeningWords('/an-unknown-picture.png'), []);
 });
 
-test('All existing single-word recordings remain available without stemming or guessed spellings', () => {
+void test('All existing single-word recordings remain available without stemming or guessed spellings', () => {
   for (const word of allPackageWords) {
     if (!singleSpokenWord(word.word) || word.audioStatus === 'rejected' || isWithdrawnAudio(word.audio)) continue;
     const source = repairedAudioSource(word.audio);
@@ -60,7 +60,7 @@ test('All existing single-word recordings remain available without stemming or g
   assert.equal(recordingForWord('__proto__'), undefined);
 });
 
-test('The index is reproducible and contains only existing allowed recording paths', () => {
+void test('The index is reproducible and contains only existing allowed recording paths', () => {
   const index = JSON.parse(readFileSync('data/klink-word-listening.json'));
   assert.deepEqual(index, buildWordListening());
   assert(Object.keys(index).length >= 5126);
@@ -74,7 +74,7 @@ test('The index is reproducible and contains only existing allowed recording pat
   }
 });
 
-test('Packed recordings require the exact byte range and retain a full-response fallback', async t => {
+void test('Packed recordings require the exact byte range and retain a full-response fallback', async t => {
   const original = globalThis.fetch;
   t.after(() => { globalThis.fetch = original; });
   const bytes = Buffer.from('ID3complete-word-recording');
@@ -100,7 +100,7 @@ test('Packed recordings require the exact byte range and retain a full-response 
   assert.equal(fetched,false);
 });
 
-test('Packed WAV models retain their original bytes and real media type in partial and complete responses', async t => {
+void test('Packed WAV models retain their original bytes and real media type in partial and complete responses', async t => {
   const original = globalThis.fetch;
   t.after(() => { globalThis.fetch = original; });
   const bytes = Buffer.concat([Buffer.from('RIFF'), Buffer.alloc(4), Buffer.from('WAVE'), Buffer.alloc(20)]), source = {src:'/package-audio/word-listening-20261101/words-fedcba9876543210.bin',offset:7,length:bytes.length};

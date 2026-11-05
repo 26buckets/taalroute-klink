@@ -26,7 +26,7 @@ async function heard(src) {
   await page.waitForFunction(src => window.__started.some(path => path.endsWith(src)), src, { timeout: 20000 });
 }
 try {
-  await page.goto(`${base}/#learner/home`);
+  await page.goto(`${base}/#learner/packages`);
   await page.locator('.cp-package-grid button').first().click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();

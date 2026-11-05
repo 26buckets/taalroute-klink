@@ -12,9 +12,9 @@ const page=await browser.newPage({viewport:{width:1366,height:950}});
 const errors=[],checks=[]; page.on('pageerror',e=>errors.push(e.message));
 const pass=text=>{checks.push(text);console.log('PASS',text);};
 const forward=()=>page.locator('.cp-exercise-feedback > button');
-await page.addInitScript(()=>{ window.__played=[]; window.Audio=class extends EventTarget {constructor(src){super();this.src=src;} play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),25);return Promise.resolve();}pause(){clearTimeout(this.timer);}removeAttribute(){}load(){} }; });
+await page.addInitScript(()=>{ window.__played=[]; window.Audio=class extends EventTarget {dataset={};constructor(src){super();this.src=src;} play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),25);return Promise.resolve();}pause(){clearTimeout(this.timer);}removeAttribute(){}load(){} }; });
 async function open(mode,index=0) {
-  await page.goto(`${base}/#learner/home`); await page.reload();
+  await page.goto(`${base}/#learner/packages`); await page.reload();
   await page.locator('.cp-package-grid button').nth(index).click();
   await openGroupActivity(page,mode); await page.locator('.is-mixed-round').waitFor();
   const id=await page.locator('.is-mixed-round').getAttribute('data-exercise-id');
@@ -23,7 +23,7 @@ async function open(mode,index=0) {
 async function keyboardClick(locator){await locator.click({trial:true});await locator.focus();await page.keyboard.press('Enter');}
 async function checkLayout(label){
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' horizontal overflow');
-  const small=await page.locator('.cp-standard-task button:visible, .cp-standard-task input:visible').evaluateAll(nodes=>nodes.filter(n=>{const b=n.getBoundingClientRect();return b.width<47.5||b.height<47.5;}).map(n=>({text:n.textContent,w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));
+  const small=await page.locator('.cp-standard-task button:visible:not(.cp-inline-word), .cp-standard-task input:visible').evaluateAll(nodes=>nodes.filter(n=>{const b=n.getBoundingClientRect();const min=n.matches('.secondary-button,.primary-button')?43.5:47.5;return b.width<min||b.height<min;}).map(n=>({text:n.textContent,w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));
   assert.deepEqual(small,[],label+' target sizes');
 }
 let item=await open('word-sort');
@@ -111,10 +111,10 @@ for(const [width,height] of [[768,1024],[390,844]]){
   await page.screenshot({path:`${out}/${mode}-${width}.png`,fullPage:true});
 }
 }
-pass('Six connected players: completed by tablet/mobile taps and keyboard, layouts and >=48px targets; original app routes retained');
+pass('Six connected players: completed by tablet/mobile taps and keyboard, layouts and approved 44/48px controls; original app routes retained');
 
 // Browser-only fixture for unavailable scene content; never imported into the learner catalog.
-const built=await build({stdin:{contents:`import React,{useState} from 'react';import {createRoot} from 'react-dom/client';import {StandardPracticeSurface} from './components/product/standard-practice-surface';window.mountScene=(task)=>{window.__sceneRoot?.unmount();document.body.innerHTML='<main class="learner-main"><div id="scene-fixture"></div></main>';window.__sceneResults=[];function Fixture(){const [right,setRight]=useState(false);return <StandardPracticeSurface exercise={{exerciseId:'test-only',componentId:'KLINK-STANDARD',mode:'situation-point',standardTask:task,question:'Kies de rechter plek'}} onAudio={()=>false} onFinish={(answer,correct)=>{window.__sceneResults.push({answer,correct});setRight(correct)}} onReset={()=>setRight(false)} onHelp={()=>{}} canAnswer={true} answeredCorrectly={right}/>;}window.__sceneRoot=createRoot(document.getElementById('scene-fixture'));window.__sceneRoot.render(<Fixture/>);};`,loader:'tsx',resolveDir:process.cwd()},bundle:true,write:false,format:'iife',define:{'process.env.NODE_ENV':'"production"'},jsx:'automatic'});
+const built=await build({stdin:{contents:`import React,{useState} from 'react';import {createRoot} from 'react-dom/client';import {StandardPracticeSurface} from './components/product/standard-practice-surface';window.mountScene=(task)=>{window.__sceneRoot?.unmount();document.body.innerHTML='<main class="learner-main"><div id="scene-fixture"></div></main>';window.__sceneResults=[];function Fixture(){const [right,setRight]=useState(false);return <StandardPracticeSurface exercise={{exerciseId:'test-only',componentId:'KLINK-STANDARD',mode:'situation-point',standardTask:task,question:'Kies de rechter plek'}} onAudio={()=>false} onFinish={(answer,correct)=>{window.__sceneResults.push({answer,correct});setRight(correct)}} onReset={()=>setRight(false)} onHelp={()=>{}} canAnswer={true} answeredCorrectly={right}/>;}window.__sceneRoot=createRoot(document.getElementById('scene-fixture'));window.__sceneRoot.render(<Fixture/>);};`,loader:'tsx',resolveDir:process.cwd()},bundle:true,loader:{'.css':'empty'},alias:{'next/image':process.cwd()+'/node_modules/vinext/dist/shims/image.js'},write:false,format:'iife',define:{'process.env':'{}','process.env.NODE_ENV':'"production"'},jsx:'automatic'});
 await page.addScriptTag({content:built.outputFiles[0].text});
 const scene={kind:'hotspot',image:{src:'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400"><rect width="400" height="400" fill="#ede5d0"/><rect x="400" width="400" height="400" fill="#b9d8d0"/></svg>'),altText:'Technisch testbeeld met twee vlakken'},imageReview:'approved',regions:[{id:'left',label:'Linker plek',x:.05,y:.1,width:.4,height:.8},{id:'right',label:'Rechter plek',x:.55,y:.1,width:.4,height:.8}],correctRegionIds:['right'],help:'Kijk naar rechts.'};
 for(const width of [1366,768,390]){

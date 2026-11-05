@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {verifyStorageRepairContent,verifyStorageRepairRelease} from './check-storage-player-repair-release-20261105.mjs';
+const root='docs/storage-player-repair-20261105/';
+const alter=(file,change)=>p=>p===file?Buffer.from(JSON.stringify(change(JSON.parse(readFileSync(p))))):readFileSync(p);
+verifyStorageRepairRelease();
+for(const change of [r=>({...r,publicationApproved:false}),r=>({...r,approvedBy:'unknown'}),r=>({...r,baselineSourceCommit:'0'.repeat(40)}),r=>({...r,checkedCandidateCommit:'0'.repeat(40)}),r=>({...r,files:{...r.files,'lib/writing-answer.ts':'0'.repeat(64)}})]) assert.throws(()=>verifyStorageRepairContent(alter(root+'approval.json',change)));
+for(const file of [root+'publication-request.json',root+'local/appearance-final/checks.json','hooks/use-writing-answer.ts','public/start-tas/goed.wav']) assert.throws(()=>verifyStorageRepairContent(p=>p===file?Buffer.concat([readFileSync(p),Buffer.from('changed')]):readFileSync(p)));
+for(const key of ['fullReadback','zipIntegrity','allPayloadHashesMatch']) assert.throws(()=>verifyStorageRepairRelease(alter(root+'backup.json',r=>({...r,[key]:false}))));
+console.log('Storage/player repair release: exact scope and 12 rejected approval, source, evidence and backup mutations passed.');

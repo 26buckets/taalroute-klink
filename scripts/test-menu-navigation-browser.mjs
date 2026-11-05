@@ -1,3 +1,4 @@
+import { lessonPackages } from '../lib/package-content.ts';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { practiceChapters, chapterCollections, chapterHash } from '../lib/practice-chapters.ts';
@@ -14,6 +15,7 @@ page.on('pageerror', error => errors.push(error.message));
 const pass = message => { checks.push(message); console.log('PASS', message); };
 await page.addInitScript(() => {
   window.Audio = class extends EventTarget {
+    dataset = {};
     play() { this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 30); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); }
   };
@@ -22,11 +24,10 @@ const menu = () => page.getByRole('navigation', { name: 'Cursistnavigatie' });
 async function teacher() { await page.goto(`${base}/#teacher/overview`); await page.locator('.cp-menu-guide').waitFor(); }
 try {
   await page.goto(`${base}/#learner/home`);
-  await page.getByRole('heading', { name: 'Begin hier', exact: true }).waitFor();
-  assert.deepEqual(await menu().locator('button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
+  await page.locator('.cp-home').waitFor();
+  assert.deepEqual(await menu().locator('button span').allTextContents(), ['Start', 'Woorden bekijken', 'Nog een keer']);
   for (const [label, path, selector] of [
-    ['Lessen', 'packages', '.cp-library-page'], ['Oefenen', 'chapters', '[data-chapter-page="all"]'],
-    ['Woorden', 'words', '.word-library-page'], ['Herhalen', 'review', '.review-page'],
+    ['Woorden bekijken', 'words', '.word-library-page'], ['Nog een keer', 'review', '.review-page'], ['Start', 'home', '.cp-home'],
   ]) {
     await menu().getByRole('button', { name: label, exact: true }).click();
     await page.locator(selector).waitFor();
@@ -34,15 +35,11 @@ try {
     await page.reload(); await page.locator(selector).waitFor();
     assert.equal(await menu().getByRole('button', { name: label, exact: true }).getAttribute('aria-current'), 'page');
   }
-  await menu().getByRole('button', { name: 'Woorden', exact: true }).click();
-  await menu().getByRole('button', { name: 'Lessen', exact: true }).click();
-  await page.goBack(); await page.locator('.word-library-page').waitFor();
+  await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+  await page.locator('.cp-library-page').waitFor();
+  await page.goBack(); await page.locator('.cp-home').waitFor();
   await page.goForward(); await page.locator('.cp-library-page').waitFor();
-  pass('Five unchanged main buttons have correct active states; refresh and browser history retain each destination');
-
-  await page.goto(`${base}/#learner/chapters?level=alfa-a`);
-  await page.locator('[data-chapter-page="all"]').waitFor();
-  await menu().getByRole('button', { name: 'Lessen', exact: true }).click();
+  pass('The three approved main buttons, step-by-step entrance, reload and browser history retain their destinations');
 
   await page.locator('.cp-package-grid > button').first().click();
   await page.locator('.cp-player-bar').waitFor();
@@ -51,7 +48,7 @@ try {
   assert.equal(await page.locator('.cp-player-bar strong').innerText(), learnerListName(packs[0]));
   await page.getByRole('button', { name: 'Terug naar lessen', exact: true }).click();
   await page.locator('.cp-library-page').waitFor();
-  assert.equal(await page.locator('.cp-package-grid > button').count(), 15);
+  assert.equal(await page.locator('.cp-package-grid > button').count(), lessonPackages.length);
   await page.goto(`${base}/#learner/package/not-a-package`);
   await page.locator('.cp-library-page').waitFor();
   pass('Section links reopen the correct shared word overview; invalid sections fail back to the lesson library');
@@ -83,7 +80,7 @@ try {
 
   await page.goto(`${base}/#learner/home`);
   await menu().getByRole('button', { name: 'Start', exact: true }).click();
-  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('button', { name: /^Verder met /  }).click();
   await page.locator('[data-exercise-id]').waitFor();
   assert.equal(await page.locator('[data-exercise-id]').getAttribute('data-exercise-id'), position.exerciseId);
   pass('Verder still resumes the exact saved exercise after the navigation change');

@@ -15,6 +15,7 @@ page.on('pageerror', e => errors.push(e.message));
 await page.addInitScript(() => {
   window.__plays = [];
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; }
     play() { window.__plays.push(this.src); this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 30); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); }
@@ -28,7 +29,7 @@ const trigger = () => page.getByRole('button', { name: 'Andere oefening', exact:
 async function revealMenu() { if (await trigger().getAttribute('aria-expanded') === 'false') await trigger().click(); }
 const position = () => page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.route.v1')));
 async function openLesson() {
-  await page.goto(`${base}/#learner/home`);
+  await page.goto(`${base}/#learner/packages`);
   await page.evaluate(() => { localStorage.removeItem('klink.taalroute.route.v1'); localStorage.removeItem('klink.taalroute.attempts.v1'); });
   await page.reload();
   await page.locator('.cp-package-grid > button').first().click();
@@ -62,7 +63,7 @@ try {
   await revealMenu(); await phases().getByRole('button', { includeHidden: true, name: 'Maak', exact: true }).click();
   assert(!(await step().locator('output').innerText()).includes('Deze oefening was nog niet af.'));
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: /^Verder met /  }).click();
   assert.equal(await step().getAttribute('data-exercise-id'), exercises[0].exerciseId);
   for (const exercise of exercises) await answerActivity(page, exercise);
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();

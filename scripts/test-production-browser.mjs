@@ -1,6 +1,6 @@
 import {readProductionBank} from './read-production-bank.mjs';
 import assert from 'node:assert/strict';
-import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {writeFileSync,mkdirSync} from 'node:fs';
 import {productionIndex} from '../lib/production-practice.ts';
 import {practiceChapters,chapterHash} from '../lib/practice-chapters.ts';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
@@ -8,7 +8,7 @@ const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18937';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const page=await browser.newPage({viewport:{width:1366,height:950}}),errors=[],checks=[],requests=[];
 page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
-await page.addInitScript(()=>{window.__played=[];window.Audio=class extends EventTarget {constructor(src){super();this.src=src;}play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();}pause(){clearTimeout(this.timer);}};});
+await page.addInitScript(()=>{window.__played=[];window.Audio=class extends EventTarget {dataset={};constructor(src){super();this.src=src;}play(){window.__played.push(this.src);this.timer=setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();}pause(){clearTimeout(this.timer);}};});
 const url=row=>base+'/'+chapterHash({chapter:practiceChapters.find(c=>c.activities.includes(row.activity)).id,activity:row.activity,collection:row.id,level:row.level,help:row.help});
 const data=row=>readProductionBank(row).exercises;
 const out='outputs/production-20261029';mkdirSync(out,{recursive:true});
@@ -57,6 +57,6 @@ try{
  }
  checks.push('Nine activities fit 390px and 320px');
  assert.deepEqual(errors,[]);
- writeFileSync('docs/production-20261029/browser-check.json',JSON.stringify({checks,errors,localOnly:!base.startsWith('https')},null,2));
+ writeFileSync(out+'/browser-check.json',JSON.stringify({checks,errors,localOnly:!base.startsWith('https')},null,2));
  console.log('PASS browser',checks.length);
 }finally{await browser.close();}

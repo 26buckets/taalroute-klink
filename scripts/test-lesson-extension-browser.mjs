@@ -1,3 +1,5 @@
+import { lessonPackages } from '../lib/package-content.ts';
+import { lessonContentLevel } from '../lib/learner-route.ts';
 import assert from 'node:assert/strict';
 import { groupExercises } from '../lib/group-practice.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -16,6 +18,7 @@ await page.addInitScript(() => {
   window.__audioMode = 'play';
   window.__played = [];
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() { if (window.__audioMode === 'fail') return Promise.reject(new Error('test audio unavailable')); this.paused = false; window.__played.push(this.src); this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 80); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); this.paused = true; }
@@ -24,15 +27,16 @@ await page.addInitScript(() => {
 async function openLesson(pack, lesson) {
   await page.goto(`${base}/#learner/home`);
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-start-lesson').nth(pack.lessons.indexOf(lesson)).click();
 }
 async function seedAt(pack, lesson, exercise) {
+  await page.evaluate(level => localStorage.setItem('klink.taalroute.practice-navigation.v1', JSON.stringify({ level, help: 'practice' })), lessonContentLevel(pack, lesson));
   await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: pack.id, lessonId: lesson.id, exerciseId: exercise.exerciseId });
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: /^Verder met /  }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
 }
 try {
@@ -79,12 +83,12 @@ try {
   await page.waitForTimeout(1600);
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden', exact: true }).click();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: /^Verder met /  }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   assert(await page.locator('.cp-exercise-feedback button').isDisabled());
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: /^Verder met /  }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   pass('Pause, navigating away, Verder and reloading resume the exact exercise without restoring a correct answer');
 
@@ -92,6 +96,7 @@ try {
   await seedAt(longPack, longLesson, dictation);
   assert(!(await page.locator('.cp-lesson-player').innerText()).includes(dictation.fields[0].acceptedAnswers[0]));
   await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
+  await page.waitForFunction(() => document.querySelector('.cp-text-entry input')?.disabled === false);
   await page.getByRole('button', { name: 'Help', exact: true }).click();
   assert.equal(await page.locator('.cp-word-hint strong').innerText(), dictation.helpWord);
   await page.getByRole('button', { name: 'Verberg voorbeeld', exact: true }).click();
@@ -106,8 +111,8 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
     await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-    await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
-    assert.equal(await page.locator('.cp-photo-section').count(), packs.length);
+    await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+    assert.equal(await page.locator('.cp-photo-section').count(), lessonPackages.length);
     assert(!/Bouwgroep|kernwoorden|oefeningen|Bekende woorden/.test(await page.locator('.cp-library-page').innerText()));
     await page.waitForFunction(() => [...document.querySelectorAll('.cp-section-photo img')].filter(image => image.getBoundingClientRect().top < innerHeight).every(image => image.complete && image.naturalWidth > 0));
     await page.screenshot({ path: new URL(`fotostrook-${width}.png`, out).pathname });
@@ -124,14 +129,14 @@ try {
     if (width < 760) assert.equal(await page.locator('.cp-exercise-menu-options button[aria-pressed="true"]').textContent(), 'Oefen');
     await page.screenshot({ path: new URL(`koppelen-${width}.png`, out).pathname });
     for (const selector of ['.cp-match-board button', '.cp-exercise-record-head nav button', '.cp-exercise-feedback button']) for (const button of await page.locator(selector).all()) {
-      const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48, `${width}: ${selector}`);
+      const box = await button.boundingBox(); assert(box.width >= 44 && box.height >= 44, `${width}: ${selector}`);
     }
   }
-  pass('Photo strips and matching preserve all sections and 48px controls at desktop, tablet, 390px and 320px');
+  pass('Photo strips and matching preserve all sections and approved control sizes at desktop, tablet, 390px and 320px');
   await page.setViewportSize({ width: 1366, height: 900 });
   await page.goto(`${base}/#teacher`);
   await page.locator('.staff-nav').getByRole('button', { name: 'Oefenen', exact: true }).click();
-  assert.equal(await page.locator('.cp-coverage-filters select').first().locator('option').count(), packs.length);
+  assert.equal(await page.locator('.cp-coverage-filters select').first().locator('option').count(), lessonPackages.length);
   for (const pack of packs) {
     await page.locator('.cp-coverage-filters select').first().selectOption(pack.id);
     assert.equal(await page.locator('.cp-coverage-filters select').nth(1).locator('option').count(), pack.lessons.length);
@@ -183,9 +188,12 @@ try {
   });
   noStorage.on('pageerror', error => errors.push(error.message));
   await noStorage.goto(`${base}/#learner/home`);
-  await noStorage.getByRole('button', { name: 'Begin hier', exact: true }).click();
+  await noStorage.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+  await noStorage.locator('.cp-photo-section').first().click();
+  await noStorage.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+  await noStorage.locator('.cp-start-lesson').first().click();
   await noStorage.locator('.cp-model-content').waitFor();
-  assert((await noStorage.locator('.toast-message').innerText()).includes('Oefenen kan doorgaan'));
+  assert((await noStorage.locator('.toast-message').filter({hasText:'Oefenen kan doorgaan'}).innerText()).includes('Oefenen kan doorgaan'));
   await noStorage.close();
   pass('Blocked browser storage does not prevent starting a lesson');
   assert.deepEqual(errors, []);

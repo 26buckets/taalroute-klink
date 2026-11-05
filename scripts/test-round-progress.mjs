@@ -12,9 +12,20 @@ const first=mergeRoundProgress(null,ids,['one','one','unknown']);assert.deepEqua
 const next=mergeRoundProgress(JSON.stringify(first),ids,['three']);assert.deepEqual(next.done,['one','three']);
 const complete=mergeRoundProgress(JSON.stringify(next),ids,['two']);assert.equal(complete.done.length,3);
 assert.equal(mergeRoundProgress(JSON.stringify(complete),ids,['one']).done.length,3);
+// Content changes preserve surviving IDs, never the old collection size or removed tasks.
+const grown=mergeRoundProgress(JSON.stringify(first),[...ids,'four'],['four']);
+assert.deepEqual(grown,{version:1,total:4,done:['one','four']});
+const shrunk=mergeRoundProgress(JSON.stringify(complete),['one','three'],['three']);
+assert.deepEqual(shrunk,{version:1,total:2,done:['one','three']});
+assert.deepEqual(mergeRoundProgress(JSON.stringify(first),['replacement','two','three'],['two']).done,['two']);
+for(const total of [-1,0,1.5,'3',Number.MAX_SAFE_INTEGER+1])assert.deepEqual(parseRoundProgress(JSON.stringify({version:1,total,done:['one']}),3).done,[]);
 const memory=new Map();globalThis.window=new EventTarget();globalThis.localStorage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)};
 recordRoundSteps('round',ids,[]);assert.equal(memory.size,0);
 recordRoundSteps('round',ids,['one']);recordRoundSteps('round',ids,['two','three']);recordRoundSteps('round',ids,['one']);assert.equal(roundProgressCount('round',3),3);assert.equal(roundProgressCount('other',3),0);
+assert.equal(roundProgressCount('round',4),3,'New tasks do not reset old completion');
+assert.equal(roundProgressCount('round',2,['two','three']),2,'Only surviving tasks count when their IDs are known');
+assert.equal(roundProgressCount('round',2),2,'An unloaded shortened round cannot exceed its total');
+recordRoundSteps('round',[...ids,'four'],['four']);assert.equal(roundProgressCount('round',4),4);
 // Two writers merge the latest saved result, not a stale mounted snapshot.
 memory.set(roundProgressPrefix+'tabs',JSON.stringify(first));recordRoundSteps('tabs',ids,['two']);recordRoundSteps('tabs',ids,['three']);assert.equal(roundProgressCount('tabs',3),3);
 const f=functionalBlocks.find(b=>b.id==='lijst'), writing=f.steps.find(s=>s.responseSetup?.responseKind==='freeText')??f.steps.find(s=>s.responseSetup), choice=f.steps.find(s=>s.kind==='choice');

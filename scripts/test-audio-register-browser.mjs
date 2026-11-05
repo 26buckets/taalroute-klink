@@ -1,3 +1,4 @@
+import { lessonPackages } from '../lib/package-content.ts';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 const { chromium } = await import(
@@ -23,6 +24,7 @@ const pass = (message) => {
 await page.addInitScript(() => {
   window.__played = [];
   window.Audio = class extends EventTarget {
+    dataset = {};
     play() {
       window.__played.push(this.src);
       setTimeout(() => this.dispatchEvent(new Event('ended')), 30);
@@ -36,9 +38,10 @@ try {
   await page.locator('.cp-home').waitFor();
   assert.equal(await page.locator('[data-audio-register]').count(), 0);
   assert.equal(requests.length, 0);
+  await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   assert.equal(
-    await page.locator('.cp-home .cp-package-grid > button').count(),
-    15,
+    await page.locator('.cp-package-grid > button').count(),
+    lessonPackages.length,
   );
   pass(
     'Learner home and all 15 sections preserved; no audio inventory downloaded by learners',
@@ -125,15 +128,19 @@ try {
   await matrix.getByLabel('Omvang').selectOption('active');
   await matrix.getByLabel('Zoek tekst of audio-ID').fill('');
   await matrix.getByRole('status').filter({ hasText: `${JSON.parse(readFileSync('public/content-register/summary.json')).active.total} regels` }).waitFor();
-  await matrix.getByLabel('Audio', { exact: true }).selectOption('parked');
+  await matrix.getByLabel('Audio', { exact: true }).selectOption('all');
   const instructions = JSON.parse(readFileSync('data/klink-audio-candidates.json')).items;
+  const active = JSON.parse(readFileSync('public/content-register/active.json'));
   for (const item of instructions) {
     await matrix.getByLabel('Zoek tekst of audio-ID').fill(item.id);
     const row = matrix.locator(`tbody tr[data-audio-id="${item.id}"]`);
+    await row.waitFor();
     assert.equal(await row.count(), 1);
-    assert(await row.getByRole('button').isDisabled());
+    const current = active.find(record => record.id === item.id);
+    assert(current);
+    assert.equal(await row.getByRole('button').isDisabled(), current.status !== 'connected');
   }
-  pass(`${instructions.length} instruction recordings are retained but withdrawn from playback on the owner's request`);
+  pass(`${instructions.length} instruction entries retain their current reviewed connection or withdrawn status`);
   await matrix.getByLabel('Zoek tekst of audio-ID').fill('');
   await matrix.getByLabel('Audio', { exact: true }).selectOption('all');
   for (const width of [1366, 768, 390]) {

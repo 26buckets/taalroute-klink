@@ -18,7 +18,7 @@ for(const [engine,type] of Object.entries({chromium,webkit})){
   // Reproduce the verified production HTTP200 fallback with a fixed 100ms response delay.
   if(live)p.on('response',r=>{if(new URL(r.url()).pathname===src){requests++;bytes+=Number(r.headers()['content-length']||0);}});
   else await p.route('**'+src,async r=>{requests++;bytes+=body.length;await new Promise(resolve=>setTimeout(resolve,100));await r.fulfill({status:200,contentType:'application/octet-stream',body});});
-  await p.addInitScript(()=>{window.audioStarts=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.addEventListener('playing',()=>{if(this.dataset.klinkSource)window.audioStarts.push({key:this.dataset.klinkSource,at:performance.now()})},{once:true});return play.call(this)};});
+  await p.addInitScript(()=>{window.audioStarts=[];const play=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,'play').value;HTMLMediaElement.prototype.play=function(){this.addEventListener('playing',()=>{if(this.dataset.klinkSource)window.audioStarts.push({key:this.dataset.klinkSource,at:performance.now()})},{once:true});return play.call(this)};});
   await p.goto(base+'/#learner',{waitUntil:'domcontentloaded'});await p.locator('.learner-app').waitFor();
   await p.locator('.learner-app').evaluate((el,words)=>{const p=document.createElement('p');p.id='audio-performance-fixture';p.textContent=words.join(' ');el.prepend(p)},words);
   const plays=[];

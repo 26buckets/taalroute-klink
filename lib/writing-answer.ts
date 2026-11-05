@@ -19,7 +19,23 @@ export function updateWritingAnswer(current: WritingAnswer, draft: string, submi
   return { ...current, draft, ...(submitted && draft.trim() ? { first: current.first ?? draft, last: draft } : {}) };
 }
 
-export function preserveAvailableCopyAnswers(storage: Pick<Storage, 'getItem' | 'setItem'>) {
+export async function saveWritingAnswer(sourceId: string, value: WritingAnswer, submitted = false): Promise<WritingAnswer> {
+  if (!parseWritingAnswer(JSON.stringify(value))) throw new Error('Invalid writing answer');
+  const key = writingAnswerKey(sourceId);
+  // Serialize tabs before reading: a stale draft must not replace a submitted answer.
+  return navigator.locks.request(key, () => {
+    const raw = localStorage.getItem(key), previous = parseWritingAnswer(raw);
+    if (raw !== null && !previous) throw new Error('Invalid stored writing answer');
+    const saved = { ...value,
+      ...(previous?.first ? { first: previous.first, firstFromAvailableHistory: previous.firstFromAvailableHistory } : {}),
+      ...(!submitted && previous?.last ? { last: previous.last } : {}),
+    };
+    localStorage.setItem(key, JSON.stringify(saved));
+    return saved;
+  });
+}
+
+export async function preserveAvailableCopyAnswers(storage: Pick<Storage, 'getItem' | 'setItem'>) {
   let history: unknown;
   const raw = storage.getItem('klink.taalroute.attempts.v1') ?? '[]';
   if (storage.getItem('klink.writing-prior-attempts.v1') === null) storage.setItem('klink.writing-prior-attempts.v1', raw);
@@ -31,5 +47,10 @@ export function preserveAvailableCopyAnswers(storage: Pick<Storage, 'getItem' | 
     copies.set(attempt.exerciseId, updateWritingAnswer(copies.get(attempt.exerciseId) ?? emptyWritingAnswer(), attempt.answer, true));
   }
   // Earlier attempts may already have left the old rolling history; preserve the first available one honestly.
-  for (const [id, answer] of copies) if (storage.getItem(writingAnswerKey(id)) === null) storage.setItem(writingAnswerKey(id), JSON.stringify({ ...answer, draft: '', firstFromAvailableHistory: true }));
+  for (const [id, answer] of copies) {
+    const key = writingAnswerKey(id);
+    await navigator.locks.request(key, () => {
+      if (storage.getItem(key) === null) storage.setItem(key, JSON.stringify({ ...answer, draft: '', firstFromAvailableHistory: true }));
+    });
+  }
 }

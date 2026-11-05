@@ -9,7 +9,9 @@ import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
 import { checkSentenceAnswer, parseOwnSentence, type OwnSentence } from '@/lib/sentence-answer';
 import { wordAudioParts } from '@/lib/word-audio';
 import { emptySequenceAnswer, parseSequenceAnswer, updateSequenceAnswer, sequenceAnswerKey } from '@/lib/sequence-answer';
-import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
+import { writingAnswerSourceId } from '@/lib/writing-answer';
+import { useWritingAnswer } from '@/hooks/use-writing-answer';
+import { useExerciseViewport } from '@/hooks/use-exercise-viewport';
 import { emptyWritingInk, hasWritingInk, loadWritingInk, openWritingInk, saveWritingInk, updateWritingInk, type WritingInk } from '@/lib/writing-ink';
 import { WritingBoard, type Stroke } from './writing-board';
 import './writing-form.css';
@@ -210,44 +212,7 @@ function PackageExercisePlayer({
   const currentId = useRef('');
   const taskHeading = useRef<HTMLHeadingElement>(null);
   const exerciseStage = useRef<HTMLDivElement>(null);
-  useLayoutEffect(() => {
-    const stage = exerciseStage.current;
-    const main = stage?.closest<HTMLElement>('.learner-main');
-    if (!stage || !main) return;
-    const viewport = window.visualViewport;
-    let fullHeight = window.innerHeight;
-    const resize = () => {
-      const focused = main.contains(document.activeElement) && document.activeElement?.matches('input, textarea');
-      const visibleHeight = viewport?.height ?? window.innerHeight;
-      const keyboard = window.innerWidth <= 820 && Boolean(stage.querySelector('.cp-text-entry, .cp-form-fields')) && (focused || main.dataset.keyboardOpen === 'true') && visibleHeight < fullHeight - 100;
-      if (!keyboard && !focused) fullHeight = window.innerHeight;
-      main.dataset.keyboardOpen = String(keyboard);
-      main.style.setProperty('--exercise-visible-height', `${visibleHeight}px`);
-      main.style.setProperty('--exercise-viewport-top', `${viewport?.offsetTop ?? 0}px`);
-      const nav = document.querySelector<HTMLElement>('.learner-nav');
-      const bottom = keyboard ? visibleHeight + (viewport?.offsetTop ?? 0) : nav && getComputedStyle(nav).position === 'fixed' ? nav.getBoundingClientRect().top : window.innerHeight;
-      const feedback = stage.parentElement?.querySelector<HTMLElement>('.cp-exercise-feedback');
-      const top = stage.getBoundingClientRect().top + main.scrollTop;
-      stage.style.setProperty('--practice-stage-height', `${Math.max(keyboard ? 0 : 180, bottom - top - (feedback?.offsetHeight ?? 112) - 12)}px`);
-    };
-    let resizeFrame = 0;
-    const observer = new ResizeObserver(() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(resize); });
-    observer.observe(main);
-    for (const el of main.querySelectorAll('.cp-context-header, .cp-practice-display, .cp-exercise-record-head, .cp-exercise-feedback')) observer.observe(el);
-    window.addEventListener('resize', resize);
-    viewport?.addEventListener('resize', resize);
-    viewport?.addEventListener('scroll', resize);
-    main.addEventListener('focusin', resize);
-    main.addEventListener('focusout', resize);
-    resize();
-    return () => {
-      observer.disconnect(); cancelAnimationFrame(resizeFrame); window.removeEventListener('resize', resize);
-      viewport?.removeEventListener('resize', resize); viewport?.removeEventListener('scroll', resize);
-      main.removeEventListener('focusin', resize); main.removeEventListener('focusout', resize);
-      delete main.dataset.keyboardOpen;
-      main.style.removeProperty('--exercise-visible-height'); main.style.removeProperty('--exercise-viewport-top');
-    };
-  }, [guided, practiceRound, completed]);
+  useExerciseViewport(exerciseStage, guided, practiceRound, completed);
   const completionHeading = useRef<HTMLHeadingElement>(null);
   const records = exercises.filter((exercise) => exercise.componentId === familyId);
   const exercise = records[Math.min(recordIndex, Math.max(0, records.length - 1))] ?? exercises[0];
@@ -828,33 +793,12 @@ function WordHint({ exercise, onHelp, disabled = false }: { exercise: PackageExe
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
   const fields = asArray<TextField>(exercise.fields);
-  const [value, setValue] = useState('');
   const writingId = writingAnswerSourceId(exercise);
-  const writing = useRef(emptyWritingAnswer());
-  const [writingReady, setWritingReady] = useState(!writingId);
-  const [writingError, setWritingError] = useState(false);
-  useEffect(() => {
-    if (!writingId) return;
-    const frame = requestAnimationFrame(() => {
-      let failed = false;
-      try { preserveAvailableCopyAnswers(localStorage); } catch { failed = true; }
-      try { writing.current = parseWritingAnswer(localStorage.getItem(writingAnswerKey(writingId))) ?? emptyWritingAnswer(); setValue(writing.current.draft); } catch { failed = true; }
-      setWritingError(failed);
-      setWritingReady(true);
-    });
-    return () => cancelAnimationFrame(frame);
-  }, [writingId]);
-  function change(next: string, submitted = false) {
-    setValue(next);
-    if (!writingId) return;
-    writing.current = updateWritingAnswer(writing.current, next, submitted);
-    try { localStorage.setItem(writingAnswerKey(writingId), JSON.stringify(writing.current)); setWritingError(false); }
-    catch { setWritingError(true); }
-  }
+  const { value, ready: writingReady, error: writingError, change } = useWritingAnswer(writingId);
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
-  function submit() {
+  async function submit() {
     if (!canAnswer || !writingReady || !value.trim()) return;
-    change(value, true);
+    if (!await change(value, true)) return;
     const sourceDictation = exercise.mode === 'word-dictation' && exercise.sourceWordDictationExact === true;
     const exact = exercise.answerPolicy === 'exact-copy';
     const sentence = exercise.sentenceAnswerPolicy && accepted[0] ? checkSentenceAnswer(accepted, value, exercise.sentenceAnswerPolicy === 'exact-copy') : undefined;
@@ -864,7 +808,7 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
     onFinish(value, correct, feedback);
     if (reveal) onHelp();
   }
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); submit(); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { void change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {

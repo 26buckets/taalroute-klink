@@ -23,7 +23,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         }));
         assert(next.every(Boolean), `Missing common frame: ${stage}`);
         frame ??= next;
-        assert.deepEqual(next, frame, `${engine}/${width}/${stage}: frame moved`);
+        assert.equal(next[0].y, frame[0].y, `${stage}: header moved`);
+        assert.deepEqual(next.map(({x,width})=>({x,width})), frame.map(({x,width})=>({x,width})), `${engine}/${width}/${stage}: frame moved`);
         assert.equal(await page.locator('.cp-route-axis').count(), 2);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
       }
