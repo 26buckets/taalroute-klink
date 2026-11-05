@@ -22,6 +22,8 @@ export function verifyHearTypeFocusContent(read=readFileSync){
  const guards=json(folder+'local/guards.json');assert.equal(guards.checks.length,2);assert(guards.checks.every(x=>x.helpFocusPreserved&&x.draftReloadPreserved&&x.caretPreserved&&x.correctAnswerNotRefocused&&x.otherQuestionFocusPreserved));
  const appearance=json(folder+'local/appearance/checks.json');assert.equal(appearance.checks.length,8);assert(appearance.checks.every(x=>x.geometryEqual&&x.changedPixels===0));
  assert.equal(json(folder+'local/audio-errors/audio-errors.json').checks.length,4);
+ const help=json(folder+'local/help/browser.json');assert.equal(help.checks.length,8);assert(help.checks.every(x=>x.helpStayedVisible&&x.openAndClosePreserved&&x.enWithPhoto&&x.enWithoutPhoto));
+ assert.equal(json(folder+'local/storage/checks.json').checks.length,6);
  const preservation=json(folder+'preservation.json');assert(preservation.contentMediaStorageUnchanged&&preservation.appearancePreserved);assert.deepEqual(preservation.githubWorkflowFiles,[]);assert.deepEqual(preservation.runtimeChangedFiles,['components/product/package-exercise-browser.tsx']);
  const checks=json(folder+'verification.json');assert(checks.typesPassed&&checks.lintPassed&&checks.normalBuildPassed&&checks.curriculumTests===49&&checks.writingNavigationTests===7&&checks.storageCases===6&&checks.helpChecks===8);
  return release;
