@@ -7,7 +7,7 @@ import { groupExercises } from '../lib/group-practice.ts';
 import { chapterCollections, practiceChapters } from '../lib/practice-chapters.ts';
 import { importedCollections, importedActivities } from '../lib/imported-practice.ts';
 
-const fixture = 'docs/browser-opening-wait-20261105/content-before.json';
+const fixture = process.env.KLINK_CONTENT_FIXTURE || 'docs/browser-opening-wait-20261105/content-before.json';
 const rows = [];
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const packHashes = new WeakMap();
@@ -30,7 +30,9 @@ for (const { id } of importedActivities) {
   rows.push({ importedActivity: id, sha256: hashCollections(importedCollections(id, undefined, contentPackages)) });
 }
 if (process.argv.includes('--capture')) {
-  assert.equal(execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), '9589290d6975463bffc676e019e9834ced59ca04');
+  const baseline = process.env.KLINK_CONTENT_BASELINE || '9589290d6975463bffc676e019e9834ced59ca04';
+  assert(/^[a-f0-9]{40}$/.test(baseline), 'Explicit reviewed baseline required');
+  assert.equal(execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(), baseline);
   assert.equal(execFileSync('git', ['diff', '--name-only', '--', 'lib'], { encoding: 'utf8' }), '');
   writeFileSync(fixture, JSON.stringify(rows, null, 2) + '\n');
 } else assert.deepEqual(rows, JSON.parse(readFileSync(fixture)), 'Preserve every collection, ordering, task, answer, audio and source link');
