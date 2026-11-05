@@ -2,16 +2,18 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {verifyReadingRelease,readBeforeReading} from './check-reading-comprehension-release-20261105.mjs';
 const root='docs/speaking-a1-repeat-20261105/';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifySpeakingA1Content(read=readFileSync){
+ const successor=verifyReadingRelease(read),currentRead=read;read=file=>readBeforeReading(file,successor,currentRead);
  const json=p=>JSON.parse(read(p)),r=json(root+'approval.json'),m=json(root+'manifest.json'),request=json(root+'publication-request.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&request.publicationApproved&&request.excludePR12);
  assert.equal(request.userRequest,'Zet de tien goedgekeurde nazegoefeningen Spreken A1 nu online met de bestaande audio. Stem het publicatievenster af met Inzicht en neem PR12 niet mee.');
  assert.equal(r.baselineSourceCommit,'b085d626f591342e0be3aa32faa3bfe85342d5e9');assert.equal(r.liveSourceCommit,'dc37a479a7a6f148d61ffb5140dfd79112331f85');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  assert.deepEqual(changed.filter(p=>!p.startsWith('scripts/')),['components/product/package-exercise-browser.tsx','data/klink-production-index.json','public'+m.row.url]);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
@@ -28,7 +30,7 @@ export function verifySpeakingA1Content(read=readFileSync){
  const preservation=json(root+'preservation.json');assert(preservation.oldPublicBytesPreserved&&preservation.oldIndexRowsPreserved&&preservation.pr12Excluded&&preservation.sixDictationBanksHeld);
  const appearance=json(root+'local/appearance.json');assert.equal(appearance.length,4);assert(appearance.every(x=>x.changedPixels===0||(x.narrowRasterDifference&&x.sameControlGeometryAndMarkup&&x.visuallyInspected&&x.changedPixels<=100&&x.maxChannelDelta<=26)));
  const checks=json(root+'verification.json');assert(checks.typesPassed&&checks.targetedLintPassed&&checks.unitTestsPassed&&checks.normalBuildPassed&&checks.dryRunPassed);assert(checks.offeredAssets<=20000);assert(checks.workerGzipKiB<10240);
- return r;
+ return {...r,successor};
 }
 export function verifySpeakingA1Release(read=readFileSync){const r=verifySpeakingA1Content(read),b=JSON.parse(read(root+'backup.json'));assert(b.driveId&&b.fullReadback&&b.zipIntegrity);assert.deepEqual(b.files,r.files);assert.deepEqual(b.evidenceFiles,r.evidenceFiles);return r;}
-export function readBeforeSpeakingA1(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeSpeakingA1(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeReading(file,r.successor,read);}

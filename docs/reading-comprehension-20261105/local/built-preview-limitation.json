@@ -1,0 +1,6 @@
+{
+  "ordinaryBuildPassed": true,
+  "ordinaryDryRunPassed": true,
+  "compiledPreviewStarted": false,
+  "reason": "Local Wrangler proxy spawn EBADF before worker start; reproduced with separate inspector port and terminal. Existing vinext preview used for browser checks; actual production checks required after deploy."
+}
