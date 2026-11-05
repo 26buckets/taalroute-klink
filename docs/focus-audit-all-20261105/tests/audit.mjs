@@ -35,7 +35,7 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
     const meta=await el.evaluate(e=>({tag:e.tagName,type:e.type,class:e.className,text:(e.textContent||e.getAttribute('aria-label')||e.getAttribute('title')||'').trim().slice(0,70)}));
     record.controls.push({...meta,idle,keyboard,pointer});
    }
-   await p.evaluate(()=>document.activeElement?.blur());await p.mouse.move(0,0);await p.evaluate(()=>window.scrollTo(0,0));await p.screenshot({path:`${out}/${engine}-${width}-${theme}-${name}.png`,animations:'disabled'});checks.push(record);save();console.log('CHECK',engine,width,theme,name,record.controls.length);
+   await p.evaluate(()=>document.activeElement?.blur());await p.mouse.move(0,0);await p.evaluate(()=>window.scrollTo(0,0));await p.screenshot({path:`${out}/${engine}-${width}-${theme}-${String(name)}.png`,animations:'disabled'});checks.push(record);save();console.log('CHECK',engine,width,theme,name,record.controls.length);
   }catch(e){errors.push({engine,width,theme,name,message:e.message});save();console.log('ERROR',engine,width,theme,name,e.message.split('\n')[0]);}finally{await context.close();}
  }}finally{await browser.close();}
 }

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { verifyDialogFocusRelease, readBeforeDialogFocus } from './check-dialog-focus-release-20261105.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -12,6 +13,8 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sort = files => files.sort();
 
 export function verifyHelpContextRelease(read = readFileSync) {
+  const successor = verifyDialogFocusRelease(read), currentRead = read;
+  read = file => readBeforeDialogFocus(file, successor, currentRead);
   const json = path => JSON.parse(read(path));
   const release = json(folder + 'approval.json'), request = json(folder + 'owner-request.json');
   assert.equal(request.userRequest, 'Zet Help rechtsboven naast Foto en Tekst en zorg dat de knop zichtbaar blijft bij scrollen. Test dit op mobiel en zet beide aanpassingen daarna online. Laat Inzicht-staging ongemoeid.');
@@ -22,7 +25,7 @@ export function verifyHelpContextRelease(read = readFileSync) {
   git('merge-base','--is-ancestor',release.liveSourceCommit,release.baselineSourceCommit);
   git('merge-base','--is-ancestor',release.baselineSourceCommit,release.checkedCandidateCommit);
   git('merge-base','--is-ancestor',release.checkedCandidateCommit,'HEAD');
-  const changed = sort([...new Set([...paths(git('diff','--name-only',release.baselineSourceCommit,'--',...roots)),...paths(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed = sort(paths(git('diff','--name-only',release.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed, release.changedFiles);
   assert.deepEqual(sort(Object.keys(release.files)), changed);
   assert.deepEqual(changed.filter(path => !path.startsWith('scripts/')), sort([...runtime, 'VORMGEVING-VASTGEZET.md']));
@@ -44,8 +47,8 @@ export function verifyHelpContextRelease(read = readFileSync) {
   assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity);
   assert.deepEqual(backup.files,release.files);
   assert.deepEqual(backup.evidenceFiles,release.evidenceFiles);
-  return release;
+  return { ...release, successor };
 }
 export function readBeforeHelpContext(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : read(file);
+  return release.changedFiles.includes(file) ? git('show',release.baselineSourceCommit+':'+file) : readBeforeDialogFocus(file, release.successor, read);
 }

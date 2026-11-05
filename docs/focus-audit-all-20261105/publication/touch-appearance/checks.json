@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "light",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "dark",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "light",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "dark",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "geometryEqual": true,
+      "changedPixels": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "geometryEqual": true,
+      "changedPixels": 0
+    }
+  ],
+  "touch": [
+    {
+      "engine": "chromium",
+      "touchOpen": true,
+      "touchReturn": true
+    },
+    {
+      "engine": "webkit",
+      "touchOpen": true,
+      "touchReturn": true
+    }
+  ]
+}
