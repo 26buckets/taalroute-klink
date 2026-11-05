@@ -38,7 +38,7 @@ export default defineConfig(async () => {
     environments: { client: { build: { rolldownOptions: { output: {
       codeSplitting: { groups: [{
         name: 'shared-ui',
-        test: /(?:node_modules\/lucide-react\/|node_modules\/vinext\/dist\/(?:shims\/(?:script|link|layout-segment-context)|client\/pages-router-link-navigation)\.js$|app\/page\.tsx$|components\/product\/(?:manual-legacy-link|motion-feedback|manual-navigation|classroom-boundary|word-listening|taalroute-header|entry-design)\.tsx$|components\/product\/teacher-module-recovery\.ts$|lib\/(?:classroom-visibility|image-word-listening)\.ts$|data\/klink-image-word-listening\.json$)/,
+        test: /(?:node_modules\/lucide-react\/|node_modules\/vinext\/dist\/(?:shims\/(?:script|link|layout-segment-context)|client\/pages-router-link-navigation)\.js$|app\/page\.tsx$|components\/product\/(?:manual-legacy-link|motion-feedback|manual-navigation|classroom-boundary|word-listening|taalroute-header|entry-design|compact-image)\.tsx$|components\/product\/teacher-module-recovery\.ts$|lib\/(?:classroom-visibility|image-word-listening)\.ts$|data\/klink-image-word-listening\.json$)/,
         includeDependenciesRecursively: false,
       }] },
     } } } } },
