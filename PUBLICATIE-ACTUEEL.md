@@ -1,3 +1,11 @@
+## Actuele publicatie — twintig leesvragen A1/A2 — 5 november 2026
+
+Livebron `93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402`, Worker `450d9ea0-946b-41ea-97b7-3828329079df`. Via de gewone publicatiepoort en `npm run deploy`, na afstemming met Inzicht. Teksten → Teksten begrijpen → A1/A2 → Zelf oefenen: A1-TEXT-05-01..10 en A2-TEXT-05-01..10. Twintig nieuwe brongebonden leesvragen met 401 bestaande ongewijzigde woordopnamen; geen twintig-nieuwe-tekstenclaim, geen nieuwe media. PR12 en vijftig offline dictees buiten deze publicatie.
+
+Lokaal/live elk80 native audio-/antwoordstromen, acht rondes met voortgang na herladen; twee live menuroutes,401 opnamen exact/metadata/decode, twee nieuwe en twee behouden banken exact, zes dicteebanken404. Werkelijk20nieuwe+19980behouden=20000assets, Worker gzip6136.50KiB. Geen runtime-, CSS-, configuratie-, D1- of Actions-wijziging. Beperkingen en oorspronkelijke diagnostiek: `docs/reading-comprehension-20261105/postflight/RESULTAAT.md`. Definitieve bronnen, herstel en ontvangstbewijs: postflight/backup.json. Deze bewijsopvolger niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — tien Spreken A1-nazegoefeningen — 5 november 2026
 
 Livebron `8589a60a02117dfce87c44a833341796eed8b2c1`, Worker `bd45ccf8-6ab7-437a-ba7b-dabea96619a5`. Op Nico’s expliciete opdracht via de gewone `npm run deploy` en schone canonieke main, na afgestemd venster met Inzicht. PR12 niet meegenomen. Spreken → A1 → Zelf oefenen → Zeg het woord na: SPK-A1-ZHW-01 t/m 10. Tien nieuwe brongebonden vragen, tien bestaande ongewijzigde doelopnamen, geen nieuwe audio of beelden.
