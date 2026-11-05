@@ -37,6 +37,9 @@ export default defineConfig(async () => {
     // Keep the initial shell together to leave room for prepared pages within the asset limit.
     environments: { client: { build: { rolldownOptions: { output: {
       codeSplitting: { groups: [
+        // Keep deferred players together without adding to the public asset count.
+        { name: 'learner-rounds', test: /components\/product\/(?:learner-rounds|alfa-c-practice|package-exercise-browser|package-experience|package-group-practice|package-mixed-practice|learning-path-surface|production-round|source-repeat-round|alfa-c-dagelijks|alfa-c-functioneel|alfa-c-readalong)\.tsx?$/, includeDependenciesRecursively: false },
+        { name: 'route-settings', test: /(?:components\/product\/(?:route-settings|practice-line|sound-reference)\.tsx|lib\/(?:sounds|learner-progress|practice-navigation)\.ts)$/, includeDependenciesRecursively: false },
         { name: 'practice-source-bank', test: /data\/klink-(?:imported-practice|word-use-self)\.json$/, includeDependenciesRecursively: false },
         { name: 'practice-word-bank', test: /(?:data\/klink-(?:lexicon-wordbuild-rest|lexicon-wordbuild-20|curriculum|media)\.json|lib\/klink-curriculum\.ts)$/, includeDependenciesRecursively: false },
         {

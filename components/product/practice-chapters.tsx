@@ -4,15 +4,11 @@ import { collectionProgressId, roundProgressCount, sequenceProgressId } from '@/
 import { importExistingSequenceProgress } from '@/lib/alfa-c-round-progress';
 import { TeacherBlockCards } from './alfa-c-docent';
 import { PracticeHeader } from './practice-header';
-import { AlfaCPractice } from './alfa-c-practice';
 import { alfaCChapters } from '@/lib/alfa-c-navigation';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, Search, UserRound, UsersRound } from 'lucide-react';
 import Image from './compact-image';
-import { ProductionRound } from './production-round';
-import { SourceRepeatRound } from './source-repeat-round';
-import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
 import { availableChapterActivities, availableChapterCollections, selectedChapterCollection, displayedChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterExerciseChoices, chapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
@@ -22,6 +18,13 @@ import { practiceLocation } from '@/lib/practice-navigation';
 import type { PracticeAttempt } from '@/lib/package-content';
 import { learningReviewKey, parseLearningReview } from '@/lib/learning-review';
 import { learnerCollectionLabel } from '@/lib/learner-copy';
+
+const loadRounds = () => import('./learner-rounds');
+const AlfaCPractice = lazy(() => loadRounds().then(({ AlfaCPractice }) => ({ default: AlfaCPractice })));
+const ProductionRound = lazy(() => loadRounds().then(({ ProductionRound }) => ({ default: ProductionRound })));
+const SourceRepeatRound = lazy(() => loadRounds().then(({ SourceRepeatRound }) => ({ default: SourceRepeatRound })));
+const GroupRound = lazy(() => loadRounds().then(({ GroupRound }) => ({ default: GroupRound })));
+const roundLoading = <output className="honest-empty">De oefening wordt geladen…</output>;
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const pageSize = 12;
@@ -111,7 +114,7 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
   const toCollections = () => open({ ...location, collection: undefined, words: undefined });
   const selection = { level: location.level, help: location.help };
   const back = collection ? toCollections : activitySelected ? () => open({ chapter: chapter!.id, ...selection }) : chapter ? () => open(selection) : location.help ? () => open({ level: location.level }) : onBack;
-  if (sequenceBlock) return <AlfaCPractice key={sequenceBlock.id} selected={sequenceBlock.id} backHref={chapterHash({ ...location, collection: undefined })} header={<PracticeHeader title={learnerCollectionLabel(sequenceBlock.title).title} backLabel="Andere opdracht" onBack={toCollections} headingRef={heading} meta={`Oefenen · ${chapter!.title}`} />} />;
+  if (sequenceBlock) return <Suspense fallback={roundLoading}><AlfaCPractice key={sequenceBlock.id} selected={sequenceBlock.id} backHref={chapterHash({ ...location, collection: undefined })} header={<PracticeHeader title={learnerCollectionLabel(sequenceBlock.title).title} backLabel="Andere opdracht" onBack={toCollections} headingRef={heading} meta={`Oefenen · ${chapter!.title}`} />} /></Suspense>;
   return <div className={`learner-page cp-chapters cp-direct-practice ${!chapter ? 'cp-home' : ''} ${collection ? 'cp-chapter-playing' : ''}`} data-chapter-page={chapter?.id ?? 'all'}>
     <PracticeHeader title={!chapter && startTitle ? startTitle : title} headingRef={heading} onBack={chapter ? back : undefined} backLabel={collection ? 'Andere opdracht' : activitySelected ? chapter!.title : chapter ? 'Start' : 'Terug'} metaLabel={!collection && chapter ? 'Je bent hier' : undefined} meta={collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activitySelected ? ` · ${chapter.title}` : ''}` : ''} actions={!collection && <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>} />
     {collection && chapter && <p className="sr-only" aria-label="Je bent hier">Oefenen · {chapter.title}</p>}
@@ -149,9 +152,9 @@ export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, 
     </>}
     <AdditionalContent showPracticeChoice={false} selection={location} availableLevels={availableLevels} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
     </div>}
-    {collection && activity && <Round progressId={collectionProgressId(activity.id, (collection.wordRound ?? collection.readingSelection)?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={(collection.wordRound ?? collection.readingSelection)?.allExerciseIds} legacySessionId={(collection.wordRound ?? collection.readingSelection) && ((collection.wordRound ?? collection.readingSelection)!.sourceId !== collection.id || location.words) ? `chapter:${activity.id}:${(collection.wordRound ?? collection.readingSelection)!.sourceId}` : undefined} exerciseIds={(collection.wordRound ?? collection.readingSelection)?.exerciseIds} sourceRepeat={collection.sourceRepeat} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ scopeLabel: collection.wordRound ? 'Met dezelfde woorden' : undefined, value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+    {collection && activity && <Suspense fallback={roundLoading}><Round progressId={collectionProgressId(activity.id, (collection.wordRound ?? collection.readingSelection)?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={(collection.wordRound ?? collection.readingSelection)?.allExerciseIds} legacySessionId={(collection.wordRound ?? collection.readingSelection) && ((collection.wordRound ?? collection.readingSelection)!.sourceId !== collection.id || location.words) ? `chapter:${activity.id}:${(collection.wordRound ?? collection.readingSelection)!.sourceId}` : undefined} exerciseIds={(collection.wordRound ?? collection.readingSelection)?.exerciseIds} sourceRepeat={collection.sourceRepeat} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ scopeLabel: collection.wordRound ? 'Met dezelfde woorden' : undefined, value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);
       if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection, words: next.words });
-    } }} key={`${activity.id}:${collection.id}:${location.words?.join(',') ?? ''}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${location.words ? `:words:${location.words.join(',')}` : ''}${reviewMode && !collection.sourceRepeat ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
+    } }} key={`${activity.id}:${collection.id}:${location.words?.join(',') ?? ''}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${location.words ? `:words:${location.words.join(',')}` : ''}${reviewMode && !collection.sourceRepeat ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" /></Suspense>}
   </div>;
 }
