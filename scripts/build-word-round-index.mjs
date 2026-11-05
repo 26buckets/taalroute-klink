@@ -1,9 +1,10 @@
-import { readFileSync, writeFileSync } from 'node:fs';
-import { productionIndex, validateProductionCollection } from '../lib/production-practice.ts';
+import { readProductionBank } from './read-production-bank.mjs';
+import { writeFileSync } from 'node:fs';
+import { productionIndex } from '../lib/production-practice.ts';
 import { wordRoundActivities, wordRoundDefinitions } from '../lib/word-rounds.ts';
 
 const entries = productionIndex.filter(row => wordRoundActivities.has(row.activity)).flatMap(row => {
-  const exercises = validateProductionCollection(JSON.parse(readFileSync('public' + row.url)), row.id, row.count);
+  const exercises = readProductionBank(row).exercises;
   const rounds = wordRoundDefinitions(exercises);
   return rounds.length ? [[row.url, rounds]] : [];
 });

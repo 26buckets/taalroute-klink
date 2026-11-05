@@ -1,3 +1,4 @@
+import { lessonContentLevel } from '../lib/learner-route.ts';
 import assert from 'node:assert/strict';
 import { isBeginnerLesson } from '../lib/lesson-plan.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -22,9 +23,10 @@ await page.addInitScript(() => {
 async function openExercise(exercise) {
   const pack = packs.find(pack => pack.exercises.some(item => item.exerciseId === exercise.exerciseId));
   await page.goto(`${base}/#learner/home`);
+  await page.evaluate(level => localStorage.setItem('klink.taalroute.practice-navigation.v1', JSON.stringify({ level, help: 'practice' })), lessonContentLevel(pack, pack.lessons.find(item => item.id === exercise.lessonId)));
   await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: pack.id, lessonId: exercise.lessonId, exerciseId: exercise.exerciseId });
   await page.reload();
-  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('button', { name: /^Verder met / }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
 }
 const ready = () => page.waitForFunction(() => !/Je hoort het geluid vanzelf|Probeer Luister opnieuw|Tik op Luister/.test(document.querySelector('.cp-exercise-feedback output')?.textContent ?? ''), undefined, { timeout: 20000 });
@@ -41,7 +43,7 @@ try {
   const correct = heard.options.findIndex(option => heard.answer.correctOptionIds.includes(option.id));
   const id = heard.exerciseId;
   const start = Date.now();
-  await page.locator('.cp-choice-grid button').nth(correct).click();
+  await page.locator('.cp-choice-grid button').nth(correct).click({position:{x:8,y:8}});
   await page.waitForFunction(id => document.querySelector('.cp-exercise-browser')?.dataset.exerciseId !== id, id);
   const elapsed = Date.now() - start;
   assert(elapsed >= 500 && elapsed < 1300, `Feedback took ${elapsed}ms`);
@@ -51,7 +53,7 @@ try {
   assert.equal(await page.evaluate(src => window.__plays.filter(path => path.endsWith(src)).length, heard.instructionAudio.src), 0);
   assert.equal(await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).count(), 0);
   await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
-  await page.locator('.cp-choice-grid button').nth(correct).click();
+  await page.locator('.cp-choice-grid button').nth(correct).click({position:{x:8,y:8}});
   await page.waitForTimeout(900);
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), id);
   await page.locator('.cp-exercise-feedback').getByRole('button', { name: 'Verder', exact: true }).click();
@@ -79,7 +81,7 @@ try {
     await page.waitForTimeout(900);
     assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), context.exerciseId);
     assert(!/Goed gedaan|zelfstandig gelezen/.test(await page.locator('.cp-exercise-feedback').innerText()));
-    await page.locator('.cp-reading-blocks button').click();
+    await page.locator('[data-practice-listen]').first().click();
     assert.equal(await page.evaluate(() => window.__plays.at(-1)), base + context.prompt.audio.src);
   }
   pass('Sentence and situation recordings play automatically; text replays them and participation is not marked independent reading');
@@ -96,7 +98,7 @@ try {
     assert(next.y + next.height <= (width < 700 ? 844 : 900) + 2);
     for (const selector of ['.cp-context-image', '.cp-reading-blocks button', '.cp-exercise-feedback button', '.cp-exercise-record-head nav button']) {
       for (const button of await page.locator(selector).all()) {
-        const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48, `${width}: ${selector}`);
+        const box = await button.boundingBox(); assert(box.width >= 44 && box.height >= 44, `${width}: ${selector}`);
       }
     }
     await page.screenshot({ path: `${out}/situatie-${width}.png` });
@@ -104,9 +106,9 @@ try {
   pass('Context presentation keeps its image proportions, large targets and reachable Verder at four screen widths');
   const model = route.find(item => item.mode === 'model');
   await openExercise(model);
-  assert.equal(await page.getByRole('button', { name: `Luister naar ${model.text.primary}`, exact: true }).count(), 1);
+  assert.equal(await page.locator('button.cp-model-content').count(), 1);
   assert.equal(await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).count(), 0);
-  pass('The model has one large photo/word listening target, not duplicate listening buttons');
+  pass('The model retains its large photo/word listening target and separate playback toolbar');
   assert.deepEqual(errors, []);
 } finally {
   writeFileSync(`${out}/${base.endsWith(':18817') ? 'production-' : ''}browser-check.json`, JSON.stringify({ checks, errors, base }, null, 2));

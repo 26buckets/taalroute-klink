@@ -389,7 +389,7 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 /* Keep the complete writing task in view on phones. */
 @media (max-width: 820px) {
   .learner-app.consistent-layout:has(.cp-text-entry, .cp-form-fields) {
-    .learner-main { height: calc(var(--klink-app-height) - 68px); padding-bottom: 0; }
+    .learner-main:has(.cp-exercise-browser) { height: calc(var(--klink-app-height) - 68px); padding-bottom: 0; }
     .cp-chapter-playing { grid-template-rows: auto auto; padding-bottom: 0; }
     .cp-chapter-playing > .cp-exercise-browser { grid-row: 2; }
     .cp-context-header { min-height: 56px; padding-block: 4px; }

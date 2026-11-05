@@ -15,9 +15,10 @@ try {
   assert.deepEqual(teacherPictureExamples.map(item => item.id), pictureGrowth.map(item => item.id));
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 950 });
-    await page.goto(`${base}/#learner/home`); await page.locator('.cp-home-hero').waitFor();
+    await page.goto(`${base}/#learner/home`); await page.locator('.cp-direct-actions').waitFor();
     assert.equal(await page.locator('[data-picture-stage], [data-picture-example]').count(), 0);
     assert.equal(await page.locator('.cp-practice-line [aria-current]').count(), 0);
+    await page.locator('.cp-direct-explanation summary').click();
     const frames = page.locator('.cp-practice-line-overview li > button');
     assert.equal(await frames.count(), 6);
     for (const frame of await frames.all()) {
@@ -25,7 +26,7 @@ try {
       assert(css.borders.every(([width, style]) => width === '1px' && style === 'solid'));
       assert.notEqual(css.background, 'rgba(0, 0, 0, 0)');
     }
-    assert(await page.locator('.cp-home-hero').evaluate(el => Boolean(el.compareDocumentPosition(document.querySelector('.cp-practice-line')) & Node.DOCUMENT_POSITION_FOLLOWING)));
+    assert(await page.locator('.cp-direct-actions').evaluate(el => Boolean(el.compareDocumentPosition(document.querySelector('.cp-practice-line')) & Node.DOCUMENT_POSITION_FOLLOWING)));
     for (const number of await page.locator('.cp-line-number').all()) {
       const css = await number.evaluate(el => ({ radius: getComputedStyle(el).borderRadius, color: getComputedStyle(el).color }));
       assert.equal(css.radius, '50%'); assert.equal(css.color, 'rgb(255, 255, 255)');

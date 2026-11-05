@@ -13,6 +13,7 @@ page.on('pageerror', e => errors.push(e.message));
 const pass = message => { checks.push(message); console.log('PASS', message); };
 await page.addInitScript(() => {
   window.Audio = class extends EventTarget {
+    dataset = {};
     play() { this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 30); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); }
   };

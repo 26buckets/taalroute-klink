@@ -1,3 +1,4 @@
+import { lessonPackages } from '../lib/package-content.ts';
 import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {taalroutePackages as packs} from '../lib/taalroute-packages.ts';
@@ -12,8 +13,8 @@ const errors=[];page.on('pageerror',e=>errors.push(e.message));
 mkdirSync('outputs/sections-20261017',{recursive:true});
 try {
   await page.goto(base+'/#learner/packages');await page.locator('.cp-package-grid').waitFor();
-  assert.equal(await page.locator('.cp-context-meta').innerText(),'15 onderdelen · 302 lessen');
-  const cards=page.locator('.cp-package-grid > button');assert.equal(await cards.count(),15);
+  assert.equal(await page.locator('.cp-context-meta').innerText(),`${lessonPackages.length} onderdelen · ${lessonPackages.reduce((n,p)=>n+p.lessons.length,0)} lessen`);
+  const cards=page.locator('.cp-package-grid > button');assert.equal(await cards.count(),lessonPackages.length);
   for(const [i,p] of packs.entries()) {
     assert.equal(await cards.nth(i).locator('strong').innerText(),learnerListName(p));
     assert(decodeURIComponent(await cards.nth(i).locator('img').getAttribute('src')).includes(compactImageSrc(sectionPhotos[p.id] ?? p.cover.image)));
@@ -37,7 +38,11 @@ try {
     assert(Math.abs(boxes[columns-1].x + boxes[columns-1].width - grid.x - grid.width) < 1, 'First row uses the full available width');
     assert(boxes.every(box => box.width < 420), 'Cards remain compact');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-    for (const card of await cards.all()) {
+    for (const [index, card] of (await cards.all()).entries()) {
+      if (!await card.locator('.cp-section-photo img').count()) {
+        assert(!sectionPhotos[lessonPackages[index].id] && !lessonPackages[index].cover?.image);
+        assert.equal(await card.locator('.cp-section-photo svg').count(), 1); continue;
+      }
       const geometry = await card.evaluate(el => {
         const photo = el.querySelector('.cp-section-photo').getBoundingClientRect();
         const copy = el.querySelector('.cp-package-copy').getBoundingClientRect();
@@ -59,7 +64,7 @@ try {
       assert.equal(geometry.objectFit, 'contain', 'No photo crop or zoom');
       assert(geometry.imageWidth <= geometry.naturalWidth && geometry.imageHeight <= geometry.naturalHeight, 'Never enlarge beyond the actual image dimensions');
       assert(geometry.openHeight>=48 && geometry.titleSize>=20, 'Compact cards keep large controls and readable titles');
-      assert(!/\d+ lessen|\d+ woorden/.test(await card.innerText()));
+      assert.match(await card.locator('.cp-card-meta').innerText(), /^\d+ les(?:sen)?$/);
     }
     if(width!==768)await page.screenshot({path:`outputs/sections-20261017/klink-${width}.png`});
     if(width===390)for(const index of [6,13]) {

@@ -18,13 +18,22 @@ for (const activity of ['meet', 'read', 'cards', 'build-model']) {
   assert(row, activity);
   routes[activity] = '/' + chapterHash({ chapter: activity === 'build-model' ? 'spelling' : 'words', activity, collection: row.id, level: row.level });
 }
+const sheets = process.env.KLINK_APPEARANCE_SHEETS === '1';
+if (sheets) {
+  for (const key of Object.keys(routes)) delete routes[key];
+  for (const activity of ['copy', 'dictation']) {
+    const row = chapterCollections(activity)[0];
+    routes[activity + '-sheet'] = '/' + chapterHash({ chapter: 'writing', activity, collection: row.id, level: row.level });
+  }
+}
+const widths = sheets ? [1366, 820, 390, 320] : [1366, 390];
 const checks = [], errors = [];
 mkdirSync(out, { recursive: true });
 try {
   for (const [engine, type] of Object.entries({ chromium, webkit })) {
     const browser = await type.launch();
     try {
-      for (const [name, route] of Object.entries(routes)) for (const width of [1366, 390]) for (const theme of ['light', 'dark']) {
+      for (const [name, route] of Object.entries(routes)) for (const width of widths) for (const theme of ['light', 'dark']) {
         const captures = [];
         for (const [label, host] of [['before', baseline], ['after', base]]) {
           const context = await browser.newContext({ viewport: { width, height: width === 390 ? 844 : 900 }, colorScheme: theme, reducedMotion: 'reduce' });
@@ -40,12 +49,13 @@ try {
             const page = await context.newPage();
             page.on('pageerror', error => errors.push({ engine, name, label, message: error.message }));
             await page.goto(host + route);
-            await page.locator('.cp-task-card').waitFor();
+            await page.locator(sheets ? '.cp-exercise-browser' : '.cp-task-card').first().waitFor();
+            if (sheets) { await page.getByRole('button', { name: 'Op één blad', exact: true }).click(); await page.locator('.cp-practice-sheet').waitFor(); }
             if (name === 'copy' || name === 'dictation') await page.waitForFunction(() => !document.querySelector('.cp-text-entry input')?.disabled);
-            await page.waitForFunction(() => [...document.querySelectorAll('.cp-task-card img')].every(image => image.complete && image.naturalWidth > 0));
+            await page.waitForFunction(() => [...document.querySelectorAll('.cp-task-card img')].every(image => { const r = image.getBoundingClientRect(); return r.width === 0 || r.bottom <= 0 || r.top >= innerHeight || (image.complete && image.naturalWidth > 0); }));
             await page.evaluate(() => document.fonts.ready);
-            await page.keyboard.press('Tab');
-            await page.locator('.cp-exercise-record-head h3').focus();
+            if (sheets) await page.locator('.learner-main').evaluate(el => { el.scrollTop = 0; });
+            else { await page.keyboard.press('Tab'); await page.locator('.cp-exercise-record-head h3').focus(); }
             await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
             const filename = `${engine}-${name}-${width}-${theme}-${label}.png`;
             const png = await page.screenshot({ path: out + '/' + filename, animations: 'disabled' });
@@ -70,5 +80,5 @@ try {
     } finally { await browser.close(); }
   }
   assert.deepEqual(errors, []);
-  assert.equal(checks.length, 48);
+  assert.equal(checks.length, sheets ? 32 : 48);
 } finally { writeFileSync(out + '/checks.json', JSON.stringify({ base, baseline, simulatedAudio: true, checks, errors }, null, 2) + '\n'); }

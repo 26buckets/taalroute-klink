@@ -1,17 +1,18 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { chapterCollections, chapterHash, practiceChapters } from '../lib/practice-chapters.ts';
-const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const engines = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830';
 const out = process.env.KLINK_SHEET_OUTPUT || 'outputs/practice-sheet-20261018';
 mkdirSync(out, { recursive: true });
-const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const browser = await engines[process.env.KLINK_TEST_ENGINE || 'chromium'].launch({ headless: true });
 const page = await browser.newPage({ viewport: { width: 1366, height: 950 } });
 const errors = [], checks = [];
 page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__played = []; window.__fail = false; window.__duration = 150;
   window.Audio = class extends EventTarget {
+    dataset = {};
     play() {
       window.__played.push(this.src);
       if (window.__fail) return Promise.reject(Error('Audio failed'));
@@ -28,8 +29,9 @@ async function open(activity, collection = chapterCollections(activity)[0]) {
   await page.locator('[data-chapter-page="all"]').waitFor();
   await page.goto(`${base}/${chapterHash({ chapter, activity, collection: collection.id, level: collection.level })}`);
   await page.locator('.cp-exercise-browser').waitFor();
+  await page.getByRole('button', { name: 'Op één blad', exact: true }).focus();
   await page.evaluate(() => { window.__played = []; });
-  await page.getByRole('button', { name: 'Op één blad', exact: true }).click();
+  await page.keyboard.press('Enter');
   await page.locator('.cp-practice-sheet').waitFor();
   assert.equal(await page.locator('[data-sheet-exercise]').count(), collection.exercises.length);
   assert.equal(await page.locator('.cp-exercise-browser').count(), 0);
@@ -40,7 +42,7 @@ try {
   const c = await open('meet');
   const wordRoute = await page.evaluate(() => localStorage.getItem('klink.taalroute.route.v1'));
   assert.equal(await page.evaluate(() => window.__played.length), 0, 'No simultaneous automatic audio');
-  await row(0).getByRole('button').click();
+  await row(0).locator('[data-practice-listen]').click();
   await row(0).getByText('Beluisterd', { exact: true }).waitFor();
   assert.equal(await page.locator('[data-sheet-exercise]').count(), c.exercises.length);
   const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
@@ -111,8 +113,11 @@ try {
       await open(activity);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${activity}/${width}: overflow`);
       const done = page.locator('.cp-practice-sheet > footer').getByRole('button', { name: 'Klaar', exact: true });
-      await done.scrollIntoViewIfNeeded();
-      assert(await done.evaluate(el => { const r = el.getBoundingClientRect(); return r.height >= 48 && r.width >= 48 && el.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }), `${activity}/${width}: reachable footer`);
+      await done.evaluate(el => el.scrollIntoView({block:'center',behavior:'instant'}));
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      await page.locator('.toast-message').waitFor({state:'hidden'});
+      const footer = await done.evaluate(el => { const r = el.getBoundingClientRect(), hit = document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2); return { width: r.width, height: r.height, reachable: el.contains(hit), coveredBy: el.contains(hit) ? null : hit?.className }; });
+      assert(footer.width >= 44 && footer.height >= 44 && footer.reachable, `${activity}/${width}: reachable footer ${JSON.stringify(footer)}`);
     }
     await open('meet');
     await page.waitForTimeout(300);

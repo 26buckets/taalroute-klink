@@ -20,7 +20,7 @@ await page.addInitScript(() => {
 });
 try {
   await page.goto(`${base}/#learner/home`);
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(2).click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await page.locator('[data-activity="meet"]').click();

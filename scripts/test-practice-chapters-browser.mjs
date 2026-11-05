@@ -1,3 +1,4 @@
+import { lessonPackages } from '../lib/package-content.ts';
 import assert from 'node:assert/strict';
 import { exerciseSetHelp } from '../lib/content-levels.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -13,6 +14,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__played = []; window.__fail = false;
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; }
     play() { if (window.__fail) return Promise.reject(Error('failed')); window.__played.push(this.src); this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 25); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); }
@@ -29,15 +31,16 @@ async function open(chapter, activity, index = 0) {
 try {
   await page.goto(`${base}/#learner/home`);
   await page.locator('.cp-home').waitFor();
-  assert.equal(await page.locator('.cp-package-grid > button').count(), 15);
   assert.equal(await page.locator('.cp-home [data-chapter]').count(), 12);
+  await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+  assert.equal(await page.locator('.cp-package-grid > button').count(), lessonPackages.length);
   const before = await page.evaluate(() => localStorage.getItem('klink.taalroute.route.v1'));
   for (const chapter of practiceChapters) {
     await page.goto(`${base}/${chapterHash({ chapter: chapter.id, level: 'all' })}`);
     await page.locator(`[data-chapter-page="${chapter.id}"]`).waitFor();
     const activity = chapter.activities.find(id => id !== 'learning-review');
     const mode = exerciseSetHelp(chapterCollections(activity)[0].exercises);
-    await page.locator('.cp-practice-entry').getByRole('button', { name: mode === 'guided' ? /Met je docent/ : /Zelf oefenen/ }).click();
+    await page.locator('.cp-practice-modes').getByRole('button', { name: mode === 'guided' ? /Met je docent/ : /Zelf oefenen/ }).click();
     if (await page.locator('[data-chapter-activity]').count()) {
       assert.equal(await page.locator('[data-chapter-activity]').count(), chapter.activities.length + availableChapterSequences(chapter.id, {level:'all',help:mode}).length);
       await page.locator(`[data-chapter-activity="${activity}"]`).click();
@@ -95,7 +98,7 @@ try {
   for (const width of [1366, 820, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width < 500 ? 844 : 950 });
     await page.goto(`${base}/#learner/chapters`);
-    await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
+    await page.locator('.cp-practice-modes').getByRole('button', { name: /Met je docent/ }).click();
     await page.locator('[data-chapter]').first().waitFor();
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     for (const button of await page.locator('[data-chapter]').all()) {
@@ -111,15 +114,15 @@ try {
   }
   await page.setViewportSize({ width: 390, height: 640 });
   const textCollections = chapterCollections('text-question');
-  const longest = textCollections.reduce((best, item, index) => String(item.exercises[0].sourceText).length > String(textCollections[best].exercises[0].sourceText).length ? index : best, 0);
+  const longest = textCollections.reduce((best, item, index) => JSON.stringify(item.exercises[0]?.sourceText ?? '').length > JSON.stringify(textCollections[best].exercises[0]?.sourceText ?? '').length ? index : best, 0);
   await open('texts', 'text-question', longest);
   const finish = page.locator('.cp-exercise-feedback').getByRole('button', { name: 'Ronde afronden', exact: true });
   await finish.scrollIntoViewIfNeeded();
   assert(await finish.evaluate(button => { const box = button.getBoundingClientRect(); const hit = document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2); return button === hit || button.contains(hit); }), 'Long text must remain scrollable past the fixed mobile navigation');
   pass('Desktop/tablet/phone fit, 48px chapter targets, accessible Verder and unchanged player layout');
   await page.goto(`${base}/#learner/chapters/unknown/%ED`); await page.locator('[data-chapter-page="all"]').waitFor();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
-  assert.equal(await page.locator('.cp-package-grid > button').count(), 15);
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+  assert.equal(await page.locator('.cp-package-grid > button').count(), lessonPackages.length);
   assert.deepEqual(errors, []);
   writeFileSync(`${out}/browser-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), checks, errors }, null, 2));
 } finally { await browser.close(); }

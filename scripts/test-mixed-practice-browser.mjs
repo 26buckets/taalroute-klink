@@ -12,6 +12,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__played = []; window.__audioFail = false;
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() {
       if (window.__audioFail) return Promise.reject(new Error('test unavailable'));
@@ -23,7 +24,7 @@ await page.addInitScript(() => {
   };
 });
 async function open(pack = packs[0]) {
-  await page.goto(base + '/#learner/home'); await page.reload();
+  await page.goto(base + '/#learner/packages'); await page.reload();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
@@ -155,7 +156,7 @@ try {
 
   await page.evaluate(completed => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({completed})), [packs[0].lessons[0].id,packs[1].lessons[0].id]);
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Herhalen', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Nog een keer', exact: true }).click();
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   assert((await page.locator('.is-mixed-round').getAttribute('data-exercise-id')).startsWith('mixed-review:mixed:'));
   pass('Existing Herhalen screen adds a prepared cross-section mix without removing saved words');

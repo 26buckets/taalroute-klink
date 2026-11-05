@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { mkdirSync } from 'node:fs';
-import { chapterCollections, chapterHash } from '../lib/practice-chapters.ts';
+import { chapterCollections, chapterHash, displayedChapterCollections } from '../lib/practice-chapters.ts';
 import { learningReviewKey } from '../lib/learning-review.ts';
 import { answerActivity } from './browser-route-helpers.mjs';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE ?? 'playwright');
@@ -13,6 +13,7 @@ await page.addInitScript(() => {
   window.__audioFail = false;
   window.__played = [];
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() { if (window.__audioFail) return Promise.reject(Error('test unavailable')); window.__played.push(this.src); this.paused = false; this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 30); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); this.paused = true; }
@@ -121,8 +122,10 @@ try {
   await page.goto(`${base}/#learner/review`);
   await page.getByRole('link', { name: 'Oefen opnieuw', exact: true }).click();
   await page.locator('[data-collection]').first().waitFor();
-  assert.equal(await page.locator('[data-collection]').count(), 1);
-  await page.locator('[data-collection]').click();
+  const dueCollections = displayedChapterCollections('learning-review', {level:'all',help:'all'}, {[review.exerciseId]:{due:0,last:1,streak:0}});
+  const dueCollection = dueCollections.find(c => c.exercises.some(e => e.exerciseId === review.exerciseId));
+  assert(dueCollection);
+  await page.locator(`[data-collection="${dueCollection.id}"]`).click();
   assert.equal(await page.locator('.is-mixed-round').getAttribute('data-exercise-id'), review.exerciseId);
   await page.waitForFunction(() => !document.querySelector('.cp-learning-task .cp-choice-grid button')?.disabled);
   await page.locator('.cp-learning-task .cp-choice-grid button').filter({ hasText: new RegExp(`^${review.answer.correctOptionIds[0]}$`) }).click();
@@ -130,23 +133,23 @@ try {
   assert(schedule[review.exerciseId].due > Date.now());
   await forward().click();
   await page.getByRole('button', { name: 'Andere opdracht', exact: true }).last().click();
-  assert.equal(await page.locator('[data-collection]').count(), 0);
+  assert.equal(await page.locator(`[data-collection="${dueCollection.id}"]`).count(), 0);
   console.log('PASS only due encountered work appears, successful recall schedules the next day');
 
   await open('sounds', 'sound-path', sound, sound.exercises[2]);
   await page.evaluate(() => { window.__audioFail = true; });
-  await page.locator('.cp-learning-task').getByRole('button', { name: 'Luister', exact: true }).click();
+  await page.locator('[data-practice-listen]').first().click();
   await page.waitForTimeout(120);
   assert(await page.locator('.cp-learning-task .cp-choice-grid button').first().isDisabled());
   await page.evaluate(() => { window.__audioFail = false; });
-  await page.locator('.cp-learning-task').getByRole('button', { name: 'Luister', exact: true }).click();
+  await page.locator('[data-practice-listen]').first().click();
   await page.waitForFunction(() => !document.querySelector('.cp-learning-task .cp-choice-grid button')?.disabled);
   for (const [chapter, activity] of [['sounds', 'sound-path'], ['spelling', 'spelling-path'], ['grammar', 'grammar-path']]) {
     const collection = chapterCollections(activity)[0];
     await open(chapter, activity, collection, collection.exercises[0]);
     for (const exercise of collection.exercises) {
       assert.equal(await page.locator('.is-mixed-round').getAttribute('data-exercise-id'), exercise.exerciseId);
-      if (exercise.componentId === 'ALF-CMP-005') { await answerActivity(page, exercise, { checkFocus: false }); continue; }
+      if (['ALF-CMP-005','ALF-CMP-002'].includes(exercise.componentId)) { await answerActivity(page, exercise, { checkFocus: false }); continue; }
       if (exercise.mode === 'learning-choice') {
         await page.waitForFunction(() => !document.querySelector('.cp-learning-task .cp-choice-grid button')?.disabled);
         const correctIndex = exercise.options.findIndex(option => exercise.answer.correctOptionIds.includes(option.id));

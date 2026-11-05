@@ -13,6 +13,7 @@ export async function openGroupActivity(page, activity, { beforeOpen } = {}) {
     const practice = page.getByRole('button', { name: 'Oefenen met zinnen en situaties', exact: true });
     if (await practice.count()) await practice.click();
     if (!await page.locator(`[data-activity="${activity}"]`).count()) { readiness = 'guided'; await page.getByRole('button', { name: /^Met de docent/ }).click(); }
+    if (!await page.locator(`[data-activity="${activity}"]`).count()) { readiness = 'independent'; await page.getByRole('button', { name: /^Nu zelf/ }).click(); }
   }
   await beforeOpen?.({ usage, readiness });
   await page.locator(`[data-activity="${activity}"]`).click();

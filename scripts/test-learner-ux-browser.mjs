@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { lessonContentLevel } from '../lib/learner-route.ts';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
@@ -14,6 +15,7 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__played = [];
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() { this.paused = false; window.__played.push(this.src); this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 25); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); this.paused = true; }
@@ -22,7 +24,7 @@ await page.addInitScript(() => {
 const nav = () => page.getByRole('navigation', { name: 'Cursistnavigatie' });
 async function home() { await page.goto(`${base}/#learner/home`); await page.reload(); }
 async function free(pack = packs[2]) {
-  await home(); await nav().getByRole('button', { name: 'Lessen', exact: true }).click();
+  await home(); await nav().getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
 }
@@ -34,6 +36,7 @@ async function family(label) {
 }
 async function geometry(label) {
   await page.waitForTimeout(90);
+  await page.locator('.toast-message').waitFor({ state: 'hidden' });
   if (await page.locator('.is-mixed-round, .is-guided').count()) await page.locator('.cp-exercise-feedback').scrollIntoViewIfNeeded();
   // Scroll the app panel to its end: WebKit's visibility check ignores the fixed bottom navigation.
   if (page.viewportSize().height <= 600) await page.evaluate(async () => {
@@ -48,7 +51,7 @@ async function geometry(label) {
     const hit = document.elementFromPoint(b.x + b.width / 2, b.y + b.height / 2);
     const text = document.querySelector('.cp-exercise-feedback output').getBoundingClientRect();
     const heading = document.querySelector('.cp-exercise-record-head h3');
-    return { head, stage, footer, footerCovered: !button.contains(hit), feedbackWidth: text.width, headingClipped: heading.scrollHeight > heading.clientHeight + 1, overflow: document.documentElement.scrollWidth > innerWidth + 1, height: innerHeight };
+    return { head, stage, footer, footerCovered: !button.contains(hit), feedbackWidth: text.width, feedbackClipped: document.querySelector('.cp-exercise-feedback output').scrollWidth > document.querySelector('.cp-exercise-feedback output').clientWidth + 1, headingClipped: heading.scrollHeight > heading.clientHeight + 1, overflow: document.documentElement.scrollWidth > innerWidth + 1, height: innerHeight };
   });
   assert(!result.overflow, `${label}: horizontal overflow`);
   for (const select of await page.locator('.cp-family-picker select:visible, .cp-mode-picker select:visible').all()) {
@@ -59,7 +62,7 @@ async function geometry(label) {
   assert(result.head.bottom <= result.stage.top + 1, `${label}: header overlaps stage`);
   assert(result.stage.bottom <= result.footer.top + 1, `${label}: stage overlaps feedback`);
   assert(result.stage.height >= 80, `${label}: unusable exercise height ${result.stage.height}`);
-  assert(result.feedbackWidth >= 120, `${label}: feedback squeezed to ${result.feedbackWidth}px`);
+  assert(!result.feedbackClipped, `${label}: feedback squeezed to ${result.feedbackWidth}px`);
   assert(result.footer.bottom <= result.height + 1, `${label}: feedback outside viewport ${JSON.stringify(result)}`);
   if (result.footerCovered) {
     await page.screenshot({ path: `${out}/covered-footer.jpg`, type: 'jpeg', quality: 70 });
@@ -103,8 +106,9 @@ try {
     for (const mode of ['model', 'same-word', 'heard-word', 'word-build', 'word-dictation', 'word-image-match', 'listen-situation']) {
       const item = routes.filter(item => item.exercise.mode === mode).sort((a, b) => String(b.exercise.exampleWord ?? b.exercise.helpWord ?? b.exercise.text?.primary ?? '').length - String(a.exercise.exampleWord ?? a.exercise.helpWord ?? a.exercise.text?.primary ?? '').length)[0];
       if (!item) continue;
+      await page.evaluate(level => localStorage.setItem('klink.taalroute.practice-navigation.v1', JSON.stringify({level,help:'practice'})), lessonContentLevel(item.pack,item.lesson));
       await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: item.pack.id, lessonId: item.lesson.id, exerciseId: item.exercise.exerciseId });
-      await page.reload(); await nav().getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+      await page.reload(); await nav().getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: /^Verder met /  }).click();
       await geometry(`${width}x${height} guided ${mode}`);
       assert.equal(await page.locator('.cp-player-bar:visible').count(), 0, 'No duplicate lesson header');
       const input = page.locator('.cp-text-entry input');
@@ -114,7 +118,8 @@ try {
   }
   checks.push('Seven guided modes across desktop, tablet, narrow, short and landscape viewports; long words and focused inputs stay reachable');
   await page.setViewportSize({ width: 1366, height: 900 }); await free(); await family('Schrijf');
-  await page.waitForTimeout(90); await page.evaluate(() => { window.__played = []; });
+  await page.waitForTimeout(90);
+  await page.locator('.toast-message').waitFor({ state: 'hidden' }); await page.evaluate(() => { window.__played = []; });
   await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
   const writingId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
   const writing = groupActivities.flatMap(activity => groupExercises(packs[2], activity.id)).find(item => item.exerciseId === writingId);

@@ -15,13 +15,14 @@ const pass = message => { checks.push(message); console.log('PASS', message); };
 await page.addInitScript(() => {
   window.__audioFail = false; window.__played = [];
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; }
     play() { if (window.__audioFail) return Promise.reject(Error('unavailable')); window.__played.push(this.src); this.paused = false; this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 40); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); this.paused = true; }
   };
 });
 async function home(index = 0) {
-  await page.goto(base + '/#learner/home'); await page.reload();
+  await page.goto(base + '/#learner/packages'); await page.reload();
   await page.locator('.cp-package-grid > button').nth(index).click();
 }
 async function hub() { await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption(''); await page.locator('[data-group-practice]').waitFor(); }
@@ -67,7 +68,7 @@ try {
     for (const id of ex.answer.targetTileIds) await row.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${ex.tiles.find(t => t.id === id).token}$`) }).first().click();
     assert((await row.locator('output').innerText()).includes('Goed'));
   }
-  await page.locator('.cp-word-worksheet > button').click();
+  await page.locator('.cp-word-worksheet > [data-practice-next]').click();
   assert.equal(await page.locator('.cp-worksheet-row').count(), 2);
   pass('Multiword worksheet covers all six words in two manageable pages');
 
@@ -170,7 +171,8 @@ try {
     const expected = groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[index], activity.id).length).map(item => item.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
     const found = new Set(await page.locator('[data-activity]').evaluateAll(nodes => nodes.map(node => node.dataset.activity)));
     await page.locator('.cp-tabs').getByRole('button', { name: 'Gebruiken', exact: true }).click();
-    await page.getByRole('button', { name: 'Oefenen met zinnen en situaties', exact: true }).click();
+    const practiceButton = page.getByRole('button', { name: 'Oefenen met zinnen en situaties', exact: true });
+    if (await practiceButton.count()) await practiceButton.click();
     for (const label of [/^Nu zelf/, /^Met de docent/, /^Voor later/]) {
       await page.getByRole('button', { name: label }).click();
       for (const id of await page.locator('[data-activity]').evaluateAll(nodes => nodes.map(node => node.dataset.activity))) found.add(id);

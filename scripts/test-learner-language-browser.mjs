@@ -17,7 +17,8 @@ try {
     await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
     const card = page.locator('.cp-package-grid > button').nth(index);
     assert((await card.getAttribute('aria-label')).includes(`${packs[index].lessons.length} lessen`));
-    assert(!/\d+ lessen|\d+ woorden/.test(await card.innerText()), 'Cards show the title and one action, not inventory counts');
+    assert.equal(await card.locator('.cp-card-meta').innerText(), `${packs[index].lessons.length} ${packs[index].lessons.length === 1 ? 'les' : 'lessen'}`);
+    assert.equal(await card.locator('.cp-section-open').innerText(), 'Open');
     await card.click();
     assert.equal(await page.locator('.cp-player-bar strong').innerText(), learnerListName(packs[index]));
     await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();

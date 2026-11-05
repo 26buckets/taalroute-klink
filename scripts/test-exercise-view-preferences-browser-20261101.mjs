@@ -22,7 +22,7 @@ for(const[name,engine]of Object.entries({chromium,webkit})){
    },{legacy,routeKey:routeSettingsKey,key,mode});
    await page.goto(base+'/'+hash);const photo=page.locator('[data-view-toggle="photo"]'),text=page.locator('[data-view-toggle="text"]');await photo.waitFor();await page.waitForTimeout(100);
    assert.equal(await photo.getAttribute('aria-pressed'),String(!['request','after'].includes(mode)));
-   for(const button of [photo,text])if(await button.getAttribute('aria-pressed')==='true')await button.tap();
+   for(const button of [photo,text])if(await button.getAttribute('aria-pressed')==='true'){await button.tap();await page.waitForFunction(kind=>document.querySelector(`[data-view-toggle="${kind}"]`)?.getAttribute('aria-pressed')==='false',await button.getAttribute('data-view-toggle'));}
    assert.equal(await photo.getAttribute('aria-pressed'),'false');assert.equal(await text.getAttribute('aria-pressed'),'false');
    if(mode!=='blocked'){
     assert.equal(await page.evaluate(k=>localStorage.getItem(k),routeSettingsKey),legacy);

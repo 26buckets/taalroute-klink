@@ -12,6 +12,7 @@ page.on('pageerror', error => errors.push(error.message));
 const pass = message => { checks.push(message); console.log('PASS', message); };
 await page.addInitScript(() => {
   window.Audio = class extends EventTarget {
+    dataset = {};
     play() { this.timer = setTimeout(() => this.dispatchEvent(new Event('ended')), 30); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); }
   };
@@ -76,8 +77,8 @@ try {
   assert(await choices.evaluateAll(nodes => nodes.every(node => node.disabled)));
   await choices.nth((right + 1) % question.options.length).evaluate(button => button.click());
   assert.equal(await choices.nth(right).getAttribute('aria-pressed'), 'true');
-  assert(await page.locator('.cp-source-text button').first().isEnabled());
-  await page.locator('.cp-source-text button').first().click();
+  assert(await page.getByRole('button', {name:'Luister naar de tekst',exact:true}).first().isEnabled());
+  await page.getByRole('button', {name:'Luister naar de tekst',exact:true}).first().click();
   await forward().click();
   pass('Correct answer stays selected; replay and Continue remain available');
   await page.goto(`${base}/#learner/home`);

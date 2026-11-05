@@ -7,7 +7,7 @@ import {availableChapterCollections} from '../lib/practice-chapters.ts';
 import {updateLearningReview} from '../lib/learning-review.ts';
 const root='docs/speaking-a1-repeat-20261105/',json=p=>JSON.parse(readFileSync(root+p));
 const m=json('manifest.json'),review=json('review.json'),bank=json('source-bank.json');
-test('Ten approved A1 repetitions are reachable with exact source IDs, text and existing audio',()=>{
+void test('Ten approved A1 repetitions are reachable with exact source IDs, text and existing audio',()=>{
  assert.deepEqual(productionIndex.find(r=>r.id===m.row.id),m.row);
  assert(availableChapterCollections('speak',{chapter:'speaking',level:'a1',help:'practice'}).some(r=>r.id===m.row.id));
  assert.deepEqual(validateProductionCollection(bank,m.row.id,10),bank.exercises);
@@ -25,7 +25,7 @@ test('Ten approved A1 repetitions are reachable with exact source IDs, text and 
   assert.deepEqual(updateLearningReview(state,{exerciseId:e.exerciseId,assessment:e.assessment,reviewEligible:e.reviewEligible,correct:true}),state);
  }
 });
-test('Malformed, incomplete and duplicate banks cannot load',()=>{
+void test('Malformed, incomplete and duplicate banks cannot load',()=>{
  assert.throws(()=>validateProductionCollection({...bank,exercises:bank.exercises.slice(1)},m.row.id,10));
  assert.throws(()=>validateProductionCollection({...bank,exercises:bank.exercises.map(()=>bank.exercises[0])},m.row.id,10));
  assert.throws(()=>validateProductionCollection(bank,'wrong-id',10));

@@ -1,14 +1,15 @@
+import { readProductionBank } from './read-production-bank.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { wordRoundDefinitions, chapterWordRounds, wordRoundActivities } from '../lib/word-rounds.ts';
 import { availableChapterCollections, displayedChapterCollections, chapterHash, parseChapterHash, chapterExerciseChoices } from '../lib/practice-chapters.ts';
-import { productionIndex, validateProductionCollection } from '../lib/production-practice.ts';
+import { productionIndex } from '../lib/production-practice.ts';
 import { recordRoundSteps, roundProgressCount, roundProgressPrefix, collectionProgressId } from '../lib/round-progress.ts';
 
 const index = JSON.parse(readFileSync('data/klink-word-round-index.json'));
 const expected = {};
 for (const row of productionIndex.filter(item => wordRoundActivities.has(item.activity))) {
-  const exercises = validateProductionCollection(JSON.parse(readFileSync('public' + row.url)), row.id, row.count);
+  const exercises = readProductionBank(row).exercises;
   const rounds = wordRoundDefinitions(exercises);
   if (rounds.length) expected[row.url] = rounds;
 }

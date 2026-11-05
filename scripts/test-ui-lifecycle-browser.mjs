@@ -21,6 +21,7 @@ page.on('request', request => { if (request.method() === 'POST' && request.url()
 await page.addInitScript(() => {
   window.__mediaAudit = { audios: [], stoppedTracks: 0, recorderCreations: 0, pendingTimers: [], clearedTimers: [] };
   window.Audio = class extends EventTarget {
+    dataset = {};
     constructor(src) { super(); this.src = src; this.paused = true; window.__mediaAudit.audios.push(this); }
     play() { this.paused = false; this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 80); return Promise.resolve(); }
     pause() { clearTimeout(this.timer); this.paused = true; }
@@ -41,8 +42,8 @@ const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
 const stopped = () => page.evaluate(() => window.__mediaAudit.audios.every(audio => audio.paused));
 const exerciseId = () => page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
 async function openFirst() {
-  await page.goto(`${base}/#learner/home`);
-  await page.locator('.cp-home .cp-package-grid > button').first().click();
+  await page.goto(`${base}/#learner/packages`);
+  await page.locator('.cp-package-grid > button').first().click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
 }
 async function family(name) {
@@ -121,11 +122,11 @@ try {
   await page.locator('.cp-model-content').click();
   assert.equal(await stopped(), false);
   await page.getByRole('button', { name: 'Woorden', exact: true }).first().click();
-  assert(await stopped());
+  await page.waitForFunction(() => window.__mediaAudit.audios.every(audio => audio.paused)); assert(await stopped());
   await page.getByRole('button', { name: 'Luister naar mat', exact: true }).click();
   assert.equal(await stopped(), false);
   await page.getByRole('button', { name: 'Afsluiten', exact: true }).click();
-  assert(await stopped());
+  await page.waitForFunction(() => window.__mediaAudit.audios.every(audio => audio.paused)); assert(await stopped());
   assert.equal(await page.evaluate(() => sessionStorage.getItem('klink.instructies.v1')), null);
   assert.deepEqual(writes, []);
   assert.deepEqual(errors, []);
