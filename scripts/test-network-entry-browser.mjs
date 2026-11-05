@@ -18,7 +18,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       let release;
       const held = new Promise(resolve => { release = resolve; });
       await page.route(/\/route-settings-[^/]+\.js$/, async route => { await held; await route.continue(); });
-      const requested = page.waitForRequest(request => new RegExp(`/${entry === 'teacher' ? 'staff-apps' : 'route-settings'}-[^/]+\\.js$`).test(request.url()), { timeout: 10000 });
+      const requested = page.waitForRequest(request => new RegExp(`/${entry === 'teacher' ? 'staff-apps' : 'learner-app'}-[^/]+\\.js$`).test(request.url()), { timeout: 10000 });
       try {
         await page.goto(base + (entry === 'teacher' ? '/#teacher' : '/'), { waitUntil: 'domcontentloaded' });
         if (entry === 'landing') {

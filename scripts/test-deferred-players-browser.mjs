@@ -76,7 +76,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         page.on('pageerror', error => errors.push(error.message));
         await page.goto(base + '/#teacher/plus', { waitUntil: 'networkidle' });
         await page.locator('.kpd-lesson-choice').first().waitFor();
-        assert(!requests.some(url => /\/(?:learner-app-|learner-rounds-(?!player-))/.test(url)), 'Teacher must not fetch the learner-only round bundle');
+        const unexpected = requests.filter(url => /\/(?:learner-app-|learner-rounds-(?!player[.-]))/.test(new URL(url).pathname));
+        assert.deepEqual(unexpected, [], 'Teacher must not fetch learner-only modules');
         await page.getByRole('button', { name: 'Les openen: mat', exact: true }).click();
         await page.locator('.kpd-big-word').waitFor();
         rows.push({ engine, width, teacherOmitsLearnerModules: true, teacherLessonOpens: true });
