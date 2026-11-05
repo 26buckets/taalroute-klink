@@ -1,0 +1,37 @@
+{
+  "purpose": "Symmetric public document and main-chunk warmup; the measured browser contexts remain fresh. No claim of a cold edge.",
+  "records": [
+    {
+      "variant": "baseline",
+      "path": "/",
+      "status": 200,
+      "decodedBytes": 16838,
+      "encoding": "br",
+      "at": "2026-11-05T00:48:29.482Z"
+    },
+    {
+      "variant": "baseline",
+      "path": "/_next/static/chunks/route-settings-7P6s7xtJ.js",
+      "status": 200,
+      "decodedBytes": 24667096,
+      "encoding": "br",
+      "at": "2026-11-05T00:48:31.496Z"
+    },
+    {
+      "variant": "candidate",
+      "path": "/",
+      "status": 200,
+      "decodedBytes": 16838,
+      "encoding": "br",
+      "at": "2026-11-05T00:48:32.022Z"
+    },
+    {
+      "variant": "candidate",
+      "path": "/_next/static/chunks/route-settings-BySvTECn.js",
+      "status": 200,
+      "decodedBytes": 19006789,
+      "encoding": "br",
+      "at": "2026-11-05T00:48:32.622Z"
+    }
+  ]
+}

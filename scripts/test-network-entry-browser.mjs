@@ -12,6 +12,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     for (const width of [1280, 390]) for (const entry of ['landing', 'teacher']) {
       const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
       const page = await context.newPage();
+      const workspaceRequests = [];
+      page.on('request', request => { if (/\/(?:route-settings|learner-app|staff-apps)-[^/]+\.js$/.test(request.url())) workspaceRequests.push(request.url()); });
       page.on('pageerror', error => errors.push(error.message));
       let release;
       const held = new Promise(resolve => { release = resolve; });
@@ -20,6 +22,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       try {
         await page.goto(base + (entry === 'teacher' ? '/#teacher' : '/'), { waitUntil: 'domcontentloaded' });
         if (entry === 'landing') {
+          await page.getByRole('button', { name: 'Start met oefenen', exact: true }).waitFor();
+          assert.deepEqual(workspaceRequests, [], 'Entry grouping must not eagerly download exercise workspaces');
           await page.getByRole('button', { name: 'Start met oefenen', exact: true }).click();
           await page.getByRole('button', { name: 'Begin', exact: true }).click();
         }
