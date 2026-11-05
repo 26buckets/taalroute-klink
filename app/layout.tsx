@@ -14,6 +14,7 @@ import './teaching.css';
 import './motion.css';
 import '../components/product/word-audio-text.css';
 import { MotionFeedback } from '@/components/product/motion-feedback';
+import { PointerFocus } from '@/components/product/pointer-focus';
 import { ClassroomBoundary } from '@/components/product/classroom-boundary';
 import { WordListening } from '@/components/product/word-listening';
 
@@ -62,6 +63,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased klink-motion`}
       >
         <MotionFeedback />
+        <PointerFocus />
         <WordListening />
         <ClassroomBoundary>{children}</ClassroomBoundary>
       </body>
