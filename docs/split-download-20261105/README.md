@@ -63,3 +63,9 @@ De lokale proeven blijven bewaard als verkenning. De eerste remote meetreeks is 
 De leespublicatie heeft een afzonderlijke vrijgaveassertie die ongewijzigde runtime ten opzichte van oudere main vereist. Die past niet bij de cumulatieve snelheids-PR en is bewust niet versoepeld. Het oorspronkelijke foutlog blijft behouden; het inhoudscontract, de volledige actuele A/B-collectiehashes en de 80 echte browserstromen controleren het behoud binnen deze taak. Zie reconciliation.json en probes voor overige afgewezen voorbereidingsproeven.
 
 Geen claim over fysieke telefoons, menselijke beluistering, MFA-prestaties of blijvend verdwenen netwerkpieken. Meetwinst wordt pas op productie getoetst na een afzonderlijke publicatieopdracht op de dan actuele goedgekeurde basis.
+
+## Geverifieerde herstelback-up
+
+Drive: https://drive.google.com/file/d/1FEl20wW7Sop12cd4Nm-TY6fw0jOSGDi9/view?usp=drivesdk
+
+89.742.908 bytes, 153 payloads; SHA-256 24267f9f91451254199b52a866443ce76b2ad0ac02e8d2f16d92f56731a3412e. Hele upload teruggelezen en alle payloads tegen het manifest gecontroleerd. De volledige binaire patch past op canonieke main fc51e7c5; de Git-bundle met kandidaat en controle is geverifieerd. Het pakket bevat reviewbron 44fff8c1 en alle uitgevoerde bewijsstukken; de daaropvolgende ontvangstregistratie verandert geen runtime. Zie backup.json.
