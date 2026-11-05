@@ -1,0 +1,170 @@
+{
+  "before": {
+    "first": {
+      "n": 8,
+      "readyMedianMs": 1089,
+      "readyMaxMs": 1679,
+      "paintReadyMedianMs": 930.5,
+      "paintReadyMaxMs": 1239,
+      "measurementLagMaxMs": 483.69999998807907,
+      "afterDocumentMedianMs": 1085,
+      "firstByteMedianMs": 4.049999982118607,
+      "over4100Ms": 0
+    },
+    "repeat": {
+      "n": 8,
+      "readyMedianMs": 836.5,
+      "readyMaxMs": 977,
+      "paintReadyMedianMs": 601.25,
+      "paintReadyMaxMs": 749,
+      "measurementLagMaxMs": 405.10000002384186,
+      "afterDocumentMedianMs": 832,
+      "firstByteMedianMs": 3.199999988079071,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 4,
+          "readyMedianMs": 1512.8499999940395,
+          "readyMaxMs": 1679,
+          "paintReadyMedianMs": 1035.5,
+          "paintReadyMaxMs": 1239,
+          "measurementLagMaxMs": 483.69999998807907,
+          "afterDocumentMedianMs": 1507.4000000059605,
+          "firstByteMedianMs": 5.249999970197678,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 4,
+          "readyMedianMs": 712.3499999940395,
+          "readyMaxMs": 822,
+          "paintReadyMedianMs": 640.25,
+          "paintReadyMaxMs": 749,
+          "measurementLagMaxMs": 81.80000001192093,
+          "afterDocumentMedianMs": 708.8499999940395,
+          "firstByteMedianMs": 2.800000011920929,
+          "over4100Ms": 0
+        }
+      },
+      "teacher/plus": {
+        "first": {
+          "n": 4,
+          "readyMedianMs": 930.6999999880791,
+          "readyMaxMs": 1134,
+          "paintReadyMedianMs": 839.4000000059605,
+          "paintReadyMaxMs": 975,
+          "measurementLagMaxMs": 159,
+          "afterDocumentMedianMs": 926.6500000059605,
+          "firstByteMedianMs": 3.75,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 4,
+          "readyMedianMs": 911.4000000059605,
+          "readyMaxMs": 977,
+          "paintReadyMedianMs": 570.9499999880791,
+          "paintReadyMaxMs": 629,
+          "measurementLagMaxMs": 405.10000002384186,
+          "afterDocumentMedianMs": 900.9500000178814,
+          "firstByteMedianMs": 6.399999976158142,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 8,
+      "medianTotalMs": 339,
+      "longestMs": 392
+    },
+    "nextClick": {
+      "n": 4,
+      "medianMs": 34,
+      "maxMs": 54.5
+    }
+  },
+  "after": {
+    "first": {
+      "n": 8,
+      "readyMedianMs": 931,
+      "readyMaxMs": 1528,
+      "paintReadyMedianMs": 900.25,
+      "paintReadyMaxMs": 1072,
+      "measurementLagMaxMs": 456,
+      "afterDocumentMedianMs": 925.0499999821186,
+      "firstByteMedianMs": 4.0999999940395355,
+      "over4100Ms": 0
+    },
+    "repeat": {
+      "n": 8,
+      "readyMedianMs": 820.5,
+      "readyMaxMs": 947.6999999880791,
+      "paintReadyMedianMs": 580.5,
+      "paintReadyMaxMs": 665,
+      "measurementLagMaxMs": 404.0999999642372,
+      "afterDocumentMedianMs": 816.5,
+      "firstByteMedianMs": 3.899999976158142,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 4,
+          "readyMedianMs": 950.5999999940395,
+          "readyMaxMs": 1528,
+          "paintReadyMedianMs": 928.3000000119209,
+          "paintReadyMaxMs": 1072,
+          "measurementLagMaxMs": 456,
+          "afterDocumentMedianMs": 939.0499999821186,
+          "firstByteMedianMs": 4.949999988079071,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 4,
+          "readyMedianMs": 693.1999999880791,
+          "readyMaxMs": 737,
+          "paintReadyMedianMs": 611.6999999880791,
+          "paintReadyMaxMs": 665,
+          "measurementLagMaxMs": 86.39999997615814,
+          "afterDocumentMedianMs": 688.4499999880791,
+          "firstByteMedianMs": 3.899999976158142,
+          "over4100Ms": 0
+        }
+      },
+      "teacher/plus": {
+        "first": {
+          "n": 4,
+          "readyMedianMs": 868.0499999821186,
+          "readyMaxMs": 960,
+          "paintReadyMedianMs": 797.0999999940395,
+          "paintReadyMaxMs": 922,
+          "measurementLagMaxMs": 157,
+          "afterDocumentMedianMs": 862.6999999880791,
+          "firstByteMedianMs": 4.0999999940395355,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 4,
+          "readyMedianMs": 922.1999999880791,
+          "readyMaxMs": 947.6999999880791,
+          "paintReadyMedianMs": 535.6999999880791,
+          "paintReadyMaxMs": 553,
+          "measurementLagMaxMs": 404.0999999642372,
+          "afterDocumentMedianMs": 915.9499999880791,
+          "firstByteMedianMs": 4,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 8,
+      "medianTotalMs": 312.5,
+      "longestMs": 392
+    },
+    "nextClick": {
+      "n": 4,
+      "medianMs": 28.5,
+      "maxMs": 58
+    }
+  }
+}

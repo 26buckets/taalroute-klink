@@ -1,0 +1,201 @@
+{
+  "conditions": "Matched first visit and real reload; fresh contexts, alternating order, reduced motion, no CPU throttling. Chromium network emulation: 3 Mbps download, 1 Mbps upload, 40 ms added latency; not a second physical network. Same selectors as the prior staging trial; in-document paint/long-task timings additionally recorded. Synthetic browser state only.",
+  "results": {
+    "before": {
+      "n": 8,
+      "largestEncodedMedianBytes": 2108830,
+      "allScriptEncodedMedianBytes": 2872988,
+      "allScriptDecodedMedianBytes": 22888457,
+      "paintReadyMedianMs": 9314.90000000596,
+      "paintReadyMaxMs": 9411.100000023842,
+      "samples": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108960,
+          "allScriptEncodedBytes": 2873167,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877667,
+          "paintReadyMs": 9411.100000023842
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2109480,
+          "allScriptEncodedBytes": 2873119,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877619,
+          "paintReadyMs": 9324
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 2,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108020,
+          "allScriptEncodedBytes": 2872176,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2876676,
+          "paintReadyMs": 9348.600000023842
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 3,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2106453,
+          "allScriptEncodedBytes": 2870588,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2875088,
+          "paintReadyMs": 9321.600000023842
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108990,
+          "allScriptEncodedBytes": 2873191,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877691,
+          "paintReadyMs": 9216.800000011921
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2107587,
+          "allScriptEncodedBytes": 2871755,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2876255,
+          "paintReadyMs": 9262.699999988079
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 2,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2109265,
+          "allScriptEncodedBytes": 2873342,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877842,
+          "paintReadyMs": 9308.199999988079
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 3,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108700,
+          "allScriptEncodedBytes": 2872857,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877357,
+          "paintReadyMs": 9213.5
+        }
+      ]
+    },
+    "after": {
+      "n": 8,
+      "largestEncodedMedianBytes": 1202113,
+      "allScriptEncodedMedianBytes": 2887963.5,
+      "allScriptDecodedMedianBytes": 23643867,
+      "paintReadyMedianMs": 9325.549999982119,
+      "paintReadyMaxMs": 9486.699999988079,
+      "samples": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2886485,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2890985,
+          "paintReadyMs": 9282.300000011921
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202127,
+          "allScriptEncodedBytes": 2886743,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2891243,
+          "paintReadyMs": 9362.099999964237
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 2,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2888351,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892851,
+          "paintReadyMs": 9486.699999988079
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 3,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2888262,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892762,
+          "paintReadyMs": 9331.099999964237
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2888319,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892819,
+          "paintReadyMs": 9350
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2887901,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892401,
+          "paintReadyMs": 9261.699999988079
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 2,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2887509,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892009,
+          "paintReadyMs": 9320
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 3,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2888026,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892526,
+          "paintReadyMs": 9270.299999952316
+        }
+      ]
+    }
+  }
+}

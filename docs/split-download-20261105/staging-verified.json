@@ -1,0 +1,367 @@
+[
+  {
+    "name": "klink-pr12-baseline",
+    "release": {
+      "application": "Klink",
+      "builtAt": "2026-11-05T01:21:32.269Z",
+      "sourceCommit": "cbb8d41612c115c50829ff339c5eb1023e8f1865",
+      "branch": "codex/klink-split-download-control-20261105",
+      "sourceClean": true,
+      "curriculumEdition": "klink-leerlijn-20261016-v1",
+      "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+      "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+      "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+      "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+    },
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "KLINK_STAGING_ROUND",
+        "type": "plain_text"
+      }
+    ],
+    "deployments": {
+      "deployments": [
+        {
+          "id": "3ac950cc-b6b4-4ca5-a954-c87042decccb",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "e56bea88-3d03-484d-81ff-0f758db46470",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T01:24:20.073558Z"
+        },
+        {
+          "id": "8ef99517-96be-409a-9412-d0283cd61f2d",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "2fc7c1ef-c04d-41eb-a090-b8e3862d12e1",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T00:44:57.61299Z"
+        },
+        {
+          "id": "d0ff1361-18ec-461e-aace-92dd7d896605",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "06200a8d-3776-4578-acfe-761092c7ad14",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T00:17:26.362339Z"
+        },
+        {
+          "id": "fbac1d3a-e926-4887-9cde-6ae0f25a8b00",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c7553eb1-2860-452f-b07e-7704260d86d5",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:42:41.376426Z"
+        },
+        {
+          "id": "5ad9907a-1b29-44d5-8d8a-6b9098556893",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "842a291f-fbca-4a0a-af39-eb8befd87a93",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:31:22.519302Z"
+        },
+        {
+          "id": "8befe8c4-1c15-47df-9f01-fce3e44f18c1",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "395d581b-4112-4757-9c0a-606b5f7c78ac",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:02:21.70032Z"
+        },
+        {
+          "id": "322eb908-552d-4198-98eb-d4e299a1c0ec",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "fda4dd8a-cb32-4dd8-8d28-099859219d3a",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:01:08.646579Z"
+        },
+        {
+          "id": "7f37e1a5-1f3d-442d-9a20-75195e6e0986",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "daa10fc1-20b0-46e6-9991-96980cb03c87",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T22:59:57.13226Z"
+        },
+        {
+          "id": "5e93c6a6-510c-42cf-baf6-b7fd8eaf24e1",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/message": "Authorized isolated PR12 page latency trial; no...",
+            "workers/triggered_by": "upload"
+          },
+          "versions": [
+            {
+              "version_id": "4af8a7e3-720b-4c83-887a-e4948801a949",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T22:37:29.513227Z"
+        }
+      ]
+    }
+  },
+  {
+    "name": "klink-pr12-candidate",
+    "release": {
+      "application": "Klink",
+      "builtAt": "2026-11-05T01:21:32.179Z",
+      "sourceCommit": "1e1d919c08c2a61f0b17f7601f510c227b44035f",
+      "branch": "codex/klink-network-peaks-20261104",
+      "sourceClean": true,
+      "curriculumEdition": "klink-leerlijn-20261016-v1",
+      "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+      "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+      "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+      "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+    },
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "KLINK_STAGING_ROUND",
+        "type": "plain_text"
+      }
+    ],
+    "deployments": {
+      "deployments": [
+        {
+          "id": "9b1ede1a-e4b9-4058-a27a-35c702510277",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "04cc8d5e-1f43-4c17-8443-ef1d3f909a57",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T01:24:49.81747Z"
+        },
+        {
+          "id": "f999fd58-0e01-4237-b6c0-5c39592a9ee9",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "3975b433-b56e-4102-9771-0093e0e27222",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T00:45:32.418871Z"
+        },
+        {
+          "id": "5a2960d5-014c-4773-a3da-c16e63da08d2",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "63327c2f-43ac-4ba5-9dcc-284b62f1b1f5",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T00:18:00.749016Z"
+        },
+        {
+          "id": "7b41c284-ab84-445d-a891-6fd989f6f703",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "1b11dfe3-da07-4253-968d-fb98bb45fc04",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:43:15.452454Z"
+        },
+        {
+          "id": "44fe0a59-dfa5-4080-93bb-01f1e27e7aec",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "9824c6d0-fb91-4351-aa58-acd0602fa293",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:31:55.219674Z"
+        },
+        {
+          "id": "701a7dce-6672-4f20-817b-188ab1b000d0",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "313caddf-1a7b-4aff-81e2-4ecc14e601ce",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:01:54.663459Z"
+        },
+        {
+          "id": "c16d291f-ba5f-4a03-b0e4-2e1238fe2de8",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "f2a97ebd-bf9f-4373-8c1e-32be44ff7161",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T23:00:42.325005Z"
+        },
+        {
+          "id": "1e75719a-4b90-44d7-b311-3b1b3f3c1b43",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "8551de7d-409a-4273-922b-5855be7d0778",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T22:59:31.97402Z"
+        },
+        {
+          "id": "1466bae6-fcba-412a-a8be-c2f8ba6c64a8",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "219d8cc6-78ae-4622-a06b-8d0321ac4d89",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T22:52:14.72594Z"
+        },
+        {
+          "id": "b2c7ebb2-817b-4146-9249-b28836762eba",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nico@knoestertrainingen.nl",
+          "annotations": {
+            "workers/message": "Temporary staging-only constant response diagnostic; no production or databases",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "becdb5c2-0950-407f-8c45-36c54d8cff20",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T22:50:40.817051Z"
+        }
+      ]
+    }
+  }
+]

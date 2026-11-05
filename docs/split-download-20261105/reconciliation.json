@@ -1,0 +1,31 @@
+{
+  "previousMain": "ebe45d6f5be44fa0cb49cc5ff1b15a9512420632",
+  "currentContentMain": "93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402",
+  "candidateRuntime": "1e1d919c08c2a61f0b17f7601f510c227b44035f",
+  "controlRuntime": "cbb8d41612c115c50829ff339c5eb1023e8f1865",
+  "treeDifference": [
+    "vite.config.ts"
+  ],
+  "separateAuthorizedProductionRelease": {
+    "source": "93d69b044b5e3a5bf177c88cb0cfd2fe0bb03402",
+    "worker": "450d9ea0-946b-41ea-97b7-3828329079df",
+    "owner": "Zet Klink-chats online",
+    "scope": "20 A1/A2 reading questions; PR12 excluded"
+  },
+  "probes": [
+    "An initial grouping exceeded the existing asset ceiling by one; not deployed. Previously co-loaded audio helpers were grouped with shared UI.",
+    "Independent bank import exposed a circular dependency; word media metadata moved into the same word bank, then 12 full source hashes passed in both engines.",
+    "Release-only reading preservation assertion compares an older main runtime and intentionally rejects cumulative PR12. It was not relaxed. 45 current practice/unit tests and the source-bound reading contract pass; 203 complete collection hashes compare the actual current A/B basis.",
+    "One loader invocation used its default obsolete local port; rerun on explicit 19120 passed."
+  ],
+  "finalMeasurement": {
+    "normalVisits": 64,
+    "throttledVisits": 32,
+    "abortedPreliminaryVisits": 43,
+    "abortedReason": "Warmup selector matched 58 teacher buttons; corrected to first(). Deliberate interruption generated closed-browser entry.",
+    "normalConditions": "Symmetric warmup with four new contexts, then fresh contexts/real reloads; no network/CPU throttling",
+    "limitedNetwork": "Chromium3Mbps down/1Mbps up/40ms added latency; no physical-device claim"
+  },
+  "finalCanonicalMain": "fc51e7c5501f5bf410ee96e569e3676b51d65568",
+  "lastMainChange": "PUBLICATIE-ACTUEEL and postflight evidence only; no runtime rebuild or redeploy"
+}

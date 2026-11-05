@@ -1,0 +1,34 @@
+{
+  "base": "http://127.0.0.1:19120",
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "legacyRedirect": true,
+      "nextAndBack": true,
+      "noOverflow": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "legacyRedirect": true,
+      "nextAndBack": true,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "legacyRedirect": true,
+      "nextAndBack": true,
+      "noOverflow": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "legacyRedirect": true,
+      "nextAndBack": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": []
+}

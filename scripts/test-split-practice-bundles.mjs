@@ -39,9 +39,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     assert(!requests.some(path => /(?:practice-source-bank|practice-word-bank|klink-word-library-index)-/.test(path)), 'Landing must not download exercise banks or the word library');
     for (const bank of banks) {
       const exported = await page.evaluate(async url => {
-        const module = await import(url);
+        const loaded = await import(url);
         const hashes = [];
-        for (const value of Object.values(module)) {
+        for (const value of Object.values(loaded)) {
           const json = JSON.stringify(value);
           if (json === undefined) continue;
           const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(json));

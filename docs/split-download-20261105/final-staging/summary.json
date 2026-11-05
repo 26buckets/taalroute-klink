@@ -1,0 +1,170 @@
+{
+  "before": {
+    "first": {
+      "n": 16,
+      "readyMedianMs": 1553.699999988079,
+      "readyMaxMs": 2042,
+      "paintReadyMedianMs": 1255.75,
+      "paintReadyMaxMs": 1583,
+      "measurementLagMaxMs": 488.89999997615814,
+      "afterDocumentMedianMs": 1438.5,
+      "firstByteMedianMs": 105,
+      "over4100Ms": 0
+    },
+    "repeat": {
+      "n": 16,
+      "readyMedianMs": 900.5,
+      "readyMaxMs": 1342.1000000238419,
+      "paintReadyMedianMs": 706.7499999701977,
+      "paintReadyMaxMs": 947.1000000238419,
+      "measurementLagMaxMs": 404.5,
+      "afterDocumentMedianMs": 864.5,
+      "firstByteMedianMs": 37.54999998211861,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1733.6500000059605,
+          "readyMaxMs": 2042,
+          "paintReadyMedianMs": 1384.2999999821186,
+          "paintReadyMaxMs": 1583,
+          "measurementLagMaxMs": 488.89999997615814,
+          "afterDocumentMedianMs": 1544.0499999821186,
+          "firstByteMedianMs": 105.5,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 797.6999999880791,
+          "readyMaxMs": 879,
+          "paintReadyMedianMs": 728.6999999880791,
+          "paintReadyMaxMs": 892,
+          "measurementLagMaxMs": 77.20000004768372,
+          "afterDocumentMedianMs": 762.75,
+          "firstByteMedianMs": 36,
+          "over4100Ms": 0
+        }
+      },
+      "teacher/plus": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1494.4000000059605,
+          "readyMaxMs": 1561.3999999761581,
+          "paintReadyMedianMs": 1107.2999999821186,
+          "paintReadyMaxMs": 1286,
+          "measurementLagMaxMs": 471.19999998807907,
+          "afterDocumentMedianMs": 1388.199999988079,
+          "firstByteMedianMs": 97,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 1001.8499999940395,
+          "readyMaxMs": 1342.1000000238419,
+          "paintReadyMedianMs": 666,
+          "paintReadyMaxMs": 947.1000000238419,
+          "measurementLagMaxMs": 404.5,
+          "afterDocumentMedianMs": 962.5,
+          "firstByteMedianMs": 43.14999997615814,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 16,
+      "medianTotalMs": 359,
+      "longestMs": 399
+    },
+    "nextClick": {
+      "n": 8,
+      "medianMs": 32,
+      "maxMs": 62.30000001192093
+    }
+  },
+  "after": {
+    "first": {
+      "n": 16,
+      "readyMedianMs": 1211,
+      "readyMaxMs": 1765,
+      "paintReadyMedianMs": 1057.050000011921,
+      "paintReadyMaxMs": 1311,
+      "measurementLagMaxMs": 480.10000002384186,
+      "afterDocumentMedianMs": 1026.050000011921,
+      "firstByteMedianMs": 97.00000002980232,
+      "over4100Ms": 0
+    },
+    "repeat": {
+      "n": 16,
+      "readyMedianMs": 922.5,
+      "readyMaxMs": 1073.0999999642372,
+      "paintReadyMedianMs": 662.4499999880791,
+      "paintReadyMaxMs": 854,
+      "measurementLagMaxMs": 404.5,
+      "afterDocumentMedianMs": 897,
+      "firstByteMedianMs": 31.19999998807907,
+      "over4100Ms": 0
+    },
+    "byPortal": {
+      "learner": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1514.6499999761581,
+          "readyMaxMs": 1765,
+          "paintReadyMedianMs": 1134.25,
+          "paintReadyMaxMs": 1311,
+          "measurementLagMaxMs": 480.10000002384186,
+          "afterDocumentMedianMs": 1379.8499999940395,
+          "firstByteMedianMs": 80.30000001192093,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 780.4500000178814,
+          "readyMaxMs": 907,
+          "paintReadyMedianMs": 711.7000000178814,
+          "paintReadyMaxMs": 854,
+          "measurementLagMaxMs": 80.19999998807907,
+          "afterDocumentMedianMs": 747.4500000178814,
+          "firstByteMedianMs": 31.5,
+          "over4100Ms": 0
+        }
+      },
+      "teacher/plus": {
+        "first": {
+          "n": 8,
+          "readyMedianMs": 1136.2999999821186,
+          "readyMaxMs": 1451.7000000476837,
+          "paintReadyMedianMs": 949,
+          "paintReadyMaxMs": 1157.6000000238419,
+          "measurementLagMaxMs": 294.10000002384186,
+          "afterDocumentMedianMs": 1010.5,
+          "firstByteMedianMs": 113.19999998807907,
+          "over4100Ms": 0
+        },
+        "repeat": {
+          "n": 8,
+          "readyMedianMs": 972.5499999821186,
+          "readyMaxMs": 1073.0999999642372,
+          "paintReadyMedianMs": 576.0999999940395,
+          "paintReadyMaxMs": 673.2999999523163,
+          "measurementLagMaxMs": 404.5,
+          "afterDocumentMedianMs": 934.0999999940395,
+          "firstByteMedianMs": 31.19999998807907,
+          "over4100Ms": 0
+        }
+      }
+    },
+    "chromiumLongTasks": {
+      "n": 16,
+      "medianTotalMs": 380,
+      "longestMs": 419
+    },
+    "nextClick": {
+      "n": 8,
+      "medianMs": 34.5,
+      "maxMs": 47
+    }
+  }
+}

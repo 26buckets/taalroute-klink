@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:19140/
+Call log:
+[2m  - navigating to "http://127.0.0.1:19140/", waiting until "domcontentloaded"[22m
+
+    at /Users/nicoknoester/.cache/klink-network-peaks-20261104/scripts/test-opening-loader-once-navigation-20261103.mjs:16:18 {
+  log: [
+    '  - navigating to "http://127.0.0.1:19140/", waiting until "domcontentloaded"'
+  ],
+  name: 'Error'
+}
+
+Node.js v26.4.0

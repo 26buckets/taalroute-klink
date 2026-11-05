@@ -1,0 +1,201 @@
+{
+  "conditions": "Matched first visit and real reload; fresh contexts, alternating order, reduced motion, no CPU throttling. No network throttling. Same selectors as the prior staging trial; in-document paint/long-task timings additionally recorded. Synthetic browser state only.",
+  "results": {
+    "before": {
+      "n": 8,
+      "largestEncodedMedianBytes": 2108864,
+      "allScriptEncodedMedianBytes": 2873535,
+      "allScriptDecodedMedianBytes": 22888457,
+      "paintReadyMedianMs": 1384.2999999821186,
+      "paintReadyMaxMs": 1583,
+      "samples": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2107721,
+          "allScriptEncodedBytes": 2871669,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2876169,
+          "paintReadyMs": 1284.5999999642372
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2110073,
+          "allScriptEncodedBytes": 2874602,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2879102,
+          "paintReadyMs": 1252.5
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2107537,
+          "allScriptEncodedBytes": 2871647,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2876147,
+          "paintReadyMs": 1117.8999999761581
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108771,
+          "allScriptEncodedBytes": 2872835,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877335,
+          "paintReadyMs": 1246.300000011921
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108599,
+          "allScriptEncodedBytes": 2873352,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2877852,
+          "paintReadyMs": 1581
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2109425,
+          "allScriptEncodedBytes": 2874220,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2878720,
+          "paintReadyMs": 1583
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2109434,
+          "allScriptEncodedBytes": 2874198,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2878698,
+          "paintReadyMs": 1539
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-BwUPfgsq.js",
+          "largestEncodedBytes": 2108957,
+          "allScriptEncodedBytes": 2873718,
+          "allScriptDecodedBytes": 22888457,
+          "allScriptTransferBytes": 2878218,
+          "paintReadyMs": 1484
+        }
+      ]
+    },
+    "after": {
+      "n": 8,
+      "largestEncodedMedianBytes": 1202711.5,
+      "allScriptEncodedMedianBytes": 2889181,
+      "allScriptDecodedMedianBytes": 23643867,
+      "paintReadyMedianMs": 1134.25,
+      "paintReadyMaxMs": 1311,
+      "samples": [
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2887698,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892198,
+          "paintReadyMs": 994.0999999642372
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202449,
+          "allScriptEncodedBytes": 2888634,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2893134,
+          "paintReadyMs": 1279.2000000476837
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2888185,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2892685,
+          "paintReadyMs": 1128.5
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202113,
+          "allScriptEncodedBytes": 2885879,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2890379,
+          "paintReadyMs": 1039.1000000238419
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202974,
+          "allScriptEncodedBytes": 2890044,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2894544,
+          "paintReadyMs": 1166
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1202997,
+          "allScriptEncodedBytes": 2890184,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2894684,
+          "paintReadyMs": 1110
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 0,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1203014,
+          "allScriptEncodedBytes": 2889728,
+          "allScriptDecodedBytes": 23643867,
+          "allScriptTransferBytes": 2894228,
+          "paintReadyMs": 1140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "repeat": 1,
+          "largestScript": "/_next/static/chunks/route-settings-XRQdYKQR.js",
+          "largestEncodedBytes": 1203016,
+          "allScriptEncodedBytes": 2890118,
+          "allScriptDecodedBytes": 28886747,
+          "allScriptTransferBytes": 2894618,
+          "paintReadyMs": 1311
+        }
+      ]
+    }
+  }
+}
