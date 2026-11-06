@@ -1,0 +1,56 @@
+{
+  "conditions": "Fresh Chromium contexts, 3 Mbps down / 1 Mbps up, 40 ms added latency, no CPU throttling; alternating versions. Immediate chapter, activity and first exercise clicks, without invented thinking time. Not a physical phone or mobile network.",
+  "productionCommit": "7e87eca15c1e5d63fe2b68d6623d9cce0334bce2",
+  "stagingCommit": "59976d9e6c8f3a163af43794a7e0ee2a978dd7cc",
+  "scope": "Entire existing PR12 speed proposal reconciled with latest live source; not a claim of additional new savings from speculative preload, which was removed.",
+  "rows": [
+    {
+      "portal": "learner",
+      "version": "before",
+      "n": 4,
+      "readyMedianMs": 14005.650000000373,
+      "readyMinMs": 11430.400000000373,
+      "readyMaxMs": 15562.699999999255,
+      "homeMedianMs": 13205.25,
+      "lastClickWithMediaMs": 572.9999999990687,
+      "completedTransferBytesAtReady": 3560651.5,
+      "nativeAudioCompleted": true
+    },
+    {
+      "portal": "learner",
+      "version": "after",
+      "n": 4,
+      "readyMedianMs": 8075.4000000003725,
+      "readyMinMs": 7282.799999998882,
+      "readyMaxMs": 8747.599999999627,
+      "homeMedianMs": 6827.500000000931,
+      "lastClickWithMediaMs": 1064.3499999996275,
+      "completedTransferBytesAtReady": 2541483.5,
+      "nativeAudioCompleted": true
+    },
+    {
+      "portal": "teacher/plus",
+      "version": "before",
+      "n": 4,
+      "readyMedianMs": 15401.900000000373,
+      "readyMinMs": 14826.900000000373,
+      "readyMaxMs": 17471.200000001118,
+      "homeMedianMs": 12078.700000000186,
+      "lastClickWithMediaMs": 3337.9500000001863,
+      "completedTransferBytesAtReady": 3991970.5,
+      "nativeAudioCompleted": null
+    },
+    {
+      "portal": "teacher/plus",
+      "version": "after",
+      "n": 4,
+      "readyMedianMs": 11034.150000000373,
+      "readyMinMs": 10966.099999999627,
+      "readyMaxMs": 11204.900000000373,
+      "homeMedianMs": 7621.350000000559,
+      "lastClickWithMediaMs": 3344.5499999998137,
+      "completedTransferBytesAtReady": 2978515.0,
+      "nativeAudioCompleted": null
+    }
+  ]
+}
