@@ -1,0 +1,4943 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-11-06T12:42:36.045Z",
+    "sourceCommit": "7e87eca15c1e5d63fe2b68d6623d9cce0334bce2",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "concurrency": 6,
+  "expected": 984,
+  "completed": 984,
+  "errors": [],
+  "p95ms": 1055.237,
+  "maxMs": 3288.159625000001,
+  "checks": [
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "HEAD",
+      "ms": 66.61004200000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "cached",
+      "ms": 74.06495799999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "HEAD",
+      "ms": 74.30516600000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "GET",
+      "ms": 90.57941599999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "range",
+      "ms": 113.14333299999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "cached",
+      "ms": 52.39837499999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "HEAD",
+      "ms": 52.16845799999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "range",
+      "ms": 38.839291
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "GET",
+      "ms": 82.44600000000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "HEAD",
+      "ms": 32.25737499999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "cached",
+      "ms": 66.27508399999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "cached",
+      "ms": 41.475458
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "range",
+      "ms": 68.94129199999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "GET",
+      "ms": 41.95675
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "HEAD",
+      "ms": 48.23204199999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "range",
+      "ms": 48.18816700000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "cached",
+      "ms": 51.21433300000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "GET",
+      "ms": 65.00724999999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "HEAD",
+      "ms": 64.96345800000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "range",
+      "ms": 58.86266699999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "cached",
+      "ms": 44.357708
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "HEAD",
+      "ms": 43.577125000000024
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "GET",
+      "ms": 72.34804099999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "cached",
+      "ms": 38.98116600000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "GET",
+      "ms": 37.08691699999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "HEAD",
+      "ms": 39.38970900000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "range",
+      "ms": 51.325166999999965
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "cached",
+      "ms": 33.53695800000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "HEAD",
+      "ms": 35.817916999999966
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "GET",
+      "ms": 38.306041999999934
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "cached",
+      "ms": 60.79829100000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "range",
+      "ms": 82.82858400000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "GET",
+      "ms": 41.585916
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "HEAD",
+      "ms": 50.866750000000025
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "cached",
+      "ms": 39.23366599999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "range",
+      "ms": 76.941958
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "GET",
+      "ms": 45.10458300000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "HEAD",
+      "ms": 38.58379100000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "cached",
+      "ms": 32.06229200000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "range",
+      "ms": 36.76249999999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "GET",
+      "ms": 37.919667000000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "HEAD",
+      "ms": 36.90829099999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "range",
+      "ms": 38.30441700000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "cached",
+      "ms": 43.15658300000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "GET",
+      "ms": 54.71970800000008
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "range",
+      "ms": 28.88608299999987
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "cached",
+      "ms": 33.08574999999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "GET",
+      "ms": 39.74095800000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "HEAD",
+      "ms": 40.311750000000075
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "HEAD",
+      "ms": 1055.237
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "range",
+      "ms": 1864.8036250000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "GET",
+      "ms": 1791.2356249999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "range",
+      "ms": 872.8580419999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "GET",
+      "ms": 1934.0556250000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "range",
+      "ms": 1554.023458
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "cached",
+      "ms": 34.53404099999989
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "cached",
+      "ms": 30.407208999999966
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "HEAD",
+      "ms": 32.04045900000028
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "range",
+      "ms": 31.195290999999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "GET",
+      "ms": 37.66825000000017
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "GET",
+      "ms": 37.819916999999805
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "HEAD",
+      "ms": 34.47250000000031
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "GET",
+      "ms": 38.4948330000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "cached",
+      "ms": 39.07908299999963
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "HEAD",
+      "ms": 35.66004100000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "range",
+      "ms": 32.801458999999795
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "cached",
+      "ms": 30.026209000000108
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "GET",
+      "ms": 31.53862500000014
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "cached",
+      "ms": 30.611959000000297
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "range",
+      "ms": 36.67308300000013
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "HEAD",
+      "ms": 40.92804100000012
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "GET",
+      "ms": 42.506832999999915
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "HEAD",
+      "ms": 41.130583000000115
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "cached",
+      "ms": 35.93370899999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "range",
+      "ms": 42.31970799999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "GET",
+      "ms": 39.8949590000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "HEAD",
+      "ms": 33.19399999999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "GET",
+      "ms": 33.87870900000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "range",
+      "ms": 39.15845800000034
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "HEAD",
+      "ms": 33.81520899999987
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "cached",
+      "ms": 42.317375000000084
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "range",
+      "ms": 40.91983399999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "GET",
+      "ms": 37.65975000000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "cached",
+      "ms": 39.760833999999704
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "range",
+      "ms": 38.2677920000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "cached",
+      "ms": 35.93166599999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "GET",
+      "ms": 39.93100000000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "range",
+      "ms": 37.725832999999966
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "cached",
+      "ms": 36.699208
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "HEAD",
+      "ms": 37.89537500000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "range",
+      "ms": 47.99541700000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "cached",
+      "ms": 31.730583999999908
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "HEAD",
+      "ms": 36.79170899999963
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "range",
+      "ms": 33.88008300000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "cached",
+      "ms": 38.4033330000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "GET",
+      "ms": 42.06916700000011
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "HEAD",
+      "ms": 49.53520900000012
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "range",
+      "ms": 2047.6483339999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "GET",
+      "ms": 1821.6911249999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "range",
+      "ms": 1549.7542919999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "cached",
+      "ms": 33.47412500000064
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "GET",
+      "ms": 34.54558300000008
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "HEAD",
+      "ms": 34.37720799999988
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "range",
+      "ms": 31.507125000000087
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "cached",
+      "ms": 31.818499999999403
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "GET",
+      "ms": 39.73133299999972
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "HEAD",
+      "ms": 37.422209000000294
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "range",
+      "ms": 39.1084579999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "GET",
+      "ms": 42.37154199999986
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "HEAD",
+      "ms": 37.603250000000116
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "cached",
+      "ms": 37.68583300000046
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "range",
+      "ms": 39.31970900000033
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "GET",
+      "ms": 38.02637500000037
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "HEAD",
+      "ms": 47.08570799999961
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "cached",
+      "ms": 32.42545799999971
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "cached",
+      "ms": 187.11845900000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "HEAD",
+      "ms": 2142.8257909999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "HEAD",
+      "ms": 2180.569375
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "GET",
+      "ms": 2039.2079590000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "GET",
+      "ms": 39.35854199999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "HEAD",
+      "ms": 41.84362499999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "range",
+      "ms": 39.06737500000054
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "cached",
+      "ms": 37.66387500000019
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "GET",
+      "ms": 52.06274999999914
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "HEAD",
+      "ms": 39.68770900000072
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "GET",
+      "ms": 37.43058299999939
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "range",
+      "ms": 34.46929199999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "cached",
+      "ms": 25.056666000000405
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "HEAD",
+      "ms": 35.36924999999974
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "range",
+      "ms": 34.07445800000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "cached",
+      "ms": 44.58245800000077
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "GET",
+      "ms": 44.27008299999943
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "range",
+      "ms": 1913.5061669999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "cached",
+      "ms": 1895.9450420000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "range",
+      "ms": 23.5811249999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "cached",
+      "ms": 36.12037499999951
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "GET",
+      "ms": 27.96862499999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "GET",
+      "ms": 1898.7578750000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "range",
+      "ms": 2054.8195830000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "HEAD",
+      "ms": 1934.8577500000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "HEAD",
+      "ms": 1732.40125
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "HEAD",
+      "ms": 32.105625000000146
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "range",
+      "ms": 28.583583000000544
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "HEAD",
+      "ms": 28.720624999999927
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "GET",
+      "ms": 35.175749999999425
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "range",
+      "ms": 34.3842080000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "cached",
+      "ms": 28.901749999999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "GET",
+      "ms": 35.5811249999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "HEAD",
+      "ms": 30.50079100000039
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "range",
+      "ms": 29.002040999999736
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "cached",
+      "ms": 31.942000000000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "GET",
+      "ms": 32.00962499999969
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "range",
+      "ms": 33.82166700000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "HEAD",
+      "ms": 34.344874999999774
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "cached",
+      "ms": 33.48991600000045
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "GET",
+      "ms": 36.05933399999958
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "HEAD",
+      "ms": 35.47508299999936
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "range",
+      "ms": 32.88508299999921
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "cached",
+      "ms": 34.57850000000053
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "GET",
+      "ms": 37.44158299999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "range",
+      "ms": 27.084125000000313
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "HEAD",
+      "ms": 35.4912089999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "cached",
+      "ms": 42.52149999999983
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "HEAD",
+      "ms": 37.78925000000072
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "cached",
+      "ms": 38.05158399999982
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "range",
+      "ms": 50.85483299999942
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "GET",
+      "ms": 50.83454200000051
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "HEAD",
+      "ms": 46.773582999999235
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "range",
+      "ms": 42.304582999999184
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "cached",
+      "ms": 38.32037500000024
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "GET",
+      "ms": 40.06741599999987
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "cached",
+      "ms": 35.13308400000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "HEAD",
+      "ms": 40.16058299999986
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "range",
+      "ms": 50.28650000000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "GET",
+      "ms": 35.457374999999956
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "HEAD",
+      "ms": 35.41133300000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "cached",
+      "ms": 46.96104199999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "GET",
+      "ms": 32.31825000000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "HEAD",
+      "ms": 37.152124999999614
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "range",
+      "ms": 39.58458400000018
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "cached",
+      "ms": 29.641125000000102
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "GET",
+      "ms": 42.02949999999964
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "HEAD",
+      "ms": 32.703833000000486
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "range",
+      "ms": 39.425624999999854
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "cached",
+      "ms": 34.33604199999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "GET",
+      "ms": 35.46349999999984
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "HEAD",
+      "ms": 30.26745899999969
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "range",
+      "ms": 44.326750000000175
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "GET",
+      "ms": 29.266749999999774
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "cached",
+      "ms": 35.32945899999959
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "HEAD",
+      "ms": 37.049167000000125
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "range",
+      "ms": 40.65704100000039
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "cached",
+      "ms": 47.00025000000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "GET",
+      "ms": 35.328457999999955
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "HEAD",
+      "ms": 29.402917000000343
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "range",
+      "ms": 41.57770900000014
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "GET",
+      "ms": 38.06279199999972
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "HEAD",
+      "ms": 36.534583999999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "range",
+      "ms": 37.52791700000034
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "cached",
+      "ms": 32.10304199999973
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "GET",
+      "ms": 34.42858299999989
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "HEAD",
+      "ms": 37.89375000000018
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "range",
+      "ms": 41.16191699999945
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "cached",
+      "ms": 29.356415999999626
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "GET",
+      "ms": 41.741917000000285
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "range",
+      "ms": 41.76612499999919
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "cached",
+      "ms": 38.39829099999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "GET",
+      "ms": 40.932833999999275
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "cached",
+      "ms": 1841.3245829999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "range",
+      "ms": 1581.6504589999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "HEAD",
+      "ms": 1001.7165410000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "range",
+      "ms": 40.126916000001074
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "GET",
+      "ms": 47.15587500000038
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "HEAD",
+      "ms": 28.891874999999345
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "range",
+      "ms": 40.86695800000052
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "GET",
+      "ms": 40.955167000000074
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "HEAD",
+      "ms": 31.27545900000041
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "range",
+      "ms": 39.04479100000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "cached",
+      "ms": 31.66029200000048
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "GET",
+      "ms": 38.06687500000044
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "HEAD",
+      "ms": 31.345541999999114
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "range",
+      "ms": 37.753499999998894
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "cached",
+      "ms": 2886.792124999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "cached",
+      "ms": 1235.433083
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "cached",
+      "ms": 1505.530999999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "HEAD",
+      "ms": 2731.3250000000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "GET",
+      "ms": 3288.159625000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "GET",
+      "ms": 34.68858399999954
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "range",
+      "ms": 35.98962500000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "cached",
+      "ms": 35.96608399999968
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "HEAD",
+      "ms": 39.4549590000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "GET",
+      "ms": 45.356917000000976
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "HEAD",
+      "ms": 29.41754200000105
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "cached",
+      "ms": 33.44841599999927
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "GET",
+      "ms": 41.31829199999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "HEAD",
+      "ms": 41.99412499999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "range",
+      "ms": 50.81174999999894
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "range",
+      "ms": 28.43787499999962
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "cached",
+      "ms": 39.54333299999962
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "HEAD",
+      "ms": 30.778416999999536
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "GET",
+      "ms": 40.23962500000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "range",
+      "ms": 39.00704200000109
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "cached",
+      "ms": 39.70341700000063
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "GET",
+      "ms": 31.822416999999405
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "range",
+      "ms": 31.648707999998805
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "HEAD",
+      "ms": 41.93774999999914
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "cached",
+      "ms": 34.480625000000146
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "HEAD",
+      "ms": 29.921582999999373
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "cached",
+      "ms": 29.9965830000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "GET",
+      "ms": 38.08454199999869
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "HEAD",
+      "ms": 36.87554199999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "range",
+      "ms": 58.807958999999755
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "range",
+      "ms": 42.512416999999914
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "cached",
+      "ms": 39.28891599999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "GET",
+      "ms": 37.83391699999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "HEAD",
+      "ms": 38.32983400000012
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "range",
+      "ms": 41.08758299999863
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "cached",
+      "ms": 32.75575000000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "GET",
+      "ms": 36.42937499999971
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "HEAD",
+      "ms": 43.666041000000405
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "GET",
+      "ms": 29.669708000001265
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "cached",
+      "ms": 48.11637499999961
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "HEAD",
+      "ms": 32.33612499999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "range",
+      "ms": 35.14758399999846
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "GET",
+      "ms": 31.996666999999434
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "cached",
+      "ms": 47.89470799999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "HEAD",
+      "ms": 38.43233400000099
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "range",
+      "ms": 34.85029200000099
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "HEAD",
+      "ms": 34.32179200000064
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "GET",
+      "ms": 48.64204199999949
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "range",
+      "ms": 34.908958999998504
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "cached",
+      "ms": 72.51445899999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "GET",
+      "ms": 45.43449999999939
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "HEAD",
+      "ms": 95.73899999999958
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "range",
+      "ms": 96.10116600000038
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "cached",
+      "ms": 64.5724169999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "GET",
+      "ms": 66.0096250000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "range",
+      "ms": 44.71308400000089
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "HEAD",
+      "ms": 47.2650420000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "cached",
+      "ms": 39.73383300000023
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "GET",
+      "ms": 46.680458000000726
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "HEAD",
+      "ms": 60.850625000000946
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "range",
+      "ms": 53.842624999999316
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "cached",
+      "ms": 38.44995799999924
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "GET",
+      "ms": 47.50641600000017
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "HEAD",
+      "ms": 54.279624999999214
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "range",
+      "ms": 45.16962499999863
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "GET",
+      "ms": 37.319916000000376
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "cached",
+      "ms": 44.666040999998586
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "cached",
+      "ms": 2530.3115830000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "range",
+      "ms": 691.336041999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "cached",
+      "ms": 595.3561250000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "GET",
+      "ms": 830.7425000000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "HEAD",
+      "ms": 30.340415999999095
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "range",
+      "ms": 37.87208400000054
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "GET",
+      "ms": 38.18870799999968
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "cached",
+      "ms": 43.76416699999936
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "range",
+      "ms": 38.31908400000066
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "HEAD",
+      "ms": 40.37962499999958
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "cached",
+      "ms": 35.49212499999885
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "GET",
+      "ms": 40.12645800000064
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "HEAD",
+      "ms": 31.07562499999949
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "range",
+      "ms": 31.13066699999945
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "GET",
+      "ms": 32.112999999999374
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "cached",
+      "ms": 35.69208299999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "HEAD",
+      "ms": 42.54741699999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "HEAD",
+      "ms": 30.735249999999724
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "range",
+      "ms": 35.55020799999875
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "GET",
+      "ms": 38.78725000000122
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "range",
+      "ms": 32.492207999999664
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "cached",
+      "ms": 45.3739170000008
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "cached",
+      "ms": 38.30362499999865
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "GET",
+      "ms": 34.804707999999664
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "range",
+      "ms": 32.792083000000275
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "HEAD",
+      "ms": 37.65466600000036
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "cached",
+      "ms": 38.872041000000536
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "GET",
+      "ms": 35.422874999998385
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "HEAD",
+      "ms": 58.198457999998936
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "cached",
+      "ms": 47.19904200000019
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "HEAD",
+      "ms": 42.907375000000684
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "range",
+      "ms": 46.613624999999956
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "HEAD",
+      "ms": 31.48554200000035
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "GET",
+      "ms": 49.68195899999955
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "cached",
+      "ms": 28.494249999999738
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "GET",
+      "ms": 2066.3758749999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "cached",
+      "ms": 2020.4252500000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "HEAD",
+      "ms": 1960.0287090000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "range",
+      "ms": 2014.1502089999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "range",
+      "ms": 49.817291999999725
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "cached",
+      "ms": 68.14433299999837
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "HEAD",
+      "ms": 85.79170800000065
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "GET",
+      "ms": 87.08441700000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "range",
+      "ms": 43.36816700000054
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "cached",
+      "ms": 35.6729579999992
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "GET",
+      "ms": 39.33245800000077
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "HEAD",
+      "ms": 41.4380000000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "range",
+      "ms": 40.683500000001004
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "cached",
+      "ms": 32.06395899999916
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "HEAD",
+      "ms": 33.60674999999901
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "GET",
+      "ms": 38.538250000001426
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "range",
+      "ms": 33.34387500000048
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "cached",
+      "ms": 40.67016700000022
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "HEAD",
+      "ms": 33.82520799999838
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "GET",
+      "ms": 42.798500000000786
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "range",
+      "ms": 41.01800000000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "cached",
+      "ms": 39.0619999999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "GET",
+      "ms": 26.787500000000364
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "range",
+      "ms": 39.00766599999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "HEAD",
+      "ms": 45.35295799999949
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "cached",
+      "ms": 39.06866699999955
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "GET",
+      "ms": 48.7372090000008
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "range",
+      "ms": 34.96125000000029
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "cached",
+      "ms": 37.16137499999968
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "GET",
+      "ms": 33.21045800000138
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "range",
+      "ms": 45.46637499999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "cached",
+      "ms": 63.56041600000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "GET",
+      "ms": 48.41558400000031
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "HEAD",
+      "ms": 49.58520800000042
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "range",
+      "ms": 51.267125000000306
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "cached",
+      "ms": 39.7700420000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "GET",
+      "ms": 60.16991699999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "HEAD",
+      "ms": 47.75420900000063
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "range",
+      "ms": 43.84862499999872
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "cached",
+      "ms": 40.75462499999958
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "HEAD",
+      "ms": 39.41695900000013
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "range",
+      "ms": 41.42658299999857
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "cached",
+      "ms": 39.0345410000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "GET",
+      "ms": 33.27616699999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "HEAD",
+      "ms": 34.55766700000095
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "range",
+      "ms": 31.412834000000657
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "cached",
+      "ms": 31.466667000000598
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "GET",
+      "ms": 34.607083999999304
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "range",
+      "ms": 3263.0042919999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "HEAD",
+      "ms": 946.5668340000011
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "HEAD",
+      "ms": 358.0417500000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "GET",
+      "ms": 3170.161542
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "GET",
+      "ms": 658.8240000000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "HEAD",
+      "ms": 912.9164579999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "cached",
+      "ms": 33.44941699999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "range",
+      "ms": 34.09229199999936
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "GET",
+      "ms": 37.631750000000466
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "HEAD",
+      "ms": 31.384000000000015
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "range",
+      "ms": 32.00370800000019
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "cached",
+      "ms": 31.976916999999958
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "GET",
+      "ms": 34.9075840000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "HEAD",
+      "ms": 37.61254100000042
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "cached",
+      "ms": 35.38095799999974
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "HEAD",
+      "ms": 36.48945900000035
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "range",
+      "ms": 38.85795799999869
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "GET",
+      "ms": 41.199375000000146
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "range",
+      "ms": 34.19129199999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "GET",
+      "ms": 33.15612500000134
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "cached",
+      "ms": 35.34833400000025
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "range",
+      "ms": 38.68554200000108
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "cached",
+      "ms": 35.695832999999766
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "HEAD",
+      "ms": 42.23504200000025
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "GET",
+      "ms": 38.9970830000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "range",
+      "ms": 40.47179099999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "HEAD",
+      "ms": 43.10762500000055
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "cached",
+      "ms": 36.34362499999952
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "HEAD",
+      "ms": 37.29020800000035
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "GET",
+      "ms": 41.502833000000464
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "range",
+      "ms": 37.72441699999945
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "GET",
+      "ms": 34.246791999999914
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "cached",
+      "ms": 36.923500000000786
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "HEAD",
+      "ms": 45.04487500000141
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "cached",
+      "ms": 44.33470800000032
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "range",
+      "ms": 48.61383300000125
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "GET",
+      "ms": 33.91179200000079
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "HEAD",
+      "ms": 38.384916999999405
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "GET",
+      "ms": 31.618583999999828
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "range",
+      "ms": 51.15308299999924
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "HEAD",
+      "ms": 33.732874999999694
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "cached",
+      "ms": 40.746625000001586
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "range",
+      "ms": 48.131790999999794
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "cached",
+      "ms": 52.85962500000096
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "GET",
+      "ms": 66.99154099999942
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "cached",
+      "ms": 63.620459000001574
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "HEAD",
+      "ms": 70.88833300000078
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "range",
+      "ms": 69.15924999999879
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "GET",
+      "ms": 71.84675000000061
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "HEAD",
+      "ms": 58.435708000000886
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "cached",
+      "ms": 38.882666999999856
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "range",
+      "ms": 41.85620800000106
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "HEAD",
+      "ms": 38.68712500000038
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "GET",
+      "ms": 50.736041000000114
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "cached",
+      "ms": 41.637791999999536
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "range",
+      "ms": 48.49029100000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "GET",
+      "ms": 54.128083999999944
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "cached",
+      "ms": 37.438624999998865
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "HEAD",
+      "ms": 54.63900000000103
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "range",
+      "ms": 51.795374999999694
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "GET",
+      "ms": 55.44275000000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "HEAD",
+      "ms": 57.002958000000945
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "range",
+      "ms": 50.3560839999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "cached",
+      "ms": 50.41583399999945
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "GET",
+      "ms": 56.809917000000496
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "HEAD",
+      "ms": 56.76404100000036
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "cached",
+      "ms": 39.99970899999971
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "range",
+      "ms": 48.45074999999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "GET",
+      "ms": 41.31437499999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "HEAD",
+      "ms": 45.2627080000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "cached",
+      "ms": 36.53579200000058
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "range",
+      "ms": 45.48004199999923
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "GET",
+      "ms": 38.15074999999888
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "HEAD",
+      "ms": 40.874792000000525
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "range",
+      "ms": 39.4223750000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "cached",
+      "ms": 38.3030830000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "GET",
+      "ms": 42.545084000001225
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "HEAD",
+      "ms": 49.41679199999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "range",
+      "ms": 38.54204200000095
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "cached",
+      "ms": 41.005167000001165
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "GET",
+      "ms": 40.44995799999924
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "range",
+      "ms": 33.13587499999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "HEAD",
+      "ms": 39.61204199999884
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "cached",
+      "ms": 34.168916000000536
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "GET",
+      "ms": 43.87275000000045
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "HEAD",
+      "ms": 41.552584000000934
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "GET",
+      "ms": 44.09520800000064
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "range",
+      "ms": 46.6467079999984
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "cached",
+      "ms": 49.005708999999115
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "HEAD",
+      "ms": 32.52708299999904
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "range",
+      "ms": 37.41716699999961
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "cached",
+      "ms": 39.48512499999924
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "GET",
+      "ms": 32.303665999999794
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "HEAD",
+      "ms": 32.22691699999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "cached",
+      "ms": 29.58024999999907
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "range",
+      "ms": 39.856416999999055
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "GET",
+      "ms": 33.6077920000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "HEAD",
+      "ms": 33.14533300000039
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "cached",
+      "ms": 34.415124999999534
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "GET",
+      "ms": 40.276333000001614
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "range",
+      "ms": 41.17029199999888
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "HEAD",
+      "ms": 32.99437500000022
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "range",
+      "ms": 36.9262920000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "cached",
+      "ms": 36.64099999999962
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "HEAD",
+      "ms": 30.136583000001337
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "GET",
+      "ms": 37.22620800000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "range",
+      "ms": 34.47058300000026
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "cached",
+      "ms": 34.44337500000074
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "HEAD",
+      "ms": 33.9549590000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "range",
+      "ms": 30.934833000001163
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "GET",
+      "ms": 42.39204200000131
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "HEAD",
+      "ms": 37.647375000000466
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "cached",
+      "ms": 43.843041000000085
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "GET",
+      "ms": 44.12250000000131
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "range",
+      "ms": 38.62658300000112
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "GET",
+      "ms": 36.80387499999961
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "cached",
+      "ms": 43.04829199999949
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "range",
+      "ms": 39.176792000000205
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "cached",
+      "ms": 37.44683299999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "HEAD",
+      "ms": 41.82629200000156
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "GET",
+      "ms": 39.53004200000032
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "HEAD",
+      "ms": 37.652000000000044
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "range",
+      "ms": 41.62474999999904
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "cached",
+      "ms": 31.619916999999987
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "HEAD",
+      "ms": 37.497957999999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "GET",
+      "ms": 47.427208000000974
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "range",
+      "ms": 33.35441700000047
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "cached",
+      "ms": 40.693875000000844
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "GET",
+      "ms": 34.27466699999968
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "HEAD",
+      "ms": 36.7783330000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "range",
+      "ms": 47.234375
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "GET",
+      "ms": 31.37737500000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "cached",
+      "ms": 41.40191699999923
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "HEAD",
+      "ms": 27.9030840000014
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "range",
+      "ms": 30.40662499999962
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "cached",
+      "ms": 30.852582999999868
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "GET",
+      "ms": 40.11287500000071
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "cached",
+      "ms": 36.201499999999214
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "HEAD",
+      "ms": 40.48791700000038
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "range",
+      "ms": 38.8927079999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "HEAD",
+      "ms": 37.351666999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "GET",
+      "ms": 44.93387499999881
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "cached",
+      "ms": 37.70562500000051
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "HEAD",
+      "ms": 37.54283399999986
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "range",
+      "ms": 40.460417000000234
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "range",
+      "ms": 31.287915999999313
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "GET",
+      "ms": 42.56195900000057
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "cached",
+      "ms": 44.679041999999754
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "GET",
+      "ms": 48.42204200000015
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "range",
+      "ms": 48.1864170000008
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "HEAD",
+      "ms": 51.815582999999606
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "GET",
+      "ms": 49.25195900000108
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "HEAD",
+      "ms": 45.59299999999894
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "range",
+      "ms": 42.67000000000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "HEAD",
+      "ms": 51.66316700000061
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "GET",
+      "ms": 59.22204199999942
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "range",
+      "ms": 39.514375000000655
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "cached",
+      "ms": 40.863374999998996
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "GET",
+      "ms": 42.08012500000041
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "HEAD",
+      "ms": 57.863292
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "range",
+      "ms": 46.71337499999936
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "cached",
+      "ms": 52.63508300000103
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "HEAD",
+      "ms": 37.6689580000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "range",
+      "ms": 30.083416999999827
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "cached",
+      "ms": 30.90649999999914
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "range",
+      "ms": 29.991374999999607
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "cached",
+      "ms": 2087.953083999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "GET",
+      "ms": 1991.3590000000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "GET",
+      "ms": 1936.1892500000013
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "cached",
+      "ms": 1897.969332999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "HEAD",
+      "ms": 34.647500000002765
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "GET",
+      "ms": 43.084083000001556
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "range",
+      "ms": 37.41862499999843
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "cached",
+      "ms": 37.29149999999936
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "GET",
+      "ms": 40.704750000000786
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "HEAD",
+      "ms": 35.60062499999913
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "range",
+      "ms": 38.76062500000262
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "cached",
+      "ms": 38.70600000000195
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "GET",
+      "ms": 39.28962500000125
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "cached",
+      "ms": 40.040124999999534
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "HEAD",
+      "ms": 44.642500000001746
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "range",
+      "ms": 42.72087500000271
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "GET",
+      "ms": 42.53625000000102
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "HEAD",
+      "ms": 37.42137499999808
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "range",
+      "ms": 44.89341600000262
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "cached",
+      "ms": 45.09100000000035
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "HEAD",
+      "ms": 32.933084000000235
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "GET",
+      "ms": 39.75824999999895
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "cached",
+      "ms": 31.71916599999895
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "GET",
+      "ms": 31.8382500000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "HEAD",
+      "ms": 25.541042000000743
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "range",
+      "ms": 25.251915999997436
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "cached",
+      "ms": 36.14329100000032
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "HEAD",
+      "ms": 34.14604099999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "GET",
+      "ms": 39.0187909999986
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "cached",
+      "ms": 39.99929200000042
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "range",
+      "ms": 40.55791700000191
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "GET",
+      "ms": 44.95937500000218
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "HEAD",
+      "ms": 23.868125000000873
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "range",
+      "ms": 40.83783400000175
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "GET",
+      "ms": 40.834624999999505
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "HEAD",
+      "ms": 34.645292000001064
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "range",
+      "ms": 29.73504099999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "cached",
+      "ms": 30.061874999999418
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "GET",
+      "ms": 34.02754199999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "HEAD",
+      "ms": 35.69037500000195
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "range",
+      "ms": 35.72858300000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "cached",
+      "ms": 40.03704199999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "GET",
+      "ms": 40.98433300000033
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "HEAD",
+      "ms": 30.591833999998926
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "cached",
+      "ms": 34.59400000000096
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "GET",
+      "ms": 35.70612500000061
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "HEAD",
+      "ms": 29.55554199999824
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "range",
+      "ms": 37.167207999998936
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "cached",
+      "ms": 33.13804099999834
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "GET",
+      "ms": 38.0001250000023
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "HEAD",
+      "ms": 37.568333999999595
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "range",
+      "ms": 33.825042000000394
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "cached",
+      "ms": 30.21220899999753
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "GET",
+      "ms": 37.288416999999754
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "cached",
+      "ms": 3033.2919999999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "cached",
+      "ms": 561.2531249999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "range",
+      "ms": 364.0487920000014
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "HEAD",
+      "ms": 2800.344250000002
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "range",
+      "ms": 704.3186249999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "HEAD",
+      "ms": 39.957666999998764
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "range",
+      "ms": 35.626000000000204
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "range",
+      "ms": 33.735749999999825
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "HEAD",
+      "ms": 35.547083000001294
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "cached",
+      "ms": 35.96004199999879
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "GET",
+      "ms": 43.012291999999434
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "cached",
+      "ms": 38.72429099999863
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "HEAD",
+      "ms": 37.01729200000045
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "GET",
+      "ms": 39.6317080000008
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "cached",
+      "ms": 39.29849999999715
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "GET",
+      "ms": 42.885708000001614
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "range",
+      "ms": 28.460583000000042
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "HEAD",
+      "ms": 32.532124999997905
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "range",
+      "ms": 75.29395899999872
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "HEAD",
+      "ms": 25.235790999999153
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "GET",
+      "ms": 37.57783299999937
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "cached",
+      "ms": 37.85987499999828
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "range",
+      "ms": 29.706207999999606
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "cached",
+      "ms": 38.60008300000118
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "range",
+      "ms": 30.166958999998315
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "cached",
+      "ms": 30.360124999999243
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "HEAD",
+      "ms": 32.05554199999824
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "GET",
+      "ms": 42.96820899999875
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "GET",
+      "ms": 40.55604200000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "HEAD",
+      "ms": 31.770457999999053
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "cached",
+      "ms": 37.25225000000137
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "range",
+      "ms": 37.86370900000111
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "GET",
+      "ms": 46.134915999999066
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "HEAD",
+      "ms": 38.56329200000255
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "cached",
+      "ms": 34.718917000001966
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "HEAD",
+      "ms": 29.406834000001254
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "range",
+      "ms": 42.66441699999996
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "GET",
+      "ms": 42.69208300000173
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "cached",
+      "ms": 37.4798750000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "range",
+      "ms": 42.681791999999405
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "GET",
+      "ms": 40.07454100000177
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "HEAD",
+      "ms": 38.23808300000019
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "range",
+      "ms": 44.11104200000045
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "cached",
+      "ms": 38.90254199999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "GET",
+      "ms": 38.465416999999434
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "HEAD",
+      "ms": 39.69958300000144
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "cached",
+      "ms": 27.81941700000243
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "range",
+      "ms": 29.999750000002678
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "GET",
+      "ms": 39.207625000002736
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "HEAD",
+      "ms": 37.109958000000915
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "range",
+      "ms": 32.95308300000033
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "cached",
+      "ms": 34.366375000001426
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "GET",
+      "ms": 32.47887499999706
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "HEAD",
+      "ms": 32.374541000001045
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "cached",
+      "ms": 35.77145799999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "GET",
+      "ms": 44.74079100000017
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "HEAD",
+      "ms": 40.1270829999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "cached",
+      "ms": 40.02470800000083
+    },
+    {
+      "path": "/api/grammar-aa-assets/d57b778a08122fe2da1e3859915ca9c8259b89f9b0774ef7307552e96f971d1d.mp3",
+      "mode": "range",
+      "ms": 40.23466600000029
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "GET",
+      "ms": 36.2365830000017
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "range",
+      "ms": 74.82241700000304
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "GET",
+      "ms": 33.51008400000137
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "range",
+      "ms": 36.43525000000227
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "HEAD",
+      "ms": 36.609583000001294
+    },
+    {
+      "path": "/api/grammar-aa-assets/aa80b2e50fcefa401e254232bf935a01f570b49283e2cba9b7231c3e8ce45e3d.webp",
+      "mode": "cached",
+      "ms": 34.00858299999891
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "range",
+      "ms": 33.839874999997846
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "HEAD",
+      "ms": 34.92645800000173
+    },
+    {
+      "path": "/api/grammar-aa-assets/d1107a2e7ce726b570ad0a2b98338b6db8d69465af45ef9cafaca136d12586a8.mp3",
+      "mode": "cached",
+      "ms": 27.67241600000125
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "range",
+      "ms": 27.420916999999463
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "HEAD",
+      "ms": 32.481416999999055
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "GET",
+      "ms": 39.48241699999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/11e59e14d746ddf55bd25d1108303574379d662b2fe4e0641c3b79611353ef59.mp3",
+      "mode": "cached",
+      "ms": 39.376791999999114
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "HEAD",
+      "ms": 38.11200000000099
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "GET",
+      "ms": 51.727208000000246
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "range",
+      "ms": 51.26304199999868
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "GET",
+      "ms": 44.939415999997436
+    },
+    {
+      "path": "/api/grammar-aa-assets/45a67c368c124b42ac12466af4e0233d40f8317376a088ceb1d191ac2611d936.mp3",
+      "mode": "cached",
+      "ms": 51.98474999999962
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "HEAD",
+      "ms": 36.45550000000003
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "range",
+      "ms": 37.48795800000153
+    },
+    {
+      "path": "/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp",
+      "mode": "cached",
+      "ms": 56.72241700000086
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "GET",
+      "ms": 55.26375000000189
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "HEAD",
+      "ms": 49.758458000000246
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "range",
+      "ms": 49.77087499999834
+    },
+    {
+      "path": "/api/grammar-aa-assets/5b15919c3201c03aef66fbb53978b599faf0ca4640c10b1e5c018be7ec27038f.mp3",
+      "mode": "cached",
+      "ms": 38.86433300000135
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "GET",
+      "ms": 49.57891599999857
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "range",
+      "ms": 35.35754200000156
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "HEAD",
+      "ms": 42.86566599999787
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "GET",
+      "ms": 42.66116599999805
+    },
+    {
+      "path": "/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3",
+      "mode": "cached",
+      "ms": 45.16033299999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "range",
+      "ms": 26.881874999999127
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "HEAD",
+      "ms": 41.610499999998865
+    },
+    {
+      "path": "/api/grammar-aa-assets/33605e7b91b0083e01627916719d583bf3ac14ca006c363539f528221ae5f74f.webp",
+      "mode": "cached",
+      "ms": 40.88337500000125
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "HEAD",
+      "ms": 33.51520800000071
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "GET",
+      "ms": 38.80858399999852
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "cached",
+      "ms": 34.103541999997105
+    },
+    {
+      "path": "/api/grammar-aa-assets/6883de16481630bd92a886c7de0ba371715a48ac593b5b7aa980c0b07b41f088.mp3",
+      "mode": "range",
+      "ms": 34.31366700000217
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "GET",
+      "ms": 40.34729199999856
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "range",
+      "ms": 33.96033299999908
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "GET",
+      "ms": 44.27954200000022
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "HEAD",
+      "ms": 47.66704099999697
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "HEAD",
+      "ms": 44.3682919999992
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "range",
+      "ms": 47.63066700000127
+    },
+    {
+      "path": "/api/grammar-aa-assets/3cb6c941f8e1245c5685aa932beb5eede46719288e9c909b71e4c42c97e7d84c.mp3",
+      "mode": "cached",
+      "ms": 44.68316699999923
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "GET",
+      "ms": 31.692167000001064
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "range",
+      "ms": 31.706207999999606
+    },
+    {
+      "path": "/api/grammar-aa-assets/f6bf5b91836336541179be27b77c97e43a70f5c0bd915a07f3a43d8a36300705.webp",
+      "mode": "cached",
+      "ms": 35.95562499999869
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "cached",
+      "ms": 35.045624999998836
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "GET",
+      "ms": 39.1573750000025
+    },
+    {
+      "path": "/api/grammar-aa-assets/1f6cb3d1c4e60c98265bcca0cdcc9220c971ac74f8166a30394f1e1ce11a7dfc.mp3",
+      "mode": "HEAD",
+      "ms": 41.3079579999976
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "HEAD",
+      "ms": 30.463666999999987
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "cached",
+      "ms": 33.75104099999953
+    },
+    {
+      "path": "/api/grammar-aa-assets/3153cdf7ee901e542625e5a7463c8c37819dab52058030efaeb8e81d9cba272e.mp3",
+      "mode": "range",
+      "ms": 40.74554200000057
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "HEAD",
+      "ms": 33.26925000000119
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "range",
+      "ms": 33.29641599999741
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "GET",
+      "ms": 42.04974999999831
+    },
+    {
+      "path": "/api/grammar-aa-assets/2a467aad13ebfb0f4536b995512658c0620c3d233ca86e535225a4e90a572ca1.webp",
+      "mode": "cached",
+      "ms": 32.50045900000259
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "GET",
+      "ms": 34.38591699999961
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "range",
+      "ms": 27.53895900000134
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "HEAD",
+      "ms": 27.72137499999735
+    },
+    {
+      "path": "/api/grammar-aa-assets/544487222376c9ae4fccf32efc17f907e7db43f7c5d1b45c2d38912c04772784.mp3",
+      "mode": "cached",
+      "ms": 37.6195000000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "GET",
+      "ms": 41.791541999999026
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "GET",
+      "ms": 35.125874999997905
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "cached",
+      "ms": 36.20112499999959
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "HEAD",
+      "ms": 45.009375000001455
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "range",
+      "ms": 26.477750000001834
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "HEAD",
+      "ms": 44.273291000001336
+    },
+    {
+      "path": "/api/grammar-aa-assets/511055916a791351c9a83d079daa0f8d1758bf5767c5e9d462396f324d6ca04c.mp3",
+      "mode": "cached",
+      "ms": 29.348666999998386
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "GET",
+      "ms": 33.96441699999923
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "HEAD",
+      "ms": 36.64045800000167
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "cached",
+      "ms": 33.01012499999706
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "GET",
+      "ms": 38.13445799999681
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "HEAD",
+      "ms": 36.09379099999933
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "range",
+      "ms": 30.469375000000582
+    },
+    {
+      "path": "/api/grammar-aa-assets/12b7a28171414d2f973dff4eab6917f89a9bbaf0fe7e1d0f7fc31a187cb34e9e.mp3",
+      "mode": "cached",
+      "ms": 28.292958000001818
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "GET",
+      "ms": 34.89491700000144
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "HEAD",
+      "ms": 38.07279099999869
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "cached",
+      "ms": 26.815207999999984
+    },
+    {
+      "path": "/api/grammar-aa-assets/b272842946c5fccf88bdc0ba7799cca7f14afa0f649f8d893b53b5dcb2387fb5.webp",
+      "mode": "range",
+      "ms": 41.31554099999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "GET",
+      "ms": 32.78583300000173
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "range",
+      "ms": 30.03137499999866
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "HEAD",
+      "ms": 32.052208999997674
+    },
+    {
+      "path": "/api/grammar-aa-assets/c912ac6f82ee07010f12b97d0f58a931595ea78a50c7dfb42851db36af71fc44.mp3",
+      "mode": "cached",
+      "ms": 33.26054199999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "HEAD",
+      "ms": 34.42504200000258
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "range",
+      "ms": 32.76304199999868
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "cached",
+      "ms": 28.14033300000301
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b0856d74d904e10b0f2f0ded5e5c94570c6e46ab3d135c0e5d5947beb50635f.mp3",
+      "mode": "GET",
+      "ms": 45.976332999998704
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "GET",
+      "ms": 38.85199999999895
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "HEAD",
+      "ms": 41.40216700000019
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "range",
+      "ms": 44.3404589999991
+    },
+    {
+      "path": "/api/grammar-aa-assets/c149d6aabbe5efcc272833084ecc645902574cc8ce76c3f7c31f8366bf29a983.mp3",
+      "mode": "cached",
+      "ms": 37.35770799999955
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "HEAD",
+      "ms": 29.089749999999185
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "GET",
+      "ms": 37.209500000000844
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "cached",
+      "ms": 31.51770800000304
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0a128077825a36e1e6738c9721e05455735d118133978060c16c758c88191cc.webp",
+      "mode": "range",
+      "ms": 39.875
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "HEAD",
+      "ms": 27.31554099999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "GET",
+      "ms": 34.9517909999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "range",
+      "ms": 33.48262500000055
+    },
+    {
+      "path": "/api/grammar-aa-assets/69132b0d5227b40e1f993e349816bb476ed515f9d5987ad61415aeca0c99e551.mp3",
+      "mode": "cached",
+      "ms": 34.041041000000405
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "GET",
+      "ms": 36.35637500000303
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "HEAD",
+      "ms": 39.044292000002315
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "range",
+      "ms": 36.06262499999866
+    },
+    {
+      "path": "/api/grammar-aa-assets/a1a70cc352a6a9987ee48eac37b15854adcf604785cf10aedf915aafef75f46d.json",
+      "mode": "cached",
+      "ms": 30.335250000000087
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "GET",
+      "ms": 40.996750000002066
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "HEAD",
+      "ms": 36.26533399999971
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "cached",
+      "ms": 34.14466700000048
+    },
+    {
+      "path": "/api/grammar-aa-assets/05eb4150c54c94ae5f28b04e16b531397f46314c08eafba0bdffe780f7cce303.mp3",
+      "mode": "range",
+      "ms": 37.325667000000976
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "range",
+      "ms": 34.002457999999024
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "HEAD",
+      "ms": 38.109582999997656
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "GET",
+      "ms": 40.53283300000112
+    },
+    {
+      "path": "/api/grammar-aa-assets/6deb1bc04cb2486b24c63b72443d11b3d01891cac665a320dc235eae6dd1f84c.mp3",
+      "mode": "cached",
+      "ms": 38.25212500000271
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "range",
+      "ms": 28.389416999998502
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "HEAD",
+      "ms": 30.750209000001632
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "GET",
+      "ms": 37.807292000001326
+    },
+    {
+      "path": "/api/grammar-aa-assets/bf7a7025787086ea884ec20c18bdf5480df1e5264aed88b6e7c1af0f6df9859e.mp3",
+      "mode": "cached",
+      "ms": 33.58979200000249
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "HEAD",
+      "ms": 32.749667000000045
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "range",
+      "ms": 31.125
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "cached",
+      "ms": 35.35541699999885
+    },
+    {
+      "path": "/api/grammar-aa-assets/0b696d82d56175132f76c6c529d4b6d0ec4120b692e59d836e1879ee10ebdc00.mp3",
+      "mode": "GET",
+      "ms": 44.29491699999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "HEAD",
+      "ms": 27.800458000001527
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "cached",
+      "ms": 31.077000000001135
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "range",
+      "ms": 38.10775000000285
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "GET",
+      "ms": 38.22833399999945
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "HEAD",
+      "ms": 30.357083000002604
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "cached",
+      "ms": 35.188874999999825
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "GET",
+      "ms": 34.8045409999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "HEAD",
+      "ms": 51.82570900000064
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "range",
+      "ms": 49.12508300000263
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "GET",
+      "ms": 84.33554200000071
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ce170722593a84aadec8d1c454ef3899fc40a9215e279071f9e404319e0aba0.mp3",
+      "mode": "cached",
+      "ms": 87.51716700000179
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "range",
+      "ms": 35.7007909999993
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "HEAD",
+      "ms": 38.80104100000244
+    },
+    {
+      "path": "/api/grammar-aa-assets/25f9891181e29eae38107f6569d18d9af1cd60e088801eb0765603bcd3567d1f.mp3",
+      "mode": "cached",
+      "ms": 38.55645800000275
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "GET",
+      "ms": 46.67974999999933
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "HEAD",
+      "ms": 36.08995900000082
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "cached",
+      "ms": 33.355084000002535
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "GET",
+      "ms": 35.293540999999095
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "HEAD",
+      "ms": 1197.358666
+    },
+    {
+      "path": "/api/grammar-aa-assets/383d02cd6775f1dd49c3922da2b17be7c624982ac3ab38f130df2ae635ce88da.mp3",
+      "mode": "GET",
+      "ms": 1622.6534170000014
+    },
+    {
+      "path": "/api/grammar-aa-assets/1722fd0663b6d57844887c036ea47e8bbb5dcb1b6d706cdaa68294752df6ef28.mp3",
+      "mode": "range",
+      "ms": 2069.3745830000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/58971d766f9841cab708fa6941062be6143be5e4a0fd2207826f43a61a3fa47e.mp3",
+      "mode": "range",
+      "ms": 1577.5825839999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/82df63d352338107a57164cedd1853d8e4b673c5923bcd8a355ad7aa4dc4d31e.mp3",
+      "mode": "range",
+      "ms": 1297.0823750000018
+    },
+    {
+      "path": "/api/grammar-aa-assets/8c00de89c6232461806df2617f23619b5a8a2434de4984563451bcafe71cc4d8.webp",
+      "mode": "range",
+      "ms": 2115.4915420000034
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "GET",
+      "ms": 31.284958000000188
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "cached",
+      "ms": 31.012542000000394
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "HEAD",
+      "ms": 31.471041000000696
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "range",
+      "ms": 38.3055409999979
+    },
+    {
+      "path": "/api/grammar-aa-assets/3fb320e3f8a5140f55029ff086f151de5d881000ad65dc86f18e60fd7a16ee41.mp3",
+      "mode": "cached",
+      "ms": 42.86237500000061
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "cached",
+      "ms": 26.31408299999748
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "HEAD",
+      "ms": 30.62958300000173
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "range",
+      "ms": 32.246666999999434
+    },
+    {
+      "path": "/api/grammar-aa-assets/6e33fffebbda79f838a0d3767a6c5dc49b99047965982dc5d867cb37968a8c49.mp3",
+      "mode": "GET",
+      "ms": 34.68412499999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "GET",
+      "ms": 37.355916999997135
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "HEAD",
+      "ms": 26.695999999999913
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "range",
+      "ms": 33.56224999999904
+    },
+    {
+      "path": "/api/grammar-aa-assets/f16f94aca0b268e0955aa0c222bd1a772205fce67f7cfe6635040b2579f7071f.mp3",
+      "mode": "cached",
+      "ms": 32.007582999998704
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "GET",
+      "ms": 36.50550000000294
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "HEAD",
+      "ms": 33.063750000001164
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "range",
+      "ms": 31.72266700000182
+    },
+    {
+      "path": "/api/grammar-aa-assets/ed5838315e6595167efd83994e99b9f84a6cf9358a32748da9e8a1e1e38bca41.mp3",
+      "mode": "cached",
+      "ms": 24.507082999996783
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "GET",
+      "ms": 36.7087500000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "HEAD",
+      "ms": 30.421125000000757
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "range",
+      "ms": 31.95799999999872
+    },
+    {
+      "path": "/api/grammar-aa-assets/5a0e9c4612aa9667b37bf3aa2ba7199dfc843caa610184e7211b5a58c49b3e7b.mp3",
+      "mode": "cached",
+      "ms": 33.482499999998254
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "GET",
+      "ms": 43.70616700000028
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "range",
+      "ms": 31.29962499999965
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "HEAD",
+      "ms": 33.70362500000192
+    },
+    {
+      "path": "/api/grammar-aa-assets/b45c0712c227cf2a842dedd1af6498354ccb7f2a3b7ebedd3897e671230c4300.mp3",
+      "mode": "cached",
+      "ms": 29.782875000000786
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "GET",
+      "ms": 43.5356670000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "HEAD",
+      "ms": 33.378874999998516
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "cached",
+      "ms": 31.05279099999825
+    },
+    {
+      "path": "/api/grammar-aa-assets/b9ae7e3d2aeedb19cdcbf832b2e69a445f32b9add0141174da234860c35e1c78.mp3",
+      "mode": "range",
+      "ms": 33.34700000000157
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "GET",
+      "ms": 34.0032910000009
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "HEAD",
+      "ms": 31.196374999999534
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "cached",
+      "ms": 31.081082999997307
+    },
+    {
+      "path": "/api/grammar-aa-assets/162287819efdc7fc096e2c5dfb8ddac611eb13e59e1948cab936c72bdc6f20f8.mp3",
+      "mode": "range",
+      "ms": 31.281749999998283
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "GET",
+      "ms": 35.09533300000112
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "HEAD",
+      "ms": 31.76812500000233
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "range",
+      "ms": 30.818875000000844
+    },
+    {
+      "path": "/api/grammar-aa-assets/b859c5733f48b187cd3453ea94df70de162835d2bd393504113f40dfc9b09d19.mp3",
+      "mode": "cached",
+      "ms": 34.24029199999859
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "GET",
+      "ms": 34.27129200000127
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "HEAD",
+      "ms": 36.584083000001556
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "range",
+      "ms": 31.717500000002474
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "GET",
+      "ms": 36.72375000000102
+    },
+    {
+      "path": "/api/grammar-aa-assets/c8b1be8e84e8655adf40cde1de80b33208ce58a20507628b71d1db44a0959ef8.mp3",
+      "mode": "cached",
+      "ms": 40.521709000000556
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "range",
+      "ms": 35.47837499999878
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "cached",
+      "ms": 36.08466699999917
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "HEAD",
+      "ms": 28.64195800000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "GET",
+      "ms": 30.91541700000016
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "range",
+      "ms": 28.353500000001077
+    },
+    {
+      "path": "/api/grammar-aa-assets/c247b7e409904a7cf9ed43deed8efef70e9bbf839efc11aa16ce3030a6b3a19f.mp3",
+      "mode": "cached",
+      "ms": 32.26558400000067
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "HEAD",
+      "ms": 32.23624999999811
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "GET",
+      "ms": 34.47829199999978
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "cached",
+      "ms": 26.951665999997203
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "GET",
+      "ms": 33.97229100000186
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "HEAD",
+      "ms": 34.93720799999937
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "range",
+      "ms": 30.642124999998487
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "HEAD",
+      "ms": 39.54308300000048
+    },
+    {
+      "path": "/api/grammar-aa-assets/6adc33362947eae298fc90da593cd2c4336e581f339ecaaa6003116dd9fc1db7.json",
+      "mode": "cached",
+      "ms": 41.03587499999776
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "cached",
+      "ms": 36.35583300000144
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "range",
+      "ms": 38.57720799999879
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "HEAD",
+      "ms": 34.334750000001804
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "GET",
+      "ms": 38.4397919999974
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "cached",
+      "ms": 31.797042000001966
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "GET",
+      "ms": 37.926666999999725
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "HEAD",
+      "ms": 38.61654200000339
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "range",
+      "ms": 35.23362500000076
+    },
+    {
+      "path": "/api/grammar-aa-assets/27c106668916fb6782103a6cb34b9ff7b41019ac6e7e1bdee77e4632e2461873.mp3",
+      "mode": "cached",
+      "ms": 42.35962499999732
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "GET",
+      "ms": 39.11316700000316
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "HEAD",
+      "ms": 39.79270799999722
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "range",
+      "ms": 38.11558299999888
+    },
+    {
+      "path": "/api/grammar-aa-assets/4549b2ed69d9249f29b8ee19c1f56619c1452a6cc9547c882f6c555510e3d117.mp3",
+      "mode": "cached",
+      "ms": 29.946875000001455
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "GET",
+      "ms": 35.475334000002476
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "HEAD",
+      "ms": 30.28033299999879
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "range",
+      "ms": 35.635291999999026
+    },
+    {
+      "path": "/api/grammar-aa-assets/2fea67355ee71fc2ac4669caea10a5a890e9197abe65046660114f4f87d4c231.mp3",
+      "mode": "cached",
+      "ms": 31.568874999997206
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "GET",
+      "ms": 44.18891699999949
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "HEAD",
+      "ms": 35.00241599999936
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "range",
+      "ms": 33.18395900000178
+    },
+    {
+      "path": "/api/grammar-aa-assets/434b010f2dc343ff54bbc72e6d1bbb45c774982e39a62670ca25cc29353a6e55.mp3",
+      "mode": "range",
+      "ms": 1825.0297090000022
+    },
+    {
+      "path": "/api/grammar-aa-assets/f52aa4ef39849f3844d62adfdf05c092ce28f82e6f21590d8709b4c2af116aef.mp3",
+      "mode": "HEAD",
+      "ms": 1562.7172919999975
+    },
+    {
+      "path": "/api/grammar-aa-assets/cfdd888ef7cb50d24db99298e5fc073f78367cfa13f70af180a98092069ea965.json",
+      "mode": "GET",
+      "ms": 1429.557915999998
+    },
+    {
+      "path": "/api/grammar-aa-assets/4a591659fb57758698fe4f8a640c43688db31077f1a70e3495a3936b390d4f70.mp3",
+      "mode": "range",
+      "ms": 1319.3267080000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/15084eb33fcc5a96b5a07fd813a99fe648b02dad7c5d7fb1885dcaa5516ed20a.mp3",
+      "mode": "cached",
+      "ms": 739.0716250000005
+    },
+    {
+      "path": "/api/grammar-aa-assets/e09497b13ef70ea5bd23201a0761b93e687c8f94a0e404e510ae2656fa8a77b4.json",
+      "mode": "range",
+      "ms": 1496.8162499999999
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "HEAD",
+      "ms": 31.169792000000598
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "HEAD",
+      "ms": 29.024249999998574
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "range",
+      "ms": 31.878499999998894
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "cached",
+      "ms": 32.717790999999124
+    },
+    {
+      "path": "/api/grammar-aa-assets/56ed1a436108dbcd4e6a0a4dd6296af106cbf49d2ede0453dacabcf1fa58582c.mp3",
+      "mode": "GET",
+      "ms": 39.29737499999828
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "GET",
+      "ms": 37.66741600000023
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "range",
+      "ms": 33.83429099999921
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "GET",
+      "ms": 39.91608300000007
+    },
+    {
+      "path": "/api/grammar-aa-assets/99c0e4d0f98e6741ff7f2725e6004ad51de836288687c2bacd670bc3c14e46c0.mp3",
+      "mode": "cached",
+      "ms": 40.48845799999981
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "cached",
+      "ms": 32.044832999999926
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "HEAD",
+      "ms": 37.1451670000024
+    },
+    {
+      "path": "/api/grammar-aa-assets/f323d8e70a13cff21e826c4bfd627bfef624d183339ba1fe004a90cde4bb6234.mp3",
+      "mode": "range",
+      "ms": 43.373374999999214
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "GET",
+      "ms": 48.227208000000246
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "HEAD",
+      "ms": 40.035374999999476
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "cached",
+      "ms": 42.48795800000153
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "HEAD",
+      "ms": 34.004540999998426
+    },
+    {
+      "path": "/api/grammar-aa-assets/d3d0474e610e03cc6fbae973bdc7aae2ea616181a04586fa1ea49149a29538ee.mp3",
+      "mode": "range",
+      "ms": 42.85229199999958
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "GET",
+      "ms": 46.70983400000114
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "cached",
+      "ms": 29.879000000000815
+    },
+    {
+      "path": "/api/grammar-aa-assets/63b14be1cb4d5f76a4580ac32fa5a36a374c9b383029bc7fda168306363fb8f0.mp3",
+      "mode": "range",
+      "ms": 30.46875
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "GET",
+      "ms": 34.97087500000271
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "HEAD",
+      "ms": 35.64749999999913
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "range",
+      "ms": 42.90320900000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/37a8119192ac7e43095d92d574c4c0fd8958c9fda1d632f2de74fed889df9abc.mp3",
+      "mode": "cached",
+      "ms": 39.07229200000074
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "GET",
+      "ms": 38.487458999999944
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "cached",
+      "ms": 30.728041000002122
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "HEAD",
+      "ms": 43.47412500000064
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "HEAD",
+      "ms": 27.611417000000074
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "GET",
+      "ms": 29.890375000002678
+    },
+    {
+      "path": "/api/grammar-aa-assets/4ff1a15964eaef9289951301cead26cdaedd86436ae2d1b1f55eb317a51103e7.mp3",
+      "mode": "range",
+      "ms": 38.2287499999984
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "range",
+      "ms": 34.952792000000045
+    },
+    {
+      "path": "/api/grammar-aa-assets/a10b054e54a9d27a2a06761e4aaba631b9526fa9fa2e48a70218466e7d73b418.json",
+      "mode": "cached",
+      "ms": 34.17908299999908
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "HEAD",
+      "ms": 29.840041999999812
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "GET",
+      "ms": 35.9686249999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "cached",
+      "ms": 33.81995800000004
+    },
+    {
+      "path": "/api/grammar-aa-assets/188094d4c490447e678673372f1af88435708cbcb25ed8ab18d85a8d1debe594.json",
+      "mode": "range",
+      "ms": 36.46587500000169
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "GET",
+      "ms": 41.31337500000154
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "GET",
+      "ms": 36.87975000000006
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "cached",
+      "ms": 37.2186249999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "HEAD",
+      "ms": 44.09962499999892
+    },
+    {
+      "path": "/api/grammar-aa-assets/585ffaeb55ef826f52d9ddd351c3a1f76acc6054e48f9205f4cf57b9dfdb248b.json",
+      "mode": "range",
+      "ms": 48.19658300000083
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "HEAD",
+      "ms": 39.65820900000108
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "cached",
+      "ms": 31.597207999999227
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "GET",
+      "ms": 35.77391699999862
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "HEAD",
+      "ms": 35.14320899999802
+    },
+    {
+      "path": "/api/grammar-aa-assets/bc76a5d1f3b8ee8b46a811f367c0633355b9a75347264c7dbbf85b159693a4ea.json",
+      "mode": "range",
+      "ms": 38.28870900000038
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "range",
+      "ms": 31.213958000000275
+    },
+    {
+      "path": "/api/grammar-aa-assets/51fc29dd01c4e6e1fe8a25cb91e2b3eff207c47d90dde00b609ce662c0733740.json",
+      "mode": "cached",
+      "ms": 32.66712499999994
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "GET",
+      "ms": 34.99787499999729
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "range",
+      "ms": 30.84916599999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "GET",
+      "ms": 34.88929199999984
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "HEAD",
+      "ms": 35.50054100000125
+    },
+    {
+      "path": "/api/grammar-aa-assets/6b9c99769eb01ca33aa3b12f737438db74a69ab9385ba92824a0e60f6acd86f4.mp3",
+      "mode": "cached",
+      "ms": 35.33887499999764
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "HEAD",
+      "ms": 33.68670900000143
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "GET",
+      "ms": 32.96404199999961
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "range",
+      "ms": 38.63920800000051
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "range",
+      "ms": 34.347499999999854
+    },
+    {
+      "path": "/api/grammar-aa-assets/e10b5f84b0a5a22297c82d8d08c38bdc71b56d70f7a85b79f415792836b0ab66.json",
+      "mode": "cached",
+      "ms": 40.70295900000201
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "HEAD",
+      "ms": 36.75191700000141
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "GET",
+      "ms": 31.281833000000915
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "range",
+      "ms": 32.81987499999741
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "HEAD",
+      "ms": 33.737624999997934
+    },
+    {
+      "path": "/api/grammar-aa-assets/a0789b8d67c7471bf433b2028bf66979ecd7f0875da56bbcc109fb7aebc4d458.json",
+      "mode": "cached",
+      "ms": 33.6495419999992
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "GET",
+      "ms": 33.727333000002545
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "range",
+      "ms": 28.507708000001003
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "HEAD",
+      "ms": 32.162625000000844
+    },
+    {
+      "path": "/api/grammar-aa-assets/3259d4306dfa378fc635aa2a7939a4ef88408279022a10fcdf90d724122c8e31.json",
+      "mode": "cached",
+      "ms": 31.97637499999837
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "GET",
+      "ms": 37.29829199999949
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "cached",
+      "ms": 30.90641599999799
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "GET",
+      "ms": 33.05912499999977
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "range",
+      "ms": 37.042624999998225
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "HEAD",
+      "ms": 36.322917000001326
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "range",
+      "ms": 36.92712500000198
+    },
+    {
+      "path": "/api/grammar-aa-assets/00b544f263946043795498375296de505136c8bca6be0daea9745ff8d0ea2031.json",
+      "mode": "cached",
+      "ms": 31.672624999999243
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "GET",
+      "ms": 33.15387499999997
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "HEAD",
+      "ms": 34.178124999998545
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "range",
+      "ms": 29.878625000001193
+    },
+    {
+      "path": "/api/grammar-aa-assets/ad45916e81ba055bdd8ce39ce40cca804c032d341e1e18c33c72cda7d511e8d9.json",
+      "mode": "cached",
+      "ms": 34.20929199999955
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "GET",
+      "ms": 40.574124999999185
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "HEAD",
+      "ms": 34.05450000000201
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "range",
+      "ms": 34.210000000002765
+    },
+    {
+      "path": "/api/grammar-aa-assets/772004ab8218f6fe0f8bf766e9991bc5f27950ef2da69fc8982798809bd3cb29.json",
+      "mode": "cached",
+      "ms": 44.94445799999812
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "GET",
+      "ms": 46.96808300000339
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "HEAD",
+      "ms": 42.075292000001355
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "range",
+      "ms": 32.315999999998894
+    },
+    {
+      "path": "/api/grammar-aa-assets/2dd87e78655c341f333532a10a1bc977f3f2632c6cdb95530aaefe16b2724f42.json",
+      "mode": "cached",
+      "ms": 38.66824999999881
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "GET",
+      "ms": 39.443709000002855
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "range",
+      "ms": 34.37212500000169
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "HEAD",
+      "ms": 41.195457999998325
+    },
+    {
+      "path": "/api/grammar-aa-assets/aede9dc0cbb975c65e313306881ca291c20a0de211b141cc28f247301dbbfdbe.json",
+      "mode": "cached",
+      "ms": 27.344624999997905
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "HEAD",
+      "ms": 31.086458000001585
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "range",
+      "ms": 31.340416999999434
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "GET",
+      "ms": 36.84370900000067
+    },
+    {
+      "path": "/api/grammar-aa-assets/d38d8ee3f2f114dc05886bc906c076c9119afa4232835ffa8876e66b6436b79a.json",
+      "mode": "cached",
+      "ms": 35.09687499999927
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A102-128ee01a4baf0bf0.json",
+      "mode": "GET",
+      "ms": 53.623999999999796
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A101-923c8e47fa876e2c.json",
+      "mode": "GET",
+      "ms": 56.51800000000003
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A103-5e6bc0c7c734d079.json",
+      "mode": "GET",
+      "ms": 59.81395799999882
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A106-5b91c3b8b50726ae.json",
+      "mode": "GET",
+      "ms": 55.84820800000307
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A107-2484352833e2b4b0.json",
+      "mode": "GET",
+      "ms": 48.89275000000271
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A105-fe31b6295135872c.json",
+      "mode": "GET",
+      "ms": 60.67016700000022
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A104-2638da7560d99c81.json",
+      "mode": "GET",
+      "ms": 102.92312499999753
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A108-8948a3f3713d8b6e.json",
+      "mode": "GET",
+      "ms": 56.380333000000974
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A111-44d98784c746a8e0.json",
+      "mode": "GET",
+      "ms": 57.87129199999981
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A110-49f6e455d8323cd0.json",
+      "mode": "GET",
+      "ms": 67.85066700000243
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A109-b020cc51503ee33b.json",
+      "mode": "GET",
+      "ms": 74.9474160000027
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A112-d5a7d3823da9499e.json",
+      "mode": "GET",
+      "ms": 58.2387920000001
+    },
+    {
+      "path": "/api/grammar-aa-assets/073695f84e9eb0f389eb1372aae20201b72b6fa7c893f0e1e33460b0a28bdbb6.json",
+      "mode": "cached",
+      "ms": 2352.1963749999995
+    },
+    {
+      "path": "/api/grammar-aa-assets/b2811eced9ecf4607f6e4ff3155df8b7c54bb3c04ecf02457914a966a133437f.json",
+      "mode": "HEAD",
+      "ms": 2283.982583000001
+    }
+  ]
+}

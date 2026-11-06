@@ -1,0 +1,40 @@
+{
+  "exactFiles": 20149,
+  "checks": [
+    {
+      "headers": {},
+      "status": 200,
+      "encoding": "br",
+      "length": null,
+      "etag": "W/\"923c8e47fa876e2c10b55e4079690eb51f84080067bb11f75b2d727fed015cc8\"",
+      "cached": 304
+    },
+    {
+      "headers": {
+        "Accept-Encoding": "identity"
+      },
+      "status": 200,
+      "encoding": null,
+      "length": "17570",
+      "etag": "\"923c8e47fa876e2c10b55e4079690eb51f84080067bb11f75b2d727fed015cc8\"",
+      "cached": 304
+    },
+    {
+      "path": "/practice-content/klink-20261029/production-build-model-a1-MWM_A101-923c8e47fa876e2c.json",
+      "method": "POST",
+      "status": 405
+    },
+    {
+      "path": "/practice-content/unknown-bank.json",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/practice-content/klink-forms-20261102/ksw-aa-vg-001-007-4cb3cdcc38168ae4.json",
+      "method": "GET",
+      "status": 404
+    }
+  ],
+  "passed": true,
+  "explanation": "Original boundary assertion expected an uncompressed Content-Length on a CDN-compressed HEAD. Identity length, empty HEAD body and both strong/weak conditional requests are correct."
+}
