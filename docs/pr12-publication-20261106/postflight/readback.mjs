@@ -1,0 +1,10 @@
+import {readFileSync, readdirSync, statSync, existsSync, writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const out='outputs/pr12-live-20261106',root='dist/client',before='/Users/nicoknoester/.cache/klink-practice-bundles-20261106/dist/client';
+const walk=d=>readdirSync(d).flatMap(n=>statSync(d+'/'+n).isDirectory()?walk(d+'/'+n):[d+'/'+n]);const hash=b=>createHash('sha256').update(b).digest('hex');
+const files=walk(root+'/_next').filter(p=>/\.(js|css)$/.test(p)).map(p=>p.slice(root.length+1)).filter(p=>!existsSync(before+'/'+p)||hash(readFileSync(before+'/'+p))!==hash(readFileSync(root+'/'+p)));files.push('release.json');const rows=[];
+for(let i=0;i<files.length;i+=3)await Promise.all(files.slice(i,i+3).map(async path=>{const r=await fetch('https://klink.taalroute.nl/'+path);assert.equal(r.status,200,path);const actual=hash(Buffer.from(await r.arrayBuffer()));assert.equal(actual,hash(readFileSync(root+'/'+path)),path);rows.push({path,sha256:actual});}));
+const live=JSON.parse(readFileSync(root+'/release.json')),old=JSON.parse(readFileSync('docs/pr12-publication-20261106/live-before.json'));
+for(const key of ['curriculumEdition','lexiconExportSha256','sectionsSha256','sectionPhotosSha256','contentSha256'])assert.deepEqual(live[key],old[key],key);
+writeFileSync(out+'/asset-readback.json',JSON.stringify({files:rows,contentMarkersUnchanged:true},null,2)+'\n');console.log('PASS exact live asset readback',rows.length,'and preserved content markers');

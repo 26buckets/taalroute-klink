@@ -1,3 +1,17 @@
+## Actuele publicatie — kleinere opening en stille knoppen — 6 november 2026
+
+Livebron `8d73a0bda6ba3d13344f319e6863f6f74acb69c3`, Worker `6910338c-5fb6-4cff-af3f-483c3abd5596`, via schone canonieke main en normale `npm run deploy` op Nico’s expliciete opdracht. PR12 is opgenomen. Afstammeling van de laatst gepubliceerde `7e87eca15c1e5d63fe2b68d6623d9cce0334bce2`; alle inhoud, nieuwe oefenindeling en 50 goedgekeurde woordvragen behouden.
+
+Gesplitste oefencode, compacte woordenbanken, voorbereide openbare pagina’s en geen onbedoeld voorlezen van gewone knoppen. Tekst en expliciete luisterknoppen blijven hoorbaar. Live op 3 Mbps: eerste oefening mediaan 15,51 → 8,94 s; +docent 16,50 → 12,00 s. Twee bezoeken per onderdeel/versie, desktop en mobiel; geen garantie voor alle netwerken. Help opent zonder de vroegere 2,08 MB onbedoelde audiobundel.
+
+Normale poort/build, acht live Chromium/WebKit-audioscenario’s, 18 HTTP/RSC/API/HEAD-controles, 21 exacte livebestanden en behouden inhoudskenmerken geslaagd. 32 live-schermparen: 31 exact; 14 schaduwpixels in één paar bij gerichte herhaling ook exact. 20.218 bestaande bestanden behouden, 18.393 assets. Geen extra Worker-first-routes of compressie-wrapper, betaalde dienst, D1-migratie, budgetverhoging of workflow.
+
+Bestaande Inzicht-app bereikbaar, login gecontroleerd. PR8-integratie en de nog niet goedgekeurde nieuwe onderbalk niet gepubliceerd. Fysieke telefoon, resterende netwerkvariatie en bestaande Alfa-C-overlap blijven open. Alle ruwe resultaten en herstelcontrole: `docs/pr12-publication-20261106/postflight/`.
+
+Deze bewijsopvolger wijzigt de runtime niet: niet opnieuw deployen. Gebruik deze main, controleer de actuele livebron opnieuw en behoud de publicatiecontroles bij vervolgwerk.
+
+---
+
 ## Actuele publicatie — time-outs bij gelijktijdige bestandsaanvragen — 6 november 2026
 
 Livebron `7e87eca15c1e5d63fe2b68d6623d9cce0334bce2`, Worker `2e13b337-7d63-4eb6-938d-e049b3defad0` (100%). Op Nico’s expliciete opdracht via schone canonieke main en `npm run deploy`, als afstammeling van de laatst goedgekeurde livebron `3e1e49e914893039b234e20620d22b1a399abe9f`. De nieuwste oefenindeling en antwoordbediening zijn behouden.

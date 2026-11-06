@@ -1,0 +1,15 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Inspect every non-identical screenshot; do not reset the appearance reference
+    at file:///Users/nicoknoester/.cache/klink-opening-current-20261106/outputs/pr12-publication-20261106/helpers/.live-appearance.mjs:22:1 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

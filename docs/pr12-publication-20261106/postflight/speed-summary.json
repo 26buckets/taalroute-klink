@@ -1,0 +1,76 @@
+{
+  "conditions": "Fresh Chromium contexts, 3 Mbps down / 1 Mbps up, 40 ms added latency, no CPU throttling; alternating versions. Immediate chapter, activity and first exercise clicks, without invented thinking time. Not a physical phone or mobile network.",
+  "smallSample": true,
+  "sameExercise": true,
+  "concurrentBrowserTests": false,
+  "portals": {
+    "learner": {
+      "previousProduction": {
+        "n": 2,
+        "readyMs": [
+          17461.699999999255,
+          13565.900000002235
+        ],
+        "medianReadyMs": 15513.800000000745,
+        "resourceRequests": [
+          53,
+          49
+        ],
+        "encodedBodyBytes": [
+          3591460,
+          3521976
+        ]
+      },
+      "newProduction": {
+        "n": 2,
+        "readyMs": [
+          9300.10000000149,
+          8583.800000000745
+        ],
+        "medianReadyMs": 8941.950000001118,
+        "resourceRequests": [
+          46,
+          38
+        ],
+        "encodedBodyBytes": [
+          3146576,
+          2873119
+        ]
+      }
+    },
+    "teacher/plus": {
+      "previousProduction": {
+        "n": 2,
+        "readyMs": [
+          17539.10000000149,
+          15463.599999997765
+        ],
+        "medianReadyMs": 16501.349999999627,
+        "resourceRequests": [
+          77,
+          71
+        ],
+        "encodedBodyBytes": [
+          4006368,
+          3954698
+        ]
+      },
+      "newProduction": {
+        "n": 2,
+        "readyMs": [
+          12097.60000000149,
+          11897.89999999851
+        ],
+        "medianReadyMs": 11997.75,
+        "resourceRequests": [
+          71,
+          64
+        ],
+        "encodedBodyBytes": [
+          3466001,
+          3384067
+        ]
+      }
+    }
+  }
+}
