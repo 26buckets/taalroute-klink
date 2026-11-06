@@ -8,7 +8,7 @@ const out = process.env.KLINK_TEST_OUTPUT || 'outputs/exercise-flow-20261106';
 mkdirSync(out, { recursive: true });
 const checks = [], errors = [], media = new Map();
 const pack = taalroutePackages.find(p => p.id === 'groep-1');
-export async function useLiveMedia(page) {
+export async function routeLiveMedia(page) {
   if (!process.env.KLINK_TEST_LIVE_MEDIA) return;
   await page.route(base + '/**', async route => {
     const u = new URL(route.request().url());
@@ -43,7 +43,7 @@ for (const [engine, type] of Object.entries({chromium, webkit})) {
     for (const [width,height] of [[1600,730],[1366,600],[390,844],[320,568]]) for (const activity of ['meet','same-word','write-letter']) {
       const page = await browser.newPage({viewport:{width,height},colorScheme:width===1366?'dark':'light'});
       page.on('pageerror', e=>errors.push(e.message));
-      await useLiveMedia(page);
+      await routeLiveMedia(page);
       await page.addInitScript(fakeAudio);
       const model = groupExercises(pack,'meet').find(e=>e.text?.primary==='mat');
       await page.addInitScript(({key,id})=>{

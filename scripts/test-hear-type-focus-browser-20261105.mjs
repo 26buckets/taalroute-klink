@@ -32,6 +32,8 @@ try{await Promise.all(Object.entries({chromium,webkit}).map(async([engine,kind])
    for(const[i,e]of exercises.entries()){
     const task=page.locator('[data-exercise-id="'+e.exerciseId+'"]'),input=inputFor(task);
     await input.waitFor();
+    // The approved layout auto-advances; pause it to verify the explicit Enter/Verder flow.
+    if(i===0){const pause=page.locator('[data-practice-automatic][aria-pressed="false"]');if(await pause.count())await pause.click();}
     if(i===0&&e.requiresAudio)await task.locator('.cp-exercise-listen').click();
     await ready(input);await focused(input);
     if(!all&&e.requiresAudio)assert(await page.evaluate(src=>window.nativeEnds.some(x=>x.source===src&&x.native&&x.duration>0),e.prompt.audio.src));

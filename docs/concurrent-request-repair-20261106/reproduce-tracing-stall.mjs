@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {traceFrameworkRequest} from '../../node_modules/vinext/dist/server/request-tracing.js';
+import {registerFrameworkTracingIntegration} from '../../node_modules/vinext/dist/server/tracer.js';
+import {GET} from '../../app/api/grammar-aa-assets/[name]/route.ts';
+const name='e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3',request=new Request('https://klink.test/api/grammar-aa-assets/'+name);
+let called=false;
+registerFrameworkTracingIntegration({id:'local-rejected-backend',async enterSpan(){throw new Error('Locally simulated tracing backend failure');}});
+const result=await Promise.race([traceFrameworkRequest({method:'GET',target:new URL(request.url).pathname,headers:request.headers,callback:async()=>{called=true;return GET(request,{params:Promise.resolve({name})});}}).then(()=> 'resolved',()=> 'rejected'),new Promise(resolve=>setTimeout(()=>resolve('unsettled'),200))]);
+assert.equal(result,'unsettled');assert.equal(called,false);
+const direct=await GET(request,{params:Promise.resolve({name})});assert.equal(direct.status,200);assert.equal((await direct.arrayBuffer()).byteLength,24625);
+const evidence={syntheticFault:true,liveTriggerProven:false,frameworkVersion:'1.1.0',frameworkRequest:result,assetHandlerReached:called,directHandlerStatus:direct.status,directBytes:24625};
+writeFileSync('outputs/concurrent-request-repair-20261106/tracing-stall.json',JSON.stringify(evidence,null,2)+'\n');console.log(evidence);

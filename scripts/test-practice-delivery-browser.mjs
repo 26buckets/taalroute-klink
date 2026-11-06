@@ -6,6 +6,7 @@ import {productionIndex,productionAssetUrl} from '../lib/production-practice.ts'
 import {chapterHash,practiceChapters} from '../lib/practice-chapters.ts';
 import {readProductionBank} from './read-production-bank.mjs';
 const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19128',before=process.env.KLINK_COMPARE_BASE||'http://127.0.0.1:19127',out=process.env.KLINK_TEST_OUTPUT||'outputs/practice-bundles-20261106/browser';
+const legacyBase=process.env.KLINK_LEGACY_BASE||before;
 mkdirSync(out,{recursive:true});
 const delivery=JSON.parse(readFileSync('data/klink-practice-delivery.json'));
 const rows=productionIndex.filter(row=>Object.hasOwn(delivery,row.url));
@@ -28,10 +29,10 @@ try {
       const retry=await browser.newContext();await retry.addInitScript(audioStub);const rp=await retry.newPage(),row=rows.find(r=>r.activity==='copy'),bundle=productionAssetUrl(row.url);
       await retry.route('**'+bundle,r=>r.fulfill({status:503,body:'temporary test outage'}));await rp.goto(base+route(row));await rp.getByRole('button',{name:'Probeer opnieuw',exact:true}).waitFor();
       await retry.unroute('**'+bundle);await rp.getByRole('button',{name:'Probeer opnieuw',exact:true}).click();await task(rp,row).waitFor();checks.push({engine,errorAndRetry:true});await retry.close();
-      // The unchanged baseline client requests its old file URLs from the new server.
+      // Use a pre-bundling client even when the appearance baseline already has bundles.
       const legacy=await browser.newContext();await legacy.addInitScript(audioStub);const restored=new Set();
       await legacy.route('**/practice-content/**',async r=>{const url=new URL(r.request().url());if(Object.hasOwn(delivery,url.pathname)){const response=await r.fetch({url:base+url.pathname+url.search});assert.equal(response.status(),200);restored.add(url.pathname);await r.fulfill({response});}else await r.continue();});
-      const lp=await legacy.newPage();for(const old of [row,rows.find(r=>r.activity==='read-series')]){await lp.goto(before+route(old));await task(lp,old).waitFor();}
+      const lp=await legacy.newPage();for(const old of [row,rows.find(r=>r.activity==='read-series')]){await lp.goto(legacyBase+route(old));await task(lp,old).waitFor();}
       assert(restored.has(row.url));assert(restored.has(rows.find(r=>r.activity==='read-series').url));checks.push({engine,oldClientOriginalUrls:[...restored]});await legacy.close();
       for(const width of [1366,390])for(const theme of ['light','dark']){
         for(const scene of ['home','copy','read-series','teacher']){
@@ -55,4 +56,4 @@ try {
     }finally{await browser.close();}
   }
   assert.deepEqual(errors,[]);assert.equal(visual.length,32);console.log('PASS: 226 bundle openings, two retries, four old-client links, 32 unchanged appearance pairs.');
-}finally{writeFileSync(out+'/checks.json',JSON.stringify({checks,visual,errors},null,2)+'\n');}
+}finally{writeFileSync(out+'/checks.json',JSON.stringify({base,before,legacyBase,checks,visual,errors},null,2)+'\n');}

@@ -1,0 +1,5 @@
+{
+  "blocked": true,
+  "expectedForUnpublishedRepair": true,
+  "reason": "Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  [\n    '.gitignore',\n    'data/klink-practice-delivery.json',\n    'db/env.d.ts',\n    'lib/practice-bundle-response.ts',\n    'lib/production-practice.ts',\n-   'middleware.ts',\n    'package.json',\n    'public/.assetsignore',\n    'scripts/build-practice-bundles.mjs',\n    'scripts/check-asset-limit.mjs',\n    'scripts/check-hear-type-focus-release-20261105.mjs',\n...\n    'scripts/test-production-browser.mjs',\n+   'scripts/test-public-asset-concurrency.mjs',\n+   'scripts/test-public-asset-worker.mjs',\n    'scripts/test-writing-forms-20261102.mjs',\n    'scripts/test-writing-forms-bundle-20261103.mjs',\n    'vite.config.ts'\n  ]\n"
+}
