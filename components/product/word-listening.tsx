@@ -6,8 +6,9 @@ import { recordingForWord, fetchWordRecording, wordRecordingKey } from '@/lib/wo
 import { spokenWords } from '@/lib/word-listening-text';
 import { imageListeningWords, imageWordRectangle } from '@/lib/image-word-listening';
 
-type TextWord = { text: string; node: Text; start: number; endNode: Text; end: number };
+type TextWord = { text: string; node: Text; start: number; endNode: Text; end: number; listeningControl?: HTMLButtonElement };
 type Word = TextWord | { text: string; node: HTMLImageElement; source: string; box: number[] };
+const controls = 'button, input[type="button"], input[type="submit"], input[type="reset"], a[href], summary, label, [role="button"], [role="tab"], [role^="menuitem"], [role="switch"], [role="checkbox"], [role="radio"], [role="option"]';
 const excluded = [
   'script', 'style', 'svg', 'code', 'pre', 'input', 'textarea', 'select', 'audio', 'video',
   '[contenteditable]:not([contenteditable="false"])', '[hidden]', '[inert]',
@@ -26,9 +27,10 @@ function wordRange(word: TextWord) {
   return range;
 }
 
-function readableNode(node: Node | null): node is Text {
+function readableNode(node: Node | null, listeningControl?: HTMLButtonElement): node is Text {
   if (node?.nodeType !== Node.TEXT_NODE || !node.parentElement || node.parentElement.closest(excluded)) return false;
-  return visibleElement(node.parentElement);
+  const control = node.parentElement.closest(controls);
+  return (!control || control === listeningControl) && visibleElement(node.parentElement);
 }
 
 function visibleElement(start: Element) {
@@ -45,14 +47,14 @@ function readingContainer(node: Text) {
   return container;
 }
 
-function wordsIn(container: Element) {
+function wordsIn(container: Element, listeningControl?: HTMLButtonElement) {
   const fragments: { node: Text; start: number; end: number }[] = [];
   let text = '';
   const space = () => { if (text && !/\s$/.test(text)) text += ' '; };
   const read = (node: Node) => {
-    if (readableNode(node)) { const start = text.length; text += node.data; fragments.push({ node, start, end: text.length }); return; }
+    if (readableNode(node, listeningControl)) { const start = text.length; text += node.data; fragments.push({ node, start, end: text.length }); return; }
     if (!(node instanceof Element)) return;
-    if (node.matches(excluded)) { space(); return; }
+    if (node.matches(excluded) || node.matches(controls) && node !== listeningControl) { space(); return; }
     const block = node !== container && (node.tagName === 'BR' || !/^(inline|contents)/.test(getComputedStyle(node).display));
     if (block) space();
     node.childNodes.forEach(read);
@@ -87,7 +89,7 @@ function wordAtPoint(x: number, y: number): Word | undefined {
 }
 
 function imageWords(image: HTMLImageElement) {
-  if (image.closest(excluded) || !visibleElement(image)) return [];
+  if (image.closest(excluded) || image.closest(controls) || !visibleElement(image)) return [];
   const source = new URL(image.currentSrc || image.src, document.baseURI).pathname;
   return imageListeningWords(source).map(word => ({ ...word, node: image, source }));
 }
@@ -99,8 +101,8 @@ function imageWordRect(word: { node: HTMLImageElement; box: number[] }) {
 
 function currentWord(word: Word) {
   if (!word.node.isConnected) return false;
-  if ('start' in word) return readableNode(word.node) && word.endNode.isConnected && word.start <= word.node.length && word.end <= word.endNode.length && wordRange(word).toString() === word.text;
-  return visibleElement(word.node) && word.node.getClientRects().length > 0 && new URL(word.node.currentSrc || word.node.src, document.baseURI).pathname === word.source;
+  if ('start' in word) return readableNode(word.node, word.listeningControl) && word.endNode.isConnected && word.start <= word.node.length && word.end <= word.endNode.length && wordRange(word).toString() === word.text;
+  return !word.node.closest(controls) && visibleElement(word.node) && word.node.getClientRects().length > 0 && new URL(word.node.currentSrc || word.node.src, document.baseURI).pathname === word.source;
 }
 
 function scrollToWord(word: Word) {
@@ -197,7 +199,7 @@ export function WordListening() {
     };
     const down = (event: PointerEvent) => {
       closeKeyboard();
-      if (event.target instanceof Element && event.target.closest('[data-practice-next], [data-practice-previous], [data-practice-check], [data-practice-listen], .cp-recorder button')) cancelWord();
+      if (event.target instanceof Element && event.target.closest(controls)) cancelWord();
       pending = undefined;
       pointer = event.isPrimary && event.button === 0 && !event.ctrlKey && !event.metaKey
         ? { id: event.pointerId, x: event.clientX, y: event.clientY } : undefined;
@@ -207,32 +209,22 @@ export function WordListening() {
       const start = pointer; pointer = undefined;
       if (!start || start.id !== event.pointerId || Math.hypot(event.clientX - start.x, event.clientY - start.y) > 6) return;
       if (!(event.target instanceof Element) || !rootFor(event.target)) return;
-      if (event.target.closest('[data-practice-next], [data-practice-previous], [data-practice-check], [data-practice-listen], .cp-recorder button')) return;
-      const inline = event.target.closest('button.cp-inline-word');
-      if (inline && !inline.closest(':disabled')) return;
+      if (event.target.closest(controls)) return;
       const word = wordAtPoint(event.clientX, event.clientY);
       if (!word) return;
       if (!requested()) return;
       const exercise = word.node.parentElement?.closest('[data-exercise-id], [data-pilot-step], [data-functional-step], [data-daily-step]') ?? undefined;
       pending = { word, before: nativePlays, href: location.href, exercise, marker: exercise?.getAttribute('data-exercise-id') };
-      if (event.target.closest(':disabled')) { listen(word); pending = undefined; }
     };
     const click = () => {
       const selected = pending; pending = undefined;
       // Bubble after the answer handler, while still in the mobile playback gesture.
       // A navigation word must not interrupt the next exercise's own recording.
-      if (selected && selected.word.node.isConnected && selected.href === location.href && (!selected.exercise || selected.exercise.isConnected && selected.marker === selected.exercise.getAttribute('data-exercise-id'))) listen(selected.word, selected.before);
+      if (selected && currentWord(selected.word) && selected.href === location.href && (!selected.exercise || selected.exercise.isConnected && selected.marker === selected.exercise.getAttribute('data-exercise-id'))) listen(selected.word, selected.before);
     };
-    const capturedClick = (event: MouseEvent) => {
+    const capturedClick = () => {
       const selected = pending;
-      // A model card normally starts a whole instruction/phrase; its text needs only the tapped word.
-      if (selected && event.target instanceof Element && event.target.closest('button.cp-model-content') && recordingForWord(selected.word.text)) {
-        pending = undefined;
-        event.preventDefault(); event.stopPropagation();
-        listen(selected.word, selected.before);
-        return;
-      }
-      // Some answer controls stop bubbling; their words remain audible too.
+      // Plain text may stop bubbling too; controls never create a pending word.
       setTimeout(() => { if (selected && pending === selected) click(); }, 0);
     };
     const closeKeyboard = () => {
@@ -278,7 +270,9 @@ export function WordListening() {
     const inlineRequested = (event: Event) => {
       const { element, completed } = (event as CustomEvent<{element: HTMLButtonElement; completed?: () => void}>).detail;
       if (!(element instanceof HTMLButtonElement) || !element.matches('.cp-inline-word') || !visibleElement(element)) { completed?.(); return; }
-      const word = wordsIn(element).words[0];
+      // Explicit listening controls use their own handler, never the generic pointer listener.
+      const word = wordsIn(element, element).words[0];
+      if (word) word.listeningControl = element;
       if (word && requested()) listen(word, nativePlays, completed); else completed?.();
     };
     const inlineCanceled = (event: Event) => {
