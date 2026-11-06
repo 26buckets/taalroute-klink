@@ -1,0 +1,63 @@
+{"sourceSha256":"9cf47c84f48d7066b1b31039998b59e22e953e0e2d1d7490ea3be0deb7d2c119","dataSha256":"b0af0c13456aaac41f28c49986f89338805185b18c7ecbb42cdb7f368ce285e7","tasks":4769,"compactTasks":4750,"originalBytes":9514512,"compactBytes":3426489,"originalGzipBytes":923915,"compactGzipBytes":475463,"exceptionalVariants":9,"exactRoundTrip":true,"mutationIsolation":true}
+✔ scripts/test-compact-lexicon-module.mjs (862.569625ms)
+{
+  "exports": [
+    {
+      "name": "connectedContent",
+      "sha256": "ad9c428c157c44f97ec568e6d9c36c11de96d0e4c814af87ce9a7739311eebfa",
+      "bytes": 1524621
+    },
+    {
+      "name": "contentLevelReviews",
+      "sha256": "6a7640aa7257cd7999b404a976a571a1f8f3c7747fd13f07343501a399e5c3ea",
+      "bytes": 682067
+    },
+    {
+      "name": "contentPlacements",
+      "sha256": "c453dba2d7fd66ff2679259dcb44a8105aa6ee319a5855e129aab8da65acb9ec",
+      "bytes": 482544
+    },
+    {
+      "name": "contentRouting",
+      "sha256": "0d01ecf7b04ad551f520e4035d46b601a9d6209632cb4e0ce31a7049b51cccd9",
+      "bytes": 781073
+    },
+    {
+      "name": "dialogueImages",
+      "sha256": "daad3b5f8bd14f0f547adbd323997270436ec7697bedb666c73f128d7ac5bde1",
+      "bytes": 16839
+    },
+    {
+      "name": "sentenceLevelReviews",
+      "sha256": "fcde9656958ac9e6f6bc4a1e9b28a83dff383781d8168e2d36786fea69a5faf9",
+      "bytes": 359464
+    }
+  ],
+  "exactRoundTrip": true,
+  "sourceItems": 1612,
+  "runtimeRequestsAdded": 0
+}
+✔ scripts/test-precomputed-connected-content.mjs (359.487375ms)
+✔ Full fallback reuses exact bytes for another word and repeat; already-aborted playback never fetches (18.592458ms)
+✔ Eight MiB budget evicts least recently used complete bundles (50.1475ms)
+✔ Invalid and cancelled downloads cannot poison later playback (0.662083ms)
+✔ Partial replies still require their exact range and never masquerade as a full bundle (0.78125ms)
+✔ A later word revealing a truncated cached bundle can recover on retry (0.511875ms)
+✔ Concurrent complete downloads count a retained bundle only once (17.507959ms)
+✔ Complete mixed bundles reuse WAV and MP3 without changing bytes or MIME (0.424625ms)
+✔ Dutch word boundaries preserve accents, contractions and compounds (9.860459ms)
+✔ A phrase recording is never presented as the sound of an individual word (0.132041ms)
+✔ All twenty newly published reviewed word forms keep their native recording (92.526833ms)
+✔ Image words retain their exact source and account for contained image margins (8.761083ms)
+✔ All existing single-word recordings remain available without stemming or guessed spellings (17.506417ms)
+✔ The index is reproducible and contains only existing allowed recording paths (103.267083ms)
+✔ Packed recordings require the exact byte range and retain a full-response fallback (11.75225ms)
+✔ Packed WAV models retain their original bytes and real media type in partial and complete responses (1.435958ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 876.479167

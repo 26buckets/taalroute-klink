@@ -1,0 +1,20 @@
+{
+  "normalCommand": "npm run deploy",
+  "newMeteredServices": 0,
+  "extraWorkerFirstPaths": 0,
+  "compressionWrapperPublished": false,
+  "databaseUnchanged": true,
+  "routesUnchanged": true,
+  "noMigrations": true,
+  "routes": [
+    {
+      "pattern": "klink.taalroute.nl",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "../client"
+  },
+  "sourceCommit": "cd876c71b19eeb2626f5396e8b2229d30658e13f"
+}
