@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import {verifyPracticeBundlesContent,verifyPracticeBundlesRelease} from './check-practice-bundles-release-20261106.mjs';
 const folder='docs/practice-bundles-20261106/publication/';
 const release=verifyPracticeBundlesRelease();let rejected=0;
 for(const file of Object.keys({...release.files,...release.evidenceFiles})){
+  // Middleware is now a historical source; its approved successor requires it to be absent.
+  if(file==='middleware.ts'){assert.equal(existsSync(file),false);continue;}
   assert.throws(()=>verifyPracticeBundlesContent(p=>p===file?Buffer.concat([readFileSync(p),Buffer.from('changed')]):readFileSync(p)),file);rejected++;
 }
 for(const key of ['fullReadback','zipIntegrity','allPayloadHashesMatch']){
