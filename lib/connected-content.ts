@@ -1,37 +1,20 @@
-import bank from '../data/klink-connected-content.json' with { type: 'json' };
+import { connectedContent, contentLevelReviews, contentPlacements, dialogueImages } from './connected-content-data.ts';
+import type bank from '../data/klink-connected-content.json';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
-import routing from '../data/klink-content-routing.json' with { type: 'json' };
-import sentenceLevels from '../data/klink-sentence-levels.json' with { type: 'json' };
-import longContentLevels from '../data/klink-long-content-levels.json' with { type: 'json' };
-import { repairedDialogue, dialogueScene } from './dialogue-repair.ts';
 import type { PackageExercise, PackageLesson } from './package-content';
 
 export type ConnectedContent = typeof bank.items[number];
-const canonicalItems = new Map(routing.items.map(item => [item.id, item]));
-export const sentenceLevelReviews = new Map(sentenceLevels.items.map(item => [item.contentId, item]));
-const reviewedLongContent = longContentLevels.items.filter(review => {
-  const source = bank.items.find(item => item.id === review.contentId);
-  return source?.text === review.text && JSON.stringify(source.discussion ?? null) === JSON.stringify(review.discussion);
-});
-const contentLevelReviews = new Map([...sentenceLevels.items, ...reviewedLongContent].map(item => [item.contentId, item]));
-export const connectedContent = bank.items.map(item => {
-  const review = contentLevelReviews.get(item.id);
-  return { ...repairedDialogue(item), wordIds: canonicalItems.get(item.id)!.wordIds,
-    // Changed language or comprehension questions require a fresh level review.
-    sourceLevel: review?.text === item.text ? review.level : item.sourceLevel };
-});
+export { connectedContent, contentRouting, sentenceLevelReviews } from './connected-content-data.ts';
 export const contentById = new Map(connectedContent.map(item => [item.id, item]));
 const wordsById = new Map(curriculum.words.map(word => [word.id, word]));
 const unique = (ids: string[]) => [...new Set(ids)];
-export const contentRouting = routing;
-const byStep = new Map(routing.steps.map(step => [step.id, step.contents]));
 export function contentPlacementForStep(stepId: string, contentId: string) {
-  return byStep.get(stepId)?.find(item => item.contentId === contentId);
+  return contentPlacements.get(stepId)?.find(item => item.contentId === contentId);
 }
 type Step = Pick<PackageLesson, 'id' | 'known' | 'newWords' | 'returning'>;
 export function contentForStep(step: Step) {
-  return (byStep.get(step.id) ?? []).map(row => contentById.get(row.contentId)!);
+  return (contentPlacements.get(step.id) ?? []).map(row => contentById.get(row.contentId)!);
 }
 
 export function contentReadingConditions(item: ConnectedContent, step: Step) {
@@ -67,7 +50,7 @@ export function connectedExercisesForStep(step: Step): PackageExercise[] {
     objective: 'Een voorbereid woord volgen in bestaande samenhangende taal, met luistersteun. Geen zelfstandig lees- of begripsresultaat.',
     sourceStatus: item.humanReview === 'approved' ? 'approved' : 'concept', assessment: 'participation', requiresAudio: true,
     instructionAudio: { src: instruction.src, audioId: instruction.id },
-    prompt: { text: 'Luister en lees mee.', audio: item.blocks[0].audio, ...(item.kind === 'dialogue' && dialogueScene(item.id) ? { image: dialogueScene(item.id) } : {}) },
+    prompt: { text: 'Luister en lees mee.', audio: item.blocks[0].audio, ...(item.kind === 'dialogue' && dialogueImages.get(item.id) ? { image: dialogueImages.get(item.id) } : {}) },
     textBlocks: item.blocks, playAllBlocks: true, access: 'supported-listening', independentReading: false, humanReview: item.humanReview,
     contentPlacement: placement, recurrenceOnlyAfterIntroduction: placement.returningWordIds.length > 0,
   }); });
