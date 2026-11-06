@@ -1,0 +1,16 @@
+✔ All sources are byte-identical, retain IDs/counts/answers/media, and fit bounded immutable bundles (3099.219667ms)
+✔ Every old URL returns its exact original bytes, including query strings (2238.354208ms)
+✔ Old URL headers, conditional requests, ranges, unknown URLs and failed/corrupt bundles (11.577458ms)
+✔ Asset warning thresholds and counting match deployment exclusions (including nested files and negations) (2.52225ms)
+✔ Every API payload keeps exact bytes, ETags, HEAD and audio ranges while the app handler is stuck (44.775667ms)
+✔ All old exercise links bypass a stuck app and preserve their exact original files (2609.662792ms)
+✔ Canceled clients, errors and subsequent requests stay isolated (4.219459ms)
+✔ All other requests retain the original app handler, request, bindings and execution context (0.337ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5446.344417

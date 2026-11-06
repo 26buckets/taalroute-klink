@@ -1,3 +1,4 @@
+import {verifyConcurrentRequestRelease,readBeforeConcurrentRequest} from './check-concurrent-request-release-20261106.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -16,18 +17,19 @@ const expected = [
  'scripts/test-exercise-flow-release-20261106.mjs','scripts/test-exercise-flow-browser.mjs','scripts/test-exercise-flow-forms-browser.mjs','scripts/test-exercise-flow-mobile-browser.mjs','scripts/test-exercise-flow-native-browser.mjs','scripts/test-keyboard-all-forms-browser.mjs','scripts/test-package-photo-space-browser.mjs','scripts/test-hear-type-focus-guards-20261105.mjs',
 ].sort((a,b)=>a<b?-1:a>b?1:0);
 export function verifyExerciseFlowContent(read = readFileSync) {
+ const successor=verifyConcurrentRequestRelease(read),currentRead=read;read=file=>readBeforeConcurrentRequest(file,successor,currentRead);
  const json = path => JSON.parse(read(path)), r = json(folder+'approval.json');
  assert.equal(r.approvedBy,'Nico'); assert.equal(r.publicationApproved,true); assert.equal(r.designChangeApproved,true);
  assert.equal(r.userRequest,'Ja, dit ziet er goed uit. Rond de controles af en zet deze nieuwe indeling live voor de hele app. Behoud alle inhoud en voortgang, laat PR12 en staging ongemoeid');
  assert.equal(r.baselineSourceCommit,baseline);assert.equal(r.checkedCandidateCommit,'62c3bab4edf460142321b837834e50e07d453439');
  git('merge-base','--is-ancestor',baseline,'HEAD');
  const live=json(folder+'live-before.json'); assert.equal(live.sourceCommit,'db57924f60e8d632eed0d1b75c9b48a7491da709'); assert(live.sourceClean);assert.equal(live.branch,'main');
- assert.deepEqual([...new Set([...lines(git('diff','--name-only',baseline,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a<b?-1:a>b?1:0),expected);
+ assert.deepEqual(lines(git('diff','--name-only',baseline,successor.baselineSourceCommit,'--',...roots)),expected);
  assert.deepEqual(r.changedFiles,expected); assert.deepEqual(Object.keys(r.files).sort((a,b)=>a<b?-1:a>b?1:0),expected);
  for (const [p,h] of Object.entries({...r.files,...r.evidenceFiles})) assert.equal(sha(read(p)),h,p);
  // The approved preview fixes the runtime scope; release preparation cannot add another feature.
  for (const p of expected.filter(p=>p.startsWith('app/')||p.startsWith('components/'))) assert.equal(sha(read(p)),sha(git('show',r.checkedCandidateCommit+':'+p)),p);
- assert.equal(git('diff','--name-only',baseline,'--','data','lib','public','hooks','db','drizzle','middleware.ts','vite.config.ts','package.json','package-lock.json','.github').toString().trim(),'');
+ assert.equal(git('diff','--name-only',baseline,successor.baselineSourceCommit,'--','data','lib','public','hooks','db','drizzle','middleware.ts','vite.config.ts','package.json','package-lock.json','.github').toString().trim(),'');
  const floor=json('docs/appearance-floor-20261031/floor.json'),old=JSON.parse(git('show',baseline+':docs/appearance-floor-20261031/floor.json'));
  assert.deepEqual({...floor,approvedUpdates:old.approvedUpdates},old);assert.deepEqual(floor.approvedUpdates,[...old.approvedUpdates,'docs/appearance-floor-20261031/approved-updates/exercise-flow-20261106.json']);
  const v=json(folder+'verification.json');
@@ -41,7 +43,7 @@ export function verifyExerciseFlowContent(read = readFileSync) {
  const preservation=json(folder+'local/preservation/checks.json');assert.equal(preservation.visual.length,16);assert(preservation.visual.every(x=>x.changedPixels===0));assert.deepEqual(preservation.errors,[]);
  const preview=json('docs/exercise-flow-20261106/validation.json');assert.equal(preview.formLayouts,366);assert.equal(preview.keyboardButtonParityChecksIncludingGates,490);
  const b=json(folder+'backup.json');assert(b.driveId&&b.fullReadback&&b.zipIntegrity&&b.allPayloadHashesMatch);assert.deepEqual(b.files,r.files);assert.deepEqual(b.evidenceFiles,r.evidenceFiles);
- return r;
+ return {...r,successor};
 }
 export const verifyExerciseFlowRelease = verifyExerciseFlowContent;
-export function readBeforeExerciseFlow(file,r,read=readFileSync) { return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file); }
+export function readBeforeExerciseFlow(file,r,read=readFileSync) { return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeConcurrentRequest(file,r.successor,read); }
