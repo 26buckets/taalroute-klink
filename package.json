@@ -36,7 +36,7 @@
     "images:prepare": "node scripts/prepare-images.mjs",
     "images:check": "node scripts/prepare-images.mjs --check",
     "predeploy": "node scripts/build-practice-bundles.mjs && npm run images:prepare",
-    "postbuild": "node scripts/check-asset-limit.mjs",
+    "postbuild": "node scripts/build-workspace-preload.mjs && node scripts/check-asset-limit.mjs",
     "check:assets": "node scripts/check-asset-limit.mjs",
     "test:practice-bundles": "node --test scripts/test-practice-bundles.mjs"
   },
