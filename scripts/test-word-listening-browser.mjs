@@ -72,12 +72,14 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     }
     checks.push({engine,check:'published inline word buttons share one playback for touch and native Enter'});
     const answer = page.getByRole('button', { name: 'In de keuken', exact: true });
+    const answerAudioBefore = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, answer, 'keuken');
     assert.equal(await answer.getAttribute('aria-pressed'), 'true');
     assert(await page.getByRole('button', { name: /^Verder/ }).isEnabled());
-    await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings.keuken[0]));
+    await page.waitForTimeout(70);
+    assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), answerAudioBefore);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1).helpUsed), true);
-    checks.push({ engine, check: 'answer selection and individual word audio both work; listening is recorded as support' });
+    checks.push({ engine, check: 'answer selection is silent; earlier explicit text listening remains recorded as support' });
     await page.getByRole('button', { name: /^Verder/ }).focus();
     await page.keyboard.press('Alt+w');
     let found = false;
@@ -117,9 +119,10 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     });
     const stopped = page.locator('#joined-word-fixture button'), stoppedBefore = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, stopped, 'keuken');
-    await page.waitForFunction(count => window.__wordAudioPlayed.length === count + 1, stoppedBefore);
+    await page.waitForTimeout(70);
+    assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), stoppedBefore);
     assert.equal(await stopped.getAttribute('aria-pressed'), 'true');
-    checks.push({engine,check:'a control that stops click bubbling still selects and plays exactly once'});
+    checks.push({engine,check:'a control that stops click bubbling still selects without speech'});
     await page.locator('#joined-word-fixture').evaluate(element => {
       const recorder = document.createElement('div'); recorder.className = 'cp-recorder';
       recorder.innerHTML = '<button class="recording">Stop</button>'; element.append(recorder);
@@ -168,15 +171,17 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForFunction(count => window.__wordAudioPlayed.length > count, modelBefore);
     await page.waitForTimeout(70);
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), modelBefore + 1, JSON.stringify(await page.evaluate(before => window.__wordAudioPlayed.slice(before),modelBefore)));
-    checks.push({engine,check:'a native word card and global word listening share one playback'});
+    checks.push({engine,check:'a native listening card retains its own single playback'});
     const mark = inventory.cases.find(item => item.exercise.standardTask?.kind === 'mark');
     await page.goto(base + mark.route);
     await page.locator('[data-word-token]').first().waitFor();
     const target = mark.exercise.standardTask.tokens.find(token => recordings[token.text.toLocaleLowerCase('nl').replace(/[.!?,;:]$/, '')]);
-    const token = page.locator(`[data-word-token="${target.id}"]`), targetSource = wordRecordingKey(recordings[target.text.toLocaleLowerCase('nl').replace(/[.!?,;:]$/, '')][0]);
+    const token = page.locator(`[data-word-token="${target.id}"]`);
+    const markBefore = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, token, target.text.replace(/[.!?,;:]$/, ''));
     assert.equal(await token.getAttribute('aria-pressed'), 'true');
-    await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, targetSource);
+    await page.waitForTimeout(70);
+    assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), markBefore);
     await clickWord(page, token, target.text.replace(/[.!?,;:]$/, ''));
     assert.equal(await token.getAttribute('aria-pressed'), 'false');
     checks.push({ engine, check: 'marking a grammatical or evidence word still toggles its selection' });
@@ -186,10 +191,10 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     const attemptsAfter = await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1'));
     const beforeDisabled = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, token, target.text.replace(/[.!?,;:]$/, ''));
-    await page.waitForFunction(count => window.__wordAudioPlayed.length > count, beforeDisabled);
-    assert.equal(await page.evaluate(() => window.__wordAudioPlayed.at(-1)), targetSource);
+    await page.waitForTimeout(70);
+    assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), beforeDisabled);
     assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1')), attemptsAfter);
-    checks.push({ engine, check: 'completed answer words remain audible without changing the answer' });
+    checks.push({ engine, check: 'completed answer controls stay silent and preserve the answer' });
     assert.equal(await page.evaluate(() => localStorage.getItem('klink.word-listening.retention')), 'kept');
     await page.screenshot({ path: out + '/' + engine + '-sentence.png', fullPage: true });
     const block = functionalBlocks.find(block => block.steps.some(step => step.handwriting));

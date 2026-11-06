@@ -27,6 +27,7 @@ for (const [engine, type] of Object.entries(reproduce ? { chromium } : { chromiu
       await context.addInitScript(() => {
         window.__quiet = { words: 0, played: 0, activated: 0 };
         window.addEventListener('klink-word-audio-request', () => window.__quiet.words++);
+        window.__nativePlay = HTMLMediaElement.prototype.play;
         HTMLMediaElement.prototype.play = function () {
           if (this.dataset.klinkSource) window.__quiet.played++;
           setTimeout(() => this.dispatchEvent(new Event('ended')), 25);
@@ -80,7 +81,7 @@ for (const [engine, type] of Object.entries(reproduce ? { chromium } : { chromiu
       }
       await page.locator(selector('native')).focus(); await page.keyboard.press('Alt+w');
       for (let i = 0; i < 8; i++) {
-        const selected = await page.evaluate(() => window.getSelection()?.anchorNode?.parentElement?.closest('button,a,summary,label,[role="button"],[role="tab"]') !== null);
+        const selected = await page.evaluate(() => Boolean(window.getSelection()?.anchorNode?.parentElement?.closest('button,a,summary,label,[role="button"],[role="tab"]')));
         assert.equal(selected, false, 'Keyboard word browsing excludes all controls');
         await page.keyboard.press('ArrowRight');
       }
@@ -89,7 +90,23 @@ for (const [engine, type] of Object.entries(reproduce ? { chromium } : { chromiu
       await page.locator(selector('native')).focus(); await page.keyboard.press('Enter');
       await page.waitForTimeout(70);
       assert.equal(await page.evaluate(() => window.__quiet.words), before, 'Keyboard action buttons stay silent');
-      checks.push({ engine, width, portal, controlsSilent: true, actionsRetained: true, plainTextAudible: true, explicitListeningOnce: true, keyboardBrowseSkipsControls: true });
+      await page.evaluate(() => {
+        HTMLMediaElement.prototype.play = window.__nativePlay;
+        window.__nativeWords = [];
+        window.addEventListener('klink-audio-source', event => {
+          const audio = event.detail, result = { native: audio instanceof HTMLAudioElement, started: false, ended: false };
+          window.__nativeWords.push(result);
+          audio.addEventListener('playing', () => { result.started = true; });
+          audio.addEventListener('ended', () => { result.ended = true; result.duration = audio.duration; });
+        });
+        document.querySelector('#quiet-fixture [data-case="text"]').textContent = 'help';
+      });
+      for (const name of ['text', 'listen']) {
+        const before = await page.evaluate(() => window.__nativeWords.length);
+        await tapWord(page, selector(name));
+        await page.waitForFunction(before => window.__nativeWords.length === before + 1 && window.__nativeWords.at(-1).native && window.__nativeWords.at(-1).started && window.__nativeWords.at(-1).ended && window.__nativeWords.at(-1).duration > 0, before);
+      }
+      checks.push({ engine, width, portal, realTextAndExplicitAudioEnded: true, controlsSilent: true, actionsRetained: true, plainTextAudible: true, explicitListeningOnce: true, keyboardBrowseSkipsControls: true });
       await context.close();
     }
   } finally { await browser.close(); writeFileSync(out + '/checks.json', JSON.stringify({ checks, errors }, null, 2)); }

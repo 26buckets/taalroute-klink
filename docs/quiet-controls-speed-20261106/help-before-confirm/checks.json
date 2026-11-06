@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "width": 1280,
+      "base": "https://klink-pr12-baseline.nico-554.workers.dev",
+      "expectedSilent": false,
+      "wordRequests": 1,
+      "bundleRequests": 1,
+      "responses": [
+        {
+          "path": "/package-audio/word-listening-20261101/words-ea2ed9727291a6c0.bin",
+          "status": 200,
+          "bytes": 2084715,
+          "contentRange": null
+        }
+      ],
+      "settledMs": 5968,
+      "note": "Includes whole unwanted audio bundle download on 3 Mbps"
+    },
+    {
+      "width": 390,
+      "base": "https://klink-pr12-baseline.nico-554.workers.dev",
+      "expectedSilent": false,
+      "wordRequests": 1,
+      "bundleRequests": 1,
+      "responses": [
+        {
+          "path": "/package-audio/word-listening-20261101/words-ea2ed9727291a6c0.bin",
+          "status": 200,
+          "bytes": 2084715,
+          "contentRange": null
+        }
+      ],
+      "settledMs": 5752,
+      "note": "Includes whole unwanted audio bundle download on 3 Mbps"
+    }
+  ],
+  "errors": []
+}
