@@ -79,9 +79,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   border-top: 1px solid #d4ddda;
-  padding: 20px;
+  padding: 8px 20px;
 }
 .pilot-footer > output {
   display: flex;
@@ -137,7 +137,7 @@
     flex-wrap: wrap;
   }
   .pilot-footer {
-    padding: 14px;
+    padding-inline: 14px;
   }
   .pilot-player .cp-choice-grid {
     grid-template-columns: 1fr;
@@ -231,7 +231,8 @@
   .product-root .learner-app [data-pilot-step] .cp-exercise-workspace, .product-root .learner-app [data-pilot-step] .cp-exercise-main { height: 100%; min-height: 0; }
   .product-root .learner-app [data-pilot-step] .cp-exercise-main { display: grid; grid-template-rows: min-content min-content minmax(0, 1fr) min-content; }
   [data-pilot-step] .ac-support-tools { align-items: center; }
-  [data-pilot-step] .pilot-head, [data-pilot-step] .pilot-footer { padding: 10px 16px; }
+  [data-pilot-step] .pilot-head { padding: 10px 16px; }
+  [data-pilot-step] .pilot-footer { padding: 8px 16px; }
   [data-pilot-step] .pilot-head h2:focus { outline: none; }
   .learner-app [data-pilot-step] .cp-exercise-stage { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr); align-items: center; min-height: 0; height: auto; padding: 16px; }
   .learner-app [data-pilot-step] .cp-task-card { min-height: 0; height: auto; grid-column: 2; }

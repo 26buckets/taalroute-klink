@@ -13,11 +13,10 @@
     .cp-view-toggle:disabled, .cp-exercise-tools:not(:has(button:not(:disabled), input, select)) { display: none; }
     .cp-exercise-stage > .cp-task-card { flex: none; height: auto; min-height: 0; max-height: none; overflow: visible; margin: 0 auto; padding: 0; gap: 12px; }
     .cp-task-card > :is(h4, p) { margin-block: 0; }
-    .cp-exercise-feedback { position: static; height: auto; min-height: 0; max-height: none; overflow: visible; padding: 8px 16px; border-top: 0; gap: 8px; }
+    .cp-exercise-feedback { position: static; height: auto; min-height: 0; max-height: none; overflow: visible; padding: 6px 16px; border-top: 0; gap: 8px; }
     .cp-exercise-feedback output { max-height: none; overflow: visible; }
     .cp-exercise-feedback > button { min-height: 48px; }
     .cp-exercise-feedback > button:disabled { display: none; }
-    .cp-exercise-feedback > button > small { display: none; }
     &[data-feedback-needed="false"] .cp-exercise-feedback > :not(button) { display: none; }
     &[data-feedback-needed="false"] .cp-exercise-feedback { display: flex; justify-content: flex-end; }
     &:has([data-inline-check], [data-inline-next]) .cp-exercise-feedback > button { display: none; }
@@ -53,7 +52,7 @@
   .product-root .learner-app.consistent-layout .learner-main:has(.cp-exercise-browser) { padding-bottom: 84px; }
   .product-root .learner-app.consistent-layout .cp-exercise-browser {
     .cp-exercise-stage { padding: 8px; }
-    .cp-exercise-feedback { padding: 8px; }
+    .cp-exercise-feedback { padding-inline: 8px; }
     .cp-exercise-menu-bar { display: flex; flex-wrap: wrap; padding: 0; gap: 4px 8px; }
     .cp-exercise-menu-current { flex-basis: 100%; }
     .cp-exercise-menu-bar > button { flex: 1; white-space: normal; }
@@ -66,4 +65,8 @@
     .cp-exercise-browser .cp-short-answer > :is(.cp-text-entry, button) { grid-row: auto; order: initial; position: static; }
     .cp-exercise-browser .cp-short-answer > .cp-trace-model { max-height: none; }
   }
+}
+
+@media (max-width: 820px), (pointer: coarse) {
+  .cp-exercise-feedback > button > small { display: none; }
 }
