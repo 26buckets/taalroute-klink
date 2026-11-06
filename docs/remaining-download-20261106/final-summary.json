@@ -1,0 +1,70 @@
+{
+  "scope": "Final clean build verification; kept separate from the primary trial",
+  "measuredCommit": "a0656025cdd1c74581ac9a214109148d3ec35964",
+  "rows": [
+    {
+      "portal": "learner",
+      "version": "before",
+      "n": 4,
+      "readyMedianMs": 8202.550000000745,
+      "readyMinMs": 7450,
+      "readyMaxMs": 8714.5,
+      "lastClickWithMediaMedianMs": 1064.4000000003725,
+      "transferMedianBytes": 2541057.5
+    },
+    {
+      "portal": "learner",
+      "version": "after",
+      "n": 4,
+      "readyMedianMs": 7759.6500000003725,
+      "readyMinMs": 7324.900000002235,
+      "readyMaxMs": 8541.60000000149,
+      "lastClickWithMediaMedianMs": 1064.300000000745,
+      "transferMedianBytes": 2407816.0
+    },
+    {
+      "portal": "teacher/plus",
+      "version": "before",
+      "n": 2,
+      "readyMedianMs": 11032.599999999627,
+      "readyMinMs": 10874.300000000745,
+      "readyMaxMs": 11190.89999999851,
+      "lastClickWithMediaMedianMs": 3335.7499999981374,
+      "transferMedianBytes": 2944669.0
+    },
+    {
+      "portal": "teacher/plus",
+      "version": "after",
+      "n": 2,
+      "readyMedianMs": 10835.799999998882,
+      "readyMinMs": 10715.300000000745,
+      "readyMaxMs": 10956.29999999702,
+      "lastClickWithMediaMedianMs": 3352.4999999981374,
+      "transferMedianBytes": 2826938.0
+    }
+  ],
+  "paired": [
+    {
+      "portal": "learner",
+      "n": 4,
+      "faster": 4,
+      "savingsMs": [
+        222.5,
+        125.09999999776483,
+        149.80000000074506,
+        686.3999999985099
+      ],
+      "medianSavingMs": 186.15000000037253
+    },
+    {
+      "portal": "teacher/plus",
+      "n": 2,
+      "faster": 2,
+      "savingsMs": [
+        159.0,
+        234.60000000149012
+      ],
+      "medianSavingMs": 196.80000000074506
+    }
+  ]
+}

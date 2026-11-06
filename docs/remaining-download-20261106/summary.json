@@ -1,0 +1,80 @@
+{
+  "conditions": "Fresh Chromium contexts; alternating variants; 3 Mbps down, 1 Mbps up, 40 ms added latency; no CPU throttling; widths 1280/390; immediate clicks; not a physical mobile device.",
+  "scope": "Incremental build-time preparation against preceding PR12 staging on the same live base, not versus production.",
+  "rows": [
+    {
+      "portal": "learner",
+      "version": "before",
+      "n": 8,
+      "readyMedianMs": 7997.199999999255,
+      "readyMinMs": 7483,
+      "readyMaxMs": 8650.099999997765,
+      "homeMedianMs": 6743.0,
+      "lastClickWithMediaMedianMs": 1072.3999999985099,
+      "transferMedianBytes": 2540968.5
+    },
+    {
+      "portal": "learner",
+      "version": "after",
+      "n": 8,
+      "readyMedianMs": 7559.1500000003725,
+      "readyMinMs": 6917.89999999851,
+      "readyMaxMs": 8821.900000002235,
+      "homeMedianMs": 6441.800000000745,
+      "lastClickWithMediaMedianMs": 1064.9000000003725,
+      "transferMedianBytes": 2402565.5
+    },
+    {
+      "portal": "teacher/plus",
+      "version": "before",
+      "n": 4,
+      "readyMedianMs": 10903.249999998137,
+      "readyMinMs": 10579,
+      "readyMaxMs": 11239.300000000745,
+      "homeMedianMs": 7578.799999998882,
+      "lastClickWithMediaMedianMs": 3337.6500000003725,
+      "transferMedianBytes": 2944871.5
+    },
+    {
+      "portal": "teacher/plus",
+      "version": "after",
+      "n": 4,
+      "readyMedianMs": 10519.25,
+      "readyMinMs": 10273.89999999851,
+      "readyMaxMs": 10820.199999999255,
+      "homeMedianMs": 7115.0999999996275,
+      "lastClickWithMediaMedianMs": 3346.0499999988824,
+      "transferMedianBytes": 2811146.0
+    }
+  ],
+  "paired": [
+    {
+      "portal": "learner",
+      "n": 8,
+      "faster": 7,
+      "savingsMs": [
+        253.69999999925494,
+        688.3000000007451,
+        365.6000000014901,
+        163.80000000074506,
+        -487.6000000052154,
+        416.6000000014901,
+        291.80000000074506,
+        938.1999999992549
+      ],
+      "medianSavingMs": 328.7000000011176
+    },
+    {
+      "portal": "teacher/plus",
+      "n": 4,
+      "faster": 4,
+      "savingsMs": [
+        305.1000000014901,
+        195.59999999776483,
+        707.3000000007451,
+        284.19999999925494
+      ],
+      "medianSavingMs": 294.65000000037253
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "source": "Read-only account evidence supplied by coordinated R2 feasibility chat; checked local result files. No new account query or setting change in this task.",
+  "settingsCheckedAt": "2026-11-06T14:52:45.398Z",
+  "settingsStatus": 200,
+  "defaultUsageModel": "standard",
+  "subscriptionsCheckedAt": "2026-11-06T14:52:45.690Z",
+  "subscriptionsStatus": 403,
+  "planVerified": false,
+  "analyticsCheckedAt": "2026-11-06T14:57:35.329Z",
+  "analyticsScope": "Last 30 days as queried by collecting chat; adaptive analytics, not billing; includes tests; static-only requests excluded.",
+  "selectedAnalytics": [
+    {
+      "dimensions": {
+        "scriptName": "klink-pr12-candidate"
+      },
+      "quantiles": {
+        "cpuTimeP50": 4077,
+        "cpuTimeP99": 40846
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1880,
+        "subrequests": 2490
+      }
+    },
+    {
+      "dimensions": {
+        "scriptName": "klink-pr12-baseline"
+      },
+      "quantiles": {
+        "cpuTimeP50": 6640,
+        "cpuTimeP99": 122078
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1170,
+        "subrequests": 1860
+      }
+    },
+    {
+      "dimensions": {
+        "scriptName": "taalroute-klink"
+      },
+      "quantiles": {
+        "cpuTimeP50": 2760,
+        "cpuTimeP99": 123812
+      },
+      "sum": {
+        "errors": 80,
+        "requests": 90570,
+        "subrequests": 2810
+      }
+    }
+  ],
+  "incrementalWorkerRequestsPerVisit": 0,
+  "incrementalDatabaseRequestsPerVisit": 0,
+  "incrementalR2OperationsPerVisit": 0,
+  "compressionRequestsColdBefore": 4,
+  "compressionRequestsColdAfter": 4,
+  "staticBillingDocumentation": "https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/",
+  "budgetOrPlanChanged": false,
+  "browserCacheChecks": [
+    {
+      "engine": "chromium",
+      "hash": "#learner",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "chromium",
+      "hash": "#learner",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    },
+    {
+      "engine": "chromium",
+      "hash": "#teacher/plus",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "chromium",
+      "hash": "#teacher/plus",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    },
+    {
+      "engine": "webkit",
+      "hash": "#learner",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "webkit",
+      "hash": "#learner",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    },
+    {
+      "engine": "webkit",
+      "hash": "#teacher/plus",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "webkit",
+      "hash": "#teacher/plus",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    }
+  ],
+  "finalBrowserCacheChecks": [
+    {
+      "engine": "chromium",
+      "hash": "#learner",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "chromium",
+      "hash": "#learner",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    },
+    {
+      "engine": "chromium",
+      "hash": "#teacher/plus",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "chromium",
+      "hash": "#teacher/plus",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    },
+    {
+      "engine": "webkit",
+      "hash": "#learner",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "webkit",
+      "hash": "#learner",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    },
+    {
+      "engine": "webkit",
+      "hash": "#teacher/plus",
+      "visit": "cold",
+      "workerAssetNetworkRequests": 4
+    },
+    {
+      "engine": "webkit",
+      "hash": "#teacher/plus",
+      "visit": "warm",
+      "workerAssetNetworkRequests": 0
+    }
+  ]
+}
