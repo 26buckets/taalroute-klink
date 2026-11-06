@@ -42,6 +42,7 @@ const worker = `import app from './index.js';
 ${imports}
 const assets = new Map([${entries}]);
 export default {
+  ...app,
   fetch(request, env, ctx) {
     const asset = assets.get(new URL(request.url).pathname);
     if (!asset) return app.fetch(request, env, ctx);
