@@ -1,0 +1,42 @@
+✔ Matching help describes the actual source and target controls (23.112375ms)
+✔ Whole word groups feed the exercise library, without changing the curriculum (3576.668ms)
+✔ Every first-group word is a target in all basic word activities (0.814708ms)
+✔ Bingo has per-word turns, stable boards, no answer model, and audio gating (48.848333ms)
+✔ Sentence recognition reuses real near-contrast sentences and retains reading conditions (104.44825ms)
+✔ Connected instructions do not change participation into proven skill or unpark the short t (1.086833ms)
+✔ Group progress rejects unknown IDs and never uses lesson-progress keys (0.303291ms)
+✔ All sources are byte-identical, retain IDs/counts/answers/media, and fit bounded immutable bundles (2969.550958ms)
+✔ Every old URL returns its exact original bytes, including query strings (2655.468625ms)
+✔ Old URL headers, conditional requests, ranges, unknown URLs and failed/corrupt bundles (14.549208ms)
+✔ Asset warning thresholds and counting match deployment exclusions (including nested files and negations) (3.793958ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (11966.233417ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.576083ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (14.915917ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (71.351041ms)
+✔ navigation preferences validate input and retain both old route axes (0.741166ms)
+✔ Start restores the last selection while inner bookmarks keep their original scope (4.45425ms)
+✔ Existing public banks and new server banks keep the same validation (84.710917ms)
+✔ Unregistered or malformed server bank URLs fail closed (1.8475ms)
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.724708ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.226333ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.434417ms)
+✔ Every attached precise mark task refers literally to its existing source and question (145.327792ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (114.489916ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (39.037791ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.425083ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.307ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (6067.8975ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (2.799542ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (451.568625ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.944125ms)
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+✔ scripts/test-unified-practice-navigation.mjs (2205.751ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12404.570792
