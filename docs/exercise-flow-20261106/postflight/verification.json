@@ -1,0 +1,45 @@
+{
+  "published": true,
+  "liveSourceCommit": "3e1e49e914893039b234e20620d22b1a399abe9f",
+  "workerVersion": "38d89a3e-d994-4a15-893b-846697fdfe84",
+  "workerTrafficPercent": 100,
+  "normalDeployment": true,
+  "sourceClean": true,
+  "liveExampleChecks": 12,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "viewports": [
+    [
+      1366,
+      600
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "publishedFilesByteVerified": 21,
+  "retainedExistingFiles": 18372,
+  "totalPublishedAssets": 18393,
+  "nativeAudioEnded": true,
+  "browserFullscreen": true,
+  "keyboardAnswerAndNext": true,
+  "progressReloadChecks": 12,
+  "dictationBanksByteVerified": 9,
+  "dictationQuestionsRetainedOnline": 50,
+  "stagingReleaseAndWorkerExactUnchanged": true,
+  "pr12Touched": false,
+  "physicalPhoneTest": false,
+  "contentMediaStorageCodeUnchanged": true,
+  "githubWorkflows": [],
+  "githubActionsRunsStarted": 0,
+  "preflightDriveId": "1pu73BaTDf419QQff3qU4JSe9WIYlujIU",
+  "previewDriveId": "17CbMIyUVCAtsaLXwtXSWWFGZHCl7Rq6j",
+  "notes": [
+    "Native audio log retains an initial navigation cancellation (ERR_ABORTED); requested exercise audio ended successfully.",
+    "No claim of solving previously reported intermittent API/audio delays.",
+    "Bounded read of old local queue status.json timed out; not updated or claimed current."
+  ]
+}
