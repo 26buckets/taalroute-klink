@@ -15,7 +15,7 @@ const save = () => writeFileSync(out + '/visits.json', JSON.stringify({ startedA
 try {
   for (const width of [1280, 390]) for (const portal of portals) for (let repeat = 0; repeat < repeats; repeat++) {
     for (const version of repeat % 2 ? ['after', 'before'] : ['before', 'after']) {
-      const base = remote ? `https://klink-pr12-${version === 'before' ? 'baseline' : 'candidate'}.nico-554.workers.dev` : `http://127.0.0.1:${version === 'before' ? 19122 : 19120}`;
+      const base = version === 'before' && process.env.KLINK_FLOW_BEFORE_BASE || (remote ? `https://klink-pr12-${version === 'before' ? 'baseline' : 'candidate'}.nico-554.workers.dev` : `http://127.0.0.1:${version === 'before' ? 19122 : 19120}`);
       const context = await browser.newContext({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
       try {
         await context.addInitScript(portal => {
