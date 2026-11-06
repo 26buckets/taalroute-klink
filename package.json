@@ -38,7 +38,11 @@
     "predeploy": "node scripts/build-practice-bundles.mjs && npm run images:prepare",
     "postbuild": "node scripts/check-asset-limit.mjs",
     "check:assets": "node scripts/check-asset-limit.mjs",
-    "test:practice-bundles": "node --test scripts/test-practice-bundles.mjs"
+    "test:practice-bundles": "node --test scripts/test-practice-bundles.mjs",
+    "audio:prepare:local": "node scripts/prepare-static-audio-local.mjs",
+    "audio:preview:local": "node scripts/preview-static-audio-local.mjs",
+    "test:static-audio": "node --test scripts/test-static-audio-local.mjs scripts/test-practice-bundles.mjs",
+    "test:static-audio:http": "node scripts/test-static-audio-http.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

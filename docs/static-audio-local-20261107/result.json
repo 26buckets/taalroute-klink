@@ -1,0 +1,358 @@
+{
+  "date": "2026-11-07",
+  "localOnly": true,
+  "liveSource": "8d73a0bda6ba3d13344f319e6863f6f74acb69c3",
+  "baseCommit": "a503cc2ccdde2f29aae87afa5700ae8a015c73e7",
+  "branch": "codex/free-static-audio-20261107",
+  "assets": {
+    "before": 18393,
+    "app": 4562,
+    "audio": 13831
+  },
+  "remaining": {
+    "app": 15438,
+    "audio": 6169
+  },
+  "http": {
+    "expected": 18393,
+    "exactBytes": 18393,
+    "audio": 13831,
+    "errors": [],
+    "contracts": [
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-006ed75f10c4.mp3",
+        "mode": "HEAD",
+        "status": 200,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "audio/mpeg",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-006ed75f10c4.mp3",
+        "mode": "range",
+        "status": 200,
+        "sha256": "d80e426347a1f29998af2e5ddff3b46b86e72c8c7360a3fff495d0258c5064a7",
+        "headers": {
+          "content-type": "audio/mpeg",
+          "content-length": "16449",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-006ed75f10c4.mp3",
+        "mode": "suffix",
+        "status": 200,
+        "sha256": "d80e426347a1f29998af2e5ddff3b46b86e72c8c7360a3fff495d0258c5064a7",
+        "headers": {
+          "content-type": "audio/mpeg",
+          "content-length": "16449",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-006ed75f10c4.mp3",
+        "mode": "query",
+        "status": 200,
+        "sha256": "d80e426347a1f29998af2e5ddff3b46b86e72c8c7360a3fff495d0258c5064a7",
+        "headers": {
+          "content-type": "audio/mpeg",
+          "content-length": "16449",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-006ed75f10c4.mp3",
+        "mode": "cached",
+        "status": 304,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "audio/mpeg",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-08f2810df2b3.wav",
+        "mode": "HEAD",
+        "status": 200,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "audio/wav",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-08f2810df2b3.wav",
+        "mode": "range",
+        "status": 200,
+        "sha256": "d080ff2cc5d0b1b4cc131d60ae16ad54f0adc4ecd3d946eb45746d17811c61af",
+        "headers": {
+          "content-type": "audio/wav",
+          "content-length": "40752",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-08f2810df2b3.wav",
+        "mode": "suffix",
+        "status": 200,
+        "sha256": "d080ff2cc5d0b1b4cc131d60ae16ad54f0adc4ecd3d946eb45746d17811c61af",
+        "headers": {
+          "content-type": "audio/wav",
+          "content-length": "40752",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-08f2810df2b3.wav",
+        "mode": "query",
+        "status": 200,
+        "sha256": "d080ff2cc5d0b1b4cc131d60ae16ad54f0adc4ecd3d946eb45746d17811c61af",
+        "headers": {
+          "content-type": "audio/wav",
+          "content-length": "40752",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/afronding-20261029/KLINK-W-08f2810df2b3.wav",
+        "mode": "cached",
+        "status": 304,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "audio/wav",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/cp001/u01-aud-word-boek.m4a",
+        "mode": "HEAD",
+        "status": 200,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "audio/mp4",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/cp001/u01-aud-word-boek.m4a",
+        "mode": "range",
+        "status": 200,
+        "sha256": "ec5d5a0c583ef440ed53f509795da09fcfdde330cff8ffca2cbadd3d59dc16d3",
+        "headers": {
+          "content-type": "audio/mp4",
+          "content-length": "7095",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/cp001/u01-aud-word-boek.m4a",
+        "mode": "suffix",
+        "status": 200,
+        "sha256": "ec5d5a0c583ef440ed53f509795da09fcfdde330cff8ffca2cbadd3d59dc16d3",
+        "headers": {
+          "content-type": "audio/mp4",
+          "content-length": "7095",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/cp001/u01-aud-word-boek.m4a",
+        "mode": "query",
+        "status": 200,
+        "sha256": "ec5d5a0c583ef440ed53f509795da09fcfdde330cff8ffca2cbadd3d59dc16d3",
+        "headers": {
+          "content-type": "audio/mp4",
+          "content-length": "7095",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/cp001/u01-aud-word-boek.m4a",
+        "mode": "cached",
+        "status": 304,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "audio/mp4",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin",
+        "mode": "HEAD",
+        "status": 200,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin",
+        "mode": "range",
+        "status": 200,
+        "sha256": "2abef46ee709497555de2e367e09aa8d3b1f2e3aff810a008f37e1092a7cbe72",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": "3084588",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin",
+        "mode": "suffix",
+        "status": 200,
+        "sha256": "2abef46ee709497555de2e367e09aa8d3b1f2e3aff810a008f37e1092a7cbe72",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": "3084588",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin",
+        "mode": "query",
+        "status": 200,
+        "sha256": "2abef46ee709497555de2e367e09aa8d3b1f2e3aff810a008f37e1092a7cbe72",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": "3084588",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-listening-20261102/audio-2abef46ee7094975.bin",
+        "mode": "cached",
+        "status": 304,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-messages-texts-20261103/audio-3ce508125e8c8080.bin",
+        "mode": "HEAD",
+        "status": 200,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-messages-texts-20261103/audio-3ce508125e8c8080.bin",
+        "mode": "range",
+        "status": 200,
+        "sha256": "3ce508125e8c80808a5b9106054b6c7ceaf8e4b41efbf27500653d4f2ad2bb13",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": "6354856",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-messages-texts-20261103/audio-3ce508125e8c8080.bin",
+        "mode": "suffix",
+        "status": 200,
+        "sha256": "3ce508125e8c80808a5b9106054b6c7ceaf8e4b41efbf27500653d4f2ad2bb13",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": "6354856",
+          "cache-control": null,
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-messages-texts-20261103/audio-3ce508125e8c8080.bin",
+        "mode": "query",
+        "status": 200,
+        "sha256": "3ce508125e8c80808a5b9106054b6c7ceaf8e4b41efbf27500653d4f2ad2bb13",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": "6354856",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      },
+      {
+        "path": "/package-audio/klink10-messages-texts-20261103/audio-3ce508125e8c8080.bin",
+        "mode": "cached",
+        "status": 304,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "headers": {
+          "content-type": "application/octet-stream",
+          "content-length": null,
+          "cache-control": "public, max-age=0, must-revalidate",
+          "content-range": null,
+          "accept-ranges": null
+        }
+      }
+    ],
+    "blocked404": 39
+  },
+  "lint": {
+    "baselineErrors": 11,
+    "newErrors": 0,
+    "baselineEqual": true,
+    "targetedLintPassed": true
+  },
+  "published": false,
+  "cloudWrites": false
+}

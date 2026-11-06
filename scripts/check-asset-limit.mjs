@@ -9,13 +9,14 @@ export const ASSET_WARNING = 18000;
 export function assetLevel(count) {
   return count > ASSET_LIMIT ? 'error' : count >= ASSET_WARNING ? 'warning' : 'ok';
 }
-export function countAssets(root) {
+export function assetPaths(root) {
   // Match Wrangler's default exclusions and the generated deployment ignore file.
   const matcher = ignore().add(['/.assetsignore', '/_redirects', '/_headers', ...readFileSync(root + '/.assetsignore', 'utf8').split('\n')]);
   const files = readdirSync(root, {recursive: true, withFileTypes: true});
   assert(!files.some(file => file.isSymbolicLink()), 'Asset directories must not contain symbolic links');
-  return files.filter(file => file.isFile() && !matcher.ignores(resolve(file.parentPath, file.name).slice(resolve(root).length + 1))).length;
+  return files.filter(file => file.isFile()).map(file => resolve(file.parentPath, file.name).slice(resolve(root).length + 1)).filter(path => !matcher.ignores(path)).sort();
 }
+export const countAssets = root => assetPaths(root).length;
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const count = countAssets(process.argv[2] || 'dist/client'), level = assetLevel(count);
   const text = `Klink: ${count}/${ASSET_LIMIT} publicatiebestanden; ${ASSET_LIMIT - count} plaatsen over.`;
