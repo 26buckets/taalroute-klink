@@ -1,3 +1,15 @@
+## Actuele publicatie — gebundelde oefenbestanden — 6 november 2026
+
+Livebron `db57924f60e8d632eed0d1b75c9b48a7491da709`, Worker `8a62114e-78f9-4025-8b22-6eb3ffbd8088` (100%). Vanuit schone canonieke main met `npm run deploy`, als afstammeling van bevestigde livebron `cefd22e3220decc663a0e982f63d912906ac4ea9`. De normale publicatiepoort en alle eerdere inhoudsakkoorden blijven actief.
+
+1.720 oefenbestanden naar 113 bundels; 18.393 assets en 1.607 plaatsen vrij. Inhoud/media bytegelijk, oude links behouden, opslag en uiterlijk ongewijzigd. Lokaal volledig gecontroleerd. Live: 20.149 bytecontroles, alle 1.809 blokken, 154 ingangen, 226 bundelopeningen, 32 pixelgelijke schermparen, opslag/schrijven/vensters/Help en alle 81 API-bestanden inclusief HEAD/bereik geslaagd. De volledige herhaling achter elkaar slaagde: 268 toetsenbordstappen en 52 bladopdrachten met echte audio, in Chromium en WebKit op desktop en mobiel.
+
+**Open stabiliteitspunt:** herhaalde live API-aanvragen en drie parallelle native-audioreeksen gaven soms time-outs. Oorzaak niet bewezen en niet als opgelost gemarkeerd; geen volledig groene liveverklaring. Zie `docs/practice-bundles-20261106/postflight/RESULTAAT.md`, `verification.json` en de gecontroleerde Drive-herstelkopie `backup.json`. Geen speculatieve appwijziging of rollback. Geen workflows of betaalde upgrade; geen fysiek telefoontoetsenbord gecontroleerd.
+
+Deze bewijsopvolger wijzigt de runtime niet: niet opnieuw deployen. Gebruik deze main en de genoemde livebron voor vervolgwerk; geen oude checkout publiceren.
+
+---
+
 ## Actuele publicatie — vlot doorwerken bij Hoor en typ — 5 november 2026
 
 Livebron `cefd22e3220decc663a0e982f63d912906ac4ea9`, Worker `3e7dce78-84ae-45d8-8c12-94aec1db0b1b`. Op Nico’s concrete opdracht en bestaande publicatieakkoord via schone canonieke main en `npm run deploy`, als afstammeling van livebron `60c12280847ee54725df9830f1666a7ebfdcfa58`. De aanvullende klikrandenreparatie en alle eerdere inhoud blijven behouden.
