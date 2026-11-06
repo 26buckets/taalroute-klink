@@ -1,3 +1,17 @@
+## Actuele publicatie — time-outs bij gelijktijdige bestandsaanvragen — 6 november 2026
+
+Livebron `7e87eca15c1e5d63fe2b68d6623d9cce0334bce2`, Worker `2e13b337-7d63-4eb6-938d-e049b3defad0` (100%). Op Nico’s expliciete opdracht via schone canonieke main en `npm run deploy`, als afstammeling van de laatst goedgekeurde livebron `3e1e49e914893039b234e20620d22b1a399abe9f`. De nieuwste oefenindeling en antwoordbediening zijn behouden.
+
+Openbare API-bestanden en oude oefenlinks worden vóór de algemene frameworkafhandeling bediend met de bestaande handlers. Inhoud, media, ID’s, links, opslag, toetsenbordbediening en uiterlijk behouden. De **50 woordvragen in negen dictees zijn online, door Nico goedgekeurd en blijven online**; oude offline-/HOLD-notities zijn historisch.
+
+Lokaal volledige behoudcontrole, 4.312 aanvragen op 24 verbindingen, alle 1.809 blokken, normale poort/build en 194 negatieve publicatieproeven. Live 984 begrensde aanvragen met zes verbindingen zonder time-outs; 20.149 exacte bestandscontroles, 268 toetsenbordstappen en 52 bladopdrachten met echte audio, 32 pixelgelijke schermparen, opslag en de nieuwste oefenvoorbeelden geslaagd. De originele live-trigger blijft onbewezen; geen fysieke telefoonproef of nieuwe menselijke luisterreview. Het eerdere stabiliteitspunt is gericht gerepareerd en deze live-herhaling is groen; historische foutlogs blijven bewaard.
+
+18.393 assets, 1.607 plaatsen over. Geen nieuwe inhoud, audio, betaalde dienst, workflows, D1- of stagingwijziging. Audio naar R2 is uitsluitend vervolgadvies, niet uitgevoerd. Zie `docs/concurrent-request-repair-20261106/publication/` voor akkoord/voorcontrole en `postflight/` voor livebewijs en gecontroleerde herstelkopie.
+
+Deze bewijsopvolger wijzigt de runtime niet: niet opnieuw deployen. Gebruik deze main en de genoemde livebron voor vervolgwerk; controleer altijd opnieuw de actuele livebasis.
+
+---
+
 # Nieuwe gedeelde oefenindeling live — 6 november 2026
 
 Op Nico’s expliciete akkoord is de getoonde oefenindeling gepubliceerd via schone canonieke main en de gewone `npm run deploy`.

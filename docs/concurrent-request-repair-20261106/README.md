@@ -1,3 +1,5 @@
+> Statusopvolging: Nico heeft deze reparatie later op 6 november expliciet laten publiceren, na integratie van de nieuwere goedgekeurde livebasis. Zie `publication/` en `postflight/`. De onderstaande lokale fase blijft als historische onderbouwing bewaard.
+
 # Time-outs — lokaal gecontroleerde reparatie, niet gepubliceerd
 
 Nico heeft op 6 november 2026 onderzoek en lokaal herstel gevraagd, met behoud van inhoud, audio, voortgang, links, toetsenbordbediening en uiterlijk. Geen toestemming voor publicatie. De basis is canonieke main f9299b107610c25975fcd2cfb164c0981928385d, een bewijsopvolger van livebron db57924f60e8d632eed0d1b75c9b48a7491da709. De wijziging staat uitsluitend op de lokale branch codex/concurrent-request-repair-20261106.

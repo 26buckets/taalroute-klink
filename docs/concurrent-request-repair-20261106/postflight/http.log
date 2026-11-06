@@ -1,0 +1,29 @@
+Verified 2000
+Verified 4000
+Verified 6000
+Verified 8000
+Verified 10000
+Verified 12000
+Verified 14000
+Verified 16000
+Verified 18000
+Verified 20000
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+0 !== 17570
+
+    at file:///Users/nicoknoester/.cache/klink-practice-bundles-20261106/scripts/test-practice-bundles-http.mjs:33:10
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 17570,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
