@@ -6,7 +6,7 @@ import{writingDictationRounds}from'../lib/writing-dictation.ts';
 const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19206',out=process.env.KLINK_TEST_OUTPUT||'docs/hear-type-focus-20261105/local';
 const row=writingDictationRounds[0],e=row.exercises[0],url=base+'/'+chapterHash({chapter:'writing',activity:'dictation',collection:row.id,level:'alfa-c',help:'practice'}),checks=[];
 for(const[engine,kind]of Object.entries({chromium,webkit})){
- const b=await kind.launch({...(engine==='chromium'?{channel:'chrome'}:{})});try{
+ const b=await kind.launch(engine==='chromium'?{channel:'chrome'}:{});try{
  const p=await b.newPage();await p.addInitScript(()=>{window.audioEnds=0;window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.dataset={};this.paused=true;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;window.audioEnds++;this.dispatchEvent(new Event('ended'));},400);return Promise.resolve();}pause(){clearTimeout(this.timer);this.paused=true;}};});
  await p.goto(url);const task=p.locator('[data-exercise-id="'+e.exerciseId+'"]'),input=task.getByRole('textbox',{name:'Jouw antwoord',exact:true}),listen=task.locator('.cp-exercise-listen');
  await listen.click();await p.waitForFunction(()=>document.activeElement===document.querySelector('.cp-text-entry input'));

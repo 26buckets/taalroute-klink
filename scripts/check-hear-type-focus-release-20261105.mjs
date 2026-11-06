@@ -4,7 +4,7 @@ import{execFileSync}from'node:child_process';
 import{createHash}from'node:crypto';
 const folder='docs/hear-type-focus-20261105/';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
-const expected=['components/product/package-exercise-browser.tsx','scripts/check-dialog-focus-release-20261105.mjs','scripts/check-hear-type-focus-release-20261105.mjs','scripts/test-hear-type-focus-release-20261105.mjs','scripts/test-hear-type-focus-browser-20261105.mjs','scripts/test-hear-type-focus-guards-20261105.mjs','scripts/test-hear-type-appearance-20261105.mjs','scripts/test-writing-dictation-audio-errors-20261101.mjs'].sort();
+const expected=['components/product/package-exercise-browser.tsx','scripts/check-dialog-focus-release-20261105.mjs','scripts/check-hear-type-focus-release-20261105.mjs','scripts/test-hear-type-focus-release-20261105.mjs','scripts/test-hear-type-focus-browser-20261105.mjs','scripts/test-hear-type-focus-guards-20261105.mjs','scripts/test-hear-type-appearance-20261105.mjs','scripts/test-writing-dictation-audio-errors-20261101.mjs'].sort((a,b)=>a<b?-1:a>b?1:0);
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),lines=b=>b.toString().trim().split('\n').filter(Boolean),sha=b=>createHash('sha256').update(b).digest('hex');
 export function verifyHearTypeFocusContent(read=readFileSync){
  const json=p=>JSON.parse(read(p)),release=json(folder+'approval.json'),request=json(folder+'owner-request.json');
@@ -13,8 +13,8 @@ export function verifyHearTypeFocusContent(read=readFileSync){
  assert.equal(release.baselineSourceCommit,'60c12280847ee54725df9830f1666a7ebfdcfa58');
  const before=json(folder+'live-before.json');assert.equal(before.sourceCommit,release.baselineSourceCommit);assert(before.sourceClean);assert.equal(before.branch,'main');
  git('merge-base','--is-ancestor',release.baselineSourceCommit,release.checkedCandidateCommit);git('merge-base','--is-ancestor',release.checkedCandidateCommit,'HEAD');
- const changed=[...new Set([...lines(git('diff','--name-only',release.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort();
- assert.deepEqual(changed,expected);assert.deepEqual(release.changedFiles,expected);assert.deepEqual(Object.keys(release.files).sort(),expected);
+ const changed=[...new Set([...lines(git('diff','--name-only',release.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a<b?-1:a>b?1:0);
+ assert.deepEqual(changed,expected);assert.deepEqual(release.changedFiles,expected);assert.deepEqual(Object.keys(release.files).sort((a,b)=>a<b?-1:a>b?1:0),expected);
  for(const[p,h]of Object.entries({...release.files,...release.evidenceFiles}))assert.equal(sha(read(p)),h,p);
  const native=json(folder+'local/browser.json'),catalog=json(folder+'local/catalog.json');
  assert.equal(native.simulatedAudio,false);assert.equal(native.checks.length,268);assert.equal(native.sheets.length,52);assert.deepEqual(native.errors,[]);assert(native.checks.every(x=>x.keyboardOnlyAnswer&&x.wrongAnswerFocus&&x.nativeAudio));

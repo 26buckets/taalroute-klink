@@ -8,6 +8,7 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 const cloudflareConfig = {
   name: 'taalroute-klink',
   main: 'vinext/server/fetch-handler',
+  assets: { binding: 'ASSETS' },
   compatibility_date: '2026-05-15',
   compatibility_flags: ['nodejs_compat'],
   d1_databases: [
