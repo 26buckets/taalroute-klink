@@ -9,6 +9,7 @@ export function connectedContentModule(data) {
     const value = data[name], map = value instanceof Map;
     const json = JSON.stringify(map ? [...value] : value);
     assert(json !== undefined, `Missing connected-content export: ${name}`);
+    assert.deepEqual(JSON.parse(json), map ? [...value] : value, `${name}: build must preserve every value`);
     const parsed = `/* @__PURE__ */ JSON.parse(${JSON.stringify(json)})`;
     return `export const ${name} = ${map ? `/* @__PURE__ */ new Map(${parsed})` : parsed};`;
   }).join('\n');

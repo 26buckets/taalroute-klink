@@ -10,12 +10,15 @@ const rows = [];
 for (const name of Object.keys(source)) {
   const map = source[name] instanceof Map;
   assert.equal(restored[name] instanceof Map, map);
+  assert.deepEqual(restored[name], source[name], `${name}: preserve exact object fields and values`);
   const original = JSON.stringify(map ? [...source[name]] : source[name]);
   const actual = JSON.stringify(map ? [...restored[name]] : restored[name]);
   assert.equal(actual, original, `${name}: every field, order, level, audio and provenance must remain exact`);
   rows.push({ name, sha256: createHash('sha256').update(actual).digest('hex'), bytes: Buffer.byteLength(actual) });
 }
 assert.throws(() => connectedContentModule({}), /deep-equal/);
+assert.throws(() => connectedContentModule({ ...source, connectedContent: [{ missing: undefined }] }), /preserve every value/);
+assert.throws(() => connectedContentModule({ ...source, connectedContent: [{ count: NaN }] }), /preserve every value/);
 const content = source.connectedContent;
 assert.equal(content.length, JSON.parse(readFileSync('data/klink-connected-content.json')).items.length);
 assert(content.some(item => item.kind === 'dialogue'));
