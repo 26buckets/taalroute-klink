@@ -8,7 +8,7 @@ Nico vroeg: “Ja, werk dit uit voor de hele app. Begin met die drie voorbeelden
 - Geverifieerde main bij aanvang: `f9299b107610c25975fcd2cfb164c0981928385d`, afstammeling van live `db57924f60e8d632eed0d1b75c9b48a7491da709` (build 2026-11-06T01:05:05.344Z, sourceClean true). Geen actuele Worker-providercontrole voor deze lokale opdracht.
 - Bouwt verder op lokaal fotovoorstel `0db1a08`; nog geen push of deploy.
 - Gedeelde oefenindeling voor pakket-, hoofdstuk- en lesoefeningen. Start-/overzichtsschermen en de inhoudelijke routes blijven bestaan.
-- Geen wijzigingen in `lib`, `data`, `public`, afhankelijkheden, opslagmodellen, oefen-ID's of beoordeling van handschrift/vrije tekst. Geen generatie van audio of beelden. De 50 gestopte dictees blijven buiten publicatie. PR12 en staging zijn niet geraakt.
+- Geen wijzigingen in `lib`, `data`, `public`, afhankelijkheden, opslagmodellen, oefen-ID's of beoordeling van handschrift/vrije tekst. Geen generatie van audio of beelden. De inmiddels met een latere afzonderlijke opdracht gepubliceerde dictee-inhoud blijft ongewijzigd; de eerdere stopinformatie was verouderd. PR12 en staging zijn niet geraakt.
 
 ## Gedrag
 
@@ -41,3 +41,7 @@ De meeste interactiecontroles gebruiken snelle gesimuleerde audio. De afzonderli
 De bundel bevat de exacte gewijzigde bronbestanden, hun oorspronkelijke versies, een patch vanaf bovengenoemde main, lokale commitgegevens, controles en schermbeelden. Herstel gebeurt uitsluitend lokaal vanaf die vastgelegde basis; de bundel is geen deploypakket.
 
 Vóór eventuele publicatie: het concrete uiterlijk laten beoordelen door Nico, actuele main/live/Worker en publicatievenster opnieuw vaststellen, op de actuele afstammeling integreren en de normale publicatiepoort uitvoeren. Geen oude checkout opnieuw deployen en geen andere ongepubliceerde wijzigingen meenemen. Geen GitHub Actions gebruikt voor deze lokale controles.
+
+## Publicatieopdracht 6 november 2026
+
+Nico heeft de getoonde indeling goedgekeurd en expliciet publicatie opgedragen. Het exacte akkoord, de actuele basis, controles en herstelbewijs staan in `publication/`. De bovenstaande beschrijving bewaart de eerdere lokale voorbeeldfase.

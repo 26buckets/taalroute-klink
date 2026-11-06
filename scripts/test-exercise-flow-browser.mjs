@@ -4,7 +4,7 @@ import { chromium, webkit } from 'playwright';
 import { taalroutePackages } from '../lib/taalroute-packages.ts';
 import { groupExercises, groupSessionKey } from '../lib/group-practice.ts';
 const base = process.env.KLINK_TEST_BASE || 'http://127.0.0.1:18996';
-const out = 'outputs/exercise-flow-20261106';
+const out = process.env.KLINK_TEST_OUTPUT || 'outputs/exercise-flow-20261106';
 mkdirSync(out, { recursive: true });
 const checks = [], errors = [], media = new Map();
 const pack = taalroutePackages.find(p => p.id === 'groep-1');

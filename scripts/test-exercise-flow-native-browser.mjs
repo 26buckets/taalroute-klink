@@ -1,13 +1,16 @@
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'node:fs';
+const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:18996';
+const out=process.env.KLINK_TEST_OUTPUT||'outputs/exercise-flow-20261106';
+mkdirSync(out,{recursive:true});
 const b=await chromium.launch({channel:'chrome',headless:true});const p=await b.newPage({viewport:{width:1600,height:730}});p.on('response',r=>{if(r.status()>=400)console.log('HTTP',r.status(),r.url())});p.on('requestfailed',r=>console.log('FAIL',r.url(),r.failure()));p.on('pageerror',e=>console.log('ERROR',e.message));
-let closing=false;await p.route('http://127.0.0.1:18996/**', async route => { const u=new URL(route.request().url()); if (/^\/(package-|compact-images|opening-loader|taalroute-menu|audio|images|app-covers|fonts)/.test(u.pathname)) return route.fulfill({response:await p.request.get('https://klink.taalroute.nl'+u.pathname+u.search)}).catch(error=>{if(!closing)throw error;}); return route.continue(); });
+let closing=false;if(process.env.KLINK_TEST_LIVE_MEDIA)await p.route(base+'/**', async route => { const u=new URL(route.request().url()); if (/^\/(package-|compact-images|opening-loader|taalroute-menu|audio|images|app-covers|fonts)/.test(u.pathname)) return route.fulfill({response:await p.request.get('https://klink.taalroute.nl'+u.pathname+u.search)}).catch(error=>{if(!closing)throw error;}); return route.continue(); });
 await p.addInitScript(()=>{window.ended=[];window.addEventListener('klink-audio-source',e=>{const a=e.detail;a.volume=0;a.addEventListener('ended',()=>window.ended.push(a.src));});});
-await p.goto('http://127.0.0.1:18996/#learner/package/groep-1');
+await p.goto(base+'/#learner/package/groep-1');
 await p.locator('.cp-tabs').getByRole('button',{name:'Oefenen met deze woorden',exact:true}).click();
 await p.locator('[data-activity="listen"]').click();
 await p.locator('.cp-choice-grid img').first().waitFor();await p.waitForFunction(()=>[...document.querySelectorAll(".cp-choice-grid img")].filter(e=>e.complete&&e.naturalWidth>0).length===4);await p.waitForTimeout(1500);
-mkdirSync('outputs/word-practice-space',{recursive:true});await p.screenshot({path:'outputs/word-practice-space/native-before-listen.png'});
+await p.screenshot({path:out+'/native-before-listen.png'});
 await p.getByRole('button',{name:'Volledig scherm',exact:true}).click();await p.waitForFunction(()=>Boolean(document.fullscreenElement));
 await p.locator('[data-practice-automatic]').click();
 await p.locator('.cp-exercise-listen').click();
@@ -23,6 +26,6 @@ await p.waitForFunction(()=>!document.querySelector('[data-practice-next]').disa
 await p.locator('[data-practice-next]').click();
 await p.waitForFunction(id=>document.querySelector('[data-exercise-id]')?.getAttribute('data-exercise-id')!==id,id);
 console.log('ANSWER_NEXT_PASS');
-writeFileSync('outputs/exercise-flow-20261106/native-check.json',JSON.stringify({nativeEnded:await p.evaluate(()=>window.ended),keyboardAnswer:true,next:true,fullscreen:true,initialNavigationAudioCancellationObserved:true},null,2));
+writeFileSync(out+'/native-check.json',JSON.stringify({nativeEnded:await p.evaluate(()=>window.ended),keyboardAnswer:true,next:true,fullscreen:true},null,2));
 closing=true;await p.goto('about:blank');await p.unrouteAll({behavior:'wait'});
 await b.close();

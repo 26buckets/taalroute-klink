@@ -17,7 +17,8 @@ for(const[engine,kind]of Object.entries({chromium,webkit})){
  await help.click();await listen.click();await p.waitForFunction(()=>document.activeElement===document.querySelector('.cp-text-entry input'));
  await p.keyboard.press('ArrowLeft');const caret=await input.evaluate(el=>el.selectionStart);await listen.click();await p.waitForFunction(()=>document.activeElement===document.querySelector('.cp-text-entry input'));assert.equal(await input.evaluate(el=>el.selectionStart),caret,'Replay must not select or replace existing text');
  await p.reload();await listen.click();await p.waitForFunction(()=>document.activeElement===document.querySelector('.cp-text-entry input'));assert.equal(await input.inputValue(),'mijn concept');
- await p.keyboard.press('ControlOrMeta+A');await p.keyboard.insertText(e.fields[0].acceptedAnswers[0]);await p.keyboard.press('Enter');await p.waitForFunction(()=>document.activeElement?.hasAttribute('data-practice-next'));
+ await task.locator('[data-practice-automatic]').click();await input.focus();
+ await p.keyboard.press('ControlOrMeta+A');await p.keyboard.insertText(e.fields[0].acceptedAnswers[0]);await p.keyboard.press('Enter');await p.waitForFunction(()=>document.activeElement?.hasAttribute('data-inline-next'));
  await listen.click();const n=await p.evaluate(()=>window.audioEnds);await p.waitForFunction(n=>window.audioEnds>n,n);assert(!(await input.evaluate(el=>el===document.activeElement)),'Replay after success must not return to the answer');
  // In a sheet an old playback must not steal focus from another answer.
  await p.getByRole('button',{name:'Op één blad',exact:true}).click();const first=p.locator('[data-sheet-exercise]').nth(0),second=p.locator('[data-sheet-exercise]').nth(1);
