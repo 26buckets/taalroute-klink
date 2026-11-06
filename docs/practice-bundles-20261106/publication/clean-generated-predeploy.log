@@ -1,0 +1,10 @@
+
+> taalroute-klink@0.1.0 predeploy
+> node scripts/build-practice-bundles.mjs && npm run images:prepare
+
+1720 unchanged practice files in 113 bundles (max 1 MiB).
+
+> taalroute-klink@0.1.0 images:prepare
+> node scripts/prepare-images.mjs
+
+{"checked":1711,"prepared":0,"sourceBytes":295823095,"appBytes":36036583,"maxBytes":98304}

@@ -4,7 +4,7 @@ import {relative, resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import ignore from 'ignore';
 const base = process.env.KLINK_TEST_BASE || 'http://127.0.0.1:19128';
-assert(['localhost', '127.0.0.1'].includes(new URL(base).hostname), 'Local test only');
+assert(['localhost', '127.0.0.1', 'klink.taalroute.nl'].includes(new URL(base).hostname), 'Only local preview or the canonical Klink host');
 const out = process.env.KLINK_TEST_OUTPUT || 'outputs/practice-bundles-20261106';
 const before = 'outputs/practice-bundles-20261106/baseline-dist/client';
 const matcher = ignore().add(['/.assetsignore', '/_headers', '/_redirects', ...readFileSync(before + '/.assetsignore', 'utf8').split('\n')]);

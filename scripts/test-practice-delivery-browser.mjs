@@ -5,7 +5,7 @@ import sharp from 'sharp';
 import {productionIndex,productionAssetUrl} from '../lib/production-practice.ts';
 import {chapterHash,practiceChapters} from '../lib/practice-chapters.ts';
 import {readProductionBank} from './read-production-bank.mjs';
-const base='http://127.0.0.1:19128',before='http://127.0.0.1:19127',out='outputs/practice-bundles-20261106/browser';
+const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19128',before=process.env.KLINK_COMPARE_BASE||'http://127.0.0.1:19127',out=process.env.KLINK_TEST_OUTPUT||'outputs/practice-bundles-20261106/browser';
 mkdirSync(out,{recursive:true});
 const delivery=JSON.parse(readFileSync('data/klink-practice-delivery.json'));
 const rows=productionIndex.filter(row=>Object.hasOwn(delivery,row.url));
@@ -42,7 +42,7 @@ try {
             if(scene==='home'){await page.goto(origin+'/#learner/home');surface=page.locator('.cp-home');}
             else if(scene==='teacher'){await page.goto(origin+'/#teacher/plus?lesson=mat');await page.getByRole('button',{name:'Hulpmiddelen',exact:true}).click();await page.getByRole('button',{name:'Klankbord',exact:true}).click();surface=page.locator('.kpd-tool-dialog[open]');}
             else {const row=rows.find(r=>r.activity===scene);await page.goto(origin+route(row));surface=task(page,row);}
-            await surface.waitFor();await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>document.activeElement.blur());await page.mouse.move(0,0);
+            await surface.waitFor();if(scene==='read-series')await page.waitForFunction(el=>!el.disabled,await surface.locator('[data-practice-next]').elementHandle());await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>document.activeElement.blur());await page.mouse.move(0,0);
             const file=`${out}/${engine}-${width}-${theme}-${scene}-${side}.png`;await surface.screenshot({path:file,animations:'disabled',caret:'hide'});
             pair.push({file,text:await surface.innerText(),geometry:await surface.evaluate(el=>Array.from(el.querySelectorAll('button,input,h2,h3,img')).map(x=>({text:x.textContent,rect:x.getBoundingClientRect().toJSON()})))});await c.close();
           }

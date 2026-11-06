@@ -1,0 +1,79 @@
+
+> taalroute-klink@0.1.0 pretest:curriculum
+> node --test scripts/test-audio-register.mjs
+
+✔ Stable script IDs preserve exact language and separate instruction from target (0.588791ms)
+✔ Later binding is exact, reviewed, branded and never silently replaces current audio (0.101834ms)
+✔ All active word, context, instruction and comprehension audio IDs have a register slot (29.757375ms)
+✔ Prepared scripts remain unplaced, deduplicated by role, with honest archive status (55.448625ms)
+✔ Inventory generation is deterministic, and does not mutate the learner curriculum (713.365833ms)
+✔ Broader domains do not claim a full method from renderers or exercise counts (0.091083ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1562.588875
+
+> taalroute-klink@0.1.0 test:curriculum
+> node --test scripts/test-curriculum.mjs scripts/test-existing-player-curriculum.mjs scripts/test-lesson-extension.mjs scripts/test-listening-route.mjs scripts/test-build-checklist.mjs scripts/test-sentence-comprehension.mjs scripts/test-connected-content.mjs scripts/test-content-routing.mjs scripts/test-sections.mjs scripts/test-mixed-practice.mjs
+
+✔ Every existing step has the same goal checklist, exact bindings and no source mutations (127.250209ms)
+✔ Works requires target coverage, guided connection, word media and instruction audio (0.594584ms)
+✔ One word is consciously not made into a fake comparison; copying is not recognition (0.235125ms)
+✔ Sentence bridge uses only contexts actually attached to the selected meaning and step (30.245958ms)
+✔ All original recorded content is deduplicated, word-linked and reachable in existing players (113.668916ms)
+✔ New listening content never inflates a word lesson or asserts independent reading/mastery (61.762708ms)
+✔ Suit, jug and molar are not attached to verb-only occurrences; no public source references (5.853917ms)
+✔ The published source reference preserves every text, speaker, question and recording pointer (17.732792ms)
+✔ Every Klink route takes its exact content placement from the same Lexicon edition (1.409708ms)
+✔ Recorded texts remain exact and every repeat remains an optional supported-listening proposal (27.466ms)
+✔ Every meaning and all 40 base parts come from the fixed Lexicon edition (1.581417ms)
+✔ All words, core steps and extensions resolve and produce scaffolded activities (8.147375ms)
+✔ Recall never silently introduces words that have not yet been introduced (0.430791ms)
+✔ Long-word prerequisites do not silently place the 78 words in a core group (0.6285ms)
+✔ Every spelling construction produces the original form, including repeated letters (0.293917ms)
+✔ The two pak meanings stay distinct and cannot be ambiguous distractors (0.086333ms)
+✔ Storage is optional, validated and independent from old CP progress (0.187167ms)
+✔ Every linked media file exists; no Drive links or rejected standalone sound (24.586084ms)
+✔ Context pictures remain learning support and never become scored image answers (0.603583ms)
+✔ Compact lesson previews preserve the full lesson and choose target meanings, including recall (64.865583ms)
+✔ Every Lexicon meaning has exactly one first home; all core and extension steps remain exact (0.816208ms)
+✔ Long words retain all five reading routes; support is not mistaken for a core step (0.131ms)
+✔ Guided lessons use explicit IDs, introduce choices first and never borrow from another lesson (6.419625ms)
+✔ Existing renderer contracts have valid answers, tiles, models, and nonambiguous pairs (3.862875ms)
+✔ Both pak meanings remain distinct, missing media is not invented and public files contain no Drive links (38.017208ms)
+✔ Only the established learner, teacher and exercise players are mounted; existing CSS remains the shell (0.42475ms)
+✔ All 302 routes have a complete status inventory and monotonically ordered phases (135.320458ms)
+✔ Dictation and independent rebuilding never contain a visible model; missing audio excludes them (1.274ms)
+✔ Gap items mask a complete source unit with two prepared distinct alternatives (1.371666ms)
+✔ Single-word entry has no manufactured choice or pair; matching uses unique prepared meanings and images (0.513667ms)
+✔ Route cursor is validated, meaning-safe and separate from mastery; completion has a real next lesson (0.43625ms)
+✔ Explicit release approval does not turn recording/self-check into mastery (0.398625ms)
+✔ Playback waits for actual completion, handles denial/errors, cancels, and reuses the unlocked element (1.332417ms)
+✔ Eight sentences and four situations reuse exact authored Taalroute text and audio without fabricated approval (303.265917ms)
+✔ Every active mode has a separate-voice instruction script; absent recordings stay explicit (0.463084ms)
+✔ All six first-section words are targets, not just distractors, in each applicable mode (3.053584ms)
+✔ Fifteen sections retain their own words and valid media across varied rounds (156.402458ms)
+✔ Seeded order and retries are reproducible; invalid saved sessions are rejected (1.034708ms)
+✔ Cross-section review never pulls in an unprepared future section automatically (1.432875ms)
+✔ Owner publication authorization does not pretend independent review happened (0.069291ms)
+✔ Choice sorting segments each spelling only once and preserves Unicode distractors (0.596416ms)
+✔ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (638.670709ms)
+✔ Former group 2 resumes at its actual exercise; first a steps remain small and consecutive (0.540541ms)
+✔ Approved navigation photos remain separate from every preserved word cover (4.148ms)
+✔ Eight authored questions cover the existing sentences with real evidence, feedback and stable bindings (1.1705ms)
+✔ Guided questions use prepared options; oral contrasts stay explicit and optional (7.601666ms)
+✔ Condition and conjunction items cannot be solved by spotting only the subject word (0.122333ms)
+✔ Teacher checklist reports connected, optional and absent comprehension without claiming independent reading (1.778209ms)
+✔ Released audio retains separate roles, embedded Taalroute branding and explicit user approval (248.264583ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 949.956291
