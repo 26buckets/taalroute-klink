@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <head>{process.env.NODE_ENV === 'production' && <Script strategy="beforeInteractive" src="/workspace-preload.js" async />}<Script strategy="beforeInteractive" src="/taalroute-menu/appearance.js" data-preference-key="taalroute-klink-appearance-v1"/><Script strategy="beforeInteractive" src="/taalroute-menu/menu-controls.js?v=delen-20261024" data-share-app="klink"/></head>
+      <head>{process.env.NODE_ENV === 'production' && <Script id="klink-workspace-preload" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: "if(location.pathname==='/'&&location.hash.startsWith('#learner')){const s=document.createElement('script');s.src='/workspace-preload.js';s.async=true;document.head.appendChild(s)}" }} />}<Script strategy="beforeInteractive" src="/taalroute-menu/appearance.js" data-preference-key="taalroute-klink-appearance-v1"/><Script strategy="beforeInteractive" src="/taalroute-menu/menu-controls.js?v=delen-20261024" data-share-app="klink"/></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased klink-motion`}
       >

@@ -18,12 +18,12 @@ export function workspacePreloads(manifest) {
     visit(entries[0]);
     return [...files];
   };
-  return { learner: collect('learner-app'), teacher: collect('staff-apps') };
+  return { learner: collect('learner-app') };
 }
 
 export function preloadScript(paths) {
-  // Fetch only the chosen workspace's existing static dependencies; do not execute them early.
-  return `(()=>{if(location.pathname!=='/')return;const p=location.hash.startsWith('#learner')?'learner':location.hash.startsWith('#teacher')?'teacher':null;if(!p)return;const paths=${JSON.stringify(paths)};for(const href of paths[p]){if(document.querySelector('link[rel="modulepreload"][href="'+href+'"]'))continue;const link=document.createElement('link');link.rel='modulepreload';link.crossOrigin='';link.href=href;document.head.appendChild(link)}})();\n`;
+  // Earlier teacher downloads regressed first opening in the controlled staging trial.
+  return `(()=>{if(location.pathname!=='/'||!location.hash.startsWith('#learner'))return;for(const href of ${JSON.stringify(paths.learner)}){if(document.querySelector('link[rel="modulepreload"][href="'+href+'"]'))continue;const link=document.createElement('link');link.rel='modulepreload';link.crossOrigin='';link.href=href;document.head.appendChild(link)}})();\n`;
 }
 
 if (process.argv[1]?.endsWith('/build-workspace-preload.mjs')) {

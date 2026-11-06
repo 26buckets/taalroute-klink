@@ -5,7 +5,7 @@ import { chromium } from 'playwright';
 const remote = process.env.KLINK_OPENING_REMOTE === '1';
 const repeats = Number(process.env.KLINK_FLOW_REPEATS ?? (remote ? 2 : 1));
 assert(Number.isInteger(repeats) && repeats >= 1 && repeats <= 10, 'Use one to ten paired repetitions per viewport and portal');
-const portals = process.env.KLINK_FLOW_LEARNER_ONLY === '1' ? ['learner'] : ['learner', 'teacher/plus'];
+const portals = process.env.KLINK_FLOW_LEARNER_ONLY === '1' ? ['learner'] : process.env.KLINK_FLOW_TEACHER_ONLY === '1' ? ['teacher/plus'] : ['learner', 'teacher/plus'];
 const out = process.env.KLINK_FLOW_OUTPUT || 'docs/total-download-20261105/first-exercise';
 assert(!existsSync(out + '/visits.json'), 'Preserve previous measurements');
 mkdirSync(out, { recursive: true });
@@ -103,6 +103,8 @@ try {
   }
   assert.equal(rows.length, 4 * portals.length * repeats);
   assert.deepEqual(errors, []);
-  assert.equal(new Set(rows.filter(row => row.portal === 'learner').map(row => row.exerciseId)).size, 1, 'Compare exactly the same task');
-  assert.equal(new Set(rows.filter(row => row.portal === 'learner').map(row => JSON.stringify(row.exerciseImages))).size, 1, 'Compare the same decoded exercise images');
+  if (portals.includes('learner')) {
+    assert.equal(new Set(rows.filter(row => row.portal === 'learner').map(row => row.exerciseId)).size, 1, 'Compare exactly the same task');
+    assert.equal(new Set(rows.filter(row => row.portal === 'learner').map(row => JSON.stringify(row.exerciseImages))).size, 1, 'Compare the same decoded exercise images');
+  }
 } finally { await browser.close(); save(); }

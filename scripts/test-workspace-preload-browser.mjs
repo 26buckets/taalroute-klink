@@ -25,8 +25,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       const cold = await snapshot();
       if (!hash) assert(!cold.resources.some(r => /(?:route-settings|learner-app|staff-apps|practice-source-bank|practice-word-bank)-/.test(r.path)));
       if (hash === '#learner') assert(!cold.resources.some(r => /(?:staff-apps|learner-rounds|teacher-classroom)-/.test(r.path)));
-      const chosen = hash.startsWith('#teacher') ? 'teacher' : 'learner';
-      if (hash && !blocked) for (const path of paths[chosen]) {
+      if (!hash.startsWith('#learner')) assert(!cold.resources.some(r => r.path === '/workspace-preload.js'), 'No extra request outside the learner workspace');
+      if (hash.startsWith('#learner') && !blocked) for (const path of paths.learner) {
         assert(cold.links.includes(path), `${engine}: ${path} preloaded`);
         assert.equal(cold.resources.filter(r => r.path === path).length, 1, 'No duplicate module fetch');
       }
