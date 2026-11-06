@@ -1,3 +1,4 @@
+import delivery from '../data/klink-practice-delivery.json' with { type: 'json' };
 import support from '../data/klink-b1-reading-support.json' with { type: 'json' };
 import guidedSelections from '../data/klink-guided-word-selections.json' with { type: 'json' };
 import meaningContexts from '../data/klink-meaning-contexts.json' with { type: 'json' };
@@ -8,6 +9,7 @@ import { sourceSpellingRecallIds } from './source-spelling-review.ts';
 
 export const productionIndex = index;
 export function productionAssetUrl(contentUrl: string) {
+  if (Object.hasOwn(delivery, contentUrl)) return (delivery as Record<string, { bundleUrl: string }>)[contentUrl].bundleUrl;
   const row = productionIndex.find(item => item.url === contentUrl);
   return row && 'bundleUrl' in row && typeof row.bundleUrl === 'string' ? row.bundleUrl : contentUrl;
 }

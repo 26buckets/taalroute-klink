@@ -1,7 +1,7 @@
 import {readProductionBank} from './read-production-bank.mjs';
 import assert from 'node:assert/strict';
 import {writeFileSync,mkdirSync} from 'node:fs';
-import {productionIndex} from '../lib/production-practice.ts';
+import {productionIndex,productionAssetUrl} from '../lib/production-practice.ts';
 import {practiceChapters,chapterHash} from '../lib/practice-chapters.ts';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18937';
@@ -44,9 +44,9 @@ try{
  // Failed fetch is visible and retry recovers; subsequent navigation uses its own data.
  const retryRow=productionIndex.find(r=>r.activity==='copy');
  await page.goto(base+'/#learner/home');
- await page.route('**'+retryRow.url,route=>route.fulfill({status:503,body:'temporary test outage'}));
+ await page.route('**'+productionAssetUrl(retryRow.url),route=>route.fulfill({status:503,body:'temporary test outage'}));
  await page.goto(url(retryRow));await page.getByRole('button',{name:'Probeer opnieuw',exact:true}).waitFor();
- await page.unroute('**'+retryRow.url);await page.getByRole('button',{name:'Probeer opnieuw',exact:true}).click();
+ await page.unroute('**'+productionAssetUrl(retryRow.url));await page.getByRole('button',{name:'Probeer opnieuw',exact:true}).click();
  await page.locator(`[data-exercise-id="${data(retryRow)[0].exerciseId}"]`).waitFor();checks.push('Fetch failure and retry recover');
  for(const width of [390,320]){
   await page.setViewportSize({width,height:844});

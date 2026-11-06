@@ -18,6 +18,8 @@ export function PracticeLine({ available, selected, onSelect }: { available?: st
     // Keyboard events inside an iframe do not bubble to the dialog.
     const dismiss = (event: MessageEvent) => {
       if (event.origin !== location.origin || event.source !== frame.current?.contentWindow) return;
+      // These messages carry keyboard navigation out of the explanation frame.
+      if (event.data === 'klink:close-explanation' || event.data === 'klink:focus-close') delete document.documentElement.dataset.pointerInput;
       if (event.data === 'klink:close-explanation') setExplanation(null);
       if (event.data === 'klink:focus-close') { window.focus(); close.current?.focus(); }
     };

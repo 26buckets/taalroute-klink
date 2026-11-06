@@ -9,6 +9,7 @@ import './learner-ui.css';
 import './landing.css';
 import './taalroute-header.css';
 import './learner-layout.css';
+import './exercise-flow.css';
 import './sounds.css';
 import './teaching.css';
 import './motion.css';

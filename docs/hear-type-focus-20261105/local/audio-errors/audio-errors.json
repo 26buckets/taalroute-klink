@@ -1,0 +1,43 @@
+{
+  "base": "http://127.0.0.1:19206",
+  "simulatedPlayback": false,
+  "checks": [
+    {
+      "engine": "chromium",
+      "sheet": false,
+      "failedRequests": 1,
+      "realAudio": true,
+      "answerBlockedAfter503": true,
+      "retryRecovered": true,
+      "correctAcceptedAfterNativePlayback": true
+    },
+    {
+      "engine": "chromium",
+      "sheet": true,
+      "failedRequests": 1,
+      "realAudio": true,
+      "answerBlockedAfter503": true,
+      "retryRecovered": true,
+      "correctAcceptedAfterNativePlayback": true
+    },
+    {
+      "engine": "webkit",
+      "sheet": false,
+      "failedRequests": 1,
+      "realAudio": true,
+      "answerBlockedAfter503": true,
+      "retryRecovered": true,
+      "correctAcceptedAfterNativePlayback": true
+    },
+    {
+      "engine": "webkit",
+      "sheet": true,
+      "failedRequests": 1,
+      "realAudio": true,
+      "answerBlockedAfter503": true,
+      "retryRecovered": true,
+      "correctAcceptedAfterNativePlayback": true
+    }
+  ],
+  "errors": []
+}

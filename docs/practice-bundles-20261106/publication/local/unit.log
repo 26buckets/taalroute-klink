@@ -1,0 +1,16 @@
+
+> taalroute-klink@0.1.0 test:practice-bundles
+> node --test scripts/test-practice-bundles.mjs
+
+✔ All sources are byte-identical, retain IDs/counts/answers/media, and fit bounded immutable bundles (2716.441708ms)
+✔ Every old URL returns its exact original bytes, including query strings (2147.12625ms)
+✔ Old URL headers, conditional requests, ranges, unknown URLs and failed/corrupt bundles (11.135042ms)
+✔ Asset warning thresholds and counting match deployment exclusions (including nested files and negations) (2.641417ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4948.032125

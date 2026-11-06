@@ -1,0 +1,15 @@
+# Oefenen met deze woorden — lokaal opmaakvoorstel, 6 november 2026
+
+Nico meldde dat bij tas · map de bovenliggende bediening het oefenvlak verdrukt en foto's miniaturen worden, terwijl scrollen niet helpt. Dit is de concrete lokale uitwerking voor die melding; nog geen publicatie of afzonderlijk uiterlijkakkoord.
+
+Basis: remote main f9299b107610c25975fcd2cfb164c0981928385d. Zelf gelezen livebron db57924f60e8d632eed0d1b75c9b48a7491da709, builtAt 2026-11-06T01:05:05.344Z, sourceClean true. Afstamming met git merge-base gecontroleerd. IMPLEMENTEREN bevestigde dat geen actief venster of werk voor dit scherm liep. Worker niet zelfstandig via de provider gecontroleerd.
+
+Oorzaak: de gedeelde viewporthoogte trok de extra pakketnavigatie van het oefenvlak af, waarna de foto-antwoorden meeschrompelden. overscroll-behavior: contain op het oefenvlak verhinderde bovendien doorrollen naar de buitenste pagina.
+
+Wijziging: uitsluitend CSS voor actieve pakket-/groepsrondes. De onderdeeltabs maken tijdelijk plaats en keren terug via Alle oefeningen. Terug en weergavekeuze staan naast elkaar waar dat past; op mobiel blijven beide weergaveknoppen naast elkaar. De pakkettitel schuift met de pagina mee. Foto-antwoorden krijgen voldoende hoogte; op brede schermen staan precies vier foto's in één rij. Muiswielbeweging kan door naar de pagina. Geen inhoud, media, audio, IDs, opslag of runtimecode gewijzigd. Gewone hoofdstukrondes buiten deze pakketspeler behouden hun opmaak.
+
+Controle: scripts/test-package-photo-space-browser.mjs, lokaal met ongewijzigde publieke media. Chromium en WebKit, elk 1600×730, 1366×768, 1366×600, 390×844, 320×568 en 740×390; lichte en donkere stand verdeeld over de gevallen. Alle 12 controles geslaagd: echte foto's geladen; hoogte minimaal 120 px; geen horizontale overloop of interne fotoscroll; echte muiswielbediening bereikt feedback; blad/één-voor-één wisselen; terug naar tabs/woorden; bestaande voortgangssentinel behouden; geen JS-fouten. Fotohoogte bij 1600×730: 38 px live vóór, 240 px lokaal na. Op kleine schermen 152–178 px. Schermbeelden visueel bekeken voor desktop en smal mobiel.
+
+Afzonderlijke proef met echte browseraudio: map-opname eindigde, correct antwoord via Enter en Verder naar volgende vraag werkten. De snelle overgang van woorden naar oefenen annuleerde één initiële woordopname en kon een melding tonen; dat is buiten deze CSS-wijziging, niet hersteld of verborgen. De brede layouttest gebruikt gesimuleerde audio; geen volledige luisterreeksclaim. Een testafsluiting met nog lopende mediaproxy gaf eerst een harnessfout; na afwachten van de proxy voltooide de proef.
+
+Geen fysieke telefoonproef, volledige productiebuild of livepublicatie. Vóór eventuele publicatie actuele main/live/Worker en venster opnieuw vaststellen en gewone publicatiepoort volgen. Het zichtbare voorstel vraagt volgens VORMGEVING-VASTGEZET.md afzonderlijk akkoord. Bewaar oorspronkelijke referenties; geen automatische vervanging van de vastgezette uiterlijkvloer.

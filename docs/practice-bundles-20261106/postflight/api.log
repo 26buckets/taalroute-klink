@@ -1,0 +1,31 @@
+curl: (28) Operation timed out after 45003 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45004 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45005 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45003 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45004 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45005 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45006 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45004 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45006 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45006 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45006 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45006 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45004 milliseconds with 0 bytes received
+Traceback (most recent call last):
+  File "/Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/check-live-api.py", line 10, in <module>
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:rows=list(pool.map(check,assets.items()))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 608, in result_iterator
+    yield fs.pop().result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 445, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/check-live-api.py", line 8, in check
+    part=subprocess.check_output(['curl','-fsS','--max-time','45','-H','Range: bytes=0-31',url]);assert part==body[:32],name
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['curl', '-fsS', '--max-time', '45', '-H', 'Range: bytes=0-31', 'https://klink.taalroute.nl/api/grammar-aa-assets/e019fef4749f9b9774e2fc5b81453c03cec2e960b7f8dae6c790ceeb256f85a0.mp3']' returned non-zero exit status 28.

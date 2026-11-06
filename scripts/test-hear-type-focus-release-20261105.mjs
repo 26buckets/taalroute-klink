@@ -1,0 +1,6 @@
+import assert from'node:assert/strict';import{readFileSync}from'node:fs';import{verifyHearTypeFocusContent,verifyHearTypeFocusRelease}from'./check-hear-type-focus-release-20261105.mjs';
+const folder='docs/hear-type-focus-20261105/';verifyHearTypeFocusRelease();
+for(const file of ['components/product/package-exercise-browser.tsx',folder+'owner-request.json',folder+'local/browser.json',folder+'local/catalog.json',folder+'local/guards.json',folder+'local/appearance/checks.json',folder+'preservation.json'])assert.throws(()=>verifyHearTypeFocusContent(path=>path===file?Buffer.concat([readFileSync(path),Buffer.from('changed')]):readFileSync(path)));
+for(const key of ['fullReadback','zipIntegrity','allPayloadHashesMatch'])assert.throws(()=>verifyHearTypeFocusRelease(path=>path===folder+'backup.json'?Buffer.from(JSON.stringify({...JSON.parse(readFileSync(path)),[key]:false})):readFileSync(path)));
+for(const key of ['baselineSourceCommit','checkedCandidateCommit'])assert.throws(()=>verifyHearTypeFocusContent(path=>path===folder+'approval.json'?Buffer.from(JSON.stringify({...JSON.parse(readFileSync(path)),[key]:'0'.repeat(40)})):readFileSync(path)));
+console.log('PASS hear/type publication proof and 12 rejected source, evidence, ancestry and backup mutations.');

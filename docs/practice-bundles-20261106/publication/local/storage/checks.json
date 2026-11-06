@@ -1,0 +1,43 @@
+{
+  "base": "http://127.0.0.1:19128",
+  "simulatedAudio": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "staleTabs": true,
+      "realLock": true,
+      "reload": true
+    },
+    {
+      "engine": "chromium",
+      "change": "grow",
+      "existingCompletionKept": true,
+      "removedIdsExcluded": true
+    },
+    {
+      "engine": "chromium",
+      "change": "shrink",
+      "existingCompletionKept": true,
+      "removedIdsExcluded": true
+    },
+    {
+      "engine": "webkit",
+      "staleTabs": true,
+      "realLock": true,
+      "reload": true
+    },
+    {
+      "engine": "webkit",
+      "change": "grow",
+      "existingCompletionKept": true,
+      "removedIdsExcluded": true
+    },
+    {
+      "engine": "webkit",
+      "change": "shrink",
+      "existingCompletionKept": true,
+      "removedIdsExcluded": true
+    }
+  ],
+  "errors": []
+}

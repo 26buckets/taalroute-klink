@@ -1,3 +1,64 @@
+# Nieuwe gedeelde oefenindeling live — 6 november 2026
+
+Op Nico’s expliciete akkoord is de getoonde oefenindeling gepubliceerd via schone canonieke main en de gewone `npm run deploy`.
+
+- Livebron: `3e1e49e914893039b234e20620d22b1a399abe9f`, gebouwd 2026-11-06T11:55:35.979Z.
+- Worker: `38d89a3e-d994-4a15-893b-846697fdfe84`, 100% actief op https://klink.taalroute.nl.
+- Compacte oefenkoppen, grote fotokeuzes, inhoud krijgt de benodigde hoogte; de onderbalk bedekt geen antwoorden.
+- Controleer/Verder naast korte antwoorden. Enter controleert; goed gaat na feedback automatisch verder wanneer niet gepauzeerd. Fout blijft staan. Spatie blijft tekst in invoervelden en Enter blijft een nieuwe regel in vrije tekst. Geen automatische beoordeling van handschrift/vrije tekst toegevoegd.
+- Inhoud, media, ID’s, routes en opslagcode ongewijzigd. De 50 goedgekeurde woordvragen blijven online: negen actuele banken exact teruggelezen, 50 vragen behouden. De oude offline-melding is achterhaald.
+
+De normale publicatiepoort slaagde, met 1.979 audiobestanden gecontroleerd. Lokale resultaten en herstel staan in de afzonderlijke voorcontroleback-up. Live zijn 12 voorbeeldflows in Chromium/WebKit op desktop/mobiel geslaagd, inclusief antwoordbediening, pauze, terug en herladen. Echte audio is tot het einde afgespeeld en browserfullscreen is gecontroleerd. Alle 21 gewijzigde appbestanden zijn exact teruggelezen; 18.372 bestaande bestanden bleven behouden. Staging-release én actieve Worker zijn exact gelijk aan vóór publicatie; PR12 niet meegenomen.
+
+Geen fysieke telefoonproef. De al bekende incidentele API/audio-vertragingen zijn niet als opgelost geclaimd. De audiolog bewaart een geannuleerde aanvraag bij navigatie, gevolgd door geslaagde echte oefenaudio. Geen D1-, budget-, workflow- of afhankelijkheidswijzigingen. Zware controles lokaal, geen GitHub Actions gestart.
+
+Definitief livebewijs en bronherstel, volledig teruggelezen: https://drive.google.com/file/d/1Z4ulFkTU9O-Sp9GlCmHQK1hsFzgK6N7G/view
+
+Voorcontrole en bronherstel: https://drive.google.com/file/d/1pu73BaTDf419QQff3qU4JSe9WIYlujIU/view
+Goedgekeurde preview: https://drive.google.com/file/d/17CbMIyUVCAtsaLXwtXSWWFGZHCl7Rq6j/view
+
+De bewijscommit na deze livebron is uitsluitend documentatie: niet opnieuw deployen. Controleer bij volgende wijzigingen de dan actuele livebron, main en het publicatievenster.
+
+---
+
+## Actuele publicatie — gebundelde oefenbestanden — 6 november 2026
+
+Livebron `db57924f60e8d632eed0d1b75c9b48a7491da709`, Worker `8a62114e-78f9-4025-8b22-6eb3ffbd8088` (100%). Vanuit schone canonieke main met `npm run deploy`, als afstammeling van bevestigde livebron `cefd22e3220decc663a0e982f63d912906ac4ea9`. De normale publicatiepoort en alle eerdere inhoudsakkoorden blijven actief.
+
+1.720 oefenbestanden naar 113 bundels; 18.393 assets en 1.607 plaatsen vrij. Inhoud/media bytegelijk, oude links behouden, opslag en uiterlijk ongewijzigd. Lokaal volledig gecontroleerd. Live: 20.149 bytecontroles, alle 1.809 blokken, 154 ingangen, 226 bundelopeningen, 32 pixelgelijke schermparen, opslag/schrijven/vensters/Help en alle 81 API-bestanden inclusief HEAD/bereik geslaagd. De volledige herhaling achter elkaar slaagde: 268 toetsenbordstappen en 52 bladopdrachten met echte audio, in Chromium en WebKit op desktop en mobiel.
+
+**Open stabiliteitspunt:** herhaalde live API-aanvragen en drie parallelle native-audioreeksen gaven soms time-outs. Oorzaak niet bewezen en niet als opgelost gemarkeerd; geen volledig groene liveverklaring. Zie `docs/practice-bundles-20261106/postflight/RESULTAAT.md`, `verification.json` en de gecontroleerde Drive-herstelkopie `backup.json`. Geen speculatieve appwijziging of rollback. Geen workflows of betaalde upgrade; geen fysiek telefoontoetsenbord gecontroleerd.
+
+Deze bewijsopvolger wijzigt de runtime niet: niet opnieuw deployen. Gebruik deze main en de genoemde livebron voor vervolgwerk; geen oude checkout publiceren.
+
+---
+
+## Actuele publicatie — vlot doorwerken bij Hoor en typ — 5 november 2026
+
+Livebron `cefd22e3220decc663a0e982f63d912906ac4ea9`, Worker `3e7dce78-84ae-45d8-8c12-94aec1db0b1b`. Op Nico’s concrete opdracht en bestaande publicatieakkoord via schone canonieke main en `npm run deploy`, als afstammeling van livebron `60c12280847ee54725df9830f1666a7ebfdcfa58`. De aanvullende klikrandenreparatie en alle eerdere inhoud blijven behouden.
+
+Alleen de gedeelde antwoordbediening verandert: na het luisteren direct typen, Enter controleert, nogmaals Enter gaat verder. Ook herhalen en herstel na een fout antwoord geven de cursor terug zonder de tekst of cursorpositie te vervangen. Bewuste focus op Help of een andere vraag wordt gerespecteerd. Geen wijzigingen aan inhoud, media, routes, opslag, CSS, logo of vastgezette opmaak.
+
+Lokaal: 482 toetsenbordstappen over alle 122 luisterrondes, 268 stappen en 52 bladopdrachten met echte audio, tien focusbehoudgevallen, acht gelijke voor/na-opmaakparen, vier audiofout/herstelgevallen, zes opslag- en acht Help-controles, 49 curriculum- en zeven schrijf-/navigatietests, types, lint en normale build. Live: opnieuw 268 + 52 echte audiostappen, tien focusbehoud-, vier audioherstel-, zes opslag- en acht Help-controles; alle 81 API-bestanden exact inclusief HEAD/bereik. Inhoudskenmerken van release.json ongewijzigd. Normale uitrol: 20 nieuwe + 19.980 behouden = 20.000 assets. Geen workflows of betaalde upgrade.
+
+De onlangs toegevoegde reeks bevat **50 woordvragen in negen dictees**: zeven blokken van zes en twee van vier. Gebruik voor heldere telling ‘9 woorddictees · 50 woordvragen’; ‘50 dictees’ in oudere historische notities duidde individuele woordvragen aan. Geen uitbreiding naar 300 vragen.
+
+Bronakkoord en lokaal bewijs: `docs/hear-type-focus-20261105/`. Livebewijs en gecontroleerde Drive-herstelkopie: `docs/hear-type-focus-20261105/postflight/`. Fysiek telefoontoetsenbord niet gecontroleerd; geen nieuwe menselijke luisterreview of audioproductie. Deze bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
+## Actuele publicatie — aanvullende klikranden inclusief Klink+docent — 5 november 2026
+
+Livebron `60c12280847ee54725df9830f1666a7ebfdcfa58`, Worker `9dde3e87-e714-4e8b-bada-63242a54f3fd` (100%). Op expliciete opdracht via schone canonieke main en `npm run deploy`, vanaf bevestigde livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49` met de 50 dictees. Alleen drie runtimebestanden veranderen: gerichte pointerfocus bij docent-/deel-/uitlegvensters, met behoud van toetsenbordfocus inclusief terugkeer uit de uitlegvideo. De bestaande audiofeedback blijft intact; Help, appel en peer, 1.809 banken, inhoud, audio, opslag en overige vormgeving behouden.
+
+Normale poort/build, types, lint, 49 curriculumproeven en 52 negatieve vrijgaveproeven geslaagd. Live: 64 venster-, 8 Help-, 6 opslag- en 12 schrijfproeven; 8 pixelgelijke voor/na-schermparen, 2 aanraak- en 2 echte audiostromen. Alle 8.134 media exact; 81 API-bestanden exact inclusief HEAD/bereik; 50 dictee-opnamen exact met Taalroute-metadata en volledige decode. De laadtijdafhankelijkheid van één iframeproef is in het bewijs uitgelegd, zonder productwijziging.
+
+De eerste uitrolpoging met één extra technisch bestand is door de gratis limiet afgewezen. Door de identieke focusfunctie in het bestaande MotionFeedback-bestand onder te brengen telt de succesvolle uitrol 22 nieuwe + 19.978 behouden = 20.000 assets. Geen betaalde upgrade, workflows of configuratieomweg.
+
+Bronakkoord en lokaal bewijs: `docs/focus-audit-all-20261105/publication-final/`. Livebewijs en gecontroleerde Drive-herstelkopie: `docs/focus-audit-all-20261105/postflight/RESULTAAT.md` en `backup.json`. Geen fysieke telefoon- of schermlezerclaim. Deze bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — vijftig dictees — 5 november 2026
 
 Livebron `ca2633c1da422cfd4e765e0e8c3713159ed29b49`, Worker `279e2254-a1d4-446e-93a0-36962ce2fd64`. Op Nico’s definitieve expliciete akkoord via schone canonieke main en `npm run deploy`, vanaf de actuele goedgekeurde livebron `43c05c9d4c40adb5373d564e6131d5dbdd90d546`. Alleen de twee inhoudsregisters veranderen de app; nieuwste Help-bediening, uiterlijk, logo, alle eerdere inhoud, media en voortgang behouden.

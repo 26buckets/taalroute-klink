@@ -1,3 +1,7 @@
+## Aanvullende klikranden — Nico, 5 november 2026
+
+Op concrete audit- en publicatieopdracht vervallen ook de onbedoelde klikranden bij openen en sluiten van Klink+docent-hulpmiddelen, Delen en uitlegvensters. Toetsenbordfocus blijft zichtbaar, inclusief terugkeer uit de uitlegvideo. Alleen drie gecontroleerde bronbestanden wijzigen het gedrag; inhoud, media, opslag, Help in de oefenbalk, appel en peer en alle overige vormgeving blijven behouden. Bronopdracht en behoudbewijs: `docs/focus-audit-all-20261105/publication-final/`. De oorspronkelijke vormgevingsvloer blijft bewaard.
+
 ## Help in de oefenbalk — Nico, 5 november 2026
 
 Nico keurde de concrete plek rechts naast Foto en Tekst goed en gaf opdracht om die samen met het voorbeeld “appel en peer” te publiceren. De oefenhulp blijft tijdens scrollen bereikbaar, opent direct bij de knop en behoudt de bestaande luister-, antwoord- en hulplogica. Luister blijft op zijn bestaande plek. Geen algemene herindeling. Bronopdracht en controles: `docs/help-en-context-20261105/`.

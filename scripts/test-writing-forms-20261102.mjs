@@ -13,7 +13,7 @@ void test('The shared delivery asset selects each exact source bank and leaves o
  const bytes=readFileSync('public'+manifest.deliveryBundle.src),bundle=JSON.parse(bytes),sha=b=>createHash('sha256').update(b).digest('hex');
  assert.equal(bytes.length,manifest.deliveryBundle.bytes);assert.equal(sha(bytes),manifest.deliveryBundle.sha256);assert.equal(Object.keys(bundle.banks).length,21);
  for(const {row,sha256} of manifest.newRows){assert.equal(productionAssetUrl(row.url),manifest.deliveryBundle.src);const source=Buffer.from(bundle.banks[row.id]);assert.equal(sha(source),sha256);assert(source.equals(readFileSync('public'+row.url)));assert.deepEqual(validateProductionCollection(bundle,row.id,row.count),JSON.parse(source).exercises);}
- const old=json('data/klink-production-index.json')[0];assert.equal(productionAssetUrl(old.url),old.url);
+ const old=json('data/klink-production-index.json')[0];assert.equal(validateProductionCollection(json('public'+productionAssetUrl(old.url)),old.id,old.count).length,old.count);
  assert.throws(()=>validateProductionCollection(bundle,'missing-bank',1));assert.throws(()=>validateProductionCollection(bundle,manifest.newRows[0].row.id,1));
 });
 void test('Every original source card,field label and395 model values stays bound to its own current document',()=>{

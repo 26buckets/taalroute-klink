@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"engine":"webkit","width":390,"theme":"dark","scene":"read-series","changedPixels":7123}
+
+7123 !== 0
+
+    at file:///Users/nicoknoester/.cache/klink-practice-bundles-20261106/scripts/test-practice-delivery-browser.mjs:52:80 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 7123,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

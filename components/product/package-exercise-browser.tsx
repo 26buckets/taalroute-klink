@@ -2,6 +2,7 @@
 import handwritingHints from '@/data/klink-handwriting-help-20261103.json';
 import { WordAudioText, isWordAudioClick } from './word-audio-text';
 import { useExerciseViewTarget } from './exercise-view';
+import { PracticeActionContext, PracticeCheckButton } from './practice-action';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseHelp, ExerciseListen } from './exercise-listen';
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
@@ -192,7 +193,6 @@ function PackageExercisePlayer({
   const [audioError, setAudioError] = useState(false);
   const [autoPaused, setAutoPaused] = useState(false);
   const [keyboardMode, setKeyboardMode] = useState(false);
-  const keyboardUsed = useRef(false);
   const advancing = useRef(false);
   const [recording, setRecording] = useState(false);
   const [holdFeedback, setHoldFeedback] = useState(false);
@@ -224,10 +224,11 @@ function PackageExercisePlayer({
   const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);
   const firstLetterGuide = exercise && hasFirstLetterGuide(exercise, guided);
   const manualAdvance = exercise?.mode === 'connected-dialogue' || exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));
-  const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !keyboardMode && !holdFeedback && !audioPending && !wordAudioPending && !recording;
+  const checkedWriting = exercise?.componentId === 'ALF-CMP-012' && exercise.handwritingOnly !== true && !exercise.hideWritingModel;
+  const automatic = guided && !exerciseMenuOpen && result === 'right' && (!selfPaced || checkedWriting) && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending && !wordAudioPending && !recording;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   const keyboard = usePracticeKeyboard({ enabled: !exerciseMenuOpen, busy: audioPending || recording, allowAudioNext: result === 'right' && !recording,
-    onUse: () => { keyboardUsed.current = true; setKeyboardMode(true); },
+    onUse: () => { setKeyboardMode(true); },
     onListen: () => { const source = stimulus ?? findAudioSource(exercise); if (source) void listen(source); },
   });
   useWordListeningHelp(keyboard.ref, phase => {
@@ -242,8 +243,8 @@ function PackageExercisePlayer({
   });
   useEffect(() => { advancing.current = false; }, [exerciseId, completed]);
   useEffect(() => {
-    if (keyboardMode && result === 'right' && !recording && keyboard.ref.current?.dataset.practiceFocusNext === 'true') keyboard.ref.current.querySelector<HTMLButtonElement>('[data-practice-next]:not(:disabled)')?.focus({ preventScroll: true });
-  }, [keyboardMode, result, audioPending, recording, keyboard.ref]);
+    if (keyboardMode && !automatic && result === 'right' && !recording && keyboard.ref.current?.dataset.practiceFocusNext === 'true') keyboard.ref.current.querySelector<HTMLButtonElement>('[data-practice-next]:not(:disabled)')?.focus({ preventScroll: true });
+  }, [keyboardMode, automatic, result, audioPending, recording, keyboard.ref]);
   async function listen(source?: string, automaticStart = false, singleTurn?: number) {
     if ((exercise?.readingTask || (exercise?.componentId === 'KLINK-EXTENDED' && !(exercise.synonymPairId && source === stimulus)) || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
     if (!automaticStart && result === 'right') setHoldFeedback(true);
@@ -335,6 +336,13 @@ function PackageExercisePlayer({
     return () => { window.clearTimeout(timer); currentId.current = ''; playback.current?.abort(); stopMedia(); };
   }, [exerciseId, guided, exercise?.synonymPairId]);
 
+  useEffect(() => {
+    if (!canAnswer || result === 'right') return;
+    const input = exerciseStage.current?.querySelector<HTMLInputElement>('.cp-dictation-form input:not(:disabled), .cp-short-answer input:not(:disabled)');
+    const active = document.activeElement;
+    if (input && (active === document.body || active === taskHeading.current || active === input || active?.matches('[data-practice-listen]'))) input.focus({ preventScroll: true });
+  }, [exerciseId, canAnswer, result]);
+
   function chooseFamily(nextFamilyId: string) {
     if (guided) return;
     setFamilyId(nextFamilyId);
@@ -416,7 +424,7 @@ function PackageExercisePlayer({
 
   function next() {
     if (advancing.current || (audioPending && result !== 'right') || recording || practiceBusy(keyboard.ref.current, result === 'right')) return;
-    if (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || exercise.requiresExplicitCompletion) && result !== 'right'))) return;
+    if (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || checkedWriting || exercise.requiresExplicitCompletion) && result !== 'right'))) return;
     advancing.current = true;
     playback.current?.abort();
     stopMedia();
@@ -433,7 +441,7 @@ function PackageExercisePlayer({
     } else openAt((recordIndex + 1) % records.length);
   }
 
-  const advanceAfterFeedback = useEffectEvent(() => { if (!keyboardUsed.current) next(); });
+  const advanceAfterFeedback = useEffectEvent(() => next());
   const pacedReading = (exercise?.mode === 'read-series' || (exercise?.mode === 'paper-dictation' && !exercise.handwritingOnly)) && !readingSupportForExercise(exercise) && !wordMeaningContexts(exercise).length;
   useEffect(() => {
     const update = () => setPageVisible(!document.hidden);
@@ -470,19 +478,21 @@ function PackageExercisePlayer({
   const titleText = exercise.title || family?.label || 'Oefenen';
   const titleUnits = asArray<number>(exercise.writingTitleUnits);
   const titleContent = exercise.writingSourceId && titleUnits.length ? <span style={{ font: 'inherit', color: 'inherit', margin: 0 }}>{wordAudioParts(titleText).map((part, index) => titleUnits.includes(part.start) ? <span style={{ display: 'inline', font: 'inherit', color: 'inherit', margin: 0 }} key={index} data-word-listening-units="sound">{part.text}</span> : part.text)}</span> : titleText;
+  const nextDisabled = (audioPending && result !== 'right') || recording || (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || checkedWriting || exercise.requiresExplicitCompletion === true) && result !== 'right')));
+  const nextLabel = guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.handwritingOnly === true || exercise.sourceForm === true || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder';
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
               <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button data-practice-listen className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{titleContent}</button> : titleContent}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button data-practice-previous aria-keyshortcuts="ArrowLeft" title="Vorige oefening (←)" onClick={() => { if (!audioPending && !recording && !practiceBusy(keyboard.ref.current)) { if (guided) openGuidedAt(guidedIndex - 1); else openAt(recordIndex - 1); } }} disabled={audioPending || recording || (guided ? guidedIndex <= 0 : recordIndex === 0)} aria-label="Vorige oefening"><ArrowLeft /></button>
-              {guided && !firstLetterGuide && !manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button data-practice-automatic aria-label={autoPaused || keyboardMode ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused || keyboardMode} onClick={() => { const paused = autoPaused || keyboardMode; keyboardUsed.current = false; setKeyboardMode(false); setAutoPaused(!paused); }}>{autoPaused || keyboardMode ? <Play /> : <Pause />}</button>}
+              {guided && !firstLetterGuide && !manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button data-practice-automatic aria-label={autoPaused ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused} onClick={() => { const paused = autoPaused; setKeyboardMode(false); setAutoPaused(!paused); }}>{autoPaused ? <Play /> : <Pause />}</button>}
               <b aria-label={`${guided ? 'Stap' : 'Oefening'} ${guided ? guidedIndex + 1 : recordIndex + 1} van ${guided ? exercises.length : records.length}`}>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
               {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
               <span ref={setInfoTarget} className="cp-exercise-info-slot">{(exercise.componentId !== 'KLINK-CONTENT' || Boolean((exercise.contentTask as {teacherWorkflow?:unknown}|undefined)?.teacherWorkflow)) && <LearnerExerciseInfo key={exercise.exerciseId} exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }} />}</span>
             </nav>);
   return (
-    <section {...keyboard} onClickCapture={event => { if (isWordAudioClick(event)) { metrics.current.helpUsed = true; playback.current?.abort(); setAudioPending(false); setSpeakingOptionId(''); } }} data-practice-ready={result === 'right'} className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
+    <section {...keyboard} onClickCapture={event => { if (isWordAudioClick(event)) { metrics.current.helpUsed = true; playback.current?.abort(); setAudioPending(false); setSpeakingOptionId(''); } }} data-practice-ready={result === 'right'} data-feedback-needed={result !== 'idle' || !canAnswer || audioError || returnedToUnfinished} className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
       <header>
         <div>
           <span className="eyebrow">{eyebrow}</span>
@@ -507,6 +517,7 @@ function PackageExercisePlayer({
               return <option key={value} value={value}>{isQuestion ? `Luistervraag ${questionModes.indexOf(item) + 1}: ${item.title}` : asString(item.contentTitle) || item.title}</option>;
             })}</select></label>}
             {audioError && <div className="cp-audio-retry"><span>Het geluid kon niet starten.</span><button className="secondary-button" onClick={() => { if (instructionFailed) explainedModes.current.delete(exercise.instructionAudio?.src ?? ''); void listen(stimulus ?? findAudioSource(exercise)); }}><Volume2 />Opnieuw luisteren</button></div>}
+            <PracticeActionContext value={{ ready: result === 'right', next, disabled: nextDisabled, label: nextLabel }}>
             <ExerciseSurface
               key={exercise.exerciseId}
               exercise={exercise}
@@ -528,14 +539,15 @@ function PackageExercisePlayer({
               answeredCorrectly={result === 'right'}
               onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }}
             />
+            </PracticeActionContext>
           </div>
 
           <footer className={`cp-exercise-feedback ${result}`}>
             {result === 'idle' && <Shapes />}
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
-            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' || !audioPending ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={(audioPending && result !== 'right') || recording || (guided && ((result !== 'right' && !canAnswer) || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right')))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.handwritingOnly === true || exercise.sourceForm === true || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
+            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced && !checkedWriting ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' || !audioPending ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
+            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={nextDisabled} onClick={next}>{nextLabel}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
           </footer>
         </div>
       </div>
@@ -797,6 +809,23 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
   const fields = asArray<TextField>(exercise.fields);
   const writingId = writingAnswerSourceId(exercise);
   const { value, ready: writingReady, error: writingError, change } = useWritingAnswer(writingId);
+  const answerInput = useRef<HTMLInputElement>(null);
+  const [completedListens, setCompletedListens] = useState(0);
+  const hearAndType = exercise.requiresAudio && ['word-dictation', 'sentence-dictation'].includes(exercise.mode);
+  useEffect(() => {
+    const input = answerInput.current;
+    if (!hearAndType || !canAnswer || !writingReady || answeredCorrectly || !input || input.disabled || !input.getClientRects().length) return;
+    const scope = input.closest('[data-practice-item], [data-exercise-id]');
+    const active = document.activeElement;
+    // Keep a learner's deliberate move to Help, a dialog or another question.
+    if (active !== document.body && active !== input && active !== scope && !(scope?.contains(active) && active?.matches('[data-practice-listen], [data-practice-check], .cp-exercise-info-heading, .cp-audio-retry button'))) return;
+    input.focus({ preventScroll: true });
+  }, [hearAndType, canAnswer, writingReady, answeredCorrectly, completedListens]);
+  const listenForAnswer: AudioPlayer = async (source, options) => {
+    const played = await onAudio(source, options);
+    if (played !== false && source === exercise.prompt?.audio?.src) setCompletedListens(count => count + 1);
+    return played !== false;
+  };
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
   async function submit() {
     if (!canAnswer || !writingReady || !value.trim()) return;
@@ -810,7 +839,7 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
     onFinish(value, correct, feedback);
     if (reveal) onHelp();
   }
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { void change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={hearAndType ? listenForAnswer : onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input ref={answerInput} disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { void change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><PracticeCheckButton type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></PracticeCheckButton></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {
@@ -1077,7 +1106,7 @@ function TraceSurface({ exercise, onAudio, onFinish, onReset, canAnswer }: Surfa
     {revealed ? <><strong className="cp-paper-model">{target}</strong><p>Vergelijk met jouw woord.</p><button data-practice-check className="primary-button" onClick={() => onFinish(value, normalize(value) === normalize(target), 'Bespreek jouw schrijfwerk met je docent.')}>Klaar<Check /></button></>
       : <button data-practice-check className="primary-button" disabled={!canAnswer || !value.trim()} onClick={() => setRevealed(true)}>Vergelijk<Check /></button>}
   </section>;
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Typ de letter hieronder.' : 'Typ dit woord hieronder.'} Papier is een extra.</span></div>{input}<button data-practice-check className="primary-button" disabled={!value.trim() || !canAnswer} onClick={() => onFinish(value, normalize(value) === normalize(target), 'Vergelijk jouw antwoord met het model.')}>Ik heb geschreven<Check /></button></section>;
+  return <section className="cp-task-card cp-short-answer"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Typ de letter hieronder.' : 'Typ dit woord hieronder.'} Papier is een extra.</span></div>{input}<PracticeCheckButton className="primary-button" disabled={!value.trim() || !canAnswer} onClick={() => onFinish(value, normalize(value) === normalize(target), 'Vergelijk jouw antwoord met het model.')}>Controleer<Check /></PracticeCheckButton></section>;
 }
 
 function OwnSentenceSurface({ exercise, onAudio, onFinish, onReset, onHelp, onRecordingChange, canAnswer }: SurfaceProps & { onReset: () => void; onHelp: () => void; canAnswer: boolean }) {

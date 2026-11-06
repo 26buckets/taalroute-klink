@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {verifyDialogFocusRelease,readBeforeDialogFocus} from './check-dialog-focus-release-20261105.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -7,13 +8,14 @@ const roots=['app','components','hooks','data','lib','public','scripts','db','dr
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex');
 const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort();
 export function verifyDictation50Content(read=readFileSync){
+ const successor=verifyDialogFocusRelease(read),currentRead=read;read=file=>readBeforeDialogFocus(file,successor,currentRead);
  const json=p=>JSON.parse(read(p)),r=json(root+'approval.json'),request=json(root+'owner-request.json');
  assert.equal(request.userRequest,'Ik ben overal mee akkoord, zet online. Dit is de laatste keer dat je dit aan me vraagt.');
  assert.equal(request.approvedBy,'Nico');assert(request.publicationApproved&&request.ownerAcceptsDisclosedOpenHumanReview);
  assert.equal(request.humanReview,'NOT_PERFORMED');assert.equal(r.baselineSourceCommit,'43c05c9d4c40adb5373d564e6131d5dbdd90d546');
  assert.equal(r.liveSourceCommit,r.baselineSourceCommit);assert.equal(json(root+'live-before.json').sourceCommit,r.liveSourceCommit);
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  assert.deepEqual(changed.filter(p=>!p.startsWith('scripts/')),['data/klink-grammar-aa-assets.json','data/klink-production-index.json']);
  for(const[p,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(p)),h,p);
@@ -44,10 +46,10 @@ export function verifyDictation50Content(read=readFileSync){
  assert.equal(json(root+'local/sheet.json').checks.length,18);
  const help=json(root+'local/help.json');assert.equal(help.checks.length,8);assert(help.checks.every(c=>c.helpStayedVisible&&c.openAndClosePreserved&&c.enWithPhoto&&c.enWithoutPhoto));
  const checks=json(root+'verification.json');assert(checks.typesPassed&&checks.lintPassed&&checks.normalBuildPassed&&checks.curriculumTests===49&&checks.priorBanksUnchanged===1800);
- return r;
+ return {...r,successor};
 }
 export function verifyDictation50Release(read=readFileSync){
  const r=verifyDictation50Content(read),backup=JSON.parse(read(root+'backup.json'));
  assert(backup.driveId&&backup.fullReadback&&backup.zipIntegrity&&backup.allPayloadHashesMatch);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return r;
 }
-export function readBeforeDictation50(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeDictation50(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeDialogFocus(file,r.successor,read);}

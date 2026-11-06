@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {mkdirSync,writeFileSync} from 'node:fs';
+const {chromium,webkit}=createRequire(process.cwd()+'/package.json')('playwright'),sharp=createRequire(process.cwd()+'/package.json')('sharp');
+const out='docs/focus-audit-all-20261105/postflight/appearance',before='docs/focus-audit-all-20261105/publication-final/touch-appearance';mkdirSync(out,{recursive:true});const checks=[],touch=[];
+for(const[engine,type]of Object.entries({chromium,webkit})){const b=await type.launch();try{
+for(const width of[1366,390])for(const theme of['light','dark']){
+const p=await b.newPage({viewport:{width,height:900},colorScheme:theme,reducedMotion:'reduce'});await p.addInitScript(t=>localStorage.setItem('taalroute-klink-appearance-v1',t),theme);await p.goto('https://klink.taalroute.nl/#teacher/plus?lesson=mat');await p.getByRole('button',{name:'Hulpmiddelen',exact:true}).click();await p.getByRole('button',{name:'Klankbord',exact:true}).click();await p.locator('.kpd-tool-dialog[open]').waitFor();await p.evaluate(()=>document.fonts.ready);await p.evaluate(()=>document.activeElement.blur());await p.mouse.move(0,0);await p.waitForTimeout(200);const file=`${out}/${engine}-${width}-${theme}.png`;await p.screenshot({path:file,animations:'disabled'});await p.close();
+const a=await sharp(`${before}/${engine}-${width}-${theme}-live.png`).ensureAlpha().raw().toBuffer(),z=await sharp(file).ensureAlpha().raw().toBuffer();assert.equal(a.length,z.length);let changed=0;for(let i=0;i<a.length;i+=4)if([0,1,2,3].some(k=>Math.abs(a[i+k]-z[i+k])>2))changed++;checks.push({engine,width,theme,changedPixels:changed});
+}
+const p=await b.newPage({viewport:{width:390,height:844},isMobile:true,hasTouch:true});await p.goto('https://klink.taalroute.nl/#teacher/plus?lesson=mat');await p.getByRole('button',{name:'Hulpmiddelen',exact:true}).tap();await p.getByRole('button',{name:'Klankbord',exact:true}).tap();assert.equal(await p.locator('.kpd-tool-dialog header button').evaluate(e=>getComputedStyle(e).outlineStyle),'none');await p.getByRole('button',{name:'Terug naar de les',exact:true}).tap();assert.equal(await p.getByRole('button',{name:'Klankbord',exact:true}).evaluate(e=>getComputedStyle(e).outlineStyle),'none');touch.push({engine,touchOpen:true,touchReturn:true});await p.close();
+}finally{await b.close();}}
+writeFileSync(out+'/checks.json',JSON.stringify({checks,touch},null,2));assert(checks.every(r=>r.changedPixels===0),'Inspect visual differences');console.log('PASS eight actual before/after live screenshots and two live touch flows');

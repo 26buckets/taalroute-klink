@@ -1,0 +1,21 @@
+curl: (28) Operation timed out after 45010 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45010 milliseconds with 0 bytes received
+curl: (28) Operation timed out after 45010 milliseconds with 0 bytes received
+Traceback (most recent call last):
+  File "/Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/check-live-api-sequential.py", line 10, in <module>
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:rows=list(pool.map(check,assets.items()))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 608, in result_iterator
+    yield fs.pop().result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 445, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/check-live-api-sequential.py", line 6, in check
+    body=subprocess.check_output(['curl','-fsS','--retry','2','--max-time','45',url]);assert body==expected,name
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['curl', '-fsS', '--retry', '2', '--max-time', '45', 'https://klink.taalroute.nl/api/grammar-aa-assets/db82790a4fa55e924cbd77adf67e6b6c02143ac1a92d7f2561e251d02bb5d36b.webp']' returned non-zero exit status 28.

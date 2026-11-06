@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: 'Op één blad', exact: true })[22m
+
+    at /Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/native-diagnostic.mjs:56:378
+    at async file:///Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/native-diagnostic.mjs:24:6
+    at async file:///Users/nicoknoester/.cache/klink-practice-bundles-20261106/outputs/practice-bundles-20261106/postflight/native-diagnostic.mjs:22:5 {
+  log: [
+    "  - waiting for getByRole('button', { name: 'Op één blad', exact: true })"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0
