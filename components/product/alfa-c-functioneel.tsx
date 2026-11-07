@@ -166,7 +166,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
       </div>
       <footer className="pilot-footer">
         {result === 'done' && <button className="secondary-button" onClick={() => { setResult('idle'); setHelp(true); setRetry(true); markHelp(); void guide(step.retryVisible); }}><RefreshCw />Nog eens</button>}
-        <button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || !['right', 'done'].includes(result)} onClick={onNext}>Verder<ArrowRight /></button>
+        <button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || !['right', 'done'].includes(result)} data-mobile-continue onClick={onNext}>Verder<ArrowRight /></button>
       </footer>
     </div></div>
   </section>;

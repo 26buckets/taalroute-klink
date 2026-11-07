@@ -70,3 +70,38 @@
 @media (max-width: 820px), (pointer: coarse) {
   .cp-exercise-feedback > button > small { display: none; }
 }
+
+@media (max-width: 820px) {
+  .learner-app.consistent-layout {
+    --continue-menu-offset: var(--learner-bottom-menu-height);
+  }
+  .product-root .learner-app.consistent-layout .learner-main [data-mobile-continue]:enabled {
+    position: fixed;
+    z-index: 35;
+    inset-inline-end: max(12px, env(safe-area-inset-right));
+    bottom: calc(max(var(--continue-menu-offset), env(safe-area-inset-bottom)) + 8px);
+    min-width: 44px;
+    min-height: 48px;
+  }
+  /* The shared footer can have a hidden copy when the short-answer action is inline. */
+  .product-root .learner-app.consistent-layout .learner-main:is(
+    :has([data-inline-next][data-mobile-continue]:enabled),
+    :has(.cp-exercise-feedback > [data-mobile-continue]:enabled):not(:has([data-inline-check], [data-inline-next]))
+  ) {
+    padding-bottom: calc(var(--continue-menu-offset) + 72px);
+    scroll-padding-bottom: calc(var(--continue-menu-offset) + 72px);
+    &[data-keyboard-open="true"] {
+      padding-bottom: 64px;
+      scroll-padding-bottom: 64px;
+      [data-mobile-continue]:enabled {
+        position: fixed;
+        top: calc(var(--exercise-viewport-top) + var(--exercise-visible-height) - 8px);
+        bottom: auto;
+        translate: 0 -100%;
+      }
+    }
+  }
+}
+@media (max-width: 820px) and (max-height: 700px) {
+  .learner-app.consistent-layout:has(.cp-text-entry, .cp-form-fields, .ac-document-page) { --continue-menu-offset: 0px; }
+}

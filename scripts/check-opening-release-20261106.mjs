@@ -96,7 +96,32 @@ const footerFiles = [
  'components/product/alfa-c-practice.css', 'components/product/alfa-c-workspace.css', 'components/product/teacher-classroom.css',
 ];
 const footerPaths = [...footerFiles, footerFloor, 'scripts/check-opening-release-20261106.mjs'].sort();
-function verifyFooter(read) {
+const mobileBase = '8170c5a0a3f76ba4d528ef7de3bb7fa02234a6e0';
+const mobileApproval = 'docs/appearance-floor-20261031/approved-updates/mobile-continue-20261107.json';
+const mobilePaths = [
+ 'app/exercise-flow.css', 'app/learner-layout.css', 'components/product/alfa-c-dagelijks.tsx',
+ 'components/product/alfa-c-functioneel.tsx', 'components/product/package-exercise-browser.tsx',
+ 'components/product/practice-action.tsx', footerFloor, 'scripts/check-opening-release-20261106.mjs',
+].sort();
+function verifyMobileContinue(read) {
+ const r = JSON.parse(read(mobileApproval));
+ assert.equal(r.approvedBy, 'Nico');
+ assert.equal(r.publicationApproved, true);
+ assert.equal(r.baselineSourceCommit, mobileBase);
+ assert.equal(r.liveSourceCommit, '9f928feae98456b654a52c3930384801900810eb');
+ assert.equal(r.scope, 'mobile-verder-only');
+ assert.equal(r.appMenuChanged, false);
+ assert.equal(r.checkAndFeedbackMoved, false);
+ git('merge-base', '--is-ancestor', r.liveSourceCommit, mobileBase);
+ git('merge-base', '--is-ancestor', mobileBase, 'HEAD');
+ const changed = [...new Set([...lines(git('diff', '--name-only', mobileBase, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort();
+ assert.deepEqual(changed, [...mobilePaths, mobileApproval].sort());
+ assert.deepEqual(Object.keys(r.files).sort(), mobilePaths);
+ for (const path of mobilePaths) assert.equal(sha(read(path)), r.files[path], path);
+ const prior = JSON.parse(git('show', mobileBase + ':' + footerFloor));
+ assert.deepEqual(JSON.parse(read(footerFloor)), {...prior, approvedUpdates:[...prior.approvedUpdates, mobileApproval]});
+}
+function verifyFooter(read, end = []) {
  const r = JSON.parse(read(footerApproval));
  assert.equal(r.approvedBy, 'Nico');
  assert.equal(r.publicationApproved, true);
@@ -107,7 +132,7 @@ function verifyFooter(read) {
  assert.equal(r.fixedPositionApproved, false);
  git('merge-base', '--is-ancestor', r.liveSourceCommit, footerBase);
  git('merge-base', '--is-ancestor', footerBase, 'HEAD');
- const changed = [...new Set([...lines(git('diff', '--name-only', footerBase, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort();
+ const changed = [...new Set([...lines(git('diff', '--name-only', footerBase, ...end, '--', ...roots)), ...(end.length ? [] : lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots)))])].sort();
  assert.deepEqual(changed, [...footerPaths, footerApproval].sort());
  assert.deepEqual(Object.keys(r.files).sort(), footerPaths);
  for (const path of footerPaths) assert.equal(sha(read(path)), r.files[path], path);
@@ -116,10 +141,16 @@ function verifyFooter(read) {
 }
 export function verifyOpeningRelease(read = readFileSync) {
  const currentRead = read;
+ const mobile = existsSync(mobileApproval);
+ if (mobile) {
+  verifyMobileContinue(read);
+  read = path => mobilePaths.includes(path) ? git('show', mobileBase + ':' + path) : currentRead(path);
+ }
  const footer = existsSync(footerApproval);
  if (footer) {
-  verifyFooter(read);
-  read = path => footerPaths.includes(path) ? git('show', footerBase + ':' + path) : currentRead(path);
+  verifyFooter(read, mobile ? [mobileBase] : []);
+  const beforeMobile = read;
+  read = path => footerPaths.includes(path) ? git('show', footerBase + ':' + path) : beforeMobile(path);
  }
  const end = footer ? [footerBase] : [];
  const json = path => JSON.parse(read(path)), r = json(folder + 'approval.json');
@@ -141,9 +172,10 @@ export function verifyOpeningRelease(read = readFileSync) {
  const speed = json(folder + 'normal-vs-live/visits.json'); assert.equal(speed.rows.length, 8); assert.deepEqual(speed.errors, []);
  assert(read(folder + 'unit-final.log').toString().includes('fail 0')); assert.equal(read(folder + 'types.log').toString().trim(), '');
  const backup = json(folder + 'backup.json'); assert(backup.driveId && backup.fullReadback && backup.allPayloadHashesMatch); assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
- return {...r, footer};
+ return {...r, footer, mobile};
 }
 export function readBeforeOpening(file, release, read = readFileSync) {
  if (release.changedFiles.includes(file)) return git('show', release.baselineSourceCommit + ':' + file);
- return release.footer && footerPaths.includes(file) ? git('show', footerBase + ':' + file) : read(file);
+ if (release.footer && footerPaths.includes(file)) return git('show', footerBase + ':' + file);
+ return release.mobile && mobilePaths.includes(file) ? git('show', mobileBase + ':' + file) : read(file);
 }

@@ -92,7 +92,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
               </>}
         </AlfaCWorkspace>
       </div>
-      <footer className="pilot-footer"><button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || result !== 'right'} onClick={onNext}>Verder<ArrowRight /></button></footer>
+      <footer className="pilot-footer"><button className="primary-button" data-mobile-continue disabled={busy || model || Boolean(readAlong.reading) || result !== 'right'} onClick={onNext}>Verder<ArrowRight /></button></footer>
     </div></div>
   </section>;
 }
