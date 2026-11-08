@@ -142,9 +142,10 @@ export function WordListening() {
     let keyboardWords: Word[] = [], keyboardAt = -1, request = 0;
     let nativeAudio: HTMLAudioElement | undefined, nativePlays = 0, startingWord = false;
     let download: AbortController | undefined, wordAudio = 0;
+    let ownSourceKey = '';
     let listeningNode: Node | undefined;
     const cancelWord = () => { request++; download?.abort(); download = undefined; if (wordAudio) { wordAudio = 0; stopMedia(); } };
-    const playback = (event: Event) => { nativeAudio = (event as CustomEvent<HTMLAudioElement>).detail; nativePlays++; if (!startingWord) { request++; download?.abort(); wordAudio = 0; } };
+    const playback = (event: Event) => { nativeAudio = (event as CustomEvent<HTMLAudioElement>).detail; nativePlays++; if (!startingWord && !(wordAudio === request && nativeAudio.dataset.wordListening === 'true' && nativeAudio.dataset.klinkSource === ownSourceKey)) { request++; download?.abort(); wordAudio = 0; } };
     const recording = () => Boolean(document.querySelector('.cp-recorder button.recording, .cp-recorder button[aria-disabled="true"]'));
     const listen = (word: Word, previousPlays = nativePlays, completed?: () => void) => {
       if (recording()) { setMessage('Stop eerst je opname om een woord te beluisteren.'); completed?.(); return; }
@@ -158,6 +159,7 @@ export function WordListening() {
       // Pointer answers run before their word audio; later playback must not mark that answer as helped.
       word.node.parentElement?.dispatchEvent(new Event('klink-word-audio-request', { bubbles: true }));
       wordAudio = current;
+      ownSourceKey = wordRecordingKey(source);
       listeningNode = word.node;
       word.node.parentElement?.dispatchEvent(new CustomEvent('klink-word-audio-start', { bubbles: true, detail: current }));
       document.querySelectorAll('audio').forEach(audio => audio.pause());

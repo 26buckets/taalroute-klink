@@ -1,5 +1,6 @@
 import recordings from '../data/klink-word-listening.json' with { type: 'json' };
 import { normalizeSpokenWord } from './word-listening-text.ts';
+import { AUDIO_BUNDLE_LIMIT } from './audio-bundle-key.ts';
 
 export type PackedWordRecording = { src: string; offset: number; length: number };
 export type WordRecording = string | PackedWordRecording;
@@ -17,7 +18,8 @@ export function recordingForWord(word: string, preferredSource?: string) {
 export async function fetchWordRecording(recording: PackedWordRecording, signal: AbortSignal) {
   const { src, offset, length } = recording;
   const lesson = /^\/package-audio\/klink10-[a-z-]+-\d{8}\/audio-[a-f0-9]{16}\.bin$/.test(src);
-  if ((!lesson && !/^\/package-audio\/word-listening-20261101\/words-[a-f0-9]{16}\.bin$/.test(src)) || !Number.isSafeInteger(offset) || offset < 0 || !Number.isSafeInteger(length) || length < 10 || length > (lesson ? 524288 : 262144)) throw new Error('Invalid word recording');
+  const delivery = /^\/audio-bundles\/v1\/[a-f0-9]{64}\.bin$/.test(src);
+  if ((!delivery && !lesson && !/^\/package-audio\/word-listening-20261101\/words-[a-f0-9]{16}\.bin$/.test(src)) || !Number.isSafeInteger(offset) || offset < 0 || !Number.isSafeInteger(length) || length < 10 || length > (lesson ? 524288 : 262144) || (delivery && offset + length > AUDIO_BUNDLE_LIMIT)) throw new Error('Invalid word recording');
   signal.throwIfAborted();
   const end = offset + length - 1;
   const cached = bundles.get(src);
@@ -35,7 +37,7 @@ export async function fetchWordRecording(recording: PackedWordRecording, signal:
   signal.throwIfAborted();
   const complete = Boolean(cached) || response?.status === 200;
   const bytes = complete ? body.slice(offset, end + 1) : body;
-  if (bytes.byteLength !== length || body.byteLength > 4 * 1024 * 1024) throw new Error('Incomplete word recording');
+  if (bytes.byteLength !== length || body.byteLength > (delivery ? AUDIO_BUNDLE_LIMIT : 4 * 1024 * 1024)) throw new Error('Incomplete word recording');
   const header = new Uint8Array(bytes, 0, Math.min(12, bytes.byteLength));
   const type = header[0] === 73 && header[1] === 68 && header[2] === 51 ? 'audio/mpeg'
     : header[0] === 82 && header[1] === 73 && header[2] === 70 && header[3] === 70 && header[8] === 87 && header[9] === 65 && header[10] === 86 && header[11] === 69 ? 'audio/wav' : undefined;

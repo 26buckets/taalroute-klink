@@ -1,3 +1,4 @@
+import {verifyAudioBundleRelease, readBeforeAudioBundles, audioBundleBaseline} from './check-audio-bundle-release-20261108.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -17,6 +18,9 @@ const expected = [
   'scripts/test-static-audio-publication.mjs',
 ].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
 export function verifyStaticAudioRelease(read = readFileSync) {
+  const bundle = verifyAudioBundleRelease(read);
+  const latestRead = read;
+  read = path => readBeforeAudioBundles(path, bundle, latestRead);
   const r = JSON.parse(read(folder + 'approval.json'));
   assert.equal(r.approvedBy, 'Nico'); assert.equal(r.publicationApproved, true);
   assert.equal(r.userRequest, 'Publiceer de gecontroleerde gratis audio-oplossing nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, links, voortgang en het uiterlijk. Het moet €0 blijven kosten.');
@@ -27,7 +31,7 @@ export function verifyStaticAudioRelease(read = readFileSync) {
   assert.equal(r.designChanged, false); assert.equal(r.normalCommand, 'npm run deploy');
   git('merge-base', '--is-ancestor', r.liveSourceCommit, staticAudioBaseline);
   git('merge-base', '--is-ancestor', staticAudioBaseline, 'HEAD');
-  const all = [...new Set([...lines(git('diff', '--name-only', staticAudioBaseline)), ...lines(git('ls-files', '--others', '--exclude-standard'))])];
+  const all = lines(git('diff', '--name-only', staticAudioBaseline, audioBundleBaseline));
   const changed = all.filter(p => !p.startsWith('docs/static-audio-') && p !== 'PUBLICATIE-ACTUEEL.md').sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
   assert.deepEqual(changed, expected); assert.deepEqual(Object.keys(r.files).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), expected);
   for (const [path, hash] of Object.entries({...r.files, ...r.evidenceFiles})) assert.equal(sha(read(path)), hash, path);
@@ -47,8 +51,8 @@ export function verifyStaticAudioRelease(read = readFileSync) {
   const backup = JSON.parse(read(folder + 'backup.json'));
   assert(backup.driveId && backup.fullReadback && backup.zipIntegrity && backup.allSourceHashesMatch);
   assert.deepEqual(backup.files, r.files);
-  return r;
+  return {...r, bundle};
 }
 export function readBeforeStaticAudio(path, release, read = readFileSync) {
-  return release && Object.hasOwn(release.files, path) ? git('show', staticAudioBaseline + ':' + path) : read(path);
+  return release && Object.hasOwn(release.files, path) ? git('show', staticAudioBaseline + ':' + path) : readBeforeAudioBundles(path, release?.bundle, read);
 }

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "prebuild": "node scripts/build-practice-bundles.mjs && node scripts/build-word-library-index.mjs --check && node scripts/build-word-listening.mjs --check && node scripts/audit-word-listening.mjs --check && npm run images:check && node scripts/write-klink-release.mjs",
+    "prebuild": "node scripts/build-practice-bundles.mjs && node scripts/build-audio-bundles.mjs && node scripts/build-word-library-index.mjs --check && node scripts/build-word-listening.mjs --check && node scripts/audit-word-listening.mjs --check && npm run images:check && node scripts/write-klink-release.mjs",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
@@ -42,7 +42,10 @@
     "audio:prepare:local": "node scripts/prepare-static-audio-local.mjs",
     "audio:preview:local": "node scripts/preview-static-audio-local.mjs",
     "test:static-audio": "node --test scripts/test-static-audio-local.mjs scripts/test-static-audio-publication.mjs scripts/test-practice-bundles.mjs",
-    "test:static-audio:http": "node scripts/test-static-audio-http.mjs"
+    "test:static-audio:http": "node scripts/test-static-audio-http.mjs",
+    "audio:bundle:local": "node scripts/build-practice-bundles.mjs && node scripts/build-audio-bundles.mjs",
+    "audio:bundle:check": "node scripts/build-audio-bundles.mjs --check",
+    "test:audio-bundles": "node --test --test-concurrency=1 scripts/test-audio-bundles.mjs scripts/test-audio-delivery.mjs scripts/test-word-listening.mjs scripts/test-klink10-packed-media-20261102.mjs scripts/test-session-audio.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

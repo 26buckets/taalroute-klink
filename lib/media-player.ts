@@ -2,6 +2,7 @@ import type { AudioOptions } from './package-content';
 import { isWithdrawnAudio } from './audio-policy.ts';
 import { repairedAudioSource } from './audio-repairs.ts';
 import { fetchWordRecording } from './word-listening.ts';
+import { audioDeliveryBlob, requiresAudioBundle } from './audio-delivery.ts';
 
 let activeAudio: HTMLAudioElement | undefined;
 let cancelPlayback: (() => void) | undefined;
@@ -64,21 +65,27 @@ export function unlockMedia() {
 }
 
 export function playMedia(source: string, options: AudioOptions = {}): Promise<boolean> {
-  if (!source.includes('#bytes=')) return playResolvedMedia(source, options);
+  const originalSource = source;
+  if (isWithdrawnAudio(source) || isWithdrawnAudio(repairedAudioSource(source)) || options.signal?.aborted) return Promise.resolve(false);
+  source = repairedAudioSource(source);
+  if (!source.includes('#bytes=') && !requiresAudioBundle(source)) return playResolvedMedia(source, options, originalSource);
   stopMedia();
   if (isWithdrawnAudio(source) || options.signal?.aborted) return Promise.resolve(false);
   const packed = source.match(/^(.+)#bytes=(\d+),(\d+)$/);
-  if (!packed) return Promise.reject(new Error('Invalid packed recording'));
+  if (!packed && source.includes('#bytes=')) return Promise.reject(new Error('Invalid packed recording'));
   const unlocked = unlockMedia(), controller = new AbortController();
   const cancel = () => controller.abort();
   cancelPlayback = cancel;
   options.signal?.addEventListener('abort', cancel, { once: true });
   const timeout = setTimeout(cancel, 15000);
-  return Promise.all([unlocked, fetchWordRecording({src: packed[1], offset: Number(packed[2]), length: Number(packed[3])}, controller.signal)]).then(([, blob]) => {
+  const download = packed ? fetchWordRecording({src: packed[1], offset: Number(packed[2]), length: Number(packed[3])}, controller.signal)
+    : audioDeliveryBlob(source, controller.signal);
+  return Promise.all([unlocked, download]).then(([, blob]) => {
     clearTimeout(timeout);
     if (controller.signal.aborted) return false;
     if (cancelPlayback === cancel) cancelPlayback = undefined;
-    const url = URL.createObjectURL(blob), playing = playResolvedMedia(url, options, source), audio = activeAudio!;
+    if (!blob) return playResolvedMedia(source, options, originalSource);
+    const url = URL.createObjectURL(blob), playing = playResolvedMedia(url, options, originalSource), audio = activeAudio!;
     const release = () => {
       URL.revokeObjectURL(url);
       audio.removeEventListener('ended', release); audio.removeEventListener('error', release);

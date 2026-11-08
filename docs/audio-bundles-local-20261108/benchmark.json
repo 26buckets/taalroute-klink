@@ -1,0 +1,44 @@
+{
+  "network": "3 Mbps download, 80 ms simulated latency, HTTP cache disabled after opening exercise",
+  "rows": [
+    {
+      "version": "before",
+      "run": 0,
+      "firstSoundMs": 366,
+      "nativeEnded": true
+    },
+    {
+      "version": "after",
+      "run": 0,
+      "firstSoundMs": 575,
+      "nativeEnded": true
+    },
+    {
+      "version": "before",
+      "run": 1,
+      "firstSoundMs": 265,
+      "nativeEnded": true
+    },
+    {
+      "version": "after",
+      "run": 1,
+      "firstSoundMs": 528,
+      "nativeEnded": true
+    },
+    {
+      "version": "before",
+      "run": 2,
+      "firstSoundMs": 266,
+      "nativeEnded": true
+    },
+    {
+      "version": "after",
+      "run": 2,
+      "firstSoundMs": 525,
+      "nativeEnded": true
+    }
+  ],
+  "beforeMedianMs": 266,
+  "afterMedianMs": 528,
+  "physicalPhone": false
+}

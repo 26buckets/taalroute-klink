@@ -11,6 +11,7 @@ const recordings = JSON.parse(readFileSync('data/klink-word-listening.json'));
 const inventory = JSON.parse(readFileSync('outputs/goal-audit-20261101/inventory.json'));
 mkdirSync(out, { recursive: true });
 const checks = [], errors = [];
+function record(check) { checks.push(check); console.log(check.engine + ': ' + check.check); }
 
 async function clickWord(page, locator, word) {
   await locator.scrollIntoViewIfNeeded();
@@ -33,11 +34,14 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
   const browser = await browserType.launch();
   try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true, reducedMotion: 'reduce' });
+    page.setDefaultTimeout(15000);
     await page.addInitScript(() => {
       window.__wordAudioPlayed = [];
+      window.__wordAudioEnded = [];
       HTMLMediaElement.prototype.play = function () {
         window.__wordAudioPlayed.push(this.dataset.klinkSource || this.getAttribute('src'));
-        setTimeout(() => this.dispatchEvent(new Event('ended')), 25);
+        const source = this.dataset.klinkSource || this.getAttribute('src');
+        setTimeout(() => { window.__wordAudioEnded.push(source); this.dispatchEvent(new Event('ended')); }, 25);
         return Promise.resolve();
       };
       localStorage.setItem('klink.word-listening.retention', 'kept');
@@ -53,16 +57,16 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     for (const word of ['kok', 'keuken']) {
       await clickWord(page, sentence, word);
       await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings[word][0]));
-      checks.push({ engine, check: 'individual sentence word', word });
+      record({ engine, check: 'individual sentence word', word });
     }
     assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1')), attemptBefore);
     await page.waitForFunction(()=>!document.querySelector('[data-word-state="playing"]'));
     assert.deepEqual(await sentence.evaluate(element => ({ html: element.outerHTML, border: getComputedStyle(element).border, outline: getComputedStyle(element).outline })), styleBefore);
-    checks.push({ engine, check: 'listening leaves text markup, appearance and attempts unchanged' });
+    record({ engine, check: 'listening leaves text markup, appearance and attempts unchanged' });
     await clickWord(page, sentence, 'werkt');
     await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings.werkt[0]));
     assert.notEqual(await page.evaluate(() => window.__wordAudioPlayed.at(-1)), recordings.werken?.[0]);
-    checks.push({ engine, check: 'an inflected word plays its exact packed model rather than the infinitive' });
+    record({ engine, check: 'an inflected word plays its exact packed model rather than the infinitive' });
     const inlineWord = page.locator('button.cp-inline-word').first();
     const inlineText = await inlineWord.getAttribute('data-word-audio');
     for(const method of ['tap','Enter']) {
@@ -70,7 +74,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
       if(method==='tap') await inlineWord.tap(); else { await inlineWord.focus();await page.keyboard.press('Enter'); }
       await page.waitForFunction(({before,source})=>window.__wordAudioPlayed.length===before+1&&window.__wordAudioPlayed.at(-1)===source,{before,source:wordRecordingKey(recordings[inlineText][0])});
     }
-    checks.push({engine,check:'published inline word buttons share one playback for touch and native Enter'});
+    record({engine,check:'published inline word buttons share one playback for touch and native Enter'});
     const answer = page.getByRole('button', { name: 'In de keuken', exact: true });
     const answerAudioBefore = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, answer, 'keuken');
@@ -79,7 +83,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForTimeout(70);
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), answerAudioBefore);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1).helpUsed), true);
-    checks.push({ engine, check: 'answer selection is silent; earlier explicit text listening remains recorded as support' });
+    record({ engine, check: 'answer selection is silent; earlier explicit text listening remains recorded as support' });
     await page.getByRole('button', { name: /^Verder/ }).focus();
     await page.keyboard.press('Alt+w');
     let found = false;
@@ -92,7 +96,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings.kok[0]));
     await page.keyboard.press('Escape');
     assert.equal(await page.evaluate(() => getSelection()?.toString()), '');
-    checks.push({ engine, check: 'keyboard word browsing and audio preserve the exercise' });
+    record({ engine, check: 'keyboard word browsing and audio preserve the exercise' });
     await sentence.evaluate(element => {
       const paragraph = document.createElement('p'); paragraph.dataset.wordListeningFixture = 'true';
       paragraph.innerHTML = 'keu<strong>ken</strong>';
@@ -100,7 +104,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     });
     await clickWord(page, page.locator('[data-word-listening-fixture]'), 'ken');
     await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings.keuken[0]));
-    checks.push({ engine, check: 'an inline emphasis never turns one word into two audio fragments' });
+    record({ engine, check: 'an inline emphasis never turns one word into two audio fragments' });
     await page.locator('[data-word-listening-fixture]').evaluate(element => element.remove());
     await sentence.evaluate(element => {
       const paragraph = document.createElement('p'); paragraph.id = 'joined-word-fixture';
@@ -110,7 +114,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
       await clickWord(page, page.locator('#joined-word-fixture'), word);
       await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings[word.toLowerCase()][0]));
     }
-    checks.push({engine,check:'the source exercise without spaces retains four individually audible words'});
+    record({engine,check:'the source exercise without spaces retains four individually audible words'});
     await page.locator('#joined-word-fixture').evaluate(element => {
       element.textContent = '';
       const button = document.createElement('button'); button.textContent = 'keuken';
@@ -122,7 +126,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForTimeout(70);
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), stoppedBefore);
     assert.equal(await stopped.getAttribute('aria-pressed'), 'true');
-    checks.push({engine,check:'a control that stops click bubbling still selects without speech'});
+    record({engine,check:'a control that stops click bubbling still selects without speech'});
     await page.locator('#joined-word-fixture').evaluate(element => {
       const recorder = document.createElement('div'); recorder.className = 'cp-recorder';
       recorder.innerHTML = '<button class="recording">Stop</button>'; element.append(recorder);
@@ -131,7 +135,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await clickWord(page, sentence, 'kok');
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), recordingBefore);
     await page.getByText('Stop eerst je opname om een woord te beluisteren.',{exact:true}).waitFor();
-    checks.push({engine,check:'word audio respects an active recording and leaves its controls intact'});
+    record({engine,check:'word audio respects an active recording and leaves its controls intact'});
     await page.locator('#joined-word-fixture').evaluate(element => element.remove());
     const packedWords = Object.keys(recordings).filter(word => typeof recordings[word][0] === 'object' && /^[a-z]{5,15}$/.test(word)).slice(0,2);
     await sentence.evaluate((element, words) => {
@@ -147,7 +151,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await clickWord(page, page.locator('#packed-race-fixture'), packedWords[1]);
     await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings[packedWords[1]][0]));
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), beforeRapid + 1);
-    checks.push({engine,check:'a rapid second word cancels the pending first download without stale playback'});
+    record({engine,check:'a rapid second word cancels the pending first download without stale playback'});
     // Test a pending download, not a bundle deliberately retained by earlier playback.
     const navigationWord = Object.keys(recordings).find(word => typeof recordings[word][0] === 'object' && /^[a-z]{5,15}$/.test(word) && !fetchedBundles.has(new URL(recordings[word][0].src, base).href));
     assert(navigationWord);
@@ -159,24 +163,27 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForTimeout(450);
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), beforeNavigation);
     assert.equal(await page.locator('.toast-message').count(), 0);
-    checks.push({engine,check:'navigation cancels slow word downloads and preserves the destination'});
+    record({engine,check:'navigation cancels slow word downloads and preserves the destination'});
     await page.unroute('**/package-audio/word-listening-20261101/*.bin');
     const model = inventory.cases.find(item => item.exercise.mode === 'model');
     await page.goto(base + model.route);
     const modelText = page.locator('button.cp-model-content > strong');
     await modelText.waitFor();
+    // Finish the exercise's automatic first playback before counting a separate manual click.
+    await page.waitForFunction(source => window.__wordAudioEnded.includes(source), model.exercise.prompt.audio.src);
     const text = (await modelText.innerText()).trim().split(/\s/)[0];
     const modelBefore = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, modelText, text);
     await page.waitForFunction(count => window.__wordAudioPlayed.length > count, modelBefore);
     await page.waitForTimeout(70);
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), modelBefore + 1, JSON.stringify(await page.evaluate(before => window.__wordAudioPlayed.slice(before),modelBefore)));
-    checks.push({engine,check:'a native listening card retains its own single playback'});
+    record({engine,check:'a native listening card retains its own single playback'});
     const mark = inventory.cases.find(item => item.exercise.standardTask?.kind === 'mark');
     await page.goto(base + mark.route);
     await page.locator('[data-word-token]').first().waitFor();
     const target = mark.exercise.standardTask.tokens.find(token => recordings[token.text.toLocaleLowerCase('nl').replace(/[.!?,;:]$/, '')]);
     const token = page.locator(`[data-word-token="${target.id}"]`);
+    await page.waitForFunction(id => document.querySelector(`[data-word-token="${id}"]`)?.disabled === false, target.id);
     const markBefore = await page.evaluate(() => window.__wordAudioPlayed.length);
     await clickWord(page, token, target.text.replace(/[.!?,;:]$/, ''));
     assert.equal(await token.getAttribute('aria-pressed'), 'true');
@@ -184,7 +191,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), markBefore);
     await clickWord(page, token, target.text.replace(/[.!?,;:]$/, ''));
     assert.equal(await token.getAttribute('aria-pressed'), 'false');
-    checks.push({ engine, check: 'marking a grammatical or evidence word still toggles its selection' });
+    record({ engine, check: 'marking a grammatical or evidence word still toggles its selection' });
     for (const id of mark.exercise.standardTask.acceptedSelections[0]) await page.locator(`[data-word-token="${id}"]`).click();
     await page.getByRole('button', { name: /^Controleer/ }).click();
     assert(await token.isDisabled());
@@ -194,7 +201,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     await page.waitForTimeout(70);
     assert.equal(await page.evaluate(() => window.__wordAudioPlayed.length), beforeDisabled);
     assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1')), attemptsAfter);
-    checks.push({ engine, check: 'completed answer controls stay silent and preserve the answer' });
+    record({ engine, check: 'completed answer controls stay silent and preserve the answer' });
     assert.equal(await page.evaluate(() => localStorage.getItem('klink.word-listening.retention')), 'kept');
     await page.screenshot({ path: out + '/' + engine + '-sentence.png', fullPage: true });
     const block = functionalBlocks.find(block => block.steps.some(step => step.handwriting));
@@ -204,18 +211,24 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     const note = page.locator('img[alt="De les begint om 10.00. Neem je map mee."]');
     await note.waitFor();
     await note.scrollIntoViewIfNeeded();
-    await note.evaluate(image => image.decode());
+    const imageVisible = await note.evaluate(image => { const rect = image.getBoundingClientRect(); return document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2) === image; });
+    assert(imageVisible, 'Alfa C source image must be visible and hit-testable');
+    await note.evaluate(image => Promise.race([image.decode(), new Promise((_, reject) => setTimeout(() => reject(Error('Source image did not decode')), 10000))]));
     const geometry = await note.evaluate(image => ({ rect: image.getBoundingClientRect().toJSON(), width: image.naturalWidth, height: image.naturalHeight, fit: getComputedStyle(image).objectFit }));
     const source = JSON.parse(readFileSync('data/klink-image-word-listening.json'))['/alfa-c/handschrift/lesbriefje.png'];
     const map = source.words.find(word => word.text === 'map');
     const box = imageWordRectangle(geometry.rect, geometry.width, geometry.height, geometry.fit, map.box);
     const beforeNote = await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1'));
-    await page.touchscreen.tap((box.left + box.right) / 2, (box.top + box.bottom) / 2);
-    await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings.map[0]));
-    assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1')), beforeNote);
-    checks.push({ engine, check: 'a handwritten source word plays at its true image position, including contained-image margins' });
+    const point = {x: (box.left + box.right) / 2, y: (box.top + box.bottom) / 2};
+    const sourceClickable = await note.evaluate((image, point) => document.elementFromPoint(point.x, point.y) === image, point);
+    assert(sourceClickable, 'Alfa C image word must be hit-testable at its real position');
+      await page.touchscreen.tap(point.x, point.y);
+      await page.waitForFunction(source => window.__wordAudioPlayed.at(-1) === source, wordRecordingKey(recordings.map[0]));
+      assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1')), beforeNote);
+      record({ engine, check: 'a handwritten source word plays at its true image position, including contained-image margins' });
     await page.close();
     const native = await browser.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true, reducedMotion: 'reduce' });
+    native.setDefaultTimeout(15000);
     await native.addInitScript(() => {
       window.__nativeWords = [];
       window.addEventListener('klink-audio-source', event => {
@@ -250,7 +263,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
         assert.equal(response.status(), 200);
         assert(body.equals(original), 'The original recording or complete bundle fallback remains unchanged');
       }
-      checks.push({ engine, check: 'native audio reaches ended after a real mobile gesture, original bytes preserved', word });
+      record({ engine, check: 'native audio reaches ended after a real mobile gesture, original bytes preserved', word });
     }
     const inlineNative=native.locator('button.cp-inline-word').first();
     const nativeBefore=await native.evaluate(()=>window.__nativeWords.length);
@@ -259,7 +272,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     assert.equal(await inlineNative.getAttribute('data-audio-active'),null);
     assert.equal(await inlineNative.evaluate(element=>getComputedStyle(element).outlineStyle),'none');
     await native.waitForFunction(()=>window.__nativeWords.at(-1).ended);
-    checks.push({engine,check:'real inline word playback has no listening or focus outline; answer borders are separate'});
+    record({engine,check:'real inline word playback has no listening or focus outline; answer borders are separate'});
     await native.close();
   } catch (error) { errors.push({ engine, kind: 'check', message: error.stack }); }
   finally { await browser.close(); writeFileSync(out + '/checks.json', JSON.stringify({ base, checks, errors }, null, 2) + '\n'); }

@@ -53,6 +53,9 @@ for (const name of readdirSync(folder)) if (!files.has(name)) {
   unlinkSync(folder + '/' + name);
 }
 output('data/klink-practice-delivery.json', JSON.stringify(delivery, null, 2) + '\n');
-const originalIgnore = readFileSync('public/.assetsignore', 'utf8').split(marker)[0];
-output('public/.assetsignore', originalIgnore + marker + Object.keys(delivery).join('\n') + '\n');
+const previousIgnore = readFileSync('public/.assetsignore', 'utf8');
+const originalIgnore = previousIgnore.split(marker)[0];
+const audioMarker = '# Generated audio bundles: only never-published short source files may be omitted.\n';
+const audioIgnore = previousIgnore.includes(audioMarker) ? audioMarker + previousIgnore.split(audioMarker)[1] : '';
+output('public/.assetsignore', originalIgnore + marker + Object.keys(delivery).join('\n') + '\n' + audioIgnore);
 console.log(`${Object.keys(delivery).length} unchanged practice files in ${files.size} bundles (max 1 MiB).`);

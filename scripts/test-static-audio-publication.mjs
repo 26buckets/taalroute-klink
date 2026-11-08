@@ -38,11 +38,11 @@ await test('production split preserves app configuration and makes audio asset-o
     config.assets.run_worker_first = false; save(); release.sourceClean = false; writeFileSync(source + '/client/release.json', JSON.stringify(release)); assert.throws(() => prepareAudioPublication(source, output));
   } finally { rmSync(root, {recursive: true, force: true}); }
 });
-await test('failure recovery never removes main audio before verification and restores app before any audio removal', async () => {
+await test('failure recovery never updates the app before audio verification and restores existing versions in order', async () => {
   for (const fail of ['', 'audio', 'verifyAudio', 'app', 'verifyApp']) {
-    const seen = [], actions = Object.fromEntries(['audio', 'verifyAudio', 'app', 'verifyApp', 'removeNewAudio', 'restoreApp'].map(name => [name, async () => {seen.push(name); if (name === fail) throw Error('injected failure');}]));
+    const seen = [], actions = Object.fromEntries(['audio', 'verifyAudio', 'app', 'verifyApp', 'restoreAudio', 'restoreApp'].map(name => [name, async () => {seen.push(name); if (name === fail) throw Error('injected failure');}]));
     if (fail) await assert.rejects(publishInOrder(actions), /injected/); else await publishInOrder(actions);
-    const expected = {audio: ['audio', 'removeNewAudio'], verifyAudio: ['audio', 'verifyAudio', 'removeNewAudio'], app: ['audio', 'verifyAudio', 'app', 'restoreApp'], verifyApp: ['audio', 'verifyAudio', 'app', 'verifyApp', 'restoreApp'], '': ['audio', 'verifyAudio', 'app', 'verifyApp']};
+    const expected = {audio: ['audio', 'restoreAudio'], verifyAudio: ['audio', 'verifyAudio', 'restoreAudio'], app: ['audio', 'verifyAudio', 'app', 'restoreApp', 'restoreAudio'], verifyApp: ['audio', 'verifyAudio', 'app', 'verifyApp', 'restoreApp', 'restoreAudio'], '': ['audio', 'verifyAudio', 'app', 'verifyApp']};
     assert.deepEqual(seen, expected[fail]);
   }
 });

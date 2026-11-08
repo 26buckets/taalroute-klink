@@ -1,5 +1,7 @@
 "use client";
 
+import { audioDeliveryBlob } from '@/lib/audio-delivery';
+
 import {
   useEffect,
   useEffectEvent,
@@ -89,6 +91,8 @@ function useClassroomAudio(lessonId = "mat") {
     const disposers = Object.entries(sources).map(([id, source]) => {
       if (!source || isWithdrawnAudio(source)) return () => {};
       const audio = new Audio();
+      const controller = new AbortController();
+      let objectUrl: string | undefined;
       const finish = (status: ClipStatus) => {
         clearTimeout(timer);
         setClips(clips => ({ ...clips, [id]: { source, status } }));
@@ -97,14 +101,20 @@ function useClassroomAudio(lessonId = "mat") {
       audio.onloadedmetadata = () => finish("ready");
       audio.onerror = () => finish("missing");
       audio.preload = "metadata";
-      audio.src = source;
-      audio.load();
+      void audioDeliveryBlob(source, controller.signal).catch(() => undefined).then(blob => {
+        if (controller.signal.aborted) return;
+        if (blob) objectUrl = URL.createObjectURL(blob);
+        audio.src = objectUrl ?? source;
+        audio.load();
+      });
       return () => {
+        controller.abort();
         clearTimeout(timer);
         audio.onloadedmetadata = null;
         audio.onerror = null;
         audio.removeAttribute("src");
         audio.load();
+        if (objectUrl) URL.revokeObjectURL(objectUrl);
       };
     });
     return () => disposers.forEach(dispose => dispose());
