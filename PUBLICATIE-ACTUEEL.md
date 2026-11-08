@@ -1,3 +1,17 @@
+## Actuele publicatie — audiobundels en Alfa C-klikherstel — 8 november 2026
+
+Livebron `e0f4e60920db5c712246144b371e85e5d3b72a7f`, app-Worker `b463285a-86c8-42d5-8d79-d643edd84db0` en audio-Worker `71b927fb-d3dc-4b2b-bfb4-2b5457bce845`, beide 100%. Op Nico’s expliciete opdracht via schone canonieke main en de normale `npm run deploy`, als opvolger van de opnieuw bevestigde livebron `99908642`. De publicatieroute controleert voortaan beide bestaande publicaties en zet bij fouten hun vorige versies terug.
+
+De oorspronkelijke Alfa C-panelen zijn weer zichtbaar en aanklikbaar. Bestaande audio speelt rechtstreeks; de verliesloze bundelstructuur is voorbereid voor nieuwe korte opnamen. Alle 13.831 oude audio-assets en links blijven bestaan. Alle 22.418 aangeboden bestanden zijn live bytegelijk: 8.587 app-assets en 13.831 audio-assets. Er blijven respectievelijk 11.413 en 6.169 plaatsen vrij. Inhoud, audio/metadata, voortgang, toetsenbordbediening en goedgekeurde vormgeving behouden; geen nieuwe opnamen of inhoud.
+
+Alle vijftig historische en zes nieuwe vrijgavetests lokaal geslaagd. Online: 16 Alfa C-bedieningsproeven, 16 native audioproeven voor Klink/Klink+docent, vier vorige-bron-naar-live-opslagovergangen, 25 HTTP-contracten en 39 uitsluitingen gecontroleerd. 40 uiterlijkparen beoordeeld; kleine Chrome-rasterverschillen in knoprandpixels zijn gedocumenteerd, met gelijke geometrie en berekende stijlen. Geen referenties of appcode aangepast voor de nacontrole.
+
+Geen betaalde dienst, R2, nieuwe Worker/route, workflow, cloudtestrun, databasewijziging of budgetverhoging. Gratis bestandswaarschuwing/blokkade blijft per publicatie gelden. Volledige accountfactuur niet uitleesbaar; geen fysieke telefoon/stylus of nieuwe menselijke luisterreview. Bewijs, beperkingen en gecontroleerde herstelkopie: `docs/audio-bundles-publication-20261108/postflight/`.
+
+Deze bewijsopvolger wijzigt de runtime niet; niet opnieuw deployen. Gebruik bij vervolgwerk de actuele canonieke main en controleer opnieuw de werkelijk actieve livebron.
+
+---
+
 ## Actuele publicatie — gratis statische audio — 8 november 2026
 
 Livebron `99908642b4ec39b31fdeb68ce7c591271259e77e`, app-Worker `30b7c138-8586-4641-a2ec-be4a3c64243f` en audio-Worker `a5206dd1-a801-4330-a8b2-b1cac743ae27`, beide 100%. Op Nico’s expliciete opdracht via schone canonieke main en de normale `npm run deploy`, als opvolger van de opnieuw bevestigde livebron `693b58c1`. De native route `klink.taalroute.nl/package-audio/*` behoudt alle bestaande audio-adressen; hoofddomein en legacyroute blijven bestaan.

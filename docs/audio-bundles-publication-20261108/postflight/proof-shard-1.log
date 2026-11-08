@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: New route approval rejects changed hashes and cannot drop the previous approval scope
+ok 1 - New route approval rejects changed hashes and cannot drop the previous approval scope
+  ---
+  duration_ms: 28923.971583
+  type: 'test'
+  ...
+# Subtest: Proof for a different live version cannot satisfy the publication gate
+ok 2 - Proof for a different live version cannot satisfy the publication gate
+  ---
+  duration_ms: 5951.231708
+  type: 'test'
+  ...
+# Subtest: Incomplete media evidence or a missing source archive is rejected
+ok 3 - Incomplete media evidence or a missing source archive is rejected
+  ---
+  duration_ms: 24060.637875
+  type: 'test'
+  ...
+# Subtest: Wordbuild publication requires exact consent, reviewed selection and verified source backup
+ok 4 - Wordbuild publication requires exact consent, reviewed selection and verified source backup
+  ---
+  duration_ms: 62935.678708
+  type: 'test'
+  ...
+# Subtest: Sharing release cannot extend runtime scope or erase the previous maintenance approval
+ok 5 - Sharing release cannot extend runtime scope or erase the previous maintenance approval
+  ---
+  duration_ms: 21816.220708
+  type: 'test'
+  ...
+# Subtest: Collapsible exercise menu binds consent, unchanged content scope and verified backup
+ok 6 - Collapsible exercise menu binds consent, unchanged content scope and verified backup
+  ---
+  duration_ms: 33080.978834
+  type: 'test'
+  ...
+# Subtest: En release binds its scope, live ancestry and verified backup without weakening earlier approvals
+ok 7 - En release binds its scope, live ancestry and verified backup without weakening earlier approvals
+  ---
+  duration_ms: 36953.061875
+  type: 'test'
+  ...
+# Subtest: Kast release binds its scope, live ancestry and verified backup without weakening earlier approvals
+ok 8 - Kast release binds its scope, live ancestry and verified backup without weakening earlier approvals
+  ---
+  duration_ms: 38806.982042
+  type: 'test'
+  ...
+# Subtest: Nek continuation requires scoped owner authorization, current ancestry and verified backup
+ok 9 - Nek continuation requires scoped owner authorization, current ancestry and verified backup
+  ---
+  duration_ms: 36565.35925
+  type: 'test'
+  ...
+# Subtest: Grouped lesson guidance requires scoped counts, review and verified source backup
+ok 10 - Grouped lesson guidance requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 42288.1325
+  type: 'test'
+  ...
+# Subtest: Landing review preserves exact approved baseline, scope and review evidence
+ok 11 - Landing review preserves exact approved baseline, scope and review evidence
+  ---
+  duration_ms: 41019.049375
+  type: 'test'
+  ...
+# Subtest: Group eight letter combinations requires scoped counts, review and verified source backup
+ok 12 - Group eight letter combinations requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 45713.448042
+  type: 'test'
+  ...
+# Subtest: Five follow-up groups requires scoped counts, review and verified source backup
+ok 13 - Five follow-up groups requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 45333.410667
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 496252.009333

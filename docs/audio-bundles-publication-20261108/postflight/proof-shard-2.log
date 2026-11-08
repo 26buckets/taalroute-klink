@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: Cumulative approval requires every new source, review and verified backup binding
+ok 1 - Cumulative approval requires every new source, review and verified backup binding
+  ---
+  duration_ms: 44675.1395
+  type: 'test'
+  ...
+# Subtest: A boolean without its underlying publication record is rejected
+ok 2 - A boolean without its underlying publication record is rejected
+  ---
+  duration_ms: 6101.403958
+  type: 'test'
+  ...
+# Subtest: Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval
+ok 3 - Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval
+  ---
+  duration_ms: 44272.164458
+  type: 'test'
+  ...
+# Subtest: Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval
+ok 4 - Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval
+  ---
+  duration_ms: 22832.071417
+  type: 'test'
+  ...
+# Subtest: Header repair retains the published sharing and content approval
+ok 5 - Header repair retains the published sharing and content approval
+  ---
+  duration_ms: 22517.123791
+  type: 'test'
+  ...
+# Subtest: Beginner release binds current live ancestry, exact scope and owner publication request
+ok 6 - Beginner release binds current live ancestry, exact scope and owner publication request
+  ---
+  duration_ms: 44297.140958
+  type: 'test'
+  ...
+# Subtest: White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence
+ok 7 - White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence
+  ---
+  duration_ms: 26332.315417
+  type: 'test'
+  ...
+# Subtest: Mens release binds its scope, live ancestry and verified backup without weakening earlier approvals
+ok 8 - Mens release binds its scope, live ancestry and verified backup without weakening earlier approvals
+  ---
+  duration_ms: 39213.527333
+  type: 'test'
+  ...
+# Subtest: Kop/sok binds exact scope and preserves the full checked baseline with targeted regression
+ok 9 - Kop/sok binds exact scope and preserves the full checked baseline with targeted regression
+  ---
+  duration_ms: 31968.663375
+  type: 'test'
+  ...
+# Subtest: Group five letter combinations requires scoped counts, review and verified source backup
+ok 10 - Group five letter combinations requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 43154.568292
+  type: 'test'
+  ...
+# Subtest: Group seven letter combinations requires scoped counts, review and verified source backup
+ok 11 - Group seven letter combinations requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 47058.748708
+  type: 'test'
+  ...
+# Subtest: Article release requires meaning review, preserved previous scope and verified source backup
+ok 12 - Article release requires meaning review, preserved previous scope and verified source backup
+  ---
+  duration_ms: 45705.090125
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 450941.672208

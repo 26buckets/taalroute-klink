@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: Valid publication proof resolves provenance, not outstanding media approval
+ok 1 - Valid publication proof resolves provenance, not outstanding media approval
+  ---
+  duration_ms: 7096.506875
+  type: 'test'
+  ...
+# Subtest: Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected
+ok 2 - Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected
+  ---
+  duration_ms: 30644.896041
+  type: 'test'
+  ...
+# Subtest: A mismatching or dirty live release marker is rejected
+ok 3 - A mismatching or dirty live release marker is rejected
+  ---
+  duration_ms: 18135.10025
+  type: 'test'
+  ...
+# Subtest: Header sizing rejects extra CSS changes even when approval hashes match the source files
+ok 4 - Header sizing rejects extra CSS changes even when approval hashes match the source files
+  ---
+  duration_ms: 18505.932708
+  type: 'test'
+  ...
+# Subtest: Landing footer approval remains limited to the explicit request
+ok 5 - Landing footer approval remains limited to the explicit request
+  ---
+  duration_ms: 28131.570583
+  type: 'test'
+  ...
+# Subtest: KLINK menu addition cannot widen content scope or discard the approved header repair
+ok 6 - KLINK menu addition cannot widen content scope or discard the approved header repair
+  ---
+  duration_ms: 17586.946125
+  type: 'test'
+  ...
+# Subtest: Consistent layout keeps the current beginners release, owner consent and exact source scope
+ok 7 - Consistent layout keeps the current beginners release, owner consent and exact source scope
+  ---
+  duration_ms: 32876.358958
+  type: 'test'
+  ...
+# Subtest: Kan release binds its scope, live ancestry and verified backup without weakening earlier approvals
+ok 8 - Kan release binds its scope, live ancestry and verified backup without weakening earlier approvals
+  ---
+  duration_ms: 37998.807958
+  type: 'test'
+  ...
+# Subtest: Overview workspace release binds the three exceptions to the latest lessons and verified backup
+ok 9 - Overview workspace release binds the three exceptions to the latest lessons and verified backup
+  ---
+  duration_ms: 37668.731042
+  type: 'test'
+  ...
+# Subtest: Session stability requires current source, scoped authorization, stress proof and verified backup
+ok 10 - Session stability requires current source, scoped authorization, stress proof and verified backup
+  ---
+  duration_ms: 32258.286375
+  type: 'test'
+  ...
+# Subtest: Group six letter combinations requires scoped counts, review and verified source backup
+ok 11 - Group six letter combinations requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 42717.091625
+  type: 'test'
+  ...
+# Subtest: Klankenkaart publication requires exact live ancestry, owner instruction, scope and verified backup
+ok 12 - Klankenkaart publication requires exact live ancestry, owner instruction, scope and verified backup
+  ---
+  duration_ms: 50116.595584
+  type: 'test'
+  ...
+# Subtest: Group ten letter combinations requires scoped counts, review and verified source backup
+ok 13 - Group ten letter combinations requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 47754.541333
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 434301.498084

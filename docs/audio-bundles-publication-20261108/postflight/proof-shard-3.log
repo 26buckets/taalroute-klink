@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity
+ok 1 - Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity
+  ---
+  duration_ms: 55583.38525
+  type: 'test'
+  ...
+# Subtest: Missing fresh public client evidence is rejected
+ok 2 - Missing fresh public client evidence is rejected
+  ---
+  duration_ms: 6082.0865
+  type: 'test'
+  ...
+# Subtest: Smaller header successor retains historical approval and permits only the exact approved dimensions
+ok 3 - Smaller header successor retains historical approval and permits only the exact approved dimensions
+  ---
+  duration_ms: 56203.747334
+  type: 'test'
+  ...
+# Subtest: Maintenance approval rejects an expanded scope, missing consent and altered source hashes
+ok 4 - Maintenance approval rejects an expanded scope, missing consent and altered source hashes
+  ---
+  duration_ms: 27992.297708
+  type: 'test'
+  ...
+# Subtest: Compact exercise release requires exact consent, scope, source and verified backup
+ok 5 - Compact exercise release requires exact consent, scope, source and verified backup
+  ---
+  duration_ms: 33279.178958
+  type: 'test'
+  ...
+# Subtest: In release preserves beginner scope and binds its publication and backup
+ok 6 - In release preserves beginner scope and binds its publication and backup
+  ---
+  duration_ms: 31882.99475
+  type: 'test'
+  ...
+# Subtest: Is release binds its scope, live ancestry and verified backup without weakening earlier approvals
+ok 7 - Is release binds its scope, live ancestry and verified backup without weakening earlier approvals
+  ---
+  duration_ms: 39213.866083
+  type: 'test'
+  ...
+# Subtest: Nek release binds its scope, live ancestry and verified backup without weakening earlier approvals
+ok 8 - Nek release binds its scope, live ancestry and verified backup without weakening earlier approvals
+  ---
+  duration_ms: 37295.695166
+  type: 'test'
+  ...
+# Subtest: Landing audiences release requires exact scope, owner request and verified backup
+ok 9 - Landing audiences release requires exact scope, owner request and verified backup
+  ---
+  duration_ms: 37827.902958
+  type: 'test'
+  ...
+# Subtest: Matching card layout requires scoped approval and verified review/backup
+ok 10 - Matching card layout requires scoped approval and verified review/backup
+  ---
+  duration_ms: 34277.026292
+  type: 'test'
+  ...
+# Subtest: Exercise frame changes require exact scope, review, predecessor and verified backup
+ok 11 - Exercise frame changes require exact scope, review, predecessor and verified backup
+  ---
+  duration_ms: 36161.1105
+  type: 'test'
+  ...
+# Subtest: Group nine letter combinations requires scoped counts, review and verified source backup
+ok 12 - Group nine letter combinations requires scoped counts, review and verified source backup
+  ---
+  duration_ms: 43664.220209
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 472274.906834
