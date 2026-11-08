@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Error: strict mode violation: locator('[data-practice-listen]') resolved to 3 elements:
+    1) <button data-audio-active="true" data-practice-listen="true" class="cp-instruction-listen" aria-label="Luister naar de opdracht">…</button> aka getByText('Luister naar het woord.')
+    2) <button type="button" aria-keyshortcuts="Space" data-practice-listen="true" title="Luister naar de opdracht" aria-label="Luister naar de opdracht" class="secondary-button cp-exercise-listen">…</button> aka getByRole('button', { name: 'Luister naar de opdracht', description: 'Luister naar de opdracht' })
+    3) <button disabled title="Help" type="button" aria-label="Help" aria-expanded="false" data-practice-listen="true" class="secondary-button cp-exercise-help">…</button> aka getByRole('button', { name: 'Help' })
+
+Call log:
+[2m  - waiting for locator('[data-practice-listen]')[22m
+
+    at listen (/Users/nicoknoester/.cache/klink-opening-current-20261106/outputs/postflight-review-20261108/ink-reload.mjs:15:81)
+    at /Users/nicoknoester/.cache/klink-opening-current-20261106/outputs/postflight-review-20261108/ink-reload.mjs:17:8 {
+  log: [ "  - waiting for locator('[data-practice-listen]')" ]
+}
+
+Node.js v26.4.0

@@ -1,3 +1,17 @@
+## Actuele publicatie — gratis statische audio — 8 november 2026
+
+Livebron `99908642b4ec39b31fdeb68ce7c591271259e77e`, app-Worker `30b7c138-8586-4641-a2ec-be4a3c64243f` en audio-Worker `a5206dd1-a801-4330-a8b2-b1cac743ae27`, beide 100%. Op Nico’s expliciete opdracht via schone canonieke main en de normale `npm run deploy`, als opvolger van de opnieuw bevestigde livebron `693b58c1`. De native route `klink.taalroute.nl/package-audio/*` behoudt alle bestaande audio-adressen; hoofddomein en legacyroute blijven bestaan.
+
+Alle 18.393 bestanden live bytegelijk gecontroleerd: 4.562 app-assets en 13.831 audio-assets, met respectievelijk 15.438 en 6.169 plaatsen vrij. 302 lessen, inhoudskenmerken, media/metadata, databasebindingen, voortgang en vaste vormgeving behouden. Lokale waarschuwing en blokkade tellen afzonderlijk per publicatie. Geen R2, betaalde upgrade, extra audio-proxy, migratie, workflow of Actions. De audio-opslag gebruikt gratis Static Assets; volledige accountfactuur/budgetblokkade niet onafhankelijk uitleesbaar (403), geen budget gewijzigd.
+
+Chromium/WebKit: native audio, mobiele bediening, oude oefenlinks, opslag en oude-naar-nieuwe-codeherlaadproeven geslaagd; aanvullend vier echte handschrift-/IndexedDB-proeven. 40 uiterlijkparen gecontroleerd, twee afspeelmomentverschillen gericht gelijkgezet; einddiagnose pixelgelijk zonder referentiewijziging. Een reeds geopend tabblad met de oude build kan eenmalig herladen vereisen. Getypte en getekende antwoorden bleven in de herlaadproeven behouden. Geen fysieke telefoon/stylus of nieuwe menselijke luisterreview; bestaande Alfa C-klikoverlap ongewijzigd.
+
+Een vroege route-overgang is aantoonbaar veilig teruggenomen terwijl de oude hoofdapp intact bleef. De normale route wacht nu begrensd op een stabiele edge-omschakeling, controleert eerst alle audio en publiceert pas daarna de hoofdapp zonder dubbele audio. Brongebonden voorcontrole, livebewijs en gecontroleerde herstelkopieën: `docs/static-audio-publication-20261108/` en `postflight/`.
+
+Deze bewijsopvolger wijzigt de runtime niet; niet opnieuw deployen. Gebruik bij vervolgwerk de actuele canonieke main en behoud beide publicatieonderdelen, de livebasiscontrole en de terugvalvolgorde.
+
+---
+
 ## Actuele publicatie — Verder vast op mobiel — 7 november 2026
 
 Livebron `693b58c192cc1a480c5ac5266f102933aa8c4b3d`, Worker `d95cebab-f17e-4cff-b4ca-6254b0a94b03` (100%). Op Nico's expliciete akkoord via de normale `npm run deploy`, schone canonieke main en opvolger van `9f928feae98456b654a52c3930384801900810eb`. De zes appbestanden zijn exact gelijk aan de goedgekeurde preview. Alleen Verder staat op mobiel vast boven het appmenu, of boven de toetsenbordrand tijdens typen. Controleer, feedback, menu en desktop blijven op hun plek.
