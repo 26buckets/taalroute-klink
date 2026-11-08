@@ -27,7 +27,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       };
     });
     await page.goto(base + '/#learner');
-    for (const [kind, blocks, key] of [['daily', dailyBlocks, dailyStorageKey], ['functional', functionalBlocks, functionalStorageKey]]) {
+    for (const {kind, blocks, key} of [{kind: 'daily', blocks: dailyBlocks, key: dailyStorageKey}, {kind: 'functional', blocks: functionalBlocks, key: functionalStorageKey}]) {
       for (const block of blocks) for (const [index, step] of block.steps.entries()) {
         await page.evaluate(({ key, id, index }) => localStorage.setItem(key, JSON.stringify({ version: 1, positions: { [id]: index }, records: {} })), { key, id: block.id, index });
         await page.goto(base + '/#learner/alfa-c/' + block.id);

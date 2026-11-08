@@ -27,7 +27,7 @@ for (const [engine, type] of Object.entries(reproduce ? { chromium } : { chromiu
       await context.addInitScript(() => {
         window.__quiet = { words: 0, played: 0, activated: 0 };
         window.addEventListener('klink-word-audio-request', () => window.__quiet.words++);
-        window.__nativePlay = HTMLMediaElement.prototype.play;
+        window.__nativePlay = Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype, 'play').value;
         HTMLMediaElement.prototype.play = function () {
           if (this.dataset.klinkSource) window.__quiet.played++;
           setTimeout(() => this.dispatchEvent(new Event('ended')), 25);

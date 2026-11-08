@@ -7,11 +7,11 @@ import { connectedContentModule } from './precompute-connected-content.mjs';
 const generated = connectedContentModule(source);
 const restored = await import('data:text/javascript;base64,' + Buffer.from(generated).toString('base64'));
 const rows = [];
-for (const name of Object.keys(source)) {
-  const map = source[name] instanceof Map;
+for (const [name, value] of Object.entries(source)) {
+  const map = value instanceof Map;
   assert.equal(restored[name] instanceof Map, map);
-  assert.deepEqual(restored[name], source[name], `${name}: preserve exact object fields and values`);
-  const original = JSON.stringify(map ? [...source[name]] : source[name]);
+  assert.deepEqual(restored[name], value, `${name}: preserve exact object fields and values`);
+  const original = JSON.stringify(map ? [...value] : value);
   const actual = JSON.stringify(map ? [...restored[name]] : restored[name]);
   assert.equal(actual, original, `${name}: every field, order, level, audio and provenance must remain exact`);
   rows.push({ name, sha256: createHash('sha256').update(actual).digest('hex'), bytes: Buffer.byteLength(actual) });

@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-08",
+  "localOnly": true,
+  "liveSource": "693b58c192cc1a480c5ac5266f102933aa8c4b3d",
+  "canonicalMain": "98568bd3543e056a38f9427b5c331a8f7cf793d0",
+  "branch": "codex/free-static-audio-20261107",
+  "lint": {
+    "errorsBefore": 13,
+    "errorsAfter": 0,
+    "filesChanged": [
+      "scripts/check-opening-release-20261106.mjs",
+      "scripts/measure-help-button-network.mjs",
+      "scripts/prepare-pr12-compression.mjs",
+      "scripts/test-deferred-alfa-c-audio.mjs",
+      "scripts/test-deferred-bundle.mjs",
+      "scripts/test-precomputed-connected-content.mjs",
+      "scripts/test-quiet-controls-browser.mjs"
+    ]
+  },
+  "buildPassed": true,
+  "typesPassed": true,
+  "unitTests": 10,
+  "httpExactAssets": 18393,
+  "audioExactAssets": 13831,
+  "httpContracts": 25,
+  "blocked404": 39,
+  "parallelRequests": 4312,
+  "parallelConnections": 24,
+  "cancelAttempts": 48,
+  "recoveryRequests": 24,
+  "contentComparisons": 203,
+  "additionalContentComparisons": 1242,
+  "quietControlsScenarios": 8,
+  "enterScenarios": 8,
+  "mobileScenarios": 22,
+  "nativeDecodes": 6,
+  "alfaCAudioKeyboardScenarios": 288,
+  "appearancePairs": 40,
+  "appearanceInitialExact": 38,
+  "appearanceFollowupExact": true,
+  "releaseGuardRejections": 94,
+  "runtimeAndContentSourcesUnchanged": true,
+  "newMeteredServices": 0,
+  "published": false,
+  "githubPushes": false,
+  "open": [
+    "Existing Alfa C mouse overlap reproduces on unmodified live baseline; keyboard audio coverage passes.",
+    "Real Cloudflare routing not deployed/tested; normal publication gate remains closed.",
+    "No physical phone or new human listening review."
+  ]
+}

@@ -114,7 +114,7 @@ function verifyMobileContinue(read) {
  assert.equal(r.checkAndFeedbackMoved, false);
  git('merge-base', '--is-ancestor', r.liveSourceCommit, mobileBase);
  git('merge-base', '--is-ancestor', mobileBase, 'HEAD');
- const changed = [...new Set([...lines(git('diff', '--name-only', mobileBase, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort();
+ const changed = [...new Set([...lines(git('diff', '--name-only', mobileBase, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
  assert.deepEqual(changed, [...mobilePaths, mobileApproval].sort());
  assert.deepEqual(Object.keys(r.files).sort(), mobilePaths);
  for (const path of mobilePaths) assert.equal(sha(read(path)), r.files[path], path);
@@ -132,7 +132,7 @@ function verifyFooter(read, end = []) {
  assert.equal(r.fixedPositionApproved, false);
  git('merge-base', '--is-ancestor', r.liveSourceCommit, footerBase);
  git('merge-base', '--is-ancestor', footerBase, 'HEAD');
- const changed = [...new Set([...lines(git('diff', '--name-only', footerBase, ...end, '--', ...roots)), ...(end.length ? [] : lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots)))])].sort();
+ const changed = [...new Set([...lines(git('diff', '--name-only', footerBase, ...end, '--', ...roots)), ...(end.length ? [] : lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots)))])].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
  assert.deepEqual(changed, [...footerPaths, footerApproval].sort());
  assert.deepEqual(Object.keys(r.files).sort(), footerPaths);
  for (const path of footerPaths) assert.equal(sha(read(path)), r.files[path], path);
@@ -158,7 +158,7 @@ export function verifyOpeningRelease(read = readFileSync) {
  assert.equal(r.userRequest, 'Neem aan dat alles online is, zorg dat alles online staat.');
  assert.equal(r.baselineSourceCommit, baseline); assert.equal(r.checkedCandidateCommit, candidate);
  git('merge-base', '--is-ancestor', baseline, 'HEAD'); git('merge-base', '--is-ancestor', candidate, 'HEAD');
- const changed = [...new Set([...lines(git('diff', '--name-only', baseline, ...end, '--', ...roots)), ...(footer ? [] : lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots)))])].sort();
+ const changed = [...new Set([...lines(git('diff', '--name-only', baseline, ...end, '--', ...roots)), ...(footer ? [] : lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots)))])].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
  assert.deepEqual(changed, expected); assert.deepEqual(r.changedFiles, expected); assert.deepEqual(Object.keys(r.files).sort(), expected);
  for (const [path, hash] of Object.entries({...r.files, ...r.evidenceFiles})) assert.equal(sha(read(path)), hash, path);
  for (const path of expected.filter(p => /^(app|components|lib|public)\//.test(p) || ['vite.config.ts', 'tsconfig.json', 'package.json', 'package-lock.json'].includes(p))) assert.equal(sha(read(path)), sha(git('show', candidate + ':' + path)), path);

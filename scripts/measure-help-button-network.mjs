@@ -19,7 +19,7 @@ try {
   const responses=[],requests=[];const tasks=[];
   page.on('request',r=>{if(/\.bin(?:\?|$)/.test(r.url()))requests.push(new URL(r.url()).pathname)});
   page.on('response',r=>{if(/\.bin(?:\?|$)/.test(r.url()))tasks.push((async()=>{const body=await r.body();responses.push({path:new URL(r.url()).pathname,status:r.status(),bytes:body.length,contentRange:r.headers()['content-range']??null})})())});
-  const point=await help.evaluate(e=>{const w=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(!n.textContent.trim())continue;const r=document.createRange();r.selectNodeContents(n);const b=r.getBoundingClientRect();return{x:b.x+b.width/2,y:b.y+b.height/2}}throw Error('No Help text')});
+  const point=await help.evaluate(e=>{const w=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);for(let n=w.nextNode();n;n=w.nextNode()){if(!n.textContent.trim())continue;const r=document.createRange();r.selectNodeContents(n);const b=r.getBoundingClientRect();return{x:b.x+b.width/2,y:b.y+b.height/2}}throw Error('No Help text')});
   await page.evaluate(()=>{window.__helpWords=0;});
   const start=Date.now();if(width===390)await page.touchscreen.tap(point.x,point.y);else await page.mouse.click(point.x,point.y);
   if(expectedSilent){await page.waitForTimeout(600);assert.equal(await page.evaluate(()=>window.__helpWords),0);assert.equal(requests.length,0)}

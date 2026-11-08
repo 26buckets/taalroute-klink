@@ -32,9 +32,9 @@ const files = names.map((name, i) => {
   } });
   assert(compressed.length < body.length);
   assert(brotliDecompressSync(compressed).equals(body));
-  const module = `./pr12-${i}.br`;
-  writeFileSync(root + '/server/' + module, compressed);
-  return { path: '/' + file, module, originalBytes: body.length, compressedBytes: compressed.length, sha256: sha256(body) };
+  const modulePath = `./pr12-${i}.br`;
+  writeFileSync(root + '/server/' + modulePath, compressed);
+  return { path: '/' + file, module: modulePath, originalBytes: body.length, compressedBytes: compressed.length, sha256: sha256(body) };
 });
 const imports = files.map(({ module }, i) => `import m${i} from ${JSON.stringify(module)};`).join('\n');
 const entries = files.map(({ path, sha256 }, i) => `[${JSON.stringify(path)}, {body:m${i}, etag:'"br-${sha256}"'}]`).join(',\n');

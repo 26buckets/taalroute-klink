@@ -31,7 +31,7 @@ const css = root => files(root).filter(file => file.endsWith('.css')).flatMap(fi
     rows.push(JSON.stringify([parents, declaration.prop, declaration.value, Boolean(declaration.important)]));
   });
   return rows;
-}).sort();
+}).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
 assert.deepEqual(css('dist/client'), css(`${before}/client`), 'Every stylesheet declaration and selector remains unchanged');
 const sources = {
   'practice-source-bank': ['klink-imported-practice.json', 'klink-word-use-self.json'],
