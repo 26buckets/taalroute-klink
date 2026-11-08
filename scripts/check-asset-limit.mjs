@@ -17,10 +17,15 @@ export function assetPaths(root) {
   return files.filter(file => file.isFile()).map(file => resolve(file.parentPath, file.name).slice(resolve(root).length + 1)).filter(path => !matcher.ignores(path)).sort();
 }
 export const countAssets = root => assetPaths(root).length;
+export function publicationCounts(paths) {
+  const audio = paths.filter(path => path.startsWith('package-audio/')).length;
+  return {app: paths.length - audio, audio};
+}
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
-  const count = countAssets(process.argv[2] || 'dist/client'), level = assetLevel(count);
-  const text = `Klink: ${count}/${ASSET_LIMIT} publicatiebestanden; ${ASSET_LIMIT - count} plaatsen over.`;
-  if (level === 'error') { console.error('STOP: bestandslimiet overschreden. ' + text); process.exitCode = 1; }
-  else if (level === 'warning') console.warn('WAARSCHUWING: dicht bij de bestandslimiet. ' + text);
-  else console.log(text);
+  for (const [part, count] of Object.entries(publicationCounts(assetPaths(process.argv[2] || 'dist/client')))) {
+    const level = assetLevel(count), text = `Klink ${part}: ${count}/${ASSET_LIMIT} publicatiebestanden; ${ASSET_LIMIT - count} plaatsen over.`;
+    if (level === 'error') { console.error('STOP: bestandslimiet overschreden. ' + text); process.exitCode = 1; }
+    else if (level === 'warning') console.warn('WAARSCHUWING: dicht bij de bestandslimiet. ' + text);
+    else console.log(text);
+  }
 }

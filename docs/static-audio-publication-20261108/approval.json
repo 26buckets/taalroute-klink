@@ -1,0 +1,42 @@
+{
+  "approvedBy": "Nico",
+  "publicationApproved": true,
+  "userRequest": "Publiceer de gecontroleerde gratis audio-oplossing nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, links, voortgang en het uiterlijk. Het moet \u20ac0 blijven kosten.",
+  "baselineSourceCommit": "98568bd3543e056a38f9427b5c331a8f7cf793d0",
+  "liveSourceCommit": "693b58c192cc1a480c5ac5266f102933aa8c4b3d",
+  "liveWorkerVersion": "d95cebab-f17e-4cff-b4ca-6254b0a94b03",
+  "audioWorkerPreviouslyExists": false,
+  "newMeteredServices": 0,
+  "designChanged": false,
+  "normalCommand": "npm run deploy",
+  "files": {
+    "package.json": "5867a133349f6f0e7766144bf117208a3f7858ca487baefad5b83023bd5aa4c8",
+    "scripts/check-asset-limit.mjs": "b11f66fc36908e9029646cde514b198af7b1f57c3cec59b7683146c577964c7b",
+    "scripts/check-opening-release-20261106.mjs": "294c02479007992cc067da2d9793032dfa6e6fef4ba39266749ab871e1aedc7d",
+    "scripts/check-static-audio-release-20261108.mjs": "b8d73a6b10abfb46cc9444c6046298bef01e027d11e4b527bf7235a0512fa6d8",
+    "scripts/deploy-static-audio.mjs": "a257cbc979d0727423061d7b28e3b410b188318da69952b1939bd61bd27edac5",
+    "scripts/measure-help-button-network.mjs": "538c0485b9481b035ce332025445526406c7b5746f32444cdde5e305d4f1489f",
+    "scripts/prepare-pr12-compression.mjs": "2e72977099e6980387a59ca151bffaadb4daf2a429d7c30491e09fae55630ce4",
+    "scripts/prepare-static-audio-local.mjs": "74e776703c56c4ca92e7ea8464e749ab6d570155e2fd34ecadd2e1a79fe74dae",
+    "scripts/prepare-static-audio-publication.mjs": "a33cbf956344df1ddca79e9f9e822e6680c41016506a953a7466843adc1357ec",
+    "scripts/preview-static-audio-local.mjs": "c3dd3866e413d8a97291506c7ed56a87aa80b077ede9ef54f2f2f1a51ec4cf63",
+    "scripts/test-deferred-alfa-c-audio.mjs": "65d449e2eaccb503c599b2e5b38b592bdafa72d00b2dec8bc497a88dd0f4d107",
+    "scripts/test-deferred-bundle.mjs": "899c9a9cf70c7253dd8ea3f85e77dcf264ece36158c6c7fd22d4a7a48fd4c6d4",
+    "scripts/test-precomputed-connected-content.mjs": "6c9c246d1284f6aaebeea73beca345cb4f6f7aeee62364eff1e2d6639bc4d8a5",
+    "scripts/test-quiet-controls-browser.mjs": "71e1417c6cfe1f0c61d13a4ed876bfb1d42297fffb3916895a05e6620836a0f1",
+    "scripts/test-static-audio-http.mjs": "53a8374b0038b23c01b1b5beaf6143ac52466cba600a27f15039fb2360624345",
+    "scripts/test-static-audio-local.mjs": "9aaebd2316e63957f87983b794bbd603f6c6cb2656bdea51847762a6357a034b",
+    "scripts/test-static-audio-publication.mjs": "aaefe634a7d0ff36960dbdee3a811331bbeca59fd822838b9cb43ce5e6dda554"
+  },
+  "evidenceFiles": {
+    "docs/static-audio-publication-20261108/types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/static-audio-publication-20261108/packed-metadata-summary.json": "1746148d5d8a9394ce07ab0a79c9a877842d30821440631cc156d81fa6ab9164",
+    "docs/static-audio-publication-20261108/metadata-summary.json": "06837cd1bc3c7ca4fbb71a0dac0f0d3187d2c46fae282b2e19ae46ce9a41ba18",
+    "docs/static-audio-publication-20261108/lint.log": "cfdd0afc4a82c8c4104321ced0f59b34661eb05f1efa8ed78c200236451ef641",
+    "docs/static-audio-publication-20261108/dryrun-app.log": "e0835ecdd463dcd6c6022d8e3a8c6e1ef644298634144483dce8e61571bd7aac",
+    "docs/static-audio-publication-20261108/unit.log": "b2589d056343b1a80c5645e8115f0e82e47ce0cc98ba2d0c0220e37ef353ec10",
+    "docs/static-audio-publication-20261108/verification.json": "2f7f27965f1e60980e236deb80d2a43f365d290751cabe17b4d6fd0e8191a48a",
+    "docs/static-audio-publication-20261108/dryrun-audio.log": "68f7deb5a931ddf3d34d781bbd86ce04b69f07e46c987fc6172cdd02f5d7c915",
+    "docs/static-audio-local-20261108/result.json": "3f852018576e12c51aabcd965118d0599f0b54bde79c0e4401022ae1c3e8cc21"
+  }
+}

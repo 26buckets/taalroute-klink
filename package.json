@@ -28,7 +28,7 @@
     "test:navigation": "node --test scripts/test-practice-navigation.mjs && node scripts/test-unified-practice-navigation.mjs && node scripts/test-direct-navigation-browser.mjs && node scripts/test-alfa-c-menu-browser.mjs",
     "test:group-practice": "node --test scripts/test-group-practice.mjs scripts/test-extended-practice.mjs && node scripts/test-group-practice-browser.mjs && node scripts/test-extended-practice-browser.mjs",
     "check:publication": "node scripts/check-curriculum-release.mjs",
-    "deploy": "npm run check:publication && npm run build && wrangler deploy --config dist/server/wrangler.json",
+    "deploy": "npm run check:publication && npm run build && node scripts/deploy-static-audio.mjs",
     "format": "oxfmt",
     "db:generate": "drizzle-kit generate",
     "test:standard-players": "node --test scripts/test-standard-players.mjs && node scripts/test-standard-players-browser.mjs && node scripts/test-standard-player-variants-browser.mjs && node scripts/test-standard-integration-browser.mjs",
@@ -41,7 +41,7 @@
     "test:practice-bundles": "node --test scripts/test-practice-bundles.mjs",
     "audio:prepare:local": "node scripts/prepare-static-audio-local.mjs",
     "audio:preview:local": "node scripts/preview-static-audio-local.mjs",
-    "test:static-audio": "node --test scripts/test-static-audio-local.mjs scripts/test-practice-bundles.mjs",
+    "test:static-audio": "node --test scripts/test-static-audio-local.mjs scripts/test-static-audio-publication.mjs scripts/test-practice-bundles.mjs",
     "test:static-audio:http": "node scripts/test-static-audio-http.mjs"
   },
   "dependencies": {

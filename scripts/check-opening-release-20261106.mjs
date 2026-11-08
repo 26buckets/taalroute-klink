@@ -1,3 +1,4 @@
+import {verifyStaticAudioRelease, readBeforeStaticAudio, staticAudioBaseline} from './check-static-audio-release-20261108.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -103,7 +104,7 @@ const mobilePaths = [
  'components/product/alfa-c-functioneel.tsx', 'components/product/package-exercise-browser.tsx',
  'components/product/practice-action.tsx', footerFloor, 'scripts/check-opening-release-20261106.mjs',
 ].sort();
-function verifyMobileContinue(read) {
+function verifyMobileContinue(read, end = []) {
  const r = JSON.parse(read(mobileApproval));
  assert.equal(r.approvedBy, 'Nico');
  assert.equal(r.publicationApproved, true);
@@ -114,7 +115,7 @@ function verifyMobileContinue(read) {
  assert.equal(r.checkAndFeedbackMoved, false);
  git('merge-base', '--is-ancestor', r.liveSourceCommit, mobileBase);
  git('merge-base', '--is-ancestor', mobileBase, 'HEAD');
- const changed = [...new Set([...lines(git('diff', '--name-only', mobileBase, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
+ const changed = [...new Set([...lines(git('diff', '--name-only', mobileBase, ...end, '--', ...roots)), ...(end.length ? [] : lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots)))])].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
  assert.deepEqual(changed, [...mobilePaths, mobileApproval].sort());
  assert.deepEqual(Object.keys(r.files).sort(), mobilePaths);
  for (const path of mobilePaths) assert.equal(sha(read(path)), r.files[path], path);
@@ -140,10 +141,13 @@ function verifyFooter(read, end = []) {
  assert.deepEqual(JSON.parse(read(footerFloor)), {...prior, approvedUpdates:[...prior.approvedUpdates, footerApproval]});
 }
 export function verifyOpeningRelease(read = readFileSync) {
+ const staticAudio = verifyStaticAudioRelease(read);
+ const latestRead = read;
+ read = path => readBeforeStaticAudio(path, staticAudio, latestRead);
  const currentRead = read;
  const mobile = existsSync(mobileApproval);
  if (mobile) {
-  verifyMobileContinue(read);
+  verifyMobileContinue(read, [staticAudioBaseline]);
   read = path => mobilePaths.includes(path) ? git('show', mobileBase + ':' + path) : currentRead(path);
  }
  const footer = existsSync(footerApproval);
@@ -172,10 +176,10 @@ export function verifyOpeningRelease(read = readFileSync) {
  const speed = json(folder + 'normal-vs-live/visits.json'); assert.equal(speed.rows.length, 8); assert.deepEqual(speed.errors, []);
  assert(read(folder + 'unit-final.log').toString().includes('fail 0')); assert.equal(read(folder + 'types.log').toString().trim(), '');
  const backup = json(folder + 'backup.json'); assert(backup.driveId && backup.fullReadback && backup.allPayloadHashesMatch); assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
- return {...r, footer, mobile};
+ return {...r, footer, mobile, staticAudio};
 }
 export function readBeforeOpening(file, release, read = readFileSync) {
  if (release.changedFiles.includes(file)) return git('show', release.baselineSourceCommit + ':' + file);
  if (release.footer && footerPaths.includes(file)) return git('show', footerBase + ':' + file);
- return release.mobile && mobilePaths.includes(file) ? git('show', mobileBase + ':' + file) : read(file);
+ return release.mobile && mobilePaths.includes(file) ? git('show', mobileBase + ':' + file) : readBeforeStaticAudio(file, release.staticAudio, read);
 }
