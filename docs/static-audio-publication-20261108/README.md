@@ -11,3 +11,5 @@ Alle 13.759 losse opnamen en 6.293 segmenten in 72 bundels onderzocht. Native WA
 Accountabonnement kan met de beschikbare rechten niet worden gelezen (403). Static Assets opslag en aanvragen zijn volgens Cloudflare gratis; geen productactivatie of budgetwijziging. Websitezone staat op Free. Dit is geen verklaring over eventuele bestaande andere accountkosten.
 
 Eerder volledig lokaal gecontroleerd op actuele basis: docs/static-audio-local-20261108/. Nieuwe publicatieconfiguratie, foutafhandeling, limiettelling, lint en typen opnieuw gecontroleerd. Geen fysieke telefoon of nieuwe menselijke luisterronde; bestaande Alfa C klikoverlap blijft behouden. Livebewijs volgt na publicatie.
+
+Eerste echte omschakeling: negen eerste aanvragen bereikten nog de oude route; 13.822 audiobestanden waren exact. De normale route stopte en verwijderde de nieuwe audio-worker succesvol. De hoofdapp bleef op 693b58c1. De routecontrole wacht voortaan begrensd op twee opeenvolgende positieve controles, ook bij het omschakelen van de appversie; onstabiele of onverwachte versies blijven blokkeren. Lokaal getest met vertraagde, onderbroken en blijvend oude publicatie.

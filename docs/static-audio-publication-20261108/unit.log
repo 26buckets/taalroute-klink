@@ -2,20 +2,21 @@
 > taalroute-klink@0.1.0 test:static-audio
 > node --test scripts/test-static-audio-local.mjs scripts/test-static-audio-publication.mjs scripts/test-practice-bundles.mjs
 
-✔ All sources are byte-identical, retain IDs/counts/answers/media, and fit bounded immutable bundles (2354.770334ms)
-✔ Every old URL returns its exact original bytes, including query strings (1962.007417ms)
-✔ Old URL headers, conditional requests, ranges, unknown URLs and failed/corrupt bundles (11.800958ms)
-✔ Asset warning thresholds and counting match deployment exclusions (including nested files and negations) (2.69375ms)
-✔ splitting preserves published paths and bytes, headers and the source; excluded files stay excluded (31.524708ms)
-✔ only the exact audio directory changes local backend (0.064167ms)
-✔ free limit applies separately and still blocks either part exceeding its allowance (4.499959ms)
-✔ production split preserves app configuration and makes audio asset-only on the exact existing path (11.860833ms)
-✔ failure recovery never removes main audio before verification and restores app before any audio removal (0.29425ms)
-ℹ tests 9
+✔ All sources are byte-identical, retain IDs/counts/answers/media, and fit bounded immutable bundles (2997.818167ms)
+✔ Every old URL returns its exact original bytes, including query strings (2277.618458ms)
+✔ Old URL headers, conditional requests, ranges, unknown URLs and failed/corrupt bundles (12.32875ms)
+✔ Asset warning thresholds and counting match deployment exclusions (including nested files and negations) (2.740625ms)
+✔ splitting preserves published paths and bytes, headers and the source; excluded files stay excluded (34.085625ms)
+✔ only the exact audio directory changes local backend (0.073167ms)
+✔ free limit applies separately and still blocks either part exceeding its allowance (5.377916ms)
+✔ production split preserves app configuration and makes audio asset-only on the exact existing path (16.544625ms)
+✔ failure recovery never removes main audio before verification and restores app before any audio removal (0.668083ms)
+✔ edge propagation waits for two consecutive ready probes and never accepts a permanently old route (0.260125ms)
+ℹ tests 10
 ℹ suites 0
-ℹ pass 9
+ℹ pass 10
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 4404.144458
+ℹ duration_ms 5397.067

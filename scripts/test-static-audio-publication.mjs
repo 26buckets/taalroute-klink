@@ -3,7 +3,7 @@ import {mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync} from 'node:
 import {tmpdir} from 'node:os';
 import test from 'node:test';
 import {prepareAudioPublication, audioRoute} from './prepare-static-audio-publication.mjs';
-import {publishInOrder} from './deploy-static-audio.mjs';
+import {publishInOrder, waitForDeployment} from './deploy-static-audio.mjs';
 import {publicationCounts, assetLevel} from './check-asset-limit.mjs';
 
 await test('free limit applies separately and still blocks either part exceeding its allowance', () => {
@@ -45,4 +45,13 @@ await test('failure recovery never removes main audio before verification and re
     const expected = {audio: ['audio', 'removeNewAudio'], verifyAudio: ['audio', 'verifyAudio', 'removeNewAudio'], app: ['audio', 'verifyAudio', 'app', 'restoreApp'], verifyApp: ['audio', 'verifyAudio', 'app', 'verifyApp', 'restoreApp'], '': ['audio', 'verifyAudio', 'app', 'verifyApp']};
     assert.deepEqual(seen, expected[fail]);
   }
+});
+await test('edge propagation waits for two consecutive ready probes and never accepts a permanently old route', async () => {
+  const probes = [false, true, false, true, true]; let checked = 0;
+  await waitForDeployment(async () => probes[checked++], async () => {});
+  assert.equal(checked, 5);
+  checked = 0;
+  await assert.rejects(waitForDeployment(async () => {checked++; return false;}, async () => {}), /bounded readiness/);
+  assert.equal(checked, 30);
+  await assert.rejects(waitForDeployment(async () => {throw Error('wrong release');}, async () => {}), /wrong release/);
 });

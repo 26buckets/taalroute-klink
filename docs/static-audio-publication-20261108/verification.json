@@ -19,5 +19,13 @@
     "loose": "dad4d323e654dd17e4415f521dc731441eb06479c09b38a032abc0f39001be83",
     "packed": "9db8d688112f26614d68820d15acaa5cc3a87ec9f38218a7b53821847f356bf3"
   },
-  "metadataPolicy": "MP3/M4A: Taalroute artist, album_artist, publisher/label and Klink/Taalroute album. Native RIFF WAV: Taalroute artist/copyright and Klink/Taalroute album; native RIFF lacks standardized album-artist/publisher fields. Existing bytes and approved metadata retained. No generator brands."
+  "metadataPolicy": "MP3/M4A: Taalroute artist, album_artist, publisher/label and Klink/Taalroute album. Native RIFF WAV: Taalroute artist/copyright and Klink/Taalroute album; native RIFF lacks standardized album-artist/publisher fields. Existing bytes and approved metadata retained. No generator brands.",
+  "edgePropagationReadinessTestPassed": true,
+  "actualSafeAudioRollbackProven": true,
+  "firstAttempt": {
+    "exactAudioFiles": 13822,
+    "initialRoutePropagationMisses": 9,
+    "mainAppChanged": false,
+    "newAudioWorkerRemoved": true
+  }
 }

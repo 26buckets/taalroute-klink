@@ -14,6 +14,16 @@ export async function publishInOrder(actions) {
   try { await actions.app(); await actions.verifyApp(); }
   catch (error) { await actions.restoreApp(); throw error; }
 }
+// Route changes can reach the edge after Wrangler reports success; require two stable probes.
+export async function waitForDeployment(check, pause = () => new Promise(resolve => setTimeout(resolve, 1000))) {
+  let ready = 0;
+  for (let attempt = 0; attempt < 30; attempt++) {
+    ready = await check() ? ready + 1 : 0;
+    if (ready === 2) return;
+    await pause();
+  }
+  throw Error('Deployment did not become stable within the bounded readiness check');
+}
 export async function verifyPublishedAssets(manifest, base, sourceCommit, output) {
   assert(['https://klink.taalroute.nl', 'http://127.0.0.1:19135'].includes(base));
   let next = 0, verified = 0; const errors = [];
@@ -80,13 +90,22 @@ async function deploy() {
   await publishInOrder({
     audio: () => wrangler('deploy', '--config', out + '/audio/wrangler.json'),
     verifyAudio: async () => {
+      const sample = prepared.manifest.find(x => x.part === 'audio');
+      await waitForDeployment(async () => {
+        const response = await fetch('https://klink.taalroute.nl' + sample.path, {method: 'HEAD', cache: 'no-store', signal: AbortSignal.timeout(15000)});
+        return response.status === 200 && response.headers.get('x-klink-audio-release') === head;
+      });
       await verifyPublishedAssets(prepared.manifest.filter(x => x.part === 'audio'), 'https://klink.taalroute.nl', head, out + '/checks/audio.json');
       assert.equal((await live()).sourceCommit, before.sourceCommit, 'Main changed during audio verification');
     },
     removeNewAudio: () => wrangler('delete', '--name', 'taalroute-klink-audio', '--force', '--config', out + '/audio/wrangler.json'),
     app: () => wrangler('deploy', '--config', out + '/app/server/wrangler.json'),
     verifyApp: async () => {
-      assert.equal((await live()).sourceCommit, head);
+      await waitForDeployment(async () => {
+        const current = await live();
+        assert([before.sourceCommit, head].includes(current.sourceCommit), 'Unexpected concurrent publication');
+        return current.sourceCommit === head;
+      });
       await verifyPublishedAssets(prepared.manifest.filter(x => x.part === 'app'), 'https://klink.taalroute.nl', head, out + '/checks/app.json');
     },
     restoreApp: async () => {
