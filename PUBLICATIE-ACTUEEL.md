@@ -1,3 +1,23 @@
+## Actuele publicatie — Verder vast op mobiel — 7 november 2026
+
+Livebron `693b58c192cc1a480c5ac5266f102933aa8c4b3d`, Worker `d95cebab-f17e-4cff-b4ca-6254b0a94b03` (100%). Op Nico's expliciete akkoord via de normale `npm run deploy`, schone canonieke main en opvolger van `9f928feae98456b654a52c3930384801900810eb`. De zes appbestanden zijn exact gelijk aan de goedgekeurde preview. Alleen Verder staat op mobiel vast boven het appmenu, of boven de toetsenbordrand tijdens typen. Controleer, feedback, menu en desktop blijven op hun plek.
+
+22 liveproeven in Chromium/WebKit geslaagd, inclusief aantikken met open gesimuleerde toetsenbordruimte, verschuiven en sluiten. 302 lessen, negen dicteebanken met 50 woordvragen, opnamen en configuratie behouden. Geen fysieke telefoonproef, Inzicht-/stagingwijziging, workflow of betaalde upgrade. Livebewijs en volledig teruggelezen herstelkopie: `docs/mobile-continue-20261107/`.
+
+Deze bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
+## Actuele publicatie — compacte oefenfooter — 7 november 2026
+
+Livebron `9f928feae98456b654a52c3930384801900810eb`, Worker `3fb34baf-2b7c-4519-b432-f8c4070bb9f8` (100%). Nico gaf de getoonde compacte oefenfooter expliciet vrij voor Klink en Klink+docent. Normale `npm run deploy` via schone canonieke main, opvolger van `8d73a0bda6ba3d13344f319e6863f6f74acb69c3`. Alleen de zeven goedgekeurde CSS-bestanden wijzigen de app. Het onderste appmenu blijft staan; vaste plaatsing van de oefenfooter is niet meegenomen.
+
+36 live desktop-/mobiele schermproeven in Chromium/WebKit geslaagd. In 12 voor/na-paren: zelfde navigatie, 4 px minder oefenfooter en 8 px minder docentbalk. De 302 lessen, negen dicteebanken met 50 woordvragen, opnamen en inhoudskenmerken behouden. Geen fysieke telefoonproef, Inzicht-/stagingwijziging, workflow of betaalde upgrade. Zie `docs/compact-exercise-footer-20261107/` voor livecontrole en volledig teruggelezen Drive-herstelkopie.
+
+Deze bewijsopvolger verandert de runtime niet; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — kleinere opening en stille knoppen — 6 november 2026
 
 Livebron `8d73a0bda6ba3d13344f319e6863f6f74acb69c3`, Worker `6910338c-5fb6-4cff-af3f-483c3abd5596`, via schone canonieke main en normale `npm run deploy` op Nico’s expliciete opdracht. PR12 is opgenomen. Afstammeling van de laatst gepubliceerde `7e87eca15c1e5d63fe2b68d6623d9cce0334bce2`; alle inhoud, nieuwe oefenindeling en 50 goedgekeurde woordvragen behouden.

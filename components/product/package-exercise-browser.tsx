@@ -547,7 +547,7 @@ function PackageExercisePlayer({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced && !checkedWriting ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' || !audioPending ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={nextDisabled} onClick={next}>{nextLabel}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
+            <button data-practice-next data-mobile-continue={nextLabel === 'Verder' || undefined} aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={nextDisabled} onClick={next}>{nextLabel}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
           </footer>
         </div>
       </div>

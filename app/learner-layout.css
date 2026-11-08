@@ -35,10 +35,10 @@ body:has(.learner-app.consistent-layout) > .taalroute-header { display: flex; }
 .consistent-layout .is-guided .cp-model-content { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 16px; }
 .consistent-layout .is-guided .cp-model-content > img { width: min(220px, 100%); height: auto; max-height: none; object-fit: contain; }
 .consistent-layout .is-guided .cp-model-content > strong { font-size: clamp(36px, 5.5vw, 72px); }
-.consistent-layout .is-guided .cp-exercise-feedback { min-height: 112px; height: auto; }
 @media (max-width: 820px) {
   .product-root .learner-app.consistent-layout, .product-root .learner-app.consistent-layout.is-collapsed { grid-template-columns: minmax(0, 1fr); }
-  .product-root .learner-app.consistent-layout > .learner-nav { display: block; height: 68px; padding: 0; }
+  .product-root .learner-app.consistent-layout { --learner-bottom-menu-height: 68px; }
+  .product-root .learner-app.consistent-layout > .learner-nav { display: block; height: var(--learner-bottom-menu-height); padding: 0; }
   .consistent-layout .cp-nav-toggle { display: none; }
   .consistent-layout .learner-nav nav { margin: 0; overflow: visible; }
   .consistent-layout.is-collapsed .learner-nav nav button { display: grid; width: auto; }
@@ -159,9 +159,6 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
   .learner-app .cp-corner-prompt > button, .learner-app .cp-task-card > .cp-corner-listen { left: 0; top: 0; width: 60px; font-size: 14px; }
   .learner-app .cp-choice-grid { gap: 8px; }
 }
-@media (max-height: 740px) {
-  .product-root .consistent-layout .cp-exercise-feedback { height: 80px; min-height: 80px; padding-block: 8px; }
-}
 .learner-app .cp-exercise-stage .cp-model-content > :is(img, .cp-word-placeholder) { width: min(330px, 100%, max(72px, calc(100cqh - 140px))); height: auto; max-height: max(72px, calc(100cqh - 140px)); }
 .learner-app .cp-exercise-stage { position: relative; }
 .learner-app .cp-exercise-stage .cp-task-card:has(> .cp-corner-prompt, > .cp-corner-listen) { position: static; }
@@ -185,8 +182,7 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
   .learner-app .cp-chapter-playing:has(> .cp-exercise-browser) { grid-template-rows: auto 68px auto; }
   .learner-app .cp-chapter-playing > .cp-exercise-browser { grid-row: 3; }
 }
-.product-root .consistent-layout .cp-exercise-feedback { grid-template-rows: minmax(0, 1fr); }
-.product-root .consistent-layout .cp-exercise-feedback output { min-height: 0; max-height: 100%; overflow: auto; }
+.product-root .consistent-layout .cp-exercise-feedback output { min-width: 0; overflow-wrap: anywhere; }
 
 /* Keep beta word labels readable instead of scaling text inside a tiny image. */
 .learner-app .cp-word-placeholder { display: grid; place-items: center; aspect-ratio: 1; background: #f1f3f2; border: 1px solid #dce2df; border-radius: 5px; padding: 4px; margin: auto; box-sizing: border-box; color: #344e53; font-weight: 400; line-height: 1.1; text-align: center; overflow-wrap: anywhere; hyphens: auto; font-size: clamp(12px, calc(100cqh / 20), 24px); }

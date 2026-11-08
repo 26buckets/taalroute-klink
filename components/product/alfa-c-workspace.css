@@ -36,7 +36,7 @@
 .ac-answer-panel .functional-handwriting { max-height: 180px; object-fit: contain; }
 .ac-materials { font-size: 16px; line-height: 1.45; }
 .ac-materials summary { cursor: pointer; padding-block: 8px; }
-.ac-document-player .pilot-footer { padding: 10px 16px; gap: 12px; flex-wrap: nowrap; }
+.ac-document-player .pilot-footer { padding: 8px 16px; gap: 12px; flex-wrap: nowrap; }
 .ac-document-player .pilot-footer > output { flex: 1; font-size: 17px; line-height: 1.4; }
 .ac-document-player .pilot-footer > button { flex: 0 0 auto; }
 .ac-document-set { width: 100%; max-width: 760px; min-width: 0; }
@@ -102,7 +102,7 @@
   .ac-document-paper { padding: 16px; }
   .ac-document-line { font-size: 19px; }
   .ac-document-line + .ac-document-line { margin-top: 5px; }
-  .ac-document-player .pilot-footer { padding: 10px; }
+  .ac-document-player .pilot-footer { padding-inline: 10px; }
   .ac-document-player .pilot-footer > output { font-size: 16px; }
 }
 .ac-explanation { min-width: 0; }

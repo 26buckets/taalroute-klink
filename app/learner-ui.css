@@ -369,7 +369,7 @@
 .learner-app .cp-flash-card img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
 .learner-app .cp-flash-card strong { font-size: clamp(28px, 4vw, 42px); overflow-wrap: anywhere; }
 .learner-app .cp-card-hint { text-align: center; color: var(--muted); font-size: 14px; }
-.learner-app .cp-exercise-feedback { min-height: 72px; padding: 10px 16px; gap: 10px; grid-template-columns: 28px minmax(0, 1fr) auto; }
+.learner-app .cp-exercise-feedback { min-height: 68px; padding: 8px 16px; gap: 10px; grid-template-columns: 28px minmax(0, 1fr) auto; }
 .learner-app .cp-exercise-feedback > svg { width: 28px; height: 28px; padding: 5px; border-radius: var(--radius); }
 .learner-app .cp-exercise-feedback output strong { font-size: 16px; }
 .learner-app .cp-exercise-feedback output small { display: block; font-size: 14px; line-height: 1.4; }
@@ -506,7 +506,6 @@ html:has(.cp-practice-sheet) { scroll-padding-bottom: 96px; }
 .learner-app .is-mixed-round > header { display: none; }
 .learner-app .is-mixed-round .cp-exercise-workspace { min-height: 0; }
 .learner-app .is-mixed-round .cp-exercise-stage { height: clamp(360px, calc(var(--klink-app-height, 100dvh) - 280px), 720px); min-height: 0; overflow: auto; overscroll-behavior: auto; }
-.learner-app .is-mixed-round .cp-exercise-feedback { height: 112px; overflow: auto; }
 /* Reserve the same picture frame before loading and for every word shape. */
 .learner-app .cp-model-content > img { width: min(330px, 100%); height: auto; aspect-ratio: 1; object-fit: contain; }
 .learner-app .is-mixed-round .cp-model-content > img { width: min(100%, clamp(160px, calc(var(--klink-app-height, 100dvh) - 460px), 330px)); }
