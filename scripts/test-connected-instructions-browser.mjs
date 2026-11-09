@@ -39,7 +39,7 @@ try {
     const first = groupExercises(packs[index], mode)[0];
     if (first.requiresAudio) await page.waitForFunction(() => window.__played.length > 0);
     await page.waitForTimeout(150);
-    assert.equal(await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).count(), 0);
+    assert.equal(await page.getByRole('button', { name: /^Luister naar de opdracht(?:$|:)/ }).count(), 0);
     const played = await page.evaluate(() => window.__played);
     assert(!played.includes(src)); assert(played.every(source => !isWithdrawnAudio(source)));
     checks.push({ id: need.id, mode, exercises: count, instructionWithdrawn: true, taskAudioRetained: first.requiresAudio ? played.length > 0 : true });

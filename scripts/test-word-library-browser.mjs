@@ -40,16 +40,16 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
    await page.getByRole('button',{name:'Meer woorden tonen',exact:true}).click();assert.equal(await cards.count(),48);
    await search.fill('e-mail');assert.equal(await cards.count(),2);
    if(width===1366&&colorScheme==='light'){
-    await page.getByRole('button',{name:'Luister naar e-mail',exact:true}).click();
+    await cards.filter({has:page.getByText('e-mail',{exact:true})}).locator('.cp-word-listen').click();
     await page.waitForFunction(()=>window.__audio.at(-1)?.ended);
     assert((await page.evaluate(()=>window.__audio.at(-1).src)).endsWith(allPackageWords.find(w=>w.word==='e-mail').audio));
    }
    await search.fill('pak (');assert.equal(await cards.count(),2);
    assert.match((await cards.allInnerTexts()).join('\n'),/pak \(kleding\)/);
    await search.fill('');await page.locator('.word-filter-details summary').click();await source.selectOption('saved');assert.equal(await cards.count(),2);
-   await page.getByRole('button',{name:'mat niet meer bewaren',exact:true}).click();
+   await page.getByRole('button',{name:'Bewaard: mat, niet meer bewaren',exact:true}).click();
    assert.deepEqual(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),savedKey),[punct.id,'older-unknown-id']);
-   await source.selectOption('all');await search.fill('mat');await page.getByRole('button',{name:'mat bewaren',exact:true}).click();
+   await source.selectOption('all');await search.fill('mat');await page.getByRole('button',{name:'Bewaar: mat',exact:true}).click();
    await page.reload();await page.locator('.word-filter-details summary').click();await source.selectOption('saved');assert.equal(await cards.count(),2);
    await search.fill('woord-dat-niet-bestaat');await page.getByRole('heading',{name:'Geen woorden gevonden'}).waitFor();
    assert.equal(await page.getByRole('heading',{name:'Nog geen woorden bewaard'}).count(),0);

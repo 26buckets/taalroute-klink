@@ -4,7 +4,7 @@ import { chromium, webkit } from 'playwright';
 import { functionalBlocks, functionalStorageKey } from '../lib/alfa-c-functioneel.ts';
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:19215';
 assert(['localhost', '127.0.0.1'].includes(new URL(base).hostname));
-const out = 'outputs/ui-quality-20261109';
+const out = process.env.KLINK_TEST_OUTPUT || 'outputs/ui-quality-20261109';
 mkdirSync(out, { recursive: true });
 const checks = [], errors = [];
 for (const [engine, type] of Object.entries({ chromium, webkit })) {

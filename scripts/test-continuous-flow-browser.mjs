@@ -51,7 +51,7 @@ try {
 
   await openExercise(heard); await ready();
   assert.equal(await page.evaluate(src => window.__plays.filter(path => path.endsWith(src)).length, heard.instructionAudio.src), 0);
-  assert.equal(await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).count(), 0);
+  assert.equal(await page.getByRole('button', { name: /^Luister naar de opdracht(?:$|:)/ }).count(), 0);
   await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
   await page.locator('.cp-choice-grid button').nth(correct).click({position:{x:8,y:8}});
   await page.waitForTimeout(900);

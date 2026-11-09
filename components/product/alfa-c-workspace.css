@@ -99,11 +99,11 @@
 @media (max-width: 600px) {
   .ac-document-page > .cp-context-header { min-height: 44px; }
   .learner-app .ac-document-player .pilot-head { padding: 8px 10px; flex-wrap: nowrap; }
-  .ac-document-player .pilot-head h2 { font-size: 19px; flex-basis: auto !important; }
+  .ac-document-player .pilot-head h2 { min-width: 0; overflow-wrap: anywhere; hyphens: auto; font-size: 19px; flex-basis: auto !important; }
   .ac-document-player .pilot-head > div { gap: 5px; font-size: 13px; }
   .ac-document-player .pilot-head .secondary-button { min-width: 44px; min-height: 44px; padding: 8px; }
   .ac-support-tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 6px 8px; gap: 4px; }
-  .learner-app .ac-document-player .ac-support-tools > button { flex-direction: column; gap: 3px; padding: 5px 2px; font-size: 14px; line-height: 1.15; min-height: 48px; }
+  .learner-app .ac-document-player .ac-support-tools > button { flex-direction: column; gap: 3px; padding: 5px 2px; font-size: 16px; line-height: 1.15; min-height: 48px; }
   .ac-support-tools > button svg { width: 18px; height: 18px; }
   .ac-support-tools > [role="alert"] { grid-column: 1 / -1; }
   .ac-document-paper { padding: 16px; }
@@ -178,8 +178,14 @@
   .ac-answer-panel .functional-choice-grid button { min-height: 48px; padding-block: 6px; }
   .ac-document-player .pilot-footer > .secondary-button { min-width: 48px; width: 48px; padding: 0; font-size: 0; }
 }
-@media (min-width: 601px) and (max-width: 1100px) {
+@media (min-width: 370px) and (max-width: 1100px) {
   .ac-support-tools > .cp-exercise-tools { display: contents; }
+  .ac-document-player .ac-support-tools { flex-wrap: nowrap; }
+  .learner-app .ac-document-player .ac-support-tools :is(.cp-listen-slot, .cp-help-button-slot) { flex: 1; min-width: 0; }
+  .learner-app .ac-document-player .ac-support-tools :is(.cp-exercise-listen, .cp-exercise-help, .secondary-button) { flex: 1; width: 100%; min-width: 0; min-height: 72px; height: auto; flex-direction: column; gap: 3px; padding: 5px 2px; font-size: 16px; line-height: 1.15; white-space: normal; }
+  .ac-support-tools .cp-help-button-slot { order: 2; }
+  .ac-support-tools:has(> [role="alert"]) { flex-wrap: wrap; }
+  .ac-support-tools > [role="alert"] { flex-basis: 100%; }
 }
 @media (max-height: 700px) {
   body:has(.learner-app.consistent-layout .ac-document-page) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }

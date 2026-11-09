@@ -32,7 +32,7 @@ try {
   await page.locator('[data-activity="write"]').click();
   const writingId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
   const writing = groupExercises(packs[2], 'write').find(item => item.exerciseId === writingId);
-  assert.equal(await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).count(), 0);
+  assert.equal(await page.getByRole('button', { name: /^Luister naar de opdracht(?:$|:)/ }).count(), 0);
   await page.evaluate(() => { window.__started = []; });
   await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
   await page.waitForFunction(src => window.__started.some(path => path.endsWith(src)), writing.prompt.audio.src, { timeout: 20000 });

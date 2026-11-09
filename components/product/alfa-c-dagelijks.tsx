@@ -73,14 +73,14 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
   return <section ref={root} className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-daily-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div></header>
-      <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
+      <fieldset className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
         <ExerciseAudioSlot />
         <ExerciseListen showLabel inline={Boolean(step.audio.O)} label="Uitleg horen" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I], true); }} />
         {step.audio.O && <ExerciseListen showLabel label="Tekst horen" disabled={busy} onClick={() => { support('content'); void play([step.audio.O!]); }} />}
         <button className="secondary-button" aria-expanded={model} onClick={() => { if (!model) { support('example'); void play([step.audio.V]); } else stop(); setHelp(false); setModel(!model); }}><Eye />Voorbeeld</button>
         <ExerciseHelp open={help} closeLabel="Verberg hulp" onClick={() => { if (!help) { support('help'); void play([step.audio.H]); } else stop(); setModel(false); setHelp(!help); }} />
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
-      </div>
+      </fieldset>
       <div className="cp-exercise-stage">
         <AlfaCWorkspace ready={result === 'right'} source={<DocumentSet documents={step.documents} />} supportOpen={model || help || Boolean(readAlong.reading)} feedback={<output className="ac-task-feedback" data-motion-feedback={result} aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output>}>
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stop(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.example}</p><button className="primary-button" onClick={() => { stop(); setModel(false); setChosen([]); setResult('idle'); }}>Nu jij<ArrowRight /></button></section>

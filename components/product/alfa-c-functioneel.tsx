@@ -143,14 +143,14 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         <h2 ref={title} tabIndex={-1}>{step.screen}</h2>
         <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div>
       </header>
-      <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
+      <fieldset className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
         <ExerciseAudioSlot />
         <ExerciseListen showLabel inline={model ? Boolean(step.exampleTargetTexts.length) : Boolean(step.dictationTexts.length || documents.length)} label="Uitleg horen" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)} />
         {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <ExerciseListen showLabel inline={!model && step.dictationTexts.length > 0} label={model ? 'Voorbeeld horen' : 'Tekst horen'} disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }} />}
         {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />Voorbeeld</button>}
         <ExerciseHelp open={help} closeLabel="Verberg hulp" onClick={() => { markHelp(); setHelp(!help); setModel(false); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }} />
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
-      </div>
+      </fieldset>
       <div className="cp-exercise-stage">
         <AlfaCWorkspace ready={!model && ['right', 'done'].includes(result)} example={model} key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help || Boolean(readAlong.reading)} feedback={<output className="ac-task-feedback" data-motion-feedback={result} aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? step.successFeedback : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>}>
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stopPlayback(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section>

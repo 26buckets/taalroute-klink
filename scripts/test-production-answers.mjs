@@ -44,7 +44,7 @@ try{
  for(const row of selected){
   await page.goto(url(row));const ex=data(row);await page.locator('[data-exercise-id],.cp-word-worksheet').waitFor();
   if(row.activity.startsWith('worksheet')){
-   await page.getByRole('button',{name:'Luister naar de opdracht',exact:true}).click();
+   await page.getByRole('button',{name:/^Luister naar de opdracht(?:$|:)/}).click();
    for(const e of ex.slice(0,4))await finish(e,page.locator(`[data-worksheet-exercise="${e.exerciseId}"]`));
    assert(await page.locator('.cp-word-worksheet').getByRole('button',{name:'Verder',exact:true}).isEnabled());
   }else{

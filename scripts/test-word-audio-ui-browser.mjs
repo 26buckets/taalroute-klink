@@ -39,8 +39,8 @@ try {
   assert((await buttons.count()) <= 24);
   for (let i = 0; i < 20; i++) {
     await search.fill(firstWords[i].word);
-    assert.equal(await page.getByRole('button', {name:`Luister naar ${firstWords[i].word}`, exact:true}).isDisabled(), false);
-    await page.getByRole('button', {name:`Luister naar ${firstWords[i].word}`, exact:true}).click();
+    assert.equal(await page.locator('.cp-word-listen').filter({has:page.getByText(firstWords[i].word,{exact:true})}).isDisabled(), false);
+    await page.locator('.cp-word-listen').filter({has:page.getByText(firstWords[i].word,{exact:true})}).click();
     await page.waitForFunction(index => window.__wordAudio[index]?.ended || window.__wordAudio[index]?.error, i, { timeout: 15000 });
     const event = await page.evaluate(index => window.__wordAudio[index], i);
     assert(event.started && event.ended && !event.error, JSON.stringify(event));
@@ -56,7 +56,7 @@ try {
   assert(lastPack.words.every(word => allPackageWords.some(item => item.id === word.id)));
   await search.fill(lastPack.words.at(-1).word);
   const lastIndex = await page.evaluate(() => window.__wordAudio.length);
-  await page.getByRole('button', {name:`Luister naar ${lastPack.words.at(-1).word}`, exact:true}).click();
+  await page.locator('.cp-word-listen').filter({has:page.getByText(lastPack.words.at(-1).word,{exact:true})}).click();
   await page.waitForFunction(index => window.__wordAudio[index]?.ended, lastIndex, { timeout: 15000 });
   const lastPlayed = await page.evaluate(() => window.__wordAudio.at(-1));
   assert(lastPlayed.started && !lastPlayed.error && lastPlayed.src.endsWith(`/${lastPack.words.at(-1).id}.mp3`));
@@ -66,7 +66,7 @@ try {
     assert(word);
     await search.fill(word.word);
     const index = await page.evaluate(() => window.__wordAudio.length);
-    await page.getByRole('button', { name: `Luister naar ${text}`, exact: true }).click();
+    await page.locator('.cp-word-listen').filter({has:page.getByText(text,{exact:true})}).click();
     await page.waitForFunction(index => window.__wordAudio[index]?.ended, index, { timeout: 15000 });
     const played = await page.evaluate(index => window.__wordAudio[index], index);
     assert(played.started && !played.error && played.src.endsWith(`/${word.id}.mp3`));

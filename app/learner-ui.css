@@ -2,7 +2,7 @@
 .learner-app { --radius: 4px; }
 .learner-nav nav button.active { box-shadow: none; }
 .learner-app :is(button, select, input) { border-radius: var(--radius); }
-.learner-app :is(button, select, input):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.learner-app :is(button, a, summary, select, input, textarea):focus-visible { outline: 3px solid #996515; outline-offset: 3px; }
 .learner-app button > svg { flex-shrink: 0; }
 .learner-app :is(.primary-button, .secondary-button, .accent-button, .dark-secondary-button) {
   min-height: 48px; padding: 10px 16px; gap: 8px; font-size: 16px; line-height: 1.35;

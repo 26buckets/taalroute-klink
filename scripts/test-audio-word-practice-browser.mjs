@@ -58,7 +58,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           const pause = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true });
           if (await pause.count()) await pause.click();
           if (index === 0) {
-            await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).click();
+            await page.getByRole('button', { name: /^Luister naar de opdracht(?:$|:)/ }).click();
             assert((await page.evaluate(() => window.__played)).some(src => src.includes('KLINK-INS-f30ca4bc7abf')));
           }
           if (row.activity === 'listen') {

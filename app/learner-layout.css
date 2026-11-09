@@ -323,8 +323,8 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-view-toggle { width: 48px; height: 48px; min-width: 48px; min-height: 48px; display: grid; place-items: center; padding: 0; border: 0; background: transparent; color: var(--ink); }
 .learner-app .cp-view-toggle > span { position: relative; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); }
 .learner-app .cp-view-toggle > span { gap: 1px; align-content: center; }
-.learner-app .cp-view-toggle small { font-size: 12px; line-height: 14px; font-weight: 400; }
-.learner-app .cp-exercise-listen:has(> .cp-listen-caption) { width: 48px; height: 48px; padding: 2px 0; gap: 1px; flex-direction: column; font-size: 12px; line-height: 14px; }
+.learner-app .cp-view-toggle small { font-size: 16px; line-height: 20px; font-weight: 400; }
+.learner-app .cp-exercise-listen:has(> .cp-listen-caption) { width: 56px; min-width: 56px; height: 48px; padding: 2px 0; gap: 1px; flex-direction: column; font-size: 16px; line-height: 20px; }
 .learner-app .cp-view-toggle svg { width: 20px; height: 20px; stroke-width: 1.7; }
 .learner-app .cp-view-toggle[aria-pressed="true"] > span { border-color: var(--primary); background: var(--primary-soft); }
 .learner-app .cp-view-toggle[aria-pressed="false"] > span, .learner-app .cp-view-toggle:disabled { color: var(--muted); }
@@ -414,6 +414,7 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
     :is(.cp-exercise-tools, .cp-exercise-menu-bar, .cp-exercise-feedback, .cp-task-card) button { min-height: 44px; padding: 6px 8px; font-size: 14px; }
     .cp-exercise-record-head nav button, .cp-exercise-listen, .cp-view-toggle { width: 44px; height: 44px; min-width: 44px; }
     .cp-exercise-tools .cp-view-toggle { padding: 0; }
+    .cp-exercise-listen:has(> .cp-listen-caption) { width: 56px; min-width: 56px; height: 48px; min-height: 48px; padding: 2px 0; font-size: 16px; }
     .cp-view-toggle > span { width: 44px; height: 44px; }
     .cp-exercise-tools { min-height: 44px; gap: 8px; }
     .cp-exercise-tools > .cp-pace-controls { gap: 8px; }

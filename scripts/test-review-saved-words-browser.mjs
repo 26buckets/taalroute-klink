@@ -47,7 +47,7 @@ try {
     const protectedState = await page.evaluate(keys => Object.fromEntries(keys.map(key => [key, localStorage.getItem(key)])), [progressKey, learningReviewKey, 'klink.taalroute.attempts.v1']);
     await page.getByRole('button', { name: 'Kies woorden', exact: true }).click();
     await page.locator('.cp-global-word-grid article').first().waitFor();
-    await page.locator('.cp-global-word-grid article').first().getByRole('button', { name: / bewaren$/ }).click();
+    await page.locator('.cp-global-word-grid article').first().getByRole('button', { name: /^Bewaar:/ }).click();
     const saved = await page.evaluate(key => JSON.parse(localStorage.getItem(key)), savedKey);
     assert.equal(saved.length, 1);assert(allPackageWords.some(word => word.id === saved[0]));
     await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Nog een keer', exact: true }).click();
@@ -62,6 +62,7 @@ try {
     await page.locator('.review-word-list > div > button').click();
     assert((await audio).ok(), 'Saved word retains accessible original audio');
     await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
+    await page.locator('.word-filter-details summary').click();
     await page.getByLabel('Toon', { exact: true }).selectOption('saved');
     await page.locator('.cp-global-word-grid article').first().getByRole('button', { name: / niet meer bewaren$/ }).click();
     await page.getByRole('heading', { name: 'Nog geen woorden bewaard', exact: true }).waitFor();

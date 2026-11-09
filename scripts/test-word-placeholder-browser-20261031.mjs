@@ -21,7 +21,7 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
    await page.addInitScript(({key,id})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify([id,'older-unknown-id']));},{key:savedKey,id:adres.id});
    await page.goto(base+'/#learner/words');
    const search=page.getByLabel('Zoek een woord',{exact:true});await search.fill('adres');
-   const card=page.locator('.cp-global-word-grid article').filter({has:page.getByRole('button',{name:'Luister naar adres',exact:true})});
+   const card=page.locator('.cp-global-word-grid article').filter({has:page.getByText('adres',{exact:true})});
    assert.equal(await card.locator('.klink-placeholder-word').innerText(),'adres');
    assert.equal(await card.locator('.word-initial').count(),0);
    assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),colorScheme);
@@ -53,13 +53,13 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
     checks.push({engine,width,colorScheme,mode,holders:await holders.count(),wordFits:true});
    }
    await page.goto(base+'/#learner/words');await search.fill('aardappel');
-   const image=page.getByRole('button',{name:'Luister naar aardappel',exact:true}).locator('img');await image.evaluate(el=>el.decode());
+   const image=page.locator('.cp-word-listen').filter({has:page.getByText('aardappel',{exact:true})}).locator('img');await image.evaluate(el=>el.decode());
    const src=await image.getAttribute('src');assert(src&&!src.includes('placeholder'));
    if(width===1366&&colorScheme==='light'){
     await page.route('**'+src,route=>route.abort());await page.reload();await search.fill('aardappel');
-    await page.getByRole('button',{name:'Luister naar aardappel',exact:true}).locator('.klink-placeholder-word').waitFor();
-    assert.equal(await page.getByRole('button',{name:'Luister naar aardappel',exact:true}).locator('.klink-placeholder-word').innerText(),'aardappel');
-    await page.unroute('**'+src);await page.reload();await search.fill('aardappel');await page.getByRole('button',{name:'Luister naar aardappel',exact:true}).locator('img').evaluate(el=>el.decode());
+    await page.locator('.cp-word-listen').filter({has:page.getByText('aardappel',{exact:true})}).locator('.klink-placeholder-word').waitFor();
+    assert.equal(await page.locator('.cp-word-listen').filter({has:page.getByText('aardappel',{exact:true})}).locator('.klink-placeholder-word').innerText(),'aardappel');
+    await page.unroute('**'+src);await page.reload();await search.fill('aardappel');await page.locator('.cp-word-listen').filter({has:page.getByText('aardappel',{exact:true})}).locator('img').evaluate(el=>el.decode());
     checks.push({engine,failedImageFallback:true,originalImageRecovers:true});
     await page.goto(base+'/#learner/package/'+adres.packageId);await page.locator('.cp-tabs').getByRole('button',{name:'Woorden',exact:true}).click();
     const packageWord=page.getByRole('button',{name:'Luister naar adres',exact:true});await packageWord.locator('.klink-package-placeholder').waitFor();assert.equal(await packageWord.locator('.klink-placeholder-word').innerText(),'adres');

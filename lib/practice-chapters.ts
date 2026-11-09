@@ -61,7 +61,11 @@ export const matchesChapterSelection = (item: ChapterCollection, selection: Chap
 // Use the same filtered tasks for entrance buttons and the collection list.
 export function availableChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}, now = Date.now()): ChapterCollection[] {
   return chapterCollections(activity).filter(item => matchesChapterSelection(item, selection))
-    .map(item => activity === 'learning-review' ? { ...item, exercises: item.exercises.filter(exercise => review[exercise.exerciseId]?.due <= now) } : item)
+    .map(item => {
+      if (activity !== 'learning-review') return item;
+      const exercises = item.exercises.filter(exercise => review[exercise.exerciseId]?.due <= now);
+      return { ...item, exercises, exerciseCount: exercises.length };
+    })
     .filter(item => item.exerciseCount || item.exercises.length);
 }
 

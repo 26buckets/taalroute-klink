@@ -1,0 +1,97 @@
+{
+  "localOnly": true,
+  "publicationApproved": false,
+  "published": false,
+  "build": "passed",
+  "types": "passed",
+  "lint": "passed; two unchanged diagnostic-file warnings",
+  "uiAndFunctionalChecks": {
+    "screens/checks.json": {
+      "passed": true,
+      "cases": 80,
+      "sha256": "6ec13c32efa7395ec604ea2b8e6bf0262b841019b208ca755fed7155dd0a07a8"
+    },
+    "controls/checks.json": {
+      "passed": true,
+      "cases": 8,
+      "sha256": "20eadc8ba978e4aac3f8125ad2c7c0f7802eb6a11be221be6ac29ccd75179899"
+    },
+    "listen/labels.json": {
+      "passed": true,
+      "cases": 200,
+      "sha256": "aab8a7aae59c75dfe6418c3117706327a0fa081e7b5ec7ed770f63e6a0d1a864"
+    },
+    "panels/browser-checks.json": {
+      "passed": true,
+      "cases": 1200,
+      "sha256": "680e71259f3d97f0e4f87abd3a9ee1c2e5945c7d982ae628d8b079d647bcdd02"
+    },
+    "word-library/checks.json": {
+      "passed": true,
+      "cases": 14,
+      "sha256": "d06c14f4663e885754836c7b0c205d803af5db92422a4260dad73c616f6c462c"
+    },
+    "saved-words/results.json": {
+      "passed": true,
+      "cases": 20,
+      "sha256": "d3ffb2e2b4d71d07233a3741a40ca9cffba470133b5ff554bc6ac4643020885c"
+    },
+    "placeholders/checks.json": {
+      "passed": true,
+      "cases": 78,
+      "sha256": "36102daa5a076965471e424e208a3b8123d56889278f2b6c3349eb782e62150f"
+    },
+    "navigation/checks.json": {
+      "passed": true,
+      "cases": 2,
+      "sha256": "80b59c864b2687770c0c3f368cea83b78b9e5cf37ee9a9cc540e4075dd7ca4be"
+    },
+    "menu/checks.json": {
+      "passed": true,
+      "cases": 96,
+      "sha256": "b44fc1f5617308ae1a95b8e15ea3af08f5d84152af79a9f022733ed55d6c29b3"
+    },
+    "teacher/direct-board.json": {
+      "passed": true,
+      "cases": 6,
+      "sha256": "45b6ba6e5c46315ca6f04acc133c5c43ca1fc1d75ebed4692b20b7addae370d6"
+    },
+    "interaction/interaction.json": {
+      "passed": true,
+      "cases": 4,
+      "sha256": "6265e6c9f9d7186570a0d8a280e0c199092d2f5377030b037b9bbd95725d46dd"
+    },
+    "word-audio/word-card-playback.json": {
+      "passed": true,
+      "cases": 28,
+      "sha256": "d60e6c1bb9b9f6eb7a0afdff15fec7131aeab4b82ae45b52f1193ff688bc80e5"
+    }
+  },
+  "accessibility": {
+    "screens": 68,
+    "detectedViolations": 0,
+    "manualContrastFollowups": "Only decorative word-card watermark; conservative contrast >13.5:1. See contrast-review.json.",
+    "certified": false
+  },
+  "reviewRegression": {
+    "before": "48 empty sets offered with no history; failing regression retained in review-before.log",
+    "after": "Empty, due and future selections and accurate counts pass; 20 browser journeys retain saved words, original audio and stored progress.",
+    "relatedContract": "2400 synonym variants and six scheduled-review combinations passed in targeted existing test."
+  },
+  "contentPreservation": "content-preservation.json",
+  "freeAssets": {
+    "app": 8587,
+    "audio": 13831,
+    "paidServicesAdded": false,
+    "cloudRuns": 0
+  },
+  "publicationGate": {
+    "status": "not released",
+    "fullPublicationSuiteRun": false,
+    "historicalSynonymGateAttempt": "Blocked by original appearance allowlist for this local UI candidate. Gate and historical references unchanged; runtime-related test passes separately."
+  },
+  "humanPracticeTests": "not performed; protocol and blank forms prepared",
+  "physicalDevicesAndScreenReader": "not tested",
+  "zoom": "640x450 layout equivalent tested; actual browser/text zoom remains in practical test",
+  "evidenceSource": "Final UI tests precede only the nonvisual review-count repair; that repair then passes review and navigation regressions. Runtime hashes in local-review.json."
+}

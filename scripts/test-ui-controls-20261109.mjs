@@ -3,13 +3,13 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { chromium, webkit } from 'playwright';
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:19215';
 assert(['localhost', '127.0.0.1'].includes(new URL(base).hostname));
-const out = 'outputs/ui-quality-20261109/controls';
+const out = process.env.KLINK_TEST_OUTPUT || 'outputs/ui-quality-20261109/controls';
 mkdirSync(out, { recursive: true });
 const checks = [], errors = [];
 for (const [engine, type] of Object.entries({ chromium, webkit })) {
   const browser = await type.launch();
   try {
-    for (const width of [1280, 390, 320]) {
+    for (const width of [1280, 390, 370, 320]) {
       const page = await browser.newPage({ viewport: { width, height: width === 320 ? 568 : 900 }, reducedMotion: 'reduce' });
       page.on('pageerror', e => errors.push(e.message));
       await page.goto(base + '/#learner/chapters/words/meet/groep-1.alfa-a?level=alfa-a&help=practice');
@@ -20,7 +20,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       for (const button of [listen, ...await page.locator('.cp-view-panel button').all()]) {
         assert(await button.evaluate(e => {
           const r = e.getBoundingClientRect();
-          const labels = [...e.querySelectorAll('small, .cp-listen-caption')].map(x => x.getBoundingClientRect());
+          const text = [...e.querySelectorAll('small, .cp-listen-caption')];
+          if (text.some(x => Number.parseFloat(getComputedStyle(x).fontSize) < 16)) return false;
+          const labels = text.map(x => x.getBoundingClientRect());
           return r.width >= 44 && r.height >= 44 && r.left >= 0 && r.right <= innerWidth + 1 &&
             labels.every(t => t.left >= r.left - 1 && t.right <= r.right + 1 && t.top >= r.top - 1 && t.bottom <= r.bottom + 1);
         }), engine + ' ' + width + ' readable label inside touch target');

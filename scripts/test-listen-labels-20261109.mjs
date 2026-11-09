@@ -6,7 +6,7 @@ import {dailyBlocks, dailyStorageKey} from '../lib/alfa-c-dagelijks.ts';
 import {functionalAudio, dailyAudio} from '../lib/alfa-c-audio.ts';
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:19145';
 assert(['localhost', '127.0.0.1'].includes(new URL(base).hostname));
-const out = 'outputs/listen-labels-20261109'; mkdirSync(out, {recursive: true});
+const out = process.env.KLINK_TEST_OUTPUT || 'outputs/listen-labels-20261109'; mkdirSync(out, {recursive: true});
 const checks = [], errors = [];
 const functional = functionalBlocks.find(b => b.steps.some(s => s.handwriting));
 const handwriting = functional.steps.findIndex(s => s.handwriting);
@@ -14,7 +14,7 @@ const daily = dailyBlocks[0];
 for (const [engine, type] of Object.entries({chromium, webkit})) {
   const browser = await type.launch();
   try {
-    for (const [width, height] of [[1280, 900], [390, 844], [320, 568], [740, 390]]) for (const colorScheme of ['light', 'dark']) {
+    for (const [width, height] of [[1280, 900], [390, 844], [370, 812], [320, 568], [740, 390]]) for (const colorScheme of ['light', 'dark']) {
       const page = await browser.newPage({viewport: {width, height}, hasTouch: width < 1100, colorScheme, reducedMotion: 'reduce'});
       page.setDefaultTimeout(20000); page.on('pageerror', e => errors.push(e.message));
       await page.addInitScript(() => {
@@ -82,5 +82,5 @@ for (const [engine, type] of Object.entries({chromium, webkit})) {
     }
   } finally {await browser.close(); writeFileSync(out + '/labels.json', JSON.stringify({checks, errors}, null, 2));}
 }
-assert.deepEqual(errors, []); assert.equal(checks.length, 160);
-console.log('PASS 160 label/layout/model cases, including 4 native text/instruction/keyboard/reload cases');
+assert.deepEqual(errors, []); assert.equal(checks.length, 200);
+console.log('PASS 200 label/layout/model cases, including 4 native text/instruction/keyboard/reload cases');
