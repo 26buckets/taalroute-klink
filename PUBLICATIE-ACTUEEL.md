@@ -1,3 +1,13 @@
+## Actuele publicatie — duidelijke luisterknoppen — 9 november 2026
+
+Livebron `75cda7ec2ec683aa74d393b70f1289400e5a21c9`, app-Worker `a1ee33ba-1cd4-4d7d-a8f6-b46824590758` en audio-Worker `43e33cde-fb7c-4a8c-a4a8-98876f334a07`, beide 100%. Op Nico’s expliciete opdracht via schone canonieke main en `npm run deploy`, na hercontrole van voorganger `e0f4e609`.
+
+De goedgekeurde luisterknoppen tonen nu Tekst horen, Uitleg horen, Voorbeeld horen, Nummer horen, Zin horen of genummerde luisterlabels. Geen andere ontwerp-, inhoud-, audio-, route- of opslagwijziging. Alle 22.418 bestanden online bytegelijk gecontroleerd. De 13.831 audio-assets en oude links blijven behouden; bestandsruimte ongewijzigd.
+
+Lokale en online controles geslaagd; één aanvankelijke WebKit-vernieuwtime-out is apart vastgelegd en niet reproduceerbaar in vier gerichte vorige-build-naar-live hercontroles. Alle hercontroles behouden handschrift, antwoorden en lokale gegevens. Geen productcode aangepast voor de nacontrole. Bewijs, zichtbare voorbeelden en beperkingen: `docs/listen-labels-publication-20261109/postflight/`. Bronback-up op Drive: `1gvQ8nltbv0utr8OQ9FOlxg76UU_4w4CP`; definitief nacontrolebewijs: zie `docs/listen-labels-publication-20261109/postflight/backup.json` in dezelfde projectmap.
+
+Geen nieuwe diensten, R2, workflows, cloudtestruns of budgetverhoging. Geen fysieke telefoon getest.
+
 ## Actuele publicatie — audiobundels en Alfa C-klikherstel — 8 november 2026
 
 Livebron `e0f4e60920db5c712246144b371e85e5d3b72a7f`, app-Worker `b463285a-86c8-42d5-8d79-d643edd84db0` en audio-Worker `71b927fb-d3dc-4b2b-bfb4-2b5457bce845`, beide 100%. Op Nico’s expliciete opdracht via schone canonieke main en de normale `npm run deploy`, als opvolger van de opnieuw bevestigde livebron `99908642`. De publicatieroute controleert voortaan beide bestaande publicaties en zet bij fouten hun vorige versies terug.

@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-handwriting-source="KSW-AC-HS-001"]') to be visible[22m
+
+    at /private/tmp/klink-wordspace-20261106/outputs/listen-labels-publication-20261109/reload-live.mjs:28:35
+    at async file:///private/tmp/klink-wordspace-20261106/outputs/listen-labels-publication-20261109/reload-live.mjs:35:2 {
+  log: [
+    `  - waiting for locator('[data-handwriting-source="KSW-AC-HS-001"]') to be visible`
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0
