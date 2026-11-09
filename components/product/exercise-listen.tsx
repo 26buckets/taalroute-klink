@@ -27,7 +27,7 @@ export function ExerciseAudioSlot({ children, info }: { children?: ReactNode; in
 
 export function ExerciseListen({ label, showLabel = false, inline = false, ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { label: string; showLabel?: boolean; inline?: boolean }) {
   const corner = useContext(ListenCorner);
-  const button = <button {...props} type="button" data-practice-listen aria-keyshortcuts="Space" className="secondary-button cp-exercise-listen" aria-label={label} title={label}><Volume2 aria-hidden="true" />{showLabel && <span>{label}</span>}</button>;
+  const button = <button {...props} type="button" data-practice-listen aria-keyshortcuts="Space" className="secondary-button cp-exercise-listen" aria-label={label} title={label}><Volume2 aria-hidden="true" />{showLabel ? <span>{label}</span> : <span className="cp-listen-caption">Luister</span>}</button>;
   // Only the control moves; its original handler and playback owner remain intact.
   return corner && !inline ? corner[0] && createPortal(button, corner[0]) : button;
 }

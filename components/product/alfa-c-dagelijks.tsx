@@ -82,7 +82,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
-        <AlfaCWorkspace source={<DocumentSet documents={step.documents} />} supportOpen={model || help || Boolean(readAlong.reading)} feedback={<output className="ac-task-feedback" data-motion-feedback={result} aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output>}>
+        <AlfaCWorkspace ready={result === 'right'} source={<DocumentSet documents={step.documents} />} supportOpen={model || help || Boolean(readAlong.reading)} feedback={<output className="ac-task-feedback" data-motion-feedback={result} aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output>}>
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stop(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.example}</p><button className="primary-button" onClick={() => { stop(); setModel(false); setChosen([]); setResult('idle'); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{step.speech.H}</p><button className="secondary-button" onClick={() => { stop(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
               : <>

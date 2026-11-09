@@ -1,0 +1,154 @@
+{
+  "localOnly": true,
+  "publicationApproved": false,
+  "baseline": "0e72bf0ead44306e77b85dd06ae4856e663ad755",
+  "results": {
+    "unit": {
+      "lastLines": [
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 1244.501834"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-unit.log",
+      "hasFailure": false
+    },
+    "audio-unit": {
+      "lastLines": [
+        "ℹ skipped 0",
+        "ℹ todo 0",
+        "ℹ duration_ms 23458.758375"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-audio-unit.log",
+      "hasFailure": false
+    },
+    "routes-unit": {
+      "lastLines": [
+        "PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.",
+        "PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion."
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-routes-unit.log",
+      "hasFailure": false
+    },
+    "quality-test": {
+      "lastLines": [
+        "PASS 80 UI screen checks; search, ordering, keyboard, completion and stored-data checks."
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-quality-test.log",
+      "hasFailure": false
+    },
+    "word-browser": {
+      "lastLines": [
+        "PASS 14 word-library cases"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-word-browser.log",
+      "hasFailure": false
+    },
+    "navigation": {
+      "lastLines": [
+        "PASS Direct kiezen, visible level buttons, real sound card, original steps and preserved storage in both browsers and four sizes"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-navigation.log",
+      "hasFailure": false
+    },
+    "menu": {
+      "lastLines": [
+        "PASS 96 journeys: all levels share category/activity/list frame; 180 C block entries/returns; two browsers, three sizes, reload/history and legacy URLs."
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-menu.log",
+      "hasFailure": false
+    },
+    "teacher": {
+      "lastLines": [
+        "PASS 6 complete direct-board journeys"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-teacher.log",
+      "hasFailure": false
+    },
+    "teacher-edges": {
+      "lastLines": [
+        "PASS 8 edge scenarios"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-teacher-edges.log",
+      "hasFailure": false
+    },
+    "interaction": {
+      "lastLines": [
+        "PASS 4 native audio, keyboard, touch, independent view controls and stored answers"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-interaction.log",
+      "hasFailure": false
+    },
+    "audio-browser": {
+      "lastLines": [
+        "PASS 160 label/layout/model cases, including 4 native text/instruction/keyboard/reload cases"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-audio-browser.log",
+      "hasFailure": false
+    },
+    "source-click": {
+      "lastLines": [
+        "PASS 16 real Alfa C image-pointer/keyboard/audio/reload cases"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-source-click.log",
+      "hasFailure": false
+    },
+    "card-filters": {
+      "lastLines": [
+        "PASS six word-filter selections with short titles and source-bound levels/counts."
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-card-filters.log",
+      "hasFailure": false
+    },
+    "variants": {
+      "lastLines": [
+        "PASS Order fixture: images/text rendered in chosen sequence; explicit alternative order accepted",
+        "PASS Gap fixture: additional authorized typed answer accepted without copying the complete model",
+        "PASS Scene fixture: a broken image never permits a guessed successful answer"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-variants.log",
+      "hasFailure": false
+    },
+    "controls": {
+      "lastLines": [
+        "PASS 6 label, touch-target, focus, toggle and menu checks."
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-controls.log",
+      "hasFailure": false
+    },
+    "panels": {
+      "lastLines": [
+        "webkit 390 144 assignments passed",
+        "chromium 390 144 assignments passed",
+        "1200 panel checks passed"
+      ],
+      "log": "outputs/ui-quality-20261109/logs/klink-ui-panels.log",
+      "hasFailure": false
+    }
+  },
+  "sourceSHA256": {
+    "app/learner-layout.css": "3bf2a6888087dcdc41c9f81db53161e1c0c7c30d9bb57ffd5b61202f6af966c0",
+    "app/learner-ui.css": "0b1f6abb998faef8a9e415fec473bfef81da4faa597582b5c7ba52416fca07a3",
+    "components/product/alfa-c-dagelijks.tsx": "e4d34c132fda7e3f7d41c27e6f7849e1afc9a690355cc950ecbc14a96c967abd",
+    "components/product/alfa-c-functioneel.tsx": "5e7e567d234d8536e0702001df08e2754f3451475820d0cee200bcced7134274",
+    "components/product/alfa-c-workspace.css": "e4dd527d625170ea25f2c233a33535d0106b9e53fe6a39a5813ae22600a52341",
+    "components/product/alfa-c-workspace.tsx": "e9fa664d0b193f6a2db6c5531f717fd479843abe47b318d5e0ed6b01b1221410",
+    "components/product/exercise-listen.tsx": "9a7c533cc8101f48c7054ae6c825583cb2778f1efb27d0a4c927f27d962e4651",
+    "components/product/exercise-view.tsx": "04b846d0185b0fcda6a029d73201c1bd6f4fcdfa7b5d64efe940faeec58aac92",
+    "components/product/learner-app.tsx": "48d859a99a082a05556b49b05abd6ec2d4b09d0f2179153751945247b70df67b",
+    "components/product/practice-chapters.tsx": "622c38d6d2f954e0a0e0f24fe9866d856c5704c629a08cf6d6057541ce4d88cd",
+    "components/product/teacher-classroom.css": "7eabb3dca4fc9c4f6b010c66145c78cac04e17b979f2cc2578d5e06a7f27f568",
+    "components/product/teacher-classroom.tsx": "c37f67bfa5a3d5c2c6534c7e055b0ec46c9e863833f1a0ea60248d709e9edfd3",
+    "lib/word-library.ts": "a1f84aa30c7839536ebc54b2246be216d3277bb8b42683fd635cd41c2a855131",
+    "public/taalroute-menu/menu-controls.js": "2b40674de597c5ccbe3cf1e74e3e0bab60dd11fe9d11113633f053bbc494cb83"
+  },
+  "typecheck": "passed",
+  "lint": "passed; two pre-existing warnings in historical diagnostic scripts",
+  "build": "passed",
+  "newDependencies": 0,
+  "newCloudRuns": 0,
+  "actionsExtraCost": 0,
+  "appAssets": 8587,
+  "audioAssets": 13831,
+  "independentUserStudy": false,
+  "fullAccessibilityCertification": false
+}

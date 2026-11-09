@@ -1,7 +1,8 @@
 'use client';
 import { useExerciseViewTarget } from './exercise-view';
-import { useState, type ReactNode } from 'react';
-import { Check, FileText } from 'lucide-react';
+import { useLayoutEffect, useRef, useState, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
+import { ArrowRight, Check, FileText } from 'lucide-react';
 import Image from './compact-image';
 import './alfa-c-workspace.css';
 import { AlfaCPanel } from './alfa-c-panel';
@@ -48,11 +49,15 @@ export function DocumentSet({ documents }: { documents: Document[] }) {
   </div>;
 }
 
-export function AlfaCWorkspace({ source, supportOpen = false, feedback, children }: { source: ReactNode; supportOpen?: boolean; feedback?: ReactNode; children: ReactNode }) {
+export function AlfaCWorkspace({ source, supportOpen = false, ready = false, example = false, feedback, children }: { source: ReactNode; supportOpen?: boolean; ready?: boolean; example?: boolean; feedback?: ReactNode; children: ReactNode }) {
   const [view, setView] = useState<'source' | 'answer'>('source');
-  return <div className="ac-workspace" data-mobile-view={supportOpen ? 'answer' : view}>
-    <nav className="ac-panel-switch" aria-label="Tekst of opdracht"><button className="secondary-button" aria-pressed={!supportOpen && view === 'source'} onClick={() => setView('source')} disabled={supportOpen}><FileText />Tekst</button><button className="secondary-button" aria-pressed={supportOpen || view === 'answer'} onClick={() => setView('answer')}><Check />Opdracht</button></nav>
+  const root = useRef<HTMLDivElement>(null), answerTab = useRef<HTMLButtonElement>(null);
+  const [footer, setFooter] = useState<HTMLElement | null>(null);
+  useLayoutEffect(() => { setFooter(root.current?.closest('.ac-document-player')?.querySelector<HTMLElement>('.pilot-footer') ?? null); }, []);
+  return <div ref={root} className="ac-workspace" data-mobile-view={supportOpen ? 'answer' : view} data-ready={ready}>
+    <nav className="ac-panel-switch" aria-label="Tekst of opdracht"><button className="secondary-button" aria-pressed={!supportOpen && view === 'source'} onClick={() => setView('source')} disabled={supportOpen}><FileText />Tekst</button><button ref={answerTab} className="secondary-button" aria-pressed={supportOpen || view === 'answer'} onClick={() => setView('answer')}><Check />Opdracht</button></nav>
     <div className="ac-workspace-panels"><AlfaCPanel kind="source">{source}</AlfaCPanel><AlfaCPanel kind="answer">{children}</AlfaCPanel></div>
     {feedback}
+    {footer && !ready && !supportOpen && view === 'source' && createPortal(<button className="primary-button ac-open-task" onClick={() => { setView('answer'); answerTab.current?.focus({ preventScroll: true }); }}><span>{example ? 'Bekijk voorbeeld' : 'Maak de opdracht'}</span><ArrowRight /></button>, footer)}
   </div>;
 }

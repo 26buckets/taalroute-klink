@@ -810,6 +810,11 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
 .word-library-page .word-library-more { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; }
 
 .word-library-page .word-filters > label:not(.word-search) { flex: 1 1 260px; max-width: 390px; }
+.word-filter-details { width: 100%; }
+.word-filter-details summary { cursor: pointer; min-height: 44px; padding: 10px 0; color: var(--ink); font-size: 18px; }
+.word-filter-options { display: flex; flex-wrap: wrap; gap: 16px; padding-bottom: 12px; align-items: end; }
+.learner-app .word-filter-options label { flex: 1 1 240px; max-width: 390px; }
+.word-library-page .word-filter-options button { font: inherit; min-height: 48px; white-space: normal; }
 
 /* Equal rows follow the existing grids; larger text remains fully visible. */
 :is(.cp-package-grid, .cp-lesson-list, .cp-word-grid, .cp-global-word-grid, .cp-activity-grid, .cp-reading-list, .cp-scene-gallery > div, .review-word-list > div) { grid-auto-rows: 1fr; }

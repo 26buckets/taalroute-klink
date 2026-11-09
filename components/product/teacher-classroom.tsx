@@ -286,6 +286,8 @@ export function TeacherClassroom({
 }: {
   onActiveChange?: (active: boolean) => void;
 }) {
+  const [lessonQuery, setLessonQuery] = useState("");
+  const matchingLessons = classroomLessons.filter(lesson => lesson.word.word.toLocaleLowerCase("nl").includes(lessonQuery.trim().toLocaleLowerCase("nl")));
   const [state, setState] = useState<ClassroomState>(() => readClassroom());
   const [screen, setScreen] = useState<"entry" | "lesson">(() =>
     readClassroom().active ? "lesson" : "entry",
@@ -462,8 +464,14 @@ export function TeacherClassroom({
   if (screen === "entry")
     return (
       <TeacherWorkspaceFrame view="plus">
+        <div className="kpd-lesson-search">
+          <label>Zoek een les<input type="search" value={lessonQuery} onChange={event => setLessonQuery(event.target.value)} /></label>
+          <output aria-live="polite">{matchingLessons.length} van {classroomLessons.length} lessen</output>
+          {lessonQuery && <button className="secondary-button" onClick={() => setLessonQuery("")}>Wis zoeken</button>}
+        </div>
+        {matchingLessons.length === 0 && <p><output>Geen les gevonden. Probeer een ander woord.</output></p>}
         <div className="kpd-lesson-list">
-          {classroomLessons.map(lesson => <button key={lesson.id} className="kpd-lesson-choice" aria-label={`Les openen: ${lesson.word.word}`} onClick={() => start(lesson.id)}>
+          {matchingLessons.map(lesson => <button key={lesson.id} className="kpd-lesson-choice" aria-label={`Les openen: ${lesson.word.word}`} onClick={() => start(lesson.id)}>
             <Image src={lesson.boardImage!} alt="" width={120} height={120} />
             <span>{lesson.word.word}</span><ArrowRight aria-hidden="true" />
           </button>)}
@@ -992,6 +1000,8 @@ export function TeacherClassroom({
 }
 
 export function TeacherMaterials() {
+  const [query, setQuery] = useState("");
+  const matchingSheets = worksheets.filter(item => item.title.toLocaleLowerCase("nl").includes(query.trim().toLocaleLowerCase("nl")));
   const [hash, setHash] = useState(() => typeof window === "undefined" ? "" : window.location.hash);
   const { lesson, round, fromLesson } = worksheetSelection(hash);
   const sheet = lesson?.rounds[round];
@@ -1013,8 +1023,14 @@ export function TeacherMaterials() {
     <section className="kpd-worksheets" aria-label="Werkbladen per les">
       {!lesson || !sheet ? <>
         <p>Kies een les. Het digibord en de werkbladen horen bij elkaar.</p>
+        <div className="kpd-lesson-search">
+          <label>Zoek een werkblad<input type="search" value={query} onChange={event => setQuery(event.target.value)} /></label>
+          <output aria-live="polite">{matchingSheets.length} van {worksheets.length} lessen</output>
+          {query && <button className="secondary-button" onClick={() => setQuery("")}>Wis zoeken</button>}
+        </div>
+        {matchingSheets.length === 0 && <p><output>Geen werkblad gevonden. Probeer een ander woord.</output></p>}
         <div className="kpd-worksheet-grid">
-          {worksheets.map(item => <article className="kpd-worksheet-lesson" key={item.id}>
+          {matchingSheets.map(item => <article className="kpd-worksheet-lesson" key={item.id}>
             <h3>{item.title}</h3>
             <div className="kpd-worksheet-options">
               <a className="secondary-button" href={`${classroomHash}?lesson=${item.id}`}><Presentation /><span>{item.title} · Digibordles</span><ArrowRight /></a>

@@ -22,5 +22,8 @@ export function libraryWords(filter: WordLibraryFilter, savedWordIds: string[], 
   const filtered = filter.level !== 'all' || filter.chapter !== 'all' || filter.collection !== 'all';
   const memberships = filtered ? new Set(index ? libraryCollections(index, filter).filter(item => filter.collection === 'all' || item.id === filter.collection).flatMap(item => filter.level === 'all' ? Object.values(item.levels).flat() : item.levels[filter.level] ?? []) : []) : null;
   const query = normalize(filter.query), saved = new Set(savedWordIds);
-  return sortedWords.filter(word => (filter.source === 'all' || saved.has(word.id)) && (!query || normalize(wordLabel(word)).includes(query)) && (!memberships || memberships.has(word.id)));
+  const matches = sortedWords.filter(word => (filter.source === 'all' || saved.has(word.id)) && (!query || normalize(wordLabel(word)).includes(query)) && (!memberships || memberships.has(word.id)));
+  if (!query) return matches;
+  const rank = (label: string) => label === query ? 0 : label.startsWith(query) ? 1 : 2;
+  return matches.sort((a, b) => rank(normalize(wordLabel(a))) - rank(normalize(wordLabel(b))));
 }

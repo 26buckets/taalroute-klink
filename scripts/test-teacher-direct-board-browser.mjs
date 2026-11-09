@@ -39,7 +39,7 @@ for (const { name, engine, options } of [
       );
       await page.goto(base + '/#teacher/plus');
       await page.getByRole('button', { name: 'Les openen: mat', exact: true }).waitFor();
-      assert.equal(await page.locator('input,textarea,select').count(), 0);
+      assert.equal(await page.locator('input:not([type=search]),textarea,select').count(), 0);
       assert(
         !/voorbereid|Alfa|lesplan/i.test(
           await page.locator('main').innerText(),
@@ -190,7 +190,7 @@ for (const { name, engine, options } of [
       await page
         .getByRole('button', { name: 'Les openen: mat', exact: true })
         .waitFor();
-      assert.equal(await page.locator('input,textarea,select').count(), 0);
+      assert.equal(await page.locator('input:not([type=search]),textarea,select').count(), 0);
       await page
         .getByRole('button', { name: 'Les openen: mat', exact: true })
         .click();

@@ -9,6 +9,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
   try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
     await page.goto(`${base}/#learner/words`);
+    await page.locator('.word-filter-details summary').click();
     for (const level of ['all', 'a2', 'b1']) {
       await page.locator('.word-filters').getByLabel('Niveau', { exact: true }).selectOption(level);
       await page.locator('.word-filters').getByLabel('Onderdeel', { exact: true }).selectOption('words');

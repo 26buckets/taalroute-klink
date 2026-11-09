@@ -144,7 +144,7 @@
     if (!window.TaalrouteAppearance) return;
     const appearance = document.createElement('div');
     appearance.className = 'tr-menu-appearance';
-    appearance.innerHTML = '<div class="tr-menu-label"><span>Kleurstand</span><span data-current-appearance></span></div><div class="tr-menu-modes" role="group" aria-label="Kleurstand">' + Object.entries(labels).map(([mode,label]) => `<button type="button" data-appearance-choice="${mode}" aria-label="${label}" title="${label}" aria-pressed="false">${icon(mode === 'light' ? 'sun' : mode === 'dark' ? 'moon' : 'monitor')}</button>`).join('') + '</div><p class="tr-menu-message" role="status"></p>';
+    appearance.innerHTML = '<div class="tr-menu-label"><span>Kleur van menubalk</span><span data-current-appearance></span></div><div class="tr-menu-modes" role="group" aria-label="Kleur van menubalk">' + Object.entries(labels).map(([mode,label]) => `<button type="button" data-appearance-choice="${mode}" aria-label="${label}" title="${label}" aria-pressed="false">${icon(mode === 'light' ? 'sun' : mode === 'dark' ? 'moon' : 'monitor')}</button>`).join('') + '</div><p class="tr-menu-message" role="status"></p>';
     if (manual) manual.after(appearance); else panel.prepend(appearance);
     appearance.addEventListener('click', event => { const button = event.target.closest('[data-appearance-choice]'); if (button) window.TaalrouteAppearance.set(button.dataset.appearanceChoice); });
     sync(appearance);

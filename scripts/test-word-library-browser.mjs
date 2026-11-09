@@ -46,11 +46,11 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
    }
    await search.fill('pak (');assert.equal(await cards.count(),2);
    assert.match((await cards.allInnerTexts()).join('\n'),/pak \(kleding\)/);
-   await search.fill('');await source.selectOption('saved');assert.equal(await cards.count(),2);
+   await search.fill('');await page.locator('.word-filter-details summary').click();await source.selectOption('saved');assert.equal(await cards.count(),2);
    await page.getByRole('button',{name:'mat niet meer bewaren',exact:true}).click();
    assert.deepEqual(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),savedKey),[punct.id,'older-unknown-id']);
    await source.selectOption('all');await search.fill('mat');await page.getByRole('button',{name:'mat bewaren',exact:true}).click();
-   await page.reload();await source.selectOption('saved');assert.equal(await cards.count(),2);
+   await page.reload();await page.locator('.word-filter-details summary').click();await source.selectOption('saved');assert.equal(await cards.count(),2);
    await search.fill('woord-dat-niet-bestaat');await page.getByRole('heading',{name:'Geen woorden gevonden'}).waitFor();
    assert.equal(await page.getByRole('heading',{name:'Nog geen woorden bewaard'}).count(),0);
    await page.getByRole('button',{name:'Wis zoeken en filters'}).click();assert.equal(await source.inputValue(),'saved');assert.equal(await cards.count(),2);

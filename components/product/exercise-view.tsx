@@ -42,6 +42,6 @@ export function ExerciseViewPanel() {
     return <button key={kind} type="button" className="cp-view-toggle" data-view-toggle={kind} aria-label={label} title={label} disabled={!enabled} aria-pressed={visible} onClick={() => {
       if (!visible) for (const target of targets) target.reveal();
       changeView({ ...view, [kind]: !visible });
-    }}><span><Icon aria-hidden="true" /></span></button>;
+    }}><span><Icon aria-hidden="true" /><small>{name}</small></span></button>;
   })}</fieldset>;
 }

@@ -40,3 +40,12 @@ await test('Level, component and exercise must match the SAME membership', () =>
   assert.deepEqual(libraryWords(selected, [], null), []);
   for (const chapter of index.chapters) assert(libraryCollections(index, {...defaults,chapter:chapter.id}).length, chapter.id);
 });
+
+await test('An exact search result precedes prefixes and partial matches without losing cards', () => {
+  const matches = libraryWords({...defaults, query: ' MAT '}, [], index);
+  assert.equal(matches[0].word, 'mat');
+  const expected = allPackageWords.filter(word => word.word.toLocaleLowerCase('nl').includes('mat'));
+  assert.deepEqual(matches.map(word => word.id).sort(), expected.map(word => word.id).sort());
+  const ranks = matches.map(word => word.word === 'mat' ? 0 : word.word.startsWith('mat') ? 1 : 2);
+  assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b));
+});
