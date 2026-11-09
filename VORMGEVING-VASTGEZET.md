@@ -98,3 +98,6 @@ Bijbehorende kaderpassing — 1 november 2026: Nico vraagt de mobiele knopjes kl
 
 ## Loader één keer — Nico, 3 november 2026
 Op concrete opdracht speelt de bestaande laadanimatie eenmaal per geopend appdocument. Latere laadmomenten tonen het bestaande eindbeeld met de punt op de i. Volledig herladen begint een nieuw bezoek. Logo, maatvoering, tijdlijn, minder-bewegingstand, teksten, inhoud en opslag blijven behouden. Zie `docs/appearance-floor-20261031/approved-updates/opening-loader-once-20261103.json`. Nico geeft daarna uitdrukkelijk toestemming uitsluitend deze loaderaanpassing nu te publiceren. De stagingvoorwaarde blijft gelden voor de overige snelheidswijzigingen.
+
+## 9 november 2026 — gecontroleerde UI-verfijning
+Nico geeft met “Publiceer het.” toestemming voor de beoordeelde UI-uitwerking op bron 31635a5492b22a10d7ea853971ca13db7a422aba, inclusief de eerdere verbetering 00397f89. Alleen de vastgelegde labels, bediening, zoek- en filterpresentatie, docentbediening, contrast en gerelateerde herhaalreparatie zijn vrijgegeven. Historische referenties blijven behouden. Dit is geen algemene herontwerpvrijgave en geen bewezen 9,5-score. Zie `docs/appearance-floor-20261031/approved-updates/ui-quality-20261109.json`.

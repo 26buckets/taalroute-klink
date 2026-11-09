@@ -1,3 +1,4 @@
+import {verifyUiRelease, readBeforeUi, uiBaseline} from './check-ui-release-20261109.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -17,6 +18,8 @@ const expected = [
   'scripts/test-listen-labels-20261109.mjs', 'scripts/test-listen-labels-release-20261109.mjs',
 ].sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
 export function verifyListenLabelsRelease(read = readFileSync) {
+  const ui = verifyUiRelease(read), latestRead = read;
+  read = path => readBeforeUi(path, ui, latestRead);
   const json = path => JSON.parse(read(path)), r = json(folder + 'approval.json');
   assert.equal(r.approvedBy, 'Nico'); assert.equal(r.publicationApproved, true); assert.equal(r.appearanceChangeApproved, true);
   assert.equal(r.userRequest, 'Publiceer deze gecontroleerde aanpassing van de luisterknoppen nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, links, voortgang, toetsenbordbediening en de rest van het uiterlijk.');
@@ -27,7 +30,7 @@ export function verifyListenLabelsRelease(read = readFileSync) {
   assert.equal(r.audioWorkerPreviouslyExists, true); assert.equal(r.newMeteredServices, 0); assert.equal(r.normalCommand, 'npm run deploy');
   git('merge-base', '--is-ancestor', r.liveSourceCommit, listenLabelsBaseline);
   git('merge-base', '--is-ancestor', listenLabelsBaseline, 'HEAD');
-  const changed = [...new Set([...lines(git('diff', '--name-only', listenLabelsBaseline)), ...lines(git('ls-files', '--others', '--exclude-standard'))])]
+  const changed = lines(git('diff', '--name-only', listenLabelsBaseline, uiBaseline))
     .filter(path => !path.startsWith('docs/listen-labels-') && path !== 'PUBLICATIE-ACTUEEL.md').sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
   assert.deepEqual(changed, expected); assert.deepEqual(Object.keys(r.files).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), expected);
   for (const [path, hash] of Object.entries({...r.files, ...r.evidenceFiles})) assert.equal(sha(read(path)), hash, path);
@@ -47,8 +50,8 @@ export function verifyListenLabelsRelease(read = readFileSync) {
   const backup = json(folder + 'backup.json');
   assert(backup.driveId && backup.fullReadback && backup.zipIntegrity && backup.allSourceHashesMatch);
   assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
-  return r;
+  return {...r, ui};
 }
 export function readBeforeListenLabels(path, release, read = readFileSync) {
-  return release && Object.hasOwn(release.files, path) ? git('show', listenLabelsBaseline + ':' + path) : read(path);
+  return release && Object.hasOwn(release.files, path) ? git('show', listenLabelsBaseline + ':' + path) : readBeforeUi(path, release?.ui, read);
 }
