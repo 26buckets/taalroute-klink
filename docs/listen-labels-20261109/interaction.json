@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "kind": "daily",
+      "nativeAudio": true,
+      "keyboard": true,
+      "touch": true,
+      "toggles": true,
+      "progress": true
+    },
+    {
+      "engine": "chromium",
+      "kind": "functional",
+      "nativeAudio": true,
+      "keyboard": true,
+      "touch": true,
+      "toggles": true,
+      "progress": true
+    },
+    {
+      "engine": "webkit",
+      "kind": "daily",
+      "nativeAudio": true,
+      "keyboard": true,
+      "touch": true,
+      "toggles": true,
+      "progress": true
+    },
+    {
+      "engine": "webkit",
+      "kind": "functional",
+      "nativeAudio": true,
+      "keyboard": true,
+      "touch": true,
+      "toggles": true,
+      "progress": true
+    }
+  ],
+  "errors": []
+}

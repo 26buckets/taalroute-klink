@@ -337,7 +337,7 @@ function PilotPlayer({
             </div>
           </header>
             <div className="pilot-tools ac-support-tools">
-              <ExerciseListen inline={!model} label={model ? 'Luister naar het voorbeeld' : 'Luister naar de uitleg'}
+              <ExerciseListen showLabel inline={!model} label={model ? 'Voorbeeld horen' : 'Uitleg horen'}
                 onClick={() => void play(step.exercise.prompt?.audio?.src, model ? 'example' : 'instruction', true)} disabled={busy} />
               {!participation && (
                 <>

@@ -25,9 +25,9 @@ export function ExerciseAudioSlot({ children, info }: { children?: ReactNode; in
   return <Tag className="cp-exercise-tools"><span className="cp-listen-slot" ref={corner?.[1]} />{children}<ExerciseViewPanel /><span className="cp-help-button-slot" ref={help?.setButton} />{info}<div className="cp-help-panel-slot" ref={help?.setPanel} /></Tag>;
 }
 
-export function ExerciseListen({ label, inline = false, ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { label: string; inline?: boolean }) {
+export function ExerciseListen({ label, showLabel = false, inline = false, ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { label: string; showLabel?: boolean; inline?: boolean }) {
   const corner = useContext(ListenCorner);
-  const button = <button {...props} type="button" data-practice-listen aria-keyshortcuts="Space" className="secondary-button cp-exercise-listen" aria-label={label} title={label}><Volume2 aria-hidden="true" /></button>;
+  const button = <button {...props} type="button" data-practice-listen aria-keyshortcuts="Space" className="secondary-button cp-exercise-listen" aria-label={label} title={label}><Volume2 aria-hidden="true" />{showLabel && <span>{label}</span>}</button>;
   // Only the control moves; its original handler and playback owner remain intact.
   return corner && !inline ? corner[0] && createPortal(button, corner[0]) : button;
 }

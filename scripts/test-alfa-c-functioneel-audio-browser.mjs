@@ -28,7 +28,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
    const ready=page.getByRole('button',{name:'Ik ben klaar',exact:true});assert(await ready.isDisabled());
    for(const [n,text]of s.dictationTexts.entries()){
     assert(!(await page.locator('.functional-player').innerText()).includes(text));
-    const label=s.dictationTexts.length>1?`Luister ${n+1}`:(s.id.endsWith('formulier-08')?'Luister naar het nummer':'Luister naar de zin');
+    const label=s.dictationTexts.length>1?`Luister ${n+1}`:(s.id.endsWith('formulier-08')?'Nummer horen':'Zin horen');
     await page.getByRole('button',{name:label,exact:true}).click();
     await page.waitForFunction(()=>!document.querySelector('.functional-player .pilot-tools button')?.disabled,{},{timeout:15000});
    }

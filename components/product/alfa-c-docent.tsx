@@ -778,7 +778,7 @@ function TeacherPlayer({
                     )),
               )
               .map((src, i) => (
-                <ExerciseListen key={src} inline={i > 0} disabled={busy}
+                <ExerciseListen showLabel key={src} inline={i > 0} disabled={busy}
                   label={stage.audio.length > 1 ? `Luister ${i + 1}` : 'Luister'} onClick={() => listen(src)} />
               ))}
           </div>

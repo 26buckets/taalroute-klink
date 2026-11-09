@@ -86,7 +86,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
               assert(await save.isDisabled());
               for(const [n,text] of step.dictationTexts.entries()){
                 assert(!(await player.innerText()).includes(text),'Dictation target remains hidden');
-                const label=step.dictationTexts.length>1?`Luister ${n+1}`:(step.id.endsWith('formulier-08')?'Luister naar het nummer':'Luister naar de zin');
+                const label=step.dictationTexts.length>1?`Luister ${n+1}`:(step.id.endsWith('formulier-08')?'Nummer horen':'Zin horen');
                 await player.getByRole('button',{name:label,exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('target',text));
               }
             }
