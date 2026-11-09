@@ -1,0 +1,71 @@
+{
+  "approvedBy": "Nico",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "userRequest": "Publiceer deze gecontroleerde aanpassing van de luisterknoppen nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, links, voortgang, toetsenbordbediening en de rest van het uiterlijk.",
+  "baselineSourceCommit": "e90ca897a4639e069d35d50d809abe99a3c4c816",
+  "reviewedSourceCommit": "fe1277bfb62b10fd7c93628d0cdb422032d6b0ce",
+  "liveSourceCommit": "e0f4e60920db5c712246144b371e85e5d3b72a7f",
+  "liveWorkerVersion": "b463285a-86c8-42d5-8d79-d643edd84db0",
+  "liveAudioWorkerVersion": "71b927fb-d3dc-4b2b-bfb4-2b5457bce845",
+  "audioWorkerPreviouslyExists": true,
+  "newMeteredServices": 0,
+  "normalCommand": "npm run deploy",
+  "liveRoutes": [
+    {
+      "pattern": "klink.taalroute.nl/cgi-sys/defaultwebpage.cgi*",
+      "script": "klink-legacy-redirect"
+    },
+    {
+      "pattern": "klink.taalroute.nl/package-audio/*",
+      "script": "taalroute-klink-audio"
+    }
+  ],
+  "files": {
+    "VORMGEVING-VASTGEZET.md": "b53cc028107344ca043b5c30fbc88f75f0f9d3c4bf3cc36f9f4f672dbc86b208",
+    "app/learner-layout.css": "9876ccfeb4abcbd2b430e91a95bbc38cd96a10d295283be6b2f44160a1896f43",
+    "components/product/alfa-c-dagelijks.tsx": "35c88c0598e30c25df75bb5c9b6e59afa4cf5ad5db480fa83b56a124a286c914",
+    "components/product/alfa-c-docent.tsx": "51c2946e737af1f6c5cb8627369564acdca77c95bb2a018d04fc38af40b3a953",
+    "components/product/alfa-c-functioneel.tsx": "cb1f4ae08ed754f8393d57c481314a025ebef2abee3df7b5f6701e94412e542d",
+    "components/product/alfa-c-practice.tsx": "f91b5d4caed1b052a1c1d8307eafc5043fef369efe1cb16e9242e57f54f12e0c",
+    "components/product/exercise-listen.tsx": "43e4c9c7cad3ceea81f5cff918efe1138da6d44b70e48d1b517cbf70cb1e0443",
+    "docs/appearance-floor-20261031/approved-updates/listen-labels-20261109.json": "078fe36d6c105668b8a0bef04045f8f7c92c7b805164efcbf2e98d82cd2dd3ce",
+    "docs/appearance-floor-20261031/floor.json": "ba551176655da916661f9c9872f78667e0d915aa763a63f156bc878e7faeef4d",
+    "scripts/check-audio-bundle-release-20261108.mjs": "8068655777d581a512c857e10c01d39cdb21c404818701e31a3f82d9a7c76512",
+    "scripts/check-listen-labels-release-20261109.mjs": "0026fef58f97feebc479fb4146801314b86569e1eb58a31891c93435ad494bd5",
+    "scripts/deploy-static-audio.mjs": "6bc763c62465eb345a0c6e4bfc5a380886285e38c21ddd03f8918ccc279b608b",
+    "scripts/test-alfa-c-functioneel-audio-browser.mjs": "42c52bbd1ae8caa31c6c29d582135714b309fc48f794befdabf4c78952a487a0",
+    "scripts/test-alfa-c-functioneel-browser.mjs": "c2c8358dd3baf0a7b078c298796fb3bdfa226feaff360cab53fc11a088912a19",
+    "scripts/test-listen-labels-20261109.mjs": "2cb0c019b6fb87ed8e99a068051558fc36e0835cf34ba4541c38a13c36d11452",
+    "scripts/test-listen-labels-release-20261109.mjs": "1e1015047255c8bff6cac42804187c416fbb9e46a2c7cb78c89cdd0820f9873a"
+  },
+  "evidenceFiles": {
+    "docs/listen-labels-20261109/dictation-native.json": "cb2eb5aba0d729473ec6b380096652e68a3da8f40cd69ac086b66492d600ff67",
+    "docs/listen-labels-20261109/interaction.json": "6265e6c9f9d7186570a0d8a280e0c199092d2f5377030b037b9bbd95725d46dd",
+    "docs/listen-labels-20261109/labels.json": "dd76e3ef3c18ed37e1eb3d4a2b101ae7307b3f8d81695268839ccc7a311d099d",
+    "docs/listen-labels-20261109/other-controls.json": "ec10f10f0ee1ec805f72bc462c8261659cbfcbaa2d2b4cee2e940efea04d804d",
+    "docs/listen-labels-20261109/preservation.json": "5348bb90f7107dac7a0a594d59135869d8edb306096d8f512672d3b52a3399f3",
+    "docs/listen-labels-20261109/result.json": "1a13e9ef20749fa56f3d45c47ea943cc05a0773ecf7ca77ffd427ff40e0ce626",
+    "docs/listen-labels-20261109/source-click.json": "93ddb16e5555c4e0b7d18addf19969628721fe1edff5f176b421407a2582b65d",
+    "docs/listen-labels-20261109/sources.json": "fece9e4a0e60c2eefc71a17dfb8c2239eed2b5fa1bc692b764befaa51616392c",
+    "docs/listen-labels-publication-20261109/alfa-units.log": "8305c1091c830e73eb8ebeadb2171b0746d4ffc9eef6882cde15f4c21e18be59",
+    "docs/listen-labels-publication-20261109/appearance-diagnostic.json": "49dc20250731b93c1b27807a665ff20dba066ac081504f8f83da3d14be38eaa2",
+    "docs/listen-labels-publication-20261109/appearance-followup.json": "126e3bb795d2fba149ec696e026f419d3e37d1404789ef9974de7966c4d4e37b",
+    "docs/listen-labels-publication-20261109/appearance.json": "831dacb2cdb4bcabdd3f35e3fdad2009835c725b3187a3e699d71dd33b7d22a3",
+    "docs/listen-labels-publication-20261109/cloud-before.json": "fa294de2b93186934121639a9e836e69fdf7722efa5478937da62c7b4955a1fa",
+    "docs/listen-labels-publication-20261109/entry-after-geometry.json": "8dc9e003f9ffe5e44741848c353617dadbfb8e06bbdc06533e64731ca39033aa",
+    "docs/listen-labels-publication-20261109/entry-before-geometry.json": "8dc9e003f9ffe5e44741848c353617dadbfb8e06bbdc06533e64731ca39033aa",
+    "docs/listen-labels-publication-20261109/exercise-after-geometry.json": "37a41eca9376e7eb834cef30140c12bc75fb915ad1cd778d907571b9fb049493",
+    "docs/listen-labels-publication-20261109/exercise-before-geometry.json": "37a41eca9376e7eb834cef30140c12bc75fb915ad1cd778d907571b9fb049493",
+    "docs/listen-labels-publication-20261109/github-workflows.json": "51da78a4f28ec83978198558b5be95ebec25c44ab19561c168a975e203f0a785",
+    "docs/listen-labels-publication-20261109/http-local.json": "7b5292ea056ae616ff1955a004f8a616108a4c71efa39be09b89f5a12f195bc7",
+    "docs/listen-labels-publication-20261109/lint.log": "cfdd0afc4a82c8c4104321ced0f59b34661eb05f1efa8ed78c200236451ef641",
+    "docs/listen-labels-publication-20261109/live-before.json": "f4ab31b19d30f0b7555e463f90032eca10f3e190db8ec4763393e7de3c6da582",
+    "docs/listen-labels-publication-20261109/metadata.json": "6bbe27580d8e045049afb8c4f814e22d9640f400d909825f94ae23c020a1de82",
+    "docs/listen-labels-publication-20261109/preservation.json": "473f9fcf81d31bcbc77a5fa61b18eea126ded65153dcabbc201d50499c7d0a78",
+    "docs/listen-labels-publication-20261109/publication-units.log": "4db270673ab701bbd7ce2d0143b9e9a008c77a385f238e9652b36d2bf1881312",
+    "docs/listen-labels-publication-20261109/reload-local.json": "4529697011b3aa7574ca73150687d90c11d58a77c0f101ef88d12e814dbe1824",
+    "docs/listen-labels-publication-20261109/types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/listen-labels-publication-20261109/verification.json": "d2b3585364b17b458944128b344b40a04f2a69072d0c197e94dd433dbf24cbfe"
+  }
+}

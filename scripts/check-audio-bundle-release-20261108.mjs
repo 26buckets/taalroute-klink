@@ -1,3 +1,4 @@
+import {verifyListenLabelsRelease, readBeforeListenLabels, listenLabelsBaseline} from './check-listen-labels-release-20261109.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -38,6 +39,8 @@ const expected = [
   "vite.config.ts"
 ];
 export function verifyAudioBundleRelease(read = readFileSync) {
+  const listenLabels = verifyListenLabelsRelease(read), latestRead = read;
+  read = path => readBeforeListenLabels(path, listenLabels, latestRead);
   const json = path => JSON.parse(read(path)), r = json(folder + 'approval.json');
   assert.equal(r.approvedBy, 'Nico'); assert.equal(r.publicationApproved, true);
   assert.equal(r.userRequest, 'Publiceer deze gecontroleerde herstelversie nu via de normale publicatieroute. Controleer eerst de actuele livebasis en behoud alle inhoud, audio, oude links, voortgang, toetsenbordbediening en het uiterlijk. Het moet €0 blijven kosten.');
@@ -49,7 +52,7 @@ export function verifyAudioBundleRelease(read = readFileSync) {
   assert.equal(r.normalCommand, 'npm run deploy'); assert.equal(r.appearanceScope, 'Restore existing Alfa C panel height only');
   git('merge-base', '--is-ancestor', r.liveSourceCommit, audioBundleBaseline);
   git('merge-base', '--is-ancestor', audioBundleBaseline, 'HEAD');
-  const all = [...new Set([...lines(git('diff', '--name-only', audioBundleBaseline)), ...lines(git('ls-files', '--others', '--exclude-standard'))])];
+  const all = lines(git('diff', '--name-only', audioBundleBaseline, listenLabelsBaseline));
   const changed = all.filter(p => !['docs/audio-bundles-local-20261108/', 'docs/audio-start-click-repair-20261108/', folder].some(prefix => p.startsWith(prefix)) && p !== 'PUBLICATIE-ACTUEEL.md').sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
   assert.deepEqual(changed, expected); assert.deepEqual(Object.keys(r.files).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), expected);
   for (const [path, hash] of Object.entries({...r.files, ...r.evidenceFiles})) assert.equal(sha(read(path)), hash, path);
@@ -67,8 +70,8 @@ export function verifyAudioBundleRelease(read = readFileSync) {
   const backup = json(folder + 'backup.json');
   assert(backup.driveId && backup.fullReadback && backup.zipIntegrity && backup.allSourceHashesMatch);
   assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
-  return r;
+  return {...r, listenLabels};
 }
 export function readBeforeAudioBundles(path, release, read = readFileSync) {
-  return release && Object.hasOwn(release.files, path) ? git('show', audioBundleBaseline + ':' + path) : read(path);
+  return release && Object.hasOwn(release.files, path) ? git('show', audioBundleBaseline + ':' + path) : readBeforeListenLabels(path, release?.listenLabels, read);
 }

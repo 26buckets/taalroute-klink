@@ -1,0 +1,14 @@
+✔ splitting preserves published paths and bytes, headers and the source; excluded files stay excluded (19.085416ms)
+✔ only the exact audio directory changes local backend (0.081042ms)
+✔ free limit applies separately and still blocks either part exceeding its allowance (5.653875ms)
+✔ production split preserves app configuration and makes audio asset-only on the exact existing path (15.991042ms)
+✔ failure recovery never updates the app before audio verification and restores existing versions in order (0.340625ms)
+✔ edge propagation waits for two consecutive ready probes and never accepts a permanently old route (0.249959ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 76.201875

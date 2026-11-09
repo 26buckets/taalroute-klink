@@ -1,3 +1,7 @@
+## Duidelijke luisterknoppen — Nico, 9 november 2026
+
+Op concrete opdracht en afzonderlijk publicatieakkoord krijgen de bestaande Alfa C-luisterknoppen zichtbare namen: Tekst horen, Uitleg horen, Voorbeeld horen, Nummer horen, Zin horen en genummerde luisterdelen. Alleen de benoeming en daarvoor benodigde knopbreedte wijzigen. Bestaande handlers, audio, inhoud, opslag, toetsenbordbediening en overige vormgeving blijven behouden. De oorspronkelijke vloer blijft staan; zie `docs/appearance-floor-20261031/approved-updates/listen-labels-20261109.json` en het brongebonden publicatiedossier.
+
 ## Aanvullende klikranden — Nico, 5 november 2026
 
 Op concrete audit- en publicatieopdracht vervallen ook de onbedoelde klikranden bij openen en sluiten van Klink+docent-hulpmiddelen, Delen en uitlegvensters. Toetsenbordfocus blijft zichtbaar, inclusief terugkeer uit de uitlegvideo. Alleen drie gecontroleerde bronbestanden wijzigen het gedrag; inhoud, media, opslag, Help in de oefenbalk, appel en peer en alle overige vormgeving blijven behouden. Bronopdracht en behoudbewijs: `docs/focus-audit-all-20261105/publication-final/`. De oorspronkelijke vormgevingsvloer blijft bewaard.
