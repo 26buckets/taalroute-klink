@@ -1,3 +1,17 @@
+## Actuele publicatie — UI-verfijning Klink en Klink+docent — 9 november 2026
+
+Livebron `165de2436468739873b70f861170903b3c21a03d`, app-Worker `eaf4a3c9-109e-456b-be07-1585712f04bf` en audio-Worker `d4878527-6ef1-426f-89c8-a76ec5918405`, beide 100%. Op Nico’s expliciete “Publiceer het.” via schone canonieke main en `npm run deploy`, als gecontroleerde afstammeling van livebron `75cda7ec2ec683aa74d393b70f1289400e5a21c9`. De achttien runtimebestanden zijn exact de beoordeelde kandidaat `31635a54`, inclusief `00397f89`.
+
+Duidelijke en grotere knoplabels, compacte ondersteuningsbediening, bruikbare mobiele opdrachtknop, betere vindbaarheid/filtering, beschikbare oefeningen vooraan, docentzoekfunctie/-navigatie, verbeterd contrast en toegankelijke namen. De gerelateerde herhaalreparatie voorkomt lege oefensets zonder opgeslagen voortgang te veranderen. Dit is uitsluitend de vastgelegde concrete UI-goedkeuring, geen algemene herontwerpvrijgave. Historische vormgevingsreferenties blijven intact.
+
+Alle 22.418 livebestanden exact gecontroleerd: 8.587 app- en 13.831 audio-assets. Alle bestaande inhoud, audio, metadata, links en lokale gegevens blijven behouden; geen nieuwe diensten of budgetwijzigingen. Vijftig volledige vrijgavetests en 26 aanvullende beveiligings-/regressietests lokaal geslaagd. Online slagen 80 scherm-, 200 luister-/indelings-, acht bedienings-, zes docent- en 68 toegankelijkheidsschermcontroles. Vier werkelijk vóór de publicatie geopende sessies behouden handschrift en voortgang.
+
+Een afgebroken beeldoverdracht bij de eerste poging leidde tot correcte automatische terugval. Twaalf losse bytecontroles slagen; dezelfde bron is opnieuw via de normale route gepubliceerd en alle bestanden zijn daarna foutloos gecontroleerd. Geen beveiliging omzeild. Bewijs: `docs/ui-publication-20261109/postflight/`. Bronback-up op Drive: `16yRC8JWU__C973lgmgSKQ_WbQNmyTVFm`; definitief nacontrolebewijs: `postflight/backup.json` in dat dossier.
+
+Geen fysieke toestellen, schermlezers of cursistenonderzoek; 9,5 is nog geen bewezen score. Geen GitHub Actions-workflows of cloudtestruns. Deze bewijsopvolger wijzigt geen runtime; niet opnieuw deployen. Gebruik de actuele canonieke main en controleer bij vervolgwerk opnieuw de echte livebron.
+
+---
+
 ## Actuele publicatie — duidelijke luisterknoppen — 9 november 2026
 
 Livebron `75cda7ec2ec683aa74d393b70f1289400e5a21c9`, app-Worker `a1ee33ba-1cd4-4d7d-a8f6-b46824590758` en audio-Worker `43e33cde-fb7c-4a8c-a4a8-98876f334a07`, beide 100%. Op Nico’s expliciete opdracht via schone canonieke main en `npm run deploy`, na hercontrole van voorganger `e0f4e609`.

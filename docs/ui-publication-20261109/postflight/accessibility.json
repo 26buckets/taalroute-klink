@@ -1,0 +1,2003 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "phase": "after",
+  "axeSha256": "20c09fe157a8a34a30e241aaa1fcdade657734f08ab379ecfbeb7d45cc46e878",
+  "results": [
+    {
+      "name": "landing",
+      "width": 1280,
+      "route": "/",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 1280,
+      "route": "/#learner/home",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          },
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "words",
+      "width": 1280,
+      "route": "/#learner/words",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "article:nth-child(1) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(2) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(3) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(4) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "button[aria-describedby=\"article-global-TR-A1-K-834\"] > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(6) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(7) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(8) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(9) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "button[aria-describedby=\"article-global-TL0003\"] > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(11) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(12) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "de aanbeveling",
+            "font": "14px"
+          },
+          {
+            "text": "de aanbieding",
+            "font": "14px"
+          },
+          {
+            "text": "de aanblik",
+            "font": "14px"
+          },
+          {
+            "text": "het aanbod",
+            "font": "14px"
+          },
+          {
+            "text": "de aandacht",
+            "font": "14px"
+          },
+          {
+            "text": "het aandachtspunt",
+            "font": "14px"
+          },
+          {
+            "text": "het aandeel",
+            "font": "14px"
+          },
+          {
+            "text": "de aandoening",
+            "font": "14px"
+          },
+          {
+            "text": "de aangelegenheid",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "review",
+      "width": 1280,
+      "route": "/#learner/review",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "teacher",
+      "width": 1280,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "worksheets",
+      "width": 1280,
+      "route": "/#teacher/materials",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher-lesson",
+      "width": 1280,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 216,
+          "height": 598
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "meet",
+      "width": 1280,
+      "route": "/#learner/chapters/words/meet/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 201,
+          "height": 404
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          },
+          {
+            "text": "de man",
+            "font": "18px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "same-word",
+      "width": 1280,
+      "route": "/#learner/chapters/words/same-word/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 201,
+          "height": 298
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "build",
+      "width": 1280,
+      "route": "/#learner/chapters/spelling/build/groep-9.alfa-b?level=alfa-b&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 201,
+          "height": 472
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dictation",
+      "width": 1280,
+      "route": "/#learner/chapters/writing/dictation/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 201,
+          "height": 368.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "copy",
+      "width": 1280,
+      "route": "/#learner/chapters/writing/copy/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 201,
+          "height": 428.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "verb-choice",
+      "width": 1280,
+      "route": "/#learner/chapters/grammar/verb-choice/klink10-grammar-alfa-a-verb-choice?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 502
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "text-question",
+      "width": 1280,
+      "route": "/#learner/chapters/texts/text-question/klink-flitslezen-b1-r01?level=b1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 495.125
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "speak",
+      "width": 1280,
+      "route": "/#learner/chapters/speaking/speak/speaking-a1-repeat-20261105?level=a1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 168
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          },
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "memory",
+      "width": 1280,
+      "route": "/#learner/chapters/repeat/memory/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 201,
+          "height": 526.65625
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "functional",
+      "width": 1280,
+      "route": "/#learner/alfa-c/verbinden",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 258,
+          "height": 561
+        },
+        "counterInside": true,
+        "sourceHeight": 561,
+        "smallText": [
+          {
+            "text": "Afsluiten",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "landing",
+      "width": 640,
+      "route": "/",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 640,
+      "route": "/#learner/home",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          },
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "words",
+      "width": 640,
+      "route": "/#learner/words",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "article:nth-child(1) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "de aanbeveling",
+            "font": "14px"
+          },
+          {
+            "text": "de aanbieding",
+            "font": "14px"
+          },
+          {
+            "text": "de aanblik",
+            "font": "14px"
+          },
+          {
+            "text": "het aanbod",
+            "font": "14px"
+          },
+          {
+            "text": "de aandacht",
+            "font": "14px"
+          },
+          {
+            "text": "het aandachtspunt",
+            "font": "14px"
+          },
+          {
+            "text": "het aandeel",
+            "font": "14px"
+          },
+          {
+            "text": "de aandoening",
+            "font": "14px"
+          },
+          {
+            "text": "de aangelegenheid",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "review",
+      "width": 640,
+      "route": "/#learner/review",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher",
+      "width": 640,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "worksheets",
+      "width": 640,
+      "route": "/#teacher/materials",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher-lesson",
+      "width": 640,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 272,
+          "height": 971.1875
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "meet",
+      "width": 640,
+      "route": "/#learner/chapters/words/meet/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 203.09375,
+          "height": 477.578125
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          },
+          {
+            "text": "de man",
+            "font": "18px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "same-word",
+      "width": 640,
+      "route": "/#learner/chapters/words/same-word/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 203.09375,
+          "height": 276
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "build",
+      "width": 640,
+      "route": "/#learner/chapters/spelling/build/groep-9.alfa-b?level=alfa-b&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 203.09375,
+          "height": 464
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dictation",
+      "width": 640,
+      "route": "/#learner/chapters/writing/dictation/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 139.09375,
+          "height": 357.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "copy",
+      "width": 640,
+      "route": "/#learner/chapters/writing/copy/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 139.09375,
+          "height": 413.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "verb-choice",
+      "width": 640,
+      "route": "/#learner/chapters/grammar/verb-choice/klink10-grammar-alfa-a-verb-choice?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 494
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "text-question",
+      "width": 640,
+      "route": "/#learner/chapters/texts/text-question/klink-flitslezen-b1-r01?level=b1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 561.515625
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "speak",
+      "width": 640,
+      "route": "/#learner/chapters/speaking/speak/speaking-a1-repeat-20261105?level=a1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 160
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "memory",
+      "width": 640,
+      "route": "/#learner/chapters/repeat/memory/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 203.09375,
+          "height": 412
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "functional",
+      "width": 640,
+      "route": "/#learner/alfa-c/verbinden",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 154,
+          "height": 231
+        },
+        "counterInside": true,
+        "sourceHeight": 171,
+        "smallText": []
+      }
+    },
+    {
+      "name": "landing",
+      "width": 390,
+      "route": "/",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "route": "/#learner/home",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          },
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "words",
+      "width": 390,
+      "route": "/#learner/words",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "article:nth-child(1) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(2) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(3) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              },
+              {
+                "target": [
+                  "article:nth-child(4) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "de aanbeveling",
+            "font": "14px"
+          },
+          {
+            "text": "de aanbieding",
+            "font": "14px"
+          },
+          {
+            "text": "de aanblik",
+            "font": "14px"
+          },
+          {
+            "text": "het aanbod",
+            "font": "14px"
+          },
+          {
+            "text": "de aandacht",
+            "font": "14px"
+          },
+          {
+            "text": "het aandachtspunt",
+            "font": "14px"
+          },
+          {
+            "text": "het aandeel",
+            "font": "14px"
+          },
+          {
+            "text": "de aandoening",
+            "font": "14px"
+          },
+          {
+            "text": "de aangelegenheid",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "review",
+      "width": 390,
+      "route": "/#learner/review",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher",
+      "width": 390,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "worksheets",
+      "width": 390,
+      "route": "/#teacher/materials",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher-lesson",
+      "width": 390,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 340,
+          "height": 714
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "meet",
+      "width": 390,
+      "route": "/#learner/chapters/words/meet/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 289.0625,
+          "height": 474.578125
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          },
+          {
+            "text": "de man",
+            "font": "18px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "same-word",
+      "width": 390,
+      "route": "/#learner/chapters/words/same-word/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 289.0625,
+          "height": 276
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "build",
+      "width": 390,
+      "route": "/#learner/chapters/spelling/build/groep-9.alfa-b?level=alfa-b&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 217.28125,
+          "height": 464
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dictation",
+      "width": 390,
+      "route": "/#learner/chapters/writing/dictation/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 270.875,
+          "height": 357.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "copy",
+      "width": 390,
+      "route": "/#learner/chapters/writing/copy/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 270.875,
+          "height": 413.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "verb-choice",
+      "width": 390,
+      "route": "/#learner/chapters/grammar/verb-choice/klink10-grammar-alfa-a-verb-choice?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 494
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "text-question",
+      "width": 390,
+      "route": "/#learner/chapters/texts/text-question/klink-flitslezen-b1-r01?level=b1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 887.859375
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "speak",
+      "width": 390,
+      "route": "/#learner/chapters/speaking/speak/speaking-a1-repeat-20261105?level=a1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 192,
+          "height": 160
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "memory",
+      "width": 390,
+      "route": "/#learner/chapters/repeat/memory/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 217.28125,
+          "height": 547
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "functional",
+      "width": 390,
+      "route": "/#learner/alfa-c/verbinden",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 298.28125,
+          "height": 396.71875
+        },
+        "counterInside": true,
+        "sourceHeight": 336.71875,
+        "smallText": []
+      }
+    },
+    {
+      "name": "landing",
+      "width": 320,
+      "route": "/",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "route": "/#learner/home",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          },
+          {
+            "text": "Niet beschikbaar",
+            "font": "13.6px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "words",
+      "width": 320,
+      "route": "/#learner/words",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "article:nth-child(1) > .cp-word-listen > .cp-word-placeholder.klink-word-placeholder.klink-library-placeholder > .klink-placeholder-word"
+                ],
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+              }
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "de aanbeveling",
+            "font": "14px"
+          },
+          {
+            "text": "de aanbieding",
+            "font": "14px"
+          },
+          {
+            "text": "de aanblik",
+            "font": "14px"
+          },
+          {
+            "text": "het aanbod",
+            "font": "14px"
+          },
+          {
+            "text": "de aandacht",
+            "font": "14px"
+          },
+          {
+            "text": "het aandachtspunt",
+            "font": "14px"
+          },
+          {
+            "text": "het aandeel",
+            "font": "14px"
+          },
+          {
+            "text": "de aandoening",
+            "font": "14px"
+          },
+          {
+            "text": "de aangelegenheid",
+            "font": "14px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "review",
+      "width": 320,
+      "route": "/#learner/review",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher",
+      "width": 320,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "worksheets",
+      "width": 320,
+      "route": "/#teacher/materials",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": null,
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "teacher-lesson",
+      "width": 320,
+      "route": "/#teacher/plus",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 378,
+          "height": 644
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "meet",
+      "width": 320,
+      "route": "/#learner/chapters/words/meet/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 326.875,
+          "height": 474.578125
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          },
+          {
+            "text": "de man",
+            "font": "18px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "same-word",
+      "width": 320,
+      "route": "/#learner/chapters/words/same-word/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 326.875,
+          "height": 276
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "build",
+      "width": 320,
+      "route": "/#learner/chapters/spelling/build/groep-9.alfa-b?level=alfa-b&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 255.09375,
+          "height": 584
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dictation",
+      "width": 320,
+      "route": "/#learner/chapters/writing/dictation/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 215.65625,
+          "height": 357.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "copy",
+      "width": 320,
+      "route": "/#learner/chapters/writing/copy/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 215.65625,
+          "height": 413.5
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "verb-choice",
+      "width": 320,
+      "route": "/#learner/chapters/grammar/verb-choice/klink10-grammar-alfa-a-verb-choice?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 255.1875,
+          "height": 494
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Foto",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "text-question",
+      "width": 320,
+      "route": "/#learner/chapters/texts/text-question/klink-flitslezen-b1-r01?level=b1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 248.1875,
+          "height": 1041.421875
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "speak",
+      "width": 320,
+      "route": "/#learner/chapters/speaking/speak/speaking-a1-repeat-20261105?level=a1&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 226.09375,
+          "height": 160
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": [
+          {
+            "text": "Luister",
+            "font": "16px"
+          },
+          {
+            "text": "Tekst",
+            "font": "16px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "memory",
+      "width": 320,
+      "route": "/#learner/chapters/repeat/memory/groep-1.alfa-a?level=alfa-a&help=practice",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 255.09375,
+          "height": 442
+        },
+        "counterInside": true,
+        "sourceHeight": null,
+        "smallText": []
+      }
+    },
+    {
+      "name": "functional",
+      "width": 320,
+      "route": "/#learner/alfa-c/verbinden",
+      "accessibility": {
+        "version": "4.14.0",
+        "violations": [],
+        "incomplete": []
+      },
+      "layout": {
+        "overflow": false,
+        "stage": {
+          "top": 212.3125,
+          "height": 290.6875
+        },
+        "counterInside": true,
+        "sourceHeight": 230.6875,
+        "smallText": []
+      }
+    }
+  ],
+  "errors": []
+}

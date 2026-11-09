@@ -1,0 +1,68 @@
+{
+  "app": {
+    "id": "76caf681-26fa-40f0-8205-3984ff30846a",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "nico@knoestertrainingen.nl",
+    "annotations": {
+      "workers/message": "Rollback",
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "a1ee33ba-1cd4-4d7d-a8f6-b46824590758",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-11-09T21:13:26.42287Z"
+  },
+  "audio": {
+    "id": "f203da81-adc3-4ad0-a4a8-84f726baf0de",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "nico@knoestertrainingen.nl",
+    "annotations": {
+      "workers/message": "Rollback",
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "43e33cde-fb7c-4a8c-a4a8-98876f334a07",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-11-09T21:13:33.790696Z"
+  },
+  "audioSettings": {
+    "status": 200,
+    "result": {
+      "placement": {},
+      "compatibility_date": "2026-05-15",
+      "compatibility_flags": [],
+      "usage_model": "standard",
+      "tags": [],
+      "tail_consumers": [],
+      "logpush": false,
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": []
+    },
+    "errors": []
+  },
+  "routes": [
+    {
+      "id": "7402c474e62a4162a2a0cb1a348347e4",
+      "pattern": "klink.taalroute.nl/cgi-sys/defaultwebpage.cgi*",
+      "script": "klink-legacy-redirect",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "9ff360d5425d46ad8957365703b4aaed",
+      "pattern": "klink.taalroute.nl/package-audio/*",
+      "script": "taalroute-klink-audio",
+      "request_limit_fail_open": false
+    }
+  ],
+  "subscriptionsStatus": 403
+}
