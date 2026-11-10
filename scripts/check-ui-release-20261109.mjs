@@ -1,3 +1,4 @@
+import {verifyInlineHeaderRelease,readBeforeInlineHeader,headerBaseline} from './check-inline-header-release-20261110.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -53,6 +54,7 @@ const expected = [
   "scripts/test-word-placeholder-browser-20261031.mjs"
 ];
 export function verifyUiRelease(read = readFileSync) {
+  const header=verifyInlineHeaderRelease(read),currentRead=read;read=path=>readBeforeInlineHeader(path,header,currentRead);
   const json = path => JSON.parse(read(path)), r = json(folder + 'approval.json');
   assert.equal(r.approvedBy, 'Nico'); assert.equal(r.publicationApproved, true); assert.equal(r.appearanceChangeApproved, true);
   assert.equal(r.userRequest, 'Publiceer het.'); assert.equal(r.baselineSourceCommit, uiBaseline); assert.equal(r.reviewedSourceCommit, reviewed);
@@ -61,9 +63,9 @@ export function verifyUiRelease(read = readFileSync) {
   assert.equal(r.liveAudioWorkerVersion, '43e33cde-fb7c-4a8c-a4a8-98876f334a07');
   assert.equal(r.audioWorkerPreviouslyExists, true); assert.equal(r.newMeteredServices, 0); assert.equal(r.normalCommand, 'npm run deploy');
   git('merge-base', '--is-ancestor', r.liveSourceCommit, uiBaseline); git('merge-base', '--is-ancestor', reviewed, 'HEAD');
-  const changed = [...new Set([...lines(git('diff', '--name-only', uiBaseline)), ...lines(git('ls-files', '--others', '--exclude-standard'))])]
-    .filter(path => !/^docs\/ui-(quality|refinement|publication)-20261109\//.test(path) && path !== 'PUBLICATIE-ACTUEEL.md').sort();
-  assert.deepEqual(changed, expected); assert.deepEqual(Object.keys(r.files).sort(), expected);
+  const changed = lines(git('diff', '--name-only', uiBaseline, headerBaseline))
+    .filter(path => !/^docs\/ui-(quality|refinement|publication)-20261109\//.test(path) && path !== 'PUBLICATIE-ACTUEEL.md').sort((a,b)=>a<b?-1:a>b?1:0);
+  assert.deepEqual(changed, expected); assert.deepEqual(Object.keys(r.files).sort((a,b)=>a<b?-1:a>b?1:0), expected);
   for (const [path, hash] of Object.entries({...r.files, ...r.evidenceFiles})) assert.equal(sha(read(path)), hash, path);
   const runtime = expected.filter(path => /^(app|components|lib|public)\//.test(path));
   for (const path of runtime) assert.equal(sha(read(path)), sha(git('show', reviewed + ':' + path)), 'Reviewed runtime: ' + path);
@@ -71,15 +73,15 @@ export function verifyUiRelease(read = readFileSync) {
   const oldFloor = JSON.parse(git('show', uiBaseline + ':' + floor));
   assert.deepEqual(json(floor), {...oldFloor, approvedUpdates: [...oldFloor.approvedUpdates, update]});
   const appearance = json(update); assert.equal(appearance.userRequest, r.userRequest); assert(appearance.appearanceChangeApproved && appearance.publicationApproved);
-  assert.deepEqual(Object.keys(appearance.files).sort(), runtime);
+  assert.deepEqual(Object.keys(appearance.files).sort((a,b)=>a<b?-1:a>b?1:0), runtime);
   for (const [path, hash] of Object.entries(appearance.files)) assert.equal(sha(read(path)), hash, path);
   const v = json(folder + 'verification.json');
   assert(v.reviewedRuntimeUnchanged && v.originalMediaByteIdentical && v.metadataPreserved && v.localHttpPassed && v.localUiPassed && v.noWorkflows && v.noPaidServices);
   const backup = json(folder + 'backup.json');
   assert(backup.driveId && backup.fullReadback && backup.zipIntegrity && backup.allSourceHashesMatch);
   assert.deepEqual(backup.files, r.files); assert.deepEqual(backup.evidenceFiles, r.evidenceFiles);
-  return r;
+  return {...r,header};
 }
 export function readBeforeUi(path, release, read = readFileSync) {
-  return release && Object.hasOwn(release.files, path) ? git('show', uiBaseline + ':' + path) : read(path);
+  return release && Object.hasOwn(release.files, path) ? git('show', uiBaseline + ':' + path) : readBeforeInlineHeader(path,release?.header,read);
 }

@@ -1,0 +1,16 @@
+{
+  "headerLayouts": 8,
+  "teacherMaterials": true,
+  "existingNavigation": true,
+  "contentMediaAndStorageUnchanged": true,
+  "noWorkflows": true,
+  "evidence": {
+    "header": "../../klink-header.log: 8 header/menu checks",
+    "materials": "../../klink-teacher-materials.log: 696 worksheet views, 232 lesson returns, direct B/C and reload in Chromium/WebKit",
+    "navigation": "../../klink-navigation.log: preserved local data and direct navigation, 4 widths and 2 engines",
+    "board": "../../klink-direct-board.log: 6 complete direct board journeys",
+    "source": "Only approved header/controls/styles, tests and release evidence differ from d5323c9; content/media/storage source unchanged",
+    "lint": "0 errors; two preexisting warnings",
+    "build": "Production build and normal split audio/app preview succeeded"
+  }
+}

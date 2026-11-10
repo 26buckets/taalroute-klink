@@ -1,3 +1,7 @@
+## Goedgekeurde uniforme header — 10 november 2026
+
+Nico heeft de appnaam naast het logo en vierkante knoppen voor alle Taalroute-apps expliciet goedgekeurd, inclusief publicatie. Alleen deze header en knophoeken wijzigen; de overige vastgezette vormgeving blijft gelden. Zie `docs/header-inline-20261110/approval.json`.
+
 ## Duidelijke luisterknoppen — Nico, 9 november 2026
 
 Op concrete opdracht en afzonderlijk publicatieakkoord krijgen de bestaande Alfa C-luisterknoppen zichtbare namen: Tekst horen, Uitleg horen, Voorbeeld horen, Nummer horen, Zin horen en genummerde luisterdelen. Alleen de benoeming en daarvoor benodigde knopbreedte wijzigen. Bestaande handlers, audio, inhoud, opslag, toetsenbordbediening en overige vormgeving blijven behouden. De oorspronkelijke vloer blijft staan; zie `docs/appearance-floor-20261031/approved-updates/listen-labels-20261109.json` en het brongebonden publicatiedossier.

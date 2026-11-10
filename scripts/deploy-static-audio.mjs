@@ -52,7 +52,7 @@ async function deploy() {
   assert.equal(process.env.npm_lifecycle_event, 'deploy', 'Use npm run deploy, including its publication gate and build');
   const git = (...args) => execFileSync('git', args, {encoding: 'utf8'}).trim();
   assert.equal(git('branch', '--show-current'), 'main'); assert.equal(git('status', '--porcelain'), '');
-  const approval = JSON.parse(readFileSync('docs/ui-publication-20261109/approval.json'));
+  const approval = JSON.parse(readFileSync('docs/header-inline-20261110/approval.json'));
   const head = git('rev-parse', 'HEAD');
   assert.equal(git('ls-remote', 'origin', 'refs/heads/main').split(/\s/)[0], head, 'Canonical remote must match checked source');
   assert.equal(approval.audioWorkerPreviouslyExists, true);

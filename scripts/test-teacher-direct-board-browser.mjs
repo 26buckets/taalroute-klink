@@ -220,7 +220,8 @@ for (const { name, engine, options } of [
       await page.getByRole('link', { name: 'Klink+docent', exact: true }).click();
       await page.getByRole('button', { name: 'Les openen: mat', exact: true }).click();
       await page.getByRole('button', { name: 'Lesoverzicht', exact: true }).click();
-      await page.locator('.klink-header-beta').waitFor();
+      await page.locator('.header-klink-logo').waitFor();
+      assert.equal(await page.locator('.klink-header-beta').count(),0);
       assert.equal(await page.locator('[data-classroom="active"]').count(), 0);
       assert.deepEqual(errors, []);
       checks.push({
