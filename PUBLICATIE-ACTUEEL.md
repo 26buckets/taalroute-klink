@@ -1,3 +1,11 @@
+## Actuele publicatie — uniforme header — 10 november 2026
+
+Livebron `3e96aafe102248f970710d5ab542e0ec78119ffd`, app-Worker `be92264d-de2a-47c7-9a49-e3ffcdd79666`, audio-Worker `feb04164-9b5c-4752-89b2-402c6c0905fd`. Op de expliciete opdracht van Nico via schone canonieke main en de normale `npm run deploy`. Appnaam naast het logo, één headerregel, vierkante knoppen en bestaande lesmateriaalroute. De goedgekeurde opzet, inhoud, media, lokale gegevens en toegang blijven behouden.
+
+Alle 22.418 bestanden live bytegelijk gecontroleerd: 8.587 appbestanden en 13.831 audiobestanden. Lokale controles omvatten 696 werkbladweergaven, 232 lesretouren, 174 PDF-controles, browsernavigatie en 15 vrijgavepoorttests. Brongebonden akkoord, uiterlijkreferentie, controles en teruggelezen herstelkopieën: `docs/header-inline-20261110/`. Geen nieuwe diensten, migraties of Actions-workflows. Geen fysieke apparaten of klassikale gebruiksproef. Deze bewijsopvolger wijzigt geen runtime; niet opnieuw deployen.
+
+---
+
 ## Actuele publicatie — UI-verfijning Klink en Klink+docent — 9 november 2026
 
 Livebron `165de2436468739873b70f861170903b3c21a03d`, app-Worker `eaf4a3c9-109e-456b-be07-1585712f04bf` en audio-Worker `d4878527-6ef1-426f-89c8-a76ec5918405`, beide 100%. Op Nico’s expliciete “Publiceer het.” via schone canonieke main en `npm run deploy`, als gecontroleerde afstammeling van livebron `75cda7ec2ec683aa74d393b70f1289400e5a21c9`. De achttien runtimebestanden zijn exact de beoordeelde kandidaat `31635a54`, inclusief `00397f89`.
