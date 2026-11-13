@@ -49,6 +49,9 @@ function SoundDetail({ sound, onLesson }: { sound: SoundCard; onLesson: (positio
       </button>
       <a className="text-back" href={klankstudioUrl(sound.id)} target="_blank" rel="noopener noreferrer">Klankstudio<ExternalLink aria-hidden="true" /><span className="sr-only"> (nieuw tabblad)</span></a>
     </div>
+    {sound.additionalAudio.length > 0 && <div className="cp-sound-words"><ul>{sound.additionalAudio.map(recording => <li key={recording.label}>
+      <button type="button" className="cp-sound-word" aria-label={`Luister naar de klank ${recording.label}`} aria-pressed={playing === recording.audio} onClick={() => void listen(recording.audio, 1)}>{recording.label}<Volume2 aria-hidden="true" /></button>
+    </li>)}</ul></div>}
     <div className="cp-sound-words"><ul>{wordsForSound(sound).map(word => {
       const lesson = lessonForSoundWord(word.id);
       return <li key={word.id}>

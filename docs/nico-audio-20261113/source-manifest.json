@@ -1,0 +1,3420 @@
+{
+  "speaker": "Nico Knoester",
+  "date": "2026-11-13",
+  "mappingBasis": "Eigenaar bevestigt posterorde, per kaart losse klank en voorbeeldwoord. Extra spellingen en alle drie schwawoorden volgen de poster.",
+  "listeningReview": "Niet uitgevoerd; koppeling volgens bevestigde volgorde en gecontroleerde fragmentaantallen.",
+  "processing": {
+    "globalGainDb": 5.837845539115373,
+    "preMs": 180,
+    "postMs": 230,
+    "fadeMs": 3,
+    "noiseReduction": false,
+    "timeStretch": false,
+    "opus": "48 kbit/s VBR mono",
+    "mp3": "96 kbit/s mono"
+  },
+  "sources": [
+    {
+      "name": "klankstudio-kort.wav",
+      "sha256": "7a68ee85538cfb17146fc99921abcf3b232d67d62fca8b943288cea2d09db51d",
+      "samples": 702874,
+      "rate": 44100,
+      "fragments": 10
+    },
+    {
+      "name": "klankstudio-lang.wav",
+      "sha256": "cee1155791d3adc7ce9b1feda5655d0690fa26a0ca2370169377c8ffcc4930ab",
+      "samples": 792986,
+      "rate": 44100,
+      "fragments": 8
+    },
+    {
+      "name": "klankstudio-Twee letters — één klank.wav",
+      "sha256": "db17a935fbf4d83d71fae475d77806565672e706b55f5e19bbee2c913af3b04d",
+      "samples": 719259,
+      "rate": 44100,
+      "fragments": 8
+    },
+    {
+      "name": "klankstudio-Eén klank — twee spellingen.wav",
+      "sha256": "09af98ef82bf0eee71cedcddb9258bf3ed403e4e0fb52e9aa9b4bd9f9c112ded",
+      "samples": 792986,
+      "rate": 44100,
+      "fragments": 8
+    },
+    {
+      "name": "klankstudio-met een i erachter.wav",
+      "sha256": "14c567a31f844b6ba5dd5c2d596abc177a8fef271228a5b6e7ec49d42b440cfa",
+      "samples": 719259,
+      "rate": 44100,
+      "fragments": 6
+    },
+    {
+      "name": "klankstudio-met een w erachter.wav",
+      "sha256": "99cd6c7237532bf3fdd5df4b01bbc3c3380fa32319ca3081573e3ffb26d5099a",
+      "samples": 780699,
+      "rate": 44100,
+      "fragments": 6
+    },
+    {
+      "name": "klankstudio-je hoort een e.wav",
+      "sha256": "d38afa4335e66bf6e4d0b0a2917658d196378df82b9624ae048dbdcfce285573",
+      "samples": 1010075,
+      "rate": 44100,
+      "fragments": 8
+    },
+    {
+      "name": "klankstudio-medeklinkers.wav",
+      "sha256": "7f2a016e100b23bd326bf8126c3ea3e0a19ca7407ea919dcb7246e61d0088671",
+      "samples": 2435483,
+      "rate": 44100,
+      "fragments": 34
+    },
+    {
+      "name": "klankstudio-Combinaties.wav",
+      "sha256": "a0107ece26ceffbeedbd5ab7bb8019bf84ca6a01a32ff046b8fd1866086333de",
+      "samples": 907674,
+      "rate": 44100,
+      "fragments": 10
+    }
+  ],
+  "files": [
+    {
+      "type": "klank",
+      "id": "a",
+      "cardId": "a",
+      "stem": "a_klank",
+      "label": "a",
+      "source": "klankstudio-kort.wav",
+      "startSample": 62879,
+      "endSampleExclusive": 90408,
+      "activeRange": [
+        1.605828,
+        1.820068
+      ],
+      "duration": 0.6242403628117914,
+      "wav": {
+        "path": "wav/a_klank.wav",
+        "bytes": 55102,
+        "sha256": "48337eb9fc0a1a84bf362d3ef84a1e74d438904b12b03a0c8be7408e9e6329fd"
+      },
+      "opus": {
+        "path": "opus/a_klank.opus",
+        "bytes": 3673,
+        "sha256": "a83d62b010056d8f007425dc2395a8869d0b141f777f31d5a2250ed570feed1d",
+        "decodedPeakDb": -7.512301512583487,
+        "decodedSeconds": 0.6242630385487529
+      },
+      "mp3": {
+        "path": "mp3/a_klank.mp3",
+        "bytes": 8308,
+        "sha256": "db11be168359c824464a796e8f6c5a49a4bf8ee2ca6d8d10b75be3bd9c5c90af",
+        "decodedPeakDb": -7.732927335144931,
+        "decodedSeconds": 0.6242403628117914
+      }
+    },
+    {
+      "type": "woord",
+      "id": "kat",
+      "cardId": "a",
+      "stem": "a_kat",
+      "label": "kat",
+      "source": "klankstudio-kort.wav",
+      "startSample": 124961,
+      "endSampleExclusive": 156125,
+      "activeRange": [
+        3.013583,
+        3.310249
+      ],
+      "duration": 0.7066666666666667,
+      "wav": {
+        "path": "wav/a_kat.wav",
+        "bytes": 62372,
+        "sha256": "e72650e3d00359160a8c80160c3e244137e75e34b80ad18fac6693a520e0c413"
+      },
+      "opus": {
+        "path": "opus/a_kat.opus",
+        "bytes": 4166,
+        "sha256": "baf82bb5ecf4c5ee26172522905ed8bd70f3bb48be4d609428f790174d6c9cd5",
+        "decodedPeakDb": -8.676585070698142,
+        "decodedSeconds": 0.7066666666666667
+      },
+      "mp3": {
+        "path": "mp3/a_kat.mp3",
+        "bytes": 9564,
+        "sha256": "9cae1b85634d12107d94052046fb2348149a83b1f37167d58c0a2a785cc7fa1f",
+        "decodedPeakDb": -8.880752402561608,
+        "decodedSeconds": 0.7066666666666667
+      }
+    },
+    {
+      "type": "klank",
+      "id": "e",
+      "cardId": "e",
+      "stem": "e_klank",
+      "label": "e",
+      "source": "klankstudio-kort.wav",
+      "startSample": 190486,
+      "endSampleExclusive": 216693,
+      "activeRange": [
+        4.499433,
+        4.683673
+      ],
+      "duration": 0.5942630385487528,
+      "wav": {
+        "path": "wav/e_klank.wav",
+        "bytes": 52458,
+        "sha256": "baefa85043ddb89478cfbe01d1948a015ade6b1152e0c14c534df74ca4a7b385"
+      },
+      "opus": {
+        "path": "opus/e_klank.opus",
+        "bytes": 3521,
+        "sha256": "399547a8c21cea4b13845b5f331af5b41a85d30c46c903d5bfccc0e05abbd218",
+        "decodedPeakDb": -6.1195650089683635,
+        "decodedSeconds": 0.5942857142857143
+      },
+      "mp3": {
+        "path": "mp3/e_klank.mp3",
+        "bytes": 7994,
+        "sha256": "39276a9e7c73518d2381276720a39bebb666ccf4f8aa0426d2c4d0162ef4352f",
+        "decodedPeakDb": -6.375652192977058,
+        "decodedSeconds": 0.5942630385487528
+      }
+    },
+    {
+      "type": "woord",
+      "id": "pen",
+      "cardId": "e",
+      "stem": "e_pen",
+      "label": "pen",
+      "source": "klankstudio-kort.wav",
+      "startSample": 246795,
+      "endSampleExclusive": 273773,
+      "activeRange": [
+        5.776281,
+        5.977982
+      ],
+      "duration": 0.6117460317460317,
+      "wav": {
+        "path": "wav/e_pen.wav",
+        "bytes": 54000,
+        "sha256": "0060e7697edae4b0adefa7a05980e0ef089c3e9cb2c6a6b9959bf06ed87511ba"
+      },
+      "opus": {
+        "path": "opus/e_pen.opus",
+        "bytes": 3674,
+        "sha256": "fe30161449433c8fdff60e55b6373d82df51f5689aac7e72f8669391a78c315e",
+        "decodedPeakDb": -8.516865794615425,
+        "decodedSeconds": 0.6117687074829932
+      },
+      "mp3": {
+        "path": "mp3/e_pen.mp3",
+        "bytes": 8310,
+        "sha256": "d8cbe9f0d8a283578bdfaa1f640eecb4eb4b02c1157107cb9e5119cad11de1bd",
+        "decodedPeakDb": -8.826139930177085,
+        "decodedSeconds": 0.6117460317460317
+      }
+    },
+    {
+      "type": "klank",
+      "id": "i",
+      "cardId": "i",
+      "stem": "i_klank",
+      "label": "i",
+      "source": "klankstudio-kort.wav",
+      "startSample": 306502,
+      "endSampleExclusive": 333382,
+      "activeRange": [
+        7.130181,
+        7.32966
+      ],
+      "duration": 0.6095238095238096,
+      "wav": {
+        "path": "wav/i_klank.wav",
+        "bytes": 53804,
+        "sha256": "537e356dffb3bcbc091f92c4b0264dc76dbe60660cb59b580a483152be107169"
+      },
+      "opus": {
+        "path": "opus/i_klank.opus",
+        "bytes": 3476,
+        "sha256": "94b290c8b7303016e672db244f977fa8cdb5e8102f4d316a251f3372ee2eea18",
+        "decodedPeakDb": -9.116063619140366,
+        "decodedSeconds": 0.6095464852607709
+      },
+      "mp3": {
+        "path": "mp3/i_klank.mp3",
+        "bytes": 8308,
+        "sha256": "ebaae727518b50147e95d4894e2218180180a82ac83415c02f59e551b5284e84",
+        "decodedPeakDb": -9.49157447685284,
+        "decodedSeconds": 0.6095238095238096
+      }
+    },
+    {
+      "type": "woord",
+      "id": "vis",
+      "cardId": "i",
+      "stem": "i_vis",
+      "label": "vis",
+      "source": "klankstudio-kort.wav",
+      "startSample": 358383,
+      "endSampleExclusive": 391761,
+      "activeRange": [
+        8.306599,
+        8.653469
+      ],
+      "duration": 0.7568707482993198,
+      "wav": {
+        "path": "wav/i_vis.wav",
+        "bytes": 66800,
+        "sha256": "582ca00c20009558537efd7d6bac67d5db61605f21fffaf3c4e05716a7f04760"
+      },
+      "opus": {
+        "path": "opus/i_vis.opus",
+        "bytes": 4695,
+        "sha256": "7ef4e403c63604bbcea7dd2319dfcfc3b0c9253354deaec340c34aabac5f266c",
+        "decodedPeakDb": -13.393371530268256,
+        "decodedSeconds": 0.7568934240362811
+      },
+      "mp3": {
+        "path": "mp3/i_vis.mp3",
+        "bytes": 9877,
+        "sha256": "a49e3ee37dc3e2fe05f67660be63eb31b352eaa95beaf0004ec69a7fe3d93280",
+        "decodedPeakDb": -13.810311377713028,
+        "decodedSeconds": 0.7568707482993198
+      }
+    },
+    {
+      "type": "klank",
+      "id": "o",
+      "cardId": "o",
+      "stem": "o_klank",
+      "label": "o",
+      "source": "klankstudio-kort.wav",
+      "startSample": 417205,
+      "endSampleExclusive": 444376,
+      "activeRange": [
+        9.640431,
+        9.846531
+      ],
+      "duration": 0.6161224489795918,
+      "wav": {
+        "path": "wav/o_klank.wav",
+        "bytes": 54386,
+        "sha256": "12c3726790143d8434534ba10dac8a11487b628d3c171c99d7051efdfd9dba70"
+      },
+      "opus": {
+        "path": "opus/o_klank.opus",
+        "bytes": 3478,
+        "sha256": "d8df5ed954e5d2c73193b601c7c635ab03aae3bac0870ab7b10d7877bc433a92",
+        "decodedPeakDb": -9.190338975206856,
+        "decodedSeconds": 0.6161451247165532
+      },
+      "mp3": {
+        "path": "mp3/o_klank.mp3",
+        "bytes": 8308,
+        "sha256": "ece5ab0f837e0cf93e728fcf482c8800023a52a0bbd24dc351cb9345fdc49772",
+        "decodedPeakDb": -9.618407432036474,
+        "decodedSeconds": 0.6161224489795918
+      }
+    },
+    {
+      "type": "woord",
+      "id": "zon",
+      "cardId": "o",
+      "stem": "o_zon",
+      "label": "zon",
+      "source": "klankstudio-kort.wav",
+      "startSample": 466946,
+      "endSampleExclusive": 500783,
+      "activeRange": [
+        10.768345,
+        11.125601
+      ],
+      "duration": 0.7672789115646258,
+      "wav": {
+        "path": "wav/o_zon.wav",
+        "bytes": 67718,
+        "sha256": "620d0a4134375d86adb1f720ebc001ae88414c4373dee8628b6bd40fd3cbb8d1"
+      },
+      "opus": {
+        "path": "opus/o_zon.opus",
+        "bytes": 4520,
+        "sha256": "e5a7a5b40c8de122d5d3f717cdd96c09b5f3cb6b6ae49896184fefca22291ef2",
+        "decodedPeakDb": -12.277817290237255,
+        "decodedSeconds": 0.7672789115646258
+      },
+      "mp3": {
+        "path": "mp3/o_zon.mp3",
+        "bytes": 10191,
+        "sha256": "677702d9a51852f4a9c33b8a173a2c8d8665582690522c9da1e73a860ca0388a",
+        "decodedPeakDb": -12.507063108960182,
+        "decodedSeconds": 0.7672789115646258
+      }
+    },
+    {
+      "type": "klank",
+      "id": "u",
+      "cardId": "u",
+      "stem": "u_klank",
+      "label": "u",
+      "source": "klankstudio-kort.wav",
+      "startSample": 525938,
+      "endSampleExclusive": 557284,
+      "activeRange": [
+        12.106054,
+        12.406803
+      ],
+      "duration": 0.7107936507936508,
+      "wav": {
+        "path": "wav/u_klank.wav",
+        "bytes": 62736,
+        "sha256": "2df17480d3e5aca2fb65327e4c21fcca09b3f1830bc2e4efbf468ec0fda3b509"
+      },
+      "opus": {
+        "path": "opus/u_klank.opus",
+        "bytes": 4024,
+        "sha256": "5b0a8a05b1b6bc8c4f78a4cffd9fe6efb40d261ed96efa680b175dfa8c7ff3bd",
+        "decodedPeakDb": -7.591426511918882,
+        "decodedSeconds": 0.7108163265306122
+      },
+      "mp3": {
+        "path": "mp3/u_klank.mp3",
+        "bytes": 9562,
+        "sha256": "e6f168549e235322967d958a82eb9798c25dab501cf008a618091ede5cfcbc59",
+        "decodedPeakDb": -7.949498373720232,
+        "decodedSeconds": 0.7107936507936508
+      }
+    },
+    {
+      "type": "woord",
+      "id": "bus",
+      "cardId": "u",
+      "stem": "u_bus",
+      "label": "bus",
+      "source": "klankstudio-kort.wav",
+      "startSample": 573841,
+      "endSampleExclusive": 614593,
+      "activeRange": [
+        13.192268,
+        13.706327
+      ],
+      "duration": 0.9240816326530612,
+      "wav": {
+        "path": "wav/u_bus.wav",
+        "bytes": 81548,
+        "sha256": "032b56e775291a30c144650444c6b259b5287679d5856b45302bb817b630c54d"
+      },
+      "opus": {
+        "path": "opus/u_bus.opus",
+        "bytes": 5416,
+        "sha256": "a29a254ba365ac6e49fcb001f66f439238299fa69cc972d77ac56eec9165f37d",
+        "decodedPeakDb": -7.0475377512860895,
+        "decodedSeconds": 0.9241043083900227
+      },
+      "mp3": {
+        "path": "mp3/u_bus.mp3",
+        "bytes": 12071,
+        "sha256": "573e74ce5b930c9b36aea2bbfebee60391f75f8b85fa996c20a55d6b2a6017ee",
+        "decodedPeakDb": -7.440894542648944,
+        "decodedSeconds": 0.9240816326530612
+      }
+    },
+    {
+      "type": "klank",
+      "id": "aa",
+      "cardId": "aa",
+      "stem": "aa_klank",
+      "label": "aa",
+      "source": "klankstudio-lang.wav",
+      "startSample": 50256,
+      "endSampleExclusive": 101106,
+      "activeRange": [
+        1.319592,
+        2.062653
+      ],
+      "duration": 1.153061224489796,
+      "wav": {
+        "path": "wav/aa_klank.wav",
+        "bytes": 101744,
+        "sha256": "ec8487c66b47c848adf97358aad41c9a3aaba346f055b067aeee1665c51671c9"
+      },
+      "opus": {
+        "path": "opus/aa_klank.opus",
+        "bytes": 6717,
+        "sha256": "a3e6c15e1cc4fadba1925cec9f8b56175e855ae12ebe439e0b589592f0f72f15",
+        "decodedPeakDb": -10.822505783758645,
+        "decodedSeconds": 1.1530839002267574
+      },
+      "mp3": {
+        "path": "mp3/aa_klank.mp3",
+        "bytes": 14892,
+        "sha256": "11de074e21c354f647e285a31108e1a2e8aecf87d3c54c01d398464b72ec8ea0",
+        "decodedPeakDb": -10.958427651553052,
+        "decodedSeconds": 1.153061224489796
+      }
+    },
+    {
+      "type": "woord",
+      "id": "maan",
+      "cardId": "aa",
+      "stem": "aa_maan",
+      "label": "maan",
+      "source": "klankstudio-lang.wav",
+      "startSample": 133472,
+      "endSampleExclusive": 180473,
+      "activeRange": [
+        3.206576,
+        3.862336
+      ],
+      "duration": 1.06578231292517,
+      "wav": {
+        "path": "wav/aa_maan.wav",
+        "bytes": 94046,
+        "sha256": "4ccf4760f3ea70a685f6eea1ee18c326a3fbe5dc3bb01fdf622b3c3b5ae659ca"
+      },
+      "opus": {
+        "path": "opus/aa_maan.opus",
+        "bytes": 6320,
+        "sha256": "c4cec47fb8b939161927317b09574249afd8eecb4667f2be6f85dd2b3317fec0",
+        "decodedPeakDb": -10.60555570914687,
+        "decodedSeconds": 1.0658049886621315
+      },
+      "mp3": {
+        "path": "mp3/aa_maan.mp3",
+        "bytes": 13640,
+        "sha256": "c93550ac247e6682e0915b25728ba4eaa460822457538e7d17b6e5af241bd104",
+        "decodedPeakDb": -10.747175092588503,
+        "decodedSeconds": 1.06578231292517
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ee",
+      "cardId": "ee",
+      "stem": "ee_klank",
+      "label": "ee",
+      "source": "klankstudio-lang.wav",
+      "startSample": 214809,
+      "endSampleExclusive": 267735,
+      "activeRange": [
+        5.050975,
+        5.841066
+      ],
+      "duration": 1.2001360544217687,
+      "wav": {
+        "path": "wav/ee_klank.wav",
+        "bytes": 105896,
+        "sha256": "524c953e11e2f1a9337ec51c2220254d520a1fdf93b9568b9154a45e23ab9f0b"
+      },
+      "opus": {
+        "path": "opus/ee_klank.opus",
+        "bytes": 7245,
+        "sha256": "0a821e91d1be94d7e02e5be1bcd93a81ba88d30b9398d864fbc09418a06677a2",
+        "decodedPeakDb": -9.413648121703952,
+        "decodedSeconds": 1.2001587301587302
+      },
+      "mp3": {
+        "path": "mp3/ee_klank.mp3",
+        "bytes": 15205,
+        "sha256": "4257960a576f8786be277f1f50ab98ba75db9626bcc09977a2e4c161c818cdf4",
+        "decodedPeakDb": -9.731226936664504,
+        "decodedSeconds": 1.2001360544217687
+      }
+    },
+    {
+      "type": "woord",
+      "id": "been",
+      "cardId": "ee",
+      "stem": "ee_been",
+      "label": "been",
+      "source": "klankstudio-lang.wav",
+      "startSample": 290293,
+      "endSampleExclusive": 334992,
+      "activeRange": [
+        6.76263,
+        7.36619
+      ],
+      "duration": 1.0135827664399093,
+      "wav": {
+        "path": "wav/ee_been.wav",
+        "bytes": 89442,
+        "sha256": "15ff2ad20b3219910403acb0c306819c589930e3b2297bdaca1baa575d715fa0"
+      },
+      "opus": {
+        "path": "opus/ee_been.opus",
+        "bytes": 6171,
+        "sha256": "fe378e01bddac64f0a9e61e23ab6d27e384203436a7483d1494adfdafc8f36a1",
+        "decodedPeakDb": -12.062350059499904,
+        "decodedSeconds": 1.0136054421768708
+      },
+      "mp3": {
+        "path": "mp3/ee_been.mp3",
+        "bytes": 13013,
+        "sha256": "3f4c067fc1f3aa0a9ac516053a6273ac2f7f0f40f6c9fff400b3d268dc684288",
+        "decodedPeakDb": -12.562780358749556,
+        "decodedSeconds": 1.0135827664399093
+      }
+    },
+    {
+      "type": "klank",
+      "id": "oo",
+      "cardId": "oo",
+      "stem": "oo_klank",
+      "label": "oo",
+      "source": "klankstudio-lang.wav",
+      "startSample": 382182,
+      "endSampleExclusive": 436009,
+      "activeRange": [
+        8.846259,
+        9.656803
+      ],
+      "duration": 1.2205668934240363,
+      "wav": {
+        "path": "wav/oo_klank.wav",
+        "bytes": 107698,
+        "sha256": "9e4a220a7839167c8cf9da3d65fbb3868bda076fd59cf9685fa26e85490691fe"
+      },
+      "opus": {
+        "path": "opus/oo_klank.opus",
+        "bytes": 7242,
+        "sha256": "846d927e4c42b64511fc293515edce12aef5c9a308cff65c1a49327f77a7e03c",
+        "decodedPeakDb": -7.657488007249307,
+        "decodedSeconds": 1.2205895691609978
+      },
+      "mp3": {
+        "path": "mp3/oo_klank.mp3",
+        "bytes": 15519,
+        "sha256": "ffc84c6ce5495c4891d348e521ee8f7f55394cb02514e46d7e82e18c7dc2c170",
+        "decodedPeakDb": -8.157335426921179,
+        "decodedSeconds": 1.2205668934240363
+      }
+    },
+    {
+      "type": "woord",
+      "id": "boom",
+      "cardId": "oo",
+      "stem": "oo_boom",
+      "label": "boom",
+      "source": "klankstudio-lang.wav",
+      "startSample": 475298,
+      "endSampleExclusive": 521023,
+      "activeRange": [
+        10.957755,
+        11.58458
+      ],
+      "duration": 1.0368480725623583,
+      "wav": {
+        "path": "wav/oo_boom.wav",
+        "bytes": 91494,
+        "sha256": "8cce5911d776c45be27d9527fbd92c6bbb34225f47c6adb16c01a4fb04324840"
+      },
+      "opus": {
+        "path": "opus/oo_boom.opus",
+        "bytes": 6036,
+        "sha256": "2d438f8b05dcf00e2dc9cb79b851573fb15fbc84b1ee07412ba1a20bfef11ff7",
+        "decodedPeakDb": -9.896839650869259,
+        "decodedSeconds": 1.0368707482993198
+      },
+      "mp3": {
+        "path": "mp3/oo_boom.mp3",
+        "bytes": 13326,
+        "sha256": "92d25cb9fc6fcc35e3a7e9ec629c4eaa680ed2a084a98075cd2ba071ab52a6de",
+        "decodedPeakDb": -10.289089791546251,
+        "decodedSeconds": 1.0368480725623583
+      }
+    },
+    {
+      "type": "klank",
+      "id": "uu",
+      "cardId": "uu",
+      "stem": "uu_klank",
+      "label": "uu",
+      "source": "klankstudio-lang.wav",
+      "startSample": 552743,
+      "endSampleExclusive": 606611,
+      "activeRange": [
+        12.713855,
+        13.525351
+      ],
+      "duration": 1.2214965986394557,
+      "wav": {
+        "path": "wav/uu_klank.wav",
+        "bytes": 107780,
+        "sha256": "6f648f316f23470715bf3a1549acb23b771d71c2c266a37777dd2c29c2463537"
+      },
+      "opus": {
+        "path": "opus/uu_klank.opus",
+        "bytes": 7399,
+        "sha256": "2028464771ffb0dafbfe3e1ff32f320b3214f468798ef5b1e0d21ab59a5fe10d",
+        "decodedPeakDb": -11.857186665066353,
+        "decodedSeconds": 1.2215192743764172
+      },
+      "mp3": {
+        "path": "mp3/uu_klank.mp3",
+        "bytes": 15519,
+        "sha256": "93eef820cf53000260b60e529a7799af872bf3c982fef523d5302951a4a7a719",
+        "decodedPeakDb": -12.311194629034869,
+        "decodedSeconds": 1.2214965986394557
+      }
+    },
+    {
+      "type": "woord",
+      "id": "muur",
+      "cardId": "uu",
+      "stem": "uu_muur",
+      "label": "muur",
+      "source": "klankstudio-lang.wav",
+      "startSample": 645697,
+      "endSampleExclusive": 685187,
+      "activeRange": [
+        14.821678,
+        15.30712
+      ],
+      "duration": 0.8954648526077098,
+      "wav": {
+        "path": "wav/uu_muur.wav",
+        "bytes": 79024,
+        "sha256": "00de3af4179f8ce0a1671cc3232f3a548195c2ed0df2bbcb8b3f858a793691be"
+      },
+      "opus": {
+        "path": "opus/uu_muur.opus",
+        "bytes": 5425,
+        "sha256": "34116a94c9878ce46e183caf521c2c417f1b97bed762286f8eaac8a10f1e7b47",
+        "decodedPeakDb": -13.998982098981003,
+        "decodedSeconds": 0.8954875283446712
+      },
+      "mp3": {
+        "path": "mp3/uu_muur.mp3",
+        "bytes": 11759,
+        "sha256": "65117a4e092954294a7b1314199a00bbfb5555de19942071ab7e29a25fb3d463",
+        "decodedPeakDb": -14.314310809114396,
+        "decodedSeconds": 0.8954648526077098
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ie",
+      "cardId": "ie",
+      "stem": "ie_klank",
+      "label": "ie",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 106276,
+      "endSampleExclusive": 149035,
+      "activeRange": [
+        2.589887,
+        3.149456
+      ],
+      "duration": 0.9695918367346938,
+      "wav": {
+        "path": "wav/ie_klank.wav",
+        "bytes": 85562,
+        "sha256": "12057574e790c568d39ded76cc0b68b1c25ab8cf3e42f89d140c62aefa802b1e"
+      },
+      "opus": {
+        "path": "opus/ie_klank.opus",
+        "bytes": 5702,
+        "sha256": "411cd6e4f7b499043973884cb9ffaea68774486b3a515bd2f03460884f54050e",
+        "decodedPeakDb": -14.458203444785084,
+        "decodedSeconds": 0.9695918367346938
+      },
+      "mp3": {
+        "path": "mp3/ie_klank.mp3",
+        "bytes": 12697,
+        "sha256": "c6dce720720df617b523ef060bb3c1d4fe05cc6952c7f284f5339c87eb1a6f52",
+        "decodedPeakDb": -14.921805614616483,
+        "decodedSeconds": 0.9695918367346938
+      }
+    },
+    {
+      "type": "woord",
+      "id": "fiets",
+      "cardId": "ie",
+      "stem": "ie_fiets",
+      "label": "fiets",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 173906,
+      "endSampleExclusive": 215314,
+      "activeRange": [
+        4.123447,
+        4.652381
+      ],
+      "duration": 0.9389569160997733,
+      "wav": {
+        "path": "wav/ie_fiets.wav",
+        "bytes": 82860,
+        "sha256": "0a350e46da94e6c84126308dcd995c827cf588887b1ecde54ff08f3c21fc8fce"
+      },
+      "opus": {
+        "path": "opus/ie_fiets.opus",
+        "bytes": 5669,
+        "sha256": "e1285d756f678e3ecd7651993a34a74fb4503add34a764d8b6d2cb291a321151",
+        "decodedPeakDb": -11.024725291501465,
+        "decodedSeconds": 0.9389795918367347
+      },
+      "mp3": {
+        "path": "mp3/ie_fiets.mp3",
+        "bytes": 12073,
+        "sha256": "5efe4ba0788d78e74f41155c70071d39427b63bf532b8b41b37346e1449223e5",
+        "decodedPeakDb": -11.438327811386884,
+        "decodedSeconds": 0.9389569160997733
+      }
+    },
+    {
+      "type": "klank",
+      "id": "oe",
+      "cardId": "oe",
+      "stem": "oe_klank",
+      "label": "oe",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 255602,
+      "endSampleExclusive": 303215,
+      "activeRange": [
+        5.975986,
+        6.645601
+      ],
+      "duration": 1.0796598639455783,
+      "wav": {
+        "path": "wav/oe_klank.wav",
+        "bytes": 95270,
+        "sha256": "924dabb337758893641b4a0e938d67928a20c59f1b88dc796fb52a7a9be8523e"
+      },
+      "opus": {
+        "path": "opus/oe_klank.opus",
+        "bytes": 6092,
+        "sha256": "c7ea186490e1179a6f52f6aa93d3c73a3808c0842c5bc38b4a54067233b8ec2e",
+        "decodedPeakDb": -11.337551459203494,
+        "decodedSeconds": 1.0796825396825396
+      },
+      "mp3": {
+        "path": "mp3/oe_klank.mp3",
+        "bytes": 13951,
+        "sha256": "21c330b032a6a2ba71d7848815cff6b71518de36e49efba56da71e378dc2ca5c",
+        "decodedPeakDb": -11.776473295569591,
+        "decodedSeconds": 1.0796598639455783
+      }
+    },
+    {
+      "type": "woord",
+      "id": "boek",
+      "cardId": "oe",
+      "stem": "oe_boek",
+      "label": "boek",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 317805,
+      "endSampleExclusive": 360922,
+      "activeRange": [
+        7.386463,
+        7.95415
+      ],
+      "duration": 0.9777097505668935,
+      "wav": {
+        "path": "wav/oe_boek.wav",
+        "bytes": 86278,
+        "sha256": "26a0fd1ec11faa097635e6681e924229408c879ac7e00506225e8b1b55e872d2"
+      },
+      "opus": {
+        "path": "opus/oe_boek.opus",
+        "bytes": 5390,
+        "sha256": "224a3bcbd103eb8852b5977f9f4432a23a6e38fbce46d29da0d5bf29385d2ffb",
+        "decodedPeakDb": -9.734384626585136,
+        "decodedSeconds": 0.9777324263038549
+      },
+      "mp3": {
+        "path": "mp3/oe_boek.mp3",
+        "bytes": 12699,
+        "sha256": "fc9516628c5234d4c820c2f42fa2ccc6610f428307b77aec6e5809b0e3f0473d",
+        "decodedPeakDb": -10.214381674020697,
+        "decodedSeconds": 0.9777097505668935
+      }
+    },
+    {
+      "type": "klank",
+      "id": "eu",
+      "cardId": "eu",
+      "stem": "eu_klank",
+      "label": "eu",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 395476,
+      "endSampleExclusive": 449193,
+      "activeRange": [
+        9.147732,
+        9.955782
+      ],
+      "duration": 1.2180725623582767,
+      "wav": {
+        "path": "wav/eu_klank.wav",
+        "bytes": 107478,
+        "sha256": "da4cc996242bad5455f1c96ccd1bda0837cc51877a29e328ed085a2f11ffcb68"
+      },
+      "opus": {
+        "path": "opus/eu_klank.opus",
+        "bytes": 7134,
+        "sha256": "334f5c2d9e61faec75ce231bf500166f5790a76b213e71d186020181c7a951e2",
+        "decodedPeakDb": -9.057122541214614,
+        "decodedSeconds": 1.2180952380952381
+      },
+      "mp3": {
+        "path": "mp3/eu_klank.mp3",
+        "bytes": 15519,
+        "sha256": "adfcdd5411cd4fea3e4a2726f004511fb533c8eb97d6cb2bb03709e0af64ab1d",
+        "decodedPeakDb": -9.386740479812676,
+        "decodedSeconds": 1.2180725623582767
+      }
+    },
+    {
+      "type": "woord",
+      "id": "neus",
+      "cardId": "eu",
+      "stem": "eu_neus",
+      "label": "neus",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 457826,
+      "endSampleExclusive": 507557,
+      "activeRange": [
+        10.561542,
+        11.279229
+      ],
+      "duration": 1.127687074829932,
+      "wav": {
+        "path": "wav/eu_neus.wav",
+        "bytes": 99506,
+        "sha256": "ab9bf7bf49fd016ee36107b7d65e179054675e359e2fc085f177fd3fde89cf2e"
+      },
+      "opus": {
+        "path": "opus/eu_neus.opus",
+        "bytes": 6680,
+        "sha256": "1bc122c98ac623620446c2ebfbcaeb99f95edf03148eb2fecdc27c982d8438ff",
+        "decodedPeakDb": -11.161517144807005,
+        "decodedSeconds": 1.1277097505668934
+      },
+      "mp3": {
+        "path": "mp3/eu_neus.mp3",
+        "bytes": 14580,
+        "sha256": "d0f17914d0f36353f9f209f7f84f5216a81bce36544c3639cffdcd416546d1f1",
+        "decodedPeakDb": -11.594294597398703,
+        "decodedSeconds": 1.127687074829932
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ui",
+      "cardId": "ui",
+      "stem": "ui_klank",
+      "label": "ui",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 534092,
+      "endSampleExclusive": 580149,
+      "activeRange": [
+        12.29093,
+        12.925306
+      ],
+      "duration": 1.0443764172335601,
+      "wav": {
+        "path": "wav/ui_klank.wav",
+        "bytes": 92158,
+        "sha256": "6b6677e881ebe78cbcd01600b26e440ac68b14ab018081b40d9449548c05169b"
+      },
+      "opus": {
+        "path": "opus/ui_klank.opus",
+        "bytes": 6021,
+        "sha256": "228df2e399ee6338530780660ab254ad0339ce71179a4dd8d4ade1c655d76c06",
+        "decodedPeakDb": -5.213163436130197,
+        "decodedSeconds": 1.0443990929705216
+      },
+      "mp3": {
+        "path": "mp3/ui_klank.mp3",
+        "bytes": 13324,
+        "sha256": "a6d81c7bce11f64f4913cde681305b671f36d08d30a3282710185a0961175229",
+        "decodedPeakDb": -5.5813074425189955,
+        "decodedSeconds": 1.0443764172335601
+      }
+    },
+    {
+      "type": "woord",
+      "id": "huis",
+      "cardId": "ui",
+      "stem": "ui_huis",
+      "label": "huis",
+      "source": "klankstudio-Twee letters — één klank.wav",
+      "startSample": 594371,
+      "endSampleExclusive": 643747,
+      "activeRange": [
+        13.657823,
+        14.367415
+      ],
+      "duration": 1.1196371882086167,
+      "wav": {
+        "path": "wav/ui_huis.wav",
+        "bytes": 98796,
+        "sha256": "5a7d971aeb787b2402ee4fcf304012f389b12d8fa52755191de5054295c579bd"
+      },
+      "opus": {
+        "path": "opus/ui_huis.opus",
+        "bytes": 6925,
+        "sha256": "a608c8415fadc1c3281cbb574b8086c0584b9db921280d26f9bd74e29ee43310",
+        "decodedPeakDb": -7.236370713673547,
+        "decodedSeconds": 1.1196598639455781
+      },
+      "mp3": {
+        "path": "mp3/ui_huis.mp3",
+        "bytes": 14267,
+        "sha256": "18795fa87416238cda46ba601ee908edd5bfe649b003f5dedfe27549d9048f7a",
+        "decodedPeakDb": -7.247807702786735,
+        "decodedSeconds": 1.1196371882086167
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ei",
+      "cardId": "ei",
+      "stem": "ei_klank",
+      "label": "ei",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 79045,
+      "endSampleExclusive": 122711,
+      "activeRange": [
+        1.972404,
+        2.552562
+      ],
+      "duration": 0.9901587301587301,
+      "wav": {
+        "path": "wav/ei_klank.wav",
+        "bytes": 87376,
+        "sha256": "f75fd4422c6f08d96341984ee98fa0c823afb5b8a0ff1bc22721ef59fc10a2f9"
+      },
+      "opus": {
+        "path": "opus/ei_klank.opus",
+        "bytes": 5849,
+        "sha256": "64f3d5c54d150f86b9aad7ddf1a8059abbb8d83045df43a9b5119e8735102366",
+        "decodedPeakDb": -4.920111686653322,
+        "decodedSeconds": 0.9901814058956916
+      },
+      "mp3": {
+        "path": "mp3/ei_klank.mp3",
+        "bytes": 12697,
+        "sha256": "100672fe7bcdd3cf40a40e613060040fb4e3668262da9f94f6dfe2ec32d6250a",
+        "decodedPeakDb": -5.2948583095529305,
+        "decodedSeconds": 0.9901587301587301
+      }
+    },
+    {
+      "type": "woord",
+      "id": "trein",
+      "cardId": "ei",
+      "stem": "ei_trein",
+      "label": "trein",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 148294,
+      "endSampleExclusive": 193271,
+      "activeRange": [
+        3.542676,
+        4.152562
+      ],
+      "duration": 1.0198866213151927,
+      "wav": {
+        "path": "wav/ei_trein.wav",
+        "bytes": 89998,
+        "sha256": "c398ccf70182a2aa7981f879a47d656c314c1e7f72c95883a1aa9c9fe1a7c5c4"
+      },
+      "opus": {
+        "path": "opus/ei_trein.opus",
+        "bytes": 6242,
+        "sha256": "42d184889b90053342688b42fdecf5bba285c62beda9d07d13ed98b66454a206",
+        "decodedPeakDb": -5.672264629269614,
+        "decodedSeconds": 1.0199092970521542
+      },
+      "mp3": {
+        "path": "mp3/ei_trein.mp3",
+        "bytes": 13327,
+        "sha256": "5ecf720b5b5c1cabfe6b7122048c24c88e6f0abb9259352c15904a68822f65e6",
+        "decodedPeakDb": -6.036724744937295,
+        "decodedSeconds": 1.0198866213151927
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ij",
+      "cardId": "ei",
+      "stem": "ij_klank",
+      "label": "ij",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 239192,
+      "endSampleExclusive": 284049,
+      "activeRange": [
+        5.603855,
+        6.210998
+      ],
+      "duration": 1.0171655328798186,
+      "wav": {
+        "path": "wav/ij_klank.wav",
+        "bytes": 89758,
+        "sha256": "c2f89d99423d19a1e4e516ca4af81324a8ef6ed7a2b85051ad47be32fb0851d3"
+      },
+      "opus": {
+        "path": "opus/ij_klank.opus",
+        "bytes": 6226,
+        "sha256": "1990c85b2fdec231bbed6281cb90d25766ef5126b2b4b563a0c47aeb028ec811",
+        "decodedPeakDb": -2.5377219363484596,
+        "decodedSeconds": 1.01718820861678
+      },
+      "mp3": {
+        "path": "mp3/ij_klank.mp3",
+        "bytes": 13011,
+        "sha256": "aa07cd8575629428ef6a247caead778457548f11125b4df08c47446c6d15f989",
+        "decodedPeakDb": -2.500021489874826,
+        "decodedSeconds": 1.0171655328798186
+      }
+    },
+    {
+      "type": "woord",
+      "id": "ijs",
+      "cardId": "ei",
+      "stem": "ij_ijs",
+      "label": "ijs",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 301170,
+      "endSampleExclusive": 348675,
+      "activeRange": [
+        7.009252,
+        7.67644
+      ],
+      "duration": 1.0772108843537416,
+      "wav": {
+        "path": "wav/ij_ijs.wav",
+        "bytes": 95054,
+        "sha256": "151c921eeb07ebd4ec1e781bbbe6c342971b9b1201979c96beac6dc6cfc0eaf9"
+      },
+      "opus": {
+        "path": "opus/ij_ijs.opus",
+        "bytes": 6557,
+        "sha256": "ba0e8e02fc309fbc0b23dfa9f6019557496c672c48e069352eae770f1bd09042",
+        "decodedPeakDb": -5.478346323283897,
+        "decodedSeconds": 1.077233560090703
+      },
+      "mp3": {
+        "path": "mp3/ij_ijs.mp3",
+        "bytes": 13952,
+        "sha256": "cac0a3a9a2a158b6e97add52e72f498d5e9189e8a91024350b71445c46105a6c",
+        "decodedPeakDb": -5.630523524349838,
+        "decodedSeconds": 1.0772108843537416
+      }
+    },
+    {
+      "type": "klank",
+      "id": "au",
+      "cardId": "au",
+      "stem": "au_klank",
+      "label": "au",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 396093,
+      "endSampleExclusive": 441891,
+      "activeRange": [
+        9.161723,
+        9.790204
+      ],
+      "duration": 1.0385034013605443,
+      "wav": {
+        "path": "wav/au_klank.wav",
+        "bytes": 91640,
+        "sha256": "5a1493aa2400357704ff99f3754bd3c4b574003ae3b6b3c5b375b5a62c75b504"
+      },
+      "opus": {
+        "path": "opus/au_klank.opus",
+        "bytes": 6021,
+        "sha256": "4bb399504847645569b1c66973919d4a2fd513e0fe5a65fc56fd830c36dc6343",
+        "decodedPeakDb": -6.339212417059806,
+        "decodedSeconds": 1.0385260770975058
+      },
+      "mp3": {
+        "path": "mp3/au_klank.mp3",
+        "bytes": 13324,
+        "sha256": "f5cb0f65f9722af389e686bc3f2fd2109041b63622cfa401dca934d95f4d32fd",
+        "decodedPeakDb": -6.589922862575007,
+        "decodedSeconds": 1.0385034013605443
+      }
+    },
+    {
+      "type": "woord",
+      "id": "saus",
+      "cardId": "au",
+      "stem": "au_saus",
+      "label": "saus",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 455607,
+      "endSampleExclusive": 508795,
+      "activeRange": [
+        10.511247,
+        11.307279
+      ],
+      "duration": 1.206077097505669,
+      "wav": {
+        "path": "wav/au_saus.wav",
+        "bytes": 106420,
+        "sha256": "4221868219e8c09664d004538a064e3526f059b8ab9a978652672bd66a1ed29f"
+      },
+      "opus": {
+        "path": "opus/au_saus.opus",
+        "bytes": 7300,
+        "sha256": "ba7e3a038bec4e518547910a1767f333be61a51c82b42ef7c7d8f7e25d8fd23f",
+        "decodedPeakDb": -5.732961103395154,
+        "decodedSeconds": 1.2060997732426304
+      },
+      "mp3": {
+        "path": "mp3/au_saus.mp3",
+        "bytes": 15521,
+        "sha256": "298f5857b56c8ebac81f4e45ae550bcc64dab775b2c1ed0acf5a26ab872a3857",
+        "decodedPeakDb": -6.3715888233818525,
+        "decodedSeconds": 1.206077097505669
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ou",
+      "cardId": "au",
+      "stem": "ou_klank",
+      "label": "ou",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 542876,
+      "endSampleExclusive": 586285,
+      "activeRange": [
+        12.490136,
+        13.064422
+      ],
+      "duration": 0.9843310657596371,
+      "wav": {
+        "path": "wav/ou_klank.wav",
+        "bytes": 86862,
+        "sha256": "97d969455e7ab5eac5c30856672870cad2d77c4fef7091c19121f2f1ddfcc858"
+      },
+      "opus": {
+        "path": "opus/ou_klank.opus",
+        "bytes": 5544,
+        "sha256": "846ce8959503ad5f086f7d8c2a118d706484cc260092854c47fdb3b27f835604",
+        "decodedPeakDb": -5.917853556737293,
+        "decodedSeconds": 0.9843537414965986
+      },
+      "mp3": {
+        "path": "mp3/ou_klank.mp3",
+        "bytes": 12697,
+        "sha256": "feff7752e0bbed400f42f24239051c9f4a105a06e189e43a80674d97a2f8a2c8",
+        "decodedPeakDb": -6.269498617052253,
+        "decodedSeconds": 0.9843310657596371
+      }
+    },
+    {
+      "type": "woord",
+      "id": "hout",
+      "cardId": "au",
+      "stem": "ou_hout",
+      "label": "hout",
+      "source": "klankstudio-Eén klank — twee spellingen.wav",
+      "startSample": 601331,
+      "endSampleExclusive": 651366,
+      "activeRange": [
+        13.815646,
+        14.540204
+      ],
+      "duration": 1.1345804988662131,
+      "wav": {
+        "path": "wav/ou_hout.wav",
+        "bytes": 100114,
+        "sha256": "b6e8a2a4bceaf0142f531fdb36715ba63e1715784f643bcec5e066e02f1e5d63"
+      },
+      "opus": {
+        "path": "opus/ou_hout.opus",
+        "bytes": 6795,
+        "sha256": "11a69073cb4ae0d5c7cfaed3b35c94f94d3cacf2a8cc1af5db8644a7dd4b4154",
+        "decodedPeakDb": -8.294227459784656,
+        "decodedSeconds": 1.1346031746031746
+      },
+      "mp3": {
+        "path": "mp3/ou_hout.mp3",
+        "bytes": 14580,
+        "sha256": "d2e0252d6da3d4fafe9b283ae97bcb36affc42ca5f09faf6ebfa3ac2c939a854",
+        "decodedPeakDb": -8.062888749843536,
+        "decodedSeconds": 1.1345804988662131
+      }
+    },
+    {
+      "type": "klank",
+      "id": "aai",
+      "cardId": "aai",
+      "stem": "aai_klank",
+      "label": "aai",
+      "source": "klankstudio-met een i erachter.wav",
+      "startSample": 88707,
+      "endSampleExclusive": 141828,
+      "activeRange": [
+        2.191519,
+        2.986054
+      ],
+      "duration": 1.2045578231292517,
+      "wav": {
+        "path": "wav/aai_klank.wav",
+        "bytes": 106286,
+        "sha256": "19015a7a020c61d6c2c41ef8daa536f57ad2b381201cc604be927772372368af"
+      },
+      "opus": {
+        "path": "opus/aai_klank.opus",
+        "bytes": 7018,
+        "sha256": "513a3ef6e4910fbc6dab95a200802130634babdd852f4f4f997f0aa4c0a68b9d",
+        "decodedPeakDb": -5.749108660227147,
+        "decodedSeconds": 1.2045804988662132
+      },
+      "mp3": {
+        "path": "mp3/aai_klank.mp3",
+        "bytes": 15520,
+        "sha256": "4b140f3f595020532d85e5b1c8f01010f7e97edef71c4351e867e160d12a421f",
+        "decodedPeakDb": -6.176430830711897,
+        "decodedSeconds": 1.2045578231292517
+      }
+    },
+    {
+      "type": "woord",
+      "id": "draai",
+      "cardId": "aai",
+      "stem": "aai_draai",
+      "label": "draai",
+      "source": "klankstudio-met een i erachter.wav",
+      "startSample": 180083,
+      "endSampleExclusive": 235351,
+      "activeRange": [
+        4.263537,
+        5.106757
+      ],
+      "duration": 1.2532426303854876,
+      "wav": {
+        "path": "wav/aai_draai.wav",
+        "bytes": 110580,
+        "sha256": "c4c6e92f8ca922749746259a90859ed09812ad98f1c0b0ac22594d9e61363cda"
+      },
+      "opus": {
+        "path": "opus/aai_draai.opus",
+        "bytes": 7462,
+        "sha256": "a9f5af29428455eda65226cc48123ff9c9331e1782a1ad2d477cab54d7506e7b",
+        "decodedPeakDb": -5.843941459175481,
+        "decodedSeconds": 1.253265306122449
+      },
+      "mp3": {
+        "path": "mp3/aai_draai.mp3",
+        "bytes": 15835,
+        "sha256": "c955513438dcbe2e809f0cd89ce8e47c91388ebfaf1c061e4e0f1c8bfea6be65",
+        "decodedPeakDb": -6.076954888329876,
+        "decodedSeconds": 1.2532426303854876
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ooi",
+      "cardId": "ooi",
+      "stem": "ooi_klank",
+      "label": "ooi",
+      "source": "klankstudio-met een i erachter.wav",
+      "startSample": 264913,
+      "endSampleExclusive": 324007,
+      "activeRange": [
+        6.18712,
+        7.117075
+      ],
+      "duration": 1.34,
+      "wav": {
+        "path": "wav/ooi_klank.wav",
+        "bytes": 118232,
+        "sha256": "fbd25cc8e569d9dda81827fe8fd23a220eeba8db18416c4380a6da57df5fe8b0"
+      },
+      "opus": {
+        "path": "opus/ooi_klank.opus",
+        "bytes": 8456,
+        "sha256": "220629b0243103313f93f585abdbed2820c1566a91e566ac857e18e0634b4888",
+        "decodedPeakDb": -8.865401411290751,
+        "decodedSeconds": 1.34
+      },
+      "mp3": {
+        "path": "mp3/ooi_klank.mp3",
+        "bytes": 17087,
+        "sha256": "6dee8b2fadb8bc075192ba4d54873a1bbaeca405ff7da21e20935d25937b0ce9",
+        "decodedPeakDb": -9.23724126695111,
+        "decodedSeconds": 1.34
+      }
+    },
+    {
+      "type": "woord",
+      "id": "mooi",
+      "cardId": "ooi",
+      "stem": "ooi_mooi",
+      "label": "mooi",
+      "source": "klankstudio-met een i erachter.wav",
+      "startSample": 355546,
+      "endSampleExclusive": 412951,
+      "activeRange": [
+        8.242268,
+        9.133968
+      ],
+      "duration": 1.301700680272109,
+      "wav": {
+        "path": "wav/ooi_mooi.wav",
+        "bytes": 114854,
+        "sha256": "12ec44b180172d8ea07c98ffd8db6897c5c655bc6eafbe6e70e7a7ada8925d66"
+      },
+      "opus": {
+        "path": "opus/ooi_mooi.opus",
+        "bytes": 8608,
+        "sha256": "3e457736382a09aa00d629022816f4c81973b57198baeba43ea3ddec3ff386da",
+        "decodedPeakDb": -12.555129964907811,
+        "decodedSeconds": 1.3017233560090702
+      },
+      "mp3": {
+        "path": "mp3/ooi_mooi.mp3",
+        "bytes": 16461,
+        "sha256": "4f83a33fbd0d0bf31d8ee2d8be0020230b00e4a4ae33de4b483d6365fa780956",
+        "decodedPeakDb": -12.67350054970028,
+        "decodedSeconds": 1.301700680272109
+      }
+    },
+    {
+      "type": "klank",
+      "id": "oei",
+      "cardId": "oei",
+      "stem": "oei_klank",
+      "label": "oei",
+      "source": "klankstudio-met een i erachter.wav",
+      "startSample": 445836,
+      "endSampleExclusive": 490740,
+      "activeRange": [
+        10.28966,
+        10.897891
+      ],
+      "duration": 1.0182312925170067,
+      "wav": {
+        "path": "wav/oei_klank.wav",
+        "bytes": 89852,
+        "sha256": "2f9c112645f9528f4057f368caa460ebac6a88d8871ff194bf1759a317004720"
+      },
+      "opus": {
+        "path": "opus/oei_klank.opus",
+        "bytes": 6041,
+        "sha256": "1fa048b1b0b2fb3e2a4613283084212c91899774a73e42da637eabbf43e79b70",
+        "decodedPeakDb": -10.90096598980669,
+        "decodedSeconds": 1.0182539682539682
+      },
+      "mp3": {
+        "path": "mp3/oei_klank.mp3",
+        "bytes": 13012,
+        "sha256": "3642f06c7af5861b6e6e4d703270a66a24dcc3be428ae001420786e106774aa8",
+        "decodedPeakDb": -11.352275537590696,
+        "decodedSeconds": 1.0182312925170067
+      }
+    },
+    {
+      "type": "woord",
+      "id": "groei",
+      "cardId": "oei",
+      "stem": "oei_groei",
+      "label": "groei",
+      "source": "klankstudio-met een i erachter.wav",
+      "startSample": 521386,
+      "endSampleExclusive": 574792,
+      "activeRange": [
+        12.002834,
+        12.803832
+      ],
+      "duration": 1.2110204081632654,
+      "wav": {
+        "path": "wav/oei_groei.wav",
+        "bytes": 106856,
+        "sha256": "4f9378ceefd0212e8f969f072ea3714bee88b40c6ea198c7ca83ae37192d1c8f"
+      },
+      "opus": {
+        "path": "opus/oei_groei.opus",
+        "bytes": 7345,
+        "sha256": "23b96d3d42961ea9101653062389161cef9d9dcb6644707d8aea1f33a4a4ece5",
+        "decodedPeakDb": -8.693845757434248,
+        "decodedSeconds": 1.2110430839002269
+      },
+      "mp3": {
+        "path": "mp3/oei_groei.mp3",
+        "bytes": 15522,
+        "sha256": "282a054ea88348e108edfa32594ad38c90ab51019c16f00d59cc71431e4bda4f",
+        "decodedPeakDb": -9.1526541155604,
+        "decodedSeconds": 1.2110204081632654
+      }
+    },
+    {
+      "type": "klank",
+      "id": "eeuw",
+      "cardId": "eeuw",
+      "stem": "eeuw_klank",
+      "label": "eeuw",
+      "source": "klankstudio-met een w erachter.wav",
+      "startSample": 106698,
+      "endSampleExclusive": 159635,
+      "activeRange": [
+        2.599478,
+        3.389841
+      ],
+      "duration": 1.2003854875283446,
+      "wav": {
+        "path": "wav/eeuw_klank.wav",
+        "bytes": 105918,
+        "sha256": "3b98d893f6aa3af292209acfa1381f9fcf1ca47dfe582d185388e829849023ab"
+      },
+      "opus": {
+        "path": "opus/eeuw_klank.opus",
+        "bytes": 6792,
+        "sha256": "d3f6067b552bf2dd6da5ff928e9e90e6ee2de74798ccfd0dd146c637be08b77c",
+        "decodedPeakDb": -7.348574998531234,
+        "decodedSeconds": 1.200408163265306
+      },
+      "mp3": {
+        "path": "mp3/eeuw_klank.mp3",
+        "bytes": 15207,
+        "sha256": "f44c11ed5799bc041b30d0a10bd656f619b0f68978e963a79d5ef3e684a6400d",
+        "decodedPeakDb": -7.7197609812435655,
+        "decodedSeconds": 1.2003854875283446
+      }
+    },
+    {
+      "type": "woord",
+      "id": "leeuw",
+      "cardId": "eeuw",
+      "stem": "eeuw_leeuw",
+      "label": "leeuw",
+      "source": "klankstudio-met een w erachter.wav",
+      "startSample": 194523,
+      "endSampleExclusive": 253293,
+      "activeRange": [
+        4.590975,
+        5.513605
+      ],
+      "duration": 1.3326530612244898,
+      "wav": {
+        "path": "wav/eeuw_leeuw.wav",
+        "bytes": 117584,
+        "sha256": "259e6190f58e38959baf953fad562d00123eb2f51505ab0441df73856a524dc6"
+      },
+      "opus": {
+        "path": "opus/eeuw_leeuw.opus",
+        "bytes": 8401,
+        "sha256": "76c91926df9167d58c4c7f3217c3f9b93f3fb536c2c7f8f4e75d37ae6881de8d",
+        "decodedPeakDb": -10.520428210184399,
+        "decodedSeconds": 1.3326530612244898
+      },
+      "mp3": {
+        "path": "mp3/eeuw_leeuw.mp3",
+        "bytes": 17089,
+        "sha256": "e77383f837e3696de4fe649a19184db8aa7d6c636f3d6d91caa53a4739b997ad",
+        "decodedPeakDb": -10.940741703273229,
+        "decodedSeconds": 1.3333106575963718
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ieuw",
+      "cardId": "ieuw",
+      "stem": "ieuw_klank",
+      "label": "ieuw",
+      "source": "klankstudio-met een w erachter.wav",
+      "startSample": 294144,
+      "endSampleExclusive": 346970,
+      "activeRange": [
+        6.849932,
+        7.6378
+      ],
+      "duration": 1.1978684807256237,
+      "wav": {
+        "path": "wav/ieuw_klank.wav",
+        "bytes": 105696,
+        "sha256": "de44cda2d3df68aca3c854c1d06ff97a11aacf41b362db98235920bae1577adf"
+      },
+      "opus": {
+        "path": "opus/ieuw_klank.opus",
+        "bytes": 7049,
+        "sha256": "34c28c7eed38eac683e007bc388f15a5f674989511e3e5229ce37a91a1eaa6b0",
+        "decodedPeakDb": -14.47999346538885,
+        "decodedSeconds": 1.197891156462585
+      },
+      "mp3": {
+        "path": "mp3/ieuw_klank.mp3",
+        "bytes": 15207,
+        "sha256": "50c965209d37a897faadc3806a69471e19458320938c3534063d7f35a9494992",
+        "decodedPeakDb": -15.02008612578717,
+        "decodedSeconds": 1.1978684807256237
+      }
+    },
+    {
+      "type": "woord",
+      "id": "nieuw",
+      "cardId": "ieuw",
+      "stem": "ieuw_nieuw",
+      "label": "nieuw",
+      "source": "klankstudio-met een w erachter.wav",
+      "startSample": 375134,
+      "endSampleExclusive": 429851,
+      "activeRange": [
+        8.68644,
+        9.517188
+      ],
+      "duration": 1.2407482993197279,
+      "wav": {
+        "path": "wav/ieuw_nieuw.wav",
+        "bytes": 109478,
+        "sha256": "54cf8550618ae24da017612a4a5cc38e7b3ab6d40a0b0129a6ea4827b620f6a5"
+      },
+      "opus": {
+        "path": "opus/ieuw_nieuw.opus",
+        "bytes": 7315,
+        "sha256": "de2815cf0401c8a027bb6b23a5063263973d3c95b08bca2fcd5b9c0b473caf9a",
+        "decodedPeakDb": -11.01164005816338,
+        "decodedSeconds": 1.2407709750566893
+      },
+      "mp3": {
+        "path": "mp3/ieuw_nieuw.mp3",
+        "bytes": 15835,
+        "sha256": "9c49c15f9139850dc25c5916a79809f601a0b5f12feb3c18e9a356efee2532b9",
+        "decodedPeakDb": -11.30880893222335,
+        "decodedSeconds": 1.2407482993197279
+      }
+    },
+    {
+      "type": "klank",
+      "id": "uw",
+      "cardId": "uw",
+      "stem": "uw_klank",
+      "label": "uw",
+      "source": "klankstudio-met een w erachter.wav",
+      "startSample": 462770,
+      "endSampleExclusive": 511615,
+      "activeRange": [
+        10.673651,
+        11.371247
+      ],
+      "duration": 1.1075963718820863,
+      "wav": {
+        "path": "wav/uw_klank.wav",
+        "bytes": 97734,
+        "sha256": "ab6de29cb7ba1ba853bd5e3ad6c5cdf54d9fbcabd9b7720964359e3829df3d5c"
+      },
+      "opus": {
+        "path": "opus/uw_klank.opus",
+        "bytes": 6393,
+        "sha256": "44b752c62c198b83b2b5a7cc4edc30fcb4840bac6fb883962e299f4a7956ec59",
+        "decodedPeakDb": -11.565275464687957,
+        "decodedSeconds": 1.1076190476190477
+      },
+      "mp3": {
+        "path": "mp3/uw_klank.mp3",
+        "bytes": 14265,
+        "sha256": "c9cffa194f94e7b614d73383ecb448572d7e1fcbc1f0cb8c2a32994af33bde7a",
+        "decodedPeakDb": -11.94829976491979,
+        "decodedSeconds": 1.1075963718820863
+      }
+    },
+    {
+      "type": "woord",
+      "id": "duw",
+      "cardId": "uw",
+      "stem": "uw_duw",
+      "label": "duw",
+      "source": "klankstudio-met een w erachter.wav",
+      "startSample": 535342,
+      "endSampleExclusive": 587412,
+      "activeRange": [
+        12.319297,
+        13.09
+      ],
+      "duration": 1.1807256235827663,
+      "wav": {
+        "path": "wav/uw_duw.wav",
+        "bytes": 104184,
+        "sha256": "8fb454cf195effeb42a58b4ca13de83314b7621c0008e06394ac22b1625e1dca"
+      },
+      "opus": {
+        "path": "opus/uw_duw.opus",
+        "bytes": 6838,
+        "sha256": "e3d762417b458f61100016088e9aa61ce46d556bb869b196a7804b24c6ed0f99",
+        "decodedPeakDb": -9.394828226352033,
+        "decodedSeconds": 1.1807482993197278
+      },
+      "mp3": {
+        "path": "mp3/uw_duw.mp3",
+        "bytes": 15206,
+        "sha256": "bd9f70ec95222dd3acaade2371544d7fca0311f079a13d115b0465c1343b9ddf",
+        "decodedPeakDb": -9.529601337828485,
+        "decodedSeconds": 1.1807256235827663
+      }
+    },
+    {
+      "type": "klank",
+      "id": "sjwa",
+      "cardId": "sjwa",
+      "stem": "sjwa_klank",
+      "label": "sjwa",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 116237,
+      "endSampleExclusive": 147024,
+      "activeRange": [
+        2.815782,
+        3.103855
+      ],
+      "duration": 0.6981179138321996,
+      "wav": {
+        "path": "wav/sjwa_klank.wav",
+        "bytes": 61618,
+        "sha256": "93645428a8717cf8d5e50efeb843b59297e5a8dc9776fc8ea3297881c1400b1e"
+      },
+      "opus": {
+        "path": "opus/sjwa_klank.opus",
+        "bytes": 4085,
+        "sha256": "c35dc892d4de2d9f13e622e4f73772d7f52d56e31b28959dc05c87f24a03d969",
+        "decodedPeakDb": -6.141140056934099,
+        "decodedSeconds": 0.698140589569161
+      },
+      "mp3": {
+        "path": "mp3/sjwa_klank.mp3",
+        "bytes": 9251,
+        "sha256": "8f106248d53a730613b0a2ba757ba025863e1cdbae079b904f0f58c442e7efe2",
+        "decodedPeakDb": -6.303826637503765,
+        "decodedSeconds": 0.6981179138321996
+      }
+    },
+    {
+      "type": "woord",
+      "id": "de",
+      "cardId": "sjwa",
+      "stem": "sjwa_de",
+      "label": "de",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 191792,
+      "endSampleExclusive": 228856,
+      "activeRange": [
+        4.529025,
+        4.959456
+      ],
+      "duration": 0.840453514739229,
+      "wav": {
+        "path": "wav/sjwa_de.wav",
+        "bytes": 74172,
+        "sha256": "19490c962624da05c88c6c475b6286af64b965e2dc7595f9b6bd5a0e27091693"
+      },
+      "opus": {
+        "path": "opus/sjwa_de.opus",
+        "bytes": 4709,
+        "sha256": "072b14642795bbe73e3b9b2fe342c162f3bd3f11b10a1ef12d6fc00fe0586bb5",
+        "decodedPeakDb": -5.416182422513224,
+        "decodedSeconds": 0.8404761904761905
+      },
+      "mp3": {
+        "path": "mp3/sjwa_de.mp3",
+        "bytes": 11130,
+        "sha256": "b63822ef11e0cbd274f32c8422ae96680899294cacda9fec494c1f5afe7b8ec2",
+        "decodedPeakDb": -5.7907664383740665,
+        "decodedSeconds": 0.840453514739229
+      }
+    },
+    {
+      "type": "woord",
+      "id": "lopen",
+      "cardId": "sjwa",
+      "stem": "sjwa_lopen",
+      "label": "lopen",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 277027,
+      "endSampleExclusive": 335266,
+      "activeRange": [
+        6.461814,
+        7.372381
+      ],
+      "duration": 1.3206122448979591,
+      "wav": {
+        "path": "wav/sjwa_lopen.wav",
+        "bytes": 116522,
+        "sha256": "f1e2b06a704c7a1cd2f1119912174f8b588682a613802ad8dc144953afd1a506"
+      },
+      "opus": {
+        "path": "opus/sjwa_lopen.opus",
+        "bytes": 7746,
+        "sha256": "dab7f0cfba48ee766aa234dbee92ba9693a2705a39c4a2a96a38435b7e362e93",
+        "decodedPeakDb": -5.304286859910664,
+        "decodedSeconds": 1.3206122448979591
+      },
+      "mp3": {
+        "path": "mp3/sjwa_lopen.mp3",
+        "bytes": 16775,
+        "sha256": "8b163dff8b4d3a492a7e0a462538b774bc555e0ddbeab85dfe7c72f7e98f5a73",
+        "decodedPeakDb": -5.879626847718863,
+        "decodedSeconds": 1.3206122448979591
+      }
+    },
+    {
+      "type": "woord",
+      "id": "vader",
+      "cardId": "sjwa",
+      "stem": "sjwa_vader",
+      "label": "vader",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 378764,
+      "endSampleExclusive": 433844,
+      "activeRange": [
+        8.768753,
+        9.60771
+      ],
+      "duration": 1.2489795918367348,
+      "wav": {
+        "path": "wav/sjwa_vader.wav",
+        "bytes": 110204,
+        "sha256": "a3fea9c2dbee376c667429467a15a52b4c307a94a88bdac01654778513344fdb"
+      },
+      "opus": {
+        "path": "opus/sjwa_vader.opus",
+        "bytes": 7966,
+        "sha256": "d1135e1975aa07b47dab22ae1b02afaab5e58537ee28d2e4dee49619e6dcd5dd",
+        "decodedPeakDb": -2.6045120642004016,
+        "decodedSeconds": 1.249002267573696
+      },
+      "mp3": {
+        "path": "mp3/sjwa_vader.mp3",
+        "bytes": 15835,
+        "sha256": "8fc0a12615dbe6be6abdf2f6aa41de2532bd14b81419bf7175dc6ed729af34df",
+        "decodedPeakDb": -2.9506152103286927,
+        "decodedSeconds": 1.2489795918367348
+      }
+    },
+    {
+      "type": "klank",
+      "id": "-ig",
+      "cardId": "-ig",
+      "stem": "ig_klank",
+      "label": "-ig",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 505758,
+      "endSampleExclusive": 542185,
+      "activeRange": [
+        11.648458,
+        12.064422
+      ],
+      "duration": 0.8260090702947845,
+      "wav": {
+        "path": "wav/ig_klank.wav",
+        "bytes": 72898,
+        "sha256": "65334f191e1897c1b58de494d8fdc5346b8e9bb79aef7f39f24b1e587b0a7541"
+      },
+      "opus": {
+        "path": "opus/ig_klank.opus",
+        "bytes": 4869,
+        "sha256": "27b12f70286d82cd849738ed8e662b66562dacb97ee4b61c1d54bbbdedc166b8",
+        "decodedPeakDb": -9.864890266568606,
+        "decodedSeconds": 0.826031746031746
+      },
+      "mp3": {
+        "path": "mp3/ig_klank.mp3",
+        "bytes": 10818,
+        "sha256": "8a6bab4e4fe8e484b1dc7f3985a8078732eba020832e019f8bd6f0c8fed13fc1",
+        "decodedPeakDb": -10.061477646511058,
+        "decodedSeconds": 0.8260090702947845
+      }
+    },
+    {
+      "type": "woord",
+      "id": "aardig",
+      "cardId": "-ig",
+      "stem": "ig_aardig",
+      "label": "aardig",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 585461,
+      "endSampleExclusive": 647893,
+      "activeRange": [
+        13.455782,
+        14.461429
+      ],
+      "duration": 1.4156916099773242,
+      "wav": {
+        "path": "wav/ig_aardig.wav",
+        "bytes": 124908,
+        "sha256": "230d533de034234e9c58326eb6626b5ac28f3d92dd09f0c988f3859b5a2d563d"
+      },
+      "opus": {
+        "path": "opus/ig_aardig.opus",
+        "bytes": 8403,
+        "sha256": "d7fdbd2a92ee6e03d70dd51fbbe27f25794071b4272a418dfa49bd255913564e",
+        "decodedPeakDb": -4.412268011458409,
+        "decodedSeconds": 1.4157142857142857
+      },
+      "mp3": {
+        "path": "mp3/ig_aardig.mp3",
+        "bytes": 18030,
+        "sha256": "f54250ce4d1184925450aa48df7acef9b5efe9493ea14d0b140c555c5e470c6f",
+        "decodedPeakDb": -5.016871517663947,
+        "decodedSeconds": 1.4156916099773242
+      }
+    },
+    {
+      "type": "klank",
+      "id": "-lijk",
+      "cardId": "-lijk",
+      "stem": "lijk_klank",
+      "label": "-lijk",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 703562,
+      "endSampleExclusive": 745690,
+      "activeRange": [
+        16.133787,
+        16.67907
+      ],
+      "duration": 0.9552834467120181,
+      "wav": {
+        "path": "wav/lijk_klank.wav",
+        "bytes": 84300,
+        "sha256": "15165b751aa468e70aa3303cc128373a7109543afdb33cae85e147e036799649"
+      },
+      "opus": {
+        "path": "opus/lijk_klank.opus",
+        "bytes": 5695,
+        "sha256": "caeb6895ad345e9e7ba8a92c0f8b02893135d4671900ca5840d1d633b7cd7bd3",
+        "decodedPeakDb": -5.667767599423708,
+        "decodedSeconds": 0.9553061224489796
+      },
+      "mp3": {
+        "path": "mp3/lijk_klank.mp3",
+        "bytes": 12387,
+        "sha256": "fc6eb7461e2530ecf75d13229cb8a40fd822cb7e124c36655437523efd243431",
+        "decodedPeakDb": -6.013279340922146,
+        "decodedSeconds": 0.9552834467120181
+      }
+    },
+    {
+      "type": "woord",
+      "id": "moeilijk",
+      "cardId": "-lijk",
+      "stem": "lijk_moeilijk",
+      "label": "moeilijk",
+      "source": "klankstudio-je hoort een e.wav",
+      "startSample": 773145,
+      "endSampleExclusive": 835317,
+      "activeRange": [
+        17.711655,
+        18.711406
+      ],
+      "duration": 1.409795918367347,
+      "wav": {
+        "path": "wav/lijk_moeilijk.wav",
+        "bytes": 124388,
+        "sha256": "bfc6c6b9c228a00dcb1d0d141c6cd6f0c8346bc6e010c0b8ba2aa49e3d480b37"
+      },
+      "opus": {
+        "path": "opus/lijk_moeilijk.opus",
+        "bytes": 8489,
+        "sha256": "102fcd82b7318af5b2dff7950b7c5de41849304e2a56fc531dadb84165fd481e",
+        "decodedPeakDb": -9.188500946304607,
+        "decodedSeconds": 1.4098185941043084
+      },
+      "mp3": {
+        "path": "mp3/lijk_moeilijk.mp3",
+        "bytes": 17719,
+        "sha256": "eebba793a122171cf4bd0162a3106c4bc015dc075ac55136af27ae0eeb1b4df6",
+        "decodedPeakDb": -9.5500409778268,
+        "decodedSeconds": 1.409795918367347
+      }
+    },
+    {
+      "type": "klank",
+      "id": "b",
+      "cardId": "b",
+      "stem": "b_klank",
+      "label": "b",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 124178,
+      "endSampleExclusive": 155597,
+      "activeRange": [
+        2.99585,
+        3.298254
+      ],
+      "duration": 0.7124489795918367,
+      "wav": {
+        "path": "wav/b_klank.wav",
+        "bytes": 62882,
+        "sha256": "aa49a6db89a1ccb67df5581af544cc56c7b4c4d8a9431adce804a62c21953b05"
+      },
+      "opus": {
+        "path": "opus/b_klank.opus",
+        "bytes": 4288,
+        "sha256": "b0b3fd22fc663ca122abfe5e3cd7b35b62c0f032deb1222453e690f7213a654f",
+        "decodedPeakDb": -3.5531791331582663,
+        "decodedSeconds": 0.7124716553287982
+      },
+      "mp3": {
+        "path": "mp3/b_klank.mp3",
+        "bytes": 9562,
+        "sha256": "f5b4241a3785ebe77becfa803e106dce4ecd6a5bb689f9702375c281032c1bd8",
+        "decodedPeakDb": -3.822355088798023,
+        "decodedSeconds": 0.7124489795918367
+      }
+    },
+    {
+      "type": "woord",
+      "id": "bal",
+      "cardId": "b",
+      "stem": "b_bal",
+      "label": "bal",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 189095,
+      "endSampleExclusive": 220099,
+      "activeRange": [
+        4.467891,
+        4.760907
+      ],
+      "duration": 0.7030385487528344,
+      "wav": {
+        "path": "wav/b_bal.wav",
+        "bytes": 62052,
+        "sha256": "129fdabb9240066bb916d62f6da42f98acf6a48dc86da0b329a7f0e63fb2fb60"
+      },
+      "opus": {
+        "path": "opus/b_bal.opus",
+        "bytes": 4341,
+        "sha256": "7140878eb86d2c6ae4f66c89c6956d465202df5d3804842795a8c538ab2199f1",
+        "decodedPeakDb": -12.855455356535906,
+        "decodedSeconds": 0.7030612244897959
+      },
+      "mp3": {
+        "path": "mp3/b_bal.mp3",
+        "bytes": 9250,
+        "sha256": "c02fca9cdeda742d8c31d152701ea460d71797c42574577913bfcfa7e4fd333d",
+        "decodedPeakDb": -12.881502155319568,
+        "decodedSeconds": 0.7030385487528344
+      }
+    },
+    {
+      "type": "klank",
+      "id": "d",
+      "cardId": "d",
+      "stem": "d_klank",
+      "label": "d",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 276507,
+      "endSampleExclusive": 305048,
+      "activeRange": [
+        6.45,
+        6.687188
+      ],
+      "duration": 0.6471882086167801,
+      "wav": {
+        "path": "wav/d_klank.wav",
+        "bytes": 57126,
+        "sha256": "0219d04163dd8d79f73df8dd2d4096ec9a4d1e6a019ffd9a3853d99848ab4ddb"
+      },
+      "opus": {
+        "path": "opus/d_klank.opus",
+        "bytes": 3835,
+        "sha256": "9a519349486ed6a942b2677765e2050be4ad515c4c4a10e00b06f5c6ac7bef60",
+        "decodedPeakDb": -5.877694457753187,
+        "decodedSeconds": 0.6472108843537415
+      },
+      "mp3": {
+        "path": "mp3/d_klank.mp3",
+        "bytes": 8621,
+        "sha256": "cb78ea03c7eb34f31a77f3d68d72438d32c5b3b0c86eea10f76be6dfcb92098a",
+        "decodedPeakDb": -5.885191108746897,
+        "decodedSeconds": 0.6471882086167801
+      }
+    },
+    {
+      "type": "woord",
+      "id": "dak",
+      "cardId": "d",
+      "stem": "d_dak",
+      "label": "dak",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 333653,
+      "endSampleExclusive": 367303,
+      "activeRange": [
+        7.745828,
+        8.098866
+      ],
+      "duration": 0.7630385487528345,
+      "wav": {
+        "path": "wav/d_dak.wav",
+        "bytes": 67344,
+        "sha256": "14d2538a713ff4b77c3daadbdc31c515129a770e67efe657a25de6aef023e632"
+      },
+      "opus": {
+        "path": "opus/d_dak.opus",
+        "bytes": 4260,
+        "sha256": "99b07f36e2e2c883c7f1705714917222b16e86257d5c0b71def642b6baf512fe",
+        "decodedPeakDb": -16.759672094108108,
+        "decodedSeconds": 0.763061224489796
+      },
+      "mp3": {
+        "path": "mp3/d_dak.mp3",
+        "bytes": 10191,
+        "sha256": "99405a2a158629a1d0788c25043933a348db4399b74022916558f10aa585159c",
+        "decodedPeakDb": -17.064788379379344,
+        "decodedSeconds": 0.7630385487528345
+      }
+    },
+    {
+      "type": "klank",
+      "id": "f",
+      "cardId": "f",
+      "stem": "f_klank",
+      "label": "f",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 412866,
+      "endSampleExclusive": 454978,
+      "activeRange": [
+        9.542063,
+        10.086939
+      ],
+      "duration": 0.954920634920635,
+      "wav": {
+        "path": "wav/f_klank.wav",
+        "bytes": 84268,
+        "sha256": "db96e24d7b54074a2f752c8c7c03b14bda668f2da3bd749c82b9f828257f1c05"
+      },
+      "opus": {
+        "path": "opus/f_klank.opus",
+        "bytes": 5580,
+        "sha256": "257ec8ddc1df5e06c5a13345f71ef4c46e147021aee9fc93cbbe09082c0a5e04",
+        "decodedPeakDb": -7.991940275297549,
+        "decodedSeconds": 0.9549433106575964
+      },
+      "mp3": {
+        "path": "mp3/f_klank.mp3",
+        "bytes": 12383,
+        "sha256": "5ad2af80b4a7fc7abc15ffd2be3a743b5b525da21213659e5ffbeb5fe27b5f59",
+        "decodedPeakDb": -7.821175810535007,
+        "decodedSeconds": 0.954920634920635
+      }
+    },
+    {
+      "type": "woord",
+      "id": "fiets",
+      "cardId": "f",
+      "stem": "f_fiets",
+      "label": "fiets",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 472686,
+      "endSampleExclusive": 512530,
+      "activeRange": [
+        10.898526,
+        11.391973
+      ],
+      "duration": 0.9034920634920635,
+      "wav": {
+        "path": "wav/f_fiets.wav",
+        "bytes": 79732,
+        "sha256": "a744f6ad307fa179e7834292964026ab171e50b5da0b6ac342025656a3e06f9c"
+      },
+      "opus": {
+        "path": "opus/f_fiets.opus",
+        "bytes": 5520,
+        "sha256": "2300ac624509c0b1cbc88d2a69a05eca4415016a6e831bb1e0841091cafc6eac",
+        "decodedPeakDb": -16.667735594385547,
+        "decodedSeconds": 0.9035147392290249
+      },
+      "mp3": {
+        "path": "mp3/f_fiets.mp3",
+        "bytes": 11760,
+        "sha256": "a57700323561b93c68bde863f890a5740410c096ba99965ffeb46158ba22bdac",
+        "decodedPeakDb": -16.872609166361013,
+        "decodedSeconds": 0.9034920634920635
+      }
+    },
+    {
+      "type": "klank",
+      "id": "g",
+      "cardId": "g",
+      "stem": "g_klank",
+      "label": "g",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 547414,
+      "endSampleExclusive": 588209,
+      "activeRange": [
+        12.593016,
+        13.10805
+      ],
+      "duration": 0.9250566893424036,
+      "wav": {
+        "path": "wav/g_klank.wav",
+        "bytes": 81634,
+        "sha256": "c402585de895a328402f797b2bb127569b5da90715ea69f6616e779c08048e4d"
+      },
+      "opus": {
+        "path": "opus/g_klank.opus",
+        "bytes": 5823,
+        "sha256": "bbf4c4d439391a74763d43ed87fdf517e1fa987b9e5f8a9f4ce5b15ed55843e0",
+        "decodedPeakDb": -16.238386246297306,
+        "decodedSeconds": 0.9250793650793651
+      },
+      "mp3": {
+        "path": "mp3/g_klank.mp3",
+        "bytes": 12069,
+        "sha256": "2ede1874149cd5fdcb74847f85d098a67d1503892da043997e50ac8366b55581",
+        "decodedPeakDb": -15.431575775673023,
+        "decodedSeconds": 0.9250566893424036
+      }
+    },
+    {
+      "type": "woord",
+      "id": "goed",
+      "cardId": "g",
+      "stem": "g_goed",
+      "label": "goed",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 612739,
+      "endSampleExclusive": 651156,
+      "activeRange": [
+        14.074331,
+        14.53542
+      ],
+      "duration": 0.8711337868480725,
+      "wav": {
+        "path": "wav/g_goed.wav",
+        "bytes": 76878,
+        "sha256": "14a962be2a8cd08742285b766a1573d2c488b22ca03733a74742f2b2e119abc5"
+      },
+      "opus": {
+        "path": "opus/g_goed.opus",
+        "bytes": 5200,
+        "sha256": "362e67dc60a60c3d8b6980fa34c31329c7501c8163868e221b1aae41c6757fe5",
+        "decodedPeakDb": -17.875628608063565,
+        "decodedSeconds": 0.871156462585034
+      },
+      "mp3": {
+        "path": "mp3/g_goed.mp3",
+        "bytes": 11445,
+        "sha256": "a8c6922fc192263c9f696eb299bc82553a7dfba4a27216f660ad77506a78b1c1",
+        "decodedPeakDb": -18.09974799307627,
+        "decodedSeconds": 0.8711337868480725
+      }
+    },
+    {
+      "type": "klank",
+      "id": "h",
+      "cardId": "h",
+      "stem": "h_klank",
+      "label": "h",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 690724,
+      "endSampleExclusive": 721104,
+      "activeRange": [
+        15.842698,
+        16.121542
+      ],
+      "duration": 0.6888888888888889,
+      "wav": {
+        "path": "wav/h_klank.wav",
+        "bytes": 60804,
+        "sha256": "a71d65a1275d71c82979517dcdd6dab2699cdb39501dde0c3a8513d8d49fb46e"
+      },
+      "opus": {
+        "path": "opus/h_klank.opus",
+        "bytes": 4097,
+        "sha256": "aa33809c1236241364778bc552f9e5aa4a44079490aeef47e133241132ae4173",
+        "decodedPeakDb": -16.901618853374593,
+        "decodedSeconds": 0.6889115646258503
+      },
+      "mp3": {
+        "path": "mp3/h_klank.mp3",
+        "bytes": 9248,
+        "sha256": "13971665fe2d2627d334bf6913817ed37a956a5a3e8423d9940a8ba39c845454",
+        "decodedPeakDb": -16.885833938018692,
+        "decodedSeconds": 0.6888888888888889
+      }
+    },
+    {
+      "type": "woord",
+      "id": "hoorn",
+      "cardId": "h",
+      "stem": "h_hoorn",
+      "label": "hoorn",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 749220,
+      "endSampleExclusive": 792748,
+      "activeRange": [
+        17.169138,
+        17.746145
+      ],
+      "duration": 0.9870294784580499,
+      "wav": {
+        "path": "wav/h_hoorn.wav",
+        "bytes": 87100,
+        "sha256": "e5baadd1ef76e44d4e61ca5b2c46fe0a7f3df1ed6014e82dbc686a172f9f72da"
+      },
+      "opus": {
+        "path": "opus/h_hoorn.opus",
+        "bytes": 6012,
+        "sha256": "f5038748c63759c8a9e32dcb0522b1ef2892beea5089a032cccba6103e97c7a2",
+        "decodedPeakDb": -11.710169278316942,
+        "decodedSeconds": 0.9870521541950114
+      },
+      "mp3": {
+        "path": "mp3/h_hoorn.mp3",
+        "bytes": 12700,
+        "sha256": "e08d244abe80a5a5c1873bf7d9e937d6db1325f3d76a29e6766125cdeae5087c",
+        "decodedPeakDb": -12.066123355893687,
+        "decodedSeconds": 0.9870294784580499
+      }
+    },
+    {
+      "type": "klank",
+      "id": "j",
+      "cardId": "j",
+      "stem": "j_klank",
+      "label": "j",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 828116,
+      "endSampleExclusive": 856526,
+      "activeRange": [
+        18.958141,
+        19.192358
+      ],
+      "duration": 0.64421768707483,
+      "wav": {
+        "path": "wav/j_klank.wav",
+        "bytes": 56864,
+        "sha256": "f63dfc4a479cee1c443560f4f76e2413e7d89907f16a0a6f0499dc0fa5883efc"
+      },
+      "opus": {
+        "path": "opus/j_klank.opus",
+        "bytes": 4040,
+        "sha256": "1be6966e0392926579a7bc8765b88a10cc329f9f93bc4748d57ffa4cf1441515",
+        "decodedPeakDb": -18.347263082131626,
+        "decodedSeconds": 0.6442403628117914
+      },
+      "mp3": {
+        "path": "mp3/j_klank.mp3",
+        "bytes": 8621,
+        "sha256": "946d4a87f074ff6de9fb5b310cdd649910dcf5cb632fb0cdf0a51bbc0e21bcdf",
+        "decodedPeakDb": -18.76419295925626,
+        "decodedSeconds": 0.64421768707483
+      }
+    },
+    {
+      "type": "woord",
+      "id": "jas",
+      "cardId": "j",
+      "stem": "j_jas",
+      "label": "jas",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 884431,
+      "endSampleExclusive": 926078,
+      "activeRange": [
+        20.235125,
+        20.769501
+      ],
+      "duration": 0.9443764172335601,
+      "wav": {
+        "path": "wav/j_jas.wav",
+        "bytes": 83338,
+        "sha256": "323ba948bd951b1e54d75b736f598763842f3c04e4fc676001630fd1305112b0"
+      },
+      "opus": {
+        "path": "opus/j_jas.opus",
+        "bytes": 5810,
+        "sha256": "77ccfdbf705a8a8e863a8986778e65d28dee17fc2bfcd84f64e2fe9b16ea50bb",
+        "decodedPeakDb": -9.58252583722784,
+        "decodedSeconds": 0.9443990929705215
+      },
+      "mp3": {
+        "path": "mp3/j_jas.mp3",
+        "bytes": 12385,
+        "sha256": "576bb6c7688f022cc7eb410dc5b3a9a529717a4f5d1d77020df3971926f614b5",
+        "decodedPeakDb": -9.727876024314487,
+        "decodedSeconds": 0.9443764172335601
+      }
+    },
+    {
+      "type": "klank",
+      "id": "k",
+      "cardId": "k",
+      "stem": "k_klank",
+      "label": "k",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 958461,
+      "endSampleExclusive": 981486,
+      "activeRange": [
+        21.913832,
+        22.025896
+      ],
+      "duration": 0.5221088435374149,
+      "wav": {
+        "path": "wav/k_klank.wav",
+        "bytes": 46094,
+        "sha256": "5c044d697f56f12e95559278e4cf0a070cf9bbd3074df2721f13adc1a5232824"
+      },
+      "opus": {
+        "path": "opus/k_klank.opus",
+        "bytes": 2992,
+        "sha256": "dc25de990480ef17907538c01f7f0bed8a37a9bd23f73c2b69b103d2211cb6d3",
+        "decodedPeakDb": -14.522158446300146,
+        "decodedSeconds": 0.5221315192743764
+      },
+      "mp3": {
+        "path": "mp3/k_klank.mp3",
+        "bytes": 7054,
+        "sha256": "2337d30c579ed6ef106260a8154438c9d8944cfa51a7bf206d9e6f133ac6ca57",
+        "decodedPeakDb": -14.647498071974017,
+        "decodedSeconds": 0.5221088435374149
+      }
+    },
+    {
+      "type": "woord",
+      "id": "koel",
+      "cardId": "k",
+      "stem": "k_koel",
+      "label": "koel",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1013752,
+      "endSampleExclusive": 1047106,
+      "activeRange": [
+        23.167574,
+        23.5139
+      ],
+      "duration": 0.7563265306122449,
+      "wav": {
+        "path": "wav/k_koel.wav",
+        "bytes": 66752,
+        "sha256": "2df45e42582c14b45cfb0701e880163e71caa30343f56ba4978b4e36c894cc0d"
+      },
+      "opus": {
+        "path": "opus/k_koel.opus",
+        "bytes": 4551,
+        "sha256": "f16a9e87e7427e7f5548ca648db264547a07f46ffe7401b2eed9ff7b4cf50433",
+        "decodedPeakDb": -13.158344156657193,
+        "decodedSeconds": 0.7563492063492063
+      },
+      "mp3": {
+        "path": "mp3/k_koel.mp3",
+        "bytes": 9878,
+        "sha256": "47b6f87155b9ee211c5636b6a9c64c73b38b142402aee7db570759b8f012ceba",
+        "decodedPeakDb": -13.465239370019667,
+        "decodedSeconds": 0.7563265306122449
+      }
+    },
+    {
+      "type": "klank",
+      "id": "l",
+      "cardId": "l",
+      "stem": "l_klank",
+      "label": "l",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1096499,
+      "endSampleExclusive": 1129940,
+      "activeRange": [
+        25.043923,
+        25.392222
+      ],
+      "duration": 0.7582993197278911,
+      "wav": {
+        "path": "wav/l_klank.wav",
+        "bytes": 66926,
+        "sha256": "3471c4a4fd30e2c907c1a27e33598edb87cf89a491edeb73308ccbf4dc9ddffb"
+      },
+      "opus": {
+        "path": "opus/l_klank.opus",
+        "bytes": 4666,
+        "sha256": "1ab10dc4e6d5b4737412e95c5145c69c08137bf7eef73d49117037c07d5d27bf",
+        "decodedPeakDb": -16.960778792571645,
+        "decodedSeconds": 0.7582993197278911
+      },
+      "mp3": {
+        "path": "mp3/l_klank.mp3",
+        "bytes": 10189,
+        "sha256": "99a70bf75429880f139c21b987239251aad5dcfc9b6640571d45087301831867",
+        "decodedPeakDb": -17.274592350081377,
+        "decodedSeconds": 0.7586167800453515
+      }
+    },
+    {
+      "type": "woord",
+      "id": "laat",
+      "cardId": "l",
+      "stem": "l_laat",
+      "label": "laat",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1154060,
+      "endSampleExclusive": 1204660,
+      "activeRange": [
+        26.349161,
+        27.086553
+      ],
+      "duration": 1.1473922902494331,
+      "wav": {
+        "path": "wav/l_laat.wav",
+        "bytes": 101244,
+        "sha256": "ca8db6c3c0c06ce3c8b67b62674273d82222541aeb1257de3390eaca4787e52f"
+      },
+      "opus": {
+        "path": "opus/l_laat.opus",
+        "bytes": 6876,
+        "sha256": "26806aa926e15570d66ed2e8760f0eed4990eb7ec12246a7a59d2dae68803223",
+        "decodedPeakDb": -8.494715159597103,
+        "decodedSeconds": 1.1474149659863946
+      },
+      "mp3": {
+        "path": "mp3/l_laat.mp3",
+        "bytes": 14580,
+        "sha256": "73e783ec461ec2937e91b68cc1c46a74e778cf188473ece73dab55e9e7170512",
+        "decodedPeakDb": -8.397851606392937,
+        "decodedSeconds": 1.1473922902494331
+      }
+    },
+    {
+      "type": "klank",
+      "id": "m",
+      "cardId": "m",
+      "stem": "m_klank",
+      "label": "m",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1225401,
+      "endSampleExclusive": 1277369,
+      "activeRange": [
+        27.966871,
+        28.735261
+      ],
+      "duration": 1.1784126984126984,
+      "wav": {
+        "path": "wav/m_klank.wav",
+        "bytes": 103980,
+        "sha256": "2aef5746e8a630f05ac4fbe00ba9b7ff854c0fb250554a219bd35d6ec221764b"
+      },
+      "opus": {
+        "path": "opus/m_klank.opus",
+        "bytes": 6846,
+        "sha256": "e77bfd1551345afa16019e4e1b23e446bc5bc7adb0ba327130c777dd76052db1",
+        "decodedPeakDb": -13.409024805283414,
+        "decodedSeconds": 1.1784353741496598
+      },
+      "mp3": {
+        "path": "mp3/m_klank.mp3",
+        "bytes": 15204,
+        "sha256": "3698eb56ca2df4d969d52b36175b9d4aab2a8fddab661575e1345e2962b05448",
+        "decodedPeakDb": -13.800821856029996,
+        "decodedSeconds": 1.1784126984126984
+      }
+    },
+    {
+      "type": "woord",
+      "id": "man",
+      "cardId": "m",
+      "stem": "m_man",
+      "label": "man",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1287567,
+      "endSampleExclusive": 1335439,
+      "activeRange": [
+        29.376531,
+        30.052041
+      ],
+      "duration": 1.0855328798185941,
+      "wav": {
+        "path": "wav/m_man.wav",
+        "bytes": 95788,
+        "sha256": "191488c8d3b88a465a624a5ce49420f28d8fbd986cc5fc1ab2a070f8db8d534b"
+      },
+      "opus": {
+        "path": "opus/m_man.opus",
+        "bytes": 6384,
+        "sha256": "738834697dde9ddc3fed2fe82f727ac99b89ead4a5093823f3b07d0faad02657",
+        "decodedPeakDb": -10.8675928331763,
+        "decodedSeconds": 1.0855555555555556
+      },
+      "mp3": {
+        "path": "mp3/m_man.mp3",
+        "bytes": 13952,
+        "sha256": "2f0b22c918227cc6e9ef7dcf1b8a7918e4f342908df78ba111555973e0e62d1d",
+        "decodedPeakDb": -11.148954064008947,
+        "decodedSeconds": 1.0855328798185941
+      }
+    },
+    {
+      "type": "klank",
+      "id": "n",
+      "cardId": "n",
+      "stem": "n_klank",
+      "label": "n",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1360524,
+      "endSampleExclusive": 1413262,
+      "activeRange": [
+        31.030907,
+        31.816757
+      ],
+      "duration": 1.195873015873016,
+      "wav": {
+        "path": "wav/n_klank.wav",
+        "bytes": 105520,
+        "sha256": "4090e0f43e857645cb15e4314b9feba09848a542e6884362b99f3b6d89e7d8db"
+      },
+      "opus": {
+        "path": "opus/n_klank.opus",
+        "bytes": 7013,
+        "sha256": "dc341bd9359063e82495b8d050434ea3b7ef73fe8cbef1c835e0300f99713cfa",
+        "decodedPeakDb": -13.178282441428287,
+        "decodedSeconds": 1.1958956916099772
+      },
+      "mp3": {
+        "path": "mp3/n_klank.mp3",
+        "bytes": 15204,
+        "sha256": "f34c1905062d78a01736d488c7ebe83be6c31be557f5faf25422b2cf4f185283",
+        "decodedPeakDb": -13.547542322433452,
+        "decodedSeconds": 1.195873015873016
+      }
+    },
+    {
+      "type": "woord",
+      "id": "neus",
+      "cardId": "n",
+      "stem": "n_neus",
+      "label": "neus",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1421193,
+      "endSampleExclusive": 1473109,
+      "activeRange": [
+        32.406621,
+        33.17381
+      ],
+      "duration": 1.177233560090703,
+      "wav": {
+        "path": "wav/n_neus.wav",
+        "bytes": 103876,
+        "sha256": "1d7a134d325122adf75d593f8c53bd143606d377a81cd548825df946b4d442c5"
+      },
+      "opus": {
+        "path": "opus/n_neus.opus",
+        "bytes": 7253,
+        "sha256": "9b30a50e00a5a61abb3253a08aec777c5bd6043d5c001b0af399beaaf43e3a2b",
+        "decodedPeakDb": -11.731746124498262,
+        "decodedSeconds": 1.1772562358276644
+      },
+      "mp3": {
+        "path": "mp3/n_neus.mp3",
+        "bytes": 15207,
+        "sha256": "f4c49490b8d419819a86435178fba1c29a2b6bd5452885cccf0443b3a2bf33c4",
+        "decodedPeakDb": -11.892649406419995,
+        "decodedSeconds": 1.177233560090703
+      }
+    },
+    {
+      "type": "klank",
+      "id": "p",
+      "cardId": "p",
+      "stem": "p_klank",
+      "label": "p",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1499869,
+      "endSampleExclusive": 1529625,
+      "activeRange": [
+        34.190635,
+        34.455374
+      ],
+      "duration": 0.6747392290249433,
+      "wav": {
+        "path": "wav/p_klank.wav",
+        "bytes": 59556,
+        "sha256": "af6838a89100155eb0214a62bba0d4d722d4b6ada41043bb81f6b18980164819"
+      },
+      "opus": {
+        "path": "opus/p_klank.opus",
+        "bytes": 3669,
+        "sha256": "be17a6ad0dadf863949cbcdb41b8cde8130e112d5772a414fb72f9cb0b624c33",
+        "decodedPeakDb": -8.378266084654705,
+        "decodedSeconds": 0.6747619047619048
+      },
+      "mp3": {
+        "path": "mp3/p_klank.mp3",
+        "bytes": 8935,
+        "sha256": "f78623c977f8f8dd1b275f5df30ffec0428a833695c2abb2478fc48bd6e70ef6",
+        "decodedPeakDb": -8.72456092784293,
+        "decodedSeconds": 0.6747392290249433
+      }
+    },
+    {
+      "type": "woord",
+      "id": "pen",
+      "cardId": "p",
+      "stem": "p_pen",
+      "label": "pen",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1556923,
+      "endSampleExclusive": 1590938,
+      "activeRange": [
+        35.484399,
+        35.845669
+      ],
+      "duration": 0.7713151927437641,
+      "wav": {
+        "path": "wav/p_pen.wav",
+        "bytes": 68074,
+        "sha256": "e12c445bd87954c1bdb7243ac4e3d26d67df014b95fa6c93cce8fd425209504d"
+      },
+      "opus": {
+        "path": "opus/p_pen.opus",
+        "bytes": 4534,
+        "sha256": "414e96fb2c4bc43cccf0ca6bb986a12a876cec87d42cf0c9d54235a62d11422d",
+        "decodedPeakDb": -12.015192340224718,
+        "decodedSeconds": 0.7713378684807256
+      },
+      "mp3": {
+        "path": "mp3/p_pen.mp3",
+        "bytes": 10191,
+        "sha256": "bb457e39e5198e981d6cb930e2e71f39332668cff2e410074a10623480b7f633",
+        "decodedPeakDb": -12.240888819886873,
+        "decodedSeconds": 0.7713151927437641
+      }
+    },
+    {
+      "type": "klank",
+      "id": "r",
+      "cardId": "r",
+      "stem": "r_klank",
+      "label": "r",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1614947,
+      "endSampleExclusive": 1655646,
+      "activeRange": [
+        36.800136,
+        37.312993
+      ],
+      "duration": 0.9228798185941043,
+      "wav": {
+        "path": "wav/r_klank.wav",
+        "bytes": 81442,
+        "sha256": "a6321cd5a91c42a6f9c9fc0fe0cab707cd42d7f9dc4adc0e5600b70d0e2f5128"
+      },
+      "opus": {
+        "path": "opus/r_klank.opus",
+        "bytes": 5563,
+        "sha256": "16cede2a515ccf754d4a86196e9301f48e0c0d4e2cb6247ddb962e3e283ddbb7",
+        "decodedPeakDb": -16.639237815793322,
+        "decodedSeconds": 0.9229024943310657
+      },
+      "mp3": {
+        "path": "mp3/r_klank.mp3",
+        "bytes": 12069,
+        "sha256": "21b942f0c66db9a4ea5a311089d6be60c97601a99de8d08f4695cd0fdd4634dd",
+        "decodedPeakDb": -17.031794847811195,
+        "decodedSeconds": 0.9228798185941043
+      }
+    },
+    {
+      "type": "woord",
+      "id": "rat",
+      "cardId": "r",
+      "stem": "r_rat",
+      "label": "rat",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1669667,
+      "endSampleExclusive": 1713580,
+      "activeRange": [
+        38.040952,
+        38.626689
+      ],
+      "duration": 0.9957596371882086,
+      "wav": {
+        "path": "wav/r_rat.wav",
+        "bytes": 87870,
+        "sha256": "bc1a94563fe5f0a67c496be75e19fabbc156d67401d4b6a0167143331a009618"
+      },
+      "opus": {
+        "path": "opus/r_rat.opus",
+        "bytes": 5990,
+        "sha256": "74e702893a42c786cee5ed7767056aee3a3ac60a877b2300b3e4f57302406304",
+        "decodedPeakDb": -9.23875367920232,
+        "decodedSeconds": 0.99578231292517
+      },
+      "mp3": {
+        "path": "mp3/r_rat.mp3",
+        "bytes": 13012,
+        "sha256": "b055528a297e4243fcd6ac62eab6983571108d262ea3453d1d7674e00cf24ca4",
+        "decodedPeakDb": -9.614214109033211,
+        "decodedSeconds": 0.9957596371882086
+      }
+    },
+    {
+      "type": "klank",
+      "id": "s",
+      "cardId": "s",
+      "stem": "s_klank",
+      "label": "s",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1736865,
+      "endSampleExclusive": 1782925,
+      "activeRange": [
+        39.564694,
+        40.199138
+      ],
+      "duration": 1.0444444444444445,
+      "wav": {
+        "path": "wav/s_klank.wav",
+        "bytes": 92164,
+        "sha256": "afd3766dea2989b24fb1e6c69dae35e399c3e0b96254383b051edc46ed8b5431"
+      },
+      "opus": {
+        "path": "opus/s_klank.opus",
+        "bytes": 6150,
+        "sha256": "0fd4653ea27ba5a430f4b2b2882316b1746d0b183de705992d63a6cfc18b466c",
+        "decodedPeakDb": -16.22112664160804,
+        "decodedSeconds": 1.0444444444444445
+      },
+      "mp3": {
+        "path": "mp3/s_klank.mp3",
+        "bytes": 13323,
+        "sha256": "4b7c0c967491ec89976dcc878f0813477611edcf7b7ffac7831cd14c00361980",
+        "decodedPeakDb": -15.989992180481023,
+        "decodedSeconds": 1.0444444444444445
+      }
+    },
+    {
+      "type": "woord",
+      "id": "sap",
+      "cardId": "s",
+      "stem": "s_sap",
+      "label": "sap",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1789755,
+      "endSampleExclusive": 1834960,
+      "activeRange": [
+        40.764036,
+        41.37907
+      ],
+      "duration": 1.0250566893424036,
+      "wav": {
+        "path": "wav/s_sap.wav",
+        "bytes": 90454,
+        "sha256": "11ef1ec1d11847cb82e10b78d242dcaaf6854284e4c4aff932c3375a4f77ca0a"
+      },
+      "opus": {
+        "path": "opus/s_sap.opus",
+        "bytes": 5980,
+        "sha256": "9267ae61b4885e134c11ef956feb3f2b2f20f4f56b8f6474ff748b196b1dc274",
+        "decodedPeakDb": -9.908312878904646,
+        "decodedSeconds": 1.025079365079365
+      },
+      "mp3": {
+        "path": "mp3/s_sap.mp3",
+        "bytes": 13325,
+        "sha256": "351e4dbc90a5db647dd66e49742331a273822453e32ad96db374e9a1c9a92c93",
+        "decodedPeakDb": -10.139317399919905,
+        "decodedSeconds": 1.0250566893424036
+      }
+    },
+    {
+      "type": "klank",
+      "id": "t",
+      "cardId": "t",
+      "stem": "t_klank",
+      "label": "t",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1853145,
+      "endSampleExclusive": 1879220,
+      "activeRange": [
+        42.201429,
+        42.382698
+      ],
+      "duration": 0.5912698412698413,
+      "wav": {
+        "path": "wav/t_klank.wav",
+        "bytes": 52194,
+        "sha256": "95ddb7904acfb93546c8e2cf8634e2d2d9cd959710e9d208f2c132e5f80a84e7"
+      },
+      "opus": {
+        "path": "opus/t_klank.opus",
+        "bytes": 3291,
+        "sha256": "cf41a4a97d292f0fac588b2f6641ba8e27f4ce1ec6c469d444ab64341b8d63fe",
+        "decodedPeakDb": -13.694244497828514,
+        "decodedSeconds": 0.5912925170068027
+      },
+      "mp3": {
+        "path": "mp3/t_klank.mp3",
+        "bytes": 7994,
+        "sha256": "977264bb022fbfd07b397a32708fa7ce0c8f1edf99535916d60d544c80f02dc6",
+        "decodedPeakDb": -13.691691032132303,
+        "decodedSeconds": 0.5912698412698413
+      }
+    },
+    {
+      "type": "woord",
+      "id": "teen",
+      "cardId": "t",
+      "stem": "t_teen",
+      "label": "teen",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1908840,
+      "endSampleExclusive": 1948174,
+      "activeRange": [
+        43.464376,
+        43.946281
+      ],
+      "duration": 0.8919274376417233,
+      "wav": {
+        "path": "wav/t_teen.wav",
+        "bytes": 78712,
+        "sha256": "7e5b43211351610ba79625955c1113cc66c8a8557b5a1e32242cfbe54e61673a"
+      },
+      "opus": {
+        "path": "opus/t_teen.opus",
+        "bytes": 5188,
+        "sha256": "38a8fa45b3577d1b34c98dbe503ea00167a2b23f66f88c6dd4f298af8e6dd736",
+        "decodedPeakDb": -9.803594417679536,
+        "decodedSeconds": 0.8919501133786848
+      },
+      "mp3": {
+        "path": "mp3/t_teen.mp3",
+        "bytes": 11759,
+        "sha256": "75765d55c26c97582d241aafbbedc403d85df5fe430432f77020ffad36412cff",
+        "decodedPeakDb": -9.414211290670448,
+        "decodedSeconds": 0.8919274376417233
+      }
+    },
+    {
+      "type": "klank",
+      "id": "v",
+      "cardId": "v",
+      "stem": "v_klank",
+      "label": "v",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 1966821,
+      "endSampleExclusive": 1996233,
+      "activeRange": [
+        44.779138,
+        45.036032
+      ],
+      "duration": 0.6669387755102041,
+      "wav": {
+        "path": "wav/v_klank.wav",
+        "bytes": 58868,
+        "sha256": "26817e1dfba87eef811718e3e7496efd54f9ece3e8308d87a0d83eee1f6b3662"
+      },
+      "opus": {
+        "path": "opus/v_klank.opus",
+        "bytes": 3966,
+        "sha256": "d2cd7af4f7571c17504cc43a3c681254296199e175e2b81a83f572e48f34a378",
+        "decodedPeakDb": -25.453449853347845,
+        "decodedSeconds": 0.6669614512471655
+      },
+      "mp3": {
+        "path": "mp3/v_klank.mp3",
+        "bytes": 8935,
+        "sha256": "35c44e843203eda7a69e790e87259ee206e32f0e51908e9fb5a8e23a8b4d664b",
+        "decodedPeakDb": -24.313934652254126,
+        "decodedSeconds": 0.6669387755102041
+      }
+    },
+    {
+      "type": "woord",
+      "id": "vol",
+      "cardId": "v",
+      "stem": "v_vol",
+      "label": "vol",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 2021428,
+      "endSampleExclusive": 2058124,
+      "activeRange": [
+        46.017392,
+        46.439478
+      ],
+      "duration": 0.832108843537415,
+      "wav": {
+        "path": "wav/v_vol.wav",
+        "bytes": 73436,
+        "sha256": "b08286379e9f26fcbec4d9fc6104cdfdc815fe973a45ff413e8270fb6ef44509"
+      },
+      "opus": {
+        "path": "opus/v_vol.opus",
+        "bytes": 5085,
+        "sha256": "d581cdd54ab856d33dc6c221923fbf42ec66f2294aa1cfa388294c1bc5ce8355",
+        "decodedPeakDb": -9.571656254644243,
+        "decodedSeconds": 0.8321315192743765
+      },
+      "mp3": {
+        "path": "mp3/v_vol.mp3",
+        "bytes": 10818,
+        "sha256": "b69b9c9334ae05bdc36b08e32a5e1e6c9665e093b5d2c868eeb07c8516238f6e",
+        "decodedPeakDb": -9.593082524241312,
+        "decodedSeconds": 0.832108843537415
+      }
+    },
+    {
+      "type": "klank",
+      "id": "w",
+      "cardId": "w",
+      "stem": "w_klank",
+      "label": "w",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 2082008,
+      "endSampleExclusive": 2114653,
+      "activeRange": [
+        47.391088,
+        47.721315
+      ],
+      "duration": 0.740249433106576,
+      "wav": {
+        "path": "wav/w_klank.wav",
+        "bytes": 65334,
+        "sha256": "b15cc8b8892f89b9eda533aed36d9012affce194cac827966b3c73d4c60b9676"
+      },
+      "opus": {
+        "path": "opus/w_klank.opus",
+        "bytes": 4430,
+        "sha256": "7c56c665949f82500294dee13a8051c27106b9f17eb0e0baeb407ccdd43e1b35",
+        "decodedPeakDb": -18.429365177199813,
+        "decodedSeconds": 0.7402721088435374
+      },
+      "mp3": {
+        "path": "mp3/w_klank.mp3",
+        "bytes": 9875,
+        "sha256": "bf057cd3e889c9e474dffa35d441918605bf6209ef3d7f33f5643c5172e75969",
+        "decodedPeakDb": -18.85768219733584,
+        "decodedSeconds": 0.740249433106576
+      }
+    },
+    {
+      "type": "woord",
+      "id": "water",
+      "cardId": "w",
+      "stem": "w_water",
+      "label": "water",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 2137328,
+      "endSampleExclusive": 2179535,
+      "activeRange": [
+        48.64551,
+        49.192562
+      ],
+      "duration": 0.9570748299319728,
+      "wav": {
+        "path": "wav/w_water.wav",
+        "bytes": 84458,
+        "sha256": "0f7955679b660c26d700c31343329fe9b726a052f2170589540d61aedf2d190d"
+      },
+      "opus": {
+        "path": "opus/w_water.opus",
+        "bytes": 5908,
+        "sha256": "1e90b4e9cb04fa2bf1bfd4277d37167c2992a447d91d415572d9fd636666f7a6",
+        "decodedPeakDb": -5.172335168637351,
+        "decodedSeconds": 0.9570975056689343
+      },
+      "mp3": {
+        "path": "mp3/w_water.mp3",
+        "bytes": 12387,
+        "sha256": "cbab38877a434e78c1a2feba5a0abd10a79467803dcd85be41d5bafef04a10c1",
+        "decodedPeakDb": -5.391819596407753,
+        "decodedSeconds": 0.9570748299319728
+      }
+    },
+    {
+      "type": "klank",
+      "id": "z",
+      "cardId": "z",
+      "stem": "z_klank",
+      "label": "z",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 2197352,
+      "endSampleExclusive": 2236556,
+      "activeRange": [
+        50.006576,
+        50.485533
+      ],
+      "duration": 0.8889795918367347,
+      "wav": {
+        "path": "wav/z_klank.wav",
+        "bytes": 78452,
+        "sha256": "4f58ca86b80d91af4a5de8917e57a9ab2bb330e4e6721a1d72c67a9bacf548ae"
+      },
+      "opus": {
+        "path": "opus/z_klank.opus",
+        "bytes": 5542,
+        "sha256": "62b29832ddf90d3018ce803ba054f919038d9c650abadb53839928b4a3f8ca85",
+        "decodedPeakDb": -21.264392824369388,
+        "decodedSeconds": 0.8890022675736962
+      },
+      "mp3": {
+        "path": "mp3/z_klank.mp3",
+        "bytes": 11756,
+        "sha256": "17485b6d27f096a21d539ba0c23ba2617975af6d17c64d5e31ab8372e27d5a0e",
+        "decodedPeakDb": -19.681092034040553,
+        "decodedSeconds": 0.8892290249433107
+      }
+    },
+    {
+      "type": "woord",
+      "id": "zand",
+      "cardId": "z",
+      "stem": "z_zand",
+      "label": "zand",
+      "source": "klankstudio-medeklinkers.wav",
+      "startSample": 2246449,
+      "endSampleExclusive": 2295358,
+      "activeRange": [
+        51.119909,
+        51.818934
+      ],
+      "duration": 1.109047619047619,
+      "wav": {
+        "path": "wav/z_zand.wav",
+        "bytes": 97862,
+        "sha256": "aecf546ecabff384afe793460ebd31cfb903b8cd3d673aedc1c10df8ccc5b2d2"
+      },
+      "opus": {
+        "path": "opus/z_zand.opus",
+        "bytes": 6662,
+        "sha256": "a6f3dd124a05128cf1a53b3af176f2e8357f935742c5c57e424da577ce9e0893",
+        "decodedPeakDb": -10.868317427100038,
+        "decodedSeconds": 1.1090702947845805
+      },
+      "mp3": {
+        "path": "mp3/z_zand.mp3",
+        "bytes": 14267,
+        "sha256": "fef4fc3210f2361808c9cf55d7aca90efb2260fb93c38e7421eb2ea487d02292",
+        "decodedPeakDb": -11.392699651387971,
+        "decodedSeconds": 1.109047619047619
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ng",
+      "cardId": "ng",
+      "stem": "ng_klank",
+      "label": "ng",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 78342,
+      "endSampleExclusive": 127766,
+      "activeRange": [
+        1.956463,
+        2.667166
+      ],
+      "duration": 1.1207256235827665,
+      "wav": {
+        "path": "wav/ng_klank.wav",
+        "bytes": 98892,
+        "sha256": "454b79b88508a9b11091e8915c8aa5bdcebb5df5051cfcda927e6147e19e562a"
+      },
+      "opus": {
+        "path": "opus/ng_klank.opus",
+        "bytes": 6598,
+        "sha256": "293dc6ad7dd3d9d54a3bfe5f56e9587936fda2a057fa3ff55a59e57fe8452419",
+        "decodedPeakDb": -12.113328419282038,
+        "decodedSeconds": 1.120748299319728
+      },
+      "mp3": {
+        "path": "mp3/ng_klank.mp3",
+        "bytes": 14265,
+        "sha256": "a1551a47d5e2d3dab38dc86ded0049ba6d91495de675da376f7bb5e07c5bb8de",
+        "decodedPeakDb": -12.486600853215657,
+        "decodedSeconds": 1.1207256235827665
+      }
+    },
+    {
+      "type": "woord",
+      "id": "ring",
+      "cardId": "ng",
+      "stem": "ng_ring",
+      "label": "ring",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 139132,
+      "endSampleExclusive": 187837,
+      "activeRange": [
+        3.334921,
+        4.02932
+      ],
+      "duration": 1.104421768707483,
+      "wav": {
+        "path": "wav/ng_ring.wav",
+        "bytes": 97454,
+        "sha256": "d18b42bf31aeda5163f77865381a39b86c60817798f8e2a68c5afa51316a9216"
+      },
+      "opus": {
+        "path": "opus/ng_ring.opus",
+        "bytes": 6668,
+        "sha256": "df2d151a1a3d03e51479ae4e919d5143ea87cdc4a0b195271c38e482509e8781",
+        "decodedPeakDb": -9.495957715355825,
+        "decodedSeconds": 1.1044444444444443
+      },
+      "mp3": {
+        "path": "mp3/ng_ring.mp3",
+        "bytes": 14267,
+        "sha256": "d28955240f6877c8bccc08fe260323e6548a10f61816176742889c5d78898d4e",
+        "decodedPeakDb": -9.73520241568185,
+        "decodedSeconds": 1.104421768707483
+      }
+    },
+    {
+      "type": "klank",
+      "id": "nk",
+      "cardId": "nk",
+      "stem": "nk_klank",
+      "label": "nk",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 216131,
+      "endSampleExclusive": 257044,
+      "activeRange": [
+        5.080952,
+        5.598662
+      ],
+      "duration": 0.9277324263038549,
+      "wav": {
+        "path": "wav/nk_klank.wav",
+        "bytes": 81870,
+        "sha256": "1c82ed82b388433819685d63ece34c317407099b1873cb35fe0eeff6c05a3002"
+      },
+      "opus": {
+        "path": "opus/nk_klank.opus",
+        "bytes": 5345,
+        "sha256": "781564aff3f662e768f7f081fc66b0a1ff30269edd8ec9e4e77bf36716ec9345",
+        "decodedPeakDb": -14.286612057040793,
+        "decodedSeconds": 0.9277551020408163
+      },
+      "mp3": {
+        "path": "mp3/nk_klank.mp3",
+        "bytes": 12070,
+        "sha256": "ea5f046fd00800cbb14816a0005892d6bae680fb683b6365c8fab80e6228d285",
+        "decodedPeakDb": -14.801835799551391,
+        "decodedSeconds": 0.9277324263038549
+      }
+    },
+    {
+      "type": "woord",
+      "id": "bank",
+      "cardId": "nk",
+      "stem": "nk_bank",
+      "label": "bank",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 285966,
+      "endSampleExclusive": 330378,
+      "activeRange": [
+        6.66449,
+        7.261542
+      ],
+      "duration": 1.0070748299319727,
+      "wav": {
+        "path": "wav/nk_bank.wav",
+        "bytes": 88868,
+        "sha256": "e1d00daea79cea26bed8456b1f19279ca7f693207d008b751426540e315a2f6f"
+      },
+      "opus": {
+        "path": "opus/nk_bank.opus",
+        "bytes": 5859,
+        "sha256": "6d50769c8825673f3eadac330c4ff01356eb5089e45d5c2ad3ccbeb8661ca74d",
+        "decodedPeakDb": -8.214325860469547,
+        "decodedSeconds": 1.0070975056689342
+      },
+      "mp3": {
+        "path": "mp3/nk_bank.mp3",
+        "bytes": 13013,
+        "sha256": "a8e0649f915fa0ebcab230766f2b1bb7157ab939edc2a24505c40bc541c243fa",
+        "decodedPeakDb": -8.686111075731084,
+        "decodedSeconds": 1.0070748299319727
+      }
+    },
+    {
+      "type": "klank",
+      "id": "ch",
+      "cardId": "ch",
+      "stem": "ch_klank",
+      "label": "ch",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 383754,
+      "endSampleExclusive": 420204,
+      "activeRange": [
+        8.881927,
+        9.298413
+      ],
+      "duration": 0.826530612244898,
+      "wav": {
+        "path": "wav/ch_klank.wav",
+        "bytes": 72944,
+        "sha256": "3622b022e605e3406e013dffd64c802bb3b4355e310c6cb9b5b29a14a5714082"
+      },
+      "opus": {
+        "path": "opus/ch_klank.opus",
+        "bytes": 4980,
+        "sha256": "9cd0d4bf982e5bd7b13bfb421ab4392c214e9918c15b7430525c03e480788da4",
+        "decodedPeakDb": -11.5388680504563,
+        "decodedSeconds": 0.8265532879818595
+      },
+      "mp3": {
+        "path": "mp3/ch_klank.mp3",
+        "bytes": 10817,
+        "sha256": "b4cecf2b115fd774c3647606cc59fd122b5de4dc683296b7719bd34e2608253f",
+        "decodedPeakDb": -11.441011796763142,
+        "decodedSeconds": 0.826530612244898
+      }
+    },
+    {
+      "type": "woord",
+      "id": "lach",
+      "cardId": "ch",
+      "stem": "ch_lach",
+      "label": "lach",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 441834,
+      "endSampleExclusive": 483218,
+      "activeRange": [
+        10.198912,
+        10.727324
+      ],
+      "duration": 0.9384126984126984,
+      "wav": {
+        "path": "wav/ch_lach.wav",
+        "bytes": 82812,
+        "sha256": "3ba4f2b14c827bc9dda836b53210003d07d4e587197e37bf47e518cbe928590d"
+      },
+      "opus": {
+        "path": "opus/ch_lach.opus",
+        "bytes": 5746,
+        "sha256": "650debd586890aca6d6420f9148cc3112f3ae0a1b208ded6cb060643e60e4784",
+        "decodedPeakDb": -10.90945228680917,
+        "decodedSeconds": 0.9384353741496598
+      },
+      "mp3": {
+        "path": "mp3/ch_lach.mp3",
+        "bytes": 12072,
+        "sha256": "fb11a1f4d556754a749a2f616e2d98797fdf72980823edf8c98200d69105b650",
+        "decodedPeakDb": -11.460008887698262,
+        "decodedSeconds": 0.9384126984126984
+      }
+    },
+    {
+      "type": "klank",
+      "id": "sch",
+      "cardId": "sch",
+      "stem": "sch_klank",
+      "label": "sch",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 521454,
+      "endSampleExclusive": 565783,
+      "activeRange": [
+        12.004376,
+        12.599524
+      ],
+      "duration": 1.0051927437641723,
+      "wav": {
+        "path": "wav/sch_klank.wav",
+        "bytes": 88702,
+        "sha256": "c23430a73a381ac06d163f269d975ea8ec81cbe219ec35ecd40289fe5493f51c"
+      },
+      "opus": {
+        "path": "opus/sch_klank.opus",
+        "bytes": 6399,
+        "sha256": "64d9d0552616b7af14d061825846a66f3ced0ad546d6ec44426f839ff4f296a1",
+        "decodedPeakDb": -8.398654871837302,
+        "decodedSeconds": 1.0052154195011338
+      },
+      "mp3": {
+        "path": "mp3/sch_klank.mp3",
+        "bytes": 13012,
+        "sha256": "8912fa64493735507a5bcbc862129f5aab1597e2613c6d8df99065c1ad12b096",
+        "decodedPeakDb": -8.380285488193186,
+        "decodedSeconds": 1.0051927437641723
+      }
+    },
+    {
+      "type": "woord",
+      "id": "school",
+      "cardId": "sch",
+      "stem": "sch_school",
+      "label": "school",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 594022,
+      "endSampleExclusive": 641130,
+      "activeRange": [
+        13.649887,
+        14.308095
+      ],
+      "duration": 1.0682086167800453,
+      "wav": {
+        "path": "wav/sch_school.wav",
+        "bytes": 94260,
+        "sha256": "f743871e33f7a4b68d5adc1f9efc105da199f85d77b06ee53d4443ece3b4aa35"
+      },
+      "opus": {
+        "path": "opus/sch_school.opus",
+        "bytes": 6392,
+        "sha256": "df5722fdf1fa9f82bcc031dfa9de10a2af36f3b817f2fd08da67b4dcf88295f1",
+        "decodedPeakDb": -14.449366775698632,
+        "decodedSeconds": 1.0682312925170068
+      },
+      "mp3": {
+        "path": "mp3/sch_school.mp3",
+        "bytes": 13642,
+        "sha256": "c3a0f996ab1782384e8224cab9942614f6aef69bbca0ff126f615a98d70e084a",
+        "decodedPeakDb": -14.797470910529473,
+        "decodedSeconds": 1.0682086167800453
+      }
+    },
+    {
+      "type": "klank",
+      "id": "schr",
+      "cardId": "schr",
+      "stem": "schr_klank",
+      "label": "schr",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 666133,
+      "endSampleExclusive": 717626,
+      "activeRange": [
+        15.285079,
+        16.042698
+      ],
+      "duration": 1.167641723356009,
+      "wav": {
+        "path": "wav/schr_klank.wav",
+        "bytes": 103030,
+        "sha256": "ae462687d196ad70273fea2ecaa9f3361c0ce1bcc16b31f858bb7c25e45525fe"
+      },
+      "opus": {
+        "path": "opus/schr_klank.opus",
+        "bytes": 7134,
+        "sha256": "76185815d6a145acbe63dbc281e14eae508c902fc93c02a7f99f0b59c89f59d4",
+        "decodedPeakDb": -13.817428976917355,
+        "decodedSeconds": 1.1676643990929705
+      },
+      "mp3": {
+        "path": "mp3/schr_klank.mp3",
+        "bytes": 14894,
+        "sha256": "d0984d2c2115fc956a33a9477d913fd4bb8fc84130d5bbf2c8152379b23e0446",
+        "decodedPeakDb": -13.701134710133916,
+        "decodedSeconds": 1.167641723356009
+      }
+    },
+    {
+      "type": "woord",
+      "id": "schrijf",
+      "cardId": "schr",
+      "stem": "schr_schrijf",
+      "label": "schrijf",
+      "source": "klankstudio-Combinaties.wav",
+      "startSample": 728933,
+      "endSampleExclusive": 791060,
+      "activeRange": [
+        16.709093,
+        17.707868
+      ],
+      "duration": 1.4087755102040815,
+      "wav": {
+        "path": "wav/schr_schrijf.wav",
+        "bytes": 124298,
+        "sha256": "348e35ac5a80de0a381ddf7bc34a32e22bce405521fa9844e0b2420af2f92b3e"
+      },
+      "opus": {
+        "path": "opus/schr_schrijf.opus",
+        "bytes": 8609,
+        "sha256": "12fb219221d923e0dc0df382bf3698559119d69bc43a10c9b2ffa845cfe0f0be",
+        "decodedPeakDb": -7.753035728430664,
+        "decodedSeconds": 1.408798185941043
+      },
+      "mp3": {
+        "path": "mp3/schr_schrijf.mp3",
+        "bytes": 17718,
+        "sha256": "8b645f7f4a1795eb7083f40a735edc31b48fc0abeed2aff3a7d508c7ce612953",
+        "decodedPeakDb": -8.16650123723227,
+        "decodedSeconds": 1.4087755102040815
+      }
+    }
+  ],
+  "totals": {
+    "wav": 8491650,
+    "opus": 574100,
+    "mp3": 1245695
+  }
+}
