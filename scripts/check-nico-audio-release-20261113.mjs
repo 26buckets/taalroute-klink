@@ -20,6 +20,8 @@ export function verifyNicoAudioRelease(read = readFileSync) {
   const release = json(nicoFolder + 'approval.json');
   assert.equal(release.approvedBy, 'Nico');
   assert.equal(release.publicationApproved, true);
+  assert.equal(release.wordAudioPolicy, 'Klink behoudt de oorspronkelijke woorden en woordaudio; alleen de 48 losse klankopnames worden vervangen. Klankstudio blijft ongewijzigd.');
+  assert.equal(release.followupRequest, 'Mijn laatste opname, die is goed voor klantstudio. Wat je eerder hebt gedaan, dat moeten we houden. Maar de losse klanken in klinkt, die moeten wel apart zijn, de nieuwe. Maar de woorden die mag je de originele houden. Geen probleem');
   assert.equal(release.userRequest, 'Je mag in een Wordchat dit, of misschien is dit al een Wordchat, mag je ze allemaal gaan produceren, publiceren bedoel ik, in klink en in Klankstudio alsjeblieft');
   assert.equal(release.baselineSourceCommit, nicoBaseline);
   assert.equal(release.liveSourceCommit, '3e96aafe102248f970710d5ab542e0ec78119ffd');

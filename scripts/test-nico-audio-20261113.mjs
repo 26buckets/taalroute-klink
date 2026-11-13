@@ -8,7 +8,7 @@ import {soundCards, soundById, wordsForSound} from '../lib/sounds.ts';
 import {allPackageWords} from '../lib/package-content.ts';
 import {verifyNicoAudioRelease, nicoFolder} from './check-nico-audio-release-20261113.mjs';
 
-await test('all 98 recordings are reachable through the 46 sound cards', () => {
+await test('48 new sound recordings are reachable while every original word and recording is preserved', () => {
   const manifest = JSON.parse(readFileSync(nicoFolder + 'source-manifest.json'));
   const heard = new Set(), original = JSON.stringify(allPackageWords);
   for (const sound of soundCards) {
@@ -16,19 +16,17 @@ await test('all 98 recordings are reachable through the 46 sound cards', () => {
     for (const item of sound.additionalAudio) heard.add(item.audio);
     const words = wordsForSound(sound);
     assert.equal(new Set(words.map(word => word.id)).size, words.length);
-    for (const [word, audio] of Object.entries(mapping.words[sound.id])) {
-      assert.equal(words.find(item => item.word === word)?.audio, audio); heard.add(audio);
-    }
+    assert.deepEqual(sound.words, reference.sounds[sound.id].words);
     for (const word of reference.sounds[sound.id].words) {
       const originalWord = allPackageWords.find(item => item.word === word && item.id.startsWith('klink-woord-')) ?? allPackageWords.find(item => item.word === word);
-      assert.equal(words.find(item => item.word === word)?.id, originalWord.id);
-      if (!mapping.words[sound.id][word]) assert.equal(words.find(item => item.word === word)?.audio, originalWord.audio);
+      assert.strictEqual(words.find(item => item.word === word), originalWord);
+      assert(!words.find(item => item.word === word).audio?.includes('/nico-20261113/'));
     }
   }
-  assert.equal(heard.size, 98);
+  assert.equal(heard.size, 48);
   for (const row of manifest.files) {
     const path = `/klank-audio/nico-20261113/${row.stem}.mp3`;
-    assert(heard.has(path), path);
+    assert.equal(heard.has(path), row.type === 'klank', path);
     assert.equal(createHash('sha256').update(readFileSync('public' + path)).digest('hex'), row.mp3.sha256);
   }
   assert.deepEqual(soundById.get('ei').additionalAudio.map(row => row.label), ['ij']);

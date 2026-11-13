@@ -5,11 +5,9 @@ import { allPackageWords, lessonPackages } from './package-content.ts';
 
 export const soundGroups = reference.groups;
 const recordedSounds: Record<string, string> = nicoAudio.sounds;
-const recordedWords: Record<string, Record<string, string>> = nicoAudio.words;
 const additionalSounds: Record<string, { label: string; audio: string }[]> = nicoAudio.additionalSounds;
 export const soundCards = Object.entries(reference.sounds as Record<string, { label: string; example: string; words: string[]; audio?: string }>).map(([id, sound]) => ({
   id, ...sound, audio: recordedSounds[id] ?? sound.audio,
-  words: [...new Set([...sound.words, ...Object.keys(recordedWords[id] ?? {})])],
   additionalAudio: additionalSounds[id] ?? [],
   group: soundGroups.find(group => group.items.includes(id))!,
 }));
@@ -20,13 +18,7 @@ export const klankstudioUrl = (id: string) => `${reference.source.klankstudio}?s
 export const soundPosterUrl = reference.source.poster;
 
 export function wordsForSound(sound: SoundCard) {
-  return sound.words.flatMap(word => {
-    const existing = allPackageWords.find(item => item.word === word && item.id.startsWith('klink-woord-')) ?? allPackageWords.find(item => item.word === word);
-    const audio = recordedWords[sound.id]?.[word];
-    // Reference recordings only replace playback on the sound card; lesson media and progress IDs stay intact.
-    if (existing) return [{ ...existing, audio: audio ?? existing.audio }];
-    return audio ? [{ id: `nico-reference-${sound.id}-${word}`, word, audio }] : [];
-  });
+  return sound.words.map(word => (allPackageWords.find(item => item.word === word && item.id.startsWith('klink-woord-')) ?? allPackageWords.find(item => item.word === word))!).filter(Boolean);
 }
 
 export function soundsForWord(wordId: string) {
