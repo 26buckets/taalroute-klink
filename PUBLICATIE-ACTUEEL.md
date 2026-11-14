@@ -1,3 +1,9 @@
+## Actuele publicatie: nieuwe losse klanken van Nico, 14 november 2026
+
+Livebron `cebfc8fb0c81490b6846773f40c664f8cf3a34d6`, appversie `79d84847-92d5-4c7a-bd2d-3d5f2800d0a3`, audioversie `0327ace7-288c-43c1-b297-bccf5a8d322f`. Gepubliceerd via schone canonieke main en de normale `npm run deploy`.
+
+48 nieuwe losse klankopnames in Klink. De oorspronkelijke voorbeeldwoorden en woordaudio blijven op Nico’s vervolgopdracht behouden. Klankstudio blijft ongewijzigd met zijn laatste opnames. Alle 22.516 online bestanden exact gecontroleerd; alle 48 klankknoppen en negen oorspronkelijke woordknoppen online afgespeeld. Bewijs en herstelkopieën: `docs/nico-audio-20261113/`. Geen nieuwe diensten. Deze bewijsopvolger wijzigt de runtime niet en vereist geen nieuwe publicatie.
+
 ## Actuele publicatie — uniforme header — 10 november 2026
 
 Livebron `3e96aafe102248f970710d5ab542e0ec78119ffd`, app-Worker `be92264d-de2a-47c7-9a49-e3ffcdd79666`, audio-Worker `feb04164-9b5c-4752-89b2-402c6c0905fd`. Op de expliciete opdracht van Nico via schone canonieke main en de normale `npm run deploy`. Appnaam naast het logo, één headerregel, vierkante knoppen en bestaande lesmateriaalroute. De goedgekeurde opzet, inhoud, media, lokale gegevens en toegang blijven behouden.
